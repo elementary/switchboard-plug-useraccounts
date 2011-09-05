@@ -21,7 +21,6 @@ configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_SOURCE_DIR}/src/co
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 
 # Files
-# To be set if you have some resource file, else comment this following line
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 # Info-plug
@@ -56,4 +55,4 @@ add_executable (${PLUGNAME} ${VALA_C})
 
 # Installation
 install (TARGETS ${PLUGNAME} DESTINATION ${PKGDATADIR})
-#install (FILES ${resources} DESTINATION ${PKGDATADIR})
+install (FILES ${resources} DESTINATION ${PKGDATADIR})
