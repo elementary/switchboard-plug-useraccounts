@@ -1,5 +1,0 @@
-[my-plug.plug]
-exec=your-plug-name
-icon=choose-an-icon
-title=Your Plug
-category=personal|hardware|network|system
