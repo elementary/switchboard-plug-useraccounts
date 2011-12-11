@@ -9,6 +9,7 @@ Homepage: https://launchpad.net/pantheon-plugs
 Package: switchboard-plug-template
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: switchboard
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
