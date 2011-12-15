@@ -28,7 +28,10 @@ public class IOHelper : GLib.Object {
         // Cache a lowe-cased copy of the file name
         string fname_down = fname.down();
         // Short-circuit if it's not a picture file extension
-        return (fname_down.has_suffix(".png") || fname_down.has_suffix(".jpeg") || fname_down.has_suffix(".jpg") || fname_down.has_suffix(".gif"));
+        return (fname_down.has_suffix(".png") || 
+                fname_down.has_suffix(".jpeg") || 
+                fname_down.has_suffix(".jpg") || 
+                fname_down.has_suffix(".gif"));
     }
 
     // Quickly count up all of the valid wallpapers in the wallpaper folder.
@@ -38,7 +41,8 @@ public class IOHelper : GLib.Object {
         int count = 0;
         try {
             // Get an enumerator for all of the plain old files in the wallpaper folder.
-            var enumerator = wallpaper_folder.enumerate_children(FILE_ATTRIBUTE_STANDARD_NAME + "," + FILE_ATTRIBUTE_STANDARD_TYPE, 0);
+            var enumerator = wallpaper_folder.enumerate_children(FILE_ATTRIBUTE_STANDARD_NAME + 
+                                                            "," + FILE_ATTRIBUTE_STANDARD_TYPE, 0);
             // While there's still files left to count
             while ((file_info = enumerator.next_file ()) != null) {
                 // If it's a picture file
@@ -55,6 +59,7 @@ public class IOHelper : GLib.Object {
 
 }
 
+// Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
 public class WallpapersPlug : Pantheon.Switchboard.Plug {
 
     // Object to work with the wallpaper GSettings
@@ -128,6 +133,7 @@ public class WallpapersPlug : Pantheon.Switchboard.Plug {
         vbox.pack_end(sw, true, true);
         this.add(vbox);
 
+        // Connect to the searchbox on Switchboard
         switchboard_controller.search_box_text_changed.connect(search_wallpapers);
     }
 

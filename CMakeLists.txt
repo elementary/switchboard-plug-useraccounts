@@ -4,12 +4,23 @@
 cmake_minimum_required (VERSION 2.6)
 cmake_policy (VERSION 2.6)
 
+# Set the Properties of your Plug
+
+# Set the Name of the plug, should be an executable command, lowercase, no spaces 
 set (PLUGNAME "Appearance")
+# Set the Category of the Plug, one of:
+# personal, hardware, network, system
 set (PLUGCATEGORY "hardware")
+# Set the Title to use for the Plug in the Overview and in the Titlebar
 set (PLUGTITLE "Appearance")
+# The symbolic name of the Icon to use for the plug
 set (PLUGICON "go-home")
 
 project (${PLUGNAME})
+
+#########################################################
+# Only alter stuff below if you know what you are doing #
+#########################################################
 
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/plugs")
 set (PKGDATADIR "${DATADIR}/pantheon/${PLUGNAME}")
