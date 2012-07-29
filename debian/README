@@ -31,7 +31,7 @@ CMakeLists.txt, and the command will return the appropriate Debian package name.
 Add package names for all your libs to the "Build-Depends" field in control file,
 separating library names with commas.
 
-Viola! You're done!
+Voila! You're done!
 Oh, wait, you'll have to update copyright file too. But after all that hard work 
 it's a pleasure, isn't it?
 
