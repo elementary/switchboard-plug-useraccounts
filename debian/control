@@ -2,7 +2,9 @@ Source: switchboard-plug-template
 Section: x11
 Priority: optional
 Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), cmake, libpantheon-dev
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libswitchboard-2.0-dev
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/pantheon-plugs
 
