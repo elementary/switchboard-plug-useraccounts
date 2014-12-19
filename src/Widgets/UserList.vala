@@ -30,12 +30,16 @@ namespace SwitchboardPlugUsers.Widgets {
 			this.selection_mode = Gtk.SelectionMode.SINGLE;
 			this.userlist = userlist;
 			this.own_user = own_user;
+			set_header_func (update_headers);
 			build_ui ();
 
 			show_all ();
 		}
 
 		private void build_ui () {
+			//cheat an invisible box at pos 0 because update_headers does not reach pos 0
+			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
+
 			my_account_label = new Gtk.Label ("");
 			my_account_label.margin_top = 10;
 			my_account_label.margin_start = 5;
@@ -43,7 +47,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			my_account_label.use_markup = true;
 			my_account_label.set_label ("<b>"+_("My Account")+"</b>");
 			my_account_label.set_sensitive (false);
-			insert (my_account_label, 0);
 
 			other_accounts_label = new Gtk.Label ("");
 			other_accounts_label.margin_top = 10;
@@ -52,7 +55,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			other_accounts_label.use_markup = true;
 			other_accounts_label.set_label ("<b>"+_("Other Accounts")+"</b>");
 			other_accounts_label.set_sensitive (false);
-			this.insert (other_accounts_label, 2);
 
 			update_ui ();
 		}
@@ -60,14 +62,21 @@ namespace SwitchboardPlugUsers.Widgets {
 		public void update_ui () {
 			insert (new UserItem (own_user), 1);
 
-			int i = 3;
+			int i = 2;
 			foreach (unowned Act.User temp_user in userlist) {
 				if (own_user != temp_user) {
-					this.insert (new UserItem (temp_user), i);
+					insert (new UserItem (temp_user), i);
 					i++;
 				}
 			}
 			show_all ();
+		}
+
+		public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow before) {
+			if (row == get_row_at_index (1))
+				row.set_header (my_account_label);
+			else if (row == get_row_at_index (2))
+				row.set_header (other_accounts_label);
 		}
 	}
 }

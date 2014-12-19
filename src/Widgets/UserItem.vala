@@ -55,6 +55,7 @@ namespace SwitchboardPlugUsers.Widgets {
 
 			user_name_label = new Gtk.Label ("");
 			user_name_label.halign = Gtk.Align.START;
+			user_name_label.use_markup = true;
 
 			label_box.pack_start (full_name_label, false, false);
 			label_box.pack_start (user_name_label, false, false);
@@ -73,7 +74,7 @@ namespace SwitchboardPlugUsers.Widgets {
 			grid.attach (avatar, 0, 0, 1, 1);
 
 			full_name_label.set_label (user.get_real_name ());
-			user_name_label.set_label (user.get_user_name ());
+			user_name_label.set_label ("<span font_size=\"small\">" + user.get_user_name () + "</span>");
 			
 			grid.show_all ();
 		}

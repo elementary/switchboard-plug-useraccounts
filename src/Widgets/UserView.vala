@@ -27,6 +27,7 @@ namespace SwitchboardPlugUsers.Widgets {
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
+		public ListFooter footer;
 
 		public UserView () {
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -57,8 +58,10 @@ namespace SwitchboardPlugUsers.Widgets {
 			scrolled_window = new Gtk.ScrolledWindow (null, null);
 			scrolled_window.add (userlist);
 
-			sidebar.pack_start (scrolled_window);
-			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, true);
+			footer = new ListFooter ();
+			sidebar.pack_start (scrolled_window, true, true);
+			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false);
+			sidebar.pack_end (footer, false, false);
 
 			//auto select own user row in userlist widget
 			userlist.select_row (userlist.get_row_at_index (1));

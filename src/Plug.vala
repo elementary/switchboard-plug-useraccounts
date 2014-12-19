@@ -31,7 +31,7 @@ namespace SwitchboardPlugUsers {
             Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Users Accounts"),
-                    description: _("Manage user accounts on your local system."),
+                    description: _("Manage user accounts on your local system"),
                     icon: "system-users");
             plug = this;
 			
