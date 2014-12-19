@@ -1,6 +1,5 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2014 YOUR NAME (http://launchpad.net/your-project)
+ * Copyright (c) 2014 Marvin Beckers <beckersmarvin@gmail.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -18,45 +17,39 @@
  * Boston, MA 02111-1307, USA.
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Marvin Beckers <beckersmarvin@gmail.com>
  */
-namespace Sample {
 
+namespace SwitchboardPlugUsers {
     public static Plug plug;
+	public unowned Act.UserManager usermanager;
 
     public class Plug : Switchboard.Plug {
-        Gtk.Grid main_grid;
+		private Widgets.UserView userview;
 
         public Plug () {
-            Object (category: Category.PERSONAL,
+            Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,
-                    display_name: _("Sample Plug"),
-                    description: _("Try to play with it!"),
-                    icon: "applications-development");
+                    display_name: _("Users Accounts"),
+                    description: _("Manage user accounts on your local system."),
+                    icon: "system-users");
             plug = this;
+			
         }
 
         public override Gtk.Widget get_widget () {
-            if (main_grid == null) {
-                main_grid = new Gtk.Grid ();
-                var hello_label = new Gtk.Label (_("Hello World"));
-                main_grid.attach (hello_label, 0, 0, 1, 1);
-                main_grid.show_all ();
-            }
+            if (userview != null)
+                return userview;
 
-            return main_grid;
+			userview = new Widgets.UserView ();
+			userview.show_all ();
+
+            return userview;
         }
 
-        public override void shown () {
-            
-        }
-
-        public override void hidden () {
-            
-        }
-
-        public override void search_callback (string location) {
-            
-        }
+        public override void shown () { }
+        public override void hidden () { }
+        public override void search_callback (string location) { }
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
@@ -66,7 +59,7 @@ namespace Sample {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Sample plug");
-    var plug = new Sample.Plug ();
+    debug ("Activating Users plug");
+    var plug = new SwitchboardPlugUsers.Plug ();
     return plug;
 }

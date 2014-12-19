@@ -1,26 +1,34 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite AccountsService-1.0 libaccountsservice)
 
-add_definitions (${DEPS_CFLAGS})
+add_definitions (${DEPS_CFLAGS} -I/usr/include/accountsservice-1.0)
 link_directories (${DEPS_LIBRARY_DIRS})
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.22.0" MINIMUM)
+ensure_vala_version ("0.26.0" MINIMUM)
 
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
-    Plug.vala
-    ${CMAKE_CURRENT_BINARY_DIR}/config.vala
+	Plug.vala
+	Widgets/UserView.vala
+	Widgets/UserList.vala
+	Widgets/ListFooter.vala
+	Widgets/UserItem.vala
+	Widgets/UserSettings.vala
+	${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
-    gtk+-3.0
-    switchboard-2.0
-    granite
+	gtk+-3.0
+	switchboard-2.0
+	granite
+	AccountsService-1.0
+CUSTOM_VAPIS
+	../vapi/accountsservice.vapi
 OPTIONS
-    --thread
+	--thread
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

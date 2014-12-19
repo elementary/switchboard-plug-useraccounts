@@ -1,19 +1,16 @@
-# This a sample CMakeLists.txt for compiling plug for Switchboard
-# http://elementaryos.org/docs/developer-guide/cmake 
-
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
-set (PLUGCATEGORY "personal")
+set (PLUGCATEGORY "system")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
-set (PLUGTITLE "Sample")
+set (PLUGTITLE "Users")
 # Set the version for the plug
 set (VERSION "0.1")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
-project (pantheon-sample)
+project (switchboard-plug-users)
 
 #########################################################
 # Only alter stuff below if you know what you are doing #
