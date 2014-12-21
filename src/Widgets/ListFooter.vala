@@ -21,7 +21,6 @@ namespace SwitchboardPlugUsers.Widgets {
 	public class ListFooter : Gtk.Box {
 		public Gtk.Button button_add;
 		public Gtk.Button button_remove;
-		public Gtk.Button button_lock;
 
 		public ListFooter () {
 			Object (orientation: Gtk.Orientation.HORIZONTAL, spacing: 5);
@@ -32,6 +31,7 @@ namespace SwitchboardPlugUsers.Widgets {
 			button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
 			button_add.margin_start = 4;
 			button_add.set_relief (Gtk.ReliefStyle.NONE);
+			button_add.clicked.connect (show_new_user_dialog);
 			pack_start (button_add, false);
 
 			pack_start (new Gtk.Separator (Gtk.Orientation.VERTICAL), false);
@@ -42,15 +42,12 @@ namespace SwitchboardPlugUsers.Widgets {
 
 			pack_start (new Gtk.Separator (Gtk.Orientation.VERTICAL), false);
 
-			button_lock = new Gtk.Button.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-			button_lock.set_relief (Gtk.ReliefStyle.NONE);
-			//button_lock.set_focus_on_click (false);
-			button_lock.margin_end = 4;
-			pack_end (button_lock, false);
-
-			pack_end (new Gtk.Separator (Gtk.Orientation.VERTICAL), false);
-
 			show_all ();
+		}
+
+		private void show_new_user_dialog () {
+			Dialogs.NewUserDialog new_user_d = new Dialogs.NewUserDialog ();
+			new_user_d.show ();
 		}
 	}
 }

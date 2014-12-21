@@ -21,6 +21,7 @@ namespace SwitchboardPlugUsers.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
 		public UserList userlist;
 		public unowned Act.UserManager usermanager;
+		private string[]? installed_lang;
 		public SList<Act.User> user_slist;
 		public Act.User own_user;
 
@@ -33,11 +34,13 @@ namespace SwitchboardPlugUsers.Widgets {
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			content = new Gtk.Stack ();
 
-			this.pack1 (sidebar, true, false);
-			this.pack2 (content, true, false);
+			pack1 (sidebar, true, false);
+			pack2 (content, true, false);
 
-			this.usermanager = Act.UserManager.get_default ();
-			this.usermanager.notify["is-loaded"].connect (() => this.update ());
+			installed_lang = Utils.get_installed_languages ();
+
+			usermanager = Act.UserManager.get_default ();
+			usermanager.notify["is-loaded"].connect (() => this.update ());
 		}
 
 		public void update () {
@@ -48,7 +51,7 @@ namespace SwitchboardPlugUsers.Widgets {
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in user_slist)
-					content.add_named (new UserSettings (user), user.get_user_name ());
+					content.add_named (new UserSettings (user, installed_lang), user.get_user_name ());
 
 				this.build_ui ();
 			}

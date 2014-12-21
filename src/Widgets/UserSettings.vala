@@ -20,6 +20,7 @@
 namespace SwitchboardPlugUsers.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private Act.User user;
+		private unowned string[]? installed_lang;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
@@ -30,17 +31,19 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gtk.Switch autologin_switch;
 		private Gtk.Box box;
 
-		public UserSettings (Act.User user) {
-			this.user = user;
-			this.build_ui ();
+
+		public UserSettings (Act.User _user, string[]? _installed_lang) {
+			user = _user;
+			installed_lang = _installed_lang;
+			build_ui ();
 		}
 		
 		public void build_ui () {
-			this.margin = 20;
-			this.row_spacing = 7;
-			this.column_spacing = 20;
-			this.set_valign (Gtk.Align.START);
-			this.set_halign (Gtk.Align.CENTER);
+			margin = 20;
+			set_row_spacing (7);
+			set_column_spacing (20);
+			set_valign (Gtk.Align.START);
+			set_halign (Gtk.Align.CENTER);
 
 			box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			attach (box, 1, 0, 1, 1);
@@ -52,6 +55,7 @@ namespace SwitchboardPlugUsers.Widgets {
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Administrator"));
 			user_type_box.append_text (_("User"));
+			user_type_box.set_sensitive (false);
 			box.pack_end (user_type_box, false, false, 7);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
@@ -59,8 +63,9 @@ namespace SwitchboardPlugUsers.Widgets {
 			attach (lang_label, 0, 2, 1, 1);
 
 			language_box = new Gtk.ComboBoxText ();
-			language_box.append_text (_("German"));
-			language_box.append_text (_("English (United States)"));
+			foreach (string s in installed_lang)
+				language_box.append_text (s);
+			language_box.set_sensitive (false);
 			attach (language_box, 1, 2, 1, 1);
 
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
@@ -72,10 +77,11 @@ namespace SwitchboardPlugUsers.Widgets {
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 30;
+			autologin_switch.set_sensitive (false);
 			attach (autologin_switch, 1, 4, 1, 1);
 
 			new_password_button = new Gtk.Button ();
-			//new_password_button.set_sensitive (false);
+			new_password_button.set_sensitive (false);
 			new_password_button.margin_top = 7;
 			attach (new_password_button, 1, 5, 1, 1);
 
@@ -116,7 +122,15 @@ namespace SwitchboardPlugUsers.Widgets {
 			else
 				autologin_switch.set_active (false);
 
-			language_box.set_active (0);
+			int i = 0;
+			foreach (string s in installed_lang) {
+				if (user.get_language () == s) {
+					language_box.set_active (i);
+					break;
+				}
+				i++;
+			}
+
 			show_all ();
 		}
 	}

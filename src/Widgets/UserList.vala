@@ -72,11 +72,11 @@ namespace SwitchboardPlugUsers.Widgets {
 			show_all ();
 		}
 
-		public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow before) {
-			if (row == get_row_at_index (1))
-				row.set_header (my_account_label);
-			else if (row == get_row_at_index (2))
-				row.set_header (other_accounts_label);
+		public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+				if (row == get_row_at_index (1))
+					row.set_header (my_account_label);
+				else if (row == get_row_at_index (2))
+					row.set_header (other_accounts_label);
 		}
 	}
 }

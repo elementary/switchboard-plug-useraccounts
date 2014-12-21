@@ -14,19 +14,19 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Plug.vala
+	Utils.vala
 	Widgets/UserView.vala
 	Widgets/UserList.vala
 	Widgets/ListFooter.vala
 	Widgets/UserItem.vala
 	Widgets/UserSettings.vala
+	Dialogs/NewUserDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
 	gtk+-3.0
 	switchboard-2.0
 	granite
 	AccountsService-1.0
-CUSTOM_VAPIS
-	../vapi/accountsservice.vapi
 OPTIONS
 	--thread
 )
