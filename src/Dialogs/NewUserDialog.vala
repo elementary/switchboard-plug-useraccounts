@@ -21,13 +21,9 @@ namespace SwitchboardPlugUsers.Dialogs {
 	public class NewUserDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
 		private Gtk.Box header_box;
-		private Gtk.Label header_label;
 		private Gtk.Image header_image;
-		private Gtk.Label fullname_label;
 		private Gtk.Entry fullname_entry;
-		private Gtk.Label username_label;
 		private Gtk.ComboBoxText username_combobox;
-		private Gtk.Label accounttype_label;
 		private Gtk.ComboBoxText accounttype_combobox;
 
 		private Gtk.Widget button_create;
@@ -60,11 +56,11 @@ namespace SwitchboardPlugUsers.Dialogs {
 			header_image = new Gtk.Image.from_icon_name ("system-users-symbolic", Gtk.IconSize.DND);
 			header_box.pack_start (header_image);
 
-			header_label = new Gtk.Label (_("Create User Account"));
+			var header_label = new Gtk.Label (_("Create User Account"));
 			header_label.get_style_context ().add_class ("h2");
 			header_box.pack_start (header_label);
 
-			fullname_label = new Gtk.Label (_("Full Name:"));
+			var fullname_label = new Gtk.Label (_("Full Name:"));
 			fullname_label.halign = Gtk.Align.END;
 			main_grid.attach (fullname_label, 0, 1, 1, 1);
 
@@ -74,7 +70,7 @@ namespace SwitchboardPlugUsers.Dialogs {
 			fullname_entry.set_size_request (50, 0);
 			main_grid.attach (fullname_entry, 1, 1, 1, 1);
 
-			username_label = new Gtk.Label (_("User Name:"));
+			var username_label = new Gtk.Label (_("User Name:"));
 			username_label.halign = Gtk.Align.END;
 			main_grid.attach (username_label, 0, 2, 1, 1);
 
@@ -84,7 +80,7 @@ namespace SwitchboardPlugUsers.Dialogs {
 			username_combobox.halign = Gtk.Align.START;
 			main_grid.attach (username_combobox, 1, 2, 1, 1);
 
-			accounttype_label = new Gtk.Label (_("Account Type:"));
+			var accounttype_label = new Gtk.Label (_("Account Type:"));
 			accounttype_label.halign = Gtk.Align.END;
 			main_grid.attach (accounttype_label, 0, 3, 1, 1);
 
@@ -105,7 +101,7 @@ namespace SwitchboardPlugUsers.Dialogs {
 		}
 
 		private void on_response (Gtk.Dialog source, int response_id) {
-			if (response_id != Gtk.ResponseType.CLOSE) {
+			if (response_id == Gtk.ResponseType.OK) {
 				string fullname = fullname_entry.get_text ();
 				string username = username_combobox.get_active_text ();
 				int accounttype = 0;

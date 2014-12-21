@@ -22,6 +22,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Widgets/UserItem.vala
 	Widgets/UserSettings.vala
 	Dialogs/NewUserDialog.vala
+	Dialogs/PasswordDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
 	gtk+-3.0

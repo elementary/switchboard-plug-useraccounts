@@ -85,8 +85,9 @@ namespace SwitchboardPlugUsers.Widgets {
 			attach (autologin_switch, 1, 4, 1, 1);
 
 			new_password_button = new Gtk.Button ();
-			new_password_button.set_sensitive (false);
 			new_password_button.margin_top = 7;
+			new_password_button.set_sensitive (false);
+			new_password_button.clicked.connect (show_password_dialog);
 			attach (new_password_button, 1, 5, 1, 1);
 
 			permission.notify["allowed"].connect (update_ui);
@@ -99,16 +100,18 @@ namespace SwitchboardPlugUsers.Widgets {
 				full_name_entry.set_sensitive (true);
 				user_type_box.set_sensitive (true);
 				language_box.set_sensitive (true);
-				autologin_switch.set_sensitive (true);
 				new_password_button.set_sensitive (true);
 			}
+			if (permission.allowed && permission.get_action_id () == "org.freedesktop.accounts.user-administration")
+				autologin_switch.set_sensitive (true);
+
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
 				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
 			} catch (Error e) {
 				Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
 				try {
-					avatar_pixbuf = icon_theme.load_icon ("image-loading", 72, 0);
+					avatar_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
 					avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
 				} catch (Error e) { }
 			}
@@ -145,6 +148,11 @@ namespace SwitchboardPlugUsers.Widgets {
 			}
 
 			show_all ();
+		}
+
+		public void show_password_dialog () {
+			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog ();
+			password_dialog.show ();
 		}
 	}
 }

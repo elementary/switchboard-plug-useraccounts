@@ -68,7 +68,7 @@ namespace SwitchboardPlugUsers.Widgets {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
 				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
 			} catch (Error e) {
-				avatar = new Gtk.Image.from_icon_name ("image-loading", Gtk.IconSize.DND);
+				avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
 			}
 			avatar.margin_end = 5;
 			grid.attach (avatar, 0, 0, 1, 1);
