@@ -21,18 +21,23 @@ namespace SwitchboardPlugUsers.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
 		public UserList userlist;
 		public unowned Act.UserManager usermanager;
-		private string[]? installed_lang;
 		public SList<Act.User> user_slist;
-		public Act.User own_user;
+		public unowned Act.User current_user;
+		private string[]? installed_lang;
 
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
 		public ListFooter footer;
 
-		public UserView () {
+		private unowned Polkit.Permission permission;
+
+		public UserView (Polkit.Permission _permission) {
+			permission = _permission;
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			content = new Gtk.Stack ();
+			
+			expand = true;
 
 			pack1 (sidebar, true, false);
 			pack2 (content, true, false);
@@ -40,20 +45,20 @@ namespace SwitchboardPlugUsers.Widgets {
 			installed_lang = Utils.get_installed_languages ();
 
 			usermanager = Act.UserManager.get_default ();
-			usermanager.notify["is-loaded"].connect (() => this.update ());
+			usermanager.notify["is-loaded"].connect (update);
 		}
 
 		public void update () {
 			if (usermanager.is_loaded) {
 				user_slist = usermanager.list_users ();
-				own_user = usermanager.get_user (GLib.Environment.get_user_name ());
-				userlist = new UserList (user_slist, own_user);
+				current_user = usermanager.get_user (GLib.Environment.get_user_name ());
+				userlist = new UserList (user_slist, current_user);
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in user_slist)
-					content.add_named (new UserSettings (user, installed_lang), user.get_user_name ());
+					content.add_named (new UserSettings (user, current_user, installed_lang, permission), user.get_user_name ());
 
-				this.build_ui ();
+				build_ui ();
 			}
 		}
 
@@ -61,15 +66,15 @@ namespace SwitchboardPlugUsers.Widgets {
 			scrolled_window = new Gtk.ScrolledWindow (null, null);
 			scrolled_window.add (userlist);
 
-			footer = new ListFooter ();
+			footer = new ListFooter (permission);
 			sidebar.pack_start (scrolled_window, true, true);
 			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false);
 			sidebar.pack_end (footer, false, false);
 
-			//auto select own user row in userlist widget
+			//auto select current user row in userlist widget
 			userlist.select_row (userlist.get_row_at_index (1));
-			this.set_position (240);
-			this.show_all ();
+			set_position (240);
+			show_all ();
 		}
 
 		public void userlist_selected (Gtk.ListBoxRow? user_item) {

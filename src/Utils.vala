@@ -52,5 +52,14 @@ namespace SwitchboardPlugUsers {
 			lang_name = dgettext ("iso_639_3", lang);
 			return lang_name;
 		}
+		private static Act.User current_user;
+
+		public static async Act.User get_current_user () {
+			unowned Act.UserManager usermanager = Act.UserManager.get_default ();
+			usermanager.notify["is-loaded"].connect (() => {
+				current_user = usermanager.get_user (GLib.Environment.get_user_name ());
+			});
+			return current_user;
+		}
 	}
 }

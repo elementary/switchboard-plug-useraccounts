@@ -20,6 +20,7 @@
 namespace SwitchboardPlugUsers.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private Act.User user;
+		private unowned Act.User current_user;
 		private unowned string[]? installed_lang;
 
 		private Gtk.Image avatar;
@@ -31,10 +32,13 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gtk.Switch autologin_switch;
 		private Gtk.Box box;
 
+		private unowned Polkit.Permission permission;
 
-		public UserSettings (Act.User _user, string[]? _installed_lang) {
+		public UserSettings (Act.User _user, Act.User _current_user, string[]? _installed_lang, Polkit.Permission _permission) {
 			user = _user;
+			current_user = _current_user;
 			installed_lang = _installed_lang;
+			permission = _permission;
 			build_ui ();
 		}
 		
@@ -85,10 +89,19 @@ namespace SwitchboardPlugUsers.Widgets {
 			new_password_button.margin_top = 7;
 			attach (new_password_button, 1, 5, 1, 1);
 
+			permission.notify["allowed"].connect (update_ui);
 			update_ui ();
 		}
 		
 		public void update_ui () {
+			if (current_user == user ||
+			(permission.allowed && permission.get_action_id () == "org.freedesktop.accounts.user-administration")) {
+				full_name_entry.set_sensitive (true);
+				user_type_box.set_sensitive (true);
+				language_box.set_sensitive (true);
+				autologin_switch.set_sensitive (true);
+				new_password_button.set_sensitive (true);
+			}
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
 				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);

@@ -40,20 +40,18 @@ namespace SwitchboardPlugUsers.Widgets {
 			//cheat an invisible box at pos 0 because update_headers does not reach pos 0
 			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
 
-			my_account_label = new Gtk.Label ("");
-			my_account_label.margin_top = 10;
+			my_account_label = new Gtk.Label (_("My Account"));
+			my_account_label.margin_top = 5;
 			my_account_label.margin_start = 5;
 			my_account_label.halign = Gtk.Align.START;
-			my_account_label.use_markup = true;
-			my_account_label.set_label ("<b>"+_("My Account")+"</b>");
+			my_account_label.get_style_context ().add_class ("h3");
 			my_account_label.set_sensitive (false);
 
-			other_accounts_label = new Gtk.Label ("");
-			other_accounts_label.margin_top = 10;
+			other_accounts_label = new Gtk.Label (_("Other Accounts"));
+			other_accounts_label.margin_top = 5;
 			other_accounts_label.margin_start = 5;
 			other_accounts_label.halign = Gtk.Align.START;
-			other_accounts_label.use_markup = true;
-			other_accounts_label.set_label ("<b>"+_("Other Accounts")+"</b>");
+			other_accounts_label.get_style_context ().add_class ("h3");
 			other_accounts_label.set_sensitive (false);
 
 			update_ui ();

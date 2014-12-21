@@ -1,9 +1,10 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite AccountsService-1.0 libaccountsservice)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite accountsservice polkit-gobject-1)
 
-add_definitions (${DEPS_CFLAGS} -I/usr/include/accountsservice-1.0)
+#add_definitions (${DEPS_CFLAGS} -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1)
+add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
 
 find_package (Vala REQUIRED)
@@ -27,8 +28,11 @@ PACKAGES
 	switchboard-2.0
 	granite
 	AccountsService-1.0
+	posix
+	polkit-gobject-1
 OPTIONS
 	--thread
+	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

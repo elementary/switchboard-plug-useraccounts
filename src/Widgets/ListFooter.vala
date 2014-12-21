@@ -22,27 +22,41 @@ namespace SwitchboardPlugUsers.Widgets {
 		public Gtk.Button button_add;
 		public Gtk.Button button_remove;
 
-		public ListFooter () {
+		private unowned Polkit.Permission permission;
+
+		public ListFooter (Polkit.Permission _permission) {
 			Object (orientation: Gtk.Orientation.HORIZONTAL, spacing: 5);
+			permission = _permission;
+			permission.notify["allowed"].connect (update_ui);
 			build_ui ();
 		}
 
 		private void build_ui () {
 			button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON);
+			button_add.set_tooltip_text (_("Create user account"));
 			button_add.margin_start = 4;
 			button_add.set_relief (Gtk.ReliefStyle.NONE);
+			button_add.set_sensitive (false);
 			button_add.clicked.connect (show_new_user_dialog);
 			pack_start (button_add, false);
 
 			pack_start (new Gtk.Separator (Gtk.Orientation.VERTICAL), false);
 			button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON);
+			button_remove.set_tooltip_text (_("Mark user account for removal"));
 			button_remove.set_relief (Gtk.ReliefStyle.NONE);
-			//button_remove.set_focus_on_click (false);
+			button_remove.set_sensitive (false);
 			pack_start (button_remove, false);
 
 			pack_start (new Gtk.Separator (Gtk.Orientation.VERTICAL), false);
 
 			show_all ();
+		}
+
+		private void update_ui () {
+			if (permission.allowed && permission.get_action_id () == "org.freedesktop.accounts.user-administration") {
+				button_add.set_sensitive (true);
+				button_remove.set_sensitive (true);
+			}
 		}
 
 		private void show_new_user_dialog () {

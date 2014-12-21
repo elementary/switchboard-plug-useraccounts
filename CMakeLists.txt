@@ -5,12 +5,12 @@ cmake_policy (VERSION 2.8)
 # personal, hardware, network, system
 set (PLUGCATEGORY "system")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
-set (PLUGTITLE "Users")
+set (PLUGTITLE "Users Accounts")
 # Set the version for the plug
 set (VERSION "0.1")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
-project (switchboard-plug-users)
+project (switchboard-plug-useraccounts)
 
 #########################################################
 # Only alter stuff below if you know what you are doing #
@@ -37,5 +37,8 @@ add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
 # Traslation stuff
 add_subdirectory (po)
+
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
 
 add_subdirectory(src)
