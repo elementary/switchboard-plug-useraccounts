@@ -21,15 +21,15 @@ namespace SwitchboardPlugUsers.Widgets {
 
 	public class UserList : Gtk.ListBox {
 		private unowned SList<Act.User> userlist;
-		private Act.User own_user;
+		private unowned Act.User current_user;
 
 		private Gtk.Label my_account_label;
 		private Gtk.Label other_accounts_label;
 
-		public UserList (SList<Act.User> userlist, Act.User own_user) {
-			this.selection_mode = Gtk.SelectionMode.SINGLE;
-			this.userlist = userlist;
-			this.own_user = own_user;
+		public UserList (SList<Act.User> _userlist, Act.User _current_user) {
+			selection_mode = Gtk.SelectionMode.SINGLE;
+			userlist = _userlist;
+			current_user = _current_user;
 			set_header_func (update_headers);
 			build_ui ();
 
@@ -54,18 +54,23 @@ namespace SwitchboardPlugUsers.Widgets {
 			other_accounts_label.get_style_context ().add_class ("h3");
 			other_accounts_label.set_sensitive (false);
 
+			insert (new UserItem (current_user), 1);
+
+			int i = 2;
+			foreach (unowned Act.User temp_user in userlist) {
+				if (current_user != temp_user) {
+					insert (new UserItem (temp_user), i);
+					i++;
+				}
+			}
+
 			update_ui ();
 		}
 
 		public void update_ui () {
-			insert (new UserItem (own_user), 1);
-
-			int i = 2;
-			foreach (unowned Act.User temp_user in userlist) {
-				if (own_user != temp_user) {
-					insert (new UserItem (temp_user), i);
-					i++;
-				}
+			List<weak Gtk.Widget> userlist_items = this.get_children ();
+			foreach (unowned Gtk.Widget useritem in userlist_items) {
+				warning (((UserItem)useritem).user_name);
 			}
 			show_all ();
 		}

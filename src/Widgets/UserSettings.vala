@@ -78,20 +78,20 @@ namespace SwitchboardPlugUsers.Widgets {
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
 			login_label.halign = Gtk.Align.END;
 			login_label.margin_top = 30;
-			attach (login_label, 0, 4, 1, 1);
+			attach (login_label, 0, 3, 1, 1);
 
 			autologin_switch = new Gtk.Switch ();
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 30;
 			autologin_switch.set_sensitive (false);
-			attach (autologin_switch, 1, 4, 1, 1);
+			attach (autologin_switch, 1, 3, 1, 1);
 
 			change_password_button = new Gtk.Button ();
 			change_password_button.margin_top = 7;
 			change_password_button.set_sensitive (false);
 			change_password_button.clicked.connect (show_password_dialog);
-			attach (change_password_button, 1, 5, 1, 1);
+			attach (change_password_button, 1, 4, 1, 1);
 
 			update_ui ();
 			attach (avatar, 0, 0, 1, 1);
@@ -159,22 +159,26 @@ namespace SwitchboardPlugUsers.Widgets {
 		}
 
 		public void change_full_name () {
-			if (user == current_user || permission.allowed) {
-				string new_full_name = full_name_entry.get_text ();
-				user.set_real_name (new_full_name);
-			} else {
-				warning ("Insuffienct permissions to change name");
-				update_ui ();
+			string new_full_name = full_name_entry.get_text ();
+			if (new_full_name != user.get_real_name ()) {
+				if (user == current_user || permission.allowed) {
+					user.set_real_name (new_full_name);
+				} else {
+					warning ("Insuffienct permissions to change name");
+					update_ui ();
+				}
 			}
 		}
 
 		public void change_lang () {
-			if (user == current_user || permission.allowed) {
-				string new_lang = language_box.get_active_text ();
-				user.set_language (new_lang);
-			} else {
-				warning ("Insuffienct permissions to change name");
-				update_ui ();
+			string new_lang = language_box.get_active_text ();
+			if (new_lang != user.get_language ()) {
+				if (user == current_user || permission.allowed) {
+					user.set_language (new_lang);
+				} else {
+					warning ("Insuffienct permissions to change lang");
+					update_ui ();
+				}
 			}
 		}
 	}

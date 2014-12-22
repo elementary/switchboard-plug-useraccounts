@@ -68,7 +68,7 @@ namespace SwitchboardPlugUsers.Widgets {
 
 			footer = new ListFooter (permission);
 			sidebar.pack_start (scrolled_window, true, true);
-			sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false);
+			//sidebar.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false);
 			sidebar.pack_end (footer, false, false);
 
 			//auto select current user row in userlist widget
