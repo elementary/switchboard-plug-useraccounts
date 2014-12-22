@@ -26,7 +26,7 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
 		private Gtk.Entry full_name_entry;
-		private Gtk.Button new_password_button;
+		private Gtk.Button change_password_button;
 		private Gtk.ComboBoxText user_type_box;
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
@@ -36,6 +36,7 @@ namespace SwitchboardPlugUsers.Widgets {
 
 		public UserSettings (Act.User _user, Act.User _current_user, string[]? _installed_lang, Polkit.Permission _permission) {
 			user = _user;
+			user.changed.connect (update_ui);
 			current_user = _current_user;
 			installed_lang = _installed_lang;
 			permission = _permission;
@@ -54,6 +55,7 @@ namespace SwitchboardPlugUsers.Widgets {
 
 			full_name_entry = new Gtk.Entry ();
 			full_name_entry.set_sensitive (false);
+			full_name_entry.activate.connect (change_full_name);
 			box.pack_start (full_name_entry, false, false, 7);
 
 			user_type_box = new Gtk.ComboBoxText ();
@@ -70,6 +72,7 @@ namespace SwitchboardPlugUsers.Widgets {
 			foreach (string s in installed_lang)
 				language_box.append_text (s);
 			language_box.set_sensitive (false);
+			language_box.changed.connect (change_lang);
 			attach (language_box, 1, 2, 1, 1);
 
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
@@ -84,25 +87,26 @@ namespace SwitchboardPlugUsers.Widgets {
 			autologin_switch.set_sensitive (false);
 			attach (autologin_switch, 1, 4, 1, 1);
 
-			new_password_button = new Gtk.Button ();
-			new_password_button.margin_top = 7;
-			new_password_button.set_sensitive (false);
-			new_password_button.clicked.connect (show_password_dialog);
-			attach (new_password_button, 1, 5, 1, 1);
+			change_password_button = new Gtk.Button ();
+			change_password_button.margin_top = 7;
+			change_password_button.set_sensitive (false);
+			change_password_button.clicked.connect (show_password_dialog);
+			attach (change_password_button, 1, 5, 1, 1);
+
+			update_ui ();
+			attach (avatar, 0, 0, 1, 1);
 
 			permission.notify["allowed"].connect (update_ui);
-			update_ui ();
 		}
 		
 		public void update_ui () {
-			if (current_user == user ||
-			(permission.allowed && permission.get_action_id () == "org.freedesktop.accounts.user-administration")) {
+			if (current_user == user || permission.allowed) {
 				full_name_entry.set_sensitive (true);
 				user_type_box.set_sensitive (true);
 				language_box.set_sensitive (true);
-				new_password_button.set_sensitive (true);
+				change_password_button.set_sensitive (true);
 			}
-			if (permission.allowed && permission.get_action_id () == "org.freedesktop.accounts.user-administration")
+			if (permission.allowed)
 				autologin_switch.set_sensitive (true);
 
 			try {
@@ -116,7 +120,6 @@ namespace SwitchboardPlugUsers.Widgets {
 				} catch (Error e) { }
 			}
 			avatar.halign = Gtk.Align.END;
-			attach (avatar, 0, 0, 1, 1);
 
 			full_name_entry.set_text (user.get_real_name ());
 
@@ -126,11 +129,11 @@ namespace SwitchboardPlugUsers.Widgets {
 			else
 				user_type_box.set_active (1);
 
-			//set new_password_button's label according to lock state
+			//set change_password_button's label according to lock state
 			if (user.get_locked ())
-				new_password_button.set_label (_("Activate user"));
+				change_password_button.set_label (_("Activate user"));
 			else
-				new_password_button.set_label (_("Set new password"));
+				change_password_button.set_label (_("Change password"));
 
 			//set autologin_switch according to autologin
 			if (user.get_automatic_login ())
@@ -151,8 +154,28 @@ namespace SwitchboardPlugUsers.Widgets {
 		}
 
 		public void show_password_dialog () {
-			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog ();
+			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog (permission, (user == current_user), user.get_locked ());
 			password_dialog.show ();
+		}
+
+		public void change_full_name () {
+			if (user == current_user || permission.allowed) {
+				string new_full_name = full_name_entry.get_text ();
+				user.set_real_name (new_full_name);
+			} else {
+				warning ("Insuffienct permissions to change name");
+				update_ui ();
+			}
+		}
+
+		public void change_lang () {
+			if (user == current_user || permission.allowed) {
+				string new_lang = language_box.get_active_text ();
+				user.set_language (new_lang);
+			} else {
+				warning ("Insuffienct permissions to change name");
+				update_ui ();
+			}
 		}
 	}
 }

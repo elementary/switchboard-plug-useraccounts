@@ -79,7 +79,9 @@ namespace SwitchboardPlugUsers {
 		}
 
         public override void shown () { }
-        public override void hidden () { }
+        public override void hidden () {
+			warning ("User Accounts marked for removal will be removed now");
+		}
         public override void search_callback (string location) { }
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")

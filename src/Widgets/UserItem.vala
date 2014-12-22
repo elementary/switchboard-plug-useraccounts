@@ -25,15 +25,16 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gdk.Pixbuf avatar_pixbuf;
 		private Gtk.Box label_box;
 		private Gtk.Label full_name_label;
-		private Gtk.Label user_name_label;
+		private Gtk.Label description_label;
 		
 		private Act.User user;
 
 		public string user_name;
 
-		public UserItem (Act.User user) {
-			this.user = user;
-			this.user_name = user.get_user_name ();
+		public UserItem (Act.User _user) {
+			user = _user;
+			user.changed.connect (update_ui);
+			user_name = user.get_user_name ();
 
 			build_ui ();
 		}
@@ -53,12 +54,12 @@ namespace SwitchboardPlugUsers.Widgets {
 			full_name_label.halign = Gtk.Align.START;
 			full_name_label.get_style_context ().add_class ("h3");
 
-			user_name_label = new Gtk.Label ("");
-			user_name_label.halign = Gtk.Align.START;
-			user_name_label.use_markup = true;
+			description_label = new Gtk.Label ("");
+			description_label.halign = Gtk.Align.START;
+			description_label.use_markup = true;
 
 			label_box.pack_start (full_name_label, false, false);
-			label_box.pack_start (user_name_label, false, false);
+			label_box.pack_start (description_label, false, false);
 
 			update_ui ();
 		}
@@ -74,7 +75,10 @@ namespace SwitchboardPlugUsers.Widgets {
 			grid.attach (avatar, 0, 0, 1, 1);
 
 			full_name_label.set_label (user.get_real_name ());
-			user_name_label.set_label ("<span font_size=\"small\">" + user.get_user_name () + "</span>");
+			string description = "<span font_size=\"small\">%s</span>".printf (user.get_user_name ());
+			if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
+				description = "<span font_size=\"small\">%s (Administrator)</span>".printf (user.get_user_name ());
+			description_label.set_label (description);
 			
 			grid.show_all ();
 		}
