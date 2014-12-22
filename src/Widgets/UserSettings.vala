@@ -28,7 +28,6 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gtk.Entry full_name_entry;
 		private Gtk.Button change_password_button;
 		private Gtk.ComboBoxText user_type_box;
-		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
 		private Gtk.Box box;
 
@@ -64,34 +63,24 @@ namespace SwitchboardPlugUsers.Widgets {
 			user_type_box.set_sensitive (false);
 			box.pack_end (user_type_box, false, false, 7);
 
-			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
-			lang_label.halign = Gtk.Align.END;
-			attach (lang_label, 0, 2, 1, 1);
-
-			language_box = new Gtk.ComboBoxText ();
-			foreach (string s in installed_lang)
-				language_box.append_text (s);
-			language_box.set_sensitive (false);
-			language_box.changed.connect (change_lang);
-			attach (language_box, 1, 2, 1, 1);
 
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
 			login_label.halign = Gtk.Align.END;
 			login_label.margin_top = 30;
-			attach (login_label, 0, 4, 1, 1);
+			attach (login_label, 0, 2, 1, 1);
 
 			autologin_switch = new Gtk.Switch ();
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 30;
 			autologin_switch.set_sensitive (false);
-			attach (autologin_switch, 1, 4, 1, 1);
+			attach (autologin_switch, 1, 2, 1, 1);
 
 			change_password_button = new Gtk.Button ();
 			change_password_button.margin_top = 7;
 			change_password_button.set_sensitive (false);
 			change_password_button.clicked.connect (show_password_dialog);
-			attach (change_password_button, 1, 5, 1, 1);
+			attach (change_password_button, 1, 3, 1, 1);
 
 			update_ui ();
 			attach (avatar, 0, 0, 1, 1);
@@ -103,7 +92,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			if (current_user == user || permission.allowed) {
 				full_name_entry.set_sensitive (true);
 				user_type_box.set_sensitive (true);
-				language_box.set_sensitive (true);
 				change_password_button.set_sensitive (true);
 			}
 			if (permission.allowed)
@@ -141,15 +129,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			else
 				autologin_switch.set_active (false);
 
-			int i = 0;
-			foreach (string s in installed_lang) {
-				if (user.get_language () == s) {
-					language_box.set_active (i);
-					break;
-				}
-				i++;
-			}
-
 			show_all ();
 		}
 
@@ -162,16 +141,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			if (user == current_user || permission.allowed) {
 				string new_full_name = full_name_entry.get_text ();
 				user.set_real_name (new_full_name);
-			} else {
-				warning ("Insuffienct permissions to change name");
-				update_ui ();
-			}
-		}
-
-		public void change_lang () {
-			if (user == current_user || permission.allowed) {
-				string new_lang = language_box.get_active_text ();
-				user.set_language (new_lang);
 			} else {
 				warning ("Insuffienct permissions to change name");
 				update_ui ();
