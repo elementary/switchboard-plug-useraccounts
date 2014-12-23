@@ -58,7 +58,7 @@ namespace SwitchboardPlugUserAccounts {
 			main_grid.attach (infobar, 0, 0, 1, 1);
 
 			userview = null;
-			userview = new Widgets.UserView (get_permission ());
+			userview = new Widgets.UserView ();
 			main_grid.attach (userview, 0, 1, 1, 1);
 			main_grid.show_all ();
 

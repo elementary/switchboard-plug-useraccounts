@@ -27,11 +27,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Label my_account_label;
 		private Gtk.Label other_accounts_label;
 
-		public UserList (Act.UserManager _usermanager, Act.User _current_user) {
+		public UserList (Act.User _current_user) {
 			selection_mode = Gtk.SelectionMode.SINGLE;
-			usermanager = _usermanager;
-			usermanager.user_added.connect (update_ui);
-			usermanager.user_removed.connect (update_ui);
+			get_usermanager ().user_added.connect (update_ui);
+			get_usermanager ().user_removed.connect (update_ui);
 			current_user = _current_user;
 			set_header_func (update_headers);
 			build_ui ();
@@ -68,7 +67,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					remove (u);
 			}
 
-			userlist = usermanager.list_users ();
+			userlist = get_usermanager ().list_users ();
 			insert (new UserItem (current_user), 1);
 			int i = 2;
 

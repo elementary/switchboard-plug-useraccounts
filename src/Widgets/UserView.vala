@@ -20,7 +20,6 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
 		public UserList userlist;
-		public unowned Act.UserManager usermanager;
 		public SList<Act.User> user_slist;
 		public unowned Act.User current_user;
 		public Gtk.Stack content;
@@ -29,24 +28,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public ListFooter footer;
 
 
-		public UserView (Polkit.Permission _permission) {
+		public UserView () {
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			content = new Gtk.Stack ();
 			
 			expand = true;
-
 			pack1 (sidebar, true, false);
 			pack2 (content, true, false);
 
-			usermanager = Act.UserManager.get_default ();
-			usermanager.notify["is-loaded"].connect (update);
+			get_usermanager ().notify["is-loaded"].connect (update);
 		}
 
 		private void update () {
-			if (usermanager.is_loaded) {
-				user_slist = usermanager.list_users ();
-				current_user = usermanager.get_user (GLib.Environment.get_user_name ());
-				userlist = new UserList (usermanager, current_user);
+			if (get_usermanager ().is_loaded) {
+				user_slist = get_usermanager ().list_users ();
+				current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+				userlist = new UserList (current_user);
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in user_slist)

@@ -63,8 +63,8 @@ namespace SwitchboardPlugUserAccounts {
 
 	private static Act.UserManager? usermanager = null;
 	
-	public static Act.UserManager? get_usermanager () {
-		if (usermanager != null)
+	public static unowned Act.UserManager? get_usermanager () {
+		if (usermanager != null && usermanager.is_loaded)
 			return usermanager;
 
 		usermanager = Act.UserManager.get_default ();
