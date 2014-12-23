@@ -62,6 +62,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void show_new_user_dialog () {
 			Dialogs.NewUserDialog new_user_d = new Dialogs.NewUserDialog ();
 			new_user_d.show ();
+			new_user_d.request_user_creation.connect (create_new_user);
+		}
+
+		public void create_new_user (string fullname, string username, Act.UserAccountType usertype) {
+			if (get_permission ().allowed) {
+				try {
+					get_usermanager ().create_user (username, fullname, usertype);
+				} catch (Error e) {
+					critical ("User creation failed");
+				}
+			}
 		}
 	}
 }

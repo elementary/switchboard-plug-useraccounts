@@ -43,11 +43,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			if (get_usermanager ().is_loaded) {
 				user_slist = get_usermanager ().list_users ();
 				current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+				get_usermanager ().user_added.connect (add_user_settings);
+				get_usermanager ().user_removed.connect (remove_user_settings);
 				userlist = new UserList (current_user);
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in user_slist)
-					content.add_named (new UserSettings (user, (user == current_user)), user.get_user_name ());
+					add_user_settings (user);
 
 				build_ui ();
 			}
@@ -65,6 +67,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			userlist.select_row (userlist.get_row_at_index (1));
 			set_position (240);
 			show_all ();
+		}
+
+		private void add_user_settings (Act.User user) {
+			debug ("adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+			content.add_named (new UserSettings (user, (user == current_user)), user.get_user_name ());
+			//user_slist = get_usermanager ().list_users ();
+		}
+
+		private void remove_user_settings (Act.User user) {
+			debug ("removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+			content.remove (content.get_child_by_name (user.get_user_name ()));
+			//user_slist = get_usermanager ().list_users ();
 		}
 
 		public void userlist_selected (Gtk.ListBoxRow? user_item) {

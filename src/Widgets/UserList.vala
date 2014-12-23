@@ -20,7 +20,6 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
 
 	public class UserList : Gtk.ListBox {
-		private unowned Act.UserManager usermanager;
 		private SList<Act.User> userlist;
 		private unowned Act.User current_user;
 

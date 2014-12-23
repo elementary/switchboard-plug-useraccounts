@@ -29,7 +29,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private Gtk.Widget button_create;
 		private Gtk.Widget button_cancel;
 
-		public signal void request_user_creation (string fullname, string username, int usertype);
+		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype);
 
 		public NewUserDialog () {
 			set_size_request (500, 425);
@@ -104,9 +104,9 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			if (response_id == Gtk.ResponseType.OK) {
 				string fullname = fullname_entry.get_text ();
 				string username = username_combobox.get_active_text ();
-				int accounttype = 0;
+				Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
 				if (accounttype_combobox.get_active () == 0)
-					accounttype = 1;
+					accounttype = Act.UserAccountType.ADMINISTRATOR;
 				request_user_creation (fullname, username, accounttype);
 			}
 			hide ();
