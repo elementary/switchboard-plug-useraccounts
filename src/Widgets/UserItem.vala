@@ -18,7 +18,7 @@
  */
 using Act;
 
-namespace SwitchboardPlugUsers.Widgets {
+namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserItem : Gtk.ListBoxRow {
 		private Gtk.Grid grid;
 		private Gtk.Image avatar;

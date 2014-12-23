@@ -17,18 +17,21 @@
  * Boston, MA 02111-1307, USA.
  */
 
-namespace SwitchboardPlugUsers.Widgets {
+namespace SwitchboardPlugUserAccounts.Widgets {
 
 	public class UserList : Gtk.ListBox {
-		private unowned SList<Act.User> userlist;
+		private unowned Act.UserManager usermanager;
+		private SList<Act.User> userlist;
 		private unowned Act.User current_user;
 
 		private Gtk.Label my_account_label;
 		private Gtk.Label other_accounts_label;
 
-		public UserList (SList<Act.User> _userlist, Act.User _current_user) {
+		public UserList (Act.UserManager _usermanager, Act.User _current_user) {
 			selection_mode = Gtk.SelectionMode.SINGLE;
-			userlist = _userlist;
+			usermanager = _usermanager;
+			usermanager.user_added.connect (update_ui);
+			usermanager.user_removed.connect (update_ui);
 			current_user = _current_user;
 			set_header_func (update_headers);
 			build_ui ();
@@ -54,9 +57,21 @@ namespace SwitchboardPlugUsers.Widgets {
 			other_accounts_label.get_style_context ().add_class ("h3");
 			other_accounts_label.set_sensitive (false);
 
-			insert (new UserItem (current_user), 1);
+			update_ui ();
+		}
 
+		public void update_ui () {
+			List<weak Gtk.Widget> userlist_items = this.get_children ();
+			foreach (unowned Gtk.Widget useritem in userlist_items) {
+				unowned UserItem u = (useritem is UserItem) ? (UserItem) useritem : null;
+				if (u != null)
+					remove (u);
+			}
+
+			userlist = usermanager.list_users ();
+			insert (new UserItem (current_user), 1);
 			int i = 2;
+
 			foreach (unowned Act.User temp_user in userlist) {
 				if (current_user != temp_user) {
 					insert (new UserItem (temp_user), i);
@@ -64,14 +79,6 @@ namespace SwitchboardPlugUsers.Widgets {
 				}
 			}
 
-			update_ui ();
-		}
-
-		public void update_ui () {
-			List<weak Gtk.Widget> userlist_items = this.get_children ();
-			foreach (unowned Gtk.Widget useritem in userlist_items) {
-				warning (((UserItem)useritem).user_name);
-			}
 			show_all ();
 		}
 

@@ -17,16 +17,13 @@
  * Boston, MA 02111-1307, USA.
  */
 
-namespace SwitchboardPlugUsers.Widgets {
+namespace SwitchboardPlugUserAccounts.Widgets {
 	public class ListFooter : Gtk.Toolbar {
 		public Gtk.ToolButton button_add;
 		public Gtk.ToolButton button_remove;
 
-		private unowned Polkit.Permission permission;
-
-		public ListFooter (Polkit.Permission _permission) {
-			permission = _permission;
-			permission.notify["allowed"].connect (update_ui);
+		public ListFooter () {
+			get_permission ().notify["allowed"].connect (update_ui);
 			build_ui ();
 		}
 
@@ -46,7 +43,6 @@ namespace SwitchboardPlugUsers.Widgets {
 			button_add.clicked.connect (show_new_user_dialog);
 			insert (button_add, -1);
 
-			insert (new Gtk.SeparatorToolItem (), -1);
 			button_remove = new Gtk.ToolButton (null, _("Mark user account for removal"));
 			button_remove.set_tooltip_text (_("Mark user account for removal"));
 			button_remove.set_icon_name ("list-remove-symbolic");

@@ -20,46 +20,54 @@
  * Authored by: Switchboard Locale Plug Developers
  */
 
-namespace SwitchboardPlugUsers {
-	public class Utils : Object {
-		public Utils () { }
+namespace SwitchboardPlugUserAccounts {
+	private static string[]? installed_languages = null;
 
-		public static string[]? get_installed_languages () {
+	public static string[]? get_installed_languages () {
+		if (installed_languages != null)
+			return installed_languages;
 
-			string output;
-			int status;
+		string output;
+		int status;
 
-			try {
-				Process.spawn_sync (null, 
-					{"/usr/share/language-tools/language-options" , null}, 
-					Environ.get (),
-					SpawnFlags.SEARCH_PATH,
-					null,
-					out output,
-					null,
-					out status);
+		try {
+			Process.spawn_sync (null, 
+				{"/usr/share/language-tools/language-options" , null}, 
+				Environ.get (),
+				SpawnFlags.SEARCH_PATH,
+				null,
+				out output,
+				null,
+				out status);
 
-					return output.split("\n");
-
-			} catch (Error e) {
-				return null;
-			}
+				installed_languages = output.split("\n");
+				return installed_languages;
+		} catch (Error e) {
+			return null;
 		}
+	}
 
-		public static string translate_language (string lang) {
-			Intl.textdomain ("iso_639");
-			var lang_name = dgettext ("iso_639", lang);
-			lang_name = dgettext ("iso_639_3", lang);
-			return lang_name;
+	private static Polkit.Permission? permission = null;
+	
+	public static Polkit.Permission? get_permission () {
+		if (permission != null)
+			return permission;
+		try {
+			permission = new Polkit.Permission.sync ("org.freedesktop.accounts.user-administration", Polkit.UnixProcess.new (Posix.getpid ()));
+			return permission;
+		} catch (Error e) {
+			critical (e.message);
+			return null;
 		}
-		private static Act.User current_user;
+	}
 
-		public static async Act.User get_current_user () {
-			unowned Act.UserManager usermanager = Act.UserManager.get_default ();
-			usermanager.notify["is-loaded"].connect (() => {
-				current_user = usermanager.get_user (GLib.Environment.get_user_name ());
-			});
-			return current_user;
-		}
+	private static Act.UserManager? usermanager = null;
+	
+	public static Act.UserManager? get_usermanager () {
+		if (usermanager != null)
+			return usermanager;
+
+		usermanager = Act.UserManager.get_default ();
+		return usermanager;
 	}
 }

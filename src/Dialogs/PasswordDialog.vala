@@ -16,7 +16,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
-namespace SwitchboardPlugUsers {
+namespace SwitchboardPlugUserAccounts {
 	public enum PassChangeType {
 		NEW_PASSWORD,
 		NO_PASSWORD,
@@ -25,7 +25,7 @@ namespace SwitchboardPlugUsers {
 	}
 }
 
-namespace SwitchboardPlugUsers.Dialogs {
+namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class PasswordDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
 		private Gtk.Grid content_grid_1;
@@ -45,7 +45,6 @@ namespace SwitchboardPlugUsers.Dialogs {
 		private Gtk.Widget button_change;
 		private Gtk.Widget button_cancel;
 
-		private unowned Polkit.Permission permission;
 		private unowned bool is_current_user;
 		private unowned bool enable;
 
@@ -56,8 +55,7 @@ namespace SwitchboardPlugUsers.Dialogs {
 
 		public signal void request_password_change (PassChangeType type, string? new_password);
 
-		public PasswordDialog (Polkit.Permission _permission, bool _is_current_user, bool _enable = false) {
-			permission = _permission;
+		public PasswordDialog (bool _is_current_user, bool _enable = false) {
 			is_current_user = _is_current_user;
 			enable = _enable;
 			set_size_request (500, 0);
@@ -225,7 +223,7 @@ namespace SwitchboardPlugUsers.Dialogs {
 			content_stack.set_visible_child_name ("new_password");
 			content_grid_1.show_all ();
 
-			if (permission.allowed) {
+			if (get_permission ().allowed) {
 				current_password_entry.set_sensitive (false);
 				current_password_entry_nopw.set_sensitive (false);
 			}

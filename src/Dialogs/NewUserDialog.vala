@@ -17,7 +17,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-namespace SwitchboardPlugUsers.Dialogs {
+namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class NewUserDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
 		private Gtk.Box header_box;

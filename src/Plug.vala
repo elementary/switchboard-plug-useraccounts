@@ -20,15 +20,15 @@
  * Authored by: Marvin Beckers <beckersmarvin@gmail.com>
  */
 
-namespace SwitchboardPlugUsers {
+namespace SwitchboardPlugUserAccounts {
 	public static Plug plug;
-	private Gtk.Grid main_grid;
-	private Gtk.InfoBar infobar;
-
-	private Gtk.LockButton lock_button;
 
 	public class Plug : Switchboard.Plug {
 		private Widgets.UserView userview;
+
+		private Gtk.Grid? main_grid = null;
+		private Gtk.InfoBar infobar;
+		private Gtk.LockButton lock_button;
 
 		public Plug () {
 			Object (category: Category.SYSTEM,
@@ -47,33 +47,27 @@ namespace SwitchboardPlugUsers {
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
 
-			try {
-				var permission = new Polkit.Permission.sync ("org.freedesktop.accounts.user-administration", Polkit.UnixProcess.new (Posix.getpid ()));
+			infobar = new Gtk.InfoBar ();
+			infobar.message_type = Gtk.MessageType.INFO;
+			lock_button = new Gtk.LockButton (get_permission ());
+			var area = infobar.get_action_area () as Gtk.Container;
+			var content = infobar.get_content_area () as Gtk.Container;
+			var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+			area.add (lock_button);
+			content.add (label);
+			main_grid.attach (infobar, 0, 0, 1, 1);
 
-				infobar = new Gtk.InfoBar ();
-				infobar.message_type = Gtk.MessageType.INFO;
-				lock_button = new Gtk.LockButton (permission);
-				var area = infobar.get_action_area () as Gtk.Container;
-				var content = infobar.get_content_area () as Gtk.Container;
-				var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-				area.add (lock_button);
-				content.add (label);
-				main_grid.attach (infobar, 0, 0, 1, 1);
+			userview = null;
+			userview = new Widgets.UserView (get_permission ());
+			main_grid.attach (userview, 0, 1, 1, 1);
+			main_grid.show_all ();
 
-				userview = null;
-				userview = new Widgets.UserView (permission);
-				main_grid.attach (userview, 0, 1, 1, 1);
-				main_grid.show_all ();
-
-				permission.notify["allowed"].connect (() => {
-					if (permission.allowed) {
-						infobar.no_show_all = true;
-						infobar.hide ();
-					}
-				});
-			} catch (Error e) {
-				critical (e.message);
-			}
+			get_permission ().notify["allowed"].connect (() => {
+				if (get_permission ().allowed) {
+					infobar.no_show_all = true;
+					infobar.hide ();
+				}
+			});
 
 			return main_grid;
 		}
@@ -93,6 +87,6 @@ namespace SwitchboardPlugUsers {
 
 public Switchboard.Plug get_plug (Module module) {
 	debug ("Activating User Accounts plug");
-	var plug = new SwitchboardPlugUsers.Plug ();
+	var plug = new SwitchboardPlugUserAccounts.Plug ();
 	return plug;
 }

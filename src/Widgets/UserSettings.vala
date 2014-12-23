@@ -17,11 +17,10 @@
  * Boston, MA 02111-1307, USA.
  */
 
-namespace SwitchboardPlugUsers.Widgets {
+namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private Act.User user;
-		private unowned Act.User current_user;
-		private unowned string[]? installed_lang;
+		private bool is_current_user;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
@@ -30,16 +29,20 @@ namespace SwitchboardPlugUsers.Widgets {
 		private Gtk.ComboBoxText user_type_box;
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
-		private Gtk.Box box;
+		private Gtk.Grid header_grid;
 
-		private unowned Polkit.Permission permission;
-
-		public UserSettings (Act.User _user, Act.User _current_user, string[]? _installed_lang, Polkit.Permission _permission) {
+		/*
+		//lock widgets
+		private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+		private Gtk.Image user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+		private Gtk.Image language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+		private Gtk.Image autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+		*/
+	
+		public UserSettings (Act.User _user, bool _is_current_user) {
 			user = _user;
 			user.changed.connect (update_ui);
-			current_user = _current_user;
-			installed_lang = _installed_lang;
-			permission = _permission;
+			is_current_user = _is_current_user;
 			build_ui ();
 		}
 		
@@ -50,28 +53,31 @@ namespace SwitchboardPlugUsers.Widgets {
 			set_valign (Gtk.Align.START);
 			set_halign (Gtk.Align.CENTER);
 
-			box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-			attach (box, 1, 0, 1, 1);
+			header_grid = new Gtk.Grid ();
+			header_grid.margin_top = 20;
+			header_grid.margin_bottom = 15;
+			header_grid.set_row_spacing (15);
+			header_grid.set_column_spacing (20);
+			header_grid.expand = true;
+			attach (header_grid, 1, 0, 1, 1);
 
 			full_name_entry = new Gtk.Entry ();
-			full_name_entry.set_sensitive (false);
+			full_name_entry.set_size_request (50, 0);
 			full_name_entry.activate.connect (change_full_name);
-			box.pack_start (full_name_entry, false, false, 7);
+			header_grid.attach (full_name_entry, 0, 0, 1, 1);
 
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Administrator"));
 			user_type_box.append_text (_("User"));
-			user_type_box.set_sensitive (false);
-			box.pack_end (user_type_box, false, false, 7);
+			header_grid.attach (user_type_box, 0, 1, 1, 1);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
 			lang_label.halign = Gtk.Align.END;
 			attach (lang_label, 0, 2, 1, 1);
 
 			language_box = new Gtk.ComboBoxText ();
-			foreach (string s in installed_lang)
+			foreach (string s in get_installed_languages ())
 				language_box.append_text (s);
-			language_box.set_sensitive (false);
 			language_box.changed.connect (change_lang);
 			attach (language_box, 1, 2, 1, 1);
 
@@ -84,12 +90,10 @@ namespace SwitchboardPlugUsers.Widgets {
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 30;
-			autologin_switch.set_sensitive (false);
 			attach (autologin_switch, 1, 3, 1, 1);
 
 			change_password_button = new Gtk.Button ();
 			change_password_button.margin_top = 7;
-			change_password_button.set_sensitive (false);
 			change_password_button.clicked.connect (show_password_dialog);
 			attach (change_password_button, 1, 4, 1, 1);
 
@@ -100,15 +104,22 @@ namespace SwitchboardPlugUsers.Widgets {
 		}
 		
 		public void update_ui () {
-			if (current_user == user || permission.allowed) {
+			full_name_entry.set_sensitive (false);
+			user_type_box.set_sensitive (false);
+			language_box.set_sensitive (false);
+			change_password_button.set_sensitive (false);
+			autologin_switch.set_sensitive (false);
+
+			if (is_current_user || get_permission ().allowed) {
 				full_name_entry.set_sensitive (true);
-				user_type_box.set_sensitive (true);
 				language_box.set_sensitive (true);
 				change_password_button.set_sensitive (true);
-			}
-			if (permission.allowed)
-				autologin_switch.set_sensitive (true);
 
+				if (get_permission ().allowed) {
+					autologin_switch.set_sensitive (true);
+					user_type_box.set_sensitive (true);
+				}
+			}
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
 				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
@@ -142,7 +153,7 @@ namespace SwitchboardPlugUsers.Widgets {
 				autologin_switch.set_active (false);
 
 			int i = 0;
-			foreach (string s in installed_lang) {
+			foreach (string s in get_installed_languages ()) {
 				if (user.get_language () == s) {
 					language_box.set_active (i);
 					break;
@@ -154,14 +165,15 @@ namespace SwitchboardPlugUsers.Widgets {
 		}
 
 		public void show_password_dialog () {
-			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog (permission, (user == current_user), user.get_locked ());
+			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog (is_current_user, user.get_locked ());
 			password_dialog.show ();
 		}
 
 		public void change_full_name () {
 			string new_full_name = full_name_entry.get_text ();
 			if (new_full_name != user.get_real_name ()) {
-				if (user == current_user || permission.allowed) {
+				if (is_current_user || get_permission ().allowed) {
+					warning ("changed username");
 					user.set_real_name (new_full_name);
 				} else {
 					warning ("Insuffienct permissions to change name");
@@ -173,7 +185,8 @@ namespace SwitchboardPlugUsers.Widgets {
 		public void change_lang () {
 			string new_lang = language_box.get_active_text ();
 			if (new_lang != user.get_language ()) {
-				if (user == current_user || permission.allowed) {
+				if (is_current_user || get_permission ().allowed) {
+					warning ("changed lang");
 					user.set_language (new_lang);
 				} else {
 					warning ("Insuffienct permissions to change lang");
