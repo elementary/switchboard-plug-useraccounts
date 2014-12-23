@@ -78,21 +78,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void remove_user_settings (Act.User user) {
 			debug ("removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
 			content.remove (content.get_child_by_name (user.get_user_name ()));
-			//user_slist = get_usermanager ().list_users ();
 		}
 
 		public void userlist_selected (Gtk.ListBoxRow? user_item) {
 			string? user_name = null;
-			if (user_item != null)
+			if (user_item != null) {
 				user_name = ((UserItem)user_item).user_name;
-
-			if (user_name != null) {
-				foreach (Act.User user in user_slist) {
-					if (user.get_user_name () == user_name) {
-						content.set_visible_child_name (user_name);
-						break;
-					}
-				}
+				content.set_visible_child_name (user_name);
 			}
 		}
 	}
