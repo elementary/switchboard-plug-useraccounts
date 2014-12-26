@@ -21,12 +21,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
 		public UserList userlist;
 		public SList<Act.User> user_slist;
-		public unowned Act.User current_user;
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
 		public ListFooter footer;
-
 
 		public UserView () {
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -42,10 +40,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update () {
 			if (get_usermanager ().is_loaded) {
 				user_slist = get_usermanager ().list_users ();
-				current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
 				get_usermanager ().user_added.connect (add_user_settings);
 				get_usermanager ().user_removed.connect (remove_user_settings);
-				userlist = new UserList (current_user);
+				userlist = new UserList ();
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in user_slist)
@@ -72,7 +69,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void add_user_settings (Act.User user) {
 			debug ("adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
 			content.add_named (new UserSettings (user, (user == current_user)), user.get_user_name ());
-			//user_slist = get_usermanager ().list_users ();
 		}
 
 		private void remove_user_settings (Act.User user) {
@@ -80,11 +76,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			content.remove (content.get_child_by_name (user.get_user_name ()));
 		}
 
-		public void userlist_selected (Gtk.ListBoxRow? user_item) {
+		private void userlist_selected (Gtk.ListBoxRow? user_item) {
 			string? user_name = null;
 			if (user_item != null) {
 				user_name = ((UserItem)user_item).user_name;
 				content.set_visible_child_name (user_name);
+				footer.set_selected_user (user_name);
 			}
 		}
 	}

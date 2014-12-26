@@ -70,4 +70,33 @@ namespace SwitchboardPlugUserAccounts {
 		usermanager = Act.UserManager.get_default ();
 		return usermanager;
 	}
+
+	private static Act.User? current_user = null;
+
+	public static unowned Act.User? get_current_user () {
+		if (current_user != null)
+			return current_user;
+
+		current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+		return current_user;
+	}
+
+	public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, string? pw) {
+		if (get_permission ().allowed) {
+			try {
+				Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
+				get_usermanager ().user_added.connect ((user) => {
+					if (user == created_user) {
+						created_user.set_locked (false);
+							if (pw == null)
+								created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
+							else if (pw != "")
+								created_user.set_password (pw, "");
+					}
+				});
+			} catch (Error e) {
+				critical ("Creation for user '%s' failed".printf (username));
+			}
+		}
+	}
 }

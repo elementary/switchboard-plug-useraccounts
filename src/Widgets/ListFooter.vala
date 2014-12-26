@@ -19,8 +19,11 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class ListFooter : Gtk.Toolbar {
-		public Gtk.ToolButton button_add;
-		public Gtk.ToolButton button_remove;
+		private Gtk.ToolButton button_add;
+		private Gtk.ToolButton button_remove;
+
+		public Dialogs.NewUserDialog new_user_d;
+		private string? selected_user = null;
 
 		public ListFooter () {
 			get_permission ().notify["allowed"].connect (update_ui);
@@ -43,8 +46,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_add.clicked.connect (show_new_user_dialog);
 			insert (button_add, -1);
 
-			button_remove = new Gtk.ToolButton (null, _("Mark user account for removal"));
-			button_remove.set_tooltip_text (_("Mark user account for removal"));
+			button_remove = new Gtk.ToolButton (null, _("Remove user account"));
+			button_remove.set_tooltip_text (_("Remove user account"));
 			button_remove.set_icon_name ("list-remove-symbolic");
 			button_remove.set_sensitive (false);
 			insert (button_remove, -1);
@@ -55,24 +58,26 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update_ui () {
 			if (permission.allowed) {
 				button_add.set_sensitive (true);
-				button_remove.set_sensitive (true);
+				if (selected_user != get_current_user ().get_user_name ()) {
+					button_remove.set_sensitive (true);
+					button_remove.set_tooltip_text (_("Remove user account"));
+				} else {
+					button_remove.set_sensitive (false);
+					button_remove.set_tooltip_text (_("You cannot remove your own user account"));
+				}
 			}
+		}
+
+		public void set_selected_user (string _user_name) {
+			selected_user =_user_name;
+			debug (selected_user);
+			update_ui ();
 		}
 
 		private void show_new_user_dialog () {
-			Dialogs.NewUserDialog new_user_d = new Dialogs.NewUserDialog ();
+			new_user_d = new Dialogs.NewUserDialog ();
 			new_user_d.show ();
 			new_user_d.request_user_creation.connect (create_new_user);
-		}
-
-		public void create_new_user (string fullname, string username, Act.UserAccountType usertype) {
-			if (get_permission ().allowed) {
-				try {
-					get_usermanager ().create_user (username, fullname, usertype);
-				} catch (Error e) {
-					critical ("User creation failed");
-				}
-			}
 		}
 	}
 }
