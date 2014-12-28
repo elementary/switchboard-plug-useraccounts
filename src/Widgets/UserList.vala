@@ -18,10 +18,7 @@
  */
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-
 	public class UserList : Gtk.ListBox {
-		private SList<Act.User> userlist;
-
 		private Gtk.Label my_account_label;
 		private Gtk.Label other_accounts_label;
 
@@ -65,10 +62,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
 
 			insert (new UserItem (get_current_user ()), 1);
-			userlist = get_usermanager ().list_users ();
 			int pos = 2;
-			foreach (unowned Act.User temp_user in userlist) {
+			foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
 				if (get_current_user () != temp_user && !check_removal (temp_user)) {
+					warning ("hello %s".printf (temp_user.get_user_name ()));
 					insert (new UserItem (temp_user), pos);
 					pos++;
 				}

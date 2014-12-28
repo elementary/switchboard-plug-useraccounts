@@ -20,7 +20,6 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
 		public UserList userlist = null;
-		public SList<Act.User> user_slist;
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
@@ -39,14 +38,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void update () {
 			if (get_usermanager ().is_loaded) {
-				user_slist = get_usermanager ().list_users ();
 				get_usermanager ().user_added.connect (add_user_settings);
 				get_usermanager ().user_removed.connect (remove_user_settings);
 
 				userlist = new UserList ();
 				userlist.row_selected.connect (userlist_selected);
 
-				foreach (Act.User user in user_slist)
+				foreach (Act.User user in get_usermanager ().list_users ())
 					add_user_settings (user);
 
 				build_ui ();
