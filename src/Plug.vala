@@ -76,6 +76,7 @@ namespace SwitchboardPlugUserAccounts {
 			try {
 				foreach (Act.User user in get_removal_list ())
 					get_usermanager ().delete_user (user, true);
+					clear_removal_list ();
 			} catch (Error e) { critical (e.message); }
 		}
         public override void search_callback (string location) { }

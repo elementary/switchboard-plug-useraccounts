@@ -90,6 +90,9 @@ namespace SwitchboardPlugUserAccounts {
 			removal_list = new List<Act.User> ();
 			return removal_list;
 		}
+		public static void clear_removal_list () {
+			removal_list = null;
+		}
 
 		public static void mark_removal (Act.User user) {
 			if (removal_list == null)

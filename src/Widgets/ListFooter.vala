@@ -30,6 +30,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		public ListFooter () {
 			get_permission ().notify["allowed"].connect (update_ui);
+			get_usermanager ().user_removed.connect (update_ui);
 			build_ui ();
 		}
 
