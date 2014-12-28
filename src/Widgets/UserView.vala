@@ -57,6 +57,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			scrolled_window.add (userlist);
 
 			footer = new ListFooter ();
+			footer.removal_changed.connect (userlist.update_ui);
 			sidebar.pack_start (scrolled_window, true, true);
 			sidebar.pack_end (footer, false, false);
 
@@ -68,7 +69,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void add_user_settings (Act.User user) {
 			debug ("adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
-			content.add_named (new UserSettings (user, (user == current_user)), user.get_user_name ());
+			content.add_named (new UserSettings (user), user.get_user_name ());
 		}
 
 		private void remove_user_settings (Act.User user) {

@@ -20,7 +20,7 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private Act.User user;
-		private bool is_current_user;
+		private Widgets.PasswordEditor pw_editor;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
@@ -29,7 +29,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.ComboBoxText user_type_box;
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
-		private Gtk.Grid header_grid;
 
 		/*
 		//lock widgets
@@ -39,63 +38,64 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Image autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
 		*/
 	
-		public UserSettings (Act.User _user, bool _is_current_user) {
+		public UserSettings (Act.User _user) {
 			user = _user;
 			user.changed.connect (update_ui);
-			is_current_user = _is_current_user;
 			build_ui ();
 		}
 		
 		public void build_ui () {
 			margin = 20;
-			set_row_spacing (7);
+			set_row_spacing (10);
 			set_column_spacing (20);
 			set_valign (Gtk.Align.START);
 			set_halign (Gtk.Align.CENTER);
 
-			header_grid = new Gtk.Grid ();
-			header_grid.margin_top = 20;
-			header_grid.margin_bottom = 15;
-			header_grid.set_row_spacing (15);
-			header_grid.set_column_spacing (20);
-			header_grid.expand = true;
-			attach (header_grid, 1, 0, 1, 1);
-
 			full_name_entry = new Gtk.Entry ();
-			full_name_entry.set_size_request (50, 0);
+			full_name_entry.get_style_context ().add_class ("h3");
 			full_name_entry.activate.connect (change_full_name);
-			header_grid.attach (full_name_entry, 0, 0, 1, 1);
+			attach (full_name_entry, 1, 0, 1, 1);
+
+			Gtk.Label user_type_label = new Gtk.Label (_("Account type:"));
+			user_type_label.halign = Gtk.Align.END;
+			attach (user_type_label,0, 2, 1, 1);
 
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Administrator"));
-			user_type_box.append_text (_("User"));
-			header_grid.attach (user_type_box, 0, 1, 1, 1);
+			user_type_box.append_text (_("Standard"));
+			attach (user_type_box, 1, 2, 1, 1);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
 			lang_label.halign = Gtk.Align.END;
-			attach (lang_label, 0, 2, 1, 1);
+			attach (lang_label, 0, 3, 1, 1);
 
 			language_box = new Gtk.ComboBoxText ();
 			foreach (string s in get_installed_languages ())
 				language_box.append_text (s);
 			language_box.changed.connect (change_lang);
-			attach (language_box, 1, 2, 1, 1);
+			attach (language_box, 1, 3, 1, 1);
 
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
 			login_label.halign = Gtk.Align.END;
-			login_label.margin_top = 30;
-			attach (login_label, 0, 3, 1, 1);
+			login_label.margin_top = 20;
+			attach (login_label, 0, 4, 1, 1);
 
 			autologin_switch = new Gtk.Switch ();
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
-			autologin_switch.margin_top = 30;
-			attach (autologin_switch, 1, 3, 1, 1);
+			autologin_switch.margin_top = 20;
+			attach (autologin_switch, 1, 4, 1, 1);
+
+			Gtk.Label change_password_label = new Gtk.Label (_("Password:"));
+			change_password_label.halign = Gtk.Align.END;
+			attach (change_password_label, 0, 5, 1, 1);
 
 			change_password_button = new Gtk.Button ();
-			change_password_button.margin_top = 7;
 			change_password_button.clicked.connect (show_password_dialog);
-			attach (change_password_button, 1, 4, 1, 1);
+			attach (change_password_button, 1, 5, 1, 1);
+
+			pw_editor = new Widgets.PasswordEditor ();
+			//attach (pw_editor, 0, 6, 2, 1);
 
 			update_ui ();
 			attach (avatar, 0, 0, 1, 1);
@@ -110,7 +110,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
 
-			if (is_current_user || get_permission ().allowed) {
+			if (get_current_user () == user || get_permission ().allowed) {
 				full_name_entry.set_sensitive (true);
 				language_box.set_sensitive (true);
 				change_password_button.set_sensitive (true);
@@ -165,14 +165,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		public void show_password_dialog () {
-			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog (is_current_user, user.get_locked ());
+			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog ((get_current_user () == user), user.get_locked ());
 			password_dialog.show ();
 		}
 
 		public void change_full_name () {
 			string new_full_name = full_name_entry.get_text ();
 			if (new_full_name != user.get_real_name ()) {
-				if (is_current_user || get_permission ().allowed) {
+				if (get_current_user () == user || get_permission ().allowed) {
 					warning ("changed username");
 					user.set_real_name (new_full_name);
 				} else {
@@ -185,7 +185,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public void change_lang () {
 			string new_lang = language_box.get_active_text ();
 			if (new_lang != user.get_language ()) {
-				if (is_current_user || get_permission ().allowed) {
+				if (get_current_user () == user || get_permission ().allowed) {
 					warning ("changed lang");
 					user.set_language (new_lang);
 				} else {

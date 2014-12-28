@@ -51,13 +51,12 @@ namespace SwitchboardPlugUserAccounts {
 			infobar.message_type = Gtk.MessageType.INFO;
 			lock_button = new Gtk.LockButton (get_permission ());
 			var area = infobar.get_action_area () as Gtk.Container;
+			area.add (lock_button);
 			var content = infobar.get_content_area () as Gtk.Container;
 			var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-			area.add (lock_button);
 			content.add (label);
 			main_grid.attach (infobar, 0, 0, 1, 1);
 
-			userview = null;
 			userview = new Widgets.UserView ();
 			main_grid.attach (userview, 0, 1, 1, 1);
 			main_grid.show_all ();
@@ -74,7 +73,10 @@ namespace SwitchboardPlugUserAccounts {
 
         public override void shown () { }
         public override void hidden () {
-			warning ("User Accounts marked for removal will be removed now");
+			try {
+				foreach (Act.User user in get_removal_list ())
+					get_usermanager ().delete_user (user, true);
+			} catch (Error e) { critical (e.message); }
 		}
         public override void search_callback (string location) { }
 

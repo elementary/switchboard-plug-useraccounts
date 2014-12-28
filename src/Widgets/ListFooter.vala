@@ -21,9 +21,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 	public class ListFooter : Gtk.Toolbar {
 		private Gtk.ToolButton button_add;
 		private Gtk.ToolButton button_remove;
+		private Gtk.ToolButton button_undo;
 
 		public Dialogs.NewUserDialog new_user_d;
 		private string? selected_user = null;
+
+		public signal void removal_changed ();
 
 		public ListFooter () {
 			get_permission ().notify["allowed"].connect (update_ui);
@@ -46,13 +49,30 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_add.clicked.connect (show_new_user_dialog);
 			insert (button_add, -1);
 
-			button_remove = new Gtk.ToolButton (null, _("Remove user account"));
-			button_remove.set_tooltip_text (_("Remove user account"));
+			button_remove = new Gtk.ToolButton (null, _("Remove user account and its data"));
+			button_remove.set_tooltip_text (_("Remove user account and its data"));
 			button_remove.set_icon_name ("list-remove-symbolic");
 			button_remove.set_sensitive (false);
+			button_remove.clicked.connect (mark_user_removal);
 			insert (button_remove, -1);
 
-			show_all ();
+			var separator = new Gtk.SeparatorToolItem ();
+			separator.set_draw (false);
+			separator.set_expand (true);
+			insert (separator, -1);
+
+			button_undo = new Gtk.ToolButton (null, _("Undo last user account removal"));
+			button_undo.set_tooltip_text (_("Undo last user account removal"));
+			button_undo.set_icon_name ("edit-undo-symbolic");
+			button_undo.set_sensitive (false);
+			button_undo.clicked.connect (() => {
+				undo_removal ();
+				removal_changed ();
+				update_ui ();
+			});
+			insert (button_undo, -1);
+
+			update_ui ();
 		}
 
 		private void update_ui () {
@@ -60,17 +80,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				button_add.set_sensitive (true);
 				if (selected_user != get_current_user ().get_user_name ()) {
 					button_remove.set_sensitive (true);
-					button_remove.set_tooltip_text (_("Remove user account"));
+					button_remove.set_tooltip_text (_("Remove user account and its data"));
 				} else {
 					button_remove.set_sensitive (false);
 					button_remove.set_tooltip_text (_("You cannot remove your own user account"));
 				}
+
+				if (get_removal_list () == null || get_removal_list ().last () == null)
+					button_undo.set_sensitive (false);
+				else if (get_removal_list () != null && get_removal_list ().last () != null)
+					button_undo.set_sensitive (true);
 			}
+			show_all ();
 		}
 
 		public void set_selected_user (string _user_name) {
 			selected_user =_user_name;
-			debug (selected_user);
+			update_ui ();
+		}
+
+		private void mark_user_removal () {
+			mark_removal (get_usermanager ().get_user (selected_user));
+			removal_changed ();
 			update_ui ();
 		}
 

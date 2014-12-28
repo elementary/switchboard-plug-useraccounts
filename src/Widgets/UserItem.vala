@@ -42,6 +42,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void build_ui () {
 			grid = new Gtk.Grid ();
 			grid.margin = 6;
+			grid.margin_left = 12;
 			grid.column_spacing = 6;
 			add (grid);
 
@@ -71,7 +72,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			} catch (Error e) {
 				avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
 			}
-			avatar.margin_end = 5;
+			avatar.margin_end = 3;
 			grid.attach (avatar, 0, 0, 1, 1);
 
 			full_name_label.set_label (user.get_real_name ());

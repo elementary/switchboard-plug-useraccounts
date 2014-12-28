@@ -43,14 +43,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			my_account_label.margin_top = 5;
 			my_account_label.margin_start = 5;
 			my_account_label.halign = Gtk.Align.START;
-			my_account_label.get_style_context ().add_class ("h3");
+			my_account_label.get_style_context ().add_class ("category-label");
 			my_account_label.set_sensitive (false);
 
 			other_accounts_label = new Gtk.Label (_("Other Accounts"));
 			other_accounts_label.margin_top = 5;
 			other_accounts_label.margin_start = 5;
 			other_accounts_label.halign = Gtk.Align.START;
-			other_accounts_label.get_style_context ().add_class ("h3");
+			other_accounts_label.get_style_context ().add_class ("category-label");
 			other_accounts_label.set_sensitive (false);
 
 			update_ui ();
@@ -69,7 +69,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			int i = 2;
 
 			foreach (unowned Act.User temp_user in userlist) {
-				if (get_current_user () != temp_user) {
+				if (get_current_user () != temp_user && get_removal_list ().find (temp_user) == null) {
 					insert (new UserItem (temp_user), i);
 					i++;
 				}
