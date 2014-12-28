@@ -77,11 +77,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void userlist_selected (Gtk.ListBoxRow? user_item) {
-			string? user_name = null;
+			Act.User? user = null;
 			if (user_item != null) {
-				user_name = ((UserItem)user_item).user_name;
-				content.set_visible_child_name (user_name);
-				footer.set_selected_user (user_name);
+				user = ((UserItem)user_item).user;
+				content.set_visible_child_name (user.get_user_name ());
+				footer.set_selected_user (user);
 			}
 		}
 	}

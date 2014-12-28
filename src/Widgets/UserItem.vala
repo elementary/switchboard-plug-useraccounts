@@ -27,7 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Label full_name_label;
 		private Gtk.Label description_label;
 		
-		private Act.User user;
+		public Act.User user;
 
 		public string user_name;
 

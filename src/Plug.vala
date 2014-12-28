@@ -81,10 +81,10 @@ namespace SwitchboardPlugUserAccounts {
 		}
         public override void search_callback (string location) { }
 
-        // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
-        public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
-        }
+		    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+		    public override async Gee.TreeMap<string, string> search (string search) {
+		        return new Gee.TreeMap<string, string> (null, null);
+		    }
     }
 }
 

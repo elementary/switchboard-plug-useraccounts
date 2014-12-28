@@ -124,6 +124,14 @@ namespace SwitchboardPlugUserAccounts {
 			return false;
 		}
 
+		public static bool is_last_admin (Act.User user) {
+			foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
+				if (temp_user != user && temp_user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
+					return false;
+			}
+			return true;
+		}
+
 		public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, PassChangeType type, string? pw = null) {
 			if (get_permission ().allowed) {
 				try {

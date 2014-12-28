@@ -172,6 +172,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 				Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
 				if (accounttype_combobox.get_active () == 1)
 					accounttype = Act.UserAccountType.ADMINISTRATOR;
+
 				if (option_setpw.get_active () && new_pw_entry.get_text () == confirm_pw_entry.get_text ()) {
 					pw = new_pw_entry.get_text ();
 					type = PassChangeType.NEW_PASSWORD;

@@ -30,14 +30,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
 
-		/*
 		//lock widgets
 		private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
 		private Gtk.Image user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
 		private Gtk.Image language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
 		private Gtk.Image autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-		*/
-	
+		private Gtk.Image password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+		private Gtk.Image enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+
 		public UserSettings (Act.User _user) {
 			user = _user;
 			user.changed.connect (update_ui);
@@ -58,52 +58,60 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			Gtk.Label user_type_label = new Gtk.Label (_("Account type:"));
 			user_type_label.halign = Gtk.Align.END;
-			attach (user_type_label,0, 2, 1, 1);
+			attach (user_type_label,0, 1, 1, 1);
 
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Standard"));
 			user_type_box.append_text (_("Administrator"));
-			attach (user_type_box, 1, 2, 1, 1);
+			attach (user_type_box, 1, 1, 1, 1);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
 			lang_label.halign = Gtk.Align.END;
-			attach (lang_label, 0, 3, 1, 1);
+			attach (lang_label, 0, 2, 1, 1);
 
 			language_box = new Gtk.ComboBoxText ();
 			foreach (string s in get_installed_languages ())
 				language_box.append_text (s);
 			language_box.changed.connect (change_lang);
-			attach (language_box, 1, 3, 1, 1);
+			attach (language_box, 1, 2, 1, 1);
 
 			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
 			login_label.halign = Gtk.Align.END;
 			login_label.margin_top = 20;
-			attach (login_label, 0, 4, 1, 1);
+			attach (login_label, 0, 3, 1, 1);
 
 			autologin_switch = new Gtk.Switch ();
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 20;
-			attach (autologin_switch, 1, 4, 1, 1);
+			attach (autologin_switch, 1, 3, 1, 1);
 
 			Gtk.Label change_password_label = new Gtk.Label (_("Password:"));
 			change_password_label.halign = Gtk.Align.END;
-			attach (change_password_label, 0, 5, 1, 1);
+			attach (change_password_label, 0, 4, 1, 1);
 
 			change_password_button = new Gtk.Button ();
-			//change_password_button.set_label (_("Change password"));
 			change_password_button.clicked.connect (() => {
 				Dialogs.PasswordDialog pw_dialog = new Dialogs.PasswordDialog (user);
 				pw_dialog.request_password_change.connect (change_password);
 				pw_dialog.show ();
 			});
-			attach (change_password_button, 1, 5, 1, 1);
+			attach (change_password_button, 1, 4, 1, 1);
 
 			enable_user_button = new Gtk.Button ();
 			enable_user_button.clicked.connect (change_lock);
 			enable_user_button.set_sensitive (false);
 			enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-			attach (enable_user_button, 1, 6, 1, 1);
+			attach (enable_user_button, 1, 5, 1, 1);
+
+			//attach locks
+			attach (full_name_lock, 2, 0, 1, 1);
+			attach (user_type_lock, 2, 1, 1, 1);
+			attach (language_lock, 2, 2, 1, 1);
+			autologin_lock.margin_top = 20;
+			attach (autologin_lock, 2, 3, 1, 1);
+			attach (password_lock, 2, 4, 1, 1);
+			attach (enable_lock, 2, 5, 1, 1);
 
 			update_ui ();
 			attach (avatar, 0, 0, 1, 1);
@@ -118,15 +126,29 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
 
+			full_name_lock.set_opacity (1);
+			user_type_lock.set_opacity (1);
+			language_lock.set_opacity (1);
+			autologin_lock.set_opacity (1);
+			password_lock.set_opacity (1);
+			enable_lock.set_opacity (1);
+
 			if (get_current_user () == user || get_permission ().allowed) {
 				full_name_entry.set_sensitive (true);
+				full_name_lock.set_opacity (0);
 				language_box.set_sensitive (true);
-				if (!user.get_locked ())
+				language_lock.set_opacity (0);
+				if (!user.get_locked ()) {
 					change_password_button.set_sensitive (true);
-
+					password_lock.set_opacity (0);
+				}
 				if (get_permission ().allowed) {
 					autologin_switch.set_sensitive (true);
-					user_type_box.set_sensitive (true);
+					autologin_lock.set_opacity (0);
+					if (!is_last_admin (user) && get_current_user () != user) {
+						user_type_box.set_sensitive (true);
+						user_type_lock.set_opacity (0);
+					}
 				}
 			}
 			try {
@@ -166,7 +188,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			} else if (!user.get_locked ())
 				enable_user_button.set_label (_("Disable user account"));
 
-			if (get_permission ().allowed && get_current_user () != user) {
+			if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
 				enable_user_button.set_sensitive (true);
 				if (!user.get_locked ())
 					enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);

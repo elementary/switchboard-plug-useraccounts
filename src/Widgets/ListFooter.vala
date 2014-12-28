@@ -24,7 +24,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.ToolButton button_undo;
 
 		public Dialogs.NewUserDialog new_user_d;
-		private string? selected_user = null;
+		private Act.User? selected_user = null;
 
 		public signal void removal_changed ();
 
@@ -79,7 +79,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update_ui () {
 			if (permission.allowed) {
 				button_add.set_sensitive (true);
-				if (selected_user != get_current_user ().get_user_name ()) {
+				if (selected_user != get_current_user ()) {
 					button_remove.set_sensitive (true);
 					button_remove.set_tooltip_text (_("Remove user account and its data"));
 				} else {
@@ -96,13 +96,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			show_all ();
 		}
 
-		public void set_selected_user (string _user_name) {
-			selected_user =_user_name;
+		public void set_selected_user (Act.User _user) {
+			selected_user =_user;
 			update_ui ();
 		}
 
 		private void mark_user_removal () {
-			mark_removal (get_usermanager ().get_user (selected_user));
+			mark_removal (selected_user);
 			removal_changed ();
 			update_ui ();
 		}
