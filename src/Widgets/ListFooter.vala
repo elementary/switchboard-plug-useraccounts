@@ -65,7 +65,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_undo = new Gtk.ToolButton (null, _("Undo last user account removal"));
 			button_undo.set_tooltip_text (_("Undo last user account removal"));
 			button_undo.set_icon_name ("edit-undo-symbolic");
-			button_undo.set_sensitive (false);
+			button_undo.set_no_show_all (true);
 			button_undo.clicked.connect (() => {
 				undo_removal ();
 				removal_changed ();
@@ -87,10 +87,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					button_remove.set_tooltip_text (_("You cannot remove your own user account"));
 				}
 
-				if (get_removal_list () == null || get_removal_list ().last () == null)
-					button_undo.set_sensitive (false);
-				else if (get_removal_list () != null && get_removal_list ().last () != null)
-					button_undo.set_sensitive (true);
+				if (get_removal_list () == null || get_removal_list ().last () == null) {
+					button_undo.set_no_show_all (true);
+					button_undo.hide ();
+				} else if (get_removal_list () != null && get_removal_list ().last () != null)
+					button_undo.set_no_show_all (false);
 			}
 			show_all ();
 		}

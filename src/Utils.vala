@@ -21,31 +21,37 @@
  */
 
 namespace SwitchboardPlugUserAccounts {
-		private static string[]? installed_languages = null;
+	public enum PassChangeType {
+		NEW_PASSWORD,
+		NO_PASSWORD,
+		ON_LOGIN
+	}
 
-		public static string[]? get_installed_languages () {
-			if (installed_languages != null)
+	private static string[]? installed_languages = null;
+
+	public static string[]? get_installed_languages () {
+		if (installed_languages != null)
+			return installed_languages;
+
+		string output;
+		int status;
+
+		try {
+			Process.spawn_sync (null, 
+				{"/usr/share/language-tools/language-options" , null}, 
+				Environ.get (),
+				SpawnFlags.SEARCH_PATH,
+				null,
+				out output,
+				null,
+				out status);
+
+				installed_languages = output.split("\n");
 				return installed_languages;
-
-			string output;
-			int status;
-
-			try {
-				Process.spawn_sync (null, 
-					{"/usr/share/language-tools/language-options" , null}, 
-					Environ.get (),
-					SpawnFlags.SEARCH_PATH,
-					null,
-					out output,
-					null,
-					out status);
-
-					installed_languages = output.split("\n");
-					return installed_languages;
-			} catch (Error e) {
-				return null;
-			}
+		} catch (Error e) {
+			return null;
 		}
+	}
 
 		private static Polkit.Permission? permission = null;
 	
@@ -118,21 +124,23 @@ namespace SwitchboardPlugUserAccounts {
 			return false;
 		}
 
-		public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, string? pw) {
+		public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, PassChangeType type, string? pw = null) {
 			if (get_permission ().allowed) {
 				try {
 					Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
 					get_usermanager ().user_added.connect ((user) => {
 						if (user == created_user) {
 							created_user.set_locked (false);
-								if (pw == null)
-									created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-								else if (pw != "")
+								if (type == PassChangeType.NEW_PASSWORD && pw != null)
 									created_user.set_password (pw, "");
+								else if (type == PassChangeType.NO_PASSWORD)
+									created_user.set_password_mode (Act.UserPasswordMode.NONE);
+								else if (type == PassChangeType.ON_LOGIN)
+									created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
 						}
 					});
 				} catch (Error e) {
-					critical ("Creation for user '%s' failed".printf (username));
+					critical ("Creation of user '%s' failed".printf (username));
 				}
 			}
 		}

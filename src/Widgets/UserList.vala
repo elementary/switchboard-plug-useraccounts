@@ -65,7 +65,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			int pos = 2;
 			foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
 				if (get_current_user () != temp_user && !check_removal (temp_user)) {
-					warning ("hello %s".printf (temp_user.get_user_name ()));
 					insert (new UserItem (temp_user), pos);
 					pos++;
 				}

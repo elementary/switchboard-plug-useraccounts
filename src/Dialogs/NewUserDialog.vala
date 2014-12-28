@@ -26,13 +26,14 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private Gtk.Entry username_entry;
 		private Gtk.Entry new_pw_entry;
 		private Gtk.Entry confirm_pw_entry;
+		private Gtk.RadioButton option_nopw;
 		private Gtk.RadioButton option_onlogin;
 		private Gtk.RadioButton option_setpw;
 
 		private Gtk.Widget button_create;
 		private Gtk.Widget button_cancel;
 
-		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype, string? pw);
+		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype, PassChangeType type, string? pw = null);
 
 		public NewUserDialog () {
 			set_size_request (500, 0);
@@ -63,7 +64,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			accounttype_combobox.set_active (0);
 			main_grid.attach (accounttype_combobox, 1, 0, 1, 1);
 
-			var fullname_label = new Gtk.Label (_("Full Name:"));
+			var fullname_label = new Gtk.Label (_("Full name:"));
 			fullname_label.halign = Gtk.Align.END;
 			main_grid.attach (fullname_label, 0, 1, 1, 1);
 
@@ -72,7 +73,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			fullname_entry.changed.connect (check_input);
 			main_grid.attach (fullname_entry, 1, 1, 1, 1);
 
-			var username_label = new Gtk.Label (_("User Name:"));
+			var username_label = new Gtk.Label (_("User name:"));
 			username_label.halign = Gtk.Align.END;
 			main_grid.attach (username_label, 0, 2, 1, 1);
 
@@ -81,12 +82,15 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			username_entry.changed.connect (check_input);
 			main_grid.attach (username_entry, 1, 2, 1, 1);
 
-			option_onlogin = new Gtk.RadioButton.with_label (null, _("Let user create password on first login"));
-			option_setpw = new Gtk.RadioButton.with_label_from_widget (option_onlogin, _("Set password now"));
+			option_nopw = new Gtk.RadioButton.with_label (null, _("Set no password for login"));
+			option_onlogin = new Gtk.RadioButton.with_label_from_widget (option_nopw, _("Let user create password on first login"));
+			option_setpw = new Gtk.RadioButton.with_label_from_widget (option_nopw, _("Set password now"));
+			option_nopw.toggled.connect (toggled_pw);
 			option_onlogin.toggled.connect (toggled_pw);
 			option_setpw.toggled.connect (toggled_pw);
-			main_grid.attach (option_onlogin, 0, 3, 2, 1);
-			main_grid.attach (option_setpw, 0, 4, 2, 1);
+			main_grid.attach (option_nopw, 0, 3, 2, 1);
+			//main_grid.attach (option_onlogin, 0, 4, 2, 1);
+			main_grid.attach (option_setpw, 0, 5, 2, 1);
 
 			pw_grid = new Gtk.Grid ();
 			pw_grid.expand = true;
@@ -95,7 +99,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			pw_grid.halign = Gtk.Align.END;
 			pw_grid.set_no_show_all (true);
 
-			main_grid.attach (pw_grid, 0, 5, 2, 1);
+			main_grid.attach (pw_grid, 0, 6, 2, 1);
 
 			var new_pw_label = new Gtk.Label (_("Password:"));
 			new_pw_label.halign = Gtk.Align.END;
@@ -130,14 +134,15 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private void toggled_pw () {
 			if (option_setpw.get_active ()) {
 					pw_grid.set_no_show_all (false);
-					button_create.set_sensitive (false);
-			} else if (option_onlogin.get_active ()) {
+					//button_create.set_sensitive (false);
+			} else {
 					new_pw_entry.set_text ("");
 					confirm_pw_entry.set_text ("");
-					button_create.set_sensitive (true);
+					//button_create.set_sensitive (true);
 					pw_grid.hide ();
 					pw_grid.set_no_show_all (true);
 			}
+			check_input ();
 			show_all ();
 		}
 
@@ -162,13 +167,20 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			if (response_id == Gtk.ResponseType.OK) {
 				string fullname = fullname_entry.get_text ();
 				string username = username_entry.get_text ();
+				PassChangeType type = PassChangeType.NO_PASSWORD;
 				string? pw = null;
 				Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
 				if (accounttype_combobox.get_active () == 1)
 					accounttype = Act.UserAccountType.ADMINISTRATOR;
-				if (option_setpw.get_active () && new_pw_entry.get_text () == confirm_pw_entry.get_text ())
+				if (option_setpw.get_active () && new_pw_entry.get_text () == confirm_pw_entry.get_text ()) {
 					pw = new_pw_entry.get_text ();
-				request_user_creation (fullname, username, accounttype, pw);
+					type = PassChangeType.NEW_PASSWORD;
+				} else if (option_nopw.get_active ())
+					type = PassChangeType.NO_PASSWORD;
+				else if (option_onlogin.get_active ())
+					type = PassChangeType.ON_LOGIN;
+
+				request_user_creation (fullname, username, accounttype, type, pw);
 			}
 			hide ();
 			destroy ();

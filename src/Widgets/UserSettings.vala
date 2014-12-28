@@ -20,12 +20,12 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private Act.User user;
-		private Widgets.PasswordEditor pw_editor;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
 		private Gtk.Entry full_name_entry;
 		private Gtk.Button change_password_button;
+		private Gtk.Button enable_user_button;
 		private Gtk.ComboBoxText user_type_box;
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
@@ -61,8 +61,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (user_type_label,0, 2, 1, 1);
 
 			user_type_box = new Gtk.ComboBoxText ();
-			user_type_box.append_text (_("Administrator"));
 			user_type_box.append_text (_("Standard"));
+			user_type_box.append_text (_("Administrator"));
 			attach (user_type_box, 1, 2, 1, 1);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
@@ -91,11 +91,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (change_password_label, 0, 5, 1, 1);
 
 			change_password_button = new Gtk.Button ();
-			change_password_button.clicked.connect (show_password_dialog);
+			//change_password_button.set_label (_("Change password"));
+			change_password_button.clicked.connect (() => {
+				Dialogs.PasswordDialog pw_dialog = new Dialogs.PasswordDialog (user);
+				pw_dialog.request_password_change.connect (change_password);
+				pw_dialog.show ();
+			});
 			attach (change_password_button, 1, 5, 1, 1);
 
-			pw_editor = new Widgets.PasswordEditor ();
-			//attach (pw_editor, 0, 6, 2, 1);
+			enable_user_button = new Gtk.Button ();
+			enable_user_button.clicked.connect (change_lock);
+			enable_user_button.set_sensitive (false);
+			enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+			attach (enable_user_button, 1, 6, 1, 1);
 
 			update_ui ();
 			attach (avatar, 0, 0, 1, 1);
@@ -113,7 +121,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			if (get_current_user () == user || get_permission ().allowed) {
 				full_name_entry.set_sensitive (true);
 				language_box.set_sensitive (true);
-				change_password_button.set_sensitive (true);
+				if (!user.get_locked ())
+					change_password_button.set_sensitive (true);
 
 				if (get_permission ().allowed) {
 					autologin_switch.set_sensitive (true);
@@ -136,21 +145,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			//set user_type_box according to accounttype
 			if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-				user_type_box.set_active (0);
-			else
 				user_type_box.set_active (1);
-
-			//set change_password_button's label according to lock state
-			if (user.get_locked ())
-				change_password_button.set_label (_("Activate user"));
 			else
-				change_password_button.set_label (_("Change password"));
+				user_type_box.set_active (0);
 
 			//set autologin_switch according to autologin
 			if (user.get_automatic_login ())
 				autologin_switch.set_active (true);
 			else
 				autologin_switch.set_active (false);
+
+			if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
+				change_password_button.set_label (_("Create password"));
+			else
+				change_password_button.set_label (_("Change password"));
+
+			if (user.get_locked ()) {
+				enable_user_button.set_label (_("Enable user account"));
+				enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+			} else if (!user.get_locked ())
+				enable_user_button.set_label (_("Disable user account"));
+
+			if (get_permission ().allowed && get_current_user () != user) {
+				enable_user_button.set_sensitive (true);
+				if (!user.get_locked ())
+					enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+			}
 
 			int i = 0;
 			foreach (string s in get_installed_languages ()) {
@@ -164,35 +184,47 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			show_all ();
 		}
 
-		public void show_password_dialog () {
-			Dialogs.PasswordDialog password_dialog = new Dialogs.PasswordDialog ((get_current_user () == user), user.get_locked ());
-			password_dialog.show ();
-		}
-
-		public void change_full_name () {
+		private void change_full_name () {
 			string new_full_name = full_name_entry.get_text ();
 			if (new_full_name != user.get_real_name ()) {
 				if (get_current_user () == user || get_permission ().allowed) {
-					warning ("changed username");
+					debug ("changed real name");
 					user.set_real_name (new_full_name);
 				} else {
-					warning ("Insuffienct permissions to change name");
+					debug ("Insuffienct permission to change real name");
 					update_ui ();
 				}
 			}
 		}
 
-		public void change_lang () {
+		private void change_lang () {
 			string new_lang = language_box.get_active_text ();
 			if (new_lang != user.get_language ()) {
 				if (get_current_user () == user || get_permission ().allowed) {
-					warning ("changed lang");
+					debug ("changed lang");
 					user.set_language (new_lang);
 				} else {
-					warning ("Insuffienct permissions to change lang");
+					debug ("Insuffienct permission to change language");
 					update_ui ();
 				}
 			}
+		}
+
+		private void change_lock () {
+			if (get_permission ().allowed && get_current_user () != user) {
+				if (user.get_locked ()) {
+					user.set_password_mode (Act.UserPasswordMode.NONE);
+					user.set_locked (false);
+				} else {
+					user.set_locked (true);
+				}
+			} else {
+				debug ("Insuffienct permission to change lock state");
+			}
+		}
+
+		private void change_password (PassChangeType _type, string? _new_password) {
+
 		}
 	}
 }

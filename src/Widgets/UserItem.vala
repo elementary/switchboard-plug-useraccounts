@@ -63,6 +63,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			label_box.pack_start (description_label, false, false);
 
 			update_ui ();
+
+			grid.attach (avatar, 0, 0, 1, 1);
 		}
 
 		public void update_ui () {
@@ -73,7 +75,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
 			}
 			avatar.margin_end = 3;
-			grid.attach (avatar, 0, 0, 1, 1);
 
 			full_name_label.set_label (user.get_real_name ());
 			string description = "<span font_size=\"small\">%s</span>".printf (user.get_user_name ());

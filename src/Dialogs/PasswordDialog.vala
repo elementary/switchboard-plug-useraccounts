@@ -16,23 +16,12 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
-namespace SwitchboardPlugUserAccounts {
-	public enum PassChangeType {
-		NEW_PASSWORD,
-		NO_PASSWORD,
-		DISABLE_USER,
-		ENABLE_USER
-	}
-}
 
 namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class PasswordDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
 		private Gtk.Grid content_grid_1;
 		private Gtk.Grid content_grid_2;
-		private Gtk.Grid content_grid_3;
-		private Gtk.Box header_box;
-		private Gtk.Image header_image;
 		private Gtk.ComboBoxText action_combobox;
 
 		private Gtk.Stack content_stack;
@@ -45,21 +34,18 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private Gtk.Widget button_change;
 		private Gtk.Widget button_cancel;
 
-		private unowned bool is_current_user;
-		private unowned bool enable;
+		private unowned Act.User user;
 
-		private const string new_password = _("Set New Password");
-		private const string no_password = _("Set no Password for Login");
-		private const string disable_user = _("Disable User Account");
-		private const string enable_user =_("Enable User Account");
+		private const string new_password = _("Set new password");
+		private const string no_password = _("Set no password for login");
 
 		public signal void request_password_change (PassChangeType type, string? new_password);
 
-		public PasswordDialog (bool _is_current_user, bool _enable = false) {
-			is_current_user = _is_current_user;
-			enable = _enable;
+		public PasswordDialog (Act.User _user) {
+			user = _user;
 			set_size_request (500, 0);
 			set_resizable (false);
+
 			build_ui ();
 			build_buttons ();
 			show_all ();
@@ -72,44 +58,30 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			main_grid.margin = 10;
 			main_grid.row_spacing = 10;
 			main_grid.column_spacing = 20;
+			main_grid.halign = Gtk.Align.CENTER;
 			content.add (main_grid);
 
-			header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-			header_box.hexpand = true;
-			header_box.halign = Gtk.Align.CENTER;
-			header_box.margin_bottom = 20;
-			main_grid.attach (header_box, 0, 0, 2, 1);
-
-			header_image = new Gtk.Image.from_icon_name ("channel-secure-symbolic", Gtk.IconSize.DND);
-			header_box.pack_start (header_image);
-
-			var header_label = new Gtk.Label (_("Change Password"));
-			header_label.get_style_context ().add_class ("h2");
-			header_box.pack_start (header_label);
+			var action_label = new Gtk.Label (_("Action:"));
+			action_label.halign = Gtk.Align.END;
+			main_grid.attach (action_label, 0, 0, 1, 1);
 
 			action_combobox = new Gtk.ComboBoxText ();
-			action_combobox.halign = Gtk.Align.CENTER;
-
-			main_grid.attach (action_combobox, 0, 1, 2, 1);
-			if (!enable)
-				build_ui_change ();
-			else
-				build_ui_enable ();
-		}
-
-		public void build_ui_enable () {
-			action_combobox.append_text (_("Enable User Account"));
+			action_combobox.halign = Gtk.Align.START;
+			action_combobox.append_text (new_password);
+			action_combobox.append_text (no_password);
 			action_combobox.set_active (0);
+			main_grid.attach (action_combobox, 1, 0, 1, 1);
 		}
 
 		public void build_ui_change () {
+			/*
 			content_stack = new Gtk.Stack ();
 			content_stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP_DOWN);
 			main_grid.attach (content_stack, 0, 2, 2, 1);
 
 			action_combobox.append_text (new_password);
 			action_combobox.append_text (no_password);
-			if (is_current_user == false)
+			if (!(get_current_user () == user))
 				action_combobox.append_text (disable_user);
 			action_combobox.set_active (0);
 
@@ -123,7 +95,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 						button_change.set_sensitive (true);
 						content_grid_1.show_all ();
 						content_grid_2.hide ();
-						content_grid_3.hide ();
 						break;
 					case 1:
 						content_stack.set_visible_child_name ("no_password");
@@ -131,14 +102,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 						button_change.set_sensitive (true);
 						content_grid_1.hide ();
 						content_grid_2.show_all ();
-						content_grid_3.hide ();
-						break;
-					case 2:
-						content_stack.set_visible_child_name ("deactivate_user");
-						button_change.set_sensitive (true);
-						content_grid_1.hide ();
-						content_grid_2.hide ();
-						content_grid_3.show_all ();
 						break;
 					default: break;
 				}
@@ -160,17 +123,8 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			content_grid_2.row_spacing = 10;
 			content_grid_2.column_spacing = 20;
 
-			content_grid_3 = new Gtk.Grid ();
-			content_grid_3.expand = true;
-			content_grid_3.halign = Gtk.Align.CENTER;
-			content_grid_3.margin = 10;
-			content_grid_3.margin_start = 0;
-			content_grid_3.row_spacing = 10;
-			content_grid_3.column_spacing = 20;
-
 			content_stack.add_named (content_grid_1, "new_password");
 			content_stack.add_named (content_grid_2, "no_password");
-			content_stack.add_named (content_grid_3, "disable_user");
 
 			var current_password_label = new Gtk.Label (_("Current Password:"));
 			current_password_label.halign = Gtk.Align.END;
@@ -227,11 +181,12 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 				current_password_entry.set_sensitive (false);
 				current_password_entry_nopw.set_sensitive (false);
 			}
+		*/
 		}
 		
 		public void build_buttons () {
 			button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
-			button_change = add_button (_("Apply Changes"), Gtk.ResponseType.OK);
+			button_change = add_button (_("Change password"), Gtk.ResponseType.OK);
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			this.response.connect (on_response);
 		}
@@ -254,12 +209,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 						break;
 					case no_password:
 						request_password_change (PassChangeType.NO_PASSWORD, null);
-						break;
-					case disable_user:
-						request_password_change (PassChangeType.DISABLE_USER, null);
-						break;
-					case enable_user:
-						request_password_change (PassChangeType.ENABLE_USER, null);
 						break;
 					default: break;
 				}
