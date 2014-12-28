@@ -36,8 +36,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void build_ui () {
-			//cheat an invisible box at pos 0 because update_headers does not reach pos 0
-			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
 
 			my_account_label = new Gtk.Label (_("My Account"));
 			my_account_label.margin_top = 5;
@@ -57,21 +55,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		public void update_ui () {
-			List<weak Gtk.Widget> userlist_items = this.get_children ();
+			List<weak Gtk.Widget> userlist_items = get_children ();
 			foreach (unowned Gtk.Widget useritem in userlist_items) {
-				unowned UserItem u = (useritem is UserItem) ? (UserItem) useritem : null;
-				if (u != null)
-					remove (u);
+				//unowned UserItem u = (useritem is UserItem) ? (UserItem) useritem : null;
+				remove (useritem);
 			}
 
-			userlist = get_usermanager ().list_users ();
-			insert (new UserItem (get_current_user ()), 1);
-			int i = 2;
+			//cheat an invisible box at pos 0 because update_headers does not reach pos 0
+			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
 
+			insert (new UserItem (get_current_user ()), 1);
+			userlist = get_usermanager ().list_users ();
+			int pos = 2;
 			foreach (unowned Act.User temp_user in userlist) {
-				if (get_current_user () != temp_user && get_removal_list ().find (temp_user) == null) {
-					insert (new UserItem (temp_user), i);
-					i++;
+				if (get_current_user () != temp_user && !check_removal (temp_user)) {
+					insert (new UserItem (temp_user), pos);
+					pos++;
 				}
 			}
 

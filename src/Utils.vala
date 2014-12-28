@@ -104,6 +104,17 @@ namespace SwitchboardPlugUserAccounts {
 			}
 		}
 
+		public static bool check_removal (Act.User user) {
+			if (removal_list != null && removal_list.last () != null) {
+				unowned List<Act.User>? find = removal_list.find (user);
+				if (find != null)
+					return true;
+				else
+					return false;
+			}
+			return false;
+		}
+
 		public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, string? pw) {
 			if (get_permission ().allowed) {
 				try {

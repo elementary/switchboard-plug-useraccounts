@@ -19,7 +19,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
-		public UserList userlist;
+		public UserList userlist = null;
 		public SList<Act.User> user_slist;
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
@@ -42,6 +42,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				user_slist = get_usermanager ().list_users ();
 				get_usermanager ().user_added.connect (add_user_settings);
 				get_usermanager ().user_removed.connect (remove_user_settings);
+
 				userlist = new UserList ();
 				userlist.row_selected.connect (userlist_selected);
 
