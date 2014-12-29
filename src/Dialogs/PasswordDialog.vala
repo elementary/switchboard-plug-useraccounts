@@ -20,16 +20,7 @@
 namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class PasswordDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
-		private Gtk.Grid content_grid_1;
-		private Gtk.Grid content_grid_2;
 		private Gtk.ComboBoxText action_combobox;
-
-		private Gtk.Stack content_stack;
-		private Gtk.CheckButton show_password_checkbutton;
-		private Gtk.Entry current_password_entry;
-		private Gtk.Entry current_password_entry_nopw;
-		private Gtk.Entry new_password_entry;
-		private Gtk.Entry confirm_password_entry;
 
 		private Gtk.Widget button_change;
 		private Gtk.Widget button_cancel;
@@ -72,117 +63,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			action_combobox.set_active (0);
 			main_grid.attach (action_combobox, 1, 0, 1, 1);
 		}
-
-		public void build_ui_change () {
-			/*
-			content_stack = new Gtk.Stack ();
-			content_stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP_DOWN);
-			main_grid.attach (content_stack, 0, 2, 2, 1);
-
-			action_combobox.append_text (new_password);
-			action_combobox.append_text (no_password);
-			if (!(get_current_user () == user))
-				action_combobox.append_text (disable_user);
-			action_combobox.set_active (0);
-
-			action_combobox.changed.connect (() => {
-				switch (action_combobox.get_active ()) {
-					case 0:
-						content_stack.set_visible_child_name ("new_password");
-						current_password_entry.set_text ("");
-						new_password_entry.set_text ("");
-						confirm_password_entry.set_text ("");
-						button_change.set_sensitive (true);
-						content_grid_1.show_all ();
-						content_grid_2.hide ();
-						break;
-					case 1:
-						content_stack.set_visible_child_name ("no_password");
-						current_password_entry_nopw.set_text ("");
-						button_change.set_sensitive (true);
-						content_grid_1.hide ();
-						content_grid_2.show_all ();
-						break;
-					default: break;
-				}
-			});
-
-			content_grid_1 = new Gtk.Grid ();
-			content_grid_1.expand = true;
-			content_grid_1.halign = Gtk.Align.CENTER;
-			content_grid_1.margin = 10;
-			content_grid_1.margin_start = 0;
-			content_grid_1.row_spacing = 10;
-			content_grid_1.column_spacing = 20;
-
-			content_grid_2 = new Gtk.Grid ();
-			content_grid_2.expand = true;
-			content_grid_2.halign = Gtk.Align.CENTER;
-			content_grid_2.margin = 10;
-			content_grid_2.margin_start = 0;
-			content_grid_2.row_spacing = 10;
-			content_grid_2.column_spacing = 20;
-
-			content_stack.add_named (content_grid_1, "new_password");
-			content_stack.add_named (content_grid_2, "no_password");
-
-			var current_password_label = new Gtk.Label (_("Current Password:"));
-			current_password_label.halign = Gtk.Align.END;
-			content_grid_1.attach (current_password_label, 0, 0, 1, 1);
-			current_password_entry = new Gtk.Entry ();
-			current_password_entry.halign = Gtk.Align.START;
-			current_password_entry.set_visibility (false);
-			content_grid_1.attach (current_password_entry, 1, 0, 1, 1);
-
-			var new_password_label = new Gtk.Label (_("New Password:"));
-			new_password_label.halign = Gtk.Align.END;
-			content_grid_1.attach (new_password_label, 0, 1, 1, 1);
-			new_password_entry = new Gtk.Entry ();
-			new_password_entry.halign = Gtk.Align.START;
-			new_password_entry.set_visibility (false);
-			new_password_entry.changed.connect (check_entry);
-			content_grid_1.attach (new_password_entry, 1, 1, 1, 1);
-
-			var confirm_password_label = new Gtk.Label (_("Confirm new Password:"));
-			confirm_password_label.halign = Gtk.Align.END;
-			content_grid_1.attach (confirm_password_label, 0, 2, 1, 1);
-			confirm_password_entry = new Gtk.Entry ();
-			confirm_password_entry.halign = Gtk.Align.START;
-			confirm_password_entry.set_visibility (false);
-			confirm_password_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("The new password does not match"));
-			confirm_password_entry.changed.connect (check_entry);
-			content_grid_1.attach (confirm_password_entry, 1, 2, 1, 1);
-
-			show_password_checkbutton = new Gtk.CheckButton.with_label (_("Show new Passwords"));
-			show_password_checkbutton.halign = Gtk.Align.END;
-			show_password_checkbutton.toggled.connect (() => {
-				if (show_password_checkbutton.get_active ()) {
-					new_password_entry.set_visibility (true);
-					confirm_password_entry.set_visibility (true);
-				} else {
-					new_password_entry.set_visibility (false);
-					confirm_password_entry.set_visibility (false);
-				}
-			});
-			content_grid_1.attach (show_password_checkbutton, 0, 3, 2, 1);
-
-			var current_password_label_nopw = new Gtk.Label (_("Current Password:"));
-			current_password_label_nopw.halign = Gtk.Align.END;
-			content_grid_2.attach (current_password_label_nopw, 0, 0, 1, 1);
-			current_password_entry_nopw = new Gtk.Entry ();
-			current_password_entry_nopw.halign = Gtk.Align.START;
-			current_password_entry_nopw.set_visibility (false);
-			content_grid_2.attach (current_password_entry_nopw, 1, 0, 1, 1);
-
-			content_stack.set_visible_child_name ("new_password");
-			content_grid_1.show_all ();
-
-			if (get_permission ().allowed) {
-				current_password_entry.set_sensitive (false);
-				current_password_entry_nopw.set_sensitive (false);
-			}
-		*/
-		}
 		
 		public void build_buttons () {
 			button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
@@ -191,21 +71,12 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			this.response.connect (on_response);
 		}
 
-		private void check_entry () {
-			if (new_password_entry.get_text () == confirm_password_entry.get_text ()) {
-				button_change.set_sensitive (true);
-				confirm_password_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-			} else {
-				button_change.set_sensitive (false);
-				confirm_password_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-warning-symbolic");
-			}
-		}
 
 		private void on_response (Gtk.Dialog source, int response_id) {
 			if (response_id == Gtk.ResponseType.OK) {
 				switch (action_combobox.get_active_text ()) {
 					case new_password:
-						request_password_change (PassChangeType.NEW_PASSWORD, new_password_entry.get_text ());
+						//request_password_change (PassChangeType.NEW_PASSWORD, new_password_entry.get_text ());
 						break;
 					case no_password:
 						request_password_change (PassChangeType.NO_PASSWORD, null);

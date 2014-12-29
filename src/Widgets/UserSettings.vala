@@ -93,6 +93,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (change_password_label, 0, 4, 1, 1);
 
 			change_password_button = new Gtk.Button ();
+			change_password_button.set_relief (Gtk.ReliefStyle.NONE);
+			change_password_button.halign = Gtk.Align.START;
 			change_password_button.clicked.connect (() => {
 				Dialogs.PasswordDialog pw_dialog = new Dialogs.PasswordDialog (user);
 				pw_dialog.request_password_change.connect (change_password);
@@ -182,9 +184,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				autologin_switch.set_active (false);
 
 			if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
-				change_password_button.set_label (_("Create password"));
+				change_password_button.set_label (_("None set"));
 			else
-				change_password_button.set_label (_("Change password"));
+				change_password_button.set_label ("**********");
 
 			if (user.get_locked ()) {
 				enable_user_button.set_label (_("Enable user account"));
