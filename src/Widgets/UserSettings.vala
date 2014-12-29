@@ -85,6 +85,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 20;
+			autologin_switch.notify["active"].connect (change_autologin);
 			attach (autologin_switch, 1, 3, 1, 1);
 
 			Gtk.Label change_password_label = new Gtk.Label (_("Password:"));
@@ -144,8 +145,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					password_lock.set_opacity (0);
 				}
 				if (get_permission ().allowed) {
-					autologin_switch.set_sensitive (true);
-					autologin_lock.set_opacity (0);
+					if (!user.get_locked ()) {
+						autologin_switch.set_sensitive (true);
+						autologin_lock.set_opacity (0);
+					}
 					if (!is_last_admin (user) && get_current_user () != user) {
 						user_type_box.set_sensitive (true);
 						user_type_lock.set_opacity (0);
@@ -173,9 +176,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				user_type_box.set_active (0);
 
 			//set autologin_switch according to autologin
-			if (user.get_automatic_login ())
+			if (user.get_automatic_login () && !autologin_switch.get_active ())
 				autologin_switch.set_active (true);
-			else
+			else if (!user.get_automatic_login () && autologin_switch.get_active ())
 				autologin_switch.set_active (false);
 
 			if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
@@ -240,6 +243,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					user.set_password_mode (Act.UserPasswordMode.NONE);
 					user.set_locked (false);
 				} else {
+					user.set_automatic_login (false);
 					user.set_locked (true);
 				}
 			} else {
@@ -253,6 +257,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					user.set_account_type (Act.UserAccountType.ADMINISTRATOR);
 				else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR && user_type_box.get_active () == 0 && !is_last_admin (user))
 					user.set_account_type (Act.UserAccountType.STANDARD);
+				else
+					update_ui ();
+			}
+		}
+
+		private void change_autologin () {
+			if (get_permission ().allowed) {
+				if (user.get_automatic_login () && !autologin_switch.get_active ()) {
+					user.set_automatic_login (false);
+				} else if (!user.get_automatic_login () && autologin_switch.get_active ()) {
+					foreach (Act.User temp_user in get_usermanager ().list_users ()) {
+						if (temp_user.get_automatic_login () && temp_user != user)
+							temp_user.set_automatic_login (false);
+					}
+					user.set_automatic_login (true);
+				}
 			}
 		}
 

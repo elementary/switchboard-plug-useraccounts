@@ -79,7 +79,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update_ui () {
 			if (permission.allowed) {
 				button_add.set_sensitive (true);
-				if (selected_user != get_current_user ()) {
+				if (selected_user != get_current_user () && !is_last_admin (selected_user)) {
 					button_remove.set_sensitive (true);
 					button_remove.set_tooltip_text (_("Remove user account and its data"));
 				} else {
