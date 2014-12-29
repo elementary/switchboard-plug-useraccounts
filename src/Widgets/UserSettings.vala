@@ -63,6 +63,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Standard"));
 			user_type_box.append_text (_("Administrator"));
+			user_type_box.changed.connect (change_user_type);
 			attach (user_type_box, 1, 1, 1, 1);
 
 			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
@@ -190,6 +191,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
 				enable_user_button.set_sensitive (true);
+				enable_lock.set_opacity (0);
 				if (!user.get_locked ())
 					enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 			}
@@ -223,7 +225,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			string new_lang = language_box.get_active_text ();
 			if (new_lang != user.get_language ()) {
 				if (get_current_user () == user || get_permission ().allowed) {
-					debug ("changed lang");
+					debug ("changed language for %s".printf (user.get_user_name ()));
 					user.set_language (new_lang);
 				} else {
 					debug ("Insuffienct permission to change language");
@@ -242,6 +244,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				}
 			} else {
 				debug ("Insuffienct permission to change lock state");
+			}
+		}
+
+		private void change_user_type () {
+			if (get_permission ().allowed) {
+				if (user.get_account_type () == Act.UserAccountType.STANDARD && user_type_box.get_active () == 1)
+					user.set_account_type (Act.UserAccountType.ADMINISTRATOR);
+				else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR && user_type_box.get_active () == 0 && !is_last_admin (user))
+					user.set_account_type (Act.UserAccountType.STANDARD);
 			}
 		}
 
