@@ -38,6 +38,8 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		public NewUserDialog () {
 			set_size_request (500, 0);
 			set_resizable (false);
+			set_deletable (false);
+
 			build_ui ();
 			build_buttons ();
 			show_all ();
