@@ -45,7 +45,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		}
 		
 		public void build_ui () {
-			Gtk.Box content = get_content_area () as Gtk.Box;
+			var content = get_content_area () as Gtk.Box;
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
 			main_grid.margin = 10;

@@ -19,10 +19,11 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
-		private Act.User user;
+		private unowned Act.User user;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
+		private Gtk.Button avatar_button;
 		private Gtk.Entry full_name_entry;
 		private Gtk.Button change_password_button;
 		private Gtk.Button enable_user_button;
@@ -40,8 +41,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		public UserSettings (Act.User _user) {
 			user = _user;
-			user.changed.connect (update_ui);
 			build_ui ();
+			user.changed.connect (update_ui);
 		}
 		
 		public void build_ui () {
@@ -51,12 +52,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			set_valign (Gtk.Align.START);
 			set_halign (Gtk.Align.CENTER);
 
+			avatar_button = new Gtk.Button ();
+			avatar_button.set_relief (Gtk.ReliefStyle.NONE);
+			attach (avatar_button, 0, 0, 1, 1);
+
 			full_name_entry = new Gtk.Entry ();
 			full_name_entry.get_style_context ().add_class ("h3");
 			full_name_entry.activate.connect (change_full_name);
 			attach (full_name_entry, 1, 0, 1, 1);
 
-			Gtk.Label user_type_label = new Gtk.Label (_("Account type:"));
+			var user_type_label = new Gtk.Label (_("Account type:"));
 			user_type_label.halign = Gtk.Align.END;
 			attach (user_type_label,0, 1, 1, 1);
 
@@ -66,17 +71,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			user_type_box.changed.connect (change_user_type);
 			attach (user_type_box, 1, 1, 1, 1);
 
-			Gtk.Label lang_label = new Gtk.Label (_("Language:"));
+			var lang_label = new Gtk.Label (_("Language:"));
 			lang_label.halign = Gtk.Align.END;
 			attach (lang_label, 0, 2, 1, 1);
 
 			language_box = new Gtk.ComboBoxText ();
-			foreach (string s in get_installed_languages ())
-				language_box.append_text (s);
+			foreach (string s in get_installed_languages ()) {
+				if (s.length == 2)
+					language_box.append_text (Gnome.Languages.get_language_from_code (s, null));
+				else if (s.length == 5)
+					language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
+			}
 			language_box.changed.connect (change_lang);
 			attach (language_box, 1, 2, 1, 1);
 
-			Gtk.Label login_label = new Gtk.Label (_("Log In automatically:"));
+			var login_label = new Gtk.Label (_("Log In automatically:"));
 			login_label.halign = Gtk.Align.END;
 			login_label.margin_top = 20;
 			attach (login_label, 0, 3, 1, 1);
@@ -88,7 +97,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			autologin_switch.notify["active"].connect (change_autologin);
 			attach (autologin_switch, 1, 3, 1, 1);
 
-			Gtk.Label change_password_label = new Gtk.Label (_("Password:"));
+			var change_password_label = new Gtk.Label (_("Password:"));
 			change_password_label.halign = Gtk.Align.END;
 			attach (change_password_label, 0, 4, 1, 1);
 
@@ -118,7 +127,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (enable_lock, 2, 5, 1, 1);
 
 			update_ui ();
-			attach (avatar, 0, 0, 1, 1);
 
 			permission.notify["allowed"].connect (update_ui);
 		}
@@ -167,7 +175,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
 				} catch (Error e) { }
 			}
-			avatar.halign = Gtk.Align.END;
+			avatar_button.set_image (avatar);
 
 			full_name_entry.set_text (user.get_real_name ());
 
@@ -227,11 +235,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void change_lang () {
-			string new_lang = language_box.get_active_text ();
-			if (new_lang != user.get_language ()) {
-				if (get_current_user () == user || get_permission ().allowed) {
+			if (get_current_user () == user || get_permission ().allowed) {
+				string new_lang = language_box.get_active_text ();
+				string current_lang = "";
+				if (user.get_language ().length == 2)
+					current_lang = Gnome.Languages.get_language_from_code (user.get_language (), null);
+				else if (user.get_language ().length == 5)
+					current_lang = Gnome.Languages.get_language_from_locale (user.get_language (), null);
+
+				string new_lang_code = "";
+				foreach (string s in get_installed_languages ()) {
+					if (s.length == 2 && Gnome.Languages.get_language_from_code (s, null) == new_lang) {
+						new_lang_code = s;
+						break;
+					} else if (s.length == 5 && Gnome.Languages.get_language_from_locale (s, null) == new_lang) {
+						new_lang_code = s;
+						break;
+					}
+				}
+
+				if (new_lang != user.get_language ()) {
 					debug ("changed language for %s".printf (user.get_user_name ()));
-					user.set_language (new_lang);
+					user.set_language (new_lang_code);
 				} else {
 					debug ("Insuffienct permission to change language");
 					update_ui ();

@@ -26,11 +26,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public ListFooter footer;
 
 		public UserView () {
-			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-			content = new Gtk.Stack ();
-			
 			expand = true;
+
+			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			pack1 (sidebar, true, false);
+			content = new Gtk.Stack ();
 			pack2 (content, true, false);
 
 			get_usermanager ().notify["is-loaded"].connect (update);

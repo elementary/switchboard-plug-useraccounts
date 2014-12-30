@@ -33,7 +33,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private Gtk.Widget button_create;
 		private Gtk.Widget button_cancel;
 
-		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype, Act.UserPasswordMode mode, string? pw = null);
+		public signal void request_user_creation (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null);
 
 		public NewUserDialog () {
 			set_size_request (500, 0);
@@ -43,7 +43,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			show_all ();
 		}
 		private void build_ui () {
-			Gtk.Box content = get_content_area () as Gtk.Box;
+			var content = get_content_area () as Gtk.Box;
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
 			main_grid.margin = 10;

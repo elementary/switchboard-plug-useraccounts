@@ -1,10 +1,10 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite accountsservice polkit-gobject-1)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice polkit-gobject-1)
 
-#add_definitions (${DEPS_CFLAGS} -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1)
-add_definitions (${DEPS_CFLAGS})
+add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API -w)
+#add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
 
 find_package (Vala REQUIRED)
@@ -30,6 +30,7 @@ PACKAGES
 	switchboard-2.0
 	granite
 	AccountsService-1.0
+	gnome-desktop-3.0
 	posix
 	polkit-gobject-1
 OPTIONS

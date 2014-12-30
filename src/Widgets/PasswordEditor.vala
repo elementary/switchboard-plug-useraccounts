@@ -32,8 +32,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void build_ui () {
 			expand = true;
-			row_spacing = 10;
-			column_spacing = 10;
+			set_row_spacing (10);
+			set_column_spacing (10);
 			halign = Gtk.Align.END;
 
 			if (!get_permission ().allowed) {
@@ -48,7 +48,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				attach (current_pw_entry, 1, 0, 1, 1);
 			}
 
-			Gtk.Label new_pw_label = new Gtk.Label (_("Password:"));
+			var new_pw_label = new Gtk.Label (_("Password:"));
 			new_pw_label.halign = Gtk.Align.END;
 			attach (new_pw_label, 0, 1, 1, 1);
 
@@ -60,7 +60,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			new_pw_entry.changed.connect (compare_passwords);
 			attach (new_pw_entry, 1, 1, 1, 1);
 
-			Gtk.Label confirm_pw_label = new Gtk.Label (_("Confirm:"));
+			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
 			confirm_pw_label.halign = Gtk.Align.END;
 			attach (confirm_pw_label, 0, 2, 1, 1);
 
