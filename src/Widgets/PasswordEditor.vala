@@ -67,6 +67,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.halign = Gtk.Align.START;
 			confirm_pw_entry.set_visibility (false);
+			confirm_pw_entry.set_sensitive (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
 			attach (confirm_pw_entry, 1, 2, 1, 1);
@@ -99,10 +100,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				else
 					confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
 
-				if (new_pw_entry.get_text () == "")
+				if (new_pw_entry.get_text () == "") {
 					new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-				else
+					confirm_pw_entry.set_sensitive (false);
+				} else {
 					new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+					confirm_pw_entry.set_sensitive (true);
+				}
 			}
 			validation_changed ();
 		}
