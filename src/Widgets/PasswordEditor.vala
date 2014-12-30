@@ -48,7 +48,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				attach (current_pw_entry, 1, 0, 1, 1);
 			}
 
-			var new_pw_label = new Gtk.Label (_("Password:"));
+			var new_pw_label = new Gtk.Label (_("New password:"));
 			new_pw_label.halign = Gtk.Align.END;
 			attach (new_pw_label, 0, 1, 1, 1);
 
