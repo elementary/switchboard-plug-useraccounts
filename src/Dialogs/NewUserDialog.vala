@@ -20,20 +20,20 @@
 namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class NewUserDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
-		private Gtk.Grid pw_grid;
 		private Gtk.ComboBoxText accounttype_combobox;
 		private Gtk.Entry fullname_entry;
 		private Gtk.Entry username_entry;
-		private Gtk.Entry new_pw_entry;
-		private Gtk.Entry confirm_pw_entry;
 		private Gtk.RadioButton option_nopw;
 		private Gtk.RadioButton option_onlogin;
 		private Gtk.RadioButton option_setpw;
 
+		private Gtk.Revealer pw_revealer;
+		private Widgets.PasswordEditor pw_editor;
+
 		private Gtk.Widget button_create;
 		private Gtk.Widget button_cancel;
 
-		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype, PassChangeType type, string? pw = null);
+		public signal void request_user_creation (string fullname, string username, Act.UserAccountType usertype, Act.UserPasswordMode mode, string? pw = null);
 
 		public NewUserDialog () {
 			set_size_request (500, 0);
@@ -92,35 +92,16 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			//main_grid.attach (option_onlogin, 0, 4, 2, 1);
 			main_grid.attach (option_setpw, 0, 5, 2, 1);
 
-			pw_grid = new Gtk.Grid ();
-			pw_grid.expand = true;
-			pw_grid.row_spacing = 10;
-			pw_grid.column_spacing = 10;
-			pw_grid.halign = Gtk.Align.END;
-			pw_grid.set_no_show_all (true);
+			pw_editor = new Widgets.PasswordEditor ();
+			pw_editor.validation_changed.connect (check_input);
 
-			main_grid.attach (pw_grid, 0, 6, 2, 1);
+			pw_revealer = new Gtk.Revealer ();
+			pw_revealer.add (pw_editor);
+			pw_revealer.set_transition_duration (250);
+			pw_revealer.set_reveal_child (false);
+			main_grid.attach (pw_revealer, 0, 6, 2, 1);
 
-			var new_pw_label = new Gtk.Label (_("Password:"));
-			new_pw_label.halign = Gtk.Align.END;
-			pw_grid.attach (new_pw_label, 0, 0, 1, 1);
-
-			new_pw_entry = new Gtk.Entry ();
-			new_pw_entry.halign = Gtk.Align.START;
-			new_pw_entry.set_visibility (false);
-			new_pw_entry.changed.connect (check_input);
-			pw_grid.attach (new_pw_entry, 1, 0, 1, 1);
-
-			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
-			confirm_pw_label.halign = Gtk.Align.END;
-			pw_grid.attach (confirm_pw_label, 0, 1, 1, 1);
-
-			confirm_pw_entry = new Gtk.Entry ();
-			confirm_pw_entry.halign = Gtk.Align.START;
-			confirm_pw_entry.set_visibility (false);
-			confirm_pw_entry.changed.connect (check_input);
-			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("The password does not match"));
-			pw_grid.attach (confirm_pw_entry, 1, 1, 1, 1);
+			show_all ();
 		}
 
 		private void build_buttons () {
@@ -133,30 +114,22 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 
 		private void toggled_pw () {
 			if (option_setpw.get_active ()) {
-					pw_grid.set_no_show_all (false);
-					//button_create.set_sensitive (false);
+					pw_editor.reset ();
+					pw_revealer.set_reveal_child (true);
 			} else {
-					new_pw_entry.set_text ("");
-					confirm_pw_entry.set_text ("");
-					//button_create.set_sensitive (true);
-					pw_grid.hide ();
-					pw_grid.set_no_show_all (true);
+					pw_revealer.set_reveal_child (false);
 			}
 			check_input ();
 			show_all ();
 		}
-
+		
 		private void check_input () {
 			if (fullname_entry.get_text() != "" && username_entry.get_text () != "") {
 				if (option_setpw.get_active ()) {
-					if (new_pw_entry.get_text () != "" && confirm_pw_entry.get_text () != ""
-					&& new_pw_entry.get_text () == confirm_pw_entry.get_text ()) {
+					if (pw_editor.is_valid)
 						button_create.set_sensitive (true);
-						confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-					} else {
+					else
 						button_create.set_sensitive (false);
-						confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-warning-symbolic");
-					}
 				} else
 					button_create.set_sensitive (true);
 			} else
@@ -167,21 +140,19 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			if (response_id == Gtk.ResponseType.OK) {
 				string fullname = fullname_entry.get_text ();
 				string username = username_entry.get_text ();
-				PassChangeType type = PassChangeType.NO_PASSWORD;
+				Act.UserPasswordMode mode = Act.UserPasswordMode.NONE;
 				string? pw = null;
 				Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
 				if (accounttype_combobox.get_active () == 1)
 					accounttype = Act.UserAccountType.ADMINISTRATOR;
 
-				if (option_setpw.get_active () && new_pw_entry.get_text () == confirm_pw_entry.get_text ()) {
-					pw = new_pw_entry.get_text ();
-					type = PassChangeType.NEW_PASSWORD;
-				} else if (option_nopw.get_active ())
-					type = PassChangeType.NO_PASSWORD;
-				else if (option_onlogin.get_active ())
-					type = PassChangeType.ON_LOGIN;
+				if (option_setpw.get_active () && pw_editor.is_valid) {
+					pw = pw_editor.get_password ();
+					mode = Act.UserPasswordMode.REGULAR;
+				} else if (option_onlogin.get_active ())
+					mode = Act.UserPasswordMode.SET_AT_LOGIN;
 
-				request_user_creation (fullname, username, accounttype, type, pw);
+				request_user_creation (fullname, username, accounttype, mode, pw);
 			}
 			hide ();
 			destroy ();

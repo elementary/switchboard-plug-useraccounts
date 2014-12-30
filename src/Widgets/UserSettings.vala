@@ -278,8 +278,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			}
 		}
 
-		private void change_password (PassChangeType _type, string? _new_password) {
-
+		private void change_password (Act.UserPasswordMode _mode, string? _new_password) {
+			if (get_permission ().allowed || user == get_current_user ()) {
+				switch (_mode) {
+					case Act.UserPasswordMode.REGULAR:
+						if (_new_password != null)
+							user.set_password (_new_password, "");
+						break;
+					case Act.UserPasswordMode.NONE:
+						user.set_password_mode (Act.UserPasswordMode.NONE);
+						break;
+					case Act.UserPasswordMode.SET_AT_LOGIN:
+						user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
+						break;
+					default: break;
+				}
+			}
 		}
+
 	}
 }

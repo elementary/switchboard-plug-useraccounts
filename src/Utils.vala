@@ -21,12 +21,6 @@
  */
 
 namespace SwitchboardPlugUserAccounts {
-	public enum PassChangeType {
-		NEW_PASSWORD,
-		NO_PASSWORD,
-		ON_LOGIN
-	}
-
 	private static string[]? installed_languages = null;
 
 	public static string[]? get_installed_languages () {
@@ -132,23 +126,23 @@ namespace SwitchboardPlugUserAccounts {
 			return true;
 		}
 
-		public static void create_new_user (string fullname, string username, Act.UserAccountType usertype, PassChangeType type, string? pw = null) {
+		public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null) {
 			if (get_permission ().allowed) {
 				try {
-					Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
+					Act.User created_user = get_usermanager ().create_user (_username, _fullname, _usertype);
 					get_usermanager ().user_added.connect ((user) => {
 						if (user == created_user) {
 							created_user.set_locked (false);
-								if (type == PassChangeType.NEW_PASSWORD && pw != null)
-									created_user.set_password (pw, "");
-								else if (type == PassChangeType.NO_PASSWORD)
+								if (_mode == Act.UserPasswordMode.REGULAR && _pw != null)
+									created_user.set_password (_pw, "");
+								else if (_mode == Act.UserPasswordMode.NONE)
 									created_user.set_password_mode (Act.UserPasswordMode.NONE);
-								else if (type == PassChangeType.ON_LOGIN)
+								else if (_mode == Act.UserPasswordMode.SET_AT_LOGIN)
 									created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
 						}
 					});
 				} catch (Error e) {
-					critical ("Creation of user '%s' failed".printf (username));
+					critical ("Creation of user '%s' failed".printf (_username));
 				}
 			}
 		}

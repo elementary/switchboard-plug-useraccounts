@@ -21,6 +21,8 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 	public class PasswordDialog : Gtk.Dialog {
 		private Gtk.Grid main_grid;
 		private Gtk.ComboBoxText action_combobox;
+		private Gtk.Revealer pw_revealer;
+		private Widgets.PasswordEditor pw_editor;
 
 		private Gtk.Widget button_change;
 		private Gtk.Widget button_cancel;
@@ -30,7 +32,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		private const string new_password = _("Set new password");
 		private const string no_password = _("Set no password for login");
 
-		public signal void request_password_change (PassChangeType type, string? new_password);
+		public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
 
 		public PasswordDialog (Act.User _user) {
 			user = _user;
@@ -52,22 +54,45 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			main_grid.halign = Gtk.Align.CENTER;
 			content.add (main_grid);
 
-			var action_label = new Gtk.Label (_("Action:"));
-			action_label.halign = Gtk.Align.END;
-			main_grid.attach (action_label, 0, 0, 1, 1);
-
 			action_combobox = new Gtk.ComboBoxText ();
-			action_combobox.halign = Gtk.Align.START;
+			action_combobox.halign = Gtk.Align.CENTER;
 			action_combobox.append_text (new_password);
 			action_combobox.append_text (no_password);
 			action_combobox.set_active (0);
-			main_grid.attach (action_combobox, 1, 0, 1, 1);
+			action_combobox.changed.connect (() => {
+				if (action_combobox.get_active () == 0) {
+					pw_editor.reset ();
+					pw_revealer.set_reveal_child (true);
+					button_change.set_sensitive (false);
+				} else {
+					pw_revealer.set_reveal_child (false);
+					button_change.set_sensitive (true);
+				}
+			});
+			main_grid.attach (action_combobox, 0, 0, 2, 1);
+
+			pw_editor = new Widgets.PasswordEditor ();
+			pw_editor.validation_changed.connect (() => {
+				if (action_combobox.get_active () == 0) {
+					if (pw_editor.is_valid)
+						button_change.set_sensitive (true);
+					else
+						button_change.set_sensitive (false);
+				}
+			});
+
+			pw_revealer = new Gtk.Revealer ();
+			pw_revealer.add (pw_editor);
+			pw_revealer.set_transition_duration (250);
+			pw_revealer.set_reveal_child (true);
+			main_grid.attach (pw_revealer, 0, 1, 2, 1);
 		}
 		
 		public void build_buttons () {
 			button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
 			button_change = add_button (_("Change password"), Gtk.ResponseType.OK);
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+			button_change.set_sensitive (false);
 			this.response.connect (on_response);
 		}
 
@@ -76,10 +101,11 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			if (response_id == Gtk.ResponseType.OK) {
 				switch (action_combobox.get_active_text ()) {
 					case new_password:
-						//request_password_change (PassChangeType.NEW_PASSWORD, new_password_entry.get_text ());
+						if (pw_editor.is_valid)
+							request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
 						break;
 					case no_password:
-						request_password_change (PassChangeType.NO_PASSWORD, null);
+						request_password_change (Act.UserPasswordMode.NONE, null);
 						break;
 					default: break;
 				}
