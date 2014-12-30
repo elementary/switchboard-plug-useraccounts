@@ -46,9 +46,13 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		
 		public void build_ui () {
 			var content = get_content_area () as Gtk.Box;
+			get_action_area ().margin_right = 12;
+			get_action_area ().margin_bottom = 12;
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
-			main_grid.margin = 10;
+			main_grid.margin = 12;
+			main_grid.margin_top = 24;
+			main_grid.margin_bottom = 24;
 			main_grid.row_spacing = 10;
 			main_grid.column_spacing = 20;
 			main_grid.halign = Gtk.Align.CENTER;

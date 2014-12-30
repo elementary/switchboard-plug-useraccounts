@@ -77,7 +77,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void update_ui () {
-			if (permission.allowed) {
+			if (get_permission ().allowed) {
 				button_add.set_sensitive (true);
 				if (selected_user != get_current_user () && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
 					button_remove.set_sensitive (true);
