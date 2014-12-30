@@ -197,10 +197,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				change_password_button.set_label ("**********");
 
 			if (user.get_locked ()) {
-				enable_user_button.set_label (_("Enable user account"));
+				enable_user_button.set_label (_("Enable User Account"));
 				enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 			} else if (!user.get_locked ())
-				enable_user_button.set_label (_("Disable user account"));
+				enable_user_button.set_label (_("Disable User Account"));
 
 			if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
 				enable_user_button.set_sensitive (true);

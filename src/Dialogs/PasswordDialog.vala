@@ -96,7 +96,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		
 		public void build_buttons () {
 			button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
-			button_change = add_button (_("Change password"), Gtk.ResponseType.OK);
+			button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			button_change.set_sensitive (false);
 			this.response.connect (on_response);
