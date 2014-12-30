@@ -86,15 +86,15 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			username_entry.changed.connect (check_input);
 			main_grid.attach (username_entry, 1, 2, 1, 1);
 
-			option_nopw = new Gtk.RadioButton.with_label (null, _("Set no password for login"));
-			option_onlogin = new Gtk.RadioButton.with_label_from_widget (option_nopw, _("Let user create password on first login"));
-			option_setpw = new Gtk.RadioButton.with_label_from_widget (option_nopw, _("Set password now"));
+			option_setpw = new Gtk.RadioButton.with_label (null, _("Set password now"));
+			option_nopw = new Gtk.RadioButton.with_label_from_widget (option_setpw, _("Set no password for login"));
+			option_onlogin = new Gtk.RadioButton.with_label_from_widget (option_setpw, _("Let user create password on first login"));
 			option_nopw.toggled.connect (toggled_pw);
 			option_onlogin.toggled.connect (toggled_pw);
 			option_setpw.toggled.connect (toggled_pw);
-			main_grid.attach (option_nopw, 0, 3, 2, 1);
+			main_grid.attach (option_setpw, 0, 3, 2, 1);
 			//main_grid.attach (option_onlogin, 0, 4, 2, 1);
-			main_grid.attach (option_setpw, 0, 5, 2, 1);
+			//main_grid.attach (option_nopw, 0, 5, 2, 1);
 
 			pw_editor = new Widgets.PasswordEditor ();
 			pw_editor.validation_changed.connect (check_input);
@@ -102,7 +102,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			pw_revealer = new Gtk.Revealer ();
 			pw_revealer.add (pw_editor);
 			pw_revealer.set_transition_duration (250);
-			pw_revealer.set_reveal_child (false);
+			pw_revealer.set_reveal_child (true);
 			main_grid.attach (pw_revealer, 0, 6, 2, 1);
 
 			show_all ();

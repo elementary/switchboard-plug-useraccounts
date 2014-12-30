@@ -46,6 +46,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		
 		public void build_ui () {
 			var content = get_content_area () as Gtk.Box;
+			content.margin = 0;
 			get_action_area ().margin_right = 12;
 			get_action_area ().margin_bottom = 12;
 			main_grid = new Gtk.Grid ();
@@ -61,7 +62,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			action_combobox = new Gtk.ComboBoxText ();
 			action_combobox.halign = Gtk.Align.CENTER;
 			action_combobox.append_text (new_password);
-			action_combobox.append_text (no_password);
+			//action_combobox.append_text (no_password);
 			action_combobox.set_active (0);
 			action_combobox.changed.connect (() => {
 				if (action_combobox.get_active () == 0) {
