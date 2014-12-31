@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice polkit-gobject-1)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice polkit-gobject-1 pwquality)
 
 add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API -w)
 #add_definitions (${DEPS_CFLAGS})
@@ -33,6 +33,7 @@ PACKAGES
 	gnome-desktop-3.0
 	posix
 	polkit-gobject-1
+	pwquality
 OPTIONS
 	--thread
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/

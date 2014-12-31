@@ -22,11 +22,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Entry new_pw_entry;
 		private Gtk.Entry confirm_pw_entry;
 		private Gtk.CheckButton show_pw_check;
+		private Gtk.LevelBar pw_level;
+
+		private PasswordQuality.Settings pwquality;
 
 		public bool is_valid = false;
 		public signal void validation_changed ();
 
 		public PasswordEditor () {
+			pwquality = new PasswordQuality.Settings ();
 			build_ui ();
 		}
 
@@ -60,9 +64,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			new_pw_entry.changed.connect (compare_passwords);
 			attach (new_pw_entry, 1, 1, 1, 1);
 
+			pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
+			pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
+			pw_level.add_offset_value ("low", 25.0);
+			pw_level.add_offset_value ("middle", 50.0);
+			pw_level.add_offset_value ("high", 75.0);
+			attach (pw_level, 1, 2, 1, 1);
+
 			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
 			confirm_pw_label.halign = Gtk.Align.END;
-			attach (confirm_pw_label, 0, 2, 1, 1);
+			attach (confirm_pw_label, 0, 3, 1, 1);
 
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.halign = Gtk.Align.START;
@@ -70,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			confirm_pw_entry.set_sensitive (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
-			attach (confirm_pw_entry, 1, 2, 1, 1);
+			attach (confirm_pw_entry, 1, 3, 1, 1);
 
 			show_pw_check = new Gtk.CheckButton.with_label ("Show passwords");
 			show_pw_check.clicked.connect (() => {
@@ -82,12 +93,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					confirm_pw_entry.set_visibility (false);
 				}
 			});
-			attach (show_pw_check, 1, 3, 1, 1);
+			attach (show_pw_check, 1, 4, 1, 1);
 
 			show_all ();
 		}
 
 		private void compare_passwords () {
+			if (new_pw_entry.get_text () != "") {
+				var val = pwquality.check (new_pw_entry.get_text ());
+				if (val <= 0)
+					val = 1;
+				debug ("password quality level: %d".printf (val));
+				pw_level.set_value (val);
+			}
 			if (new_pw_entry.get_text () == confirm_pw_entry.get_text () && new_pw_entry.get_text () != "") {
 				is_valid = true;
 				new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
