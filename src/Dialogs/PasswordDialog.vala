@@ -30,7 +30,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 
 		public PasswordDialog (Act.User _user) {
 			user = _user;
-			set_size_request (450, 0);
+			set_size_request (475, 0);
 			set_resizable (false);
 			set_deletable (false);
 

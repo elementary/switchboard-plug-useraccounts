@@ -36,7 +36,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		public signal void request_user_creation (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null);
 
 		public NewUserDialog () {
-			set_size_request (450, 0);
+			set_size_request (475, 0);
 			set_resizable (false);
 			set_deletable (false);
 
