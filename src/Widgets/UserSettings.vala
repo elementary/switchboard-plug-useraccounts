@@ -138,12 +138,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
 
-			full_name_lock.set_opacity (1);
-			user_type_lock.set_opacity (1);
-			language_lock.set_opacity (1);
-			autologin_lock.set_opacity (1);
-			password_lock.set_opacity (1);
-			enable_lock.set_opacity (1);
+			full_name_lock.set_opacity (0.5);
+			user_type_lock.set_opacity (0.5);
+			language_lock.set_opacity (0.5);
+			autologin_lock.set_opacity (0.5);
+			password_lock.set_opacity (0.5);
+			enable_lock.set_opacity (0.5);
 
 			if (get_current_user () == user || get_permission ().allowed) {
 				full_name_entry.set_sensitive (true);
