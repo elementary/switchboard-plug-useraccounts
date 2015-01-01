@@ -83,7 +83,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			confirm_pw_entry.changed.connect (compare_passwords);
 			attach (confirm_pw_entry, 1, 3, 1, 1);
 
-			show_pw_check = new Gtk.CheckButton.with_label ("Show passwords");
+			show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
 			show_pw_check.clicked.connect (() => {
 				if (show_pw_check.get_active ()) {
 					new_pw_entry.set_visibility (true);
@@ -103,8 +103,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				var val = pwquality.check (new_pw_entry.get_text ());
 				if (val <= 0)
 					val = 1;
-				debug ("password quality level: %d".printf (val));
+				//debug ("password quality level: %d".printf (val));
 				pw_level.set_value (val);
+				if (val > 0 && val <= 25)
+					pw_level.set_tooltip_text (_("Weak password strength"));
+				else if (val > 25 && val <= 75)
+					pw_level.set_tooltip_text (_("Medium password strength"));
+				else if (val > 75)
+					pw_level.set_tooltip_text (_("Strong password strength"));
 			}
 			if (new_pw_entry.get_text () == confirm_pw_entry.get_text () && new_pw_entry.get_text () != "") {
 				is_valid = true;
