@@ -103,11 +103,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.set_relief (Gtk.ReliefStyle.NONE);
 			change_password_button.halign = Gtk.Align.START;
 			change_password_button.clicked.connect (() => {
-				if (pw_dialog == null) {
-					pw_dialog = new Dialogs.PasswordDialog (user);
-					pw_dialog.request_password_change.connect (change_password);
-					pw_dialog.show ();
-				}
+				pw_dialog = new Dialogs.PasswordDialog (user);
+				pw_dialog.request_password_change.connect (change_password);
+				pw_dialog.show ();
 			});
 			attach (change_password_button, 1, 4, 1, 1);
 
