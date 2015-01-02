@@ -33,6 +33,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			set_size_request (475, 0);
 			set_resizable (false);
 			set_deletable (false);
+			set_modal (true);
 
 			build_ui ();
 			build_buttons ();
@@ -41,7 +42,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 		
 		public void build_ui () {
 			var content = get_content_area () as Gtk.Box;
-			content.margin = 0;
 			get_action_area ().margin = 6;
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
@@ -83,4 +83,13 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			destroy ();
 		}
 	}
-}
+}var content = get_content_area () as Gtk.Box;
+			content.margin = 0;
+			get_action_area ().margin = 6;
+			main_grid = new Gtk.Grid ();
+			main_grid.expand = true;
+			main_grid.margin = 12;
+			main_grid.row_spacing = 10;
+			main_grid.column_spacing = 20;
+			main_grid.halign = Gtk.Align.END;
+			content.add (main_grid);

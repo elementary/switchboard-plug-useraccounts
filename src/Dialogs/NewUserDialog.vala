@@ -39,6 +39,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			set_size_request (475, 0);
 			set_resizable (false);
 			set_deletable (false);
+			set_modal (true);
 
 			build_ui ();
 			build_buttons ();

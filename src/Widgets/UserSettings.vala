@@ -1,21 +1,17 @@
-/*-
- * Copyright (c) 2014 Marvin Beckers <beckersmarvin@gmail.com>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Library General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
- *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
- */
+/***
+Copyright (C) 2014-2015 Marvin Beckers
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License version 3, as published
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranties of
+MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program. If not, see http://www.gnu.org/licenses/.
+***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
@@ -30,6 +26,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.ComboBoxText user_type_box;
 		private Gtk.ComboBoxText language_box;
 		private Gtk.Switch autologin_switch;
+
+		private Dialogs.PasswordDialog pw_dialog;
 
 		//lock widgets
 		private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
@@ -105,9 +103,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.set_relief (Gtk.ReliefStyle.NONE);
 			change_password_button.halign = Gtk.Align.START;
 			change_password_button.clicked.connect (() => {
-				Dialogs.PasswordDialog pw_dialog = new Dialogs.PasswordDialog (user);
-				pw_dialog.request_password_change.connect (change_password);
-				pw_dialog.show ();
+				if (pw_dialog == null) {
+					pw_dialog = new Dialogs.PasswordDialog (user);
+					pw_dialog.request_password_change.connect (change_password);
+					pw_dialog.show ();
+				}
 			});
 			attach (change_password_button, 1, 4, 1, 1);
 
