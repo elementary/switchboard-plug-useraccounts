@@ -16,7 +16,6 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Plug.vala
 	Utils.vala
-	PasswdWrapper.vala
 	Widgets/UserView.vala
 	Widgets/UserList.vala
 	Widgets/ListFooter.vala
