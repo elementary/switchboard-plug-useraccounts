@@ -22,6 +22,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.LevelBar pw_level;
 
 		private PasswordQuality.Settings pwquality;
+		private Passwd.Handler h;
 
 		public bool is_valid = false;
 		public signal void validation_changed ();
@@ -38,6 +39,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			halign = Gtk.Align.END;
 
 			if (!get_permission ().allowed) {
+				h = new Passwd.Handler ();
 				Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
 				current_pw_label.halign = Gtk.Align.END;
 				attach (current_pw_label, 0, 0, 1, 1);

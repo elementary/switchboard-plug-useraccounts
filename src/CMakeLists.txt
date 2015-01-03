@@ -28,7 +28,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Dialogs/PasswordDialog.vala
 	Dialogs/AvatarDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala
-	#run-passwd.vapi
 PACKAGES
 	gtk+-3.0
 	switchboard-2.0
@@ -38,10 +37,13 @@ PACKAGES
 	posix
 	polkit-gobject-1
 	pwquality
+	run-passwd
 OPTIONS
 	--thread
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
 )
+
+include_directories (${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C} run-passwd.c)
 target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 

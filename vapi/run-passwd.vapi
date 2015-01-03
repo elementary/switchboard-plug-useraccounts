@@ -13,7 +13,7 @@ You should have received a copy of the GNU General Public License along
 with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
-[CCode (lower_case_cprefix = "passwd_", cheader_filename = "run-passwd.h")]
+[CCode (cheader_filename = "run-passwd.h")]
 namespace Passwd {
 	[CCode (cname = "int", cprefix = "PASSWD_ERROR_", has_type_id = false)]
 	public enum Error {
@@ -22,5 +22,13 @@ namespace Passwd {
 		REAUTH_FAILED,
 		BACKEND,
 		UNKNOWN
+	}
+
+	[Compact, CCode (cname = " PasswdHandler", lower_case_cprefix = "passwd_", free_function = "free_passwd_resources")]
+	public class Handler {
+		[CCode (cname = "passwd_init")]
+		public Handler ();
+
+		public void authenticate (char[] current_password);
 	}
 }
