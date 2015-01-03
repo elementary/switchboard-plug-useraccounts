@@ -28,6 +28,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Switch autologin_switch;
 
 		private Dialogs.PasswordDialog pw_dialog;
+		private Dialogs.AvatarDialog avatar_dialog;
 
 		//lock widgets
 		private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
@@ -52,6 +53,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			avatar_button = new Gtk.Button ();
 			avatar_button.set_relief (Gtk.ReliefStyle.NONE);
+			avatar_button.clicked.connect (() => {
+				var file_dialog = new Gtk.FileChooserDialog (_("Select an image"),
+					get_parent_window () as Gtk.Window?, Gtk.FileChooserAction.OPEN, _("Cancel"),
+					Gtk.ResponseType.CANCEL, _("Open"), Gtk.ResponseType.ACCEPT);
+			
+				Gtk.FileFilter filter = new Gtk.FileFilter ();
+				filter.set_filter_name (_("Images"));
+				file_dialog.set_filter (filter);
+				filter.add_mime_type ("image/jpeg");
+				filter.add_mime_type ("image/jpg");
+				filter.add_mime_type ("image/png");
+
+				if (file_dialog.run () == Gtk.ResponseType.ACCEPT) {
+					var path = file_dialog.get_file ().get_path ();
+					file_dialog.hide ();
+					file_dialog.destroy ();
+					avatar_dialog = new Dialogs.AvatarDialog (path);
+					avatar_dialog.request_avatar_change.connect (change_avatar);
+				} else
+					file_dialog.close ();
+			});
 			attach (avatar_button, 0, 0, 1, 1);
 
 			full_name_entry = new Gtk.Entry ();
@@ -130,6 +152,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 		
 		public void update_ui () {
+			avatar_button.set_sensitive (false);
 			full_name_entry.set_sensitive (false);
 			user_type_box.set_sensitive (false);
 			language_box.set_sensitive (false);
@@ -144,6 +167,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			enable_lock.set_opacity (0.5);
 
 			if (get_current_user () == user || get_permission ().allowed) {
+				avatar_button.set_sensitive (true);
 				full_name_entry.set_sensitive (true);
 				full_name_lock.set_opacity (0);
 				language_box.set_sensitive (true);
@@ -165,7 +189,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			}
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
-				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+				if (avatar == null)
+					avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+				else
+					avatar.set_from_pixbuf (avatar_pixbuf);
 			} catch (Error e) {
 				Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
 				try {
@@ -217,6 +244,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			}
 
 			show_all ();
+		}
+
+		private void change_avatar (Gdk.Pixbuf _pixbuf) {
+			if (get_current_user () == user || get_permission ().allowed) {
+				var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%s".printf (user.get_user_name ()));
+				try {
+					_pixbuf.savev (path, "png", {}, {});
+					user.set_icon_file (path);
+				} catch (Error e) {
+					critical (e.message);
+				}
+			}
 		}
 
 		private void change_full_name () {

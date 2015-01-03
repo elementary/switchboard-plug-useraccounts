@@ -14,19 +14,20 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts.Dialogs {
-	public class PasswordDialog : Gtk.Dialog {
+	public class AvatarDialog : Gtk.Dialog {
+		private string pixbuf_path;
+
 		private Gtk.Grid main_grid;
-		private Gtk.Revealer pw_revealer;
-		private Widgets.PasswordEditor pw_editor;
 		private Gtk.Widget button_change;
 		private Gtk.Widget button_cancel;
+		private Widgets.CropView cropview;
 
-		private unowned Act.User user;
-		public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
+		public signal void request_avatar_change (Gdk.Pixbuf _pixbuf);
 
-		public PasswordDialog (Act.User _user) {
-			user = _user;
-			set_size_request (475, 0);
+		public AvatarDialog (string _path) {
+			pixbuf_path = _path;
+
+			set_size_request (400, 0);
 			set_resizable (false);
 			set_deletable (false);
 			set_modal (true);
@@ -35,8 +36,8 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			build_buttons ();
 			show_all ();
 		}
-		
-		public void build_ui () {
+
+		private void build_ui () {
 			var content = get_content_area () as Gtk.Box;
 			get_action_area ().margin = 6;
 			main_grid = new Gtk.Grid ();
@@ -47,33 +48,35 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			main_grid.halign = Gtk.Align.END;
 			content.add (main_grid);
 
-			pw_editor = new Widgets.PasswordEditor ();
-			pw_editor.validation_changed.connect (() => {
-				if (pw_editor.is_valid)
-					button_change.set_sensitive (true);
-				else
-					button_change.set_sensitive (false);
-			});
-
-			pw_revealer = new Gtk.Revealer ();
-			pw_revealer.add (pw_editor);
-			pw_revealer.set_transition_duration (250);
-			pw_revealer.set_reveal_child (true);
-			main_grid.attach (pw_revealer, 0, 1, 2, 1);
+			try {
+				Gtk.Frame frame = new Gtk.Frame (null);
+				cropview = new Widgets.CropView.from_pixbuf (new Gdk.Pixbuf.from_file (pixbuf_path));
+				cropview.set_size_request (400, 300);
+				cropview.quadratic_selection = true;
+				cropview.handles_visible = false;
+				frame.add (cropview);
+				main_grid.attach (frame, 0, 0, 1, 1);
+			} catch (Error e) {
+				critical (e.message);
+				button_change.set_sensitive (false);
+			}
 		}
 
-		public void build_buttons () {
+		private void build_buttons () {
 			button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
-			button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
+			button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-			button_change.set_sensitive (false);
 			this.response.connect (on_response);
 		}
 
 		private void on_response (Gtk.Dialog source, int response_id) {
-			if (response_id == Gtk.ResponseType.OK && pw_editor.is_valid)
-				request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
-
+			if (response_id == Gtk.ResponseType.OK) {
+				var pixbuf = cropview.get_selection ();
+				if (pixbuf.get_width () > 200)
+					request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
+				else
+					request_avatar_change (pixbuf);
+			}
 			hide ();
 			destroy ();
 		}

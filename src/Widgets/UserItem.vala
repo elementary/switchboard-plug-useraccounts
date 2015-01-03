@@ -65,7 +65,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public void update_ui () {
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
-				avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+				if (avatar == null)
+					avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+				else
+					avatar.set_from_pixbuf (avatar_pixbuf);
 			} catch (Error e) {
 				avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
 			}
