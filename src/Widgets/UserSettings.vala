@@ -248,7 +248,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void change_avatar (Gdk.Pixbuf _pixbuf) {
 			if (get_current_user () == user || get_permission ().allowed) {
-				var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%s".printf (user.get_user_name ()));
+				var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-0");
+				int i = 0;
+				while (FileUtils.test (path, FileTest.EXISTS)) {
+					path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%d".printf (i));
+					i++;
+				}
 				try {
 					_pixbuf.savev (path, "png", {}, {});
 					user.set_icon_file (path);
