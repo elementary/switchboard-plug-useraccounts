@@ -16,6 +16,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Plug.vala
 	Utils.vala
+	PasswdWrapper.vala
 	Widgets/UserView.vala
 	Widgets/UserList.vala
 	Widgets/ListFooter.vala
@@ -27,6 +28,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Dialogs/PasswordDialog.vala
 	Dialogs/AvatarDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala
+	#run-passwd.vapi
 PACKAGES
 	gtk+-3.0
 	switchboard-2.0
@@ -41,7 +43,7 @@ OPTIONS
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
 )
 
-add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
+add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C} run-passwd.c)
 target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 
 
 # Installation

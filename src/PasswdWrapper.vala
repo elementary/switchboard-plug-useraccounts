@@ -30,10 +30,11 @@ namespace SwitchboardPlugUserAccounts {
 
 		private IOChannel stdout;
 		private IOChannel stdin;
+		//private Passwd.Error error = Passwd.Error.REJECTED;
 
 		public PasswdWrapper () { }
 
-		public void spawn_passwd () {
+		public bool spawn_passwd () {
 			try {
 				string[] spawn_args = {"/usr/bin/passwd"};
 				string[] spawn_env = Environ.set_variable (Environ.get (), "LC_ALL", "C", true);
@@ -50,15 +51,18 @@ namespace SwitchboardPlugUserAccounts {
 					out standard_error);
 			} catch (SpawnError e) {
 				critical ("Error: %s".printf (e.message));
+				return false;
 			}
 
 			if (Posix.dup2 (standard_error, standard_output) == -1) {
 				critical ("action failed!");
-				return;
+				return false;
 			}
 
 			stdout = new IOChannel.unix_new (standard_output);
 			stdin = new IOChannel.unix_new (standard_input);
+
+			return true;
 		}
 	}
 }
