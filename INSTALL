@@ -10,4 +10,8 @@ cmake (>= 2.8)
 libswitchboard-2.0-dev
 libgranite-dev
 libgtk-3-dev
-valac (>= 0.22)
+libgnome-desktop-3-dev
+libpolkit-gobject-1-dev
+libpwquality-dev
+libaccountsservice-dev
+valac (>= 0.26)

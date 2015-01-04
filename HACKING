@@ -12,12 +12,12 @@ Join #elementary-dev on Freenode: https://kiwiirc.com/client/irc.freenode.net/el
 
 ====== Contribute without touching code ======
 
-- http://bugs.launchpad.net/sample-plug Go through problem reports and check Unconfirmed bugs or those lacking information and mark any duplicates you spot.
-- https://translations.launchpad.net/sample-plug Help getting this plug translated in your language!
+- http://bugs.launchpad.net/switchboard-plug-useraccounts Go through problem reports and check Unconfirmed bugs or those lacking information and mark any duplicates you spot.
+- https://translations.launchpad.net/switchboard-plug-useraccounts Help getting this plug translated in your language!
 
 ====== Check out the sources ======
 
-    bzr branch lp:sample-plug
+    bzr branch lp:switchboard-plug-useraccounts
 
 The development trunk (master, tip) is the latest iteration of the next release.
 Browse it online and look for other branches at http://code.launchpad.net/sample-plug
