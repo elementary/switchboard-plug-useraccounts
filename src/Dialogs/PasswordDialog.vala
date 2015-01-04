@@ -31,6 +31,8 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			set_deletable (false);
 			set_modal (true);
 
+			get_pe_notifier ().unset_error ();
+
 			build_ui ();
 			build_buttons ();
 			show_all ();

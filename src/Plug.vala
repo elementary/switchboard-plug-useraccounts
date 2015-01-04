@@ -24,6 +24,7 @@ namespace SwitchboardPlugUserAccounts {
 
 		private Gtk.Grid? main_grid = null;
 		private Gtk.InfoBar infobar;
+		private Gtk.InfoBar infobar_error;
 		private Gtk.LockButton lock_button;
 
 		public Plug () {
@@ -43,6 +44,29 @@ namespace SwitchboardPlugUserAccounts {
 			main_grid = new Gtk.Grid ();
 			main_grid.expand = true;
 
+			infobar_error = new Gtk.InfoBar ();
+			infobar_error.message_type = Gtk.MessageType.ERROR;
+			infobar_error.no_show_all = true;
+			var error_button = infobar_error.add_button (_("Ok"), 1);
+			error_button.clicked.connect (get_pe_notifier ().unset_error);
+			var error_label = new Gtk.Label ("");
+			var error_content = infobar_error.get_content_area () as Gtk.Container;
+			error_content.add (error_label);
+
+			main_grid.attach (infobar_error, 0, 0, 1, 1);
+
+			get_pe_notifier ().notified.connect (() => {
+				if (get_pe_notifier ().is_error ()) {
+					infobar_error.no_show_all = false;
+					error_label.set_label (("%s: %s".printf
+						(_("Password change failed"), get_pe_notifier ().get_error_message ())));
+					infobar_error.show_all ();
+				} else {
+					infobar_error.no_show_all = true;
+					infobar_error.hide ();
+				}
+			});
+
 			infobar = new Gtk.InfoBar ();
 			infobar.message_type = Gtk.MessageType.INFO;
 			lock_button = new Gtk.LockButton (get_permission ());
@@ -51,10 +75,10 @@ namespace SwitchboardPlugUserAccounts {
 			var content = infobar.get_content_area () as Gtk.Container;
 			var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
 			content.add (label);
-			main_grid.attach (infobar, 0, 0, 1, 1);
+			main_grid.attach (infobar, 0, 1, 1, 1);
 
 			userview = new Widgets.UserView ();
-			main_grid.attach (userview, 0, 1, 1, 1);
+			main_grid.attach (userview, 0, 2, 1, 1);
 			main_grid.show_all ();
 
 			get_permission ().notify["allowed"].connect (() => {

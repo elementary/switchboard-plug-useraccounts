@@ -120,8 +120,11 @@ namespace SwitchboardPlugUserAccounts {
 					// we are going to assume that if a normal user calls this method,
 					// he is authenticated against the PasswdHandler
 					Passwd.passwd_change_password (get_passwd_handler (), _new_password, (h, e) => {
-						if (e != null)
-							critical ("password change failed");
+						if (e != null) {
+							warning ("password change failed");
+							warning (e.message);
+							get_pe_notifier ().set_error (e.message);
+						}
 					});
 				}
 			}

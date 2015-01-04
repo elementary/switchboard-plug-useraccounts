@@ -56,6 +56,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			avatar_button = new Gtk.Button ();
 			avatar_button.set_relief (Gtk.ReliefStyle.NONE);
 			avatar_button.clicked.connect (() => {
+				get_pe_notifier ().unset_error ();
 				var file_dialog = new Gtk.FileChooserDialog (_("Select an image"),
 					get_parent_window () as Gtk.Window?, Gtk.FileChooserAction.OPEN, _("Cancel"),
 					Gtk.ResponseType.CANCEL, _("Open"), Gtk.ResponseType.ACCEPT);
