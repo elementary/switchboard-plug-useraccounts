@@ -16,6 +16,7 @@ with this program. If not, see http://www.gnu.org/licenses/.
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
 		private unowned Act.User user;
+		private UserUtils utils;
 
 		private Gtk.Image avatar;
 		private Gdk.Pixbuf? avatar_pixbuf;
@@ -40,6 +41,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		public UserSettings (Act.User _user) {
 			user = _user;
+			utils = new UserUtils (user, this);
 			build_ui ();
 			user.changed.connect (update_ui);
 		}
@@ -92,7 +94,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					file_dialog.hide ();
 					file_dialog.destroy ();
 					avatar_dialog = new Dialogs.AvatarDialog (path);
-					avatar_dialog.request_avatar_change.connect (change_avatar);
+					avatar_dialog.request_avatar_change.connect (utils.change_avatar);
 				} else
 					file_dialog.close ();
 			});
@@ -100,7 +102,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			full_name_entry = new Gtk.Entry ();
 			full_name_entry.get_style_context ().add_class ("h3");
-			full_name_entry.activate.connect (change_full_name);
+			full_name_entry.activate.connect (() => utils.change_full_name (full_name_entry.get_text ()));
 			attach (full_name_entry, 1, 0, 1, 1);
 
 			var user_type_label = new Gtk.Label (_("Account type:"));
@@ -110,7 +112,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Standard"));
 			user_type_box.append_text (_("Administrator"));
-			user_type_box.changed.connect (change_user_type);
+			//user_type_box.changed.connect (change_user_type);
+			user_type_box.changed.connect (() => utils.change_user_type (user_type_box.get_active ()));
 			attach (user_type_box, 1, 1, 1, 1);
 
 			var lang_label = new Gtk.Label (_("Language:"));
@@ -124,7 +127,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				else if (s.length == 5)
 					language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
 			}
-			language_box.changed.connect (change_lang);
+			language_box.changed.connect (() => utils.change_language (language_box.get_active_text ()));
 			attach (language_box, 1, 2, 1, 1);
 
 			var login_label = new Gtk.Label (_("Log In automatically:"));
@@ -136,7 +139,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			autologin_switch.hexpand = true;
 			autologin_switch.halign = Gtk.Align.START;
 			autologin_switch.margin_top = 20;
-			autologin_switch.notify["active"].connect (change_autologin);
+			autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
 			attach (autologin_switch, 1, 3, 1, 1);
 
 			var change_password_label = new Gtk.Label (_("Password:"));
@@ -148,13 +151,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_button.halign = Gtk.Align.START;
 			change_password_button.clicked.connect (() => {
 				pw_dialog = new Dialogs.PasswordDialog (user);
-				pw_dialog.request_password_change.connect (change_password);
+				pw_dialog.request_password_change.connect (utils.change_password);
 				pw_dialog.show ();
 			});
 			attach (change_password_button, 1, 4, 1, 1);
 
 			enable_user_button = new Gtk.Button ();
-			enable_user_button.clicked.connect (change_lock);
+			enable_user_button.clicked.connect (utils.change_lock);
 			enable_user_button.set_sensitive (false);
 			enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			attach (enable_user_button, 1, 5, 1, 1);
@@ -267,133 +270,5 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			show_all ();
 		}
-
-		private void change_avatar (Gdk.Pixbuf _pixbuf) {
-			if (get_current_user () == user || get_permission ().allowed) {
-				var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-0");
-				int i = 0;
-				while (FileUtils.test (path, FileTest.EXISTS)) {
-					path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%d".printf (i));
-					i++;
-				}
-				try {
-					_pixbuf.savev (path, "png", {}, {});
-					user.set_icon_file (path);
-				} catch (Error e) {
-					critical (e.message);
-				}
-			}
-		}
-
-		private void change_full_name () {
-			string new_full_name = full_name_entry.get_text ();
-			if (new_full_name != user.get_real_name ()) {
-				if (get_current_user () == user || get_permission ().allowed) {
-					debug ("changed real name");
-					user.set_real_name (new_full_name);
-				} else {
-					debug ("Insuffienct permission to change real name");
-					update_ui ();
-				}
-			}
-		}
-
-		private void change_lang () {
-			if (get_current_user () == user || get_permission ().allowed) {
-				string new_lang = language_box.get_active_text ();
-				string current_lang = "";
-				if (user.get_language ().length == 2)
-					current_lang = Gnome.Languages.get_language_from_code (user.get_language (), null);
-				else if (user.get_language ().length == 5)
-					current_lang = Gnome.Languages.get_language_from_locale (user.get_language (), null);
-
-				string new_lang_code = "";
-				foreach (string s in get_installed_languages ()) {
-					if (s.length == 2 && Gnome.Languages.get_language_from_code (s, null) == new_lang) {
-						new_lang_code = s;
-						break;
-					} else if (s.length == 5 && Gnome.Languages.get_language_from_locale (s, null) == new_lang) {
-						new_lang_code = s;
-						break;
-					}
-				}
-
-				if (new_lang != user.get_language ()) {
-					debug ("changed language for %s".printf (user.get_user_name ()));
-					user.set_language (new_lang_code);
-				} else {
-					debug ("Insuffienct permission to change language");
-					update_ui ();
-				}
-			}
-		}
-
-		private void change_lock () {
-			if (get_permission ().allowed && get_current_user () != user) {
-				if (user.get_locked ()) {
-					user.set_password_mode (Act.UserPasswordMode.NONE);
-					user.set_locked (false);
-				} else {
-					user.set_automatic_login (false);
-					user.set_locked (true);
-				}
-			} else {
-				debug ("Insuffienct permission to change lock state");
-			}
-		}
-
-		private void change_user_type () {
-			if (get_permission ().allowed) {
-				if (user.get_account_type () == Act.UserAccountType.STANDARD && user_type_box.get_active () == 1)
-					user.set_account_type (Act.UserAccountType.ADMINISTRATOR);
-				else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR && user_type_box.get_active () == 0 && !is_last_admin (user))
-					user.set_account_type (Act.UserAccountType.STANDARD);
-				else
-					update_ui ();
-			}
-		}
-
-		private void change_autologin () {
-			if (get_permission ().allowed) {
-				if (user.get_automatic_login () && !autologin_switch.get_active ()) {
-					user.set_automatic_login (false);
-				} else if (!user.get_automatic_login () && autologin_switch.get_active ()) {
-					foreach (Act.User temp_user in get_usermanager ().list_users ()) {
-						if (temp_user.get_automatic_login () && temp_user != user)
-							temp_user.set_automatic_login (false);
-					}
-					user.set_automatic_login (true);
-				}
-			}
-		}
-
-		private void change_password (Act.UserPasswordMode _mode, string? _new_password) {
-			if (get_permission ().allowed) {
-				switch (_mode) {
-					case Act.UserPasswordMode.REGULAR:
-						if (_new_password != null)
-							user.set_password (_new_password, "");
-						break;
-					case Act.UserPasswordMode.NONE:
-						user.set_password_mode (Act.UserPasswordMode.NONE);
-						break;
-					case Act.UserPasswordMode.SET_AT_LOGIN:
-						user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-						break;
-					default: break;
-				}
-			} else if (user == get_current_user ()) {
-				if (_new_password != null) {
-					// we are going to assume that if a normal user calls this method,
-					// he is authenticated against the PasswdHandler
-					Passwd.passwd_change_password (get_passwd_handler (), _new_password, (h, e) => {
-						if (e != null)
-							warning ("password change failed");
-
-					});
-				}
-			}
-		}
-
 	}
 }
