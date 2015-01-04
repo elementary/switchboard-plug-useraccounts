@@ -34,4 +34,10 @@ namespace Passwd {
 
 	[CCode (cname = "passwd_authenticate")]
 	public void passwd_authenticate (PasswdHandler handler, string cur_pw, PasswdCallback cb);
+
+	public void passwd_destroy (PasswdHandler handler);
+	[CCode (cname = "passwd_destroy")]
+
+	[CCode (cname = "passwd_change_password")]
+	public bool passwd_change_password (PasswdHandler handler, string new_pw, PasswdCallback cb);
 }
