@@ -346,7 +346,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void change_password (Act.UserPasswordMode _mode, string? _new_password) {
-			if (get_permission ().allowed || user == get_current_user ()) {
+			if (get_permission ().allowed) {
 				switch (_mode) {
 					case Act.UserPasswordMode.REGULAR:
 						if (_new_password != null)
@@ -359,6 +359,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 						user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
 						break;
 					default: break;
+				}
+			} else if (user == get_current_user ()) {
+				if (_new_password != null) {
+					// we are going to assume that if a normal user calls this method,
+					// he is authenticated against the PasswdHandler
+					Passwd.passwd_change_password (get_passwd_handler (), _new_password, (h, e) => {
+						if (e != null)
+							warning ("password change failed");
+
+					});
 				}
 			}
 		}

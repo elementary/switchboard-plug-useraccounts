@@ -22,7 +22,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.LevelBar pw_level;
 
 		private PasswordQuality.Settings pwquality;
-		private Passwd.Handler h;
+		public Passwd.Handler h;
+
+		private bool is_auth = false;
+		private signal void auth_changed ();
 
 		public bool is_valid = false;
 		public signal void validation_changed ();
@@ -39,7 +42,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			halign = Gtk.Align.END;
 
 			if (!get_permission ().allowed) {
-				h = new Passwd.Handler ();
 				Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
 				current_pw_label.halign = Gtk.Align.END;
 				attach (current_pw_label, 0, 0, 1, 1);
@@ -47,9 +49,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				current_pw_entry = new Gtk.Entry ();
 				current_pw_entry.halign = Gtk.Align.START;
 				current_pw_entry.set_visibility (false);
-				current_pw_entry.set_sensitive (false);
+				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-password-symbolic");
+				current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press enter to authenticate"));
+				current_pw_entry.activate.connect (password_auth);
 				attach (current_pw_entry, 1, 0, 1, 1);
-			}
+			} else if (get_permission ().allowed)
+				is_auth = true;
 
 			var new_pw_label = new Gtk.Label (_("New password:"));
 			new_pw_label.halign = Gtk.Align.END;
@@ -58,7 +63,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			new_pw_entry = new Gtk.Entry ();
 			new_pw_entry.halign = Gtk.Align.START;
 			new_pw_entry.set_visibility (false);
-			new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
+			if (!is_auth)
+				new_pw_entry.set_sensitive (false);
+			
 			new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
 			new_pw_entry.changed.connect (compare_passwords);
 			attach (new_pw_entry, 1, 1, 1, 1);
@@ -77,7 +84,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.halign = Gtk.Align.START;
 			confirm_pw_entry.set_visibility (false);
-			confirm_pw_entry.set_sensitive (false);
+			if (!is_auth)
+				confirm_pw_entry.set_sensitive (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
 			attach (confirm_pw_entry, 1, 3, 1, 1);
@@ -94,7 +102,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			});
 			attach (show_pw_check, 1, 4, 1, 1);
 
+			auth_changed.connect (update_ui);
+
 			show_all ();
+		}
+
+		private void update_ui () {
+			if (is_auth) {
+				current_pw_entry.set_sensitive (false);
+				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
+				current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password accepted"));
+				new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
+				new_pw_entry.set_sensitive (true);
+				new_pw_entry.grab_focus ();
+				confirm_pw_entry.set_sensitive (true);
+			}
 		}
 
 		private void compare_passwords () {
@@ -132,6 +154,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				}
 			}
 			validation_changed ();
+		}
+		private void password_auth () {
+			Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.get_text (), (h, e) => {
+				if (e != null) {
+					debug ("auth error: %s".printf (e.message));
+					is_auth = false;
+					auth_changed ();
+				} else {
+					debug ("user is authenticated for password change now");
+					is_auth = true;
+					auth_changed ();
+				}
+			});
 		}
 
 		public string? get_password () {

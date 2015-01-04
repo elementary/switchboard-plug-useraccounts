@@ -1,5 +1,6 @@
 /***
 Copyright (C) 2014-2015 Marvin Beckers
+Copyright (C) 2014-2015 Tom Beckmann
 This program is free software: you can redistribute it and/or modify it
 under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
@@ -15,29 +16,20 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 [CCode (cheader_filename = "run-passwd.h")]
 namespace Passwd {
-	[CCode (cname = "int", cprefix = "PASSWD_ERROR_", has_type_id = false)]
-	public enum Error {
-		REJECTED,
-		AUTH_FAILED,
-		REAUTH_FAILED,
-		BACKEND,
-		UNKNOWN
-	}
+	public delegate void PasswdCallback (Handler handler, GLib.Error? e);
 
-	public delegate void PasswdCallback (PasswdHandler handler) throws Error;
-
-	[Compact, CCode (cname = " PasswdHandler", lower_case_cprefix = "passwd_", free_function = "free_passwd_resources")]
-	public class PasswdHandler {
+	[Compact, CCode (cname = " PasswdHandler", lower_case_cprefix = "passwd_", free_function = "passwd_destroy")]
+	public class Handler {
 		[CCode (cname = "passwd_init")]
-		public PasswdHandler ();
+		public Handler ();
 	}
 
 	[CCode (cname = "passwd_authenticate")]
-	public void passwd_authenticate (PasswdHandler handler, string cur_pw, PasswdCallback cb);
+	public void passwd_authenticate (Handler handler, string cur_pw, PasswdCallback cb);
 
-	public void passwd_destroy (PasswdHandler handler);
 	[CCode (cname = "passwd_destroy")]
+	public void passwd_destroy (Handler handler);
 
 	[CCode (cname = "passwd_change_password")]
-	public bool passwd_change_password (PasswdHandler handler, string new_pw, PasswdCallback cb);
+	public bool passwd_change_password (Handler handler, string new_pw, PasswdCallback cb);
 }

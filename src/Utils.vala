@@ -142,4 +142,14 @@ namespace SwitchboardPlugUserAccounts {
 				}
 			}
 		}
+
+	private static Passwd.Handler passwd_handler;
+
+	public static unowned Passwd.Handler? get_passwd_handler (bool _force_new = false) {
+		if (passwd_handler != null && !_force_new)
+			return passwd_handler;
+
+		passwd_handler = new Passwd.Handler ();
+		return passwd_handler;
+	}
 }
