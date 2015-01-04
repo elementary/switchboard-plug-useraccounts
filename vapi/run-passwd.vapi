@@ -24,11 +24,14 @@ namespace Passwd {
 		UNKNOWN
 	}
 
-	[Compact, CCode (cname = " PasswdHandler", lower_case_cprefix = "passwd_", free_function = "free_passwd_resources")]
-	public class Handler {
-		[CCode (cname = "passwd_init")]
-		public Handler ();
+	public delegate void PasswdCallback (PasswdHandler handler) throws Error;
 
-		public void authenticate (char[] current_password);
+	[Compact, CCode (cname = " PasswdHandler", lower_case_cprefix = "passwd_", free_function = "free_passwd_resources")]
+	public class PasswdHandler {
+		[CCode (cname = "passwd_init")]
+		public PasswdHandler ();
 	}
+
+	[CCode (cname = "passwd_authenticate")]
+	public void passwd_authenticate (PasswdHandler handler, string cur_pw, PasswdCallback cb);
 }
