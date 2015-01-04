@@ -67,8 +67,8 @@ namespace SwitchboardPlugUserAccounts {
 			return main_grid;
 		}
 
-        public override void shown () { }
-        public override void hidden () {
+		public override void shown () { }
+		public override void hidden () {
 			try {
 				foreach (Act.User user in get_removal_list ())
 					get_usermanager ().delete_user (user, true);
@@ -77,11 +77,11 @@ namespace SwitchboardPlugUserAccounts {
 		}
         public override void search_callback (string location) { }
 
-		    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
-		    public override async Gee.TreeMap<string, string> search (string search) {
-		        return new Gee.TreeMap<string, string> (null, null);
-		    }
-    }
+		// 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+		public override async Gee.TreeMap<string, string> search (string search) {
+			return new Gee.TreeMap<string, string> (null, null);
+		}
+	}
 }
 
 public Switchboard.Plug get_plug (Module module) {

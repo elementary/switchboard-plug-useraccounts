@@ -65,6 +65,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				filter.add_mime_type ("image/jpg");
 				filter.add_mime_type ("image/png");
 
+				// Add a preview widget
+				Gtk.Image preview_area = new Gtk.Image ();
+				file_dialog.set_preview_widget (preview_area);
+				file_dialog.update_preview.connect (() => {
+					string uri = file_dialog.get_preview_uri ();
+					// We only display local files:
+					if (uri != null && uri.has_prefix ("file://") == true) {
+						try {
+							Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (uri.substring (7), 150, 	150, true);
+							preview_area.set_from_pixbuf (pixbuf);
+							preview_area.show ();
+							file_dialog.set_preview_widget_active (true);
+						} catch (Error e) {
+							preview_area.hide ();
+							file_dialog.set_preview_widget_active (false);
+						}
+					} else {
+						preview_area.hide ();
+						file_dialog.set_preview_widget_active (false);
+					}
+				});
+
 				if (file_dialog.run () == Gtk.ResponseType.ACCEPT) {
 					var path = file_dialog.get_file ().get_path ();
 					file_dialog.hide ();
