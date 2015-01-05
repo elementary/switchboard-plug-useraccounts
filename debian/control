@@ -5,7 +5,12 @@ Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
 Build-Depends: cmake,
                debhelper (>= 9),
                libpwquality-dev,
-               libswitchboard-2.0-dev
+               libswitchboard-2.0-dev,
+               libgnome-desktop-3-dev,
+               libpolkit-gobject-1-dev,
+               libgranite-dev,
+               libaccountsservice-dev,
+               libgtk-3-dev
 Standards-Version: 3.9.6
 Homepage: https://launchpad.net/switchboard-plug-useraccounts
 
