@@ -68,8 +68,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					return false;
 				});
 
-				error_pw_label = new Gtk.Label
-					(_("<span font_size=\"small\">Your input does not match your current password</span>"));
+				error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".
+					printf (_("Your input does not match your current password")));
 				error_pw_label.set_halign (Gtk.Align.END);
 				error_pw_label.get_style_context ().add_class ("error");
 				error_pw_label.use_markup = true;
