@@ -62,6 +62,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				current_pw_entry.icon_release.connect (password_auth);
 				attach (current_pw_entry, 1, 0, 1, 1);
 
+				this.key_press_event.connect ((e) => {
+					if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true)
+						password_auth ();
+					return false;
+				});
+
 				error_pw_label = new Gtk.Label
 					(_("<span font_size=\"small\">Your input does not match your current password</span>"));
 				error_pw_label.set_halign (Gtk.Align.END);
