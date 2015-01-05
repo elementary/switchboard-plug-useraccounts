@@ -55,7 +55,7 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			main_grid.halign = Gtk.Align.END;
 			content.add (main_grid);
 
-			var accounttype_label = new Gtk.Label (_("Account Type:"));
+			var accounttype_label = new Gtk.Label (_("Account type:"));
 			accounttype_label.halign = Gtk.Align.END;
 			main_grid.attach (accounttype_label, 0, 0, 1, 1);
 
@@ -91,11 +91,12 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
 			option_nopw.toggled.connect (toggled_pw);
 			option_onlogin.toggled.connect (toggled_pw);
 			option_setpw.toggled.connect (toggled_pw);
-			main_grid.attach (option_setpw, 0, 3, 2, 1);
+			//main_grid.attach (option_setpw, 0, 3, 2, 1);
 			//main_grid.attach (option_onlogin, 0, 4, 2, 1);
 			//main_grid.attach (option_nopw, 0, 5, 2, 1);
 
 			pw_editor = new Widgets.PasswordEditor ();
+			pw_editor.margin_top = 20;
 			pw_editor.validation_changed.connect (check_input);
 
 			pw_revealer = new Gtk.Revealer ();
