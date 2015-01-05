@@ -51,18 +51,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				current_pw_entry = new Gtk.Entry ();
 				current_pw_entry.halign = Gtk.Align.START;
 				current_pw_entry.set_visibility (false);
-				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-password-symbolic");
+				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
 				current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press enter to authenticate"));
 				current_pw_entry.changed.connect (() => {
+					if (current_pw_entry.get_text ().length > 0)
+						current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
 					error_revealer.set_reveal_child (false);
 				});
 				current_pw_entry.activate.connect (password_auth);
+				current_pw_entry.icon_release.connect (password_auth);
 				attach (current_pw_entry, 1, 0, 1, 1);
 
 				error_pw_label = new Gtk.Label
-					(_("<span font_size=\"small\" color=\"#c92e34\">Your input does not match your current password</span>".
-					printf ()));
+					(_("<span font_size=\"small\">Your input does not match your current password</span>"));
 				error_pw_label.set_halign (Gtk.Align.END);
+				error_pw_label.get_style_context ().add_class ("error");
 				error_pw_label.use_markup = true;
 
 				error_revealer = new Gtk.Revealer ();
