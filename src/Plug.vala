@@ -91,13 +91,27 @@ namespace SwitchboardPlugUserAccounts {
 			return main_grid;
 		}
 
-		public override void shown () { }
+		public override void shown () {
+			if (!get_permission ().allowed) {
+				infobar.no_show_all = false;
+				infobar.show_all ();
+			}
+		}
+
 		public override void hidden () {
 			try {
 				foreach (Act.User user in get_removal_list ())
 					get_usermanager ().delete_user (user, true);
 				clear_removal_list ();
 			} catch (Error e) { critical (e.message); }
+
+			if (get_permission ().allowed) {
+				try {
+					get_permission ().release ();
+				} catch (Error e) {
+					critical (e.message);
+				}
+			}
 		}
         public override void search_callback (string location) { }
 

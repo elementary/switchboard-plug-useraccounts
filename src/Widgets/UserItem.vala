@@ -81,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			full_name_label.set_label (user.get_real_name ());
 			string description = "<span font_size=\"small\">%s</span>".printf (user.get_user_name ());
 			if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-				description = "<span font_size=\"small\">%s (Administrator)</span>".printf (user.get_user_name ());
+				description = "<span font_size=\"small\">%s (%s)</span>".printf (user.get_user_name (), _("Administrator"));
 			description_label.set_label (description);
 			
 			grid.show_all ();

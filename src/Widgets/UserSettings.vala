@@ -142,6 +142,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			language_box.set_sensitive (false);
 			change_password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
+			enable_user_button.set_sensitive (false);
 
 			full_name_lock.set_opacity (0.5);
 			user_type_lock.set_opacity (0.5);
