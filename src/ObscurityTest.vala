@@ -110,8 +110,6 @@ namespace SwitchboardPlugUserAccounts {
 					others = true;
 			}
 
-			warning (i.to_string ());
-
 			if (digits)
 				size--;
 			if (uppers)

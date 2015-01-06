@@ -114,9 +114,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
 			pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
-			pw_level.add_offset_value ("low", 25.0);
-			pw_level.add_offset_value ("middle", 50.0);
+			pw_level.add_offset_value ("low", 50.0);
 			pw_level.add_offset_value ("high", 75.0);
+			pw_level.add_offset_value ("middle", 75.0);
 			attach (pw_level, 1, 4, 1, 1);
 
 			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
@@ -171,13 +171,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			if (new_pw_entry.get_text () != "") {
 				var val = pwquality.check (new_pw_entry.get_text ());
-				if (val <= 0)
-					val = 1;
-				//debug ("password quality level: %d".printf (val));
+				if (val <= 25)
+					val = 25;
 				pw_level.set_value (val);
-				if (val > 0 && val <= 25)
+				if (val >= 0 && val <= 50)
 					pw_level.set_tooltip_text (_("Weak password strength"));
-				else if (val > 25 && val <= 75)
+				else if (val > 50 && val <= 75)
 					pw_level.set_tooltip_text (_("Medium password strength"));
 				else if (val > 75)
 					pw_level.set_tooltip_text (_("Strong password strength"));
