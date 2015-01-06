@@ -88,6 +88,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					button_undo.hide ();
 				} else if (get_removal_list () != null && get_removal_list ().last () != null)
 					button_undo.set_no_show_all (false);
+			} else {
+				button_remove.set_sensitive (false);
+				button_add.set_sensitive (false);
 			}
 			show_all ();
 		}

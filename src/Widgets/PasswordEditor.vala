@@ -23,6 +23,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Revealer error_revealer;
 		private Gtk.Label error_pw_label;
 
+		private Gtk.Revealer error_new_revealer;
+		private Gtk.Label error_new_label;
+
 		private PasswordQuality.Settings pwquality;
 		public Passwd.Handler h;
 
@@ -80,6 +83,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				error_revealer.set_reveal_child (false);
 				error_revealer.add (error_pw_label);
 				attach (error_revealer, 0, 1, 2, 1);
+
+				error_new_label = new Gtk.Label ("");
+				error_new_label.set_halign (Gtk.Align.END);
+				error_new_label.get_style_context ().add_class ("error");
+				error_new_label.use_markup = true;
+
+				error_new_revealer = new Gtk.Revealer ();
+				error_new_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+				error_new_revealer.set_transition_duration (200);
+				error_new_revealer.set_reveal_child (false);
+				error_new_revealer.add (error_new_label);
+				attach (error_new_revealer, 0, 3, 2, 1);
 			} else if (get_permission ().allowed)
 				is_auth = true;
 
@@ -102,11 +117,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			pw_level.add_offset_value ("low", 25.0);
 			pw_level.add_offset_value ("middle", 50.0);
 			pw_level.add_offset_value ("high", 75.0);
-			attach (pw_level, 1, 3, 1, 1);
+			attach (pw_level, 1, 4, 1, 1);
 
 			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
 			confirm_pw_label.halign = Gtk.Align.END;
-			attach (confirm_pw_label, 0, 4, 1, 1);
+			attach (confirm_pw_label, 0, 5, 1, 1);
 
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.halign = Gtk.Align.START;
@@ -115,7 +130,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				confirm_pw_entry.set_sensitive (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
-			attach (confirm_pw_entry, 1, 4, 1, 1);
+			attach (confirm_pw_entry, 1, 5, 1, 1);
 
 			show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
 			if (!is_auth)
@@ -129,7 +144,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					confirm_pw_entry.set_visibility (false);
 				}
 			});
-			attach (show_pw_check, 1, 5, 1, 1);
+			attach (show_pw_check, 1, 6, 1, 1);
 
 			auth_changed.connect (update_ui);
 
@@ -152,6 +167,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void compare_passwords () {
+			bool is_obscure = false;
+
 			if (new_pw_entry.get_text () != "") {
 				var val = pwquality.check (new_pw_entry.get_text ());
 				if (val <= 0)
@@ -164,8 +181,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					pw_level.set_tooltip_text (_("Medium password strength"));
 				else if (val > 75)
 					pw_level.set_tooltip_text (_("Strong password strength"));
+
+				if (!get_permission ().allowed) {
+					var result = ObscurityTest.test (current_pw_entry.get_text (), new_pw_entry.get_text ());
+					if (result == ObscurityTest.RESULT.OBSCURE) {
+						is_obscure = true;
+						error_new_revealer.set_reveal_child (false);
+					} else {
+						var error_msg = "test";
+						if (result == ObscurityTest.RESULT.SIMILIAR)
+							error_msg = _("Resembles your current password");
+						else if (result == ObscurityTest.RESULT.SIMPLE)
+							error_msg = _("New password is too simple");
+						else if (result == ObscurityTest.RESULT.PALINDROME)
+							error_msg = _("New password is a palindrome");
+
+						error_new_label.set_label ("<span font_size=\"small\">%s</span>".printf (error_msg));
+						error_new_revealer.set_reveal_child (true);
+						is_obscure = false;
+					}
+				} else
+					//a superuser does not need to care about obscurity
+					is_obscure = true;
 			}
-			if (new_pw_entry.get_text () == confirm_pw_entry.get_text () && new_pw_entry.get_text () != "") {
+
+			if (new_pw_entry.get_text () == confirm_pw_entry.get_text ()
+			&& new_pw_entry.get_text () != "" && is_obscure) {
 				is_valid = true;
 				new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
 				confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
@@ -179,7 +220,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 				if (new_pw_entry.get_text () == "") {
 					new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
+					error_new_revealer.set_reveal_child (false);
 					confirm_pw_entry.set_sensitive (false);
+					confirm_pw_entry.set_text ("");
 				} else {
 					new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
 					confirm_pw_entry.set_sensitive (true);

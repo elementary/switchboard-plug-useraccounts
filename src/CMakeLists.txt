@@ -18,6 +18,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Utils.vala
 	UserUtils.vala
 	PasswdErrorNotifier.vala
+	ObscurityTest.vala
 	Widgets/UserView.vala
 	Widgets/UserList.vala
 	Widgets/ListFooter.vala
