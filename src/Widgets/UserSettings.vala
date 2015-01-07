@@ -71,7 +71,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			user_type_box = new Gtk.ComboBoxText ();
 			user_type_box.append_text (_("Standard"));
 			user_type_box.append_text (_("Administrator"));
-			//user_type_box.changed.connect (change_user_type);
 			user_type_box.changed.connect (() => utils.change_user_type (user_type_box.get_active ()));
 			attach (user_type_box, 1, 1, 1, 1);
 
@@ -136,17 +135,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 		
 		public void update_ui () {
-			avatar_button.set_sensitive (false);
-			full_name_entry.set_sensitive (false);
 			user_type_box.set_sensitive (false);
-			language_box.set_sensitive (false);
 			change_password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
 			enable_user_button.set_sensitive (false);
 
-			full_name_lock.set_opacity (0.5);
 			user_type_lock.set_opacity (0.5);
-			language_lock.set_opacity (0.5);
 			autologin_lock.set_opacity (0.5);
 			password_lock.set_opacity (0.5);
 			enable_lock.set_opacity (0.5);
@@ -171,7 +165,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 						user_type_lock.set_opacity (0);
 					}
 				}
+			} else {
+				avatar_button.set_sensitive (false);
+				full_name_entry.set_sensitive (false);
+				full_name_lock.set_opacity (0.5);
+				language_box.set_sensitive (false);
+				language_lock.set_opacity (0.5);
 			}
+
 			try {
 				avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
 				if (avatar == null)
@@ -233,17 +234,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void avatar_button_clicked () {
 			get_pe_notifier ().unset_error ();
+
 			avatar_popover = new Gtk.Popover (avatar_button);
 			avatar_popover.set_position (Gtk.PositionType.BOTTOM);
+
 			Gtk.Grid popover_grid = new Gtk.Grid ();
 			popover_grid.margin = 6;
 			popover_grid.column_spacing = 6;
 			popover_grid.row_spacing = 6;
+
 			Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File ..."));
 			Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove Avatar"));
+			select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-			popover_grid.attach (select_button, 0, 1, 1, 1);
-			popover_grid.attach (remove_button, 1, 1, 1, 1);
+			popover_grid.attach (select_button, 1, 1, 1, 1);
+			popover_grid.attach (remove_button, 0, 1, 1, 1);
+
 			avatar_popover.add (popover_grid);
 			avatar_popover.show_all ();
 
