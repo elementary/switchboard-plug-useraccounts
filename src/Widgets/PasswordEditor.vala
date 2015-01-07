@@ -22,12 +22,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.LevelBar pw_level;
 		private Gtk.Revealer error_revealer;
 		private Gtk.Label error_pw_label;
-
 		private Gtk.Revealer error_new_revealer;
 		private Gtk.Label error_new_label;
 
 		private PasswordQuality.Settings pwquality;
-		public Passwd.Handler h;
 
 		private bool is_auth = false;
 		private signal void auth_changed ();
@@ -46,6 +44,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			set_column_spacing (10);
 			halign = Gtk.Align.END;
 
+			/*
+			 * users who don't have superuser privileges will need to auth against passwd.
+			 * therefore they will need these UI elements created and displayed to set is_auth.
+			 */
 			if (!get_permission ().allowed) {
 				Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
 				current_pw_label.halign = Gtk.Align.END;
@@ -54,7 +56,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				current_pw_entry = new Gtk.Entry ();
 				current_pw_entry.halign = Gtk.Align.START;
 				current_pw_entry.set_visibility (false);
-				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "");
+				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
 				current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press enter to authenticate"));
 				current_pw_entry.changed.connect (() => {
 					if (current_pw_entry.get_text ().length > 0)
@@ -65,6 +67,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				current_pw_entry.icon_release.connect (password_auth);
 				attach (current_pw_entry, 1, 0, 1, 1);
 
+				//use TAB to "activate" the GtkEntry for the current password
 				this.key_press_event.connect ((e) => {
 					if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true)
 						password_auth ();
@@ -105,8 +108,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			new_pw_entry = new Gtk.Entry ();
 			new_pw_entry.halign = Gtk.Align.START;
 			new_pw_entry.set_visibility (false);
-			if (!is_auth)
-				new_pw_entry.set_sensitive (false);
 			
 			new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
 			new_pw_entry.changed.connect (compare_passwords);
@@ -126,15 +127,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.halign = Gtk.Align.START;
 			confirm_pw_entry.set_visibility (false);
-			if (!is_auth)
-				confirm_pw_entry.set_sensitive (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
 			attach (confirm_pw_entry, 1, 5, 1, 1);
 
 			show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
-			if (!is_auth)
-				show_pw_check.set_sensitive (false);
 			show_pw_check.clicked.connect (() => {
 				if (show_pw_check.get_active ()) {
 					new_pw_entry.set_visibility (true);
@@ -146,8 +143,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			});
 			attach (show_pw_check, 1, 6, 1, 1);
 
-			auth_changed.connect (update_ui);
+			if (!is_auth) {
+				new_pw_entry.set_sensitive (false);
+				confirm_pw_entry.set_sensitive (false);
+				show_pw_check.set_sensitive (false);
+			}
 
+			auth_changed.connect (update_ui);
 			show_all ();
 		}
 
@@ -174,6 +176,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				if (val <= 25)
 					val = 25;
 				pw_level.set_value (val);
+
 				if (val >= 0 && val <= 50)
 					pw_level.set_tooltip_text (_("Weak password strength"));
 				else if (val > 50 && val <= 75)
@@ -181,8 +184,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				else if (val > 75)
 					pw_level.set_tooltip_text (_("Strong password strength"));
 
+				/*
+				 * without superuser privileges your new password needs to pass an obscurity test
+				 * which is based on passwd's one to guess passwd's response.
+				 */
 				if (!get_permission ().allowed) {
-					var result = ObscurityTest.test (current_pw_entry.get_text (), new_pw_entry.get_text ());
+					var result = ObscurityTest.test (current_pw_entry.get_text (),
+						new_pw_entry.get_text ());
 					if (result == ObscurityTest.RESULT.OBSCURE) {
 						is_obscure = true;
 						error_new_revealer.set_reveal_child (false);
@@ -195,7 +203,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 						else if (result == ObscurityTest.RESULT.PALINDROME)
 							error_msg = _("New password is a palindrome");
 
-						error_new_label.set_label ("<span font_size=\"small\">%s</span>".printf (error_msg));
+						error_new_label.set_label ("<span font_size=\"small\">%s</span>"
+							.printf (error_msg));
 						error_new_revealer.set_reveal_child (true);
 						is_obscure = false;
 					}

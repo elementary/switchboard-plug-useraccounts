@@ -24,6 +24,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Widgets/ListFooter.vala
 	Widgets/UserItem.vala
 	Widgets/UserSettings.vala
+	Widgets/GuestSettings.vala
 	Widgets/PasswordEditor.vala
 	Widgets/CropView.vala
 	Dialogs/NewUserDialog.vala

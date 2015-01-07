@@ -19,6 +19,7 @@ Authored by: Marvin Beckers <beckersmarvin@gmail.com>
 namespace SwitchboardPlugUserAccounts {
 	public static Plug plug;
 
+
 	public class Plug : Switchboard.Plug {
 		private Widgets.UserView userview;
 
@@ -26,6 +27,9 @@ namespace SwitchboardPlugUserAccounts {
 		private Gtk.InfoBar infobar;
 		private Gtk.InfoBar infobar_error;
 		private Gtk.LockButton lock_button;
+
+		//translatable string for org.pantheon.user-accounts.administration policy
+		public const string policy_message = _("Authentication is required to change user data");
 
 		public Plug () {
 			Object (category: Category.SYSTEM,

@@ -49,7 +49,7 @@ namespace SwitchboardPlugUserAccounts {
 		if (permission != null)
 			return permission;
 		try {
-			permission = new Polkit.Permission.sync ("org.freedesktop.accounts.user-administration", Polkit.UnixProcess.new (Posix.getpid ()));
+			permission = new Polkit.Permission.sync ("org.pantheon.user-accounts.administration", Polkit.UnixProcess.new (Posix.getpid ()));
 			return permission;
 		} catch (Error e) {
 			critical (e.message);
@@ -115,15 +115,19 @@ namespace SwitchboardPlugUserAccounts {
 		return false;
 	}
 
-	public static bool is_last_admin (Act.User user) {
-		foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
-			if (temp_user != user && temp_user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-				return false;
+	public static bool is_last_admin (Act.User? user) {
+		if (user != null) {
+			foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
+				if (temp_user != user && temp_user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
+					return false;
+			}
+			return true;
 		}
-		return true;
+		return false;
 	}
 
-	public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null) {
+	public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype,
+															Act.UserPasswordMode _mode, string? _pw = null) {
 		if (get_permission ().allowed) {
 			try {
 				Act.User created_user = get_usermanager ().create_user (_username, _fullname, _usertype);
@@ -152,5 +156,65 @@ namespace SwitchboardPlugUserAccounts {
 
 		passwd_handler = new Passwd.Handler ();
 		return passwd_handler;
+	}
+
+	private static bool? guest_session_state;
+
+	public static bool? get_guest_session_state () {
+		if (guest_session_state != null)
+			return guest_session_state;
+
+		string output;
+		int status;
+
+		try {
+			Process.spawn_sync (null, 
+				{"/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", "--show"}, 
+				Environ.get (),
+				SpawnFlags.SEARCH_PATH,
+				null,
+				out output,
+				null,
+				out status);
+
+			if (output == "off\n")
+				guest_session_state = false;
+			else
+				guest_session_state = true;
+
+			return guest_session_state;
+		} catch (Error e) {
+			warning (e.message);
+			return null;
+		}
+	}
+
+	public static void set_guest_session_state (bool _state) {
+		if (get_permission ().allowed && _state != guest_session_state) {
+			string arg = "";
+			if (!_state)
+				arg = "--off";
+			else if (_state)
+				arg = "--on";
+
+			string output;
+			int status;
+
+			try {
+				Process.spawn_sync (null, 
+					{"sudo", "/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", arg}, 
+					Environ.get (),
+					SpawnFlags.SEARCH_PATH,
+					null,
+					out output,
+					null,
+					out status);
+
+				if (output == "")
+					guest_session_state = _state;
+			} catch (Error e) {
+				warning (e.message);
+			}
+		}
 	}
 }

@@ -21,6 +21,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public Gtk.ScrolledWindow scrolled_window;
 		public ListFooter footer;
 
+		private GuestSettings guest;
+
 		public UserView () {
 			expand = true;
 
@@ -29,6 +31,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			content = new Gtk.Stack ();
 			pack2 (content, true, false);
 
+			guest = new GuestSettings ();
 			get_usermanager ().notify["is-loaded"].connect (update);
 		}
 
@@ -43,6 +46,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				foreach (Act.User user in get_usermanager ().list_users ())
 					add_user_settings (user);
 
+				content.add_named (guest, "guest_session");
 				build_ui ();
 			}
 		}
@@ -55,6 +59,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			footer.removal_changed.connect (userlist.update_ui);
 			sidebar.pack_start (scrolled_window, true, true);
 			sidebar.pack_end (footer, false, false);
+
+			guest.guest_switch_changed.connect (() => {
+				userlist.update_guest ();
+			});
 
 			//auto select current user row in userlist widget
 			userlist.select_row (userlist.get_row_at_index (1));
@@ -74,10 +82,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private void userlist_selected (Gtk.ListBoxRow? user_item) {
 			Act.User? user = null;
-			if (user_item != null) {
+			if (user_item != null && user_item.name != "guest_session") {
 				user = ((UserItem)user_item).user;
 				content.set_visible_child_name (user.get_user_name ());
 				footer.set_selected_user (user);
+			} else if (user_item != null && user_item.name == "guest_session") {
+				content.set_visible_child_name ("guest_session");
+				footer.set_selected_user (null);
 			}
 		}
 	}

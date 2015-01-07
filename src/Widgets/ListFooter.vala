@@ -75,12 +75,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update_ui () {
 			if (get_permission ().allowed) {
 				button_add.set_sensitive (true);
-				if (selected_user != get_current_user () && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
+				if (selected_user != null && selected_user != get_current_user () && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
 					button_remove.set_sensitive (true);
 					button_remove.set_tooltip_text (_("Remove user account and its data"));
 				} else {
 					button_remove.set_sensitive (false);
-					button_remove.set_tooltip_text (_("You cannot remove your own user account"));
+					if (selected_user != null)
+						button_remove.set_tooltip_text (_("You cannot remove your own user account"));
+					else
+						button_remove.set_tooltip_text ("");
 				}
 
 				if (get_removal_list () == null || get_removal_list ().last () == null) {
@@ -95,9 +98,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			show_all ();
 		}
 
-		public void set_selected_user (Act.User _user) {
+		public void set_selected_user (Act.User? _user) {
 			selected_user =_user;
-			selected_user.changed.connect (update_ui);
+			if (selected_user != null)
+				selected_user.changed.connect (update_ui);
 			update_ui ();
 		}
 

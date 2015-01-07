@@ -132,7 +132,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			update_ui ();
 
-			permission.notify["allowed"].connect (update_ui);
+			get_permission ().notify["allowed"].connect (update_ui);
 		}
 		
 		public void update_ui () {
