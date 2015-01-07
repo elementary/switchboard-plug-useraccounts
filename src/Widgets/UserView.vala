@@ -15,7 +15,7 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
-		public UserList userlist = null;
+		public UserList userlist;
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
@@ -57,6 +57,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			footer = new ListFooter ();
 			footer.removal_changed.connect (userlist.update_ui);
+			footer.unfocused.connect (() => {
+				content.set_visible_child_name (get_current_user ().get_user_name ());
+				userlist.select_row (userlist.get_row_at_index (1));
+			});
 			sidebar.pack_start (scrolled_window, true, true);
 			sidebar.pack_end (footer, false, false);
 

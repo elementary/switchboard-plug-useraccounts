@@ -31,7 +31,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void build_ui () {
-
 			my_account_label = new Gtk.Label (_("My Account"));
 			my_account_label.margin_top = 5;
 			my_account_label.margin_start = 5;

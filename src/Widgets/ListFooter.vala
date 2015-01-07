@@ -23,6 +23,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Act.User? selected_user = null;
 
 		public signal void removal_changed ();
+		public signal void unfocused ();
 
 		public ListFooter () {
 			get_permission ().notify["allowed"].connect (update_ui);
@@ -92,10 +93,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					button_undo.hide ();
 				} else if (get_removal_list () != null && get_removal_list ().last () != null)
 					button_undo.set_no_show_all (false);
-			} else {
+			} else if (selected_user == null) {
 				button_remove.set_sensitive (false);
+			} else {
 				button_add.set_sensitive (false);
+				button_remove.set_sensitive (false);
+				button_undo.set_no_show_all (true);
+				button_undo.hide ();
 			}
+
 			show_all ();
 		}
 
@@ -110,6 +116,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			debug ("Marking user %s for removal".printf (selected_user.get_user_name ()));
 			mark_removal (selected_user);
 			removal_changed ();
+			selected_user = null;
+			unfocused ();
 			update_ui ();
 		}
 
