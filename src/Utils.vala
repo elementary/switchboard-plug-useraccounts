@@ -202,7 +202,7 @@ namespace SwitchboardPlugUserAccounts {
 
 			try {
 				Process.spawn_sync (null, 
-					{"sudo", "/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", arg}, 
+					{"pkexec", "/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", arg}, 
 					Environ.get (),
 					SpawnFlags.SEARCH_PATH,
 					null,
