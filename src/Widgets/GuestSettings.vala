@@ -16,6 +16,7 @@ with this program. If not, see http://www.gnu.org/licenses/.
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class GuestSettings : Gtk.Grid {
 		private Gtk.Switch guest_switch;
+		private Gtk.Image guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
 		public signal void guest_switch_changed ();
 
 		public GuestSettings () {
@@ -58,7 +59,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			header_label.valign = Gtk.Align.END;
 			header_label.justify = Gtk.Justification.FILL;
 
-			sub_grid.attach (header_label, 1, 0, 1, 1);
+			sub_grid.attach (header_label, 1, 0, 2, 1);
 
 			guest_switch = new Gtk.Switch ();
 			guest_switch.hexpand = true;
@@ -68,6 +69,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				guest_switch_changed ();
 			});
 			sub_grid.attach (guest_switch, 1, 1, 1, 1);
+
+			sub_grid.attach (guest_lock, 2, 1, 1, 1);
+			guest_lock.set_opacity (0.5);
 
 			Gtk.Label label = new Gtk.Label ("%s %s\n\n%s".printf (
 				_("The Guest Session allows someone to use a temporary default account without a password."),
@@ -82,6 +86,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		public void update_ui () {
+			if (get_permission ().allowed)
+				guest_lock.set_opacity (0);
+			else
+				guest_lock.set_opacity (0.5);
+
 			if (guest_switch.get_sensitive () != get_permission ().allowed)
 				guest_switch.set_sensitive (get_permission ().allowed);
 			if (guest_switch.get_active () != get_guest_session_state ())
