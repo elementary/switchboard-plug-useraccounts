@@ -126,8 +126,7 @@ namespace SwitchboardPlugUserAccounts {
 		return false;
 	}
 
-	public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype,
-															Act.UserPasswordMode _mode, string? _pw = null) {
+	public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null) {
 		if (get_permission ().allowed) {
 			try {
 				Act.User created_user = get_usermanager ().create_user (_username, _fullname, _usertype);
@@ -168,8 +167,9 @@ namespace SwitchboardPlugUserAccounts {
 		int status;
 
 		try {
+			var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
 			Process.spawn_sync (null, 
-				{"/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", "--show"}, 
+				{cli, "--show"}, 
 				Environ.get (),
 				SpawnFlags.SEARCH_PATH,
 				null,
@@ -201,8 +201,9 @@ namespace SwitchboardPlugUserAccounts {
 			int status;
 
 			try {
+				var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
 				Process.spawn_sync (null, 
-					{"pkexec", "/usr/lib/x86_64-linux-gnu/switchboard/system/pantheon-useraccounts/guest-session-toggle", arg}, 
+					{"pkexec", cli, arg}, 
 					Environ.get (),
 					SpawnFlags.SEARCH_PATH,
 					null,
