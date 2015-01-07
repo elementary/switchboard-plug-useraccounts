@@ -19,7 +19,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.ToolButton button_remove;
 		private Gtk.ToolButton button_undo;
 
-		public Dialogs.NewUserDialog new_user_d;
 		private Act.User? selected_user = null;
 
 		public signal void removal_changed ();
@@ -44,7 +43,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_add.set_tooltip_text (_("Create user account"));
 			button_add.set_icon_name ("list-add-symbolic");
 			button_add.set_sensitive (false);
-			button_add.clicked.connect (show_new_user_dialog);
+			button_add.clicked.connect (() => {
+				Widgets.NewUserPopover new_user = new Widgets.NewUserPopover (button_add);
+				new_user.show_all ();
+				new_user.request_user_creation.connect (create_new_user);
+			});
 			insert (button_add, -1);
 
 			button_remove = new Gtk.ToolButton (null, _("Remove user account and its data"));
@@ -119,13 +122,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			selected_user = null;
 			unfocused ();
 			update_ui ();
-		}
-
-		private void show_new_user_dialog () {
-			debug ("Spawning new NewUserDialog");
-			new_user_d = new Dialogs.NewUserDialog ();
-			new_user_d.show ();
-			new_user_d.request_user_creation.connect (create_new_user);
 		}
 	}
 }

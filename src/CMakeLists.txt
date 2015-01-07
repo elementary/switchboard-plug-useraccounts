@@ -14,10 +14,10 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Plug.vala
-	Utils.vala
-	UserUtils.vala
-	PasswdErrorNotifier.vala
-	ObscurityTest.vala
+	Misc/Utils.vala
+	Misc/UserUtils.vala
+	Misc/PasswdErrorNotifier.vala
+	Misc/ObscurityTest.vala
 	Widgets/UserView.vala
 	Widgets/UserList.vala
 	Widgets/ListFooter.vala
@@ -26,7 +26,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Widgets/GuestSettings.vala
 	Widgets/PasswordEditor.vala
 	Widgets/CropView.vala
-	Dialogs/NewUserDialog.vala
+	Widgets/NewUserPopover.vala
 	Dialogs/PasswordDialog.vala
 	Dialogs/AvatarDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala

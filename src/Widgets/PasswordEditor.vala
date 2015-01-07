@@ -42,18 +42,20 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			expand = true;
 			set_row_spacing (10);
 			set_column_spacing (10);
-			halign = Gtk.Align.END;
+			//halign = Gtk.Align.END;
 
 			/*
 			 * users who don't have superuser privileges will need to auth against passwd.
 			 * therefore they will need these UI elements created and displayed to set is_auth.
 			 */
 			if (!get_permission ().allowed) {
-				Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
+				/*Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
 				current_pw_label.halign = Gtk.Align.END;
-				attach (current_pw_label, 0, 0, 1, 1);
+				attach (current_pw_label, 0, 0, 1, 1);*/
 
 				current_pw_entry = new Gtk.Entry ();
+				current_pw_entry.set_size_request (195, 0);
+				current_pw_entry.set_placeholder_text (_("Current Password"));
 				current_pw_entry.halign = Gtk.Align.START;
 				current_pw_entry.set_visibility (false);
 				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
@@ -65,7 +67,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				});
 				current_pw_entry.activate.connect (password_auth);
 				current_pw_entry.icon_release.connect (password_auth);
-				attach (current_pw_entry, 1, 0, 1, 1);
+				attach (current_pw_entry, 0, 0, 1, 1);
 
 				//use TAB to "activate" the GtkEntry for the current password
 				this.key_press_event.connect ((e) => {
@@ -84,8 +86,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
 				error_revealer.set_transition_duration (200);
 				error_revealer.set_reveal_child (false);
-				error_revealer.add (error_pw_label);
-				attach (error_revealer, 0, 1, 2, 1);
+					error_revealer.add (error_pw_label);
+				attach (error_revealer, 0, 1, 1, 1);
 
 				error_new_label = new Gtk.Label ("");
 				error_new_label.set_halign (Gtk.Align.END);
@@ -97,39 +99,43 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				error_new_revealer.set_transition_duration (200);
 				error_new_revealer.set_reveal_child (false);
 				error_new_revealer.add (error_new_label);
-				attach (error_new_revealer, 0, 3, 2, 1);
+				attach (error_new_revealer, 0, 3, 1, 1);
 			} else if (get_permission ().allowed)
 				is_auth = true;
 
-			var new_pw_label = new Gtk.Label (_("New password:"));
+			/*var new_pw_label = new Gtk.Label (_("New password:"));
 			new_pw_label.halign = Gtk.Align.END;
-			attach (new_pw_label, 0, 2, 1, 1);
+			attach (new_pw_label, 0, 2, 1, 1);*/
 
 			new_pw_entry = new Gtk.Entry ();
+			new_pw_entry.set_size_request (195, 0);
 			new_pw_entry.halign = Gtk.Align.START;
+			new_pw_entry.set_placeholder_text (_("New Password"));
 			new_pw_entry.set_visibility (false);
 			
 			new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
 			new_pw_entry.changed.connect (compare_passwords);
-			attach (new_pw_entry, 1, 2, 1, 1);
+			attach (new_pw_entry, 0, 2, 1, 1);
 
 			pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
 			pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
 			pw_level.add_offset_value ("low", 50.0);
 			pw_level.add_offset_value ("high", 75.0);
 			pw_level.add_offset_value ("middle", 75.0);
-			attach (pw_level, 1, 4, 1, 1);
+			attach (pw_level, 0, 4, 1, 1);
 
-			var confirm_pw_label = new Gtk.Label (_("Confirm:"));
+			/*var confirm_pw_label = new Gtk.Label (_("Confirm password:"));
 			confirm_pw_label.halign = Gtk.Align.END;
-			attach (confirm_pw_label, 0, 5, 1, 1);
+			attach (confirm_pw_label, 0, 5, 1, 1);*/
 
 			confirm_pw_entry = new Gtk.Entry ();
+			confirm_pw_entry.set_size_request (195, 0);
 			confirm_pw_entry.halign = Gtk.Align.START;
+			confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
 			confirm_pw_entry.set_visibility (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
 			confirm_pw_entry.changed.connect (compare_passwords);
-			attach (confirm_pw_entry, 1, 5, 1, 1);
+			attach (confirm_pw_entry, 0, 5, 1, 1);
 
 			show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
 			show_pw_check.clicked.connect (() => {
@@ -141,7 +147,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					confirm_pw_entry.set_visibility (false);
 				}
 			});
-			attach (show_pw_check, 1, 6, 1, 1);
+			attach (show_pw_check, 0, 6, 1, 1);
 
 			if (!is_auth) {
 				new_pw_entry.set_sensitive (false);
