@@ -4,7 +4,6 @@ find_package (PkgConfig)
 pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-desktop-3.0 accountsservice polkit-gobject-1 pwquality)
 
 add_definitions (${DEPS_CFLAGS} -DGNOME_DESKTOP_USE_UNSTABLE_API)
-#add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
 
 find_package (Vala REQUIRED)
@@ -46,9 +45,9 @@ OPTIONS
 	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
 )
 
-include_directories (${CMAKE_CURRENT_SOURCE_DIR})
+include_directories (${CMAKE_CURRENT_SOURCE_DIR}/../lib/)
 
-add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C} run-passwd.c)
+add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C} ../lib/run-passwd.c)
 target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 
 
 # Installation

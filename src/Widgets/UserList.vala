@@ -25,8 +25,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			get_usermanager ().user_added.connect (update_ui);
 			get_usermanager ().user_removed.connect (update_ui);
 			set_header_func (update_headers);
-			build_ui ();
 
+			build_ui ();
 			show_all ();
 		}
 
@@ -52,10 +52,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		public void update_ui () {
 			List<weak Gtk.Widget> userlist_items = get_children ();
-			foreach (unowned Gtk.Widget useritem in userlist_items) {
-				//unowned UserItem u = (useritem is UserItem) ? (UserItem) useritem : null;
+			foreach (unowned Gtk.Widget useritem in userlist_items)
 				remove (useritem);
-			}
 
 			//cheat an invisible box at pos 0 because update_headers does not reach pos 0
 			insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);

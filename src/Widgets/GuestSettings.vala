@@ -27,6 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			border_width = 24;
 			row_spacing = 24;
 			column_spacing = 12;
+
 			build_ui ();
 			update_ui ();
 
@@ -41,13 +42,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (sub_grid, 0, 0, 1, 1);
 
 			Gtk.Image image = new Gtk.Image ();
-			Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
-				try {
-					Gdk.Pixbuf image_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
-					image.set_from_pixbuf (image_pixbuf);
-				} catch (Error e) { }
 			image.valign = Gtk.Align.START;
 			image.halign = Gtk.Align.END;
+			try {
+				Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
+				Gdk.Pixbuf image_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
+				image.set_from_pixbuf (image_pixbuf);
+			} catch (Error e) { }
 			sub_grid.attach (image, 0, 0, 1, 2);
 
 			var header_label = new Gtk.Label (_("Guest Session"));
@@ -81,8 +82,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		public void update_ui () {
-			guest_switch.set_sensitive (get_permission ().allowed);
-			guest_switch.set_active (get_guest_session_state ());
+			if (guest_switch.get_sensitive () != get_permission ().allowed)
+				guest_switch.set_sensitive (get_permission ().allowed);
+			if (guest_switch.get_active () != get_guest_session_state ())
+				guest_switch.set_active (get_guest_session_state ());
 		}
 	}
 }

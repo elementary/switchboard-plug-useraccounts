@@ -39,6 +39,7 @@ namespace SwitchboardPlugUserAccounts {
 				installed_languages = output.split("\n");
 				return installed_languages;
 		} catch (Error e) {
+			critical (e.message);
 			return null;
 		}
 	}
@@ -130,6 +131,7 @@ namespace SwitchboardPlugUserAccounts {
 		if (get_permission ().allowed) {
 			try {
 				Act.User created_user = get_usermanager ().create_user (_username, _fullname, _usertype);
+
 				get_usermanager ().user_added.connect ((user) => {
 					if (user == created_user) {
 						created_user.set_locked (false);
@@ -147,7 +149,7 @@ namespace SwitchboardPlugUserAccounts {
 		}
 	}
 
-	private static Passwd.Handler passwd_handler;
+	private static Passwd.Handler? passwd_handler;
 
 	public static unowned Passwd.Handler? get_passwd_handler (bool _force_new = false) {
 		if (passwd_handler != null && !_force_new)

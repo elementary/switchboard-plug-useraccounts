@@ -19,14 +19,12 @@ Authored by: Marvin Beckers <beckersmarvin@gmail.com>
 namespace SwitchboardPlugUserAccounts {
 	public static Plug plug;
 
-
 	public class Plug : Switchboard.Plug {
-		private Widgets.UserView userview;
-
-		private Gtk.Grid? main_grid = null;
+		private Gtk.Grid? main_grid;
 		private Gtk.InfoBar infobar;
 		private Gtk.InfoBar infobar_error;
 		private Gtk.LockButton lock_button;
+		private Widgets.UserView userview;
 
 		//translatable string for org.pantheon.user-accounts.administration policy
 		public const string policy_message = _("Authentication is required to change user data");
@@ -104,20 +102,24 @@ namespace SwitchboardPlugUserAccounts {
 
 		public override void hidden () {
 			try {
-				foreach (Act.User user in get_removal_list ())
+				foreach (Act.User user in get_removal_list ()) {
+					debug ("Removing user %s from system".printf (user.get_user_name ()));
 					get_usermanager ().delete_user (user, true);
+				}
+				debug ("Clearing removal list");
 				clear_removal_list ();
 			} catch (Error e) { critical (e.message); }
 
 			if (get_permission ().allowed) {
 				try {
+					debug ("Releasing administrative permissions");
 					get_permission ().release ();
 				} catch (Error e) {
 					critical (e.message);
 				}
 			}
 		}
-        public override void search_callback (string location) { }
+		public override void search_callback (string location) { }
 
 		// 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
 		public override async Gee.TreeMap<string, string> search (string search) {

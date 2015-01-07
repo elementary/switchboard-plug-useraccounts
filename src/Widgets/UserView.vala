@@ -71,12 +71,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void add_user_settings (Act.User user) {
-			debug ("adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+			debug ("Adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
 			content.add_named (new UserSettings (user), user.get_user_name ());
 		}
 
 		private void remove_user_settings (Act.User user) {
-			debug ("removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+			debug ("Removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
 			content.remove (content.get_child_by_name (user.get_user_name ()));
 		}
 

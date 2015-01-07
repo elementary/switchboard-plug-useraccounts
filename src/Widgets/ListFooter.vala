@@ -75,7 +75,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void update_ui () {
 			if (get_permission ().allowed) {
 				button_add.set_sensitive (true);
-				if (selected_user != null && selected_user != get_current_user () && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
+				if (selected_user != null && selected_user != get_current_user ()
+				&& !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
 					button_remove.set_sensitive (true);
 					button_remove.set_tooltip_text (_("Remove user account and its data"));
 				} else {
@@ -106,12 +107,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void mark_user_removal () {
+			debug ("Marking user %s for removal".printf (selected_user.get_user_name ()));
 			mark_removal (selected_user);
 			removal_changed ();
 			update_ui ();
 		}
 
 		private void show_new_user_dialog () {
+			debug ("Spawning new NewUserDialog");
 			new_user_d = new Dialogs.NewUserDialog ();
 			new_user_d.show ();
 			new_user_d.request_user_creation.connect (create_new_user);

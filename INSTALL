@@ -4,7 +4,7 @@ OPTIONAL
 sudo add-apt-repository ppa:elementary-os/daily
 
 --------------------------------------------------------------------------------
-DEPENDENCIES
+DEPENDENCIES (Debian/Ubuntu/elementary OS)
 --------------------------------------------------------------------------------
 cmake (>= 2.8)
 libswitchboard-2.0-dev

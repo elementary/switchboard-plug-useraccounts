@@ -241,13 +241,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void password_auth () {
 			Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.get_text (), (h, e) => {
 				if (e != null) {
-					debug ("auth error: %s".printf (e.message));
+					debug ("Authentication error: %s".printf (e.message));
 					error_revealer.set_reveal_child (true);
 					error_revealer.show_all ();
 					is_auth = false;
 					auth_changed ();
 				} else {
-					debug ("user is authenticated for password change now");
+					debug ("User is authenticated for password change now");
 					is_auth = true;
 					auth_changed ();
 				}

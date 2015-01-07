@@ -33,33 +33,40 @@ namespace SwitchboardPlugUserAccounts {
 						i++;
 					}
 					try {
+						debug ("Saving temporary avatar file to %s".printf (path));
 						_pixbuf.savev (path, "png", {}, {});
+						debug ("Setting avatar icon file for %s from temporary file %s".printf (user.get_user_name (), path));
 						user.set_icon_file (path);
 					} catch (Error e) {
 						critical (e.message);
 					}
 				} else {
+					debug ("Setting no avatar icon file for %s".printf (user.get_user_name ()));
 					user.set_icon_file ("");
 				}
 			}
 		}
 
 		public void change_full_name (string _new_full_name) {
-			if (_new_full_name != user.get_real_name ()) {
-				if (get_current_user () == user || get_permission ().allowed)
+			if (get_current_user () == user || get_permission ().allowed) {
+				if (_new_full_name != user.get_real_name ()) {
+					debug ("Setting real name for %s to %s".printf (user.get_user_name (), _new_full_name));
 					user.set_real_name (_new_full_name);
-				else
+				} else
 					widget.update_ui ();
 			}
 		}
 
-		public void change_user_type (int _user_type) {
+		public void change_user_type (int _new_user_type) {
 			if (get_permission ().allowed) {
-				if (user.get_account_type () == Act.UserAccountType.STANDARD && _user_type == 1)
+				if (user.get_account_type () == Act.UserAccountType.STANDARD && _new_user_type == 1) {
+					debug ("Setting account type for %s to Administrator".printf (user.get_user_name ()));
 					user.set_account_type (Act.UserAccountType.ADMINISTRATOR);
-				else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR && _user_type == 0 && !is_last_admin (user))
+				} else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR
+							&& _new_user_type == 0 && !is_last_admin (user)) {
+					debug ("Setting account type for %s to Standard".printf (user.get_user_name ()));
 					user.set_account_type (Act.UserAccountType.STANDARD);
-				else
+				} else
 					widget.update_ui ();
 			}
 		}
@@ -83,9 +90,10 @@ namespace SwitchboardPlugUserAccounts {
 					}
 				}
 
-				if (_new_lang != user.get_language ())
+				if (_new_lang != user.get_language ()) {
+					debug ("Setting language for %s to %s".printf (user.get_user_name (), new_lang_code));
 					user.set_language (new_lang_code);
-				else
+				} else
 					widget.update_ui ();
 			}
 		}
@@ -93,8 +101,10 @@ namespace SwitchboardPlugUserAccounts {
 		public void change_autologin (bool _autologin) {
 			if (get_permission ().allowed) {
 				if (user.get_automatic_login () && !_autologin) {
+					debug ("Removing automatic login for %s".printf (user.get_user_name ()));
 					user.set_automatic_login (false);
 				} else if (!user.get_automatic_login () && _autologin) {
+					debug ("Setting automatic login for %s".printf (user.get_user_name ()));
 					foreach (Act.User temp_user in get_usermanager ().list_users ()) {
 						if (temp_user.get_automatic_login () && temp_user != user)
 							temp_user.set_automatic_login (false);
@@ -108,13 +118,17 @@ namespace SwitchboardPlugUserAccounts {
 			if (get_permission ().allowed) {
 				switch (_mode) {
 					case Act.UserPasswordMode.REGULAR:
-						if (_new_password != null)
+						if (_new_password != null) {
+							debug ("Setting new password for %s".printf (user.get_user_name ()));
 							user.set_password (_new_password, "");
+						}
 						break;
 					case Act.UserPasswordMode.NONE:
+						debug ("Setting no password for %s".printf (user.get_user_name ()));
 						user.set_password_mode (Act.UserPasswordMode.NONE);
 						break;
 					case Act.UserPasswordMode.SET_AT_LOGIN:
+						debug ("Setting password mode to SET_AT_LOGIN for %s".printf (user.get_user_name ()));
 						user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
 						break;
 					default: break;
@@ -125,10 +139,11 @@ namespace SwitchboardPlugUserAccounts {
 					// he is authenticated against the PasswdHandler
 					Passwd.passwd_change_password (get_passwd_handler (), _new_password, (h, e) => {
 						if (e != null) {
-							warning ("password change failed");
+							warning ("Password change for %s failed".printf (user.get_user_name ()));
 							warning (e.message);
 							get_pe_notifier ().set_error (e.message);
-						}
+						} else
+							debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
 					});
 				}
 			}
@@ -137,9 +152,11 @@ namespace SwitchboardPlugUserAccounts {
 		public void change_lock () {
 			if (get_permission ().allowed && get_current_user () != user) {
 				if (user.get_locked ()) {
+					debug ("Unlocking user %s".printf (user.get_user_name ()));
 					user.set_password_mode (Act.UserPasswordMode.NONE);
 					user.set_locked (false);
 				} else {
+					debug ("Locking user %s".printf (user.get_user_name ()));
 					user.set_automatic_login (false);
 					user.set_locked (true);
 				}
