@@ -27,6 +27,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Widgets/PasswordEditor.vala
 	Widgets/CropView.vala
 	Widgets/NewUserPopover.vala
+	Widgets/PasswordPopover.vala
 	Dialogs/PasswordDialog.vala
 	Dialogs/AvatarDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala

@@ -15,22 +15,26 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserSettings : Gtk.Grid {
-		private unowned Act.User user;
-		private UserUtils utils;
+		private unowned Act.User	user;
+		private UserUtils			utils;
 
-		private Gtk.Image avatar;
-		private Gdk.Pixbuf? avatar_pixbuf;
-		private Gtk.Button avatar_button;
-		private Gtk.Entry full_name_entry;
-		private Gtk.Button change_password_button;
-		private Gtk.Button enable_user_button;
-		private Gtk.ComboBoxText user_type_box;
-		private Gtk.ComboBoxText language_box;
-		private Gtk.Switch autologin_switch;
-		private Gtk.Popover avatar_popover;
+		private Gtk.Image			avatar;
+		private Gdk.Pixbuf?			avatar_pixbuf;
+		private Gtk.Button			avatar_button;
+		private Gtk.Entry			full_name_entry;
+		private Gtk.Stack			pw_stack;
+		private Gtk.Button			password_button;
+		private Gtk.Button			confirm_pw_button;
+		private Gtk.Button			cancel_pw_button;
+		private Gtk.Button			enable_user_button;
+		private Gtk.ComboBoxText	user_type_box;
+		private Gtk.ComboBoxText	language_box;
+		private Gtk.Switch			autologin_switch;
+		private Gtk.Popover			avatar_popover;
 
-		private Dialogs.PasswordDialog pw_dialog;
-		private Dialogs.AvatarDialog avatar_dialog;
+		private Widgets.PasswordEditor		password_editor;
+		private Dialogs.PasswordDialog		pw_dialog;
+		private Dialogs.AvatarDialog		avatar_dialog;
 
 		//lock widgets
 		private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
@@ -104,21 +108,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			change_password_label.halign = Gtk.Align.END;
 			attach (change_password_label, 0, 4, 1, 1);
 
-			change_password_button = new Gtk.Button ();
-			change_password_button.set_relief (Gtk.ReliefStyle.NONE);
-			change_password_button.halign = Gtk.Align.START;
-			change_password_button.clicked.connect (() => {
-				pw_dialog = new Dialogs.PasswordDialog (user);
-				pw_dialog.request_password_change.connect (utils.change_password);
-				pw_dialog.show ();
+			password_button = new Gtk.Button ();
+			password_button.set_relief (Gtk.ReliefStyle.NONE);
+			password_button.halign = Gtk.Align.START;
+			password_button.clicked.connect (() => {
+				//pw_dialog = new Dialogs.PasswordDialog (user);
+				//pw_dialog.request_password_change.connect (utils.change_password);
+				//pw_dialog.show ();
+				Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
+				pw_popover.show_all ();
+
 			});
-			attach (change_password_button, 1, 4, 1, 1);
+
+			Gtk.Box pw_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+			pw_box.halign = Gtk.Align.END;
+
+			confirm_pw_button = new Gtk.Button.with_label (_("Change Password"));
+			//confirm_pw_button.set_size_request (100, 25);
+			confirm_pw_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+			password_editor = new PasswordEditor.from_width (150);
+			//pw_box.pack_start (password_editor);
+			//pw_box.pack_start (confirm_pw_button);
+
+			attach (password_button, 1, 4, 1, 1);
+			//attach (password_editor, 0, 5, 2, 1);
 
 			enable_user_button = new Gtk.Button ();
 			enable_user_button.clicked.connect (utils.change_lock);
 			enable_user_button.set_sensitive (false);
 			enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-			attach (enable_user_button, 1, 5, 1, 1);
+			attach (enable_user_button, 1, 6, 1, 1);
 
 			//attach locks
 			attach (full_name_lock, 2, 0, 1, 1);
@@ -127,7 +146,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			autologin_lock.margin_top = 20;
 			attach (autologin_lock, 2, 3, 1, 1);
 			attach (password_lock, 2, 4, 1, 1);
-			attach (enable_lock, 2, 5, 1, 1);
+			attach (enable_lock, 2, 6, 1, 1);
 
 			update_ui ();
 
@@ -136,7 +155,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		
 		public void update_ui () {
 			user_type_box.set_sensitive (false);
-			change_password_button.set_sensitive (false);
+			password_button.set_sensitive (false);
 			autologin_switch.set_sensitive (false);
 			enable_user_button.set_sensitive (false);
 
@@ -152,7 +171,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				language_box.set_sensitive (true);
 				language_lock.set_opacity (0);
 				if (!user.get_locked ()) {
-					change_password_button.set_sensitive (true);
+					password_button.set_sensitive (true);
 					password_lock.set_opacity (0);
 				}
 				if (get_permission ().allowed) {
@@ -203,9 +222,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				autologin_switch.set_active (false);
 
 			if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
-				change_password_button.set_label (_("None set"));
+				password_button.set_label (_("None set"));
 			else
-				change_password_button.set_label ("**********");
+				password_button.set_label ("**********");
 
 			if (user.get_locked ()) {
 				enable_user_button.set_label (_("Enable User Account"));

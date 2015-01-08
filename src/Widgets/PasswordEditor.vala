@@ -33,7 +33,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public bool is_valid = false;
 		public signal void validation_changed ();
 
+		private int entry_width = 195;
+
 		public PasswordEditor () {
+			pwquality = new PasswordQuality.Settings ();
+			build_ui ();
+		}
+
+		public PasswordEditor.from_width (int _entry_width) {
+			entry_width = _entry_width;
 			pwquality = new PasswordQuality.Settings ();
 			build_ui ();
 		}
@@ -41,7 +49,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void build_ui () {
 			expand = true;
 			set_row_spacing (10);
-			set_column_spacing (10);
+			//set_column_spacing (10);
 			//halign = Gtk.Align.END;
 
 			/*
@@ -54,9 +62,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				attach (current_pw_label, 0, 0, 1, 1);*/
 
 				current_pw_entry = new Gtk.Entry ();
-				current_pw_entry.set_size_request (195, 0);
+				current_pw_entry.set_size_request (entry_width, 0);
 				current_pw_entry.set_placeholder_text (_("Current Password"));
-				current_pw_entry.halign = Gtk.Align.START;
+				current_pw_entry.halign = Gtk.Align.END;
 				current_pw_entry.set_visibility (false);
 				current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
 				current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press enter to authenticate"));
@@ -77,7 +85,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				});
 
 				error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".
-					printf (_("Your input does not match your current password")));
+					printf (_("Authentication failed")));
 				error_pw_label.set_halign (Gtk.Align.END);
 				error_pw_label.get_style_context ().add_class ("error");
 				error_pw_label.use_markup = true;
@@ -108,8 +116,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (new_pw_label, 0, 2, 1, 1);*/
 
 			new_pw_entry = new Gtk.Entry ();
-			new_pw_entry.set_size_request (195, 0);
-			new_pw_entry.halign = Gtk.Align.START;
+			new_pw_entry.set_size_request (entry_width, 0);
+			new_pw_entry.halign = Gtk.Align.END;
 			new_pw_entry.set_placeholder_text (_("New Password"));
 			new_pw_entry.set_visibility (false);
 			
@@ -119,6 +127,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
 			pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
+			pw_level.set_hexpand (false);
 			pw_level.add_offset_value ("low", 50.0);
 			pw_level.add_offset_value ("high", 75.0);
 			pw_level.add_offset_value ("middle", 75.0);
@@ -129,8 +138,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			attach (confirm_pw_label, 0, 5, 1, 1);*/
 
 			confirm_pw_entry = new Gtk.Entry ();
-			confirm_pw_entry.set_size_request (195, 0);
-			confirm_pw_entry.halign = Gtk.Align.START;
+			confirm_pw_entry.set_size_request (entry_width, 0);
+			confirm_pw_entry.halign = Gtk.Align.END;
 			confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
 			confirm_pw_entry.set_visibility (false);
 			confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));

@@ -19,6 +19,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
+		public Gtk.ScrolledWindow content_window;
 		public ListFooter footer;
 
 		private GuestSettings guest;
@@ -28,8 +29,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			pack1 (sidebar, true, false);
+			content_window = new Gtk.ScrolledWindow (null, null);
+			pack2 (content_window, true, false);
+
 			content = new Gtk.Stack ();
-			pack2 (content, true, false);
+			content_window.add (content);
 
 			guest = new GuestSettings ();
 			get_usermanager ().notify["is-loaded"].connect (update);
