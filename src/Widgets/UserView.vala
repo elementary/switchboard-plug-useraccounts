@@ -14,86 +14,90 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-	public class UserView : Granite.Widgets.ThinPaned {
-		public UserList userlist;
-		public Gtk.Stack content;
-		public Gtk.Box sidebar;
-		public Gtk.ScrolledWindow scrolled_window;
-		public ListFooter footer;
+    public class UserView : Granite.Widgets.ThinPaned {
+        public UserListBox userlist;
+        public Gtk.Stack content;
+        public Gtk.Box sidebar;
+        public Gtk.ScrolledWindow scrolled_window;
+        public Gtk.ScrolledWindow content_window;
+        public ListFooter footer;
 
-		private GuestSettings guest;
+        private GuestSettings guest;
 
-		public UserView () {
-			expand = true;
+        public UserView () {
+            expand = true;
 
-			sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-			pack1 (sidebar, true, false);
-			content = new Gtk.Stack ();
-			pack2 (content, true, false);
+            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            pack1 (sidebar, true, false);
+            content_window = new Gtk.ScrolledWindow (null, null);
+            pack2 (content_window, true, false);
 
-			guest = new GuestSettings ();
-			get_usermanager ().notify["is-loaded"].connect (update);
-		}
+            content = new Gtk.Stack ();
+            content_window.add (content);
 
-		private void update () {
-			if (get_usermanager ().is_loaded) {
-				get_usermanager ().user_added.connect (add_user_settings);
-				get_usermanager ().user_removed.connect (remove_user_settings);
+            guest = new GuestSettings ();
+            get_usermanager ().notify["is-loaded"].connect (update);
+        }
 
-				userlist = new UserList ();
-				userlist.row_selected.connect (userlist_selected);
+        private void update () {
+            if (get_usermanager ().is_loaded) {
+                get_usermanager ().user_added.connect (add_user_settings);
+                get_usermanager ().user_removed.connect (remove_user_settings);
 
-				foreach (Act.User user in get_usermanager ().list_users ())
-					add_user_settings (user);
+                userlist = new UserListBox ();
+                userlist.row_selected.connect (userlist_selected);
 
-				content.add_named (guest, "guest_session");
-				build_ui ();
-			}
-		}
+                foreach (Act.User user in get_usermanager ().list_users ())
+                    add_user_settings (user);
 
-		public void build_ui () {
-			scrolled_window = new Gtk.ScrolledWindow (null, null);
-			scrolled_window.add (userlist);
+                content.add_named (guest, "guest_session");
+                build_ui ();
+            }
+        }
 
-			footer = new ListFooter ();
-			footer.removal_changed.connect (userlist.update_ui);
-			footer.unfocused.connect (() => {
-				content.set_visible_child_name (get_current_user ().get_user_name ());
-				userlist.select_row (userlist.get_row_at_index (1));
-			});
-			sidebar.pack_start (scrolled_window, true, true);
-			sidebar.pack_end (footer, false, false);
+        public void build_ui () {
+            scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window.add (userlist);
 
-			guest.guest_switch_changed.connect (() => {
-				userlist.update_guest ();
-			});
+            footer = new ListFooter ();
+            footer.removal_changed.connect (userlist.update_ui);
+            footer.unfocused.connect (() => {
+                content.set_visible_child_name (get_current_user ().get_user_name ());
+                userlist.select_row (userlist.get_row_at_index (1));
+            });
+            sidebar.pack_start (scrolled_window, true, true);
+            sidebar.pack_end (footer, false, false);
 
-			//auto select current user row in userlist widget
-			userlist.select_row (userlist.get_row_at_index (1));
-			set_position (240);
-			show_all ();
-		}
+            guest.guest_switch_changed.connect (() => {
+                userlist.update_guest ();
+            });
 
-		private void add_user_settings (Act.User user) {
-			debug ("Adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
-			content.add_named (new UserSettings (user), user.get_user_name ());
-		}
+            //auto select current user row in userlist widget
+            userlist.select_row (userlist.get_row_at_index (1));
+            set_position (240);
+            show_all ();
+        }
 
-		private void remove_user_settings (Act.User user) {
-			debug ("Removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
-			content.remove (content.get_child_by_name (user.get_user_name ()));
-		}
+        private void add_user_settings (Act.User user) {
+            debug ("Adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+            content.add_named (new UserSettings (user), user.get_user_name ());
+        }
 
-		private void userlist_selected (Gtk.ListBoxRow? user_item) {
-			Act.User? user = null;
-			if (user_item != null && user_item.name != "guest_session") {
-				user = ((UserItem)user_item).user;
-				content.set_visible_child_name (user.get_user_name ());
-				footer.set_selected_user (user);
-			} else if (user_item != null && user_item.name == "guest_session") {
-				content.set_visible_child_name ("guest_session");
-				footer.set_selected_user (null);
-			}
-		}
-	}
+        private void remove_user_settings (Act.User user) {
+            debug ("Removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+            content.remove (content.get_child_by_name (user.get_user_name ()));
+        }
+
+        private void userlist_selected (Gtk.ListBoxRow? user_item) {
+            Act.User? user = null;
+            if (user_item != null && user_item.name != "guest_session") {
+                user = ((UserItem)user_item).user;
+                content.set_visible_child_name (user.get_user_name ());
+                footer.set_selected_user (user);
+            } else if (user_item != null && user_item.name == "guest_session") {
+                content.set_visible_child_name ("guest_session");
+                footer.set_selected_user (null);
+            }
+        }
+    }
 }

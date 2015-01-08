@@ -13,36 +13,36 @@ ensure_vala_version ("0.26.0" MINIMUM)
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
-	Plug.vala
-	Utils.vala
-	UserUtils.vala
-	PasswdErrorNotifier.vala
-	ObscurityTest.vala
-	Widgets/UserView.vala
-	Widgets/UserList.vala
-	Widgets/ListFooter.vala
-	Widgets/UserItem.vala
-	Widgets/UserSettings.vala
-	Widgets/GuestSettings.vala
-	Widgets/PasswordEditor.vala
-	Widgets/CropView.vala
-	Dialogs/NewUserDialog.vala
-	Dialogs/PasswordDialog.vala
-	Dialogs/AvatarDialog.vala
-	${CMAKE_CURRENT_BINARY_DIR}/config.vala
+    Plug.vala
+    Misc/Utils.vala
+    Misc/UserUtils.vala
+    Misc/PasswdErrorNotifier.vala
+    Misc/ObscurityTest.vala
+    Widgets/UserView.vala
+    Widgets/UserListBox.vala
+    Widgets/ListFooter.vala
+    Widgets/UserItem.vala
+    Widgets/UserSettings.vala
+    Widgets/GuestSettings.vala
+    Widgets/PasswordEditor.vala
+    Widgets/CropView.vala
+    Widgets/Popovers/NewUserPopover.vala
+    Widgets/Popovers/PasswordPopover.vala
+    Widgets/Dialogs/AvatarDialog.vala
+    ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
-	gtk+-3.0
-	switchboard-2.0
-	granite
-	AccountsService-1.0
-	gnome-desktop-3.0
-	posix
-	polkit-gobject-1
-	pwquality
-	run-passwd
+    gtk+-3.0
+    switchboard-2.0
+    granite
+    AccountsService-1.0
+    gnome-desktop-3.0
+    posix
+    polkit-gobject-1
+    pwquality
+    run-passwd
 OPTIONS
-	--thread
-	--vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
+    --thread
+    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
 )
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR}/../lib/)
