@@ -127,6 +127,34 @@ namespace SwitchboardPlugUserAccounts {
 		return false;
 	}
 
+	public static bool is_valid_username (string _username) {
+		try {
+			var regex = new Regex ("^[a-z]+[a-z0-9]+$");
+			if (regex.match (_username))
+				return true;
+			return false;
+		} catch (Error e) {
+			critical (e.message);
+			return false;
+		}
+	}
+
+	public static string gen_username (string _fullname) {
+		string username = "";
+		bool met_alpha = false;
+
+		foreach (char c in _fullname.to_utf8 ()) {
+			if (c.isalpha ()) {
+				username += c.to_string ().down ();
+				met_alpha = true;
+			} else if (c.isdigit () && met_alpha)
+				username += c.to_string ();
+		}
+
+		warning (username);
+		return username;
+	}
+
 	public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null) {
 		if (get_permission ().allowed) {
 			try {

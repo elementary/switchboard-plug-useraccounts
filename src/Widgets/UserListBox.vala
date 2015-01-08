@@ -14,13 +14,13 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-	public class UserList : Gtk.ListBox {
+	public class UserListBox : Gtk.ListBox {
 		private Gtk.Label my_account_label;
 		private Gtk.Label other_accounts_label;
 		private Gtk.ListBoxRow guest_session_row;
 		private Gtk.Label guest_description_label;
 
-		public UserList () {
+		public UserListBox () {
 			selection_mode = Gtk.SelectionMode.SINGLE;
 			get_usermanager ().user_added.connect (update_ui);
 			get_usermanager ().user_removed.connect (update_ui);

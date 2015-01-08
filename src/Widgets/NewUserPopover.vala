@@ -60,12 +60,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			fullname_entry.halign = Gtk.Align.START;
 			fullname_entry.set_placeholder_text (_("Full Name"));
 			fullname_entry.changed.connect (check_input);
+			fullname_entry.changed.connect (() => 
+				username_entry.set_text (gen_username (fullname_entry.get_text ())));
 			main_grid.attach (fullname_entry, 0, 1, 2, 1);
 
 			username_entry = new Gtk.Entry ();
 			username_entry.set_size_request (195, 0);
 			username_entry.halign = Gtk.Align.START;
 			username_entry.set_placeholder_text (_("Username"));
+			username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY,
+				"dialog-information-symbolic");
+			username_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY,
+				_("Can only contain lower case letters and numbers"));
 			username_entry.changed.connect (check_input);
 			main_grid.attach (username_entry, 0, 2, 2, 1);
 
@@ -129,7 +135,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		}
 
 		private void check_input () {
-			if (fullname_entry.get_text() != "" && username_entry.get_text () != "" && pw_editor.is_valid)
+			if (fullname_entry.get_text() != "" && username_entry.get_text () != ""
+			&& pw_editor.is_valid && is_valid_username (username_entry.get_text ()))
 					button_create.set_sensitive (true);
 			else
 				button_create.set_sensitive (false);

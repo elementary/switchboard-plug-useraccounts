@@ -22,18 +22,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gdk.Pixbuf?			avatar_pixbuf;
 		private Gtk.Button			avatar_button;
 		private Gtk.Entry			full_name_entry;
-		private Gtk.Stack			pw_stack;
 		private Gtk.Button			password_button;
-		private Gtk.Button			confirm_pw_button;
-		private Gtk.Button			cancel_pw_button;
 		private Gtk.Button			enable_user_button;
 		private Gtk.ComboBoxText	user_type_box;
 		private Gtk.ComboBoxText	language_box;
 		private Gtk.Switch			autologin_switch;
 		private Gtk.Popover			avatar_popover;
 
-		private Widgets.PasswordEditor		password_editor;
-		private Dialogs.PasswordDialog		pw_dialog;
 		private Dialogs.AvatarDialog		avatar_dialog;
 
 		//lock widgets
@@ -112,26 +107,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			password_button.set_relief (Gtk.ReliefStyle.NONE);
 			password_button.halign = Gtk.Align.START;
 			password_button.clicked.connect (() => {
-				//pw_dialog = new Dialogs.PasswordDialog (user);
-				//pw_dialog.request_password_change.connect (utils.change_password);
-				//pw_dialog.show ();
 				Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
 				pw_popover.show_all ();
 				pw_popover.request_password_change.connect (utils.change_password);
 			});
-
-			Gtk.Box pw_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-			pw_box.halign = Gtk.Align.END;
-
-			confirm_pw_button = new Gtk.Button.with_label (_("Change Password"));
-			//confirm_pw_button.set_size_request (100, 25);
-			confirm_pw_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-			password_editor = new PasswordEditor.from_width (150);
-			//pw_box.pack_start (password_editor);
-			//pw_box.pack_start (confirm_pw_button);
-
 			attach (password_button, 1, 4, 1, 1);
-			//attach (password_editor, 0, 5, 2, 1);
 
 			enable_user_button = new Gtk.Button ();
 			enable_user_button.clicked.connect (utils.change_lock);
@@ -258,7 +238,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			avatar_popover.set_position (Gtk.PositionType.BOTTOM);
 
 			Gtk.Grid popover_grid = new Gtk.Grid ();
-			popover_grid.margin = 6;
+			popover_grid.margin = 12;
 			popover_grid.column_spacing = 6;
 			popover_grid.row_spacing = 6;
 
@@ -266,6 +246,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove Avatar"));
 			select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+			remove_button.set_sensitive (true);
 			popover_grid.attach (select_button, 1, 1, 1, 1);
 			popover_grid.attach (remove_button, 0, 1, 1, 1);
 

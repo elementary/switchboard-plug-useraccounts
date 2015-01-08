@@ -15,7 +15,7 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class UserView : Granite.Widgets.ThinPaned {
-		public UserList userlist;
+		public UserListBox userlist;
 		public Gtk.Stack content;
 		public Gtk.Box sidebar;
 		public Gtk.ScrolledWindow scrolled_window;
@@ -44,7 +44,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				get_usermanager ().user_added.connect (add_user_settings);
 				get_usermanager ().user_removed.connect (remove_user_settings);
 
-				userlist = new UserList ();
+				userlist = new UserListBox ();
 				userlist.row_selected.connect (userlist_selected);
 
 				foreach (Act.User user in get_usermanager ().list_users ())

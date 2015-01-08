@@ -49,8 +49,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private void build_ui () {
 			expand = true;
 			set_row_spacing (10);
-			//set_column_spacing (10);
-			//halign = Gtk.Align.END;
 
 			/*
 			 * users who don't have superuser privileges will need to auth against passwd.
@@ -111,10 +109,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			} else if (get_permission ().allowed)
 				is_auth = true;
 
-			/*var new_pw_label = new Gtk.Label (_("New password:"));
-			new_pw_label.halign = Gtk.Align.END;
-			attach (new_pw_label, 0, 2, 1, 1);*/
-
 			new_pw_entry = new Gtk.Entry ();
 			new_pw_entry.set_size_request (entry_width, 0);
 			new_pw_entry.halign = Gtk.Align.END;
@@ -131,10 +125,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			pw_level.add_offset_value ("high", 75.0);
 			pw_level.add_offset_value ("middle", 75.0);
 			attach (pw_level, 0, 4, 1, 1);
-
-			/*var confirm_pw_label = new Gtk.Label (_("Confirm password:"));
-			confirm_pw_label.halign = Gtk.Align.END;
-			attach (confirm_pw_label, 0, 5, 1, 1);*/
 
 			confirm_pw_entry = new Gtk.Entry ();
 			confirm_pw_entry.set_size_request (entry_width, 0);
@@ -164,8 +154,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			}
 
 			auth_changed.connect (update_ui);
-
-			//current_pw_entry.grab_focus ();
 			show_all ();
 		}
 
@@ -264,6 +252,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 					auth_changed ();
 				} else {
 					debug ("User is authenticated for password change now");
+					new_pw_entry.set_sensitive (true);
 					is_auth = true;
 					auth_changed ();
 				}
