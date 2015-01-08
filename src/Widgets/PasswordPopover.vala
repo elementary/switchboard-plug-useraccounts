@@ -50,6 +50,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_change.set_sensitive (false);
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			button_change.set_size_request (100, 25);
+			button_change.clicked.connect (() => {
+				if (pw_editor.is_valid && pw_editor.is_auth)
+					request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
+			});
 			button_box.pack_end (button_change);
 
 			show_all ();

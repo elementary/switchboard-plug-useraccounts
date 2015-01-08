@@ -117,7 +117,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 				//pw_dialog.show ();
 				Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
 				pw_popover.show_all ();
-
+				pw_popover.request_password_change.connect (utils.change_password);
 			});
 
 			Gtk.Box pw_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);

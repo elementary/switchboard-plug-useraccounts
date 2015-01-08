@@ -27,7 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 		private PasswordQuality.Settings pwquality;
 
-		private bool is_auth = false;
+		public bool is_auth = false;
 		private signal void auth_changed ();
 
 		public bool is_valid = false;
@@ -120,7 +120,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			new_pw_entry.halign = Gtk.Align.END;
 			new_pw_entry.set_placeholder_text (_("New Password"));
 			new_pw_entry.set_visibility (false);
-			
 			new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
 			new_pw_entry.changed.connect (compare_passwords);
 			attach (new_pw_entry, 0, 2, 1, 1);
@@ -165,6 +164,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			}
 
 			auth_changed.connect (update_ui);
+
+			//current_pw_entry.grab_focus ();
 			show_all ();
 		}
 
