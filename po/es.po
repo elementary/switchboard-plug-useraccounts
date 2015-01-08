@@ -1,5 +1,243 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-07 15:13+0100\n"
+"PO-Revision-Date: 2015-01-04 14:11+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-01-08 07:17+0000\n"
+"X-Generator: Launchpad (build 17298)\n"
+
+#: ../src/Dialogs/PasswordDialog.vala:68 ../src/Dialogs/AvatarDialog.vala:66
+#: ../src/Dialogs/NewUserDialog.vala:112 ../src/Widgets/UserSettings.vala:256
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../src/Dialogs/PasswordDialog.vala:69
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: ../src/Dialogs/AvatarDialog.vala:67
+msgid "Change Avatar"
+msgstr ""
+
+#: ../src/Dialogs/NewUserDialog.vala:58 ../src/Widgets/UserSettings.vala:67
+msgid "Account type:"
+msgstr "Tipo de cuenta:"
+
+#: ../src/Dialogs/NewUserDialog.vala:65 ../src/Widgets/UserSettings.vala:72
+msgid "Standard"
+msgstr "Estándar"
+
+#: ../src/Dialogs/NewUserDialog.vala:66 ../src/Widgets/UserSettings.vala:73
+#: ../src/Widgets/UserItem.vala:84
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../src/Dialogs/NewUserDialog.vala:70
+msgid "Full name:"
+msgstr "Nombre completo:"
+
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "User name:"
+msgstr "Nombre de usuario:"
+
+#: ../src/Dialogs/NewUserDialog.vala:88
+msgid "Set password now"
+msgstr "Establecer contraseña ahora"
+
+#: ../src/Dialogs/NewUserDialog.vala:89
+msgid "Set no password for login"
+msgstr "Sin contraseña de acceso"
+
+#: ../src/Dialogs/NewUserDialog.vala:90
+msgid "Let user create password on first login"
+msgstr "El usuario creará la contraseña al acceder por primera vez"
+
+#: ../src/Dialogs/NewUserDialog.vala:113
+msgid "Create User"
+msgstr "Crear usuario"
+
+#: ../src/Widgets/PasswordEditor.vala:52
+msgid "Current password:"
+msgstr "Contraseña actual:"
+
+#: ../src/Widgets/PasswordEditor.vala:60
+msgid "Press enter to authenticate"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:78
+msgid "Your input does not match your current password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:104
+msgid "New password:"
+msgstr "Contraseña nueva:"
+
+#: ../src/Widgets/PasswordEditor.vala:112
+msgid "Password cannot be empty"
+msgstr "La contraseña no puede estar vacía"
+
+#: ../src/Widgets/PasswordEditor.vala:123
+msgid "Confirm:"
+msgstr "Confirmar:"
+
+#: ../src/Widgets/PasswordEditor.vala:130
+msgid "Passwords do not match"
+msgstr "Las contraseñas no coinciden"
+
+#: ../src/Widgets/PasswordEditor.vala:134
+msgid "Show passwords"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:160
+msgid "Password accepted"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:181
+msgid "Weak password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:183
+msgid "Medium password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:185
+msgid "Strong password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:200
+msgid "Resembles your current password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:202
+msgid "New password is too simple"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:204
+msgid "New password is a palindrome"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
+msgid "Create user account"
+msgstr "Crear cuenta de usuario"
+
+#: ../src/Widgets/ListFooter.vala:49 ../src/Widgets/ListFooter.vala:50
+#: ../src/Widgets/ListFooter.vala:81
+msgid "Remove user account and its data"
+msgstr "Eliminar la cuenta y los datos asociados"
+
+#: ../src/Widgets/ListFooter.vala:61 ../src/Widgets/ListFooter.vala:62
+msgid "Undo last user account removal"
+msgstr "Deshacer eliminación de la última cuenta"
+
+#: ../src/Widgets/ListFooter.vala:85
+msgid "You cannot remove your own user account"
+msgstr "No puede eliminar su propia cuenta"
+
+#: ../src/Widgets/GuestSettings.vala:54 ../src/Widgets/UserList.vala:109
+msgid "Guest Session"
+msgstr ""
+
+#: ../src/Widgets/GuestSettings.vala:73
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+
+#: ../src/Widgets/GuestSettings.vala:74
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+
+#: ../src/Widgets/GuestSettings.vala:75
+msgid "Changes to the Guest Session will apply after the system restarted."
+msgstr ""
+
+#: ../src/Widgets/UserSettings.vala:78
+msgid "Language:"
+msgstr "Idioma:"
+
+#: ../src/Widgets/UserSettings.vala:92
+msgid "Log In automatically:"
+msgstr "Acceder automáticamente:"
+
+#: ../src/Widgets/UserSettings.vala:104
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: ../src/Widgets/UserSettings.vala:205
+msgid "None set"
+msgstr "No establecida"
+
+#: ../src/Widgets/UserSettings.vala:210
+msgid "Enable User Account"
+msgstr "Activar cuenta de usuario"
+
+#: ../src/Widgets/UserSettings.vala:213
+msgid "Disable User Account"
+msgstr "Desactivar cuenta de usuario"
+
+#: ../src/Widgets/UserSettings.vala:242
+msgid "Set from File ..."
+msgstr ""
+
+#: ../src/Widgets/UserSettings.vala:243
+msgid "Remove Avatar"
+msgstr ""
+
+#: ../src/Widgets/UserSettings.vala:255
+msgid "Select an image"
+msgstr ""
+
+#: ../src/Widgets/UserSettings.vala:257
+msgid "Open"
+msgstr ""
+
+#: ../src/Widgets/UserSettings.vala:260
+msgid "Images"
+msgstr ""
+
+#: ../src/Widgets/UserList.vala:35
+msgid "My Account"
+msgstr "Mi cuenta"
+
+#: ../src/Widgets/UserList.vala:42
+msgid "Other Accounts"
+msgstr "Otras cuentas"
+
+#: ../src/Widgets/UserList.vala:83
+msgid "Enabled"
+msgstr ""
+
+#: ../src/Widgets/UserList.vala:86
+msgid "Disabled"
+msgstr ""
+
+#: ../src/Plug.vala:30
+msgid "Authentication is required to change user data"
+msgstr ""
+
+#: ../src/Plug.vala:35
+msgid "User Accounts"
+msgstr "Cuentas de usuario"
+
+#: ../src/Plug.vala:36
+msgid "Manage user accounts on your local system"
+msgstr "Gestionar las cuentas de usuario del sistema local"
+
+#: ../src/Plug.vala:52
+msgid "Ok"
+msgstr ""
+
+#: ../src/Plug.vala:64
+msgid "Password change failed"
+msgstr ""
+
+#: ../src/Plug.vala:78
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Se necesitan privilegios administrativos para modificar algunas opciones"
