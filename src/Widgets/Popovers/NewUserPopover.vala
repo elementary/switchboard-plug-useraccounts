@@ -88,7 +88,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			//main_grid.attach (option_nopw, 0, 5, 2, 1);
 
 			pw_editor = new Widgets.PasswordEditor ();
-			pw_editor.margin_top = 20;
+			pw_editor.margin_top = 5;
 			pw_editor.validation_changed.connect (check_input);
 
 			pw_revealer = new Gtk.Revealer ();
