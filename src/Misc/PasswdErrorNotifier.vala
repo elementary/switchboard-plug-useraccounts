@@ -14,42 +14,42 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts {
-	public class PasswdErrorNotifier : Object {
-		private bool error = false;
-		private string error_message = "";
+    public class PasswdErrorNotifier : Object {
+        private bool error = false;
+        private string error_message = "";
 
-		public signal void notified ();
+        public signal void notified ();
 
-		public PasswdErrorNotifier () { }
+        public PasswdErrorNotifier () { }
 
-		public void set_error (string _error_message) {
-			error = true;
-			error_message = _error_message;
-			notified ();
-		}
+        public void set_error (string _error_message) {
+            error = true;
+            error_message = _error_message;
+            notified ();
+        }
 
-		public void unset_error () {
-			error = false;
-			error_message = "";
-			notified ();
-		}
+        public void unset_error () {
+            error = false;
+            error_message = "";
+            notified ();
+        }
 
-		public bool is_error () {
-			return error;
-		}
+        public bool is_error () {
+            return error;
+        }
 
-		public string get_error_message () {
-			return error_message;
-		}
-	}
+        public string get_error_message () {
+            return error_message;
+        }
+    }
 
-	private static PasswdErrorNotifier pe_notifier;
+    private static PasswdErrorNotifier pe_notifier;
 
-	public static PasswdErrorNotifier get_pe_notifier () {
-		if (pe_notifier != null)
-			return pe_notifier;
+    public static PasswdErrorNotifier get_pe_notifier () {
+        if (pe_notifier != null)
+            return pe_notifier;
 
-		pe_notifier = new PasswdErrorNotifier ();
-		return pe_notifier;
-	}
+        pe_notifier = new PasswdErrorNotifier ();
+        return pe_notifier;
+    }
 }

@@ -14,56 +14,56 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-	public class PasswordPopover : Gtk.Popover {
-		private unowned Act.User		user;
-		private Gtk.Grid				main_grid;
-		private Widgets.PasswordEditor	pw_editor;
-		private Gtk.Button				button_change;
-		//private Gtk.Button			button_cancel;
+    public class PasswordPopover : Gtk.Popover {
+        private unowned Act.User        user;
+        private Gtk.Grid                main_grid;
+        private Widgets.PasswordEditor    pw_editor;
+        private Gtk.Button                button_change;
+        //private Gtk.Button            button_cancel;
 
-		public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
+        public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
 
-		public PasswordPopover (Gtk.Widget _relative, Act.User _user) {
-			user = _user;
-			set_relative_to (_relative);
-			set_position (Gtk.PositionType.TOP);
-			set_modal (true);
+        public PasswordPopover (Gtk.Widget _relative, Act.User _user) {
+            user = _user;
+            set_relative_to (_relative);
+            set_position (Gtk.PositionType.TOP);
+            set_modal (true);
 
-			build_ui ();
-		}
+            build_ui ();
+        }
 
-		private void build_ui () {
-			main_grid = new Gtk.Grid ();
-			main_grid.hexpand = true;
-			main_grid.margin = 12;
-			main_grid.row_spacing = 10;
-			add (main_grid);
+        private void build_ui () {
+            main_grid = new Gtk.Grid ();
+            main_grid.hexpand = true;
+            main_grid.margin = 12;
+            main_grid.row_spacing = 10;
+            add (main_grid);
 
-			pw_editor = new Widgets.PasswordEditor ();
-			pw_editor.validation_changed.connect (() => {
-				if (pw_editor.is_valid)
-					button_change.set_sensitive (true);
-				else
-					button_change.set_sensitive (false);
-			});
-			main_grid.attach (pw_editor, 0, 0, 1, 1);
+            pw_editor = new Widgets.PasswordEditor ();
+            pw_editor.validation_changed.connect (() => {
+                if (pw_editor.is_valid)
+                    button_change.set_sensitive (true);
+                else
+                    button_change.set_sensitive (false);
+            });
+            main_grid.attach (pw_editor, 0, 0, 1, 1);
 
-			Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-			button_box.hexpand = true;
-			button_box.halign = Gtk.Align.END;
-			main_grid.attach (button_box, 0, 1, 1, 1);
+            Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
+            button_box.hexpand = true;
+            button_box.halign = Gtk.Align.END;
+            main_grid.attach (button_box, 0, 1, 1, 1);
 
-			button_change = new Gtk.Button.with_label (_("Change Password"));
-			button_change.set_sensitive (false);
-			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-			button_change.set_size_request (100, 25);
-			button_change.clicked.connect (() => {
-				if (pw_editor.is_valid)
-					request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
-			});
-			button_box.pack_end (button_change);
+            button_change = new Gtk.Button.with_label (_("Change Password"));
+            button_change.set_sensitive (false);
+            button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            button_change.set_size_request (100, 25);
+            button_change.clicked.connect (() => {
+                if (pw_editor.is_valid)
+                    request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
+            });
+            button_box.pack_end (button_change);
 
-			show_all ();
-		}
-	}
+            show_all ();
+        }
+    }
 }

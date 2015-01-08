@@ -15,369 +15,369 @@ with this program. If not, see http://www.gnu.org/licenses/.
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-	public class CropView : Gtk.EventBox {
-		/**
-		 * The current pixbuf
-		 */
-		public Gdk.Pixbuf pixbuf {
-			get {
-				return _pixbuf;
-			}
-			set {
-				_pixbuf = value;
+    public class CropView : Gtk.EventBox {
+        /**
+         * The current pixbuf
+         */
+        public Gdk.Pixbuf pixbuf {
+            get {
+                return _pixbuf;
+            }
+            set {
+                _pixbuf = value;
 
-				if (quadratic_selection && _pixbuf.get_width () > _pixbuf.get_height ())
-					area = { 5, 5, _pixbuf.get_height (), _pixbuf.get_height ()};
-				else if (quadratic_selection && _pixbuf.get_width () < _pixbuf.get_height ())
-					area = { 5, 5, _pixbuf.get_width (), _pixbuf.get_width ()};
-				else 
-					area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2 };
+                if (quadratic_selection && _pixbuf.get_width () > _pixbuf.get_height ())
+                    area = { 5, 5, _pixbuf.get_height (), _pixbuf.get_height ()};
+                else if (quadratic_selection && _pixbuf.get_width () < _pixbuf.get_height ())
+                    area = { 5, 5, _pixbuf.get_width (), _pixbuf.get_width ()};
+                else 
+                    area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2 };
 
-				queue_draw ();
-			}
-		}
+                queue_draw ();
+            }
+        }
 
-		/**
-		 * determines whether selection is quadratic or not
-		 */
-		public bool quadratic_selection = false;
+        /**
+         * determines whether selection is quadratic or not
+         */
+        public bool quadratic_selection = false;
 
-		/**
-		 * determines whether the handles are shown or not
-		 */
-		public bool handles_visible = true;
+        /**
+         * determines whether the handles are shown or not
+         */
+        public bool handles_visible = true;
 
-		/**
-		 * selected area in absolute coordinates of the image
-		 */
-		Gdk.Rectangle area;
+        /**
+         * selected area in absolute coordinates of the image
+         */
+        Gdk.Rectangle area;
 
-		/**
-		 * The current pixbuf
-		 */
-		Gdk.Pixbuf _pixbuf;
+        /**
+         * The current pixbuf
+         */
+        Gdk.Pixbuf _pixbuf;
 
-		/**
-		 * holds the current scale
-		 */
-		double current_scale;
+        /**
+         * holds the current scale
+         */
+        double current_scale;
 
-		/**
-		 * holds the current handle positions
-		 */
-		int[,] pos;
+        /**
+         * holds the current handle positions
+         */
+        int[,] pos;
 
-		/**
-		 * current drag operation, identified by the GdkCursorType.
-		 * ARROW is the default which means no operation. FLEUR
-		 * corresponds to a move operation.
-		 */
-		Gdk.CursorType current_operation = Gdk.CursorType.ARROW;
+        /**
+         * current drag operation, identified by the GdkCursorType.
+         * ARROW is the default which means no operation. FLEUR
+         * corresponds to a move operation.
+         */
+        Gdk.CursorType current_operation = Gdk.CursorType.ARROW;
 
-		/**
-		 * holds a temporary value for resizing and moving the selected area (x coordinate)
-		 */
-		int temp_x;
+        /**
+         * holds a temporary value for resizing and moving the selected area (x coordinate)
+         */
+        int temp_x;
 
-		/**
-		 * holds a temporary value for resizing and moving the selected area (y coordinate)
-		 */
-		int temp_y;
+        /**
+         * holds a temporary value for resizing and moving the selected area (y coordinate)
+         */
+        int temp_y;
 
-		/**
-		 * holds the current offset value (x coordinate)
-		 */
-		int offset_x;
+        /**
+         * holds the current offset value (x coordinate)
+         */
+        int offset_x;
 
-		/**
-		 * holds the current offset value (y coordinate)
-		 */
-		int offset_y;
+        /**
+         * holds the current offset value (y coordinate)
+         */
+        int offset_y;
 
-		/**
-		 * signal that is emitted when the selection area is changed in any way
-		 */
-		public signal void area_changed ();
+        /**
+         * signal that is emitted when the selection area is changed in any way
+         */
+        public signal void area_changed ();
 
-		/**
-		 * constant value for the area handles' radius
-		 */
-		const int r = 8;
+        /**
+         * constant value for the area handles' radius
+         */
+        const int r = 8;
 
-		public CropView.from_pixbuf (Gdk.Pixbuf __pixbuf) {
-			pixbuf = __pixbuf;
-			if (_pixbuf.get_width () > _pixbuf.get_height ())
-				area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
-			else if (_pixbuf.get_width () < _pixbuf.get_height ())
-				area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_width () / 2};
-			else 
-				area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2};
-		}
-		public CropView () {
-			area = { 50, 50, 500, 500 };
-		}
+        public CropView.from_pixbuf (Gdk.Pixbuf __pixbuf) {
+            pixbuf = __pixbuf;
+            if (_pixbuf.get_width () > _pixbuf.get_height ())
+                area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
+            else if (_pixbuf.get_width () < _pixbuf.get_height ())
+                area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_width () / 2};
+            else 
+                area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2};
+        }
+        public CropView () {
+            area = { 50, 50, 500, 500 };
+        }
 
-		/**
-		 * returns the current selected area as pixbuf
-		 */
-		public Gdk.Pixbuf get_selection () {
-			return new Gdk.Pixbuf.subpixbuf (_pixbuf, area.x, area.y, area.width, area.height);
-		}
+        /**
+         * returns the current selected area as pixbuf
+         */
+        public Gdk.Pixbuf get_selection () {
+            return new Gdk.Pixbuf.subpixbuf (_pixbuf, area.x, area.y, area.width, area.height);
+        }
 
-		public override bool button_press_event (Gdk.EventButton event) {
-			const Gdk.CursorType[] cursor = {
-				Gdk.CursorType.TOP_LEFT_CORNER,
-				Gdk.CursorType.TOP_SIDE,
-				Gdk.CursorType.TOP_RIGHT_CORNER,
-				Gdk.CursorType.RIGHT_SIDE,
-				Gdk.CursorType.BOTTOM_RIGHT_CORNER,
-				Gdk.CursorType.BOTTOM_SIDE,
-				Gdk.CursorType.BOTTOM_LEFT_CORNER,
-				Gdk.CursorType.LEFT_SIDE
-			};
+        public override bool button_press_event (Gdk.EventButton event) {
+            const Gdk.CursorType[] cursor = {
+                Gdk.CursorType.TOP_LEFT_CORNER,
+                Gdk.CursorType.TOP_SIDE,
+                Gdk.CursorType.TOP_RIGHT_CORNER,
+                Gdk.CursorType.RIGHT_SIDE,
+                Gdk.CursorType.BOTTOM_RIGHT_CORNER,
+                Gdk.CursorType.BOTTOM_SIDE,
+                Gdk.CursorType.BOTTOM_LEFT_CORNER,
+                Gdk.CursorType.LEFT_SIDE
+            };
 
-			current_operation = Gdk.CursorType.ARROW;
-			temp_x = (int) event.x;
-			temp_y = (int) event.y;
+            current_operation = Gdk.CursorType.ARROW;
+            temp_x = (int) event.x;
+            temp_y = (int) event.y;
 
-			for (var i = 0; i < 8; i++) {
-				if (in_quad (pos[i, 0] - r, pos[i, 1] - r, r * 2, r * 2, (int) event.x, (int) event.y)) {
-					current_operation = cursor[i];
-				}
-			}
+            for (var i = 0; i < 8; i++) {
+                if (in_quad (pos[i, 0] - r, pos[i, 1] - r, r * 2, r * 2, (int) event.x, (int) event.y)) {
+                    current_operation = cursor[i];
+                }
+            }
 
-			if (in_quad ((int) Math.floor (area.x * current_scale),
-						(int) Math.floor (area.y * current_scale),
-						(int) Math.floor (area.width * current_scale),
-						(int) Math.floor (area.height * current_scale),
-						(int) (event.x - offset_x), (int) (event.y - offset_y))) {
-				current_operation = Gdk.CursorType.FLEUR;
-			}
+            if (in_quad ((int) Math.floor (area.x * current_scale),
+                        (int) Math.floor (area.y * current_scale),
+                        (int) Math.floor (area.width * current_scale),
+                        (int) Math.floor (area.height * current_scale),
+                        (int) (event.x - offset_x), (int) (event.y - offset_y))) {
+                current_operation = Gdk.CursorType.FLEUR;
+            }
 
-			apply_cursor ();
+            apply_cursor ();
 
-			//return base.button_press_event (event);
-			return true;
-		}
+            //return base.button_press_event (event);
+            return true;
+        }
 
-		public override bool motion_notify_event (Gdk.EventMotion event) {
-			if (current_operation == Gdk.CursorType.ARROW)
-				//return base.motion_notify_event (event);
-				return true;
+        public override bool motion_notify_event (Gdk.EventMotion event) {
+            if (current_operation == Gdk.CursorType.ARROW)
+                //return base.motion_notify_event (event);
+                return true;
 
-			// TODO modify `area` according to current_operation
-			switch (current_operation) {
-				case Gdk.CursorType.FLEUR:
-					int motion_x = (int) (area.x + ((int) event.x - temp_x) / current_scale);
-					int motion_y = (int) (area.y + ((int) event.y - temp_y) / current_scale);
+            // TODO modify `area` according to current_operation
+            switch (current_operation) {
+                case Gdk.CursorType.FLEUR:
+                    int motion_x = (int) (area.x + ((int) event.x - temp_x) / current_scale);
+                    int motion_y = (int) (area.y + ((int) event.y - temp_y) / current_scale);
 
-					switch (x_in_pixbuf (motion_x)) {
-						case 0: area.x = motion_x; area_changed (); break;
-						case 1: area.x = 0; break;
-						case 2: area.x = _pixbuf.get_width () - area.width; break;
-					}
+                    switch (x_in_pixbuf (motion_x)) {
+                        case 0: area.x = motion_x; area_changed (); break;
+                        case 1: area.x = 0; break;
+                        case 2: area.x = _pixbuf.get_width () - area.width; break;
+                    }
 
-					switch (y_in_pixbuf (motion_y)) {
-						case 0: area.y = motion_y; area_changed (); break;
-						case 1: area.y = 0; break;
-						case 2: area.y = _pixbuf.get_height () - area.height; break;
-					}
+                    switch (y_in_pixbuf (motion_y)) {
+                        case 0: area.y = motion_y; area_changed (); break;
+                        case 1: area.y = 0; break;
+                        case 2: area.y = _pixbuf.get_height () - area.height; break;
+                    }
 
-					break;
-				case Gdk.CursorType.RIGHT_SIDE:
-					if (!quadratic_selection) {
-						int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                    break;
+                case Gdk.CursorType.RIGHT_SIDE:
+                    if (!quadratic_selection) {
+                        int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
 
-						switch (width_in_pixbuf (motion_width, area.x)) {
-							case 0: area.width = motion_width; area_changed (); break;
-							case 1: area.width = 0; break;
-							case 2: area.width = _pixbuf.get_width () - area.x; break;
-						}
-					}
-					break;
-				case Gdk.CursorType.BOTTOM_RIGHT_CORNER:
-					int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
-					int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        switch (width_in_pixbuf (motion_width, area.x)) {
+                            case 0: area.width = motion_width; area_changed (); break;
+                            case 1: area.width = 0; break;
+                            case 2: area.width = _pixbuf.get_width () - area.x; break;
+                        }
+                    }
+                    break;
+                case Gdk.CursorType.BOTTOM_RIGHT_CORNER:
+                    int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                    int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
 
-					if (quadratic_selection && motion_width >= motion_height)
-						motion_height = motion_width;
-					else if (quadratic_selection && motion_width < motion_height)
-						motion_width = motion_height;
+                    if (quadratic_selection && motion_width >= motion_height)
+                        motion_height = motion_width;
+                    else if (quadratic_selection && motion_width < motion_height)
+                        motion_width = motion_height;
 
-					switch (width_in_pixbuf (motion_width, area.x)) {
-						case 0:
-							if (height_in_pixbuf (motion_height, area.y) == 0) {
-								area.width = motion_width;
-								area.height = motion_height;
-								area_changed ();
-							}
-							break;
-						case 1:
-							area.width = 0;
-							break;
-						case 2:
-							area.width = _pixbuf.get_width () - area.x;
-							break;
-					}
+                    switch (width_in_pixbuf (motion_width, area.x)) {
+                        case 0:
+                            if (height_in_pixbuf (motion_height, area.y) == 0) {
+                                area.width = motion_width;
+                                area.height = motion_height;
+                                area_changed ();
+                            }
+                            break;
+                        case 1:
+                            area.width = 0;
+                            break;
+                        case 2:
+                            area.width = _pixbuf.get_width () - area.x;
+                            break;
+                    }
 
-					switch (height_in_pixbuf (motion_height, area.y)) {
-						case 0:
-							if (width_in_pixbuf (motion_width, area.x) == 0) {
-								area.height = motion_height;
-								area.width = motion_width;
-								area_changed ();
-							}
-							break;
-						case 1:
-							area.height = 0;
-							break;
-						case 2:
-							area.height = _pixbuf.get_height () - area.y;
-							break;
-					}
+                    switch (height_in_pixbuf (motion_height, area.y)) {
+                        case 0:
+                            if (width_in_pixbuf (motion_width, area.x) == 0) {
+                                area.height = motion_height;
+                                area.width = motion_width;
+                                area_changed ();
+                            }
+                            break;
+                        case 1:
+                            area.height = 0;
+                            break;
+                        case 2:
+                            area.height = _pixbuf.get_height () - area.y;
+                            break;
+                    }
 
-					break;
-				case Gdk.CursorType.BOTTOM_SIDE:
-					if (!quadratic_selection) {
-						int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                    break;
+                case Gdk.CursorType.BOTTOM_SIDE:
+                    if (!quadratic_selection) {
+                        int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
 
-						switch (height_in_pixbuf (motion_height, area.y)) {
-							case 0: area.height = motion_height; area_changed (); break;
-							case 1: area.height = 0; break;
-							case 2: area.height = _pixbuf.get_height () - area.y; break;
-						}
-					}
-					break;
-				default:
-					break;
-			}
+                        switch (height_in_pixbuf (motion_height, area.y)) {
+                            case 0: area.height = motion_height; area_changed (); break;
+                            case 1: area.height = 0; break;
+                            case 2: area.height = _pixbuf.get_height () - area.y; break;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
 
-			temp_x = (int) event.x;
-			temp_y = (int) event.y;
+            temp_x = (int) event.x;
+            temp_y = (int) event.y;
 
-			//warning ("%d | %d".printf (area.width, area.height));
-			queue_draw ();
+            //warning ("%d | %d".printf (area.width, area.height));
+            queue_draw ();
 
-			//return base.motion_notify_event (event);
-			return true;
-		}
+            //return base.motion_notify_event (event);
+            return true;
+        }
 
-		public override bool button_release_event (Gdk.EventButton event) {
-			current_operation = Gdk.CursorType.ARROW;
+        public override bool button_release_event (Gdk.EventButton event) {
+            current_operation = Gdk.CursorType.ARROW;
 
-			apply_cursor ();
+            apply_cursor ();
 
-			//return base.button_release_event (event);
-			return true;
-		}
+            //return base.button_release_event (event);
+            return true;
+        }
 
-		public override bool draw (Cairo.Context cr) {
-			Gtk.Allocation alloc;
+        public override bool draw (Cairo.Context cr) {
+            Gtk.Allocation alloc;
 
-			get_allocation (out alloc);
+            get_allocation (out alloc);
 
-			var pixbuf_width = _pixbuf.get_width ();
-			var pixbuf_height = _pixbuf.get_height ();
-			double scale = 1.0;
+            var pixbuf_width = _pixbuf.get_width ();
+            var pixbuf_height = _pixbuf.get_height ();
+            double scale = 1.0;
 
-			if (pixbuf_width > alloc.width) {
-				scale = alloc.width / (double) pixbuf_width;
-				pixbuf_height = (int) Math.floor (scale * pixbuf_height);
-				pixbuf_width = alloc.width;
-			}
+            if (pixbuf_width > alloc.width) {
+                scale = alloc.width / (double) pixbuf_width;
+                pixbuf_height = (int) Math.floor (scale * pixbuf_height);
+                pixbuf_width = alloc.width;
+            }
 
-			if (pixbuf_height > alloc.height) {
-				scale = alloc.height / (double) pixbuf_height;
-				pixbuf_width = (int) Math.floor (scale * pixbuf_width);
-				pixbuf_height = alloc.height;
-			}
+            if (pixbuf_height > alloc.height) {
+                scale = alloc.height / (double) pixbuf_height;
+                pixbuf_width = (int) Math.floor (scale * pixbuf_width);
+                pixbuf_height = alloc.height;
+            }
 
-			var pixbuf = _pixbuf.scale_simple (pixbuf_width, pixbuf_height, Gdk.InterpType.BILINEAR);
+            var pixbuf = _pixbuf.scale_simple (pixbuf_width, pixbuf_height, Gdk.InterpType.BILINEAR);
 
-			offset_x = alloc.width / 2 - pixbuf_width / 2;
-			offset_y = alloc.height / 2 - pixbuf_height / 2;
+            offset_x = alloc.width / 2 - pixbuf_width / 2;
+            offset_y = alloc.height / 2 - pixbuf_height / 2;
 
-			Gdk.cairo_set_source_pixbuf (cr, pixbuf, offset_x, offset_y);
-			cr.paint ();
+            Gdk.cairo_set_source_pixbuf (cr, pixbuf, offset_x, offset_y);
+            cr.paint ();
 
-			scale = pixbuf_width / (double) _pixbuf.get_width ();
+            scale = pixbuf_width / (double) _pixbuf.get_width ();
 
-			var x = offset_x + (int) Math.floor (area.x * scale);
-			var y = offset_y + (int) Math.floor (area.y * scale);
-			var w = (int) Math.floor (area.width * scale);
-			var h = (int) Math.floor (area.height * scale);
+            var x = offset_x + (int) Math.floor (area.x * scale);
+            var y = offset_y + (int) Math.floor (area.y * scale);
+            var w = (int) Math.floor (area.width * scale);
+            var h = (int) Math.floor (area.height * scale);
 
-			pos = {
-				{ x, y }, 				// upper left
-				{ x + w / 2, y },		// upper midpoint
-				{ x + w, y }, 			// upper right
-				{ x + w, y + h / 2 }, 	// right midpoint
-				{ x + w, y + h }, 		// lower right
-				{ x + w / 2, y + h },	// lower midpoint
-				{ x, y + h }, 			// lower left
-				{ x, y + h / 2 } 		// left midpoint
-			};
+            pos = {
+                { x, y },                 // upper left
+                { x + w / 2, y },        // upper midpoint
+                { x + w, y },             // upper right
+                { x + w, y + h / 2 },     // right midpoint
+                { x + w, y + h },         // lower right
+                { x + w / 2, y + h },    // lower midpoint
+                { x, y + h },             // lower left
+                { x, y + h / 2 }         // left midpoint
+            };
 
-			cr.rectangle (x, y, w, h);
-			cr.set_source_rgba (0.1, 0.1, 0.1, 0.2);
-			cr.fill ();
+            cr.rectangle (x, y, w, h);
+            cr.set_source_rgba (0.1, 0.1, 0.1, 0.2);
+            cr.fill ();
 
-			cr.rectangle (x, y, w, h);
-			cr.set_source_rgb (1.0, 1.0, 1.0);
-			cr.set_line_width (1.0);
-			cr.stroke ();
+            cr.rectangle (x, y, w, h);
+            cr.set_source_rgb (1.0, 1.0, 1.0);
+            cr.set_line_width (1.0);
+            cr.stroke ();
 
-			if (handles_visible) {
-				for (var i = 0;i < 8; i++){
-					cr.arc (pos[i,0], pos[i,1], r, 0.0, 2 * Math.PI);
-					cr.set_source_rgb (0.7, 0.7, 0.7);
-					cr.fill ();
-				}
-			}
+            if (handles_visible) {
+                for (var i = 0;i < 8; i++){
+                    cr.arc (pos[i,0], pos[i,1], r, 0.0, 2 * Math.PI);
+                    cr.set_source_rgb (0.7, 0.7, 0.7);
+                    cr.fill ();
+                }
+            }
 
-			current_scale = scale;
+            current_scale = scale;
 
-			return true;
-		}
+            return true;
+        }
 
-		bool in_quad (int qx, int qy, int qw, int qh, int x, int y) {
-			return ((x > qx) && (x < (qx + qw)) && (y > qy) && (y < qy + qh));
-		}
+        bool in_quad (int qx, int qy, int qw, int qh, int x, int y) {
+            return ((x > qx) && (x < (qx + qw)) && (y > qy) && (y < qy + qh));
+        }
 
-		void apply_cursor () {
-			get_window ().cursor = new Gdk.Cursor (current_operation);
-		}
+        void apply_cursor () {
+            get_window ().cursor = new Gdk.Cursor (current_operation);
+        }
 
-		int x_in_pixbuf (int ax) {
-			if (ax < 0)
-				return 1;
-			else if (ax + area.width > _pixbuf.get_width ())
-				return 2;
-			return 0;
-		}
+        int x_in_pixbuf (int ax) {
+            if (ax < 0)
+                return 1;
+            else if (ax + area.width > _pixbuf.get_width ())
+                return 2;
+            return 0;
+        }
 
-		int y_in_pixbuf (int ay) {
-			if (ay < 0)
-				return 1;
-			else if (ay + area.height > _pixbuf.get_height ())
-				return 2;
-			return 0;
-		}
+        int y_in_pixbuf (int ay) {
+            if (ay < 0)
+                return 1;
+            else if (ay + area.height > _pixbuf.get_height ())
+                return 2;
+            return 0;
+        }
 
-		int width_in_pixbuf (int aw, int ax) {
-			if (aw < 0)
-				return 1;
-			else if (aw > _pixbuf.get_width () - ax)
-				return 2;
-			return 0;
-		}
+        int width_in_pixbuf (int aw, int ax) {
+            if (aw < 0)
+                return 1;
+            else if (aw > _pixbuf.get_width () - ax)
+                return 2;
+            return 0;
+        }
 
-		int height_in_pixbuf (int ah, int ay) {
-			if (ah < 0)
-				return 1;
-			else if (ah > _pixbuf.get_height () - ay)
-				return 2;
-			return 0;
-		}
-	}
+        int height_in_pixbuf (int ah, int ay) {
+            if (ah < 0)
+                return 1;
+            else if (ah > _pixbuf.get_height () - ay)
+                return 2;
+            return 0;
+        }
+    }
 }

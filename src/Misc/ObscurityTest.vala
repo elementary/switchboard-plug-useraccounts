@@ -46,95 +46,95 @@ This class is based on obscure.c from passwd. License for obscure.c's source cod
 ***/
 
 namespace SwitchboardPlugUserAccounts {
-	public class ObscurityTest {
-		public ObscurityTest () { }
+    public class ObscurityTest {
+        public ObscurityTest () { }
 
-		public enum RESULT {
-			OBSCURE,
-			SHORT,
-			PALINDROME,
-			SIMILIAR,
-			SIMPLE
-		}
+        public enum RESULT {
+            OBSCURE,
+            SHORT,
+            PALINDROME,
+            SIMILIAR,
+            SIMPLE
+        }
 
-		public static ObscurityTest.RESULT test (string _oldpw, string _newpw) {
-			if (_oldpw.down () == _newpw.down () || is_similiar (_oldpw, _newpw))
-				return ObscurityTest.RESULT.SIMILIAR;
+        public static ObscurityTest.RESULT test (string _oldpw, string _newpw) {
+            if (_oldpw.down () == _newpw.down () || is_similiar (_oldpw, _newpw))
+                return ObscurityTest.RESULT.SIMILIAR;
 
-			if (is_simple (_newpw))
-				return ObscurityTest.RESULT.SIMPLE;
+            if (is_simple (_newpw))
+                return ObscurityTest.RESULT.SIMPLE;
 
-			if (is_palindrome (_newpw))
-				return ObscurityTest.RESULT.PALINDROME;
+            if (is_palindrome (_newpw))
+                return ObscurityTest.RESULT.PALINDROME;
 
-			return ObscurityTest.RESULT.OBSCURE;
-		}
+            return ObscurityTest.RESULT.OBSCURE;
+        }
 
-		private static bool is_similiar (string _oldpw, string _newpw) {
-			char[] oldpw = _oldpw.to_utf8 ();
-			char[] newpw = _newpw.to_utf8 ();
-			int i;
-			int j;
+        private static bool is_similiar (string _oldpw, string _newpw) {
+            char[] oldpw = _oldpw.to_utf8 ();
+            char[] newpw = _newpw.to_utf8 ();
+            int i;
+            int j;
 
-			if (_newpw.length >= 8)
-				return false;
+            if (_newpw.length >= 8)
+                return false;
 
-			for (i = j = 0; ('\0' != newpw[i]) && ('\0' != oldpw[i]); i++) {
-				if (Posix.strchr (_newpw, oldpw[i]) != null)
-					j++;
-			}
+            for (i = j = 0; ('\0' != newpw[i]) && ('\0' != oldpw[i]); i++) {
+                if (Posix.strchr (_newpw, oldpw[i]) != null)
+                    j++;
+            }
 
-			if (i >= j * 2)
-				return false;
-	
-			return true;
-		}
+            if (i >= j * 2)
+                return false;
+    
+            return true;
+        }
 
-		private static bool is_simple (string _newpw) {
-			char[] newpw = _newpw.to_utf8 ();
-			bool digits = false;
-			bool uppers = false;
-			bool lowers = false;
-			bool others = false;
-			int size = 9;
-			int i;
+        private static bool is_simple (string _newpw) {
+            char[] newpw = _newpw.to_utf8 ();
+            bool digits = false;
+            bool uppers = false;
+            bool lowers = false;
+            bool others = false;
+            int size = 9;
+            int i;
 
-			for (i = 0; '\0' != newpw[i]; i++) {
-				if (newpw[i].isdigit ())
-					digits = true;
-				else if (newpw[i].isupper ())
-					uppers = true;
-				else if (newpw[i].islower ())
-					lowers = true;
-				else
-					others = true;
-			}
+            for (i = 0; '\0' != newpw[i]; i++) {
+                if (newpw[i].isdigit ())
+                    digits = true;
+                else if (newpw[i].isupper ())
+                    uppers = true;
+                else if (newpw[i].islower ())
+                    lowers = true;
+                else
+                    others = true;
+            }
 
-			if (digits)
-				size--;
-			if (uppers)
-				size--;
-			if (lowers)
-				size--;
-			if (others)
-				size--;
+            if (digits)
+                size--;
+            if (uppers)
+                size--;
+            if (lowers)
+                size--;
+            if (others)
+                size--;
 
-			if (size <= i)
-				return false;
+            if (size <= i)
+                return false;
 
-			return true;
-		}
+            return true;
+        }
 
-		private static bool is_palindrome (string _newpw) {
-			char[] newpw = _newpw.to_utf8 ();
-			size_t i, j;
-			i = _newpw.length;
+        private static bool is_palindrome (string _newpw) {
+            char[] newpw = _newpw.to_utf8 ();
+            size_t i, j;
+            i = _newpw.length;
 
-			for (j = 0; j < i; j++) {
-				if (newpw[i - j - 1] != newpw[j])
-					return false;
-			}
-			return true;
-		}
-	}
+            for (j = 0; j < i; j++) {
+                if (newpw[i - j - 1] != newpw[j])
+                    return false;
+            }
+            return true;
+        }
+    }
 }

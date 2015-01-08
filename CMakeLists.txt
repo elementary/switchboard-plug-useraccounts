@@ -14,9 +14,9 @@ set (VERSION "0.1")
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 project (switchboard-plug-useraccounts)
 
-#########################################################
+                                                        #
 # Only alter stuff below if you know what you are doing #
-#########################################################
+                                                        #
 
 include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
