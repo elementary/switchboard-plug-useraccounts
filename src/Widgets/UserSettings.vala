@@ -239,22 +239,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
 			Gtk.Grid popover_grid = new Gtk.Grid ();
 			popover_grid.margin = 12;
-			popover_grid.column_spacing = 6;
-			popover_grid.row_spacing = 6;
+			popover_grid.column_spacing = 10;
+			popover_grid.row_spacing = 10;
+			avatar_popover.add (popover_grid);
 
 			Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File ..."));
 			Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove Avatar"));
 			select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+			popover_grid.attach (select_button, 1, 1, 1, 1);
+			popover_grid.attach (remove_button, 0, 1, 1, 1);
+
 			if (user.get_icon_file ().contains (".face"))
 				remove_button.set_sensitive (false);
 			else {
 				remove_button.set_sensitive (true);
 				remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 			}
-			popover_grid.attach (select_button, 1, 1, 1, 1);
-			popover_grid.attach (remove_button, 0, 1, 1, 1);
 
-			avatar_popover.add (popover_grid);
 			avatar_popover.show_all ();
 
 			select_button.grab_focus ();

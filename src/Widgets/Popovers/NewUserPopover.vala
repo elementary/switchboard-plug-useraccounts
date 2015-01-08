@@ -15,21 +15,21 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
 	public class NewUserPopover : Gtk.Popover {
-		private Gtk.Grid			main_grid;
-		private Gtk.ComboBoxText	accounttype_combobox;
-		private Gtk.Entry			fullname_entry;
-		private Gtk.Entry			username_entry;
-		private Gtk.RadioButton		option_nopw;
-		private Gtk.RadioButton		option_onlogin;
-		private Gtk.RadioButton		option_setpw;
+		private Gtk.Grid				main_grid;
+		private Gtk.ComboBoxText		accounttype_combobox;
+		private Gtk.Entry				fullname_entry;
+		private Gtk.Entry				username_entry;
+		private Gtk.RadioButton			option_nopw;
+		private Gtk.RadioButton			option_onlogin;
+		private Gtk.RadioButton			option_setpw;
 
 		private Gtk.Revealer			pw_revealer;
 		private Widgets.PasswordEditor	pw_editor;
 
-		private Gtk.Button			button_create;
+		private Gtk.Button				button_create;
 		//private Gtk.Button			button_cancel;
 
-		public signal void 		request_user_creation 
+		public signal void 			request_user_creation 
 			(string _fullname, string _username, Act.UserAccountType _usertype, 
 			Act.UserPasswordMode _mode, string? _pw = null);
 

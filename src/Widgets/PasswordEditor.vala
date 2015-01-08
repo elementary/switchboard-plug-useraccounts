@@ -55,10 +55,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			 * therefore they will need these UI elements created and displayed to set is_auth.
 			 */
 			if (!get_permission ().allowed) {
-				/*Gtk.Label current_pw_label = new Gtk.Label (_("Current password:"));
-				current_pw_label.halign = Gtk.Align.END;
-				attach (current_pw_label, 0, 0, 1, 1);*/
-
 				current_pw_entry = new Gtk.Entry ();
 				current_pw_entry.set_size_request (entry_width, 0);
 				current_pw_entry.set_placeholder_text (_("Current Password"));

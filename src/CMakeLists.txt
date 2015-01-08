@@ -26,10 +26,9 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 	Widgets/GuestSettings.vala
 	Widgets/PasswordEditor.vala
 	Widgets/CropView.vala
-	Widgets/NewUserPopover.vala
-	Widgets/PasswordPopover.vala
-	Dialogs/PasswordDialog.vala
-	Dialogs/AvatarDialog.vala
+	Widgets/Popovers/NewUserPopover.vala
+	Widgets/Popovers/PasswordPopover.vala
+	Widgets/Dialogs/AvatarDialog.vala
 	${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
 	gtk+-3.0

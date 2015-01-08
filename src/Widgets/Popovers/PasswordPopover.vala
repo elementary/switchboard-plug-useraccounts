@@ -19,7 +19,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 		private Gtk.Grid				main_grid;
 		private Widgets.PasswordEditor	pw_editor;
 		private Gtk.Button				button_change;
-		//private Gtk.Button				button_cancel;
+		//private Gtk.Button			button_cancel;
 
 		public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
 
@@ -27,6 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			user = _user;
 			set_relative_to (_relative);
 			set_position (Gtk.PositionType.TOP);
+			set_modal (true);
 
 			build_ui ();
 		}
