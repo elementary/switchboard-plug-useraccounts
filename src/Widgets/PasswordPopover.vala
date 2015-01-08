@@ -39,6 +39,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			add (main_grid);
 
 			pw_editor = new Widgets.PasswordEditor ();
+			pw_editor.validation_changed.connect (() => {
+				if (pw_editor.is_valid)
+					button_change.set_sensitive (true);
+				else
+					button_change.set_sensitive (false);
+			});
 			main_grid.attach (pw_editor, 0, 0, 1, 1);
 
 			Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
@@ -51,7 +57,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 			button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 			button_change.set_size_request (100, 25);
 			button_change.clicked.connect (() => {
-				if (pw_editor.is_valid && pw_editor.is_auth)
+				if (pw_editor.is_valid)
 					request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
 			});
 			button_box.pack_end (button_change);
