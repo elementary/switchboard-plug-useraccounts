@@ -17,16 +17,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class NewUserPopover : Gtk.Popover {
         private Gtk.Grid                main_grid;
         private Gtk.ComboBoxText        accounttype_combobox;
-        private Gtk.Entry                fullname_entry;
-        private Gtk.Entry                username_entry;
-        private Gtk.RadioButton            option_nopw;
-        private Gtk.RadioButton            option_onlogin;
-        private Gtk.RadioButton            option_setpw;
+        private Gtk.Entry               fullname_entry;
+        private Gtk.Entry               username_entry;
+        private Gtk.RadioButton         option_nopw;
+        private Gtk.RadioButton         option_onlogin;
+        private Gtk.RadioButton         option_setpw;
 
         private Gtk.Revealer            pw_revealer;
-        private Widgets.PasswordEditor    pw_editor;
+        private Widgets.PasswordEditor  pw_editor;
 
-        private Gtk.Button                button_create;
+        private Gtk.Button              button_create;
         //private Gtk.Button            button_cancel;
 
         public signal void             request_user_creation 
@@ -71,7 +71,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY,
                 "dialog-information-symbolic");
             username_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY,
-                _("Can only contain lower case letters and numbers"));
+                _("Can only contain lower case letters, numbers and no spaces"));
             username_entry.changed.connect (check_input);
             main_grid.attach (username_entry, 0, 2, 2, 1);
 

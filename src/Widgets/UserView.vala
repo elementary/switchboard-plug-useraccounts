@@ -15,12 +15,12 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserView : Granite.Widgets.ThinPaned {
-        public UserListBox userlist;
-        public Gtk.Stack content;
-        public Gtk.Box sidebar;
-        public Gtk.ScrolledWindow scrolled_window;
-        public Gtk.ScrolledWindow content_window;
-        public ListFooter footer;
+        public UserListBox          userlist;
+        public Gtk.Stack            content;
+        public Gtk.Box              sidebar;
+        public Gtk.ScrolledWindow   scrolled_window;
+        public Gtk.ScrolledWindow   content_window;
+        public ListFooter           footer;
 
         private GuestSettings guest;
 

@@ -15,9 +15,9 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class ListFooter : Gtk.Toolbar {
-        private Gtk.ToolButton button_add;
-        private Gtk.ToolButton button_remove;
-        private Gtk.ToolButton button_undo;
+        private Gtk.ToolButton  button_add;
+        private Gtk.ToolButton  button_remove;
+        private Gtk.ToolButton  button_undo;
 
         private Act.User? selected_user = null;
 

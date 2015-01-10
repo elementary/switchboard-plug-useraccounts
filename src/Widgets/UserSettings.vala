@@ -15,29 +15,29 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettings : Gtk.Grid {
-        private unowned Act.User    user;
-        private UserUtils            utils;
+        private unowned Act.User   user;
+        private UserUtils           utils;
 
-        private Gtk.Image            avatar;
-        private Gdk.Pixbuf?            avatar_pixbuf;
-        private Gtk.Button            avatar_button;
-        private Gtk.Entry            full_name_entry;
-        private Gtk.Button            password_button;
-        private Gtk.Button            enable_user_button;
+        private Gtk.Image           avatar;
+        private Gdk.Pixbuf?         avatar_pixbuf;
+        private Gtk.Button          avatar_button;
+        private Gtk.Entry           full_name_entry;
+        private Gtk.Button          password_button;
+        private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
         private Gtk.ComboBoxText    language_box;
-        private Gtk.Switch            autologin_switch;
-        private Gtk.Popover            avatar_popover;
-
-        private Dialogs.AvatarDialog        avatar_dialog;
+        private Gtk.Switch          autologin_switch;
+        private Gtk.Popover         avatar_popover;
 
         //lock widgets
-        private Gtk.Image full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-        private Gtk.Image user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-        private Gtk.Image language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-        private Gtk.Image autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-        private Gtk.Image password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-        private Gtk.Image enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+        private Gtk.Image           full_name_lock;
+        private Gtk.Image           user_type_lock;
+        private Gtk.Image           language_lock;
+        private Gtk.Image           autologin_lock;
+        private Gtk.Image           password_lock;
+        private Gtk.Image           enable_lock;
+
+        private Dialogs.AvatarDialog avatar_dialog;
 
         public UserSettings (Act.User _user) {
             user = _user;
@@ -119,17 +119,26 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             attach (enable_user_button, 1, 6, 1, 1);
 
-            //attach locks
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             attach (full_name_lock, 2, 0, 1, 1);
+
+            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             attach (user_type_lock, 2, 1, 1, 1);
+
+            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             attach (language_lock, 2, 2, 1, 1);
+
+            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             autologin_lock.margin_top = 20;
             attach (autologin_lock, 2, 3, 1, 1);
+
+            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             attach (password_lock, 2, 4, 1, 1);
+
+            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             attach (enable_lock, 2, 6, 1, 1);
 
             update_ui ();
-
             get_permission ().notify["allowed"].connect (update_ui);
         }
         

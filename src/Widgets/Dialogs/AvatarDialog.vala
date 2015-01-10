@@ -15,12 +15,12 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Dialogs {
     public class AvatarDialog : Gtk.Dialog {
-        private string pixbuf_path;
+        private string              pixbuf_path;
 
-        private Gtk.Grid main_grid;
-        private Gtk.Widget button_change;
-        private Gtk.Widget button_cancel;
-        private Widgets.CropView cropview;
+        private Gtk.Grid            main_grid;
+        private Gtk.Widget          button_change;
+        private Gtk.Widget          button_cancel;
+        private Widgets.CropView    cropview;
 
         public signal void request_avatar_change (Gdk.Pixbuf _pixbuf);
 

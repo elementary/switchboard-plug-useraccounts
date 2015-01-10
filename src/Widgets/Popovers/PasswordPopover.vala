@@ -15,10 +15,10 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordPopover : Gtk.Popover {
-        private unowned Act.User        user;
+        private unowned Act.User       user;
         private Gtk.Grid                main_grid;
-        private Widgets.PasswordEditor    pw_editor;
-        private Gtk.Button                button_change;
+        private Widgets.PasswordEditor  pw_editor;
+        private Gtk.Button              button_change;
         //private Gtk.Button            button_cancel;
 
         public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);

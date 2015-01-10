@@ -15,15 +15,15 @@ with this program. If not, see http://www.gnu.org/licenses/.
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
-        private Gtk.Entry current_pw_entry;
-        private Gtk.Entry new_pw_entry;
-        private Gtk.Entry confirm_pw_entry;
-        private Gtk.CheckButton show_pw_check;
-        private Gtk.LevelBar pw_level;
-        private Gtk.Revealer error_revealer;
-        private Gtk.Label error_pw_label;
-        private Gtk.Revealer error_new_revealer;
-        private Gtk.Label error_new_label;
+        private Gtk.Entry           current_pw_entry;
+        private Gtk.Entry           new_pw_entry;
+        private Gtk.Entry           confirm_pw_entry;
+        private Gtk.CheckButton     show_pw_check;
+        private Gtk.LevelBar        pw_level;
+        private Gtk.Revealer        error_revealer;
+        private Gtk.Label           error_pw_label;
+        private Gtk.Revealer        error_new_revealer;
+        private Gtk.Label           error_new_label;
 
         private PasswordQuality.Settings pwquality;
 
@@ -60,7 +60,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 current_pw_entry.halign = Gtk.Align.END;
                 current_pw_entry.set_visibility (false);
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press enter to authenticate"));
+                current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
                 current_pw_entry.changed.connect (() => {
                     if (current_pw_entry.get_text ().length > 0)
                         current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
