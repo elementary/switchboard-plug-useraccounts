@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-09 06:13+0000\n"
+"X-Launchpad-Export-Date: 2015-01-10 07:56+0000\n"
 "X-Generator: Launchpad (build 17298)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
@@ -251,18 +251,3 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Se necesitan privilegios administrativos para modificar algunas opciones"
-
-#~ msgid "Full name:"
-#~ msgstr "Nombre completo:"
-
-#~ msgid "User name:"
-#~ msgstr "Nombre de usuario:"
-
-#~ msgid "Current password:"
-#~ msgstr "Contraseña actual:"
-
-#~ msgid "New password:"
-#~ msgstr "Contraseña nueva:"
-
-#~ msgid "Confirm:"
-#~ msgstr "Confirmar:"
