@@ -25,14 +25,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
             set {
                 _pixbuf = value;
-
-                if (quadratic_selection && _pixbuf.get_width () > _pixbuf.get_height ())
-                    area = { 5, 5, _pixbuf.get_height (), _pixbuf.get_height ()};
-                else if (quadratic_selection && _pixbuf.get_width () < _pixbuf.get_height ())
-                    area = { 5, 5, _pixbuf.get_width (), _pixbuf.get_width ()};
-                else 
-                    area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2 };
-
                 queue_draw ();
             }
         }
@@ -106,15 +98,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public CropView.from_pixbuf (Gdk.Pixbuf __pixbuf) {
             pixbuf = __pixbuf;
-            if (_pixbuf.get_width () > _pixbuf.get_height ())
+            if (pixbuf.get_width () > pixbuf.get_height ())
                 area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
-            else if (_pixbuf.get_width () < _pixbuf.get_height ())
-                area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_width () / 2};
+            else if (pixbuf.get_width () < pixbuf.get_height ())
+                area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_width () / 2};
             else 
-                area = { 5, 5, _pixbuf.get_width () / 2, _pixbuf.get_height () / 2};
+                area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_height () / 2};
         }
-        public CropView () {
-            area = { 50, 50, 500, 500 };
+
+        public CropView.from_pixbuf_with_size (Gdk.Pixbuf __pixbuf, int x, int y) {
+            pixbuf = __pixbuf;
+            if (pixbuf.get_width () > pixbuf.get_height ()) {
+                area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2 };
+
+                double temp_scale = (double) x / (double) pixbuf.get_width ();
+                if (pixbuf.get_height () * temp_scale < y)
+                    y = (int) (pixbuf.get_height () * temp_scale);
+            } else if (pixbuf.get_width () < pixbuf.get_height ())
+                area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_width () / 2 };
+
+                double temp_scale = (double) y / (double) pixbuf.get_height ();
+                if (pixbuf.get_width () * temp_scale < x)
+                    x = (int) (pixbuf.get_width () * temp_scale);
+            else 
+                area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_height () / 2 };
+
+            set_size_request (x, y);
         }
 
         /**
@@ -255,7 +264,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             temp_x = (int) event.x;
             temp_y = (int) event.y;
 
-            //warning ("%d | %d".printf (area.width, area.height));
             queue_draw ();
 
             //return base.motion_notify_event (event);
@@ -308,14 +316,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var h = (int) Math.floor (area.height * scale);
 
             pos = {
-                { x, y },                 // upper left
-                { x + w / 2, y },        // upper midpoint
-                { x + w, y },             // upper right
-                { x + w, y + h / 2 },     // right midpoint
-                { x + w, y + h },         // lower right
-                { x + w / 2, y + h },    // lower midpoint
-                { x, y + h },             // lower left
-                { x, y + h / 2 }         // left midpoint
+                { x, y },               // upper left
+                { x + w / 2, y },       // upper midpoint
+                { x + w, y },           // upper right
+                { x + w, y + h / 2 },   // right midpoint
+                { x + w, y + h },       // lower right
+                { x + w / 2, y + h },   // lower midpoint
+                { x, y + h },           // lower left
+                { x, y + h / 2 }        // left midpoint
             };
 
             cr.rectangle (x, y, w, h);

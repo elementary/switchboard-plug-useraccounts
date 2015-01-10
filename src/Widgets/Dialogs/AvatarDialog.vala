@@ -45,16 +45,18 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
             main_grid.margin = 12;
             main_grid.row_spacing = 10;
             main_grid.column_spacing = 20;
-            main_grid.halign = Gtk.Align.END;
+            main_grid.halign = Gtk.Align.CENTER;
             content.add (main_grid);
 
             try {
-                Gtk.Frame frame = new Gtk.Frame (null);
-                cropview = new Widgets.CropView.from_pixbuf (new Gdk.Pixbuf.from_file (pixbuf_path));
-                cropview.set_size_request (400, 300);
+                cropview = new Widgets.CropView.from_pixbuf_with_size (new Gdk.Pixbuf.from_file (pixbuf_path), 400, 300);
                 cropview.quadratic_selection = true;
                 cropview.handles_visible = false;
+
+                Gtk.Frame frame = new Gtk.Frame (null);
+                //frame.halign = Gtk.Align.CENTER;
                 frame.add (cropview);
+
                 main_grid.attach (frame, 0, 0, 1, 1);
             } catch (Error e) {
                 critical (e.message);
