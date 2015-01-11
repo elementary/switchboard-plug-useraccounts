@@ -37,6 +37,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             guest = new GuestSettings ();
             get_usermanager ().notify["is-loaded"].connect (update);
+
+            if (get_usermanager ().is_loaded)
+                update ();
         }
 
         private void update () {
