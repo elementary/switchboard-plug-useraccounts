@@ -103,6 +103,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_new_revealer.set_reveal_child (false);
                 error_new_revealer.add (error_new_label);
                 attach (error_new_revealer, 0, 3, 1, 1);
+
             } else if (get_permission ().allowed)
                 is_auth = true;
 
@@ -111,7 +112,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.halign = Gtk.Align.END;
             new_pw_entry.set_placeholder_text (_("New Password"));
             new_pw_entry.set_visibility (false);
-            new_pw_entry.margin_top = 10;
+            if (!get_permission ().allowed)
+                new_pw_entry.margin_top = 10;
             new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
             new_pw_entry.changed.connect (compare_passwords);
             attach (new_pw_entry, 0, 2, 1, 1);
