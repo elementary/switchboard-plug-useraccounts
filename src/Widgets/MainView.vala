@@ -14,7 +14,7 @@
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class UserView : Granite.Widgets.ThinPaned {
+    public class MainView : Granite.Widgets.ThinPaned {
         public UserListBox          userlist;
         public Gtk.Stack            content;
         public Gtk.Box              sidebar;
@@ -22,9 +22,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public Gtk.ScrolledWindow   content_window;
         public ListFooter           footer;
 
-        private GuestSettings guest;
+        private GuestSettingsView   guest;
 
-        public UserView () {
+        public MainView () {
             expand = true;
 
             sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -35,7 +35,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             content = new Gtk.Stack ();
             content_window.add (content);
 
-            guest = new GuestSettings ();
+            guest = new GuestSettingsView ();
             get_usermanager ().notify["is-loaded"].connect (update);
 
             if (get_usermanager ().is_loaded)
@@ -82,12 +82,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void add_user_settings (Act.User user) {
-            debug ("Adding UserSettings Widget for User '%s'".printf (user.get_user_name ()));
-            content.add_named (new UserSettings (user), user.get_user_name ());
+            debug ("Adding UserSettingsView Widget for User '%s'".printf (user.get_user_name ()));
+            content.add_named (new UserSettingsView (user), user.get_user_name ());
         }
 
         private void remove_user_settings (Act.User user) {
-            debug ("Removing UserSettings Widget for User '%s'".printf (user.get_user_name ()));
+            debug ("Removing UserSettingsView Widget for User '%s'".printf (user.get_user_name ()));
             content.remove (content.get_child_by_name (user.get_user_name ()));
         }
 

@@ -14,7 +14,7 @@
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class UserSettings : Gtk.Grid {
+    public class UserSettingsView : Gtk.Grid {
         private unowned Act.User   user;
         private UserUtils           utils;
 
@@ -39,11 +39,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private Dialogs.AvatarDialog avatar_dialog;
 
-        public UserSettings (Act.User _user) {
-            user = _user;
-            utils = new UserUtils (user, this);
+        public UserSettingsView (Act.User user) {
+            this.user = user;
+            utils = new UserUtils (this.user, this);
             build_ui ();
-            user.changed.connect (update_ui);
+            this.user.changed.connect (update_ui);
         }
         
         public void build_ui () {
@@ -241,7 +241,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void avatar_button_clicked () {
-            get_pe_notifier ().unset_error ();
+            PasswdErrorNotifier.get_default ().unset_error ();
 
             avatar_popover = new Gtk.Popover (avatar_button);
             avatar_popover.set_position (Gtk.PositionType.BOTTOM);

@@ -17,19 +17,19 @@ Authored by: Marvin Beckers <beckersmarvin@gmail.com>
 ***/
 
 namespace SwitchboardPlugUserAccounts {
-    public static Plug plug;
+    public static UserAccountsPlug plug;
 
-    public class Plug : Switchboard.Plug {
+    public class UserAccountsPlug : Switchboard.Plug {
         private Gtk.Grid? main_grid;
         private Gtk.InfoBar infobar;
         private Gtk.InfoBar infobar_error;
         private Gtk.LockButton lock_button;
-        private Widgets.UserView userview;
+        private Widgets.MainView main_view;
 
         //translatable string for org.pantheon.user-accounts.administration policy
         public const string policy_message = _("Authentication is required to change user data");
 
-        public Plug () {
+        public UserAccountsPlug () {
             Object (category: Category.SYSTEM,
                 code_name: Build.PLUGCODENAME,
                 display_name: _("User Accounts"),
@@ -51,7 +51,7 @@ namespace SwitchboardPlugUserAccounts {
             infobar_error.no_show_all = true;
 
             var error_button = infobar_error.add_button (_("Ok"), 1);
-            error_button.clicked.connect (get_pe_notifier ().unset_error);
+            error_button.clicked.connect (PasswdErrorNotifier.get_default ().unset_error);
 
             var error_content = infobar_error.get_content_area () as Gtk.Container;
             Gtk.Label error_label = new Gtk.Label ("");
@@ -59,11 +59,11 @@ namespace SwitchboardPlugUserAccounts {
 
             main_grid.attach (infobar_error, 0, 0, 1, 1);
 
-            get_pe_notifier ().notified.connect (() => {
-                if (get_pe_notifier ().is_error ()) {
+            PasswdErrorNotifier.get_default ().notified.connect (() => {
+                if (PasswdErrorNotifier.get_default ().is_error ()) {
                     infobar_error.no_show_all = false;
                     error_label.set_label (("%s: %s".printf
-                        (_("Password change failed"), get_pe_notifier ().get_error_message ())));
+                        (_("Password change failed"), PasswdErrorNotifier.get_default ().get_error_message ())));
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;
@@ -83,8 +83,8 @@ namespace SwitchboardPlugUserAccounts {
             var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content.add (label);
 
-            userview = new Widgets.UserView ();
-            main_grid.attach (userview, 0, 2, 1, 1);
+            main_view = new Widgets.MainView ();
+            main_grid.attach (main_view, 0, 2, 1, 1);
             main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
@@ -135,6 +135,6 @@ namespace SwitchboardPlugUserAccounts {
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating User Accounts plug");
-    var plug = new SwitchboardPlugUserAccounts.Plug ();
+    var plug = new SwitchboardPlugUserAccounts.UserAccountsPlug ();
     return plug;
 }

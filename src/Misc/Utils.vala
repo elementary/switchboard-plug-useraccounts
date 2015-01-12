@@ -127,10 +127,10 @@ namespace SwitchboardPlugUserAccounts {
         return false;
     }
 
-    public static bool is_valid_username (string _username) {
+    public static bool is_valid_username (string username) {
         try {
             var regex = new Regex ("^[a-z]+[a-z0-9]+$");
-            if (regex.match (_username))
+            if (regex.match (username))
                 return true;
             return false;
         } catch (Error e) {
@@ -139,11 +139,11 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
-    public static string gen_username (string _fullname) {
+    public static string gen_username (string fullname) {
         string username = "";
         bool met_alpha = false;
 
-        foreach (char c in _fullname.to_utf8 ()) {
+        foreach (char c in fullname.to_utf8 ()) {
             if (c.isalpha ()) {
                 username += c.to_string ().down ();
                 met_alpha = true;
@@ -151,28 +151,28 @@ namespace SwitchboardPlugUserAccounts {
                 username += c.to_string ();
         }
 
-        warning (username);
         return username;
     }
 
-    public static void create_new_user (string _fullname, string _username, Act.UserAccountType _usertype, Act.UserPasswordMode _mode, string? _pw = null) {
+    public static void create_new_user (string fullname, string username,
+    Act.UserAccountType usertype, Act.UserPasswordMode mode, string? password = null) {
         if (get_permission ().allowed) {
             try {
-                Act.User created_user = get_usermanager ().create_user (_username, _fullname, _usertype);
+                Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
 
                 get_usermanager ().user_added.connect ((user) => {
                     if (user == created_user) {
                         created_user.set_locked (false);
-                            if (_mode == Act.UserPasswordMode.REGULAR && _pw != null)
-                                created_user.set_password (_pw, "");
-                            else if (_mode == Act.UserPasswordMode.NONE)
+                            if (mode == Act.UserPasswordMode.REGULAR && password != null)
+                                created_user.set_password (password, "");
+                            else if (mode == Act.UserPasswordMode.NONE)
                                 created_user.set_password_mode (Act.UserPasswordMode.NONE);
-                            else if (_mode == Act.UserPasswordMode.SET_AT_LOGIN)
+                            else if (mode == Act.UserPasswordMode.SET_AT_LOGIN)
                                 created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
                     }
                 });
             } catch (Error e) {
-                critical ("Creation of user '%s' failed".printf (_username));
+                critical ("Creation of user '%s' failed".printf (username));
             }
         }
     }
@@ -219,12 +219,12 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
-    public static void set_guest_session_state (bool _state) {
-        if (get_permission ().allowed && _state != guest_session_state) {
+    public static void set_guest_session_state (bool new_state) {
+        if (get_permission ().allowed && new_state != guest_session_state) {
             string arg = "";
-            if (!_state)
+            if (!new_state)
                 arg = "--off";
-            else if (_state)
+            else if (new_state)
                 arg = "--on";
 
             string output;
@@ -242,7 +242,7 @@ namespace SwitchboardPlugUserAccounts {
                     out status);
 
                 if (output == "")
-                    guest_session_state = _state;
+                    guest_session_state = new_state;
             } catch (Error e) {
                 warning (e.message);
             }

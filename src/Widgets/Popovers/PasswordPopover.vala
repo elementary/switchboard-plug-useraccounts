@@ -23,9 +23,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
 
-        public PasswordPopover (Gtk.Widget _relative, Act.User _user) {
-            user = _user;
-            set_relative_to (_relative);
+        public PasswordPopover (Gtk.Widget relative, Act.User user) {
+            this.user = user;
+            set_relative_to (relative);
             set_position (Gtk.PositionType.TOP);
             set_modal (true);
 

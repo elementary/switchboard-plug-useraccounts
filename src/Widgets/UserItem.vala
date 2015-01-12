@@ -21,13 +21,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Box label_box;
         private Gtk.Label full_name_label;
         private Gtk.Label description_label;
-        
-        public Act.User user;
+
+        public unowned Act.User user;
 
         public string user_name;
 
-        public UserItem (Act.User _user) {
-            user = _user;
+        public UserItem (Act.User user) {
+            this.user = user;
             user.changed.connect (update_ui);
             user_name = user.get_user_name ();
 

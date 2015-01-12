@@ -46,10 +46,10 @@ This class is based on obscure.c from passwd. License for obscure.c's source cod
 ***/
 
 namespace SwitchboardPlugUserAccounts {
-    public class ObscurityTest {
-        public ObscurityTest () { }
+    public class ObscurityChecker {
+        public ObscurityChecker () { }
 
-        public enum RESULT {
+        public enum Result {
             OBSCURE,
             SHORT,
             PALINDROME,
@@ -57,30 +57,30 @@ namespace SwitchboardPlugUserAccounts {
             SIMPLE
         }
 
-        public static ObscurityTest.RESULT test (string _oldpw, string _newpw) {
-            if (_oldpw.down () == _newpw.down () || is_similiar (_oldpw, _newpw))
-                return ObscurityTest.RESULT.SIMILIAR;
+        public static Result test (string old_password, string new_password) {
+            if (old_password.down () == new_password.down () || is_similiar (old_password, new_password))
+                return Result.SIMILIAR;
 
-            if (is_simple (_newpw))
-                return ObscurityTest.RESULT.SIMPLE;
+            if (is_simple (new_password))
+                return Result.SIMPLE;
 
-            if (is_palindrome (_newpw))
-                return ObscurityTest.RESULT.PALINDROME;
+            if (is_palindrome (new_password))
+                return Result.PALINDROME;
 
-            return ObscurityTest.RESULT.OBSCURE;
+            return Result.OBSCURE;
         }
 
-        private static bool is_similiar (string _oldpw, string _newpw) {
-            char[] oldpw = _oldpw.to_utf8 ();
-            char[] newpw = _newpw.to_utf8 ();
+        private static bool is_similiar (string old_password, string new_password) {
+            char[] old_password_ar = old_password.to_utf8 ();
+            char[] new_password_ar = new_password.to_utf8 ();
             int i;
             int j;
 
-            if (_newpw.length >= 8)
+            if (new_password.length >= 8)
                 return false;
 
-            for (i = j = 0; ('\0' != newpw[i]) && ('\0' != oldpw[i]); i++) {
-                if (Posix.strchr (_newpw, oldpw[i]) != null)
+            for (i = j = 0; ('\0' != new_password_ar[i]) && ('\0' != old_password_ar[i]); i++) {
+                if (Posix.strchr (new_password, old_password_ar[i]) != null)
                     j++;
             }
 
@@ -90,8 +90,8 @@ namespace SwitchboardPlugUserAccounts {
             return true;
         }
 
-        private static bool is_simple (string _newpw) {
-            char[] newpw = _newpw.to_utf8 ();
+        private static bool is_simple (string new_password) {
+            char[] new_password_ar = new_password.to_utf8 ();
             bool digits = false;
             bool uppers = false;
             bool lowers = false;
@@ -99,12 +99,12 @@ namespace SwitchboardPlugUserAccounts {
             int size = 9;
             int i;
 
-            for (i = 0; '\0' != newpw[i]; i++) {
-                if (newpw[i].isdigit ())
+            for (i = 0; '\0' != new_password_ar[i]; i++) {
+                if (new_password_ar[i].isdigit ())
                     digits = true;
-                else if (newpw[i].isupper ())
+                else if (new_password_ar[i].isupper ())
                     uppers = true;
-                else if (newpw[i].islower ())
+                else if (new_password_ar[i].islower ())
                     lowers = true;
                 else
                     others = true;
@@ -125,13 +125,13 @@ namespace SwitchboardPlugUserAccounts {
             return true;
         }
 
-        private static bool is_palindrome (string _newpw) {
-            char[] newpw = _newpw.to_utf8 ();
+        private static bool is_palindrome (string new_password) {
+            char[] new_password_ar = new_password.to_utf8 ();
             size_t i, j;
-            i = _newpw.length;
+            i = new_password.length;
 
             for (j = 0; j < i; j++) {
-                if (newpw[i - j - 1] != newpw[j])
+                if (new_password_ar[i - j - 1] != new_password_ar[j])
                     return false;
             }
             return true;
