@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-08 23:26+0100\n"
+"POT-Creation-Date: 2015-01-11 12:59+0100\n"
 "PO-Revision-Date: 2015-01-09 03:19+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-10 07:56+0000\n"
+"X-Launchpad-Export-Date: 2015-01-12 07:43+0000\n"
 "X-Generator: Launchpad (build 17298)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
@@ -17,67 +17,67 @@ msgid "Current Password"
 msgstr "Contraseña actual"
 
 #: ../src/Widgets/PasswordEditor.vala:63
-msgid "Press enter to authenticate"
-msgstr "Presione Intro para autenticarse"
+msgid "Press to authenticate"
+msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
 msgstr "Falló la autenticación"
 
-#: ../src/Widgets/PasswordEditor.vala:112
+#: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
 msgstr "Contraseña nueva"
 
-#: ../src/Widgets/PasswordEditor.vala:115
+#: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
 msgstr "La contraseña no puede estar vacía"
 
-#: ../src/Widgets/PasswordEditor.vala:131
+#: ../src/Widgets/PasswordEditor.vala:133
 msgid "Confirm New Password"
 msgstr "Confirmar la contraseña nueva"
 
-#: ../src/Widgets/PasswordEditor.vala:134
+#: ../src/Widgets/PasswordEditor.vala:136
 msgid "Passwords do not match"
 msgstr "Las contraseñas no coinciden"
 
-#: ../src/Widgets/PasswordEditor.vala:138
+#: ../src/Widgets/PasswordEditor.vala:140
 msgid "Show passwords"
 msgstr "Mostrar las contraseñas"
 
-#: ../src/Widgets/PasswordEditor.vala:165
+#: ../src/Widgets/PasswordEditor.vala:167
 msgid "Password accepted"
 msgstr "Contraseña aceptada"
 
-#: ../src/Widgets/PasswordEditor.vala:186
+#: ../src/Widgets/PasswordEditor.vala:188
 msgid "Weak password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:188
+#: ../src/Widgets/PasswordEditor.vala:190
 msgid "Medium password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:190
+#: ../src/Widgets/PasswordEditor.vala:192
 msgid "Strong password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:205
+#: ../src/Widgets/PasswordEditor.vala:207
 msgid "Resembles your current password"
 msgstr "Es similar a la contraseña actual"
 
-#: ../src/Widgets/PasswordEditor.vala:207
+#: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is too simple"
 msgstr "La contraseña nueva es demasiado simple"
 
-#: ../src/Widgets/PasswordEditor.vala:209
+#: ../src/Widgets/PasswordEditor.vala:211
 msgid "New password is a palindrome"
 msgstr "La contraseña nueva es un palíndromo"
 
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:66
-#: ../src/Widgets/UserSettings.vala:267
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+#: ../src/Widgets/UserSettings.vala:276
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:69
 msgid "Change Avatar"
 msgstr "Cambiar avatar"
 
@@ -103,8 +103,8 @@ msgid "Username"
 msgstr "Nombre de usuario"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:74
-msgid "Can only contain lower case letters and numbers"
-msgstr "Puede contener solo letras minúsculas y números"
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Set password now"
@@ -195,35 +195,35 @@ msgstr "Acceder automáticamente:"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: ../src/Widgets/UserSettings.vala:205
+#: ../src/Widgets/UserSettings.vala:214
 msgid "None set"
 msgstr "No establecida"
 
-#: ../src/Widgets/UserSettings.vala:210
+#: ../src/Widgets/UserSettings.vala:219
 msgid "Enable User Account"
 msgstr "Activar cuenta de usuario"
 
-#: ../src/Widgets/UserSettings.vala:213
+#: ../src/Widgets/UserSettings.vala:222
 msgid "Disable User Account"
 msgstr "Desactivar cuenta de usuario"
 
-#: ../src/Widgets/UserSettings.vala:246
+#: ../src/Widgets/UserSettings.vala:255
 msgid "Set from File ..."
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:247
+#: ../src/Widgets/UserSettings.vala:256
 msgid "Remove Avatar"
 msgstr "Eliminar avatar"
 
-#: ../src/Widgets/UserSettings.vala:266
+#: ../src/Widgets/UserSettings.vala:275
 msgid "Select an image"
 msgstr "Seleccione una imagen"
 
-#: ../src/Widgets/UserSettings.vala:268
+#: ../src/Widgets/UserSettings.vala:277
 msgid "Open"
 msgstr "Abrir"
 
-#: ../src/Widgets/UserSettings.vala:271
+#: ../src/Widgets/UserSettings.vala:280
 msgid "Images"
 msgstr "Imágenes"
 
