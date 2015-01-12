@@ -129,7 +129,7 @@ namespace SwitchboardPlugUserAccounts {
 
     public static bool is_valid_username (string username) {
         try {
-            var regex = new Regex ("^[a-z]+[a-z0-9]+$");
+            var regex = new Regex ("^[a-z]+[a-z0-9]*$");
             if (regex.match (username))
                 return true;
             return false;
@@ -137,6 +137,14 @@ namespace SwitchboardPlugUserAccounts {
             critical (e.message);
             return false;
         }
+    }
+
+    public static bool is_taken_username (string username) {
+        foreach (unowned Act.User user in get_usermanager ().list_users ()) {
+            if (user.get_user_name () == username)
+                return true;
+        }
+        return false;
     }
 
     public static string gen_username (string fullname) {

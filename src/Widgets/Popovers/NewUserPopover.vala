@@ -19,6 +19,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ComboBoxText        accounttype_combobox;
         private Gtk.Entry               fullname_entry;
         private Gtk.Entry               username_entry;
+        private Gtk.Revealer            error_revealer;
+        private Gtk.Label               error_label;
         private Gtk.RadioButton         option_nopw;
         private Gtk.RadioButton         option_onlogin;
         private Gtk.RadioButton         option_setpw;
@@ -43,7 +45,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             main_grid = new Gtk.Grid ();
             main_grid.hexpand = true;
             main_grid.margin = 12;
-            main_grid.row_spacing = 10;
             add (main_grid);
 
             accounttype_combobox = new Gtk.ComboBoxText ();
@@ -59,6 +60,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             fullname_entry.halign = Gtk.Align.START;
             fullname_entry.set_placeholder_text (_("Full Name"));
             fullname_entry.changed.connect (check_input);
+            fullname_entry.margin_top = 10;
             fullname_entry.changed.connect (() => 
                 username_entry.set_text (gen_username (fullname_entry.get_text ())));
             main_grid.attach (fullname_entry, 0, 1, 2, 1);
@@ -71,8 +73,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 "dialog-information-symbolic");
             username_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY,
                 _("Can only contain lower case letters, numbers and no spaces"));
+            username_entry.margin_top = 10;
             username_entry.changed.connect (check_input);
             main_grid.attach (username_entry, 0, 2, 2, 1);
+
+            error_label = new Gtk.Label ("");
+            error_label.set_halign (Gtk.Align.END);
+            error_label.get_style_context ().add_class ("error");
+            error_label.use_markup = true;
+            error_label.margin_top = 10;
+
+            error_revealer = new Gtk.Revealer ();
+            error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+            error_revealer.set_transition_duration (200);
+            error_revealer.set_reveal_child (false);
+            error_revealer.add (error_label);
+            main_grid.attach (error_revealer, 0, 3, 2, 1);
 
             option_setpw = new Gtk.RadioButton.with_label (null, _("Set password now"));
             option_nopw = new Gtk.RadioButton.with_label_from_widget
@@ -87,7 +103,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             //main_grid.attach (option_nopw, 0, 5, 2, 1);
 
             pw_editor = new Widgets.PasswordEditor ();
-            pw_editor.margin_top = 5;
+            pw_editor.margin_top = 15;
             pw_editor.validation_changed.connect (check_input);
 
             pw_revealer = new Gtk.Revealer ();
@@ -99,6 +115,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
             button_box.hexpand = true;
             button_box.halign = Gtk.Align.END;
+            button_box.margin_top = 10;
             main_grid.attach (button_box, 0, 7, 1, 1);
 
             button_create = new Gtk.Button.with_label (_("Create User"));
@@ -131,11 +148,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void check_input () {
+
+            bool username_is_valid = is_valid_username (username_entry.get_text ());
+            bool username_is_taken = is_taken_username (username_entry.get_text ());
             if (fullname_entry.get_text() != "" && username_entry.get_text () != ""
-            && pw_editor.is_valid && is_valid_username (username_entry.get_text ()))
+            && pw_editor.is_valid && username_is_valid && !username_is_taken) {
                     button_create.set_sensitive (true);
-            else
+                    error_revealer.set_reveal_child (false);
+            } else {
                 button_create.set_sensitive (false);
+                if (username_is_taken || (!username_is_valid && username_entry.get_text () != "")) {
+                    if (username_is_taken)
+                        error_label.set_label ("<span font_size=\"small\">%s</span>".printf
+                            (_("Username is already taken")));
+                    else if (!username_is_valid)
+                        error_label.set_label ("<span font_size=\"small\">%s</span>".printf
+                            (_("Username is not valid")));
+
+                    error_revealer.set_reveal_child (true);
+                } else
+                    error_revealer.set_reveal_child (false);
+            }
         }
     }
 }
