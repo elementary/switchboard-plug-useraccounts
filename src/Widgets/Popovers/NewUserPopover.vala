@@ -27,14 +27,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Widgets.PasswordEditor  pw_editor;
 
         private Gtk.Button              button_create;
-        //private Gtk.Button            button_cancel;
 
         public signal void             request_user_creation 
             (string _fullname, string _username, Act.UserAccountType _usertype, 
             Act.UserPasswordMode _mode, string? _pw = null);
 
-        public NewUserPopover (Gtk.Widget _relative) {
-            set_relative_to (_relative);
+        public NewUserPopover (Gtk.Widget relative) {
+            set_relative_to (relative);
             set_position (Gtk.PositionType.BOTTOM);
 
             build_ui ();
@@ -125,11 +124,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 hide ();
                 destroy ();
             });
-            /*button_cancel = new Gtk.Button.with_label (_("Cancel"));
-            button_cancel.set_size_request (100, 25);*/
 
             button_box.pack_end (button_create);
-            //button_box.pack_end (button_cancel);
 
             show_all ();
         }

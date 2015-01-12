@@ -16,16 +16,16 @@
 namespace SwitchboardPlugUserAccounts {
     public class UserUtils {
         private unowned Act.User user;
-        private unowned Widgets.UserSettings widget;
+        private unowned Widgets.UserSettingsView widget;
 
-        public UserUtils (Act.User _user, Widgets.UserSettings _widget) {
-            user = _user;
-            widget = _widget;
+        public UserUtils (Act.User user, Widgets.UserSettingsView widget) {
+            this.user = user;
+            this.widget = widget;
         }
 
-        public void change_avatar (Gdk.Pixbuf? _pixbuf) {
+        public void change_avatar (Gdk.Pixbuf? new_pixbuf) {
             if (get_current_user () == user || get_permission ().allowed) {
-                if (_pixbuf != null) {
+                if (new_pixbuf != null) {
                     var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-0");
                     int i = 0;
                     while (FileUtils.test (path, FileTest.EXISTS)) {
@@ -34,7 +34,7 @@ namespace SwitchboardPlugUserAccounts {
                     }
                     try {
                         debug ("Saving temporary avatar file to %s".printf (path));
-                        _pixbuf.savev (path, "png", {}, {});
+                        new_pixbuf.savev (path, "png", {}, {});
                         debug ("Setting avatar icon file for %s from temporary file %s".printf (user.get_user_name (), path));
                         user.set_icon_file (path);
                     } catch (Error e) {
@@ -47,23 +47,23 @@ namespace SwitchboardPlugUserAccounts {
             }
         }
 
-        public void change_full_name (string _new_full_name) {
+        public void change_full_name (string new_full_name) {
             if (get_current_user () == user || get_permission ().allowed) {
-                if (_new_full_name != user.get_real_name ()) {
-                    debug ("Setting real name for %s to %s".printf (user.get_user_name (), _new_full_name));
-                    user.set_real_name (_new_full_name);
+                if (new_full_name != user.get_real_name ()) {
+                    debug ("Setting real name for %s to %s".printf (user.get_user_name (), new_full_name));
+                    user.set_real_name (new_full_name);
                 } else
                     widget.update_ui ();
             }
         }
 
-        public void change_user_type (int _new_user_type) {
+        public void change_user_type (int new_user_type) {
             if (get_permission ().allowed) {
-                if (user.get_account_type () == Act.UserAccountType.STANDARD && _new_user_type == 1) {
+                if (user.get_account_type () == Act.UserAccountType.STANDARD && new_user_type == 1) {
                     debug ("Setting account type for %s to Administrator".printf (user.get_user_name ()));
                     user.set_account_type (Act.UserAccountType.ADMINISTRATOR);
                 } else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR
-                            && _new_user_type == 0 && !is_last_admin (user)) {
+                            && new_user_type == 0 && !is_last_admin (user)) {
                     debug ("Setting account type for %s to Standard".printf (user.get_user_name ()));
                     user.set_account_type (Act.UserAccountType.STANDARD);
                 } else
@@ -71,7 +71,7 @@ namespace SwitchboardPlugUserAccounts {
             }
         }
 
-        public void change_language (string _new_lang) {
+        public void change_language (string new_lang) {
             if (get_current_user () == user || get_permission ().allowed) {
                 string current_lang = "";
                 if (user.get_language ().length == 2)
@@ -81,16 +81,16 @@ namespace SwitchboardPlugUserAccounts {
 
                 string new_lang_code = "";
                 foreach (string s in get_installed_languages ()) {
-                    if (s.length == 2 && Gnome.Languages.get_language_from_code (s, null) == _new_lang) {
+                    if (s.length == 2 && Gnome.Languages.get_language_from_code (s, null) == new_lang) {
                         new_lang_code = s;
                         break;
-                    } else if (s.length == 5 && Gnome.Languages.get_language_from_locale (s, null) == _new_lang) {
+                    } else if (s.length == 5 && Gnome.Languages.get_language_from_locale (s, null) == new_lang) {
                         new_lang_code = s;
                         break;
                     }
                 }
 
-                if (_new_lang != user.get_language ()) {
+                if (new_lang != user.get_language ()) {
                     debug ("Setting language for %s to %s".printf (user.get_user_name (), new_lang_code));
                     user.set_language (new_lang_code);
                 } else
@@ -98,12 +98,12 @@ namespace SwitchboardPlugUserAccounts {
             }
         }
 
-        public void change_autologin (bool _autologin) {
+        public void change_autologin (bool new_autologin) {
             if (get_permission ().allowed) {
-                if (user.get_automatic_login () && !_autologin) {
+                if (user.get_automatic_login () && !new_autologin) {
                     debug ("Removing automatic login for %s".printf (user.get_user_name ()));
                     user.set_automatic_login (false);
-                } else if (!user.get_automatic_login () && _autologin) {
+                } else if (!user.get_automatic_login () && new_autologin) {
                     debug ("Setting automatic login for %s".printf (user.get_user_name ()));
                     foreach (Act.User temp_user in get_usermanager ().list_users ()) {
                         if (temp_user.get_automatic_login () && temp_user != user)
@@ -114,13 +114,13 @@ namespace SwitchboardPlugUserAccounts {
             }
         }
 
-        public void change_password (Act.UserPasswordMode _mode, string? _new_password) {
+        public void change_password (Act.UserPasswordMode mode, string? new_password) {
             if (get_permission ().allowed) {
-                switch (_mode) {
+                switch (mode) {
                     case Act.UserPasswordMode.REGULAR:
-                        if (_new_password != null) {
+                        if (new_password != null) {
                             debug ("Setting new password for %s".printf (user.get_user_name ()));
-                            user.set_password (_new_password, "");
+                            user.set_password (new_password, "");
                         }
                         break;
                     case Act.UserPasswordMode.NONE:
@@ -134,14 +134,14 @@ namespace SwitchboardPlugUserAccounts {
                     default: break;
                 }
             } else if (user == get_current_user ()) {
-                if (_new_password != null) {
+                if (new_password != null) {
                     // we are going to assume that if a normal user calls this method,
                     // he is authenticated against the PasswdHandler
-                    Passwd.passwd_change_password (get_passwd_handler (), _new_password, (h, e) => {
+                    Passwd.passwd_change_password (get_passwd_handler (), new_password, (h, e) => {
                         if (e != null) {
                             warning ("Password change for %s failed".printf (user.get_user_name ()));
                             warning (e.message);
-                            get_pe_notifier ().set_error (e.message);
+                            PasswdErrorNotifier.get_default ().set_error (e.message);
                         } else
                             debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
                     });

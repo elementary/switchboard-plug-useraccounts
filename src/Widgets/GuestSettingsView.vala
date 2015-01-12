@@ -14,12 +14,12 @@
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class GuestSettings : Gtk.Grid {
+    public class GuestSettingsView : Gtk.Grid {
         private Gtk.Switch guest_switch;
         private Gtk.Image guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
         public signal void guest_switch_changed ();
 
-        public GuestSettings () {
+        public GuestSettingsView () {
             vexpand = false;
             valign = Gtk.Align.CENTER;
             halign = Gtk.Align.CENTER;
@@ -75,8 +75,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             Gtk.Label label = new Gtk.Label ("%s %s\n\n%s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),
-                    _("Once they log out, all of their settings and data will be deleted."),
-                    _("Changes to the Guest Session will apply after the system restarted.")));
+                _("Once they log out, all of their settings and data will be deleted."),
+                _("Changes to the Guest Session will apply after the system restarted.")));
             label.justify = Gtk.Justification.FILL;
             label.valign = Gtk.Align.START;
             label.set_line_wrap (true);

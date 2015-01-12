@@ -98,8 +98,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
          */
         const int r = 8;
 
-        public CropView.from_pixbuf (Gdk.Pixbuf __pixbuf) {
-            pixbuf = __pixbuf;
+        public CropView.from_pixbuf (Gdk.Pixbuf pixbuf) {
+            this.pixbuf = pixbuf;
             if (pixbuf.get_width () > pixbuf.get_height ())
                 area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
             else if (pixbuf.get_width () < pixbuf.get_height ())

@@ -17,13 +17,13 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Misc/Utils.vala
     Misc/UserUtils.vala
     Misc/PasswdErrorNotifier.vala
-    Misc/ObscurityTest.vala
-    Widgets/UserView.vala
+    Misc/ObscurityChecker.vala
+    Widgets/MainView.vala
     Widgets/UserListBox.vala
     Widgets/ListFooter.vala
     Widgets/UserItem.vala
-    Widgets/UserSettings.vala
-    Widgets/GuestSettings.vala
+    Widgets/UserSettingsView.vala
+    Widgets/GuestSettingsView.vala
     Widgets/PasswordEditor.vala
     Widgets/CropView.vala
     Widgets/Popovers/NewUserPopover.vala

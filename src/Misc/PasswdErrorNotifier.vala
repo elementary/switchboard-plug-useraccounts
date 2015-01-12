@@ -22,9 +22,9 @@ namespace SwitchboardPlugUserAccounts {
 
         public PasswdErrorNotifier () { }
 
-        public void set_error (string _error_message) {
+        public void set_error (string error_message) {
             error = true;
-            error_message = _error_message;
+            this.error_message = error_message;
             notified ();
         }
 
@@ -41,15 +41,11 @@ namespace SwitchboardPlugUserAccounts {
         public string get_error_message () {
             return error_message;
         }
-    }
 
-    private static PasswdErrorNotifier pe_notifier;
+        private static GLib.Once<PasswdErrorNotifier> instance;
 
-    public static PasswdErrorNotifier get_pe_notifier () {
-        if (pe_notifier != null)
-            return pe_notifier;
-
-        pe_notifier = new PasswdErrorNotifier ();
-        return pe_notifier;
+        public static unowned PasswdErrorNotifier get_default () {
+            return instance.once (() => { return new PasswdErrorNotifier (); });
+        }
     }
 }

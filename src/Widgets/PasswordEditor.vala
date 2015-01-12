@@ -27,7 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private PasswordQuality.Settings pwquality;
 
-        public bool is_auth = false;
+        public bool is_authenticated = false;
         private signal void auth_changed ();
 
         public bool is_valid = false;
@@ -40,8 +40,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             build_ui ();
         }
 
-        public PasswordEditor.from_width (int _entry_width) {
-            entry_width = _entry_width;
+        public PasswordEditor.from_width (int entry_width) {
+            this.entry_width = entry_width;
             pwquality = new PasswordQuality.Settings ();
             build_ui ();
         }
@@ -51,7 +51,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             /*
              * users who don't have superuser privileges will need to auth against passwd.
-             * therefore they will need these UI elements created and displayed to set is_auth.
+             * therefore they will need these UI elements created and displayed to set is_authenticated.
              */
             if (!get_permission ().allowed) {
                 current_pw_entry = new Gtk.Entry ();
@@ -105,7 +105,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (error_new_revealer, 0, 3, 1, 1);
 
             } else if (get_permission ().allowed)
-                is_auth = true;
+                is_authenticated = true;
 
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.set_size_request (entry_width, 0);
@@ -150,7 +150,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
             attach (show_pw_check, 0, 6, 1, 1);
 
-            if (!is_auth) {
+            if (!is_authenticated) {
                 new_pw_entry.set_sensitive (false);
                 confirm_pw_entry.set_sensitive (false);
                 show_pw_check.set_sensitive (false);
@@ -161,7 +161,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void update_ui () {
-            if (is_auth) {
+            if (is_authenticated) {
                 current_pw_entry.set_sensitive (false);
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password accepted"));
@@ -196,18 +196,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                  * which is based on passwd's one to guess passwd's response.
                  */
                 if (!get_permission ().allowed) {
-                    var result = ObscurityTest.test (current_pw_entry.get_text (),
+                    var result = ObscurityChecker.test (current_pw_entry.get_text (),
                         new_pw_entry.get_text ());
-                    if (result == ObscurityTest.RESULT.OBSCURE) {
+                    if (result == ObscurityChecker.Result.OBSCURE) {
                         is_obscure = true;
                         error_new_revealer.set_reveal_child (false);
                     } else {
                         var error_msg = "test";
-                        if (result == ObscurityTest.RESULT.SIMILIAR)
+                        if (result == ObscurityChecker.Result.SIMILIAR)
                             error_msg = _("Resembles your current password");
-                        else if (result == ObscurityTest.RESULT.SIMPLE)
+                        else if (result == ObscurityChecker.Result.SIMPLE)
                             error_msg = _("New password is too simple");
-                        else if (result == ObscurityTest.RESULT.PALINDROME)
+                        else if (result == ObscurityChecker.Result.PALINDROME)
                             error_msg = _("New password is a palindrome");
 
                         error_new_label.set_label ("<span font_size=\"small\">%s</span>"
@@ -251,12 +251,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     debug ("Authentication error: %s".printf (e.message));
                     error_revealer.set_reveal_child (true);
                     error_revealer.show_all ();
-                    is_auth = false;
+                    is_authenticated = false;
                     auth_changed ();
                 } else {
                     debug ("User is authenticated for password change now");
                     new_pw_entry.set_sensitive (true);
-                    is_auth = true;
+                    is_authenticated = true;
                     auth_changed ();
                 }
             });
