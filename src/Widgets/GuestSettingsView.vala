@@ -16,8 +16,10 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class GuestSettingsView : Gtk.Grid {
         private Gtk.Switch guest_switch;
-        private Gtk.Image guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+        private Gtk.Image guest_lock;
         public signal void guest_switch_changed ();
+
+        private const string no_permission_string   = _("You do not have permissions to change this");
 
         public GuestSettingsView () {
             vexpand = false;
@@ -71,8 +73,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
             sub_grid.attach (guest_switch, 1, 1, 1, 1);
 
-            sub_grid.attach (guest_lock, 2, 1, 1, 1);
+            guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             guest_lock.set_opacity (0.5);
+            guest_lock.set_tooltip_text (no_permission_string);
+            sub_grid.attach (guest_lock, 2, 1, 1, 1);
 
             Gtk.Label label = new Gtk.Label ("%s %s\n\n%s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),

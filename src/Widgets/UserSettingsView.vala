@@ -40,6 +40,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private Dialogs.AvatarDialog avatar_dialog;
 
+        private const string no_permission_string   = _("You do not have permissions to change this");
+        private const string current_user_string    = _("You cannot change this for the currently active user");
+        private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
+
         public UserSettingsView (Act.User user) {
             this.user = user;
             utils = new UserUtils (this.user, this);
@@ -92,10 +96,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 language_button = new Gtk.Button ();
                 language_button.set_size_request (0, 27);
                 language_button.clicked.connect (() => {
-                    //THIS DOES CURRENTLY NOT WORK (TODO: figure out how to call the locale plug)
+                    //TODO locale plug might change its codename because that's currently not really okay
                     var command = new Granite.Services.SimpleCommand (
                             Environment.get_home_dir (),
-                            "/usr/bin/switchboard -o locale");
+                            "/usr/bin/switchboard -o system-pantheon-locale");
                     command.run ();
                     return;
                 });
@@ -136,22 +140,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (enable_user_button, 1, 6, 1, 1);
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            full_name_lock.set_tooltip_text (no_permission_string);
             attach (full_name_lock, 2, 0, 1, 1);
 
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            user_type_lock.set_tooltip_text (no_permission_string);
             attach (user_type_lock, 2, 1, 1, 1);
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            language_lock.set_tooltip_text (no_permission_string);
             attach (language_lock, 2, 2, 1, 1);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            autologin_lock.set_tooltip_text (no_permission_string);
             autologin_lock.margin_top = 20;
             attach (autologin_lock, 2, 3, 1, 1);
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            password_lock.set_tooltip_text (no_permission_string);
             attach (password_lock, 2, 4, 1, 1);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            enable_lock.set_tooltip_text (no_permission_string);
             attach (enable_lock, 2, 6, 1, 1);
 
             update_ui ();
@@ -168,6 +178,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             autologin_lock.set_opacity (0.5);
             password_lock.set_opacity (0.5);
             enable_lock.set_opacity (0.5);
+
+            if (!get_permission ().allowed) {
+                user_type_lock.set_tooltip_text (no_permission_string);
+                enable_lock.set_tooltip_text (no_permission_string);
+            } else if (get_current_user () == user) {
+                user_type_lock.set_tooltip_text (current_user_string);
+                enable_lock.set_tooltip_text (current_user_string);
+            } else if (is_last_admin (user)) {
+                user_type_lock.set_tooltip_text (last_admin_string);
+                enable_lock.set_tooltip_text (last_admin_string);
+            }
 
             if (get_current_user () == user || get_permission ().allowed) {
                 avatar_button.set_sensitive (true);

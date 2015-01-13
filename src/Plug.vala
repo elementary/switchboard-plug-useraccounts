@@ -31,7 +31,7 @@ namespace SwitchboardPlugUserAccounts {
 
         public UserAccountsPlug () {
             Object (category: Category.SYSTEM,
-                code_name: Build.PLUGCODENAME,
+                code_name: "system-pantheon-useraccounts",
                 display_name: _("User Accounts"),
                 description: _("Manage user accounts on your local system"),
                 icon: "system-users");

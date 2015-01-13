@@ -12,7 +12,7 @@ set (PLUGTITLE "User Accounts")
 set (VERSION "0.1")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
-project (switchboard-plug-useraccounts)
+project (${PLUGNAME})
 
                                                         #
 # Only alter stuff below if you know what you are doing #
