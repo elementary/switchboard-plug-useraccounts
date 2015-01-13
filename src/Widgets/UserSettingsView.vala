@@ -26,6 +26,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
         private Gtk.ComboBoxText    language_box;
+        private Gtk.Button          language_button;
         private Gtk.Switch          autologin_switch;
         private Gtk.Popover         avatar_popover;
 
@@ -77,15 +78,29 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             lang_label.halign = Gtk.Align.END;
             attach (lang_label, 0, 2, 1, 1);
 
-            language_box = new Gtk.ComboBoxText ();
-            foreach (string s in get_installed_languages ()) {
-                if (s.length == 2)
-                    language_box.append_text (Gnome.Languages.get_language_from_code (s, null));
-                else if (s.length == 5)
-                    language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
+            if (user != get_current_user ()) {
+                language_box = new Gtk.ComboBoxText ();
+                foreach (string s in get_installed_languages ()) {
+                    if (s.length == 2)
+                        language_box.append_text (Gnome.Languages.get_language_from_code (s, null));
+                    else if (s.length == 5)
+                        language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
+                }
+                language_box.changed.connect (() => utils.change_language (language_box.get_active_text ()));
+                attach (language_box, 1, 2, 1, 1);
+            } else {
+                language_button = new Gtk.Button ();
+                language_button.set_size_request (0, 27);
+                language_button.clicked.connect (() => {
+                    //THIS DOES CURRENTLY NOT WORK (TODO: figure out how to call the locale plug)
+                    var command = new Granite.Services.SimpleCommand (
+                            Environment.get_home_dir (),
+                            "/usr/bin/switchboard -o locale");
+                    command.run ();
+                    return;
+                });
+                attach (language_button, 1, 2, 1, 1);
             }
-            language_box.changed.connect (() => utils.change_language (language_box.get_active_text ()));
-            attach (language_box, 1, 2, 1, 1);
 
             var login_label = new Gtk.Label (_("Log In automatically:"));
             login_label.halign = Gtk.Align.END;
@@ -117,6 +132,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             enable_user_button.clicked.connect (utils.change_lock);
             enable_user_button.set_sensitive (false);
             enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            enable_user_button.set_size_request (0, 27);
             attach (enable_user_button, 1, 6, 1, 1);
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
@@ -228,13 +244,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             }
 
-            int i = 0;
-            foreach (string s in get_installed_languages ()) {
-                if (user.get_language () == s) {
-                    language_box.set_active (i);
-                    break;
+            if (user != get_current_user ()) {
+                int i = 0;
+                foreach (string s in get_installed_languages ()) {
+                    if (user.get_language () == s) {
+                        language_box.set_active (i);
+                        break;
+                    }
+                    i++;
                 }
-                i++;
+            } else {
+                var language = user.get_language ();
+                if (user.get_language ().length == 2)
+                    language = Gnome.Languages.get_language_from_code (language, null);
+                else if (user.get_language ().length == 5)
+                    language = Gnome.Languages.get_language_from_locale (language, null);
+                language_button.set_label (language);
             }
 
             show_all ();
