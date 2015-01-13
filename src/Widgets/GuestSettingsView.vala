@@ -23,8 +23,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             vexpand = false;
             valign = Gtk.Align.CENTER;
             halign = Gtk.Align.CENTER;
-            margin_left = 96;
-            margin_right = 96;
+            margin_left = 64;
+            margin_right = 64;
             border_width = 24;
             row_spacing = 24;
             column_spacing = 12;
@@ -38,13 +38,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_ui () {
             Gtk.Grid sub_grid = new Gtk.Grid ();
             sub_grid.hexpand = true;
-            sub_grid.halign = Gtk.Align.CENTER;
+            sub_grid.halign = Gtk.Align.START;
             sub_grid.column_spacing = 10;
-            attach (sub_grid, 0, 0, 1, 1);
+            attach (sub_grid, 0, 0, 2, 1);
 
             Gtk.Image image = new Gtk.Image ();
             image.valign = Gtk.Align.START;
             image.halign = Gtk.Align.END;
+            image.margin_right = 12;
             try {
                 Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
                 Gdk.Pixbuf image_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
@@ -80,7 +81,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             label.justify = Gtk.Justification.FILL;
             label.valign = Gtk.Align.START;
             label.set_line_wrap (true);
-            attach (label, 0, 1, 1, 1);
+            label.margin_left = 82;
+            attach (label, 1, 1, 1, 1);
 
             show_all ();
         }
