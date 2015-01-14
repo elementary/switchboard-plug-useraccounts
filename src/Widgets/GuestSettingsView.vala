@@ -68,8 +68,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             guest_switch.hexpand = true;
             guest_switch.halign = Gtk.Align.START;
             guest_switch.notify["active"].connect (() => {
-                set_guest_session_state (guest_switch.active);
-                guest_switch_changed ();
+                if (get_guest_session_state () != guest_switch.active) {
+                    InfobarNotifier.get_default ().set_reboot ();
+                    set_guest_session_state (guest_switch.active);
+                    guest_switch_changed ();
+                }
             });
             sub_grid.attach (guest_switch, 1, 1, 1, 1);
 
@@ -78,10 +81,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             guest_lock.set_tooltip_text (no_permission_string);
             sub_grid.attach (guest_lock, 2, 1, 1, 1);
 
-            Gtk.Label label = new Gtk.Label ("%s %s\n\n%s".printf (
+            Gtk.Label label = new Gtk.Label ("%s %s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),
-                _("Once they log out, all of their settings and data will be deleted."),
-                _("Changes to the Guest Session will apply after the system restarted.")));
+                _("Once they log out, all of their settings and data will be deleted.")));
             label.justify = Gtk.Justification.FILL;
             label.valign = Gtk.Align.START;
             label.set_line_wrap (true);

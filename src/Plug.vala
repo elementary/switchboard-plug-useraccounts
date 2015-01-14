@@ -20,11 +20,12 @@ namespace SwitchboardPlugUserAccounts {
     public static UserAccountsPlug plug;
 
     public class UserAccountsPlug : Switchboard.Plug {
-        private Gtk.Grid? main_grid;
-        private Gtk.InfoBar infobar;
-        private Gtk.InfoBar infobar_error;
-        private Gtk.LockButton lock_button;
-        private Widgets.MainView main_view;
+        private Gtk.Grid?           main_grid;
+        private Gtk.InfoBar         infobar;
+        private Gtk.InfoBar         infobar_error;
+        private Gtk.InfoBar         infobar_reboot;
+        private Gtk.LockButton      lock_button;
+        private Widgets.MainView    main_view;
 
         //translatable string for org.pantheon.user-accounts.administration policy
         public const string policy_message = _("Authentication is required to change user data");
@@ -46,12 +47,11 @@ namespace SwitchboardPlugUserAccounts {
             main_grid = new Gtk.Grid ();
             main_grid.expand = true;
 
+            var notifier = InfobarNotifier.get_default ();
+
             infobar_error = new Gtk.InfoBar ();
             infobar_error.message_type = Gtk.MessageType.ERROR;
             infobar_error.no_show_all = true;
-
-            var error_button = infobar_error.add_button (_("Ok"), 1);
-            error_button.clicked.connect (InfobarNotifier.get_default ().unset_error);
 
             var error_content = infobar_error.get_content_area () as Gtk.Container;
             Gtk.Label error_label = new Gtk.Label ("");
@@ -59,11 +59,11 @@ namespace SwitchboardPlugUserAccounts {
 
             main_grid.attach (infobar_error, 0, 0, 1, 1);
 
-            InfobarNotifier.get_default ().error_notified.connect (() => {
-                if (InfobarNotifier.get_default ().is_error ()) {
+            notifier.error_notified.connect (() => {
+                if (notifier.is_error ()) {
                     infobar_error.no_show_all = false;
                     error_label.set_label (("%s: %s".printf
-                        (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ())));
+                        (_("Password change failed"), notifier.get_error_message ())));
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;
@@ -71,9 +71,25 @@ namespace SwitchboardPlugUserAccounts {
                 }
             });
 
+            infobar_reboot = new Gtk.InfoBar ();
+            infobar_reboot.message_type = Gtk.MessageType.INFO;
+            infobar_reboot.no_show_all = true;
+            main_grid.attach (infobar_reboot, 0, 1, 1, 1);
+
+            var reboot_content = infobar_reboot.get_content_area () as Gtk.Container;
+            Gtk.Label reboot_label = new Gtk.Label (_("Guest session changes will not take effect until you restart your system"));
+            reboot_content.add (reboot_label);
+
+            notifier.reboot_notified.connect (() => {
+                if (notifier.is_reboot ()) {
+                    infobar_reboot.no_show_all = false;
+                    infobar_reboot.show_all ();
+                }
+            });
+
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.INFO;
-            main_grid.attach (infobar, 0, 1, 1, 1);
+            main_grid.attach (infobar, 0, 2, 1, 1);
 
             var area = infobar.get_action_area () as Gtk.Container;
             lock_button = new Gtk.LockButton (get_permission ());
@@ -84,7 +100,7 @@ namespace SwitchboardPlugUserAccounts {
             content.add (label);
 
             main_view = new Widgets.MainView ();
-            main_grid.attach (main_view, 0, 2, 1, 1);
+            main_grid.attach (main_view, 0, 3, 1, 1);
             main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
