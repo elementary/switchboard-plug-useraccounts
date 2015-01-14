@@ -51,7 +51,7 @@ namespace SwitchboardPlugUserAccounts {
             infobar_error.no_show_all = true;
 
             var error_button = infobar_error.add_button (_("Ok"), 1);
-            error_button.clicked.connect (PasswdErrorNotifier.get_default ().unset_error);
+            error_button.clicked.connect (InfobarNotifier.get_default ().unset_error);
 
             var error_content = infobar_error.get_content_area () as Gtk.Container;
             Gtk.Label error_label = new Gtk.Label ("");
@@ -59,11 +59,11 @@ namespace SwitchboardPlugUserAccounts {
 
             main_grid.attach (infobar_error, 0, 0, 1, 1);
 
-            PasswdErrorNotifier.get_default ().notified.connect (() => {
-                if (PasswdErrorNotifier.get_default ().is_error ()) {
+            InfobarNotifier.get_default ().error_notified.connect (() => {
+                if (InfobarNotifier.get_default ().is_error ()) {
                     infobar_error.no_show_all = false;
                     error_label.set_label (("%s: %s".printf
-                        (_("Password change failed"), PasswdErrorNotifier.get_default ().get_error_message ())));
+                        (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ())));
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;

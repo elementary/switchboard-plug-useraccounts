@@ -16,7 +16,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
     Misc/Utils.vala
     Misc/UserUtils.vala
-    Misc/PasswdErrorNotifier.vala
+    Misc/InfobarNotifier.vala
     Misc/ObscurityChecker.vala
     Widgets/MainView.vala
     Widgets/UserListBox.vala

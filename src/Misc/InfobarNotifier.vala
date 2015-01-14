@@ -14,38 +14,49 @@
 ***/
 
 namespace SwitchboardPlugUserAccounts {
-    public class PasswdErrorNotifier : Object {
-        private bool error = false;
-        private string error_message = "";
+    public class InfobarNotifier : Object {
+        private bool        error = false;
+        private string      error_message = "";
+        private bool        reboot = false;
 
-        public signal void notified ();
+        public signal void  error_notified ();
+        public signal void  reboot_notified ();
 
-        public PasswdErrorNotifier () { }
+        public InfobarNotifier () { }
 
         public void set_error (string error_message) {
             error = true;
             this.error_message = error_message;
-            notified ();
+            error_notified ();
         }
 
         public void unset_error () {
             error = false;
             error_message = "";
-            notified ();
+            error_notified ();
         }
 
         public bool is_error () {
             return error;
         }
 
+        public void set_reboot () {
+            reboot = true;
+            reboot_notified ();
+        }
+
+        public bool is_reboot () {
+            return reboot;
+        }
+
         public string get_error_message () {
             return error_message;
         }
 
-        private static GLib.Once<PasswdErrorNotifier> instance;
+        private static GLib.Once<InfobarNotifier> instance;
 
-        public static unowned PasswdErrorNotifier get_default () {
-            return instance.once (() => { return new PasswdErrorNotifier (); });
+        public static unowned InfobarNotifier get_default () {
+            return instance.once (() => { return new InfobarNotifier (); });
         }
     }
 }

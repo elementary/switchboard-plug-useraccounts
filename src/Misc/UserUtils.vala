@@ -141,7 +141,7 @@ namespace SwitchboardPlugUserAccounts {
                         if (e != null) {
                             warning ("Password change for %s failed".printf (user.get_user_name ()));
                             warning (e.message);
-                            PasswdErrorNotifier.get_default ().set_error (e.message);
+                            InfobarNotifier.get_default ().set_error (e.message);
                         } else
                             debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
                     });

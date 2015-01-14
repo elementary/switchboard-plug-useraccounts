@@ -65,7 +65,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             full_name_entry = new Gtk.Entry ();
             full_name_entry.get_style_context ().add_class ("h3");
-            full_name_entry.activate.connect (() => utils.change_full_name (full_name_entry.get_text ()));
+            full_name_entry.activate.connect (() => {
+                InfobarNotifier.get_default ().unset_error ();
+                utils.change_full_name (full_name_entry.get_text ());
+            });
             attach (full_name_entry, 1, 0, 1, 1);
 
             var user_type_label = new Gtk.Label (_("Account type:"));
@@ -75,7 +78,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user_type_box = new Gtk.ComboBoxText ();
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
-            user_type_box.changed.connect (() => utils.change_user_type (user_type_box.get_active ()));
+            user_type_box.changed.connect (() => {
+                InfobarNotifier.get_default ().unset_error ();
+                utils.change_user_type (user_type_box.get_active ());
+            });
             attach (user_type_box, 1, 1, 1, 1);
 
             var lang_label = new Gtk.Label (_("Language:"));
@@ -90,12 +96,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     else if (s.length == 5)
                         language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
                 }
-                language_box.changed.connect (() => utils.change_language (language_box.get_active_text ()));
+                language_box.changed.connect (() => {
+                    InfobarNotifier.get_default ().unset_error ();
+                    utils.change_language (language_box.get_active_text ());
+                });
                 attach (language_box, 1, 2, 1, 1);
             } else {
                 language_button = new Gtk.Button ();
                 language_button.set_size_request (0, 27);
                 language_button.clicked.connect (() => {
+                    InfobarNotifier.get_default ().unset_error ();
                     //TODO locale plug might change its codename because that's currently not really okay
                     var command = new Granite.Services.SimpleCommand (
                             Environment.get_home_dir (),
@@ -126,6 +136,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             password_button.set_relief (Gtk.ReliefStyle.NONE);
             password_button.halign = Gtk.Align.START;
             password_button.clicked.connect (() => {
+                InfobarNotifier.get_default ().unset_error ();
                 Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
                 pw_popover.show_all ();
                 pw_popover.request_password_change.connect (utils.change_password);
@@ -287,7 +298,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void avatar_button_clicked () {
-            PasswdErrorNotifier.get_default ().unset_error ();
+            InfobarNotifier.get_default ().unset_error ();
 
             avatar_popover = new Gtk.Popover (avatar_button);
             avatar_popover.set_position (Gtk.PositionType.BOTTOM);
