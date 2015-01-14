@@ -64,6 +64,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (avatar_button, 0, 0, 1, 1);
 
             full_name_entry = new Gtk.Entry ();
+            full_name_entry.set_size_request (175, 0);
             full_name_entry.get_style_context ().add_class ("h3");
             full_name_entry.activate.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
@@ -100,10 +101,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     InfobarNotifier.get_default ().unset_error ();
                     utils.change_language (language_box.get_active_text ());
                 });
-                attach (language_box, 1, 2, 1, 1);
+                attach (language_box, 1, 2, 2, 1);
             } else {
                 language_button = new Gtk.Button ();
                 language_button.set_size_request (0, 27);
+                language_button.set_alignment (0.0f, 0.5f);
                 language_button.clicked.connect (() => {
                     InfobarNotifier.get_default ().unset_error ();
                     //TODO locale plug might change its codename because that's currently not really okay
@@ -160,7 +162,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             language_lock.set_tooltip_text (no_permission_string);
-            attach (language_lock, 2, 2, 1, 1);
+            attach (language_lock, 3, 2, 1, 1);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             autologin_lock.set_tooltip_text (no_permission_string);
