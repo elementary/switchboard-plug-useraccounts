@@ -32,18 +32,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void build_ui () {
             my_account_label = new Gtk.Label (_("My Account"));
-            my_account_label.margin_top = 5;
-            my_account_label.margin_start = 5;
             my_account_label.halign = Gtk.Align.START;
-            my_account_label.get_style_context ().add_class ("category-label");
-            my_account_label.set_sensitive (false);
+            my_account_label.get_style_context ().add_class ("h4");
 
             other_accounts_label = new Gtk.Label (_("Other Accounts"));
-            other_accounts_label.margin_top = 5;
-            other_accounts_label.margin_start = 5;
             other_accounts_label.halign = Gtk.Align.START;
-            other_accounts_label.get_style_context ().add_class ("category-label");
-            other_accounts_label.set_sensitive (false);
+            other_accounts_label.get_style_context ().add_class ("h4");
 
             build_guest_session_row ();
             update_ui ();
