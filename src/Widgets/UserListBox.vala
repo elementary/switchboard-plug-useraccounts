@@ -48,11 +48,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             foreach (unowned Gtk.Widget useritem in userlist_items)
                 remove (useritem);
 
-            //cheat an invisible box at pos 0 because update_headers does not reach pos 0
-            insert (new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0), 0);
-
-            insert (new UserItem (get_current_user ()), 1);
-            int pos = 2;
+            insert (new UserItem (get_current_user ()), 0);
+            int pos = 1;
             foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
                 if (get_current_user () != temp_user && !check_removal (temp_user)) {
                     insert (new UserItem (temp_user), pos);
@@ -66,9 +63,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-                if (row == get_row_at_index (1))
+                if (row == get_row_at_index (0))
                     row.set_header (my_account_label);
-                else if (row == get_row_at_index (2))
+                else if (row == get_row_at_index (1))
                     row.set_header (other_accounts_label);
         }
 
