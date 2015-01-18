@@ -14,7 +14,7 @@
 ***/
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class MainView : Granite.Widgets.ThinPaned {
+    public class MainView : Gtk.Paned {
         public UserListBox          userlist;
         public Gtk.Stack            content;
         public Gtk.Box              sidebar;
@@ -26,6 +26,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public MainView () {
             expand = true;
+            set_orientation (Gtk.Orientation.HORIZONTAL);
 
             sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             pack1 (sidebar, true, false);
