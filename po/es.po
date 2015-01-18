@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-11 12:59+0100\n"
-"PO-Revision-Date: 2015-01-09 03:19+0000\n"
+"PO-Revision-Date: 2015-01-17 11:49+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-12 07:43+0000\n"
-"X-Generator: Launchpad (build 17298)\n"
+"X-Launchpad-Export-Date: 2015-01-18 05:13+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
@@ -18,7 +18,7 @@ msgstr "Contraseña actual"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Pulse para autenticar"
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
@@ -50,15 +50,15 @@ msgstr "Contraseña aceptada"
 
 #: ../src/Widgets/PasswordEditor.vala:188
 msgid "Weak password strength"
-msgstr ""
+msgstr "Contraseña débil"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Medium password strength"
-msgstr ""
+msgstr "Contraseña promedio"
 
 #: ../src/Widgets/PasswordEditor.vala:192
 msgid "Strong password strength"
-msgstr ""
+msgstr "Contraseña fuerte"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "Resembles your current password"
@@ -104,7 +104,7 @@ msgstr "Nombre de usuario"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:74
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Puede contener solo letras minúsculas y números, sin espacios"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Set password now"
@@ -229,7 +229,7 @@ msgstr "Imágenes"
 
 #: ../src/Plug.vala:30
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Para cambiar los datos del usuario necesita autenticarse"
 
 #: ../src/Plug.vala:35
 msgid "User Accounts"
@@ -245,7 +245,7 @@ msgstr ""
 
 #: ../src/Plug.vala:66
 msgid "Password change failed"
-msgstr ""
+msgstr "Falló el cambio de contraseña"
 
 #: ../src/Plug.vala:83
 msgid "Some settings require administrator rights to be changed"
