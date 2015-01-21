@@ -18,6 +18,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private unowned Act.User   user;
         private UserUtils           utils;
 
+        private Gtk.ListStore       language_store;
+        private Gtk.ListStore       region_store;
+
         private Gtk.Image           avatar;
         private Gdk.Pixbuf?         avatar_pixbuf;
         private Gtk.Button          avatar_button;
@@ -25,7 +28,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button          password_button;
         private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
-        private Gtk.ComboBoxText    language_box;
+        private Gtk.ComboBox        language_box;
+        private Gtk.ComboBox        region_box;
         private Gtk.Button          language_button;
         private Gtk.Switch          autologin_switch;
         private Gtk.Popover         avatar_popover;
@@ -90,25 +94,57 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (lang_label, 0, 2, 1, 1);
 
             if (user != get_current_user ()) {
-                language_box = new Gtk.ComboBoxText ();
-                foreach (string s in get_installed_languages ()) {
-                    if (s.length == 2)
-                        language_box.append_text (Gnome.Languages.get_language_from_code (s, null));
-                    else if (s.length == 5)
-                        language_box.append_text (Gnome.Languages.get_language_from_locale (s, null));
-                }
+                language_box = new Gtk.ComboBox ();
+                language_box.set_sensitive (false);
                 language_box.changed.connect (() => {
                     InfobarNotifier.get_default ().unset_error ();
-                    utils.change_language (language_box.get_active_text ());
+
+                    Gtk.TreeIter? iter;
+                    Value cell;
+
+                    language_box.get_active_iter (out iter);
+                    language_store.get_value (iter, 0, out cell);
+                    update_region ((string)cell);
                 });
-                attach (language_box, 1, 2, 2, 1);
+                attach (language_box, 1, 2, 1, 1);
+
+                var renderer = new Gtk.CellRendererText ();
+                language_box.pack_start (renderer, true);
+                language_box.add_attribute (renderer, "text", 1);
+
+                region_box = new Gtk.ComboBox ();
+                region_box.set_sensitive (false);
+                region_box.changed.connect (() => {
+                    InfobarNotifier.get_default ().unset_error ();
+
+                    string new_language;
+                    Gtk.TreeIter? iter;
+                    Value cell;
+
+                    language_box.get_active_iter (out iter);
+                    language_store.get_value (iter, 0, out cell);
+                    new_language = (string)cell;
+
+                    region_box.get_active_iter (out iter);
+                    region_store.get_value (iter, 0, out cell);
+                    new_language += "_%s".printf ((string)cell);
+
+                    if (new_language != "" && new_language != user.get_language ())
+                        utils.change_language (new_language);
+                });
+                attach (region_box, 1, 3, 1, 1);
+
+                renderer = new Gtk.CellRendererText ();
+                region_box.pack_start (renderer, true);
+                region_box.add_attribute (renderer, "text", 1);
+
             } else {
                 language_button = new Gtk.Button ();
                 language_button.set_size_request (0, 27);
-                language_button.set_alignment (0.0f, 0.5f);
+                language_button.set_tooltip_text (_("Click to switch to Switchboard Locale Plug"));
                 language_button.clicked.connect (() => {
                     InfobarNotifier.get_default ().unset_error ();
-                    //TODO locale plug might change its codename because that's currently not really okay
+                    //TODO locale plug might change its codename because that's not okay currently
                     var command = new Granite.Services.SimpleCommand (
                             Environment.get_home_dir (),
                             "/usr/bin/switchboard -o system-pantheon-locale");
@@ -121,18 +157,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var login_label = new Gtk.Label (_("Log In automatically:"));
             login_label.halign = Gtk.Align.END;
             login_label.margin_top = 20;
-            attach (login_label, 0, 3, 1, 1);
+            attach (login_label, 0, 4, 1, 1);
 
             autologin_switch = new Gtk.Switch ();
             autologin_switch.hexpand = true;
             autologin_switch.halign = Gtk.Align.START;
             autologin_switch.margin_top = 20;
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
-            attach (autologin_switch, 1, 3, 1, 1);
+            attach (autologin_switch, 1, 4, 1, 1);
 
             var change_password_label = new Gtk.Label (_("Password:"));
             change_password_label.halign = Gtk.Align.END;
-            attach (change_password_label, 0, 4, 1, 1);
+            attach (change_password_label, 0, 5, 1, 1);
 
             password_button = new Gtk.Button ();
             password_button.set_relief (Gtk.ReliefStyle.NONE);
@@ -143,7 +179,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 pw_popover.show_all ();
                 pw_popover.request_password_change.connect (utils.change_password);
             });
-            attach (password_button, 1, 4, 1, 1);
+            attach (password_button, 1, 5, 1, 1);
 
             enable_user_button = new Gtk.Button ();
             enable_user_button.clicked.connect (utils.change_lock);
@@ -162,16 +198,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             language_lock.set_tooltip_text (no_permission_string);
-            attach (language_lock, 3, 2, 1, 1);
+            attach (language_lock, 2, 2, 1, 2);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             autologin_lock.set_tooltip_text (no_permission_string);
             autologin_lock.margin_top = 20;
-            attach (autologin_lock, 2, 3, 1, 1);
+            attach (autologin_lock, 2, 4, 1, 1);
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             password_lock.set_tooltip_text (no_permission_string);
-            attach (password_lock, 2, 4, 1, 1);
+            attach (password_lock, 2, 5, 1, 1);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             enable_lock.set_tooltip_text (no_permission_string);
@@ -180,7 +216,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             update_ui ();
             get_permission ().notify["allowed"].connect (update_ui);
         }
-        
+
         public void update_ui () {
             user_type_box.set_sensitive (false);
             password_button.set_sensitive (false);
@@ -207,12 +243,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 avatar_button.set_sensitive (true);
                 full_name_entry.set_sensitive (true);
                 full_name_lock.set_opacity (0);
-                language_box.set_sensitive (true);
                 language_lock.set_opacity (0);
+
                 if (!user.get_locked ()) {
                     password_button.set_sensitive (true);
                     password_lock.set_opacity (0);
                 }
+
                 if (get_permission ().allowed) {
                     if (!user.get_locked ()) {
                         autologin_switch.set_sensitive (true);
@@ -223,12 +260,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                         user_type_lock.set_opacity (0);
                     }
                 }
+ 
+                if (get_current_user () != user) {
+                    language_box.set_sensitive (true);
+                    region_box.set_sensitive (true);
+                }
             } else {
                 avatar_button.set_sensitive (false);
                 full_name_entry.set_sensitive (false);
                 full_name_lock.set_opacity (0.5);
-                language_box.set_sensitive (false);
                 language_lock.set_opacity (0.5);
+
+                if (get_current_user () != user) {
+                    language_box.set_sensitive (false);
+                    region_box.set_sensitive (false);
+                }
             }
 
             try {
@@ -278,25 +324,56 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             }
 
-            if (user != get_current_user ()) {
-                int i = 0;
-                foreach (string s in get_installed_languages ()) {
-                    if (user.get_language () == s) {
-                        language_box.set_active (i);
-                        break;
-                    }
-                    i++;
-                }
-            } else {
-                var language = user.get_language ();
-                if (user.get_language ().length == 2)
-                    language = Gnome.Languages.get_language_from_code (language, null);
-                else if (user.get_language ().length == 5)
-                    language = Gnome.Languages.get_language_from_locale (language, null);
-                language_button.set_label (language);
-            }
+            update_language ();
 
             show_all ();
+        }
+
+        public void update_language () {
+            if (user != get_current_user ()) {
+                var languages = get_languages ();
+                language_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+                Gtk.TreeIter iter;
+ 
+                language_box.set_model (language_store);
+
+                foreach (string language in languages) {
+                    language_store.insert (out iter, 0);
+                    language_store.set (iter, 0, language, 1, Gnome.Languages.get_language_from_code (language, null));
+                    if (user.get_language ().slice (0, 2) == language)
+                        language_box.set_active_iter (iter);
+                }
+
+            } else {
+                var language = Gnome.Languages.get_language_from_code (user.get_language ().slice (0, 2), null);
+                language_button.set_label (language);
+            }
+        }
+
+        public void update_region (string? language) {
+            if (language != null) {
+                var regions = get_regions (language);
+                region_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+                Gtk.TreeIter iter;
+                bool iter_set = false;
+
+                region_box.set_model (region_store);
+
+                foreach (string region in regions) {
+                    region_store.insert (out iter, 0);
+                    region_store.set (iter, 0, region, 1, Gnome.Languages.get_country_from_code (region, null));
+                    if (user.get_language ().length == 5 && user.get_language ().slice (3, 5) == region) {
+                        region_box.set_active_iter (iter);
+                        iter_set = true;
+                    }
+                }
+
+                if (!iter_set) {
+                    Gtk.TreeIter? active_iter;
+                    region_store.get_iter_first (out active_iter);
+                    region_box.set_active_iter (active_iter);
+                }
+            }
         }
 
         private void avatar_button_clicked () {

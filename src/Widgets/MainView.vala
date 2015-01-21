@@ -77,7 +77,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
 
             //auto select current user row in userlist widget
-            userlist.select_row (userlist.get_row_at_index (1));
+            userlist.select_row (userlist.get_row_at_index (0));
             set_position (240);
             show_all ();
         }

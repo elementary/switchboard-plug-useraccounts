@@ -73,28 +73,13 @@ namespace SwitchboardPlugUserAccounts {
 
         public void change_language (string new_lang) {
             if (get_current_user () == user || get_permission ().allowed) {
-                string current_lang = "";
-                if (user.get_language ().length == 2)
-                    current_lang = Gnome.Languages.get_language_from_code (user.get_language (), null);
-                else if (user.get_language ().length == 5)
-                    current_lang = Gnome.Languages.get_language_from_locale (user.get_language (), null);
-
-                string new_lang_code = "";
-                foreach (string s in get_installed_languages ()) {
-                    if (s.length == 2 && Gnome.Languages.get_language_from_code (s, null) == new_lang) {
-                        new_lang_code = s;
-                        break;
-                    } else if (s.length == 5 && Gnome.Languages.get_language_from_locale (s, null) == new_lang) {
-                        new_lang_code = s;
-                        break;
-                    }
+                if (new_lang != "" && new_lang != user.get_language ()) {
+                    debug ("Setting language for %s to %s".printf (user.get_user_name (), new_lang));
+                    user.set_language (new_lang);
+                } else {
+                    widget.update_language ();
+                    widget.update_region (null);
                 }
-
-                if (new_lang != user.get_language ()) {
-                    debug ("Setting language for %s to %s".printf (user.get_user_name (), new_lang_code));
-                    user.set_language (new_lang_code);
-                } else
-                    widget.update_ui ();
             }
         }
 

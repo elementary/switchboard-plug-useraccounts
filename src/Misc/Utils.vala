@@ -44,6 +44,31 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
+    public static Gee.ArrayList<string> get_languages () {
+        Gee.ArrayList<string> languages = new Gee.ArrayList<string> ();
+        foreach (string locale in get_installed_languages ()) {
+            string code = locale.slice (0, 2);
+            if (!languages.contains (code))
+                languages.add (code);
+        }
+
+        return languages;
+    }
+
+    public static Gee.ArrayList<string> get_regions (string language) {
+        Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
+            foreach (string locale in get_installed_languages ()) {
+                if (locale.length == 5) {
+                    string code = locale.slice (0, 2);
+                    string region = locale.slice (3, 5);
+
+                    if (!regions.contains (region) && code == language)
+                        regions.add (region);
+                }
+            }
+        return regions;
+    }
+
     private static Polkit.Permission? permission = null;
 
     public static Polkit.Permission? get_permission () {
