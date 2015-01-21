@@ -21,7 +21,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button              button_change;
         //private Gtk.Button            button_cancel;
 
-        public signal void request_password_change (Act.UserPasswordMode _mode, string? _new_password);
+        public signal void request_password_change (Act.UserPasswordMode mode, string? new_password);
 
         public PasswordPopover (Gtk.Widget relative, Act.User user) {
             this.user = user;
@@ -41,7 +41,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             pw_editor = new Widgets.PasswordEditor ();
             pw_editor.validation_changed.connect (() => {
-                if (pw_editor.is_valid)
+                if (pw_editor.is_valid && pw_editor.is_authenticated)
                     button_change.set_sensitive (true);
                 else
                     button_change.set_sensitive (false);

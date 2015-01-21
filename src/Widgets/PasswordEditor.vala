@@ -150,12 +150,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
             attach (show_pw_check, 0, 6, 1, 1);
 
-            if (!is_authenticated) {
-                new_pw_entry.set_sensitive (false);
-                confirm_pw_entry.set_sensitive (false);
-                show_pw_check.set_sensitive (false);
-            }
-
             auth_changed.connect (update_ui);
             show_all ();
         }
@@ -255,7 +249,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     auth_changed ();
                 } else {
                     debug ("User is authenticated for password change now");
-                    new_pw_entry.set_sensitive (true);
                     is_authenticated = true;
                     auth_changed ();
                 }
