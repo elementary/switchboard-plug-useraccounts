@@ -32,7 +32,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ComboBox        region_box;
         private Gtk.Button          language_button;
         private Gtk.Switch          autologin_switch;
-        private Gtk.Popover         avatar_popover;
 
         //lock widgets
         private Gtk.Image           full_name_lock;
@@ -41,8 +40,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image           autologin_lock;
         private Gtk.Image           password_lock;
         private Gtk.Image           enable_lock;
-
-        private Dialogs.AvatarDialog avatar_dialog;
 
         private const string no_permission_string   = _("You do not have permissions to change this");
         private const string current_user_string    = _("You cannot change this for the currently active user");
@@ -64,7 +61,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             avatar_button = new Gtk.Button ();
             avatar_button.set_relief (Gtk.ReliefStyle.NONE);
-            avatar_button.clicked.connect (avatar_button_clicked);
+            avatar_button.clicked.connect (() => {
+                InfobarNotifier.get_default ().unset_error ();
+
+                AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
+                avatar_popover.show_all ();
+            });
             attach (avatar_button, 0, 0, 1, 1);
 
             full_name_entry = new Gtk.Entry ();
@@ -353,32 +355,39 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_region (string? language) {
-            if (language != null) {
-                var regions = get_regions (language);
-                region_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-                Gtk.TreeIter iter;
-                bool iter_set = false;
+            Gtk.TreeIter? iter;
 
-                region_box.set_model (region_store);
+            if (language == null) {
+                Value cell;
 
-                foreach (string region in regions) {
-                    region_store.insert (out iter, 0);
-                    region_store.set (iter, 0, region, 1, Gnome.Languages.get_country_from_code (region, null));
-                    if (user.get_language ().length == 5 && user.get_language ().slice (3, 5) == region) {
-                        region_box.set_active_iter (iter);
-                        iter_set = true;
-                    }
+                language_box.get_active_iter (out iter);
+                language_store.get_value (iter, 0, out cell);
+                language = (string)cell;
+            }
+
+            var regions = get_regions (language);
+            region_store = new Gtk.ListStore (2, typeof (string), typeof (string));
+            bool iter_set = false;
+
+            region_box.set_model (region_store);
+
+            foreach (string region in regions) {
+                region_store.insert (out iter, 0);
+                region_store.set (iter, 0, region, 1, Gnome.Languages.get_country_from_code (region, null));
+                if (user.get_language ().length == 5 && user.get_language ().slice (3, 5) == region) {
+                    region_box.set_active_iter (iter);
+                    iter_set = true;
                 }
+            }
 
-                if (!iter_set) {
-                    Gtk.TreeIter? active_iter;
-                    region_store.get_iter_first (out active_iter);
-                    region_box.set_active_iter (active_iter);
-                }
+            if (!iter_set) {
+                Gtk.TreeIter? active_iter;
+                region_store.get_iter_first (out active_iter);
+                region_box.set_active_iter (active_iter);
             }
         }
 
-        private void avatar_button_clicked () {
+        /*private void avatar_button_clicked () {
             InfobarNotifier.get_default ().unset_error ();
 
             avatar_popover = new Gtk.Popover (avatar_button);
@@ -452,6 +461,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 } else
                     file_dialog.close ();
             });
-        }
+        }*/
     }
 }
