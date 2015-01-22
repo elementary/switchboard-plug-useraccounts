@@ -28,10 +28,12 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/CropView.vala
     Widgets/Popovers/NewUserPopover.vala
     Widgets/Popovers/PasswordPopover.vala
+    Widgets/Popovers/AvatarPopover.vala
     Widgets/Dialogs/AvatarDialog.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
+    gee-0.8
     switchboard-2.0
     granite
     AccountsService-1.0
