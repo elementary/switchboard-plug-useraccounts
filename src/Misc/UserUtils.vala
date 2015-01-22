@@ -77,6 +77,7 @@ namespace SwitchboardPlugUserAccounts {
                     debug ("Setting language for %s to %s".printf (user.get_user_name (), new_lang));
                     user.set_language (new_lang);
                 } else {
+                    warning ("hello");
                     widget.update_language ();
                     widget.update_region (null);
                 }

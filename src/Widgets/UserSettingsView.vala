@@ -106,7 +106,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                     language_box.get_active_iter (out iter);
                     language_store.get_value (iter, 0, out cell);
-                    update_region ((string)cell);
+
+                    if (get_regions ((string)cell).size == 0) {
+                        region_box.hide ();
+                        region_box.set_no_show_all (true);
+                        if (user.get_language () != (string)cell)
+                            utils.change_language ((string)cell);
+                    } else {
+                        region_box.show ();
+                        region_box.set_no_show_all (false);
+                        update_region ((string)cell);
+                    }
                 });
                 attach (language_box, 1, 2, 1, 1);
 
@@ -386,81 +396,5 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box.set_active_iter (active_iter);
             }
         }
-
-        /*private void avatar_button_clicked () {
-            InfobarNotifier.get_default ().unset_error ();
-
-            avatar_popover = new Gtk.Popover (avatar_button);
-            avatar_popover.set_position (Gtk.PositionType.BOTTOM);
-
-            Gtk.Grid popover_grid = new Gtk.Grid ();
-            popover_grid.margin = 12;
-            popover_grid.column_spacing = 10;
-            popover_grid.row_spacing = 10;
-            avatar_popover.add (popover_grid);
-
-            Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File ..."));
-            Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove Avatar"));
-            select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            popover_grid.attach (select_button, 1, 1, 1, 1);
-            popover_grid.attach (remove_button, 0, 1, 1, 1);
-
-            if (user.get_icon_file ().contains (".face"))
-                remove_button.set_sensitive (false);
-            else {
-                remove_button.set_sensitive (true);
-                remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            }
-
-            avatar_popover.show_all ();
-
-            select_button.grab_focus ();
-
-            remove_button.clicked.connect (() => utils.change_avatar (null));
-
-            select_button.clicked.connect (() => {
-                var file_dialog = new Gtk.FileChooserDialog (_("Select an image"),
-                get_parent_window () as Gtk.Window?, Gtk.FileChooserAction.OPEN, _("Cancel"),
-                Gtk.ResponseType.CANCEL, _("Open"), Gtk.ResponseType.ACCEPT);
-            
-                Gtk.FileFilter filter = new Gtk.FileFilter ();
-                filter.set_filter_name (_("Images"));
-                file_dialog.set_filter (filter);
-                filter.add_mime_type ("image/jpeg");
-                filter.add_mime_type ("image/jpg");
-                filter.add_mime_type ("image/png");
-
-                // Add a preview widget
-                Gtk.Image preview_area = new Gtk.Image ();
-                file_dialog.set_preview_widget (preview_area);
-                file_dialog.update_preview.connect (() => {
-                    string uri = file_dialog.get_preview_uri ();
-                    // We only display local files:
-                    if (uri != null && uri.has_prefix ("file://") == true) {
-                        try {
-                            Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (uri.substring (7), 150,     150, true);
-                            preview_area.set_from_pixbuf (pixbuf);
-                            preview_area.show ();
-                            file_dialog.set_preview_widget_active (true);
-                        } catch (Error e) {
-                            preview_area.hide ();
-                            file_dialog.set_preview_widget_active (false);
-                        }
-                    } else {
-                        preview_area.hide ();
-                        file_dialog.set_preview_widget_active (false);
-                    }
-                });
-
-                if (file_dialog.run () == Gtk.ResponseType.ACCEPT) {
-                    var path = file_dialog.get_file ().get_path ();
-                    file_dialog.hide ();
-                    file_dialog.destroy ();
-                    avatar_dialog = new Dialogs.AvatarDialog (path);
-                    avatar_dialog.request_avatar_change.connect (utils.change_avatar);
-                } else
-                    file_dialog.close ();
-            });
-        }*/
     }
 }
