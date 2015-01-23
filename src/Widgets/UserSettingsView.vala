@@ -43,7 +43,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image           password_lock;
         private Gtk.Image           enable_lock;
 
-        private const string no_permission_string   = _("You do not have permissions to change this");
+        private const string no_permission_string   = _("You do not have permission to change this");
         private const string current_user_string    = _("You cannot change this for the currently active user");
         private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
 
