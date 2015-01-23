@@ -159,7 +159,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             } else {
                 language_button = new Gtk.Button ();
-                language_button.set_size_request (0, 27);
+                language_button.set_size_request (0, 25);
                 language_button.set_relief (Gtk.ReliefStyle.NONE);
                 language_button.halign = Gtk.Align.START;
                 language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
