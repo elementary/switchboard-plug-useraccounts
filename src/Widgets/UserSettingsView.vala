@@ -234,17 +234,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_ui () {
-            user_type_box.set_sensitive (false);
-            password_button.set_sensitive (false);
-            autologin_switch.set_sensitive (false);
-            enable_user_button.set_sensitive (false);
-
-            user_type_lock.set_opacity (0.5);
-            autologin_lock.set_opacity (0.5);
-            password_lock.set_opacity (0.5);
-            enable_lock.set_opacity (0.5);
-
             if (!get_permission ().allowed) {
+                user_type_box.set_sensitive (false);
+                password_button.set_sensitive (false);
+                autologin_switch.set_sensitive (false);
+                enable_user_button.set_sensitive (false);
+
+                user_type_lock.set_opacity (0.5);
+                autologin_lock.set_opacity (0.5);
+                password_lock.set_opacity (0.5);
+                enable_lock.set_opacity (0.5);
+
                 user_type_lock.set_tooltip_text (no_permission_string);
                 enable_lock.set_tooltip_text (no_permission_string);
             } else if (get_current_user () == user) {
