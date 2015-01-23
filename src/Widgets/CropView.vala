@@ -108,21 +108,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_height () / 2};
         }
 
-        public CropView.from_pixbuf_with_size (Gdk.Pixbuf __pixbuf, int x, int y) {
-            pixbuf = __pixbuf;
+        public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y, bool quadratic_selection = false) {
+            this.pixbuf = pixbuf;
+            this.quadratic_selection = quadratic_selection;
+
             if (pixbuf.get_width () > pixbuf.get_height ()) {
-                area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2 };
+                    area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2 };
 
                 double temp_scale = (double) x / (double) pixbuf.get_width ();
                 if (pixbuf.get_height () * temp_scale < y)
                     y = (int) (pixbuf.get_height () * temp_scale);
-            } else if (pixbuf.get_width () < pixbuf.get_height ())
-                area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_width () / 2 };
+            } else if (pixbuf.get_width () < pixbuf.get_height ()) {
+                    area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_width () / 2 };
 
                 double temp_scale = (double) y / (double) pixbuf.get_height ();
                 if (pixbuf.get_width () * temp_scale < x)
                     x = (int) (pixbuf.get_width () * temp_scale);
-            else 
+            } else
                 area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_height () / 2 };
 
             set_size_request (x, y);
