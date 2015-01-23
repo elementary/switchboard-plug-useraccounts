@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-11 12:59+0100\n"
+"POT-Creation-Date: 2015-01-23 12:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,36 +49,36 @@ msgstr ""
 msgid "Show passwords"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:167
+#: ../src/Widgets/PasswordEditor.vala:161
 msgid "Password accepted"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:188
+#: ../src/Widgets/PasswordEditor.vala:182
 msgid "Weak password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:190
+#: ../src/Widgets/PasswordEditor.vala:184
 msgid "Medium password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:192
+#: ../src/Widgets/PasswordEditor.vala:186
 msgid "Strong password strength"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:207
+#: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:209
+#: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
 msgstr ""
 
-#: ../src/Widgets/PasswordEditor.vala:211
+#: ../src/Widgets/PasswordEditor.vala:205
 msgid "New password is a palindrome"
 msgstr ""
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
-#: ../src/Widgets/UserSettings.vala:276
+#: ../src/Widgets/Popovers/AvatarPopover.vala:61
 msgid "Cancel"
 msgstr ""
 
@@ -95,7 +95,7 @@ msgid "Standard User"
 msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
-#: ../src/Widgets/UserSettings.vala:72 ../src/Widgets/UserItem.vala:84
+#: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
 msgstr ""
 
@@ -103,28 +103,56 @@ msgstr ""
 msgid "Full Name"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:70
+#: ../src/Widgets/Popovers/NewUserPopover.vala:71
 msgid "Username"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:74
+#: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:78
+#: ../src/Widgets/Popovers/NewUserPopover.vala:93
 msgid "Set password now"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:80
+#: ../src/Widgets/Popovers/NewUserPopover.vala:95
 msgid "Set no password for login"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:82
+#: ../src/Widgets/Popovers/NewUserPopover.vala:97
 msgid "Let user create password on first login"
 msgstr ""
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:105
+#: ../src/Widgets/Popovers/NewUserPopover.vala:121
 msgid "Create User"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:163
+msgid "Username is already taken"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is not valid"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File ..."
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:47
+msgid "Remove"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:60
+msgid "Select an image"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+msgid "Open"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+msgid "Images"
 msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
@@ -144,112 +172,106 @@ msgstr ""
 msgid "You cannot remove your own user account"
 msgstr ""
 
-#: ../src/Widgets/GuestSettings.vala:55 ../src/Widgets/UserListBox.vala:108
+#: ../src/Widgets/GuestSettingsView.vala:22
+#: ../src/Widgets/UserSettingsView.vala:46
+msgid "You do not have permissions to change this"
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
 msgstr ""
 
-#: ../src/Widgets/GuestSettings.vala:77
+#: ../src/Widgets/GuestSettingsView.vala:85
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
 
-#: ../src/Widgets/GuestSettings.vala:78
+#: ../src/Widgets/GuestSettingsView.vala:86
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-
-#: ../src/Widgets/GuestSettings.vala:79
-msgid "Changes to the Guest Session will apply after the system restarted."
 msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:41
+#: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:82
+#: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:85
+#: ../src/Widgets/UserListBox.vala:76
 msgid "Disabled"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:66
+#: ../src/Widgets/UserSettingsView.vala:47
+msgid "You cannot change this for the currently active user"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:48
+msgid "You cannot remove the last administrator's privileges"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:83
 msgid "Account type:"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:71
+#: ../src/Widgets/UserSettingsView.vala:88
 msgid "Standard"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:76
+#: ../src/Widgets/UserSettingsView.vala:96
 msgid "Language:"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:90
+#: ../src/Widgets/UserSettingsView.vala:165
+msgid "Click to switch to Language & Locale Settings"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:178
 msgid "Log In automatically:"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:102
+#: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:214
-msgid "None set"
-msgstr ""
-
-#: ../src/Widgets/UserSettings.vala:219
+#: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:222
+#: ../src/Widgets/UserSettingsView.vala:351
 msgid "Disable User Account"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:255
-msgid "Set from File ..."
+#: ../src/Widgets/UserSettingsView.vala:356
+msgid "None set"
 msgstr ""
 
-#: ../src/Widgets/UserSettings.vala:256
-msgid "Remove Avatar"
-msgstr ""
-
-#: ../src/Widgets/UserSettings.vala:275
-msgid "Select an image"
-msgstr ""
-
-#: ../src/Widgets/UserSettings.vala:277
-msgid "Open"
-msgstr ""
-
-#: ../src/Widgets/UserSettings.vala:280
-msgid "Images"
-msgstr ""
-
-#: ../src/Plug.vala:30
+#: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
 msgstr ""
 
-#: ../src/Plug.vala:35
+#: ../src/Plug.vala:36
 msgid "User Accounts"
 msgstr ""
 
-#: ../src/Plug.vala:36
+#: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
-msgstr ""
-
-#: ../src/Plug.vala:53
-msgid "Ok"
 msgstr ""
 
 #: ../src/Plug.vala:66
 msgid "Password change failed"
 msgstr ""
 
-#: ../src/Plug.vala:83
+#: ../src/Plug.vala:80
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+
+#: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
 msgstr ""

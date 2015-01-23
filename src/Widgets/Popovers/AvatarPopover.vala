@@ -34,19 +34,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_ui () {
             main_grid = new Gtk.Grid ();
             main_grid.hexpand = true;
-            main_grid.margin = 12;
-            main_grid.row_spacing = 6;
+            main_grid.margin = 6;
+            main_grid.column_spacing = 6;
             add (main_grid);
-    
+
+            Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove"));
+            remove_button.set_size_request (100, 25);
+            remove_button.clicked.connect (() => utils.change_avatar (null));
+            main_grid.attach (remove_button, 0, 0, 1, 1);
+
             Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File ..."));
+            select_button.set_size_request (100, 25);
             select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             select_button.clicked.connect (select_from_file);
-            main_grid.attach (select_button, 0, 0, 1, 1);
+            main_grid.attach (select_button, 1, 0, 1, 1);
             select_button.grab_focus ();
-            
-            Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove"));
-            remove_button.clicked.connect (() => utils.change_avatar (null));
-            main_grid.attach (remove_button, 0, 1, 1, 1);
 
             if (user.get_icon_file ().contains (".face"))
                 remove_button.set_sensitive (false);

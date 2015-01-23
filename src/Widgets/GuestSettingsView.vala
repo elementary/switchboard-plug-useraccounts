@@ -19,7 +19,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image guest_lock;
         public signal void guest_switch_changed ();
 
-        private const string no_permission_string   = _("You do not have permissions to change this");
+        private const string no_permission_string   = _("You do not have permission to change this");
 
         public GuestSettingsView () {
             vexpand = false;

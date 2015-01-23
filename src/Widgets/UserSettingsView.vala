@@ -17,6 +17,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettingsView : Gtk.Grid {
         private unowned Act.User   user;
         private UserUtils           utils;
+        private DeltaUser           delta_user;
 
         private Gtk.ListStore       language_store;
         private Gtk.ListStore       region_store;
@@ -29,6 +30,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
         private Gtk.ComboBox        language_box;
+        private Gtk.Revealer        region_revealer;
         private Gtk.ComboBox        region_box;
         private Gtk.Button          language_button;
         private Gtk.Switch          autologin_switch;
@@ -41,13 +43,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image           password_lock;
         private Gtk.Image           enable_lock;
 
-        private const string no_permission_string   = _("You do not have permissions to change this");
+        private const string no_permission_string   = _("You do not have permission to change this");
         private const string current_user_string    = _("You cannot change this for the currently active user");
         private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
             this.user = user;
             utils = new UserUtils (this.user, this);
+            delta_user = new DeltaUser (this.user);
             build_ui ();
             this.user.changed.connect (update_ui);
         }
@@ -63,7 +66,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar_button.set_relief (Gtk.ReliefStyle.NONE);
             avatar_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
-
                 AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
                 avatar_popover.show_all ();
             });
@@ -108,12 +110,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     language_store.get_value (iter, 0, out cell);
 
                     if (get_regions ((string)cell).size == 0) {
-                        region_box.hide ();
-                        region_box.set_no_show_all (true);
+                        region_revealer.set_reveal_child (false);
                         if (user.get_language () != (string)cell)
                             utils.change_language ((string)cell);
                     } else {
-                        region_box.show ();
+                        region_revealer.set_reveal_child (true);
                         region_box.set_no_show_all (false);
                         update_region ((string)cell);
                     }
@@ -144,7 +145,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     if (new_language != "" && new_language != user.get_language ())
                         utils.change_language (new_language);
                 });
-                attach (region_box, 1, 3, 1, 1);
+
+                region_revealer = new Gtk.Revealer ();
+                region_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+                region_revealer.set_transition_duration (350);
+                region_revealer.set_reveal_child (true);
+                region_revealer.add (region_box);
+                attach (region_revealer, 1, 3, 1, 1);
 
                 renderer = new Gtk.CellRendererText ();
                 region_box.pack_start (renderer, true);
@@ -152,7 +159,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             } else {
                 language_button = new Gtk.Button ();
-                language_button.set_size_request (0, 27);
+                language_button.set_size_request (0, 25);
                 language_button.set_relief (Gtk.ReliefStyle.NONE);
                 language_button.halign = Gtk.Align.START;
                 language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
@@ -232,17 +239,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_ui () {
-            user_type_box.set_sensitive (false);
-            password_button.set_sensitive (false);
-            autologin_switch.set_sensitive (false);
-            enable_user_button.set_sensitive (false);
-
-            user_type_lock.set_opacity (0.5);
-            autologin_lock.set_opacity (0.5);
-            password_lock.set_opacity (0.5);
-            enable_lock.set_opacity (0.5);
-
             if (!get_permission ().allowed) {
+                user_type_box.set_sensitive (false);
+                password_button.set_sensitive (false);
+                autologin_switch.set_sensitive (false);
+                enable_user_button.set_sensitive (false);
+
+                user_type_lock.set_opacity (0.5);
+                autologin_lock.set_opacity (0.5);
+                password_lock.set_opacity (0.5);
+                enable_lock.set_opacity (0.5);
+
                 user_type_lock.set_tooltip_text (no_permission_string);
                 enable_lock.set_tooltip_text (no_permission_string);
             } else if (get_current_user () == user) {
@@ -291,6 +298,67 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
+            if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
+                enable_user_button.set_sensitive (true);
+                enable_lock.set_opacity (0);
+                if (!user.get_locked ())
+                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            }
+
+            //only update widgets if the user property has changed since last ui update
+            if (delta_user.real_name != user.get_real_name ())
+                update_real_name ();
+            if (delta_user.icon_file != user.get_icon_file ())
+                update_avatar ();
+            if (delta_user.account_type != user.get_account_type ())
+                update_account_type ();
+            if (delta_user.password_mode != user.get_password_mode ())
+                update_password ();
+            if (delta_user.automatic_login != user.get_automatic_login ())
+                update_autologin ();
+            if (delta_user.locked != user.get_locked ())
+                update_lock_state ();
+            if (delta_user.language != user.get_language ())
+                update_language ();
+
+            delta_user.update ();
+            show_all ();
+        }
+
+        public void update_real_name () {
+            full_name_entry.set_text (user.get_real_name ());
+        }
+
+        public void update_account_type () {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
+                user_type_box.set_active (1);
+            else
+                user_type_box.set_active (0);
+        }
+
+        public void update_autologin () {
+            if (user.get_automatic_login () && !autologin_switch.get_active ())
+                autologin_switch.set_active (true);
+            else if (!user.get_automatic_login () && autologin_switch.get_active ())
+                autologin_switch.set_active (false);
+        }
+
+        public void update_lock_state () {
+            if (user.get_locked ()) {
+                enable_user_button.set_label (_("Enable User Account"));
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            } else if (!user.get_locked ())
+                enable_user_button.set_label (_("Disable User Account"));
+        }
+
+        public void update_password () {
+            if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
+                password_button.set_label (_("None set"));
+            else
+                password_button.set_label ("**********");
+        }
+
+        public void update_avatar () {
             try {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
                 if (avatar == null)
@@ -305,42 +373,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 } catch (Error e) { }
             }
             avatar_button.set_image (avatar);
-
-            full_name_entry.set_text (user.get_real_name ());
-
-            //set user_type_box according to accounttype
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-                user_type_box.set_active (1);
-            else
-                user_type_box.set_active (0);
-
-            //set autologin_switch according to autologin
-            if (user.get_automatic_login () && !autologin_switch.get_active ())
-                autologin_switch.set_active (true);
-            else if (!user.get_automatic_login () && autologin_switch.get_active ())
-                autologin_switch.set_active (false);
-
-            if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
-                password_button.set_label (_("None set"));
-            else
-                password_button.set_label ("**********");
-
-            if (user.get_locked ()) {
-                enable_user_button.set_label (_("Enable User Account"));
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            } else if (!user.get_locked ())
-                enable_user_button.set_label (_("Disable User Account"));
-
-            if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
-                enable_user_button.set_sensitive (true);
-                enable_lock.set_opacity (0);
-                if (!user.get_locked ())
-                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            }
-
-            update_language ();
-
-            show_all ();
         }
 
         public void update_language () {
