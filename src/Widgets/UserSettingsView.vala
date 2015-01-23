@@ -30,6 +30,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
         private Gtk.ComboBox        language_box;
+        private Gtk.Revealer        region_revealer;
         private Gtk.ComboBox        region_box;
         private Gtk.Button          language_button;
         private Gtk.Switch          autologin_switch;
@@ -65,7 +66,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar_button.set_relief (Gtk.ReliefStyle.NONE);
             avatar_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
-
                 AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
                 avatar_popover.show_all ();
             });
@@ -110,12 +110,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     language_store.get_value (iter, 0, out cell);
 
                     if (get_regions ((string)cell).size == 0) {
-                        region_box.hide ();
-                        region_box.set_no_show_all (true);
+                        region_revealer.set_reveal_child (false);
                         if (user.get_language () != (string)cell)
                             utils.change_language ((string)cell);
                     } else {
-                        region_box.show ();
+                        region_revealer.set_reveal_child (true);
                         region_box.set_no_show_all (false);
                         update_region ((string)cell);
                     }
@@ -146,7 +145,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     if (new_language != "" && new_language != user.get_language ())
                         utils.change_language (new_language);
                 });
-                attach (region_box, 1, 3, 1, 1);
+
+                region_revealer = new Gtk.Revealer ();
+                region_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+                region_revealer.set_transition_duration (350);
+                region_revealer.set_reveal_child (true);
+                region_revealer.add (region_box);
+                attach (region_revealer, 1, 3, 1, 1);
 
                 renderer = new Gtk.CellRendererText ();
                 region_box.pack_start (renderer, true);

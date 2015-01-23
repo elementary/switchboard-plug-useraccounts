@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-23 12:29+0100\n"
+"POT-Creation-Date: 2015-01-23 12:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgid "You cannot remove your own user account"
 msgstr ""
 
 #: ../src/Widgets/GuestSettingsView.vala:22
-#: ../src/Widgets/UserSettingsView.vala:45
+#: ../src/Widgets/UserSettingsView.vala:46
 msgid "You do not have permissions to change this"
 msgstr ""
 
@@ -207,11 +207,11 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:46
+#: ../src/Widgets/UserSettingsView.vala:47
 msgid "You cannot change this for the currently active user"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:47
+#: ../src/Widgets/UserSettingsView.vala:48
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
@@ -227,27 +227,27 @@ msgstr ""
 msgid "Language:"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:160
+#: ../src/Widgets/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:173
+#: ../src/Widgets/UserSettingsView.vala:178
 msgid "Log In automatically:"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:343
+#: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:346
+#: ../src/Widgets/UserSettingsView.vala:351
 msgid "Disable User Account"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:351
+#: ../src/Widgets/UserSettingsView.vala:356
 msgid "None set"
 msgstr ""
 
