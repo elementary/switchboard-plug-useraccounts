@@ -17,6 +17,41 @@ Authored by: Switchboard Locale Plug Developers
 ***/
 
 namespace SwitchboardPlugUserAccounts {
+    public class DeltaUser : Object {
+        private weak Act.User   user;
+
+        public string?               real_name { public get; private set; }
+        public Act.UserAccountType?  account_type { public get; private set; }
+        public bool?                 automatic_login { public get; private set; }
+        public bool?                 locked { public get; private set; }
+        public Act.UserPasswordMode? password_mode { public get; private set; }
+        public string?               icon_file { public get; private set; }
+        public string?               language { public get; private set; }
+
+        public DeltaUser (Act.User user) {
+            this.user = user;
+
+            //set all properties to null to be sure widgets will be updated on first load
+            real_name = null;
+            account_type = null;
+            automatic_login = null;
+            locked = null;
+            password_mode = null;
+            icon_file = null;
+            language = null;
+        }
+
+        public void update () {
+            real_name = user.get_real_name ();
+            account_type = user.get_account_type ();
+            automatic_login = user.get_automatic_login ();
+            locked = user.get_locked ();
+            password_mode = user.get_password_mode ();
+            icon_file = user.get_icon_file ();
+            language = user.get_language ();
+        }
+    }
+
     private static string[]? installed_languages = null;
 
     public static string[]? get_installed_languages () {

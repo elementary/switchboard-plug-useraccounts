@@ -17,6 +17,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettingsView : Gtk.Grid {
         private unowned Act.User   user;
         private UserUtils           utils;
+        private DeltaUser           delta_user;
 
         private Gtk.ListStore       language_store;
         private Gtk.ListStore       region_store;
@@ -48,6 +49,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public UserSettingsView (Act.User user) {
             this.user = user;
             utils = new UserUtils (this.user, this);
+            delta_user = new DeltaUser (this.user);
             build_ui ();
             this.user.changed.connect (update_ui);
         }
@@ -291,6 +293,67 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
+            if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
+                enable_user_button.set_sensitive (true);
+                enable_lock.set_opacity (0);
+                if (!user.get_locked ())
+                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            }
+
+            //only update widgets if the user property has changed since last ui update
+            if (delta_user.real_name != user.get_real_name ())
+                update_real_name ();
+            if (delta_user.icon_file != user.get_icon_file ())
+                update_avatar ();
+            if (delta_user.account_type != user.get_account_type ())
+                update_account_type ();
+            if (delta_user.password_mode != user.get_password_mode ())
+                update_password ();
+            if (delta_user.automatic_login != user.get_automatic_login ())
+                update_autologin ();
+            if (delta_user.locked != user.get_locked ())
+                update_lock_state ();
+            if (delta_user.language != user.get_language ())
+                update_language ();
+
+            delta_user.update ();
+            show_all ();
+        }
+
+        public void update_real_name () {
+            full_name_entry.set_text (user.get_real_name ());
+        }
+
+        public void update_account_type () {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
+                user_type_box.set_active (1);
+            else
+                user_type_box.set_active (0);
+        }
+
+        public void update_autologin () {
+            if (user.get_automatic_login () && !autologin_switch.get_active ())
+                autologin_switch.set_active (true);
+            else if (!user.get_automatic_login () && autologin_switch.get_active ())
+                autologin_switch.set_active (false);
+        }
+
+        public void update_lock_state () {
+            if (user.get_locked ()) {
+                enable_user_button.set_label (_("Enable User Account"));
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            } else if (!user.get_locked ())
+                enable_user_button.set_label (_("Disable User Account"));
+        }
+
+        public void update_password () {
+            if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
+                password_button.set_label (_("None set"));
+            else
+                password_button.set_label ("**********");
+        }
+
+        public void update_avatar () {
             try {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
                 if (avatar == null)
@@ -305,42 +368,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 } catch (Error e) { }
             }
             avatar_button.set_image (avatar);
-
-            full_name_entry.set_text (user.get_real_name ());
-
-            //set user_type_box according to accounttype
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-                user_type_box.set_active (1);
-            else
-                user_type_box.set_active (0);
-
-            //set autologin_switch according to autologin
-            if (user.get_automatic_login () && !autologin_switch.get_active ())
-                autologin_switch.set_active (true);
-            else if (!user.get_automatic_login () && autologin_switch.get_active ())
-                autologin_switch.set_active (false);
-
-            if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
-                password_button.set_label (_("None set"));
-            else
-                password_button.set_label ("**********");
-
-            if (user.get_locked ()) {
-                enable_user_button.set_label (_("Enable User Account"));
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            } else if (!user.get_locked ())
-                enable_user_button.set_label (_("Disable User Account"));
-
-            if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
-                enable_user_button.set_sensitive (true);
-                enable_lock.set_opacity (0);
-                if (!user.get_locked ())
-                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            }
-
-            update_language ();
-
-            show_all ();
         }
 
         public void update_language () {
