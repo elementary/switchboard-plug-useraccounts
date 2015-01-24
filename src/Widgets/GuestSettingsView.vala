@@ -25,8 +25,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             vexpand = false;
             valign = Gtk.Align.CENTER;
             halign = Gtk.Align.CENTER;
-            margin_left = 64;
-            margin_right = 64;
+            margin_left = 96;
+            margin_right = 96;
             border_width = 24;
             row_spacing = 24;
             column_spacing = 12;
