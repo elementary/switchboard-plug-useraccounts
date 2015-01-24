@@ -1,4 +1,272 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-23 12:36+0100\n"
+"PO-Revision-Date: 2015-01-03 05:44+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-01-24 06:31+0000\n"
+"X-Generator: Launchpad (build 17306)\n"
+
+#: ../src/Widgets/PasswordEditor.vala:59
+msgid "Current Password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Press to authenticate"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:81
+msgid "Authentication failed"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:113
+msgid "New Password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:117
+msgid "Password cannot be empty"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:133
+msgid "Confirm New Password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:136
+msgid "Passwords do not match"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:140
+msgid "Show passwords"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:161
+msgid "Password accepted"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:182
+msgid "Weak password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:184
+msgid "Medium password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:186
+msgid "Strong password strength"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:201
+msgid "Resembles your current password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:203
+msgid "New password is too simple"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:205
+msgid "New password is a palindrome"
+msgstr ""
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+#: ../src/Widgets/Popovers/AvatarPopover.vala:61
+msgid "Cancel"
+msgstr ""
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:69
+msgid "Change Avatar"
+msgstr ""
+
+#: ../src/Widgets/Popovers/PasswordPopover.vala:56
+msgid "Change Password"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:53
+msgid "Standard User"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:54
+#: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
+msgid "Administrator"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:61
+msgid "Full Name"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:71
+msgid "Username"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:75
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:93
+msgid "Set password now"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:95
+msgid "Set no password for login"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:97
+msgid "Let user create password on first login"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:121
+msgid "Create User"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:163
+msgid "Username is already taken"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is not valid"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File ..."
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:47
+msgid "Remove"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:60
+msgid "Select an image"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+msgid "Open"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+msgid "Images"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
+msgid "Create user account"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
+#: ../src/Widgets/ListFooter.vala:85
+msgid "Remove user account and its data"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
+msgid "Undo last user account removal"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:89
+msgid "You cannot remove your own user account"
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:22
+#: ../src/Widgets/UserSettingsView.vala:46
+msgid "You do not have permissions to change this"
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
+msgid "Guest Session"
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:85
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:86
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:73
+msgid "Enabled"
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:76
+msgid "Disabled"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:47
+msgid "You cannot change this for the currently active user"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:48
+msgid "You cannot remove the last administrator's privileges"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:83
+msgid "Account type:"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:88
+msgid "Standard"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Language:"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:165
+msgid "Click to switch to Language & Locale Settings"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:178
+msgid "Log In automatically:"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:190
+msgid "Password:"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:348
+msgid "Enable User Account"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:351
+msgid "Disable User Account"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:356
+msgid "None set"
+msgstr ""
+
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr ""
+
+#: ../src/Plug.vala:36
+msgid "User Accounts"
+msgstr ""
+
+#: ../src/Plug.vala:37
+msgid "Manage user accounts on your local system"
+msgstr ""
+
+#: ../src/Plug.vala:66
+msgid "Password change failed"
+msgstr ""
+
+#: ../src/Plug.vala:80
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+
+#: ../src/Plug.vala:99
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
