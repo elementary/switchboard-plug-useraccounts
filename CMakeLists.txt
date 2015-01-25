@@ -37,8 +37,8 @@ set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGN
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
-configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.user-accounts.administration.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.user-accounts.administration.policy)
-install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.user-accounts.administration.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
+configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.user-accounts.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.user-accounts.policy)
+install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.user-accounts.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 
 # Traslation stuff
 add_subdirectory (po)

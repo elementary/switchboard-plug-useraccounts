@@ -6,7 +6,7 @@
   <vendor>elementary</vendor>
   <vendor_url>http://elementaryos.org/</vendor_url>
 
-  <action id="org.pantheon.user-accounts.administration">
+  <action id="org.pantheon.switchboard.user-accounts.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage user accounts</description>
     <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change user data</message>
     <icon_name>system-users</icon_name>
