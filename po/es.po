@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-17 11:49+0000\n"
+"PO-Revision-Date: 2015-01-24 14:12+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-24 06:31+0000\n"
+"X-Launchpad-Export-Date: 2015-01-25 06:12+0000\n"
 "X-Generator: Launchpad (build 17306)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
@@ -124,11 +124,11 @@ msgstr "Crear usuario"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:163
 msgid "Username is already taken"
-msgstr ""
+msgstr "El nombre de usuario ya existe"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is not valid"
-msgstr ""
+msgstr "El nombre de usuario no es válido"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File ..."
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:47
 msgid "Remove"
-msgstr ""
+msgstr "Quitar"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:60
 msgid "Select an image"
@@ -170,7 +170,7 @@ msgstr "No puede eliminar su propia cuenta"
 #: ../src/Widgets/GuestSettingsView.vala:22
 #: ../src/Widgets/UserSettingsView.vala:46
 msgid "You do not have permissions to change this"
-msgstr ""
+msgstr "No tiene permiso para cambiar esta opción"
 
 #: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
@@ -206,11 +206,11 @@ msgstr "Desactivada"
 
 #: ../src/Widgets/UserSettingsView.vala:47
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "No puede cambiar esta opción para el usuario activo"
 
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "No puede quitar los permisos de la última cuenta administrativa"
 
 #: ../src/Widgets/UserSettingsView.vala:83
 msgid "Account type:"
@@ -226,7 +226,7 @@ msgstr "Idioma:"
 
 #: ../src/Widgets/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Ir a Idioma y región"
 
 #: ../src/Widgets/UserSettingsView.vala:178
 msgid "Log In automatically:"
@@ -268,6 +268,8 @@ msgstr "Falló el cambio de contraseña"
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Los cambios en la sesión de invitado no surtirán efecto mientras no reinicie "
+"el sistema"
 
 #: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
