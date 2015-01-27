@@ -19,7 +19,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image guest_lock;
         public signal void guest_switch_changed ();
 
-        private const string no_permission_string   = _("You do not have permission to change this");
+        private const string no_permission_string = _("You do not have permission to change this");
 
         public GuestSettingsView () {
             vexpand = false;
@@ -57,7 +57,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var header_label = new Gtk.Label (_("Guest Session"));
             header_label.hexpand = true;
-            header_label.get_style_context ().add_class ("h2");
+            header_label.use_markup = true;
+            header_label.set_label (@"<span font_weight=\"bold\" size=\"x-large\">%s</span>".printf (header_label.get_label ()));
+            //header_label.get_style_context ().add_class ("h2");
             header_label.halign = Gtk.Align.START;
             header_label.valign = Gtk.Align.END;
             header_label.justify = Gtk.Justification.FILL;
