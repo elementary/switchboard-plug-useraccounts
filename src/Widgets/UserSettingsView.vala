@@ -43,6 +43,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image           password_lock;
         private Gtk.Image           enable_lock;
 
+        private Gee.HashMap<string, string> default_regions;
+
         private const string no_permission_string   = _("You do not have permission to change this");
         private const string current_user_string    = _("You cannot change this for the currently active user");
         private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
@@ -61,6 +63,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             set_column_spacing (20);
             set_valign (Gtk.Align.START);
             set_halign (Gtk.Align.CENTER);
+
+            default_regions = get_default_regions ();
 
             avatar_button = new Gtk.Button ();
             avatar_button.set_relief (Gtk.ReliefStyle.NONE);
@@ -423,8 +427,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             if (!iter_set) {
-                Gtk.TreeIter? active_iter;
-                region_store.get_iter_first (out active_iter);
+                Gtk.TreeIter? active_iter = null;
+
+                Gtk.TreeModelForeachFunc check_region_store = (model, path, iter) => {
+                    Value cell;
+                    region_store.get_value (iter, 0, out cell);
+
+                    if (default_regions.has_key (language)
+                    && default_regions.@get (language) == "%s_%s".printf (language, (string)cell))
+                        active_iter = iter;
+
+                    return false;
+                };
+                region_store.foreach (check_region_store);
+                if (active_iter == null)
+                    region_store.get_iter_first (out active_iter);
+
                 region_box.set_active_iter (active_iter);
             }
         }

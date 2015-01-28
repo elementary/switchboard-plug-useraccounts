@@ -79,6 +79,32 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
+    private static Gee.HashMap<string, string>? default_regions;
+
+    public static unowned Gee.HashMap<string, string>? get_default_regions () {
+        if (default_regions != null)
+            return default_regions;
+
+        default_regions = new Gee.HashMap<string, string> ();
+        string file = "/usr/share/language-tools/main-countries";
+        string? output = "";
+        try {
+            FileUtils.get_contents (file, out output);
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        var output_array = output.split ("\n");
+        foreach (string line in output_array) {
+            if (line != "" && line.index_of ("#") == -1) {
+                var line_array = line.split ("\t");
+                default_regions.@set (line_array[0], line_array[1]);
+            }
+        }
+
+        return default_regions;
+    }
+
     public static Gee.ArrayList<string> get_languages () {
         Gee.ArrayList<string> languages = new Gee.ArrayList<string> ();
         foreach (string locale in get_installed_languages ()) {
