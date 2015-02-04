@@ -20,7 +20,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListBoxRow  guest_session_row;
         private Gtk.Label       guest_description_label;
 
-        public UserListBox () {
+        public UserListBox () { 
             selection_mode = Gtk.SelectionMode.SINGLE;
             get_usermanager ().user_added.connect (update_ui);
             get_usermanager ().user_removed.connect (update_ui);
@@ -39,7 +39,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             other_accounts_label.halign = Gtk.Align.START;
             other_accounts_label.get_style_context ().add_class ("h4");
 
-            build_guest_session_row ();
+            string dm = get_display_manager ();
+            if (dm == "lightdm") {
+                build_guest_session_row ();
+                debug ("LightDM found as display manager. Loading guest session settings");
+            } else
+                debug ("Unsupported display manager found. Guest session settings will be hidden");
+
             update_ui ();
         }
 

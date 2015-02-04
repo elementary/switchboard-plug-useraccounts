@@ -52,6 +52,20 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
+    public static string get_display_manager () {
+        string file = "/etc/X11/default-display-manager";
+        string output = "";
+
+        try {
+            FileUtils.get_contents (file, out output);
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
+        return output;
+    }
+
     private static string[]? installed_languages = null;
 
     public static string[]? get_installed_languages () {
