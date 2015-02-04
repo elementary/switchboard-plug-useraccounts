@@ -40,7 +40,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             other_accounts_label.get_style_context ().add_class ("h4");
 
             string dm = get_display_manager ();
-            warning (dm);
             if (dm == "lightdm") {
                 build_guest_session_row ();
                 debug ("LightDM found as display manager. Loading guest session settings");
