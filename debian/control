@@ -35,3 +35,9 @@ Description: Manage local user accounts (debugging symbols)
  Switchboard plug for managing local user accounts
  .
  This package contains debugging symbols for switchboard-plug-useraccounts.
+
+Package: switchboard-plug-users
+Architecture: any
+Depends: switchboard-plug-useraccounts
+Description: Manage local user accounts (dummy package)
+ Switchboard plug for managing local user accounts. Dummy package, safe to remove.
