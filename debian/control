@@ -20,6 +20,8 @@ Package: switchboard-plug-useraccounts
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Enhances: switchboard
+Conflicts: switchboard-plug-gcc-users
+Replaces: switchboard-plug-gcc-users
 Description: Manage local user accounts
  Switchboard plug for managing local user accounts
 
