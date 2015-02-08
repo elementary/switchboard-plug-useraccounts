@@ -15,7 +15,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettingsView : Gtk.Grid {
-        private unowned Act.User   user;
+        private weak Act.User       user;
         private UserUtils           utils;
         private DeltaUser           delta_user;
 
@@ -356,7 +356,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_password () {
-            if (user.get_password_mode () == Act.UserPasswordMode.NONE || user.get_locked ())
+            if (user.get_password_mode () == Act.UserPasswordMode.NONE)
                 password_button.set_label (_("None set"));
             else
                 password_button.set_label ("**********");

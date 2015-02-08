@@ -60,6 +60,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             button_change.clicked.connect (() => {
                 if (pw_editor.is_valid)
                     request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
+
+                hide ();
+                destroy ();
             });
             button_box.pack_end (button_change);
 

@@ -39,8 +39,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             other_accounts_label.halign = Gtk.Align.START;
             other_accounts_label.get_style_context ().add_class ("h4");
 
-            string dm = get_display_manager ();
-            if (dm == "lightdm") {
+            //only build the guest session list entry / row when lightDM is X11's display manager
+            if (get_display_manager () == "lightdm") {
                 build_guest_session_row ();
                 debug ("LightDM found as display manager. Loading guest session settings");
             } else
@@ -51,6 +51,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_ui () {
             List<weak Gtk.Widget> userlist_items = get_children ();
+
             foreach (unowned Gtk.Widget useritem in userlist_items)
                 remove (useritem);
 
@@ -78,6 +79,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public void update_guest () {
             string state_string = _("Enabled");
             bool state = get_guest_session_state ();
+
             if (!state)
                 state_string = _("Disabled");
 

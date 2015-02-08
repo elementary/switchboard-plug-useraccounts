@@ -15,21 +15,18 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        private Gtk.Grid grid;
-        private Gtk.Image avatar;
-        private Gdk.Pixbuf avatar_pixbuf;
-        private Gtk.Box label_box;
-        private Gtk.Label full_name_label;
-        private Gtk.Label description_label;
+        private Gtk.Grid        grid;
+        private Gtk.Image       avatar;
+        private Gdk.Pixbuf      avatar_pixbuf;
+        private Gtk.Box         label_box;
+        private Gtk.Label       full_name_label;
+        private Gtk.Label       description_label;
 
-        public unowned Act.User user;
-
-        public string user_name;
+        public weak Act.User user { public get; private set; }
 
         public UserItem (Act.User user) {
             this.user = user;
             user.changed.connect (update_ui);
-            user_name = user.get_user_name ();
 
             build_ui ();
         }
@@ -63,20 +60,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_ui () {
-            if (avatar == null)
+            if (avatar == null) {
                 avatar = new Gtk.Image ();
+                avatar.margin_end = 3;
+            }
+
             try {
-                if (user.get_icon_file () == "")
-                    avatar.set_from_icon_name ("avatar-default", Gtk.IconSize.DND);
-                else {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
                 avatar.set_from_pixbuf (avatar_pixbuf);
-                }
-                
             } catch (Error e) {
                 avatar.set_from_icon_name ("avatar-default", Gtk.IconSize.DND);
             }
-            avatar.margin_end = 3;
 
             full_name_label.set_label (user.get_real_name ());
             string description = "<span font_size=\"small\">%s</span>".printf (user.get_user_name ());

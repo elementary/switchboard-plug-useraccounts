@@ -27,16 +27,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private PasswordQuality.Settings pwquality;
 
-        public bool is_authenticated = false;
+        public bool is_authenticated { public get; private set; }
         private signal void auth_changed ();
 
-        public bool is_valid = false;
+        public bool is_valid { public get; private set; }
         public signal void validation_changed ();
 
         private int entry_width = 195;
 
         public PasswordEditor () {
             pwquality = new PasswordQuality.Settings ();
+            is_authenticated = false;
+            is_valid = false;
             build_ui ();
         }
 
@@ -239,6 +241,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
             validation_changed ();
         }
+
         private void password_auth () {
             Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.get_text (), (h, e) => {
                 if (e != null) {

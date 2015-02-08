@@ -47,8 +47,6 @@ namespace SwitchboardPlugUserAccounts {
             main_grid = new Gtk.Grid ();
             main_grid.expand = true;
 
-            var notifier = InfobarNotifier.get_default ();
-
             infobar_error = new Gtk.InfoBar ();
             infobar_error.message_type = Gtk.MessageType.ERROR;
             infobar_error.no_show_all = true;
@@ -59,11 +57,11 @@ namespace SwitchboardPlugUserAccounts {
 
             main_grid.attach (infobar_error, 0, 0, 1, 1);
 
-            notifier.error_notified.connect (() => {
-                if (notifier.is_error ()) {
+            InfobarNotifier.get_default ().error_notified.connect (() => {
+                if (InfobarNotifier.get_default ().is_error ()) {
                     infobar_error.no_show_all = false;
                     error_label.set_label (("%s: %s".printf
-                        (_("Password change failed"), notifier.get_error_message ())));
+                        (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ())));
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;
@@ -80,8 +78,8 @@ namespace SwitchboardPlugUserAccounts {
             Gtk.Label reboot_label = new Gtk.Label (_("Guest session changes will not take effect until you restart your system"));
             reboot_content.add (reboot_label);
 
-            notifier.reboot_notified.connect (() => {
-                if (notifier.is_reboot ()) {
+            InfobarNotifier.get_default ().reboot_notified.connect (() => {
+                if (InfobarNotifier.get_default ().is_reboot ()) {
                     infobar_reboot.no_show_all = false;
                     infobar_reboot.show_all ();
                 }
