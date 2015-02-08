@@ -15,11 +15,13 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class AvatarPopover : Gtk.Popover {
-        private unowned Act.User    user;
-        private unowned UserUtils   utils;
-        private Gtk.Grid             main_grid;
+        private weak Act.User    user;
+        private weak UserUtils   utils;
+        private Gtk.Grid         main_grid;
 
         private Dialogs.AvatarDialog    avatar_dialog;
+
+        public signal void create_selection_dialog ();
 
         public AvatarPopover (Gtk.Widget relative, Act.User user, UserUtils utils) {
             this.user = user;

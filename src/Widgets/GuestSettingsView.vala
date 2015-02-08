@@ -15,8 +15,9 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class GuestSettingsView : Gtk.Grid {
-        private Gtk.Switch guest_switch;
-        private Gtk.Image guest_lock;
+        private Gtk.Switch  guest_switch;
+        private Gtk.Image   guest_lock;
+
         public signal void guest_switch_changed ();
 
         private const string no_permission_string = _("You do not have permission to change this");

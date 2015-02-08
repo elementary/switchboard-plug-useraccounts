@@ -53,6 +53,7 @@ namespace SwitchboardPlugUserAccounts {
     }
 
     public static string get_display_manager () {
+        //TODO: add file location for different, non-debian-based distros
         string file = "/etc/X11/default-display-manager";
         string output = "";
 
@@ -60,6 +61,7 @@ namespace SwitchboardPlugUserAccounts {
             FileUtils.get_contents (file, out output);
         } catch (Error e) {
             warning (e.message);
+            return "";
         }
 
         output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
@@ -229,8 +231,7 @@ namespace SwitchboardPlugUserAccounts {
 
     public static bool is_valid_username (string username) {
         try {
-            var regex = new Regex ("^[a-z]+[a-z0-9]*$");
-            if (regex.match (username))
+            if (new Regex("^[a-z]+[a-z0-9]*$").match (username))
                 return true;
             return false;
         } catch (Error e) {

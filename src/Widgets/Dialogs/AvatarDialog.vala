@@ -22,10 +22,10 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
         private Gtk.Widget          button_cancel;
         private Widgets.CropView    cropview;
 
-        public signal void request_avatar_change (Gdk.Pixbuf _pixbuf);
+        public signal void request_avatar_change (Gdk.Pixbuf pixbuf);
 
-        public AvatarDialog (string _path) {
-            pixbuf_path = _path;
+        public AvatarDialog (string pixbuf_path) {
+            this.pixbuf_path = pixbuf_path;
 
             set_size_request (400, 0);
             set_resizable (false);
