@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-10 13:13+0000\n"
+"PO-Revision-Date: 2015-02-09 14:48+0000\n"
 "Last-Translator: Marvin Beckers <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-04 07:24+0000\n"
+"X-Launchpad-Export-Date: 2015-02-10 07:13+0000\n"
 "X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
@@ -18,7 +18,7 @@ msgstr "Aktuelles Passwort"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Für Authentifikation drücken"
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
@@ -104,7 +104,7 @@ msgstr "Benutzername"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Darf nur Kleinbuchstaben, Nummern und keine Leerzeichen enthalten"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:93
 msgid "Set password now"
@@ -116,7 +116,7 @@ msgstr "Kein Passwort für Login setzen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:97
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Benutzer kann Passwort bei Anmeldung festlegen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:121
 msgid "Create User"
@@ -124,11 +124,11 @@ msgstr "Benutzer erstellen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:163
 msgid "Username is already taken"
-msgstr ""
+msgstr "Benutzername ist bereits vergeben"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is not valid"
-msgstr ""
+msgstr "Benutzername ist nicht zulässig"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File ..."
@@ -136,7 +136,7 @@ msgstr "Aus Datei laden ..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:47
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:60
 msgid "Select an image"
@@ -270,6 +270,7 @@ msgstr "Passwortänderung fehlgeschlagen"
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Änderungen an der Gastsitzung werden erst nach einem Neustart angewendet"
 
 #: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
