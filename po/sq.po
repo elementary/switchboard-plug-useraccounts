@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-02-24 22:28+0000\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-04 07:24+0000\n"
-"X-Generator: Launchpad (build 17331)\n"
+"X-Launchpad-Export-Date: 2015-02-25 06:03+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
-msgstr ""
+msgstr "Fjalëkalimi aktual"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
@@ -26,27 +26,27 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
-msgstr ""
+msgstr "Fjalëkalimi i ri"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "Fjalëkalimi nuk mund të jetë bosh"
 
 #: ../src/Widgets/PasswordEditor.vala:133
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Konfirmo fjalëkalimin e ri"
 
 #: ../src/Widgets/PasswordEditor.vala:136
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Fjalëkalimet nuk përputhen"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Show passwords"
-msgstr ""
+msgstr "Shfaq fjalëkalimet"
 
 #: ../src/Widgets/PasswordEditor.vala:161
 msgid "Password accepted"
-msgstr ""
+msgstr "Fjalëkalimet u pranuan"
 
 #: ../src/Widgets/PasswordEditor.vala:182
 msgid "Weak password strength"
@@ -66,49 +66,49 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
-msgstr ""
+msgstr "Fjalëkalimi i ri është tepër i thjeshtë"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Fjalëkalimi i ri është një palindromë"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 #: ../src/Widgets/Popovers/AvatarPopover.vala:61
 msgid "Cancel"
-msgstr ""
+msgstr "Anulo"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:69
 msgid "Change Avatar"
-msgstr ""
+msgstr "Ndrysho foton personale"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:56
 msgid "Change Password"
-msgstr ""
+msgstr "Ndrysho fjalëkalimin"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:53
 msgid "Standard User"
-msgstr ""
+msgstr "Prëdorues standard"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
-msgstr ""
+msgstr "Administrator"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Full Name"
-msgstr ""
+msgstr "Emri i plotë"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:71
 msgid "Username"
-msgstr ""
+msgstr "Emri i përdoruesit"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:93
 msgid "Set password now"
-msgstr ""
+msgstr "Vendos fjalëkalimin tani"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:95
 msgid "Set no password for login"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:121
 msgid "Create User"
-msgstr ""
+msgstr "Krijo përdoruesin"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:163
 msgid "Username is already taken"
@@ -136,15 +136,15 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:47
 msgid "Remove"
-msgstr ""
+msgstr "Hiqe"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:60
 msgid "Select an image"
-msgstr ""
+msgstr "Zgjidh një foto"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Open"
-msgstr ""
+msgstr "Hap"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Images"
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "Llogaria ime"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
@@ -212,15 +212,15 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:83
 msgid "Account type:"
-msgstr ""
+msgstr "Tipi i llogarisë:"
 
 #: ../src/Widgets/UserSettingsView.vala:88
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: ../src/Widgets/UserSettingsView.vala:96
 msgid "Language:"
-msgstr ""
+msgstr "Gjuha:"
 
 #: ../src/Widgets/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "Fjalëkalimi:"
 
 #: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
@@ -260,7 +260,7 @@ msgstr ""
 
 #: ../src/Plug.vala:66
 msgid "Password change failed"
-msgstr ""
+msgstr "Ndryshimi i fjalëkalimit dështoi"
 
 #: ../src/Plug.vala:80
 msgid ""
