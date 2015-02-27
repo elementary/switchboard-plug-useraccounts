@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-02-24 22:28+0000\n"
+"PO-Revision-Date: 2015-02-26 16:27+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-25 06:03+0000\n"
-"X-Generator: Launchpad (build 17355)\n"
+"X-Launchpad-Export-Date: 2015-02-27 05:58+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
@@ -18,11 +18,11 @@ msgstr "Fjalëkalimi aktual"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Shtyp për tu identifikuar"
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
-msgstr ""
+msgstr "Identifikimi dështoi"
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
@@ -46,7 +46,7 @@ msgstr "Shfaq fjalëkalimet"
 
 #: ../src/Widgets/PasswordEditor.vala:161
 msgid "Password accepted"
-msgstr "Fjalëkalimet u pranuan"
+msgstr "Fjalëkalimi u pranua"
 
 #: ../src/Widgets/PasswordEditor.vala:182
 msgid "Weak password strength"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Ngjason me fjalëkalimin aktual"
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is not valid"
-msgstr ""
+msgstr "Emri i përdoruesit nuk është i vlefshëm"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File ..."
@@ -152,12 +152,12 @@ msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "Krijo llogari përdoruesi"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Hiqe llogarinë e përdoruesit dhe të dhënat e saja"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
@@ -165,12 +165,12 @@ msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "Nuk mund të heqësh llogarinë tënde të përdoruesit"
 
 #: ../src/Widgets/GuestSettingsView.vala:22
 #: ../src/Widgets/UserSettingsView.vala:46
 msgid "You do not have permissions to change this"
-msgstr ""
+msgstr "Nuk ke lejet për të ndryshuar këtë"
 
 #: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
@@ -192,7 +192,7 @@ msgstr "Llogaria ime"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "Llogaritë e tjera"
 
 #: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
@@ -244,7 +244,7 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:356
 msgid "None set"
-msgstr ""
+msgstr "Asnjë i vendosur"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -252,7 +252,7 @@ msgstr ""
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "Llogaritë e përdoruesit"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
@@ -270,3 +270,4 @@ msgstr ""
 #: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Disa parametra kanë nevojë për të drejtat e administratorit për tu ndryshuar"
