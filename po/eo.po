@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-03 05:43+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-04-11 16:50+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-04 07:24+0000\n"
-"X-Generator: Launchpad (build 17331)\n"
+"X-Launchpad-Export-Date: 2015-04-12 06:05+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
-msgstr ""
+msgstr "Aktuala pasvorto"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
-msgstr ""
+msgstr "Nova pasvorto"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
@@ -92,15 +92,15 @@ msgstr ""
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
-msgstr ""
+msgstr "Administranto"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Full Name"
-msgstr ""
+msgstr "Plena nomo"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:71
 msgid "Username"
-msgstr ""
+msgstr "Uzantnomo"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Images"
-msgstr ""
+msgstr "Bildoj"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
@@ -188,11 +188,11 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "Mia konto"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "Aliaj kontoj"
 
 #: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "Pasvorto:"
 
 #: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
@@ -252,7 +252,7 @@ msgstr ""
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "Uzantkontoj"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
