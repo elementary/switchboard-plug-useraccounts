@@ -1,272 +1,273 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-03 05:43+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-04-12 14:26+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-04 07:26+0000\n"
-"X-Generator: Launchpad (build 17331)\n"
+"X-Launchpad-Export-Date: 2015-04-13 06:10+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
+"Language: zh_TW\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
-msgstr ""
+msgstr "目前的密碼"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
-msgstr ""
+msgstr "按下以核對身份"
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
-msgstr ""
+msgstr "身份核對失敗"
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
-msgstr ""
+msgstr "新密碼"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "密碼不能空白"
 
 #: ../src/Widgets/PasswordEditor.vala:133
 msgid "Confirm New Password"
-msgstr ""
+msgstr "確認新密碼"
 
 #: ../src/Widgets/PasswordEditor.vala:136
 msgid "Passwords do not match"
-msgstr ""
+msgstr "密碼不相符"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Show passwords"
-msgstr ""
+msgstr "顯示密碼"
 
 #: ../src/Widgets/PasswordEditor.vala:161
 msgid "Password accepted"
-msgstr ""
+msgstr "密碼已接受"
 
 #: ../src/Widgets/PasswordEditor.vala:182
 msgid "Weak password strength"
-msgstr ""
+msgstr "脆弱密碼強度"
 
 #: ../src/Widgets/PasswordEditor.vala:184
 msgid "Medium password strength"
-msgstr ""
+msgstr "中等密碼強度"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Strong password strength"
-msgstr ""
+msgstr "強固密碼強度"
 
 #: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
-msgstr ""
+msgstr "與您目前的密碼相似"
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
-msgstr ""
+msgstr "新密碼過於簡單"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "新密碼有回文"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 #: ../src/Widgets/Popovers/AvatarPopover.vala:61
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:69
 msgid "Change Avatar"
-msgstr ""
+msgstr "變更代表頭像"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:56
 msgid "Change Password"
-msgstr ""
+msgstr "變更密碼"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:53
 msgid "Standard User"
-msgstr ""
+msgstr "標準使用者"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
-msgstr ""
+msgstr "管理員"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Full Name"
-msgstr ""
+msgstr "全名"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:71
 msgid "Username"
-msgstr ""
+msgstr "使用者名稱"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "僅能包含小寫字母、數字、不能有空格"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:93
 msgid "Set password now"
-msgstr ""
+msgstr "立刻設定密碼"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:95
 msgid "Set no password for login"
-msgstr ""
+msgstr "登入不設定密碼"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:97
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "讓使用者在第一次登入時自行建立密碼"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:121
 msgid "Create User"
-msgstr ""
+msgstr "建立使用者"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:163
 msgid "Username is already taken"
-msgstr ""
+msgstr "使用者名稱已經有人使用"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is not valid"
-msgstr ""
+msgstr "使用者名稱無效"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File ..."
-msgstr ""
+msgstr "從檔案設定..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:47
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:60
 msgid "Select an image"
-msgstr ""
+msgstr "選取影像"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Images"
-msgstr ""
+msgstr "影像"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "建立使用者帳號"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "移除使用帳號與其資料"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "取消上一個使用者帳號的移除"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "您無法移除您自身的使用者帳號"
 
 #: ../src/Widgets/GuestSettingsView.vala:22
 #: ../src/Widgets/UserSettingsView.vala:46
 msgid "You do not have permissions to change this"
-msgstr ""
+msgstr "您沒有權限變更這個項目"
 
 #: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
-msgstr ""
+msgstr "訪客作業階段"
 
 #: ../src/Widgets/GuestSettingsView.vala:85
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr ""
+msgstr "訪客作業階段允許任何人使用暫時性的無密碼預設帳號。"
 
 #: ../src/Widgets/GuestSettingsView.vala:86
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+msgstr "一旦他們登出，所有的設定值與資料都會全部刪除。"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "我的帳號"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "其他帳號"
 
 #: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
-msgstr ""
+msgstr "已啟用"
 
 #: ../src/Widgets/UserListBox.vala:76
 msgid "Disabled"
-msgstr ""
+msgstr "已停用"
 
 #: ../src/Widgets/UserSettingsView.vala:47
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "您無法為目前啟用中的使用者變更這個項目"
 
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "您無法移除最後一位管理員的特殊權利"
 
 #: ../src/Widgets/UserSettingsView.vala:83
 msgid "Account type:"
-msgstr ""
+msgstr "帳號類型："
 
 #: ../src/Widgets/UserSettingsView.vala:88
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: ../src/Widgets/UserSettingsView.vala:96
 msgid "Language:"
-msgstr ""
+msgstr "語言："
 
 #: ../src/Widgets/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "點按以切換到「語言和區域」設定值"
 
 #: ../src/Widgets/UserSettingsView.vala:178
 msgid "Log In automatically:"
-msgstr ""
+msgstr "自動登入："
 
 #: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "密碼："
 
 #: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
-msgstr ""
+msgstr "啟用使用者帳號"
 
 #: ../src/Widgets/UserSettingsView.vala:351
 msgid "Disable User Account"
-msgstr ""
+msgstr "停用使用者帳號"
 
 #: ../src/Widgets/UserSettingsView.vala:356
 msgid "None set"
-msgstr ""
+msgstr "未設定"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "需要通過身份核對才能變更使用者資料"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "使用者帳號"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
-msgstr ""
+msgstr "管理您本機系統上的使用者帳號"
 
 #: ../src/Plug.vala:66
 msgid "Password change failed"
-msgstr ""
+msgstr "密碼變更失敗"
 
 #: ../src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr ""
+msgstr "訪客作業階段直到您重新啟動系統後才會生效"
 
 #: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "有些設定值需要有管理員權利才能變更"
