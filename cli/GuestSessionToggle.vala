@@ -181,7 +181,7 @@ namespace GuestSessionToggle {
 			return true;
 
 		debug ("'[%s] %s' is not set anywhere, creating '%s'\n", group, key, fallback_path);
-		return set_config_in_file (fallback_path, group, key, @value);
+		return set_config_in_file (fallback_path, group, key, @value, true);
 	}
 
 	private bool set_config_in_directories (string[] dirs, string group, string key, string @value) {
@@ -223,14 +223,20 @@ namespace GuestSessionToggle {
 		return false;
 	}
 
-	private bool set_config_in_file (string path, string group, string key, string @value) {
+	private bool set_config_in_file (string path, string group, string key, string @value, bool create = false) {
 		try {
 			var key_file = new KeyFile ();
 			if (FileUtils.test (path, FileTest.EXISTS))
 				key_file.load_from_file (path, KeyFileFlags.KEEP_COMMENTS);
-			key_file.set_string (group, key, @value);
-			key_file.save_to_file (path);
-			return true;
+			else if (!create)
+				return false;
+
+			create = (create || key_file.has_key (group, key));
+			if (create) {
+				key_file.set_string (group, key, @value);
+				key_file.save_to_file (path);
+				return true;
+			}			
 		} catch (KeyFileError e) {
 		} catch (FileError e) {
 			debug ("Failed to load/save configuration file %s: %s\n", path, e.message);
