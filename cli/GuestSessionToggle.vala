@@ -17,12 +17,9 @@ with this program. If not, see http://www.gnu.org/licenses/.
 namespace GuestSessionToggle {
 
 	const string LIGHTDM_CONF = "/etc/lightdm/lightdm.conf";
-	const string LIGHTDM_CONF_D = "/usr/share/lightdm/lightdm.conf.d/";
-	const string GUEST_SESSION_CONF = LIGHTDM_CONF_D + "60-guest-session.conf";
+	const string LIGHTDM_CONF_D = "/etc/lightdm/lightdm.conf.d";
+	const string GUEST_SESSION_CONF = "/usr/share/lightdm/lightdm.conf.d/60-guest-session.conf";
 	
-	const string ALLOW_GUEST_TRUE = "allow-guest=true";
-	const string ALLOW_GUEST_FALSE = "allow-guest=false";
-
 	const OptionEntry[] options = {
 		{ "show", 0, 0, OptionArg.NONE, ref SHOW, "Show whether guest-session is enabled", null },
 		{ "on", 0, 0, OptionArg.NONE, ref ON, "Enable guest-session", null },
@@ -45,15 +42,11 @@ namespace GuestSessionToggle {
 			return Posix.EXIT_FAILURE;
 		}
 
-		bool enabled = true;
-		try {
-			enabled = get_allow_guest ();
-		} catch (FileError e) {
-			printerr ("%s\n", e.message);
-			return Posix.EXIT_FAILURE;
-		}
+		bool enabled;
 
 		if (SHOW) {
+			enabled = get_allow_guest ();
+			
 			if (enabled)
 				print ("on\n");
 			else
@@ -69,72 +62,180 @@ namespace GuestSessionToggle {
 			return Posix.EXIT_FAILURE;
 		}
 				
+		enabled = get_allow_guest ();
+
 		if (ON && !enabled)
-			toggle (true);
+			set_allow_guest (true);
 		else if (OFF && enabled)
-			toggle (false);
+			set_allow_guest (false);
 
 		return Posix.EXIT_SUCCESS;
 	}
 
-	private void toggle (bool enable) {
-		if (set_allow_guest (LIGHTDM_CONF, enable))
-			return;
-		
-		Dir config_dir = Dir.open (LIGHTDM_CONF_D);
-		unowned string? name;
-		string? file;
-			
-		while ((name = config_dir.read_name ()) != null) {
-			file = LIGHTDM_CONF_D + name;
-			if (set_allow_guest (file, enable))
-				return;
-		}
-
-		if (!enable) {
-			FileUtils.set_contents (GUEST_SESSION_CONF, "[SeatDefaults]\n" + ALLOW_GUEST_FALSE + "\n");
-		}
+	private bool set_allow_guest (bool enable) {
+		string @value = (enable ? "true" : "false");
+		return set_setting ("SeatDefaults", "allow-guest", @value, GUEST_SESSION_CONF);
 	}
 
-	private bool set_allow_guest (string file, bool enable) {
-		bool success = false;
-		string? contents;
-		string? new_contents;
+	private bool get_allow_guest () {
+		// Default is enabled if not set
+		string @value = get_setting ("SeatDefaults", "allow-guest", "true").down ();
+		return (@value == "true");
+	}
+	
+	private string get_setting (string group, string key, string default_value) {
+		string? @value;
 
+		// Source config-file accoring to their priority
+
+		@value = get_config_from_file (LIGHTDM_CONF, group, key);
+		if (@value != null)
+			return @value;
+		
+		@value = get_config_from_directory (LIGHTDM_CONF_D, group, key);
+		if (@value != null)
+			return @value;
+
+		@value = get_config_from_directories (Environment.get_system_config_dirs (), group, key);
+		if (@value != null)
+			return @value;
+		
+		@value = get_config_from_directories (Environment.get_system_data_dirs (), group, key);
+		if (@value != null)
+			return @value;
+
+		debug ("'[%s] %s' is not set anywhere assuming default '%s'\n", group, key, default_value);
+		return default_value;
+	}
+
+	private string? get_config_from_directories (string[] dirs, string group, string key) {
+		string? result = null;
+
+		foreach (unowned string dir in dirs) {
+			var full_dir = Path.build_filename (dir, "lightdm", "lightdm.conf.d");
+			result = get_config_from_directory (full_dir, group, key);
+			if (result != null)
+				return result;
+		}
+		
+		return null;
+	}
+
+	private string? get_config_from_directory (string path, string group, string key) {
+		var files = new List<string> ();
+		string? result = null;
+
+		// Find files
 		try {
-			FileUtils.get_contents (file, out contents);
-
-			if (contents.index_of (ALLOW_GUEST_FALSE) > -1 && enable) {
-				new_contents = file.replace (ALLOW_GUEST_FALSE, ALLOW_GUEST_TRUE);
-				FileUtils.set_contents (file, new_contents);
-				success = true;
-			} else if (contents.index_of (ALLOW_GUEST_TRUE) > -1 && !enable) {
-				new_contents = file.replace (ALLOW_GUEST_TRUE, ALLOW_GUEST_FALSE);
-				FileUtils.set_contents (file, new_contents);
-				success = true;
-			}
+			var dir = Dir.open (path);
+			unowned string? name = null;
+			while ((name = dir.read_name ()) != null)
+				files.prepend (name);
 		} catch (FileError e) {
-			printerr ("%s\n", e.message);
+			debug ("Failed to open configuration directory %s: %s\n", path, e.message);
 		}
 
-		return success;
+		// Sort alphabetically
+		files.sort (strcmp);
+
+		foreach (unowned string filename in files) {
+			var conf_path = Path.build_filename (path, filename);
+			if (filename.has_suffix (".conf")) {
+				result = get_config_from_file (conf_path, group, key);
+				if (result != null)
+					return result;
+			} else {
+				debug ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
+			}
+		}
+		
+		return null;
 	}
 
-	private bool get_allow_guest () throws FileError {
-		string? contents;
-		
-		FileUtils.get_contents (LIGHTDM_CONF, out contents);
-		if (contents.index_of (ALLOW_GUEST_FALSE) > -1)
-			return false;
-
-		Dir config_dir = Dir.open (LIGHTDM_CONF_D);
-		unowned string? name = null;
-		while ((name = config_dir.read_name ()) != null) {
-			FileUtils.get_contents (LIGHTDM_CONF_D + name, out contents);
-			if (contents.index_of (ALLOW_GUEST_FALSE) > -1)
-				return false;
+	private string? get_config_from_file (string path, string group, string key) {
+		try {
+			var key_file = new KeyFile ();
+			key_file.load_from_file (path, KeyFileFlags.NONE);
+			return key_file.get_string (group, key);
+		} catch (KeyFileError e) {
+		} catch (FileError e) {
+			debug ("Failed to open configuration file %s: %s\n", path, e.message);
 		}
 		
-		return true;
+		return null;
+	}
+
+	private bool set_setting (string group, string key, string @value, string fallback_path) {
+		// Source config-file accoring to their priority
+
+		if (set_config_in_file (LIGHTDM_CONF, group, key, @value))
+			return true;
+		
+		if (set_config_in_directory (LIGHTDM_CONF_D, group, key, @value))
+			return true;
+
+		if (set_config_in_directories (Environment.get_system_config_dirs (), group, key, @value))
+			return true;
+		
+		if (set_config_in_directories (Environment.get_system_data_dirs (), group, key, @value))
+			return true;
+
+		debug ("'[%s] %s' is not set anywhere, creating '%s'\n", group, key, fallback_path);
+		return set_config_in_file (fallback_path, group, key, @value);
+	}
+
+	private bool set_config_in_directories (string[] dirs, string group, string key, string @value) {
+		foreach (unowned string dir in dirs) {
+			var full_dir = Path.build_filename (dir, "lightdm", "lightdm.conf.d");
+			if (set_config_in_directory (full_dir, group, key, @value))
+				return true;
+		}
+		
+		return false;
+	}
+
+	private bool set_config_in_directory (string path, string group, string key, string @value) {
+		var files = new List<string> ();
+
+		// Find files
+		try {
+			var dir = Dir.open (path);
+			unowned string? name = null;
+			while ((name = dir.read_name ()) != null)
+				files.prepend (name);
+		} catch (FileError e) {
+			debug ("Failed to open configuration directory %s: %s\n", path, e.message);
+		}
+
+		// Sort alphabetically
+		files.sort (strcmp);
+
+		foreach (unowned string filename in files) {
+			var conf_path = Path.build_filename (path, filename);
+			if (filename.has_suffix (".conf")) {
+				if (set_config_in_file (conf_path, group, key, @value))
+					return true;
+			} else {
+				debug ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
+			}
+		}
+		
+		return false;
+	}
+
+	private bool set_config_in_file (string path, string group, string key, string @value) {
+		try {
+			var key_file = new KeyFile ();
+			if (FileUtils.test (path, FileTest.EXISTS))
+				key_file.load_from_file (path, KeyFileFlags.KEEP_COMMENTS);
+			key_file.set_string (group, key, @value);
+			key_file.save_to_file (path);
+			return true;
+		} catch (KeyFileError e) {
+		} catch (FileError e) {
+			debug ("Failed to load/save configuration file %s: %s\n", path, e.message);
+		}
+		
+		return false;
 	}
 }
