@@ -104,7 +104,7 @@ namespace GuestSessionToggle {
 		if (@value != null)
 			return @value;
 
-		debug ("'[%s] %s' is not set anywhere assuming default '%s'\n", group, key, default_value);
+		printerr ("'[%s] %s' is not set anywhere assuming default '%s'\n", group, key, default_value);
 		return default_value;
 	}
 
@@ -132,7 +132,7 @@ namespace GuestSessionToggle {
 			while ((name = dir.read_name ()) != null)
 				files.prepend (name);
 		} catch (FileError e) {
-			debug ("Failed to open configuration directory %s: %s\n", path, e.message);
+			printerr ("Failed to open configuration directory %s: %s\n", path, e.message);
 		}
 
 		// Sort alphabetically
@@ -145,7 +145,7 @@ namespace GuestSessionToggle {
 				if (result != null)
 					return result;
 			} else {
-				debug ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
+				printerr ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
 			}
 		}
 		
@@ -159,7 +159,7 @@ namespace GuestSessionToggle {
 			return key_file.get_string (group, key);
 		} catch (KeyFileError e) {
 		} catch (FileError e) {
-			debug ("Failed to open configuration file %s: %s\n", path, e.message);
+			printerr ("Failed to open configuration file %s: %s\n", path, e.message);
 		}
 		
 		return null;
@@ -180,7 +180,7 @@ namespace GuestSessionToggle {
 		if (set_config_in_directories (Environment.get_system_data_dirs (), group, key, @value))
 			return true;
 
-		debug ("'[%s] %s' is not set anywhere, creating '%s'\n", group, key, fallback_path);
+		printerr ("'[%s] %s' is not set anywhere, creating '%s'\n", group, key, fallback_path);
 		return set_config_in_file (fallback_path, group, key, @value, true);
 	}
 
@@ -204,7 +204,7 @@ namespace GuestSessionToggle {
 			while ((name = dir.read_name ()) != null)
 				files.prepend (name);
 		} catch (FileError e) {
-			debug ("Failed to open configuration directory %s: %s\n", path, e.message);
+			printerr ("Failed to open configuration directory %s: %s\n", path, e.message);
 		}
 
 		// Sort alphabetically
@@ -216,7 +216,7 @@ namespace GuestSessionToggle {
 				if (set_config_in_file (conf_path, group, key, @value))
 					return true;
 			} else {
-				debug ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
+				printerr ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
 			}
 		}
 		
@@ -239,7 +239,7 @@ namespace GuestSessionToggle {
 			}			
 		} catch (KeyFileError e) {
 		} catch (FileError e) {
-			debug ("Failed to load/save configuration file %s: %s\n", path, e.message);
+			printerr ("Failed to load/save configuration file %s: %s\n", path, e.message);
 		}
 		
 		return false;
