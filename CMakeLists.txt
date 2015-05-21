@@ -37,6 +37,12 @@ set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGN
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
+# Files
+file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
+
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-useraccounts.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
+
+
 configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.user-accounts.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.user-accounts.policy)
 install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.user-accounts.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 

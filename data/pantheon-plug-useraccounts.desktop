@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=User Accounts
+Comment=Manage user accounts on your local system
+Exec=switchboard -o system-pantheon-useraccounts
+Icon=system-users
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=X-PANTHEON-Switchboard-Plugs;
+OnlyShowIn=Pantheon;
+Keywords=users;accounts;guest;password;
+X-GNOME-Gettext-Domain=switchboard
