@@ -107,10 +107,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         /**
          * constant value for the area handles' radius
          */
-        const int r = 8;
+        const int r = 12;
 
         public CropView.from_pixbuf (Gdk.Pixbuf pixbuf) {
-            this.add_events(Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
+            this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
             if (pixbuf.get_width () > pixbuf.get_height ())
                 area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
@@ -121,7 +121,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y, bool quadratic_selection = false) {
-            this.add_events(Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
+            this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
             this.quadratic_selection = quadratic_selection;
 
@@ -183,10 +183,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 if (!determined_cursortype) {
                     if (in_quad ((int) Math.floor (area.x * current_scale),
-                            (int) Math.floor (area.y * current_scale),
-                            (int) Math.floor (area.width * current_scale),
-                            (int) Math.floor (area.height * current_scale),
-                            (int) (event.x - offset_x), (int) (event.y - offset_y)))
+                                 (int) Math.floor (area.y * current_scale),
+                                 (int) Math.floor (area.width * current_scale),
+                                 (int) Math.floor (area.height * current_scale),
+                                 (int) (event.x - offset_x), (int) (event.y - offset_y)))
                         current_operation = Gdk.CursorType.FLEUR;
                     else
                         current_operation = Gdk.CursorType.ARROW;               
@@ -339,7 +339,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                 case 0:
                                     area.width = motion_height;
                                     area.height = motion_height;
-                                    area_changed();
+                                    area_changed ();
                                     break;
                                 case 1:
                                     area.width = 0;
@@ -372,7 +372,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                 case 0:
                                     area.width = motion_width;
                                     area.height = motion_width;
-                                    area_changed();
+                                    area_changed ();
                                     break;
                                 case 1:
                                     area.width = 0;
@@ -487,7 +487,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         void apply_cursor () {
-            get_window ().cursor = new Gdk.Cursor.for_display(Gdk.Display.get_default(), current_operation);
+            get_window ().cursor = new Gdk.Cursor.for_display (Gdk.Display.get_default (), current_operation);
         }
 
         int x_in_pixbuf (int ax) {
