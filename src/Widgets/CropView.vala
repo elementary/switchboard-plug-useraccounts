@@ -97,7 +97,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
          */
         int offset_y;
 
-        bool button_down = false;
+        /**
+         * Indicates wether a mouse button is pressed or not.
+         */
+        bool mouse_button_down = false;
         
         /**
          * signal that is emitted when the selection area is changed in any way
@@ -151,7 +154,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public override bool button_press_event (Gdk.EventButton event) {
-            button_down = true;
+            mouse_button_down = true;
             temp_x = (int) event.x;
             temp_y = (int) event.y;
 
@@ -159,7 +162,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public override bool motion_notify_event (Gdk.EventMotion event) {
-            if (!button_down) {
+            if (!mouse_button_down) {
                 bool determined_cursortype = false;
 
                 const Gdk.CursorType[] cursor = {
@@ -178,7 +181,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                         current_operation = cursor[i];
                         determined_cursortype = true;
                         break;
-                    }               
+                    }
                 }
 
                 if (!determined_cursortype) {
@@ -189,7 +192,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                  (int) (event.x - offset_x), (int) (event.y - offset_y)))
                         current_operation = Gdk.CursorType.FLEUR;
                     else
-                        current_operation = Gdk.CursorType.ARROW;               
+                        current_operation = Gdk.CursorType.ARROW;
                 }
 
                 apply_cursor ();
@@ -407,7 +410,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public override bool button_release_event (Gdk.EventButton event) {
             current_operation = Gdk.CursorType.ARROW;
-            button_down = false;
+            mouse_button_down = false;
             apply_cursor ();
 
             return true;
