@@ -59,7 +59,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         /**
          * holds the current handle positions
          */
-        int[,] pos;
+        int[,] pos = {
+            { 0, 0 },   // upper left
+            { 0, 0 },   // upper midpoint
+            { 0, 0 },   // upper right
+            { 0, 0 },   // right midpoint
+            { 0, 0 },   // lower right
+            { 0, 0 },   // lower midpoint
+            { 0, 0 },   // lower left
+            { 0, 0 }    // left midpoint;
+        };
 
         /**
          * current drag operation, identified by the GdkCursorType.
@@ -89,6 +98,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         int offset_y;
 
         /**
+         * Indicates wether a mouse button is pressed or not.
+         */
+        bool mouse_button_down = false;
+        
+        /**
          * signal that is emitted when the selection area is changed in any way
          */
         public signal void area_changed ();
@@ -96,9 +110,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         /**
          * constant value for the area handles' radius
          */
-        const int r = 8;
+        const int r = 12;
 
         public CropView.from_pixbuf (Gdk.Pixbuf pixbuf) {
+            this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
             if (pixbuf.get_width () > pixbuf.get_height ())
                 area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
@@ -109,6 +124,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y, bool quadratic_selection = false) {
+            this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
             this.quadratic_selection = quadratic_selection;
 
@@ -138,148 +154,265 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public override bool button_press_event (Gdk.EventButton event) {
-            const Gdk.CursorType[] cursor = {
-                Gdk.CursorType.TOP_LEFT_CORNER,
-                Gdk.CursorType.TOP_SIDE,
-                Gdk.CursorType.TOP_RIGHT_CORNER,
-                Gdk.CursorType.RIGHT_SIDE,
-                Gdk.CursorType.BOTTOM_RIGHT_CORNER,
-                Gdk.CursorType.BOTTOM_SIDE,
-                Gdk.CursorType.BOTTOM_LEFT_CORNER,
-                Gdk.CursorType.LEFT_SIDE
-            };
-
-            current_operation = Gdk.CursorType.ARROW;
+            mouse_button_down = true;
             temp_x = (int) event.x;
             temp_y = (int) event.y;
 
-            for (var i = 0; i < 8; i++) {
-                if (in_quad (pos[i, 0] - r, pos[i, 1] - r, r * 2, r * 2, (int) event.x, (int) event.y)) {
-                    current_operation = cursor[i];
-                }
-            }
-
-            if (in_quad ((int) Math.floor (area.x * current_scale),
-                        (int) Math.floor (area.y * current_scale),
-                        (int) Math.floor (area.width * current_scale),
-                        (int) Math.floor (area.height * current_scale),
-                        (int) (event.x - offset_x), (int) (event.y - offset_y))) {
-                current_operation = Gdk.CursorType.FLEUR;
-            }
-
-            apply_cursor ();
-
-            //return base.button_press_event (event);
             return true;
         }
 
         public override bool motion_notify_event (Gdk.EventMotion event) {
-            if (current_operation == Gdk.CursorType.ARROW)
-                //return base.motion_notify_event (event);
+            if (!mouse_button_down) {
+                bool determined_cursortype = false;
+
+                const Gdk.CursorType[] cursor = {
+                    Gdk.CursorType.TOP_LEFT_CORNER,
+                    Gdk.CursorType.TOP_SIDE,
+                    Gdk.CursorType.TOP_RIGHT_CORNER,
+                    Gdk.CursorType.RIGHT_SIDE,
+                    Gdk.CursorType.BOTTOM_RIGHT_CORNER,
+                    Gdk.CursorType.BOTTOM_SIDE,
+                    Gdk.CursorType.BOTTOM_LEFT_CORNER,
+                    Gdk.CursorType.LEFT_SIDE
+                };
+
+                for (var i = 0; i < 8; i++) {
+                    if (in_quad (pos[i, 0] - r, pos[i, 1] - r, r * 2, r * 2, (int) event.x, (int) event.y)) {
+                        current_operation = cursor[i];
+                        determined_cursortype = true;
+                        break;
+                    }
+                }
+
+                if (!determined_cursortype) {
+                    if (in_quad ((int) Math.floor (area.x * current_scale),
+                                 (int) Math.floor (area.y * current_scale),
+                                 (int) Math.floor (area.width * current_scale),
+                                 (int) Math.floor (area.height * current_scale),
+                                 (int) (event.x - offset_x), (int) (event.y - offset_y)))
+                        current_operation = Gdk.CursorType.FLEUR;
+                    else
+                        current_operation = Gdk.CursorType.ARROW;
+                }
+
+                apply_cursor ();
                 return true;
 
-            // TODO modify `area` according to current_operation
-            switch (current_operation) {
-                case Gdk.CursorType.FLEUR:
-                    int motion_x = (int) (area.x + ((int) event.x - temp_x) / current_scale);
-                    int motion_y = (int) (area.y + ((int) event.y - temp_y) / current_scale);
+            } else {
+                switch (current_operation) {
+                    case Gdk.CursorType.FLEUR:
+                        int motion_x = (int) (area.x + ((int) event.x - temp_x) / current_scale);
+                        int motion_y = (int) (area.y + ((int) event.y - temp_y) / current_scale);
 
-                    switch (x_in_pixbuf (motion_x)) {
-                        case 0: area.x = motion_x; area_changed (); break;
-                        case 1: area.x = 0; break;
-                        case 2: area.x = _pixbuf.get_width () - area.width; break;
-                    }
+                        switch (x_in_pixbuf (motion_x)) {
+                            case 0: area.x = motion_x; area_changed (); break;
+                            case 1: area.x = 0; break;
+                            case 2: area.x = _pixbuf.get_width () - area.width; break;
+                        }
 
-                    switch (y_in_pixbuf (motion_y)) {
-                        case 0: area.y = motion_y; area_changed (); break;
-                        case 1: area.y = 0; break;
-                        case 2: area.y = _pixbuf.get_height () - area.height; break;
-                    }
+                        switch (y_in_pixbuf (motion_y)) {
+                            case 0: area.y = motion_y; area_changed (); break;
+                            case 1: area.y = 0; break;
+                            case 2: area.y = _pixbuf.get_height () - area.height; break;
+                        }
 
-                    break;
-                case Gdk.CursorType.RIGHT_SIDE:
-                    if (!quadratic_selection) {
-                        int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                        break;
+
+                    case Gdk.CursorType.TOP_RIGHT_CORNER:
+                    case Gdk.CursorType.TOP_LEFT_CORNER:
+                        int motion_width = 0;
+                        int motion_height = 0;
+                        if (current_operation == Gdk.CursorType.TOP_RIGHT_CORNER) {
+                            motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                            motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+                        }
+                        else {
+                            motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
+                            motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+                        }
+
+                        if (quadratic_selection && motion_width >= motion_height)
+                            motion_height = motion_width;
+                        else if (quadratic_selection && motion_width < motion_height)
+                            motion_width = motion_height;
 
                         switch (width_in_pixbuf (motion_width, area.x)) {
-                            case 0: area.width = motion_width; area_changed (); break;
-                            case 1: area.width = 0; break;
-                            case 2: area.width = _pixbuf.get_width () - area.x; break;
+                            case 0:
+                                if (height_in_pixbuf (motion_height, area.y) == 0) {
+                                    area.width = motion_width;
+                                    area.height = motion_height;
+                                    area_changed ();
+                                }
+                                break;
+                            case 1:
+                                area.width = 0;
+                                break;
+                            case 2:
+                                area.width = _pixbuf.get_width () - area.x;
+                                break;
                         }
-                    }
-                    break;
-                case Gdk.CursorType.BOTTOM_RIGHT_CORNER:
-                    int motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
-                    int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
-
-                    if (quadratic_selection && motion_width >= motion_height)
-                        motion_height = motion_width;
-                    else if (quadratic_selection && motion_width < motion_height)
-                        motion_width = motion_height;
-
-                    switch (width_in_pixbuf (motion_width, area.x)) {
-                        case 0:
-                            if (height_in_pixbuf (motion_height, area.y) == 0) {
-                                area.width = motion_width;
-                                area.height = motion_height;
-                                area_changed ();
-                            }
-                            break;
-                        case 1:
-                            area.width = 0;
-                            break;
-                        case 2:
-                            area.width = _pixbuf.get_width () - area.x;
-                            break;
-                    }
-
-                    switch (height_in_pixbuf (motion_height, area.y)) {
-                        case 0:
-                            if (width_in_pixbuf (motion_width, area.x) == 0) {
-                                area.height = motion_height;
-                                area.width = motion_width;
-                                area_changed ();
-                            }
-                            break;
-                        case 1:
-                            area.height = 0;
-                            break;
-                        case 2:
-                            area.height = _pixbuf.get_height () - area.y;
-                            break;
-                    }
-
-                    break;
-                case Gdk.CursorType.BOTTOM_SIDE:
-                    if (!quadratic_selection) {
-                        int motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
 
                         switch (height_in_pixbuf (motion_height, area.y)) {
-                            case 0: area.height = motion_height; area_changed (); break;
-                            case 1: area.height = 0; break;
-                            case 2: area.height = _pixbuf.get_height () - area.y; break;
+                            case 0:
+                                if (width_in_pixbuf (motion_width, area.x) == 0) {
+                                    area.height = motion_height;
+                                    area.width = motion_width;
+                                    area_changed ();
+                                }
+                                break;
+                            case 1:
+                                area.height = 0;
+                                break;
+                            case 2:
+                                area.height = _pixbuf.get_height () - area.y;
+                                break;
                         }
-                    }
-                    break;
-                default:
-                    break;
+
+                        break;
+
+                    case Gdk.CursorType.BOTTOM_RIGHT_CORNER:
+                    case Gdk.CursorType.BOTTOM_LEFT_CORNER:
+                        int motion_width = 0;
+                        int motion_height = 0;
+                        if (current_operation == Gdk.CursorType.BOTTOM_RIGHT_CORNER) {
+                            motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                            motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        }
+                        else {
+                            motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
+                            motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        }
+
+                        if (quadratic_selection && motion_width >= motion_height)
+                            motion_height = motion_width;
+                        else if (quadratic_selection && motion_width < motion_height)
+                            motion_width = motion_height;
+
+                        switch (width_in_pixbuf (motion_width, area.x)) {
+                            case 0:
+                                if (height_in_pixbuf (motion_height, area.y) == 0) {
+                                    area.width = motion_width;
+                                    area.height = motion_height;
+                                    area_changed ();
+                                }
+                                break;
+                            case 1:
+                                area.width = 0;
+                                break;
+                            case 2:
+                                area.width = _pixbuf.get_width () - area.x;
+                                break;
+                        }
+
+                        switch (height_in_pixbuf (motion_height, area.y)) {
+                            case 0:
+                                if (width_in_pixbuf (motion_width, area.x) == 0) {
+                                    area.height = motion_height;
+                                    area.width = motion_width;
+                                    area_changed ();
+                                }
+                                break;
+                            case 1:
+                                area.height = 0;
+                                break;
+                            case 2:
+                                area.height = _pixbuf.get_height () - area.y;
+                                break;
+                        }
+
+                        break;
+
+                    case Gdk.CursorType.TOP_SIDE:
+                    case Gdk.CursorType.BOTTOM_SIDE:
+                        int motion_height = 0;
+                        if (current_operation == Gdk.CursorType.BOTTOM_SIDE)
+                            motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        else
+                            motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+
+                        if (!quadratic_selection) {
+                            switch (height_in_pixbuf (motion_height, area.y)) {
+                                case 0: area.height = motion_height; area_changed (); break;
+                                case 1: area.height = 0; break;
+                                case 2: area.height = _pixbuf.get_height () - area.y; break;
+                            }
+                        } else {
+
+                            switch (height_in_pixbuf (motion_height, area.y)) {
+                                case 0:
+                                    area.width = motion_height;
+                                    area.height = motion_height;
+                                    area_changed ();
+                                    break;
+                                case 1:
+                                    area.width = 0;
+                                    area.height = 0;
+                                    break;
+                                case 2:
+                                    area.width = _pixbuf.get_width () - area.x;
+                                    area.height = _pixbuf.get_height () - area.y;
+                                    break;
+                            }
+                        }
+                        break;
+
+                    case Gdk.CursorType.RIGHT_SIDE:
+                    case Gdk.CursorType.LEFT_SIDE:
+                        int motion_width = 0;
+                        if (current_operation == Gdk.CursorType.RIGHT_SIDE)
+                            motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                        else
+                            motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
+
+                        if (!quadratic_selection) {
+                            switch (width_in_pixbuf (motion_width, area.x)) {
+                                case 0: area.width = motion_width; area_changed (); break;
+                                case 1: area.width = 0; break;
+                                case 2: area.width = _pixbuf.get_width () - area.x; break;
+                            }
+                        } else {
+                            switch (width_in_pixbuf (motion_width, area.x)) {
+                                case 0:
+                                    area.width = motion_width;
+                                    area.height = motion_width;
+                                    area_changed ();
+                                    break;
+                                case 1:
+                                    area.width = 0;
+                                    area.height = 0;
+                                    break;
+                                case 2:
+                                    area.width = _pixbuf.get_width () - area.x;
+                                    area.height = _pixbuf.get_height () - area.y;
+                                    break;
+                            }
+                        }
+
+                        break;
+                    default:
+                        break;
+                }
+
+                if (area.width != area.height) {
+                    var smallest = area.width > area.height ? area.height : area.width;
+                    area.width = smallest;
+                    area.height = smallest;
+                }
+
+                temp_x = (int) event.x;
+                temp_y = (int) event.y;
+
+                queue_draw ();
             }
 
-            temp_x = (int) event.x;
-            temp_y = (int) event.y;
-
-            queue_draw ();
-
-            //return base.motion_notify_event (event);
             return true;
         }
 
         public override bool button_release_event (Gdk.EventButton event) {
             current_operation = Gdk.CursorType.ARROW;
-
+            mouse_button_down = false;
             apply_cursor ();
 
-            //return base.button_release_event (event);
             return true;
         }
 
@@ -357,7 +490,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         void apply_cursor () {
-            get_window ().cursor = new Gdk.Cursor (current_operation);
+            get_window ().cursor = new Gdk.Cursor.for_display (Gdk.Display.get_default (), current_operation);
         }
 
         int x_in_pixbuf (int ax) {
