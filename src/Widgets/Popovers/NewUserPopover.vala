@@ -44,11 +44,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_ui () {
             main_grid = new Gtk.Grid ();
             main_grid.hexpand = true;
-            main_grid.margin = 12;
+            main_grid.halign = Gtk.Align.CENTER;
+            main_grid.margin = 6;
+            main_grid.margin_top = 12;
+            main_grid.margin_bottom = 9;
             add (main_grid);
 
             accounttype_combobox = new Gtk.ComboBoxText ();
-            accounttype_combobox.set_size_request (195, 0);
+            accounttype_combobox.set_size_request (200, 0);
             accounttype_combobox.halign = Gtk.Align.START;
             accounttype_combobox.append_text (_("Standard User"));
             accounttype_combobox.append_text (_("Administrator"));
@@ -56,7 +59,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             main_grid.attach (accounttype_combobox, 0, 0, 1, 1);
 
             fullname_entry = new Gtk.Entry ();
-            fullname_entry.set_size_request (195, 0);
+            fullname_entry.set_size_request (200, 0);
             fullname_entry.halign = Gtk.Align.START;
             fullname_entry.set_placeholder_text (_("Full Name"));
             fullname_entry.changed.connect (check_input);
@@ -66,7 +69,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             main_grid.attach (fullname_entry, 0, 1, 2, 1);
 
             username_entry = new Gtk.Entry ();
-            username_entry.set_size_request (195, 0);
+            username_entry.set_size_request (200, 0);
             username_entry.halign = Gtk.Align.START;
             username_entry.set_placeholder_text (_("Username"));
             username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY,

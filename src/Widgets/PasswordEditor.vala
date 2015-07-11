@@ -33,7 +33,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public bool is_valid { public get; private set; }
         public signal void validation_changed ();
 
-        private int entry_width = 195;
+        private int entry_width = 200;
 
         public PasswordEditor () {
             pwquality = new PasswordQuality.Settings ();
@@ -49,7 +49,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            expand = true;
+            this.hexpand = true;
+            this.halign = Gtk.Align.CENTER;
+            this.margin = 0;
 
             /*
              * users who don't have superuser privileges will need to auth against passwd.
