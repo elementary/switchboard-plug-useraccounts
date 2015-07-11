@@ -36,7 +36,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_ui () {
             main_grid = new Gtk.Grid ();
             main_grid.hexpand = true;
-            main_grid.margin = 6;
+            main_grid.halign = Gtk.Align.CENTER;
+            main_grid.margin_top = 6;
+            main_grid.margin_bottom = 4;
             main_grid.column_spacing = 6;
             add (main_grid);
 

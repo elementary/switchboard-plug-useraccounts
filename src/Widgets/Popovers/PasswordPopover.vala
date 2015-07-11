@@ -35,7 +35,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_ui () {
             main_grid = new Gtk.Grid ();
             main_grid.hexpand = true;
-            main_grid.margin = 12;
+            main_grid.margin_top = 12;
+            main_grid.margin_bottom = 9;
+            main_grid.margin_left = 3;
+            main_grid.margin_right = 3;
             main_grid.row_spacing = 10;
             add (main_grid);
 
@@ -51,6 +54,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
             button_box.hexpand = true;
             button_box.halign = Gtk.Align.END;
+            button_box.margin_right = 6;
             main_grid.attach (button_box, 0, 1, 1, 1);
 
             button_change = new Gtk.Button.with_label (_("Change Password"));
