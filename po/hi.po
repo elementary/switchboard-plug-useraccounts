@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-07-25 07:40+0000\n"
+"Last-Translator: Anand Kumar <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:50+0000\n"
+"X-Launchpad-Export-Date: 2015-07-26 05:40+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
-msgstr ""
+msgstr "वर्त्तमान पासवर्ड"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
-msgstr ""
+msgstr "सत्यापन असफल"
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
-msgstr ""
+msgstr "नया कूटशब्द"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:136
 msgid "Passwords do not match"
-msgstr ""
+msgstr "कूटशब्द मेल नहीं खाता है"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Show passwords"
@@ -75,7 +75,7 @@ msgstr ""
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 #: ../src/Widgets/Popovers/AvatarPopover.vala:61
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करें"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:69
 msgid "Change Avatar"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:56
 msgid "Change Password"
-msgstr ""
+msgstr "कूटशब्द बदलें"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:53
 msgid "Standard User"
@@ -92,15 +92,15 @@ msgstr ""
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
-msgstr ""
+msgstr "प्रशासक"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Full Name"
-msgstr ""
+msgstr "पूरा नाम"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:71
 msgid "Username"
-msgstr ""
+msgstr "प्रयोक्ता नाम"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:75
 msgid "Can only contain lower case letters, numbers and no spaces"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:47
 msgid "Remove"
-msgstr ""
+msgstr "हटाएँ"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:60
 msgid "Select an image"
@@ -144,11 +144,11 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Open"
-msgstr ""
+msgstr "खोलें"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Images"
-msgstr ""
+msgstr "छवियाँ"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
-msgstr ""
+msgstr "अतिथि सत्र"
 
 #: ../src/Widgets/GuestSettingsView.vala:85
 msgid ""
@@ -188,15 +188,15 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "मेरा खाता"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "अन्य खाता"
 
 #: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
-msgstr ""
+msgstr "सक्षम"
 
 #: ../src/Widgets/UserListBox.vala:76
 msgid "Disabled"
@@ -212,15 +212,15 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:83
 msgid "Account type:"
-msgstr ""
+msgstr "खाता प्रकार:"
 
 #: ../src/Widgets/UserSettingsView.vala:88
 msgid "Standard"
-msgstr ""
+msgstr "मानक"
 
 #: ../src/Widgets/UserSettingsView.vala:96
 msgid "Language:"
-msgstr ""
+msgstr "भाषा:"
 
 #: ../src/Widgets/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "कूटशब्द:"
 
 #: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
@@ -248,11 +248,11 @@ msgstr ""
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "उपयोक्ता आँकड़ा बदलने के लिए सत्यापन आवश्यक है"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "उपयोक्ता खाता"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
