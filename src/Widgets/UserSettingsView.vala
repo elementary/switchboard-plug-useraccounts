@@ -22,7 +22,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore       language_store;
         private Gtk.ListStore       region_store;
 
-        private Gtk.Image           avatar;
+        private Granite.Widgets.Avatar avatar;
         private Gdk.Pixbuf?         avatar_pixbuf;
         private Gtk.Button          avatar_button;
         private Gtk.Entry           full_name_entry;
@@ -366,14 +366,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             try {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
                 if (avatar == null)
-                    avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+                    avatar = new Granite.Widgets.Avatar (avatar_pixbuf, 0);
                 else
-                    avatar.set_from_pixbuf (avatar_pixbuf);
+                    avatar.set_pixbuf (avatar_pixbuf);
             } catch (Error e) {
                 Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
                 try {
                     avatar_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
-                    avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+                    avatar = new Granite.Widgets.Avatar (avatar_pixbuf, 0);
+                    avatar.draw_css = false;
                 } catch (Error e) { }
             }
             avatar_button.set_image (avatar);

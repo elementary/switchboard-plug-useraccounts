@@ -15,12 +15,12 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        private Gtk.Grid        grid;
-        private Gtk.Image       avatar;
-        private Gdk.Pixbuf      avatar_pixbuf;
-        private Gtk.Box         label_box;
-        private Gtk.Label       full_name_label;
-        private Gtk.Label       description_label;
+        private Gtk.Grid                grid;
+        private Granite.Widgets.Avatar  avatar;
+        private Gdk.Pixbuf              avatar_pixbuf;
+        private Gtk.Box                 label_box;
+        private Gtk.Label               full_name_label;
+        private Gtk.Label               description_label;
 
         public weak Act.User user { public get; private set; }
 
@@ -61,15 +61,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_ui () {
             if (avatar == null) {
-                avatar = new Gtk.Image ();
+                avatar = new Granite.Widgets.Avatar (null, 0);
                 avatar.margin_end = 3;
             }
 
             try {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
-                avatar.set_from_pixbuf (avatar_pixbuf);
+                avatar.set_pixbuf (avatar_pixbuf);
             } catch (Error e) {
-                avatar.set_from_icon_name ("avatar-default", Gtk.IconSize.DND);
+                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
+                avatar_pixbuf = icon_theme.load_icon ("avatar-default", 32, 0);
+                avatar.set_pixbuf (avatar_pixbuf);
+                avatar.draw_css = false;
             }
 
             full_name_label.set_label (user.get_real_name ());
