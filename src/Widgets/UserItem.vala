@@ -61,18 +61,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_ui () {
             if (avatar == null) {
-                avatar = new Granite.Widgets.Avatar (null, 0);
+                avatar = new Granite.Widgets.Avatar ();
                 avatar.margin_end = 3;
             }
 
             try {
                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
-                avatar.set_pixbuf (avatar_pixbuf);
+                avatar.pixbuf = avatar_pixbuf;
             } catch (Error e) {
-                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
-                avatar_pixbuf = icon_theme.load_icon ("avatar-default", 32, 0);
-                avatar.set_pixbuf (avatar_pixbuf);
-                avatar.draw_css = false;
+                avatar.show_default (32);
             }
 
             full_name_label.set_label (user.get_real_name ());

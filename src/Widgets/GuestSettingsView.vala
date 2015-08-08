@@ -45,16 +45,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             sub_grid.column_spacing = 10;
             attach (sub_grid, 0, 0, 2, 1);
 
-            Granite.Widgets.Avatar image = new Granite.Widgets.Avatar (null, 0);
+            Granite.Widgets.Avatar image = new Granite.Widgets.Avatar.with_default_icon (72);
             image.valign = Gtk.Align.START;
             image.halign = Gtk.Align.END;
             image.margin_right = 12;
-            try {
-                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
-                Gdk.Pixbuf image_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
-                image.set_pixbuf (image_pixbuf);
-                image.draw_css = false;
-            } catch (Error e) { }
+            
             sub_grid.attach (image, 0, 0, 1, 2);
 
             var header_label = new Gtk.Label (_("Guest Session"));
