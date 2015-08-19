@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-03-19 14:33+0000\n"
+"PO-Revision-Date: 2015-08-18 10:05+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-05 06:04+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:58+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
@@ -157,11 +157,11 @@ msgstr "Uue konto loomine..."
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr "Konto ning kontoga seonduvate andmete kustutamine"
+msgstr "Kustuta konto ning sellega seonduvad andmed"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr "Taasta viimatise konto eemaldamine"
+msgstr "Taasta kustutatud konto"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
@@ -180,23 +180,21 @@ msgstr "Külalisseanss"
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr ""
-"Külalisseanssi abil on külalisel ilma paroolita võimalik ajutiselt arvutit "
-"kasutata."
+msgstr "Külalisseanssiga on võimalik arvutit ilma paroolita kasutada."
 
 #: ../src/Widgets/GuestSettingsView.vala:86
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
-"Külalise kontost väljalogides kustutatakse kõik külalise muudetud eelistused "
-"ning andmed kustutatakse."
+"Külalisseanssist väljalogides kustutatakse kõik külalise konto eelistused "
+"ning loodud andmed."
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr "Minu konto"
+msgstr "Minu konto:"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr "Teised kontod"
+msgstr "Teised kontod:"
 
 #: ../src/Widgets/UserListBox.vala:73
 msgid "Enabled"
@@ -232,7 +230,7 @@ msgstr "Ava keele ja piirkonna eelistused"
 
 #: ../src/Widgets/UserSettingsView.vala:178
 msgid "Log In automatically:"
-msgstr "Automaatne sisselogimine"
+msgstr "Automaatne sisselogimine:"
 
 #: ../src/Widgets/UserSettingsView.vala:190
 msgid "Password:"
@@ -240,11 +238,11 @@ msgstr "Parool:"
 
 #: ../src/Widgets/UserSettingsView.vala:348
 msgid "Enable User Account"
-msgstr "Kasutaja konto lubamine"
+msgstr "Luba konto"
 
 #: ../src/Widgets/UserSettingsView.vala:351
 msgid "Disable User Account"
-msgstr "Keela kasutaja konto"
+msgstr "Keela konto"
 
 #: ../src/Widgets/UserSettingsView.vala:356
 msgid "None set"
@@ -256,7 +254,7 @@ msgstr "Kasutaja andmete muutmiseks on vajalik autentimine"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr "Kasutajad"
+msgstr "Kontod"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
