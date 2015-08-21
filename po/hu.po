@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-08-20 12:10+0000\n"
+"Last-Translator: Papp Ferenc <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-05 06:04+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-21 05:45+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
-msgstr ""
+msgstr "Jelenlegi jelszó"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Press to authenticate"
@@ -22,77 +22,77 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:81
 msgid "Authentication failed"
-msgstr ""
+msgstr "Sikertelen hitelesítés"
 
 #: ../src/Widgets/PasswordEditor.vala:113
 msgid "New Password"
-msgstr ""
+msgstr "Új jelszó"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "A jelszó nem lehet üres"
 
 #: ../src/Widgets/PasswordEditor.vala:133
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Új jelszó megerõsítése"
 
 #: ../src/Widgets/PasswordEditor.vala:136
 msgid "Passwords do not match"
-msgstr ""
+msgstr "A jelszavak nem egyeznek"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Show passwords"
-msgstr ""
+msgstr "Jelszavak megjelenítése"
 
 #: ../src/Widgets/PasswordEditor.vala:161
 msgid "Password accepted"
-msgstr ""
+msgstr "Jelszó elfogadva"
 
 #: ../src/Widgets/PasswordEditor.vala:182
 msgid "Weak password strength"
-msgstr ""
+msgstr "Gyenge jelszóerősség"
 
 #: ../src/Widgets/PasswordEditor.vala:184
 msgid "Medium password strength"
-msgstr ""
+msgstr "Közepes jelszóerősség"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Strong password strength"
-msgstr ""
+msgstr "Erős jelszó"
 
 #: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Összehasonlítja a jelenlegi jelszóval"
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
-msgstr ""
+msgstr "Az új jelszó túl egyszerű"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Az új jelszó palindrom"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 #: ../src/Widgets/Popovers/AvatarPopover.vala:61
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:69
 msgid "Change Avatar"
-msgstr ""
+msgstr "Avatar megváltoztatása"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:56
 msgid "Change Password"
-msgstr ""
+msgstr "Jelszó megváltoztatása"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:53
 msgid "Standard User"
-msgstr ""
+msgstr "Normál felhasználó"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
 msgid "Administrator"
-msgstr ""
+msgstr "Rendszergazda"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Full Name"
