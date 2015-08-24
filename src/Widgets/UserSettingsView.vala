@@ -370,7 +370,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 else
                     avatar.pixbuf = avatar_pixbuf;
             } catch (Error e) {
-                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
                 avatar = new Granite.Widgets.Avatar.with_default_icon (72);
             }
             avatar_button.set_image (avatar);

@@ -49,7 +49,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             image.valign = Gtk.Align.START;
             image.halign = Gtk.Align.END;
             image.margin_right = 12;
-            
+
             sub_grid.attach (image, 0, 0, 1, 2);
 
             var header_label = new Gtk.Label (_("Guest Session"));
