@@ -95,7 +95,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             row_grid.column_spacing = 6;
             guest_session_row.add (row_grid);
 
-            Gtk.Image avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
+            Granite.Widgets.Avatar avatar = new Granite.Widgets.Avatar.with_default_icon (32);
             avatar.margin_end = 3;
             row_grid.attach (avatar, 0, 0, 1, 1);
 
