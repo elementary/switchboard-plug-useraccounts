@@ -16,7 +16,7 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordPopover : Gtk.Popover {
         private unowned Act.User        user;
-        private Gtk.Box                 main_box;
+        private Gtk.Grid                main_grid;
         private Widgets.PasswordEditor  pw_editor;
         private Gtk.Button              button_change;
 
@@ -52,12 +52,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 destroy ();
             });
 
-            main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24);
-            main_box.margin = 12;
+            main_grid = new Gtk.Grid ();
+            main_grid.orientation = Gtk.Orientation.VERTICAL;
+            main_grid.margin = 12;
+            main_grid.row_spacing = 24;
 
-            main_box.add (pw_editor);
-            main_box.add (button_change);
-            add (main_box);
+            main_grid.add (pw_editor);
+            main_grid.add (button_change);
+            add (main_grid);
 
             show_all ();
         }
