@@ -15,11 +15,10 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordPopover : Gtk.Popover {
-        private unowned Act.User       user;
-        private Gtk.Grid                main_grid;
+        private unowned Act.User        user;
+        private Gtk.Box                 main_box;
         private Widgets.PasswordEditor  pw_editor;
         private Gtk.Button              button_change;
-        //private Gtk.Button            button_cancel;
 
         public signal void request_password_change (Act.UserPasswordMode mode, string? new_password);
 
@@ -33,15 +32,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            main_grid = new Gtk.Grid ();
-            main_grid.hexpand = true;
-            main_grid.margin_top = 12;
-            main_grid.margin_bottom = 9;
-            main_grid.margin_left = 3;
-            main_grid.margin_right = 3;
-            main_grid.row_spacing = 10;
-            add (main_grid);
-
             pw_editor = new Widgets.PasswordEditor ();
             pw_editor.validation_changed.connect (() => {
                 if (pw_editor.is_valid && pw_editor.is_authenticated)
@@ -49,18 +39,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 else
                     button_change.set_sensitive (false);
             });
-            main_grid.attach (pw_editor, 0, 0, 1, 1);
-
-            Gtk.Box button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
-            button_box.hexpand = true;
-            button_box.halign = Gtk.Align.END;
-            button_box.margin_right = 6;
-            main_grid.attach (button_box, 0, 1, 1, 1);
 
             button_change = new Gtk.Button.with_label (_("Change Password"));
+            button_change.halign = Gtk.Align.END;
             button_change.set_sensitive (false);
             button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            button_change.set_size_request (100, 25);
             button_change.clicked.connect (() => {
                 if (pw_editor.is_valid)
                     request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
@@ -68,7 +51,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 hide ();
                 destroy ();
             });
-            button_box.pack_end (button_change);
+
+            main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24);
+            main_box.margin = 12;
+
+            main_box.add (pw_editor);
+            main_box.add (button_change);
+            add (main_box);
 
             show_all ();
         }
