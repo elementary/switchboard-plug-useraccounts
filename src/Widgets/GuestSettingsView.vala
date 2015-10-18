@@ -26,10 +26,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             vexpand = false;
             valign = Gtk.Align.CENTER;
             halign = Gtk.Align.CENTER;
-            margin_left = 96;
-            margin_right = 96;
+            margin_left = 64;
+            margin_right = 64;
             border_width = 24;
-            row_spacing = 24;
+            row_spacing = 12;
             column_spacing = 12;
 
             build_ui ();
@@ -39,32 +39,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            Gtk.Grid sub_grid = new Gtk.Grid ();
-            sub_grid.hexpand = true;
-            sub_grid.halign = Gtk.Align.START;
-            sub_grid.column_spacing = 10;
-            attach (sub_grid, 0, 0, 2, 1);
-
             Granite.Widgets.Avatar image = new Granite.Widgets.Avatar.with_default_icon (72);
             image.valign = Gtk.Align.START;
-            image.halign = Gtk.Align.END;
-            image.margin_right = 12;
-
-            sub_grid.attach (image, 0, 0, 1, 2);
 
             var header_label = new Gtk.Label (_("Guest Session"));
-            header_label.hexpand = true;
+            header_label.halign = Gtk.Align.START;
             header_label.use_markup = true;
             header_label.set_label (@"<span font_weight=\"bold\" size=\"x-large\">%s</span>".printf (header_label.get_label ()));
-            //header_label.get_style_context ().add_class ("h2");
-            header_label.halign = Gtk.Align.START;
-            header_label.valign = Gtk.Align.END;
-            header_label.justify = Gtk.Justification.FILL;
-
-            sub_grid.attach (header_label, 1, 0, 2, 1);
 
             guest_switch = new Gtk.Switch ();
-            guest_switch.hexpand = true;
             guest_switch.halign = Gtk.Align.START;
             guest_switch.notify["active"].connect (() => {
                 if (get_guest_session_state () != guest_switch.active) {
@@ -73,21 +56,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     guest_switch_changed ();
                 }
             });
-            sub_grid.attach (guest_switch, 1, 1, 1, 1);
 
             guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            guest_lock.halign = Gtk.Align.START;
             guest_lock.set_opacity (0.5);
             guest_lock.set_tooltip_text (no_permission_string);
-            sub_grid.attach (guest_lock, 2, 1, 1, 1);
 
             Gtk.Label label = new Gtk.Label ("%s %s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),
                 _("Once they log out, all of their settings and data will be deleted.")));
-            label.justify = Gtk.Justification.FILL;
-            label.valign = Gtk.Align.START;
             label.set_line_wrap (true);
-            label.margin_left = 82;
-            attach (label, 1, 1, 1, 1);
+            ((Gtk.Misc) label).xalign = 0;
+
+            attach (image, 0, 0, 1, 3);
+            attach (header_label, 1, 0, 1, 1);
+            attach (guest_switch, 1, 1, 1, 1);
+            attach (guest_lock, 2, 1, 1, 1);
+            attach (label, 1, 2, 1, 1);
 
             show_all ();
         }

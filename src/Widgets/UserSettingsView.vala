@@ -58,15 +58,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
         
         public void build_ui () {
-            margin = 20;
-            set_row_spacing (10);
-            set_column_spacing (20);
-            set_valign (Gtk.Align.START);
-            set_halign (Gtk.Align.CENTER);
+            margin = 24;
+            row_spacing = 6;
+            column_spacing = 12;
+            valign = Gtk.Align.START;
+            halign = Gtk.Align.CENTER;
 
             default_regions = get_default_regions ();
 
             avatar_button = new Gtk.Button ();
+            avatar_button.halign = Gtk.Align.END;
             avatar_button.set_relief (Gtk.ReliefStyle.NONE);
             avatar_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
@@ -76,7 +77,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (avatar_button, 0, 0, 1, 1);
 
             full_name_entry = new Gtk.Entry ();
-            full_name_entry.set_size_request (175, 0);
             full_name_entry.get_style_context ().add_class ("h3");
             full_name_entry.activate.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
@@ -187,7 +187,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             autologin_switch = new Gtk.Switch ();
             autologin_switch.hexpand = true;
             autologin_switch.halign = Gtk.Align.START;
-            autologin_switch.margin_top = 20;
+            autologin_switch.margin_top = 24;
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
             attach (autologin_switch, 1, 4, 1, 1);
 
