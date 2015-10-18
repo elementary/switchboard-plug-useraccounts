@@ -17,7 +17,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class AvatarPopover : Gtk.Popover {
         private weak Act.User    user;
         private weak UserUtils   utils;
-        private Gtk.Box          hbox;
+        private Gtk.Box          button_box;
 
         private Dialogs.AvatarDialog    avatar_dialog;
 
@@ -43,13 +43,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             select_button.clicked.connect (select_from_file);
             select_button.grab_focus ();
 
-            hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            hbox.margin = 6;
-            hbox.homogeneous = true;
+            button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            button_box.margin = 6;
+            button_box.homogeneous = true;
 
-            hbox.add (remove_button);
-            hbox.add (select_button);
-            add (hbox);
+            button_box.add (remove_button);
+            button_box.add (select_button);
+            add (button_box);
 
             if (user.get_icon_file ().contains (".face"))
                 remove_button.set_sensitive (false);
