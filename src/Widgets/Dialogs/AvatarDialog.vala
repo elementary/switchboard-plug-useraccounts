@@ -54,7 +54,6 @@ namespace SwitchboardPlugUserAccounts.Dialogs {
                 cropview.handles_visible = false;
 
                 Gtk.Frame frame = new Gtk.Frame (null);
-                //frame.halign = Gtk.Align.CENTER;
                 frame.add (cropview);
 
                 main_grid.attach (frame, 0, 0, 1, 1);

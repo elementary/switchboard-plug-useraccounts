@@ -17,7 +17,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class AvatarPopover : Gtk.Popover {
         private weak Act.User    user;
         private weak UserUtils   utils;
-        private Gtk.Grid         main_grid;
+        private Gtk.Box          hbox;
 
         private Dialogs.AvatarDialog    avatar_dialog;
 
@@ -34,31 +34,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            main_grid = new Gtk.Grid ();
-            main_grid.hexpand = true;
-            main_grid.halign = Gtk.Align.CENTER;
-            main_grid.margin_top = 6;
-            main_grid.margin_bottom = 4;
-            main_grid.column_spacing = 6;
-            add (main_grid);
-
             Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove"));
-            remove_button.set_size_request (100, 25);
+            remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_button.clicked.connect (() => utils.change_avatar (null));
-            main_grid.attach (remove_button, 0, 0, 1, 1);
 
-            Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File ..."));
-            select_button.set_size_request (100, 25);
+            Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File…"));
             select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             select_button.clicked.connect (select_from_file);
-            main_grid.attach (select_button, 1, 0, 1, 1);
             select_button.grab_focus ();
+
+            hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            hbox.margin = 6;
+            hbox.homogeneous = true;
+
+            hbox.add (remove_button);
+            hbox.add (select_button);
+            add (hbox);
 
             if (user.get_icon_file ().contains (".face"))
                 remove_button.set_sensitive (false);
             else {
                 remove_button.set_sensitive (true);
-                remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             }
         }
 
