@@ -26,7 +26,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gdk.Pixbuf?         avatar_pixbuf;
         private Gtk.Button          avatar_button;
         private Gtk.Entry           full_name_entry;
-        private Gtk.Button          password_button;
+        private Gtk.ToggleButton    password_button;
         private Gtk.Button          enable_user_button;
         private Gtk.ComboBoxText    user_type_box;
         private Gtk.ComboBox        language_box;
@@ -195,15 +195,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             change_password_label.halign = Gtk.Align.END;
             attach (change_password_label, 0, 5, 1, 1);
 
-            password_button = new Gtk.Button ();
-            password_button.set_relief (Gtk.ReliefStyle.NONE);
+            password_button = new Gtk.ToggleButton ();
+            password_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             password_button.halign = Gtk.Align.START;
-            password_button.clicked.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
-                Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
-                pw_popover.show_all ();
-                pw_popover.request_password_change.connect (utils.change_password);
+            password_button.toggled.connect (() => {
+                if (password_button.active) {
+                    InfobarNotifier.get_default ().unset_error ();
+                    Widgets.PasswordPopover pw_popover = new Widgets.PasswordPopover (password_button, user);
+                    pw_popover.show_all ();
+                    pw_popover.request_password_change.connect (utils.change_password);
+                    pw_popover.hide.connect (() => { password_button.active = false;});
+                }
             });
+
             attach (password_button, 1, 5, 1, 1);
 
             enable_user_button = new Gtk.Button ();
