@@ -19,22 +19,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public Gtk.Stack            content;
         public Gtk.Box              sidebar;
         public Gtk.ScrolledWindow   scrolled_window;
-        public Gtk.ScrolledWindow   content_window;
         public ListFooter           footer;
 
         private GuestSettingsView   guest;
 
         public MainView () {
             expand = true;
-            set_orientation (Gtk.Orientation.HORIZONTAL);
+            orientation = Gtk.Orientation.HORIZONTAL;
 
             sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            pack1 (sidebar, true, false);
-            content_window = new Gtk.ScrolledWindow (null, null);
-            pack2 (content_window, true, false);
-
             content = new Gtk.Stack ();
-            content_window.add (content);
+
+            pack1 (sidebar, false, false);
+            pack2 (content, true, false);
 
             guest = new GuestSettingsView ();
             get_usermanager ().notify["is-loaded"].connect (update);
@@ -61,6 +58,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void build_ui () {
             scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
             scrolled_window.add (userlist);
 
             footer = new ListFooter ();
