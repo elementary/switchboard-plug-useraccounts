@@ -68,7 +68,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             avatar_button = new Gtk.Button ();
             avatar_button.halign = Gtk.Align.END;
-            avatar_button.set_relief (Gtk.ReliefStyle.NONE);
+            avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             avatar_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
                 AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
@@ -164,7 +164,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             } else {
                 language_button = new Gtk.Button ();
                 language_button.set_size_request (0, 25);
-                language_button.set_relief (Gtk.ReliefStyle.NONE);
+                language_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 language_button.halign = Gtk.Align.START;
                 language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
                 language_button.clicked.connect (() => {
