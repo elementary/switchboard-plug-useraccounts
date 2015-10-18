@@ -24,7 +24,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private Granite.Widgets.Avatar avatar;
         private Gdk.Pixbuf?         avatar_pixbuf;
-        private Gtk.Button          avatar_button;
+        private Gtk.ToggleButton    avatar_button;
         private Gtk.Entry           full_name_entry;
         private Gtk.ToggleButton    password_button;
         private Gtk.Button          enable_user_button;
@@ -66,13 +66,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
-            avatar_button = new Gtk.Button ();
+            avatar_button = new Gtk.ToggleButton ();
             avatar_button.halign = Gtk.Align.END;
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            avatar_button.clicked.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
-                AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
-                avatar_popover.show_all ();
+            avatar_button.toggled.connect (() => {
+                if (avatar_button.active) {
+                    InfobarNotifier.get_default ().unset_error ();
+                    AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
+                    avatar_popover.show_all ();
+                    avatar_popover.hide.connect (() => { avatar_button.active = false;});
+                }
             });
             attach (avatar_button, 0, 0, 1, 1);
 
