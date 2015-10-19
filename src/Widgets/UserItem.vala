@@ -17,9 +17,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
         private Gtk.Grid                grid;
         private Granite.Widgets.Avatar  avatar;
-        private Gdk.Pixbuf              avatar_pixbuf;
-        private Gtk.Box                 label_box;
         private Gtk.Label               full_name_label;
+        private Gtk.Label               username_label;
         private Gtk.Label               description_label;
 
         public weak Act.User user { public get; private set; }
@@ -27,57 +26,55 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public UserItem (Act.User user) {
             this.user = user;
             user.changed.connect (update_ui);
-
-            build_ui ();
+            update_ui ();
         }
 
-        private void build_ui () {
+        construct {
             grid = new Gtk.Grid ();
             grid.margin = 6;
             grid.margin_left = 12;
             grid.column_spacing = 6;
             add (grid);
 
-            label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            label_box.vexpand = true;
-            label_box.valign = Gtk.Align.CENTER;
-            grid.attach (label_box, 1, 0, 1, 1);
-
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
             full_name_label.get_style_context ().add_class ("h3");
 
-            description_label = new Gtk.Label ("");
+            username_label = new Gtk.Label ("");
+            username_label.halign = Gtk.Align.START;
+            username_label.use_markup = true;
+            username_label.ellipsize = Pango.EllipsizeMode.END;
+
+            description_label = new Gtk.Label ("<span font_size=\"small\">(%s)</span>".printf (_("Administrator")));
             description_label.halign = Gtk.Align.START;
             description_label.use_markup = true;
+            description_label.no_show_all = true;
 
-            label_box.pack_start (full_name_label, false, false);
-            label_box.pack_start (description_label, false, false);
+            avatar = new Granite.Widgets.Avatar ();
 
-            update_ui ();
-
-            grid.attach (avatar, 0, 0, 1, 1);
+            grid.attach (avatar, 0, 0, 1, 2);
+            grid.attach (full_name_label, 1, 0, 2, 1);
+            grid.attach (username_label, 1, 1, 1, 1);
+            grid.attach (description_label, 2, 1, 1, 1);
         }
 
         public void update_ui () {
-            if (avatar == null) {
-                avatar = new Granite.Widgets.Avatar ();
-                avatar.margin_end = 3;
-            }
-
             try {
-                avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
+                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
                 avatar.pixbuf = avatar_pixbuf;
             } catch (Error e) {
                 avatar.show_default (32);
             }
 
-            full_name_label.set_label (user.get_real_name ());
-            string description = "<span font_size=\"small\">%s</span>".printf (user.get_user_name ());
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-                description = "<span font_size=\"small\">%s (%s)</span>".printf (user.get_user_name (), _("Administrator"));
-            description_label.set_label (description);
-            
+            full_name_label.label = user.get_real_name ();
+            username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
+                description_label.no_show_all = false;
+            } else {
+                description_label.hide ();
+                description_label.no_show_all = true;
+            }
+
             grid.show_all ();
         }
     }

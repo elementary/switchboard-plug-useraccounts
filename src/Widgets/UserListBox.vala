@@ -89,22 +89,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void build_guest_session_row () {
             guest_session_row = new Gtk.ListBoxRow ();
             guest_session_row.name = "guest_session";
-            Gtk.Grid row_grid = new Gtk.Grid ();
+            var row_grid = new Gtk.Grid ();
             row_grid.margin = 6;
             row_grid.margin_left = 12;
             row_grid.column_spacing = 6;
             guest_session_row.add (row_grid);
 
-            Granite.Widgets.Avatar avatar = new Granite.Widgets.Avatar.with_default_icon (32);
-            avatar.margin_end = 3;
-            row_grid.attach (avatar, 0, 0, 1, 1);
+            var avatar = new Granite.Widgets.Avatar.with_default_icon (32);
 
-            Gtk.Box label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            label_box.vexpand = true;
-            label_box.valign = Gtk.Align.CENTER;
-            row_grid.attach (label_box, 1, 0, 1, 1);
-
-            Gtk.Label full_name_label = new Gtk.Label (_("Guest Session"));
+            var full_name_label = new Gtk.Label (_("Guest Session"));
             full_name_label.halign = Gtk.Align.START;
             full_name_label.get_style_context ().add_class ("h3");
 
@@ -112,10 +105,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             guest_description_label.halign = Gtk.Align.START;
             guest_description_label.use_markup = true;
 
-            update_guest ();
+            row_grid.attach (avatar, 0, 0, 1, 2);
+            row_grid.attach (full_name_label, 1, 0, 1, 1);
+            row_grid.attach (guest_description_label, 1, 1, 1, 1);
 
-            label_box.pack_start (full_name_label, false, false);
-            label_box.pack_start (guest_description_label, false, false);
+            update_guest ();
         }
     }
 }
