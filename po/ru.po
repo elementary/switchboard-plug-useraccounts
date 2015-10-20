@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-09-04 19:26+0000\n"
-"Last-Translator: dell4valt <dell4valt@gmail.com>\n"
+"PO-Revision-Date: 2015-10-19 22:51+0000\n"
+"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 06:08+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-10-20 05:51+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
 msgid "Current Password"
@@ -62,7 +62,7 @@ msgstr "Сильная надежность пароля"
 
 #: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Напоминает текущий пароль"
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
@@ -70,7 +70,7 @@ msgstr "Новый пароль слишком простой"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Новый пароль является палиндромом"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 #: ../src/Widgets/Popovers/AvatarPopover.vala:61
@@ -181,10 +181,11 @@ msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"Гостевой сеанс позволяет использовать стандартные настройки без пароля."
 
 #: ../src/Widgets/GuestSettingsView.vala:86
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+msgstr "Когда они выйдут, все их настройки и данные будут удалены"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -244,7 +245,7 @@ msgstr "Отключить пользователя"
 
 #: ../src/Widgets/UserSettingsView.vala:356
 msgid "None set"
-msgstr ""
+msgstr "Не указан"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
