@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-23 12:36+0100\n"
-"PO-Revision-Date: 2015-10-19 22:51+0000\n"
+"PO-Revision-Date: 2015-10-20 14:55+0000\n"
 "Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-20 05:51+0000\n"
+"X-Launchpad-Export-Date: 2015-10-21 06:21+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/Widgets/PasswordEditor.vala:59
@@ -58,11 +58,11 @@ msgstr "Средняя надежность пароля"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Strong password strength"
-msgstr "Сильная надежность пароля"
+msgstr "Высокая надежность пароля"
 
 #: ../src/Widgets/PasswordEditor.vala:201
 msgid "Resembles your current password"
-msgstr "Напоминает текущий пароль"
+msgstr "Напоминает ваш текущий пароль"
 
 #: ../src/Widgets/PasswordEditor.vala:203
 msgid "New password is too simple"
@@ -87,7 +87,7 @@ msgstr "Изменить пароль"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:53
 msgid "Standard User"
-msgstr "Обычный пользователь"
+msgstr "Пользователь"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:54
 #: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
@@ -116,11 +116,11 @@ msgstr "Установить вход без пароля"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:97
 msgid "Let user create password on first login"
-msgstr "Позволить пользователю создать пароль для первом входе в систему"
+msgstr "Позволить пользователю создать пароль при первом входе в систему"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:121
 msgid "Create User"
-msgstr "Создайте пользователя"
+msgstr "Создать пользователя"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:163
 msgid "Username is already taken"
@@ -128,7 +128,7 @@ msgstr "Имя пользователя уже занято"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is not valid"
-msgstr "Имя пользователя не действителен"
+msgstr "Имя пользователя недействительно"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File ..."
@@ -157,7 +157,7 @@ msgstr "Создать аккаунт пользователя"
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr "Удалить аккаунт пользователя и все данные"
+msgstr "Удалить аккаунт пользователя и его данные"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
@@ -174,18 +174,19 @@ msgstr "У вас нет прав на изменение"
 
 #: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
 msgid "Guest Session"
-msgstr "Гостевой вход"
+msgstr "Гостевой сеанс"
 
 #: ../src/Widgets/GuestSettingsView.vala:85
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"Гостевой сеанс позволяет использовать стандартные настройки без пароля."
+"Гостевой сеанс позволяет использовать временный аккаунт со стандартными "
+"настройками без пароля."
 
 #: ../src/Widgets/GuestSettingsView.vala:86
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "Когда они выйдут, все их настройки и данные будут удалены"
+msgstr "После завершения работы все настройки и данные будут удалены."
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -253,11 +254,11 @@ msgstr "Для изменения пользовательских данных 
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr "Пользователи"
+msgstr "Учётные записи"
 
 #: ../src/Plug.vala:37
 msgid "Manage user accounts on your local system"
-msgstr "Управление пользователями вашей системе"
+msgstr "Управление пользователями вашей системы"
 
 #: ../src/Plug.vala:66
 msgid "Password change failed"
@@ -272,4 +273,4 @@ msgstr ""
 
 #: ../src/Plug.vala:99
 msgid "Some settings require administrator rights to be changed"
-msgstr "Для некоторых настроек требуются права администратора"
+msgstr "Для изменения некоторых настроек требуются права администратора"
