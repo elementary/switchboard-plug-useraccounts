@@ -2,153 +2,138 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-23 12:36+0100\n"
+"POT-Creation-Date: 2015-10-24 12:28+0200\n"
 "PO-Revision-Date: 2015-06-25 18:43+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 06:07+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-10-25 05:48+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
-#: ../src/Widgets/PasswordEditor.vala:59
-msgid "Current Password"
-msgstr "Fjalëkalimi aktual"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Press to authenticate"
-msgstr "Shtyp për tu identifikuar"
-
-#: ../src/Widgets/PasswordEditor.vala:81
-msgid "Authentication failed"
-msgstr "Identifikimi dështoi"
-
-#: ../src/Widgets/PasswordEditor.vala:113
-msgid "New Password"
-msgstr "Fjalëkalimi i ri"
-
-#: ../src/Widgets/PasswordEditor.vala:117
-msgid "Password cannot be empty"
-msgstr "Fjalëkalimi nuk mund të jetë bosh"
-
-#: ../src/Widgets/PasswordEditor.vala:133
-msgid "Confirm New Password"
-msgstr "Konfirmo fjalëkalimin e ri"
-
-#: ../src/Widgets/PasswordEditor.vala:136
-msgid "Passwords do not match"
-msgstr "Fjalëkalimet nuk përputhen"
-
-#: ../src/Widgets/PasswordEditor.vala:140
-msgid "Show passwords"
-msgstr "Shfaq fjalëkalimet"
-
-#: ../src/Widgets/PasswordEditor.vala:161
-msgid "Password accepted"
-msgstr "Fjalëkalimi u pranua"
-
-#: ../src/Widgets/PasswordEditor.vala:182
-msgid "Weak password strength"
-msgstr "Fjalëkalim me fuqi të dobët"
-
-#: ../src/Widgets/PasswordEditor.vala:184
-msgid "Medium password strength"
-msgstr "Fjalëkalim me fuqi mesatare"
-
-#: ../src/Widgets/PasswordEditor.vala:186
-msgid "Strong password strength"
-msgstr "Fjalëkalim me fuqi të fortë"
-
-#: ../src/Widgets/PasswordEditor.vala:201
-msgid "Resembles your current password"
-msgstr "Ngjason me fjalëkalimin aktual"
-
-#: ../src/Widgets/PasswordEditor.vala:203
-msgid "New password is too simple"
-msgstr "Fjalëkalimi i ri është tepër i thjeshtë"
-
-#: ../src/Widgets/PasswordEditor.vala:205
-msgid "New password is a palindrome"
-msgstr "Fjalëkalimi i ri është një palindromë"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
-#: ../src/Widgets/Popovers/AvatarPopover.vala:61
-msgid "Cancel"
-msgstr "Anulo"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:69
-msgid "Change Avatar"
-msgstr "Ndrysho foton personale"
-
-#: ../src/Widgets/Popovers/PasswordPopover.vala:56
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
 msgstr "Ndrysho fjalëkalimin"
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:53
-msgid "Standard User"
-msgstr "Prëdorues standard"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:54
-#: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
-msgid "Administrator"
-msgstr "Administrator"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:61
-msgid "Full Name"
-msgstr "Emri i plotë"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:71
-msgid "Username"
-msgstr "Emri i përdoruesit"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:75
-msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:93
-msgid "Set password now"
-msgstr "Vendos fjalëkalimin tani"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:95
-msgid "Set no password for login"
-msgstr ""
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:97
-msgid "Let user create password on first login"
-msgstr ""
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:121
-msgid "Create User"
-msgstr "Krijo përdoruesin"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:163
-msgid "Username is already taken"
-msgstr "Emri i përdoruesit është tashmë i zënë"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:166
-msgid "Username is not valid"
-msgstr "Emri i përdoruesit nuk është i vlefshëm"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:41
-msgid "Set from File ..."
-msgstr "Vendos nga skedari ..."
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:47
+#: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Hiqe"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:60
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
 msgstr "Zgjidh një foto"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
+msgid "Cancel"
+msgstr "Anulo"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
 msgstr "Hap"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+#: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Imazhet"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:56
+msgid "Standard User"
+msgstr "Prëdorues standard"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96 ../src/Widgets/UserItem.vala:48
+msgid "Administrator"
+msgstr "Administrator"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:64
+msgid "Full Name"
+msgstr "Emri i plotë"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:74
+msgid "Username"
+msgstr "Emri i përdoruesit"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:78
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:96
+msgid "Set password now"
+msgstr "Vendos fjalëkalimin tani"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:98
+msgid "Set no password for login"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:100
+msgid "Let user create password on first login"
+msgstr ""
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:124
+msgid "Create User"
+msgstr "Krijo përdoruesin"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is already taken"
+msgstr "Emri i përdoruesit është tashmë i zënë"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:169
+msgid "Username is not valid"
+msgstr "Emri i përdoruesit nuk është i vlefshëm"
+
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:23
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "Nuk mund ta ndryshoni këtë për përdoruesin aktualisht aktiv"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Nuk mund të hiqni të drejtat e administratorit e fundit"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Tipi i llogarisë:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Standard"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Gjuha:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+msgid "Log In automatically:"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Fjalëkalimi:"
+
+#: ../src/Widgets/UserSettingsView.vala:359
+msgid "Enable User Account"
+msgstr "Aktivo llogarinë e përdoruesin"
+
+#: ../src/Widgets/UserSettingsView.vala:362
+msgid "Disable User Account"
+msgstr "Çaktivizo llogarinë e përdoruesit"
+
+#: ../src/Widgets/UserSettingsView.vala:367
+msgid "None set"
+msgstr "Asnjë i vendosur"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
@@ -167,26 +152,65 @@ msgstr "Anulo heqjen e fundit të llogarisë së përdoruesit"
 msgid "You cannot remove your own user account"
 msgstr "Nuk mund të heqësh llogarinë tënde të përdoruesit"
 
-#: ../src/Widgets/GuestSettingsView.vala:22
-#: ../src/Widgets/UserSettingsView.vala:46
-msgid "You do not have permissions to change this"
-msgstr "Nuk ke lejet për të ndryshuar këtë"
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Current Password"
+msgstr "Fjalëkalimi aktual"
 
-#: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
-msgid "Guest Session"
-msgstr "Seksion si i ftuar"
+#: ../src/Widgets/PasswordEditor.vala:67
+msgid "Press to authenticate"
+msgstr "Shtyp për tu identifikuar"
 
-#: ../src/Widgets/GuestSettingsView.vala:85
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Seksioni si i ftuar lejon dikë të përdorë një llogari të përkohshme të "
-"parazgjedhur pa një fjalëkalim."
+#: ../src/Widgets/PasswordEditor.vala:85
+msgid "Authentication failed"
+msgstr "Identifikimi dështoi"
 
-#: ../src/Widgets/GuestSettingsView.vala:86
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+#: ../src/Widgets/PasswordEditor.vala:117
+msgid "New Password"
+msgstr "Fjalëkalimi i ri"
+
+#: ../src/Widgets/PasswordEditor.vala:121
+msgid "Password cannot be empty"
+msgstr "Fjalëkalimi nuk mund të jetë bosh"
+
+#: ../src/Widgets/PasswordEditor.vala:137
+msgid "Confirm New Password"
+msgstr "Konfirmo fjalëkalimin e ri"
+
+#: ../src/Widgets/PasswordEditor.vala:140
+msgid "Passwords do not match"
+msgstr "Fjalëkalimet nuk përputhen"
+
+#: ../src/Widgets/PasswordEditor.vala:144
+msgid "Show passwords"
+msgstr "Shfaq fjalëkalimet"
+
+#: ../src/Widgets/PasswordEditor.vala:165
+msgid "Password accepted"
+msgstr "Fjalëkalimi u pranua"
+
+#: ../src/Widgets/PasswordEditor.vala:186
+msgid "Weak password strength"
+msgstr "Fjalëkalim me fuqi të dobët"
+
+#: ../src/Widgets/PasswordEditor.vala:188
+msgid "Medium password strength"
+msgstr "Fjalëkalim me fuqi mesatare"
+
+#: ../src/Widgets/PasswordEditor.vala:190
+msgid "Strong password strength"
+msgstr "Fjalëkalim me fuqi të fortë"
+
+#: ../src/Widgets/PasswordEditor.vala:205
+msgid "Resembles your current password"
+msgstr "Ngjason me fjalëkalimin aktual"
+
+#: ../src/Widgets/PasswordEditor.vala:207
+msgid "New password is too simple"
+msgstr "Fjalëkalimi i ri është tepër i thjeshtë"
+
+#: ../src/Widgets/PasswordEditor.vala:209
+msgid "New password is a palindrome"
+msgstr "Fjalëkalimi i ri është një palindromë"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -196,57 +220,34 @@ msgstr "Llogaria ime"
 msgid "Other Accounts"
 msgstr "Llogaritë e tjera"
 
-#: ../src/Widgets/UserListBox.vala:73
+#: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:76
+#: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
 msgstr ""
 
-#: ../src/Widgets/UserSettingsView.vala:47
-msgid "You cannot change this for the currently active user"
-msgstr "Nuk mund ta ndryshoni këtë për përdoruesin aktualisht aktiv"
+#: ../src/Widgets/UserListBox.vala:100
+#: ../src/Widgets/GuestSettingsView.vala:45
+msgid "Guest Session"
+msgstr "Seksion si i ftuar"
 
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Nuk mund të hiqni të drejtat e administratorit e fundit"
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+msgid "Change Avatar"
+msgstr "Ndrysho foton personale"
 
-#: ../src/Widgets/UserSettingsView.vala:83
-msgid "Account type:"
-msgstr "Tipi i llogarisë:"
-
-#: ../src/Widgets/UserSettingsView.vala:88
-msgid "Standard"
-msgstr "Standard"
-
-#: ../src/Widgets/UserSettingsView.vala:96
-msgid "Language:"
-msgstr "Gjuha:"
-
-#: ../src/Widgets/UserSettingsView.vala:165
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
-
-#: ../src/Widgets/UserSettingsView.vala:178
-msgid "Log In automatically:"
+#: ../src/Widgets/GuestSettingsView.vala:66
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
+"Seksioni si i ftuar lejon dikë të përdorë një llogari të përkohshme të "
+"parazgjedhur pa një fjalëkalim."
 
-#: ../src/Widgets/UserSettingsView.vala:190
-msgid "Password:"
-msgstr "Fjalëkalimi:"
-
-#: ../src/Widgets/UserSettingsView.vala:348
-msgid "Enable User Account"
-msgstr "Aktivo llogarinë e përdoruesin"
-
-#: ../src/Widgets/UserSettingsView.vala:351
-msgid "Disable User Account"
-msgstr "Çaktivizo llogarinë e përdoruesit"
-
-#: ../src/Widgets/UserSettingsView.vala:356
-msgid "None set"
-msgstr "Asnjë i vendosur"
+#: ../src/Widgets/GuestSettingsView.vala:67
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -260,18 +261,18 @@ msgstr "Llogaritë e përdoruesit"
 msgid "Manage user accounts on your local system"
 msgstr ""
 
-#: ../src/Plug.vala:66
+#: ../src/Plug.vala:64
 msgid "Password change failed"
 msgstr "Ndryshimi i fjalëkalimit dështoi"
 
-#: ../src/Plug.vala:80
+#: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Ndryshimet e llogarisë si i ftuar nuk do kenë efekt deri kur të riniset "
 "kompjuteri"
 
-#: ../src/Plug.vala:99
+#: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Disa parametra kanë nevojë për të drejtat e administratorit për tu ndryshuar"

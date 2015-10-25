@@ -2,153 +2,140 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-23 12:36+0100\n"
+"POT-Creation-Date: 2015-10-24 12:28+0200\n"
 "PO-Revision-Date: 2015-06-26 17:18+0000\n"
 "Last-Translator: Jannik Koch <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 06:07+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-10-25 05:48+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
-#: ../src/Widgets/PasswordEditor.vala:59
-msgid "Current Password"
-msgstr "Aktuelles Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Press to authenticate"
-msgstr "Für Authentifikation drücken"
-
-#: ../src/Widgets/PasswordEditor.vala:81
-msgid "Authentication failed"
-msgstr "Legitimierung fehlgeschlagen"
-
-#: ../src/Widgets/PasswordEditor.vala:113
-msgid "New Password"
-msgstr "Neues Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:117
-msgid "Password cannot be empty"
-msgstr "Passwort darf nicht leer sein"
-
-#: ../src/Widgets/PasswordEditor.vala:133
-msgid "Confirm New Password"
-msgstr "Neues Passwort bestätigen"
-
-#: ../src/Widgets/PasswordEditor.vala:136
-msgid "Passwords do not match"
-msgstr "Passwörter stimmen nicht überein"
-
-#: ../src/Widgets/PasswordEditor.vala:140
-msgid "Show passwords"
-msgstr "Passwörter anzeigen"
-
-#: ../src/Widgets/PasswordEditor.vala:161
-msgid "Password accepted"
-msgstr "Passwort akzeptiert"
-
-#: ../src/Widgets/PasswordEditor.vala:182
-msgid "Weak password strength"
-msgstr "Schwaches Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:184
-msgid "Medium password strength"
-msgstr "Durchschnittliches Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:186
-msgid "Strong password strength"
-msgstr "Starkes Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:201
-msgid "Resembles your current password"
-msgstr "Ähnelt dem aktuellen Passwort"
-
-#: ../src/Widgets/PasswordEditor.vala:203
-msgid "New password is too simple"
-msgstr "Neues Passwort ist zu schlicht"
-
-#: ../src/Widgets/PasswordEditor.vala:205
-msgid "New password is a palindrome"
-msgstr "Neues Passwort ist ein Palindrom"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
-#: ../src/Widgets/Popovers/AvatarPopover.vala:61
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:69
-msgid "Change Avatar"
-msgstr "Benutzerbild ändern"
-
-#: ../src/Widgets/Popovers/PasswordPopover.vala:56
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
 msgstr "Passwort ändern"
 
-#: ../src/Widgets/Popovers/NewUserPopover.vala:53
-msgid "Standard User"
-msgstr "Standardbenutzer"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:54
-#: ../src/Widgets/UserItem.vala:84 ../src/Widgets/UserSettingsView.vala:89
-msgid "Administrator"
-msgstr "Systemverwalter"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:61
-msgid "Full Name"
-msgstr "Voller Name"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:71
-msgid "Username"
-msgstr "Benutzername"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:75
-msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Darf nur Kleinbuchstaben, Nummern und keine Leerzeichen enthalten"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:93
-msgid "Set password now"
-msgstr "Jetzt ein Passwort festlegen"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:95
-msgid "Set no password for login"
-msgstr "Kein Passwort für Login setzen"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:97
-msgid "Let user create password on first login"
-msgstr "Benutzer kann Passwort bei Anmeldung festlegen"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:121
-msgid "Create User"
-msgstr "Benutzer erstellen"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:163
-msgid "Username is already taken"
-msgstr "Benutzername ist bereits vergeben"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:166
-msgid "Username is not valid"
-msgstr "Benutzername ist nicht zulässig"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:41
-msgid "Set from File ..."
-msgstr "Aus Datei laden ..."
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:47
+#: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Entfernen"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:60
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
 msgstr "Bild auswählen"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
 msgstr "Öffnen"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+#: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Bilder"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:56
+msgid "Standard User"
+msgstr "Standardbenutzer"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96 ../src/Widgets/UserItem.vala:48
+msgid "Administrator"
+msgstr "Systemverwalter"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:64
+msgid "Full Name"
+msgstr "Voller Name"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:74
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:78
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr "Darf nur Kleinbuchstaben, Nummern und keine Leerzeichen enthalten"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:96
+msgid "Set password now"
+msgstr "Jetzt ein Passwort festlegen"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:98
+msgid "Set no password for login"
+msgstr "Kein Passwort für Login setzen"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:100
+msgid "Let user create password on first login"
+msgstr "Benutzer kann Passwort bei Anmeldung festlegen"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:124
+msgid "Create User"
+msgstr "Benutzer erstellen"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is already taken"
+msgstr "Benutzername ist bereits vergeben"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:169
+msgid "Username is not valid"
+msgstr "Benutzername ist nicht zulässig"
+
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:23
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr ""
+"Diese Änderung kann nicht für den gerade angemeldeten Benutzer übernommen "
+"werden"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Sie können dem letzten Systemverwalter nicht die Rechte entziehen"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Kontentyp:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Standard"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Sprache:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Klicken, um Sprach- und Ortseinstellungen anzupassen"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+msgid "Log In automatically:"
+msgstr "Automatischer Log In:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Passwort:"
+
+#: ../src/Widgets/UserSettingsView.vala:359
+msgid "Enable User Account"
+msgstr "Benutzerkonto aktivieren"
+
+#: ../src/Widgets/UserSettingsView.vala:362
+msgid "Disable User Account"
+msgstr "Benutzerkonto deaktvieren"
+
+#: ../src/Widgets/UserSettingsView.vala:367
+msgid "None set"
+msgstr "Nicht gesetzt"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
@@ -167,28 +154,65 @@ msgstr "Zuletzt gelöschtes Benutzerkonto wiederherstellen"
 msgid "You cannot remove your own user account"
 msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
 
-#: ../src/Widgets/GuestSettingsView.vala:22
-#: ../src/Widgets/UserSettingsView.vala:46
-msgid "You do not have permissions to change this"
-msgstr "Sie haben nicht die Berechtigung zur Bearbeitung"
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Current Password"
+msgstr "Aktuelles Passwort"
 
-#: ../src/Widgets/GuestSettingsView.vala:58 ../src/Widgets/UserListBox.vala:99
-msgid "Guest Session"
-msgstr "Gastsitzung"
+#: ../src/Widgets/PasswordEditor.vala:67
+msgid "Press to authenticate"
+msgstr "Für Authentifikation drücken"
 
-#: ../src/Widgets/GuestSettingsView.vala:85
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Die Gastsitzung ermöglicht es, ein temporäres Benutzerkonto ohne Passwort zu "
-"verwenden."
+#: ../src/Widgets/PasswordEditor.vala:85
+msgid "Authentication failed"
+msgstr "Legitimierung fehlgeschlagen"
 
-#: ../src/Widgets/GuestSettingsView.vala:86
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Nach dem Beenden der Gastsitzung werden alle Einstellungen und Daten "
-"gelöscht."
+#: ../src/Widgets/PasswordEditor.vala:117
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: ../src/Widgets/PasswordEditor.vala:121
+msgid "Password cannot be empty"
+msgstr "Passwort darf nicht leer sein"
+
+#: ../src/Widgets/PasswordEditor.vala:137
+msgid "Confirm New Password"
+msgstr "Neues Passwort bestätigen"
+
+#: ../src/Widgets/PasswordEditor.vala:140
+msgid "Passwords do not match"
+msgstr "Passwörter stimmen nicht überein"
+
+#: ../src/Widgets/PasswordEditor.vala:144
+msgid "Show passwords"
+msgstr "Passwörter anzeigen"
+
+#: ../src/Widgets/PasswordEditor.vala:165
+msgid "Password accepted"
+msgstr "Passwort akzeptiert"
+
+#: ../src/Widgets/PasswordEditor.vala:186
+msgid "Weak password strength"
+msgstr "Schwaches Passwort"
+
+#: ../src/Widgets/PasswordEditor.vala:188
+msgid "Medium password strength"
+msgstr "Durchschnittliches Passwort"
+
+#: ../src/Widgets/PasswordEditor.vala:190
+msgid "Strong password strength"
+msgstr "Starkes Passwort"
+
+#: ../src/Widgets/PasswordEditor.vala:205
+msgid "Resembles your current password"
+msgstr "Ähnelt dem aktuellen Passwort"
+
+#: ../src/Widgets/PasswordEditor.vala:207
+msgid "New password is too simple"
+msgstr "Neues Passwort ist zu schlicht"
+
+#: ../src/Widgets/PasswordEditor.vala:209
+msgid "New password is a palindrome"
+msgstr "Neues Passwort ist ein Palindrom"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -198,59 +222,36 @@ msgstr "Mein Konto"
 msgid "Other Accounts"
 msgstr "Weitere Konten"
 
-#: ../src/Widgets/UserListBox.vala:73
+#: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: ../src/Widgets/UserListBox.vala:76
+#: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: ../src/Widgets/UserSettingsView.vala:47
-msgid "You cannot change this for the currently active user"
+#: ../src/Widgets/UserListBox.vala:100
+#: ../src/Widgets/GuestSettingsView.vala:45
+msgid "Guest Session"
+msgstr "Gastsitzung"
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+msgid "Change Avatar"
+msgstr "Benutzerbild ändern"
+
+#: ../src/Widgets/GuestSettingsView.vala:66
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
-"Diese Änderung kann nicht für den gerade angemeldeten Benutzer übernommen "
-"werden"
+"Die Gastsitzung ermöglicht es, ein temporäres Benutzerkonto ohne Passwort zu "
+"verwenden."
 
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Sie können dem letzten Systemverwalter nicht die Rechte entziehen"
-
-#: ../src/Widgets/UserSettingsView.vala:83
-msgid "Account type:"
-msgstr "Kontentyp:"
-
-#: ../src/Widgets/UserSettingsView.vala:88
-msgid "Standard"
-msgstr "Standard"
-
-#: ../src/Widgets/UserSettingsView.vala:96
-msgid "Language:"
-msgstr "Sprache:"
-
-#: ../src/Widgets/UserSettingsView.vala:165
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Klicken, um Sprach- und Ortseinstellungen anzupassen"
-
-#: ../src/Widgets/UserSettingsView.vala:178
-msgid "Log In automatically:"
-msgstr "Automatischer Log In:"
-
-#: ../src/Widgets/UserSettingsView.vala:190
-msgid "Password:"
-msgstr "Passwort:"
-
-#: ../src/Widgets/UserSettingsView.vala:348
-msgid "Enable User Account"
-msgstr "Benutzerkonto aktivieren"
-
-#: ../src/Widgets/UserSettingsView.vala:351
-msgid "Disable User Account"
-msgstr "Benutzerkonto deaktvieren"
-
-#: ../src/Widgets/UserSettingsView.vala:356
-msgid "None set"
-msgstr "Nicht gesetzt"
+#: ../src/Widgets/GuestSettingsView.vala:67
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Nach dem Beenden der Gastsitzung werden alle Einstellungen und Daten "
+"gelöscht."
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -264,17 +265,17 @@ msgstr "Benutzer"
 msgid "Manage user accounts on your local system"
 msgstr "Lokale Benutzerkonten verwalten"
 
-#: ../src/Plug.vala:66
+#: ../src/Plug.vala:64
 msgid "Password change failed"
 msgstr "Passwortänderung fehlgeschlagen"
 
-#: ../src/Plug.vala:80
+#: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Änderungen an der Gastsitzung werden erst nach einem Neustart angewendet"
 
-#: ../src/Plug.vala:99
+#: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Manche Einstellungen benötigen Administrator-Berechtigungen, um geändert zu "
