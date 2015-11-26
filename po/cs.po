@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-24 12:28+0200\n"
-"PO-Revision-Date: 2015-02-24 07:27+0000\n"
-"Last-Translator: Tomo Moto <Unknown>\n"
+"PO-Revision-Date: 2015-11-25 07:44+0000\n"
+"Last-Translator: Petr Dombek <dombek@oblati.cz>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-25 05:48+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-11-26 05:38+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
@@ -89,7 +89,7 @@ msgstr "Uživatelské jméno je neplatné"
 #: ../src/Widgets/UserSettingsView.vala:48
 #: ../src/Widgets/GuestSettingsView.vala:23
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nemáte oprávnění k této změně"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
