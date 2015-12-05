@@ -1,0 +1,91 @@
+--- a/src/Widgets/GuestSettingsView.vala
++++ b/src/Widgets/GuestSettingsView.vala
+@@ -39,9 +39,13 @@
+         }
+ 
+         private void build_ui () {
+-            Granite.Widgets.Avatar image = new Granite.Widgets.Avatar.with_default_icon (72);
++            Gtk.Image image = new Gtk.Image ();
+             image.valign = Gtk.Align.START;
+-
++            try {
++                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
++                Gdk.Pixbuf image_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
++                image.set_from_pixbuf (image_pixbuf);
++            } catch (Error e) { }
+             var header_label = new Gtk.Label (_("Guest Session"));
+             header_label.halign = Gtk.Align.START;
+             header_label.use_markup = true;
+--- a/src/Widgets/UserItem.vala
++++ b/src/Widgets/UserItem.vala
+@@ -16,7 +16,7 @@
+ namespace SwitchboardPlugUserAccounts.Widgets {
+     public class UserItem : Gtk.ListBoxRow {
+         private Gtk.Grid                grid;
+-        private Granite.Widgets.Avatar  avatar;
++        private Gtk.Image               avatar;
+         private Gtk.Label               full_name_label;
+         private Gtk.Label               username_label;
+         private Gtk.Label               description_label;
+@@ -50,7 +50,7 @@
+             description_label.use_markup = true;
+             description_label.no_show_all = true;
+ 
+-            avatar = new Granite.Widgets.Avatar ();
++            avatar = new Gtk.Image ();
+ 
+             grid.attach (avatar, 0, 0, 1, 2);
+             grid.attach (full_name_label, 1, 0, 2, 1);
+@@ -61,9 +61,9 @@
+         public void update_ui () {
+             try {
+                 var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
+-                avatar.pixbuf = avatar_pixbuf;
++                avatar.set_from_pixbuf (avatar_pixbuf);
+             } catch (Error e) {
+-                avatar.show_default (32);
++                avatar.set_from_icon_name ("avatar-default", Gtk.IconSize.DND);
+             }
+ 
+             full_name_label.label = user.get_real_name ();
+--- a/src/Widgets/UserListBox.vala
++++ b/src/Widgets/UserListBox.vala
+@@ -95,7 +95,7 @@
+             row_grid.column_spacing = 6;
+             guest_session_row.add (row_grid);
+ 
+-            var avatar = new Granite.Widgets.Avatar.with_default_icon (32);
++            var avatar = new Gtk.Image.from_icon_name ("avatar-default", Gtk.IconSize.DND);
+ 
+             var full_name_label = new Gtk.Label (_("Guest Session"));
+             full_name_label.halign = Gtk.Align.START;
+--- a/src/Widgets/UserSettingsView.vala
++++ b/src/Widgets/UserSettingsView.vala
+@@ -22,7 +22,7 @@
+         private Gtk.ListStore       language_store;
+         private Gtk.ListStore       region_store;
+ 
+-        private Granite.Widgets.Avatar avatar;
++        private Gtk.Image avatar;
+         private Gdk.Pixbuf?         avatar_pixbuf;
+         private Gtk.ToggleButton    avatar_button;
+         private Gtk.Entry           full_name_entry;
+@@ -373,11 +373,15 @@
+             try {
+                 avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
+                 if (avatar == null)
+-                    avatar = new Granite.Widgets.Avatar.from_pixbuf (avatar_pixbuf);
++                    avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
+                 else
+-                    avatar.pixbuf = avatar_pixbuf;
++                    avatar.set_from_pixbuf (avatar_pixbuf);
+             } catch (Error e) {
+-                avatar = new Granite.Widgets.Avatar.with_default_icon (72);
++                Gtk.IconTheme icon_theme = Gtk.IconTheme.get_default ();
++                try {
++                    avatar_pixbuf = icon_theme.load_icon ("avatar-default", 72, 0);
++                    avatar = new Gtk.Image.from_pixbuf (avatar_pixbuf);
++                } catch (Error e) { }
+             }
+             avatar_button.set_image (avatar);
+         }

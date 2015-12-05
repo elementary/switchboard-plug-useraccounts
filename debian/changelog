@@ -1,3 +1,9 @@
+switchboard-plug-useraccounts (0.1.2.2) trusty; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Sat, 05 Dec 2015 07:42:59 -0600
+
 switchboard-plug-useraccounts (0.1.2.1) trusty; urgency=medium
 
   * New upstream release.
