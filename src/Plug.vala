@@ -34,7 +34,7 @@ namespace SwitchboardPlugUserAccounts {
             Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-useraccounts",
                 display_name: _("User Accounts"),
-                description: _("Manage user accounts on your local system"),
+                description: _("Manage account permissions and configure user names, passwords, and photos"),
                 icon: "system-users");
 
             plug = this;
