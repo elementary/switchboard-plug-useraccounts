@@ -312,8 +312,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
                 enable_user_button.set_sensitive (true);
                 enable_lock.set_opacity (0);
-                if (!user.get_locked ())
-                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             }
 
             //only update widgets if the user property has changed since last ui update
