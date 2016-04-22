@@ -2,15 +2,175 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-21 12:34-0200\n"
+"POT-Creation-Date: 2016-04-21 09:25-0300\n"
 "PO-Revision-Date: 2015-01-24 14:12+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-29 06:01+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../src/Widgets/GuestSettingsView.vala:23
+#: ../src/Widgets/UserSettingsView.vala:48
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+msgid "Guest Session"
+msgstr "Sesión de invitado"
+
+#: ../src/Widgets/GuestSettingsView.vala:66
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"La sesión de invitado permite usar una cuenta temporal sin contraseña."
+
+#: ../src/Widgets/GuestSettingsView.vala:67
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Al cierre de esa sesión se eliminarán todas las configuraciones y los datos."
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
+#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+msgid "Change Avatar"
+msgstr "Cambiar avatar"
+
+#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "No puede cambiar esta opción para el usuario activo"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "No puede quitar los permisos de la última cuenta administrativa"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Tipo de cuenta:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Estándar"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Idioma:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Ir a Idioma y región"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+msgid "Log In automatically:"
+msgstr "Acceder automáticamente:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Activar cuenta de usuario"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Desactivar cuenta de usuario"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "No establecida"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:56
+msgid "Standard User"
+msgstr "Usuario estándar"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:64
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:74
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:78
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr "Puede contener solo letras minúsculas y números, sin espacios"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:96
+msgid "Set password now"
+msgstr "Establecer contraseña ahora"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:98
+msgid "Set no password for login"
+msgstr "Sin contraseña de acceso"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:100
+msgid "Let user create password on first login"
+msgstr "El usuario creará la contraseña al acceder por primera vez"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:124
+msgid "Create User"
+msgstr "Crear usuario"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is already taken"
+msgstr "El nombre de usuario ya existe"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:169
+msgid "Username is not valid"
+msgstr "El nombre de usuario no es válido"
+
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:37
+msgid "Remove"
+msgstr "Quitar"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Select an image"
+msgstr "Seleccione una imagen"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+msgid "Open"
+msgstr "Abrir"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:68
+msgid "Images"
+msgstr "Imágenes"
+
+#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
+msgid "Create user account"
+msgstr "Crear cuenta de usuario"
+
+#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
+#: ../src/Widgets/ListFooter.vala:85
+msgid "Remove user account and its data"
+msgstr "Eliminar la cuenta y los datos asociados"
+
+#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
+msgid "Undo last user account removal"
+msgstr "Deshacer eliminación de la última cuenta"
+
+#: ../src/Widgets/ListFooter.vala:89
+msgid "You cannot remove your own user account"
+msgstr "No puede eliminar su propia cuenta"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -72,150 +232,6 @@ msgstr "La contraseña nueva es demasiado simple"
 msgid "New password is a palindrome"
 msgstr "La contraseña nueva es un palíndromo"
 
-#: ../src/Widgets/UserSettingsView.vala:48
-#: ../src/Widgets/GuestSettingsView.vala:23
-msgid "You do not have permission to change this"
-msgstr ""
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "No puede cambiar esta opción para el usuario activo"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "No puede quitar los permisos de la última cuenta administrativa"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Tipo de cuenta:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Estándar"
-
-#: ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-#: ../src/Widgets/UserItem.vala:48
-msgid "Administrator"
-msgstr "Administrador"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Idioma:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Ir a Idioma y región"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Acceder automáticamente:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Contraseña:"
-
-#: ../src/Widgets/UserSettingsView.vala:359
-msgid "Enable User Account"
-msgstr "Activar cuenta de usuario"
-
-#: ../src/Widgets/UserSettingsView.vala:362
-msgid "Disable User Account"
-msgstr "Desactivar cuenta de usuario"
-
-#: ../src/Widgets/UserSettingsView.vala:367
-msgid "None set"
-msgstr "No establecida"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
-msgid "Change Avatar"
-msgstr "Cambiar avatar"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:56
-msgid "Standard User"
-msgstr "Usuario estándar"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:64
-msgid "Full Name"
-msgstr "Nombre completo"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:74
-msgid "Username"
-msgstr "Nombre de usuario"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:78
-msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Puede contener solo letras minúsculas y números, sin espacios"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:96
-msgid "Set password now"
-msgstr "Establecer contraseña ahora"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:98
-msgid "Set no password for login"
-msgstr "Sin contraseña de acceso"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:100
-msgid "Let user create password on first login"
-msgstr "El usuario creará la contraseña al acceder por primera vez"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:124
-msgid "Create User"
-msgstr "Crear usuario"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:166
-msgid "Username is already taken"
-msgstr "El nombre de usuario ya existe"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:169
-msgid "Username is not valid"
-msgstr "El nombre de usuario no es válido"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:37
-msgid "Remove"
-msgstr "Quitar"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:41
-msgid "Set from File…"
-msgstr ""
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Select an image"
-msgstr "Seleccione una imagen"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:65
-msgid "Open"
-msgstr "Abrir"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:68
-msgid "Images"
-msgstr "Imágenes"
-
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Cambiar contraseña"
-
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
-msgid "Guest Session"
-msgstr "Sesión de invitado"
-
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"La sesión de invitado permite usar una cuenta temporal sin contraseña."
-
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Al cierre de esa sesión se eliminarán todas las configuraciones y los datos."
-
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
 msgstr "Mi cuenta"
@@ -232,23 +248,6 @@ msgstr "Activada"
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Crear cuenta de usuario"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Eliminar la cuenta y los datos asociados"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Deshacer eliminación de la última cuenta"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "No puede eliminar su propia cuenta"
-
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
 msgstr "Para cambiar los datos del usuario necesita autenticarse"
@@ -258,8 +257,9 @@ msgid "User Accounts"
 msgstr "Cuentas de usuario"
 
 #: ../src/Plug.vala:37
-msgid "Manage user accounts on your local system"
-msgstr "Gestionar las cuentas de usuario del sistema local"
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"

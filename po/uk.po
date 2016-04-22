@@ -2,15 +2,177 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-21 12:34-0200\n"
+"POT-Creation-Date: 2016-04-21 09:25-0300\n"
 "PO-Revision-Date: 2015-12-07 00:15+0000\n"
 "Last-Translator: Alexander Grechko <AlexXxander1111@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-29 06:01+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../src/Widgets/GuestSettingsView.vala:23
+#: ../src/Widgets/UserSettingsView.vala:48
+msgid "You do not have permission to change this"
+msgstr "У вас не має дозволу щоб змінити це"
+
+#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+msgid "Guest Session"
+msgstr "Гостьовий сеанс"
+
+#: ../src/Widgets/GuestSettingsView.vala:66
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"Гостьовий сеанс дозволяє будь-кому використати тимчасовий обліковий запис "
+"без паролю."
+
+#: ../src/Widgets/GuestSettingsView.vala:67
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Як тільки сеанс буде завершено всі дані та налаштування будуть вилучені."
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
+#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
+msgid "Change Avatar"
+msgstr "Змінити аватар"
+
+#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "Ви не можете змінити це для активного користувача"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Ви не можете вилучити останнього адміністратора"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Тип облікового запису:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Стандартний"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Мова:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Натисніть для переходу в налаштування мови та локалі"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+msgid "Log In automatically:"
+msgstr "Входити автоматично:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Пароль:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Увімкнути обліковий запис"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Вимкнути обліковий запис"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "Не встановлено"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:56
+msgid "Standard User"
+msgstr "Звичайний користувач"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:64
+msgid "Full Name"
+msgstr "Повне ім'я"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:74
+msgid "Username"
+msgstr "Користувач"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:78
+msgid "Can only contain lower case letters, numbers and no spaces"
+msgstr ""
+"Може містити тільки букви в нижньому регістрі, цифри та не містити пробілів"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:96
+msgid "Set password now"
+msgstr "Встановити пароль зараз"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:98
+msgid "Set no password for login"
+msgstr "Встановити вхід без паролю"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:100
+msgid "Let user create password on first login"
+msgstr "Дозволити користувачу встановити пароль при першому вході"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:124
+msgid "Create User"
+msgstr "Створити користувача"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:166
+msgid "Username is already taken"
+msgstr "Ім’я користувача вже зайнято"
+
+#: ../src/Widgets/Popovers/NewUserPopover.vala:169
+msgid "Username is not valid"
+msgstr "І’мя користувача недопустиме"
+
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Змінити пароль"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:37
+msgid "Remove"
+msgstr "Вилучити"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Select an image"
+msgstr "Виберіть зображення"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:65
+msgid "Open"
+msgstr "Відкрити"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:68
+msgid "Images"
+msgstr "Зображення"
+
+#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
+msgid "Create user account"
+msgstr "Створити обліковий запис користувача"
+
+#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
+#: ../src/Widgets/ListFooter.vala:85
+msgid "Remove user account and its data"
+msgstr "Вилучити обліковий запис користувача та його дані"
+
+#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
+msgid "Undo last user account removal"
+msgstr "Відмінити останнє вилучення облікового запису"
+
+#: ../src/Widgets/ListFooter.vala:89
+msgid "You cannot remove your own user account"
+msgstr "Ви не можете вилучити власний обліковий запис"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -72,152 +234,6 @@ msgstr "Новий пароль є надто простим"
 msgid "New password is a palindrome"
 msgstr "Новий пароль є паліндромом"
 
-#: ../src/Widgets/UserSettingsView.vala:48
-#: ../src/Widgets/GuestSettingsView.vala:23
-msgid "You do not have permission to change this"
-msgstr "У вас не має дозволу щоб змінити це"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "Ви не можете змінити це для активного користувача"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Ви не можете вилучити останнього адміністратора"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Тип облікового запису:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Стандартний"
-
-#: ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-#: ../src/Widgets/UserItem.vala:48
-msgid "Administrator"
-msgstr "Адміністратор"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Мова:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Натисніть для переходу в налаштування мови та локалі"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Входити автоматично:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Пароль:"
-
-#: ../src/Widgets/UserSettingsView.vala:359
-msgid "Enable User Account"
-msgstr "Увімкнути обліковий запис"
-
-#: ../src/Widgets/UserSettingsView.vala:362
-msgid "Disable User Account"
-msgstr "Вимкнути обліковий запис"
-
-#: ../src/Widgets/UserSettingsView.vala:367
-msgid "None set"
-msgstr "Не встановлено"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:67
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: ../src/Widgets/Dialogs/AvatarDialog.vala:68
-msgid "Change Avatar"
-msgstr "Змінити аватар"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:56
-msgid "Standard User"
-msgstr "Звичайний користувач"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:64
-msgid "Full Name"
-msgstr "Повне ім'я"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:74
-msgid "Username"
-msgstr "Користувач"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:78
-msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
-"Може містити тільки букви в нижньому регістрі, цифри та не містити пробілів"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:96
-msgid "Set password now"
-msgstr "Встановити пароль зараз"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:98
-msgid "Set no password for login"
-msgstr "Встановити вхід без паролю"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:100
-msgid "Let user create password on first login"
-msgstr "Дозволити користувачу встановити пароль при першому вході"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:124
-msgid "Create User"
-msgstr "Створити користувача"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:166
-msgid "Username is already taken"
-msgstr "Ім’я користувача вже зайнято"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:169
-msgid "Username is not valid"
-msgstr "І’мя користувача недопустиме"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:37
-msgid "Remove"
-msgstr "Вилучити"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:41
-msgid "Set from File…"
-msgstr ""
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Select an image"
-msgstr "Виберіть зображення"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:65
-msgid "Open"
-msgstr "Відкрити"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:68
-msgid "Images"
-msgstr "Зображення"
-
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Змінити пароль"
-
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
-msgid "Guest Session"
-msgstr "Гостьовий сеанс"
-
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Гостьовий сеанс дозволяє будь-кому використати тимчасовий обліковий запис "
-"без паролю."
-
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Як тільки сеанс буде завершено всі дані та налаштування будуть вилучені."
-
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
 msgstr "Мій обліковий запис"
@@ -234,23 +250,6 @@ msgstr "Увімкнено"
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Створити обліковий запис користувача"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Вилучити обліковий запис користувача та його дані"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Відмінити останнє вилучення облікового запису"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "Ви не можете вилучити власний обліковий запис"
-
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
 msgstr "Потрібна автентифікація, щоб змінити дані про користувача"
@@ -260,8 +259,9 @@ msgid "User Accounts"
 msgstr "Облікові записи"
 
 #: ../src/Plug.vala:37
-msgid "Manage user accounts on your local system"
-msgstr "Керування обліковими записами в вашій системі"
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
