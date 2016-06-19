@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-02-07 12:12+0000\n"
+"PO-Revision-Date: 2016-06-18 18:53+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-06-19 05:57+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
-msgstr "Non hai i permessi necessari per cambiare questo"
+msgstr "Non disponi dei permessi necessari per cambiare questo"
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -70,7 +70,7 @@ msgstr "Lingua:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Clicca per passare alle impostazioni di Regione & Lingua"
+msgstr "Clicca per passare alle impostazioni di Lingua e Regione"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
@@ -114,7 +114,7 @@ msgstr "Imposta password ora"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr "Non impostare alcuna password per il login"
+msgstr "Non impostare alcuna password per l'accesso"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
@@ -261,6 +261,8 @@ msgstr "Account utenti"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Gestisci le autorizzazioni degli account e configura nomi utente, password e "
+"avatar"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
@@ -276,4 +278,5 @@ msgstr ""
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Alcune impostazioni richiedono diritti di amministratore per modificare"
+"Alcune impostazioni richiedono i diritti di amministratore per essere "
+"modificate"
