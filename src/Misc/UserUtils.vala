@@ -140,7 +140,7 @@ namespace SwitchboardPlugUserAccounts {
             if (get_permission ().allowed && get_current_user () != user) {
                 if (user.get_locked ()) {
                     debug ("Unlocking user %s".printf (user.get_user_name ()));
-                    user.set_password_mode (Act.UserPasswordMode.NONE);
+                    user.set_password_mode (Act.UserPasswordMode.REGULAR);
                     user.set_locked (false);
                 } else {
                     debug ("Locking user %s".printf (user.get_user_name ()));
