@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-06-29 16:26+0000\n"
+"PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-30 05:55+0000\n"
+"X-Launchpad-Export-Date: 2016-07-12 06:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -38,7 +38,7 @@ msgstr "Ikansela"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
-msgstr ""
+msgstr "Baguhin ang Avatar"
 
 #: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
@@ -48,6 +48,7 @@ msgstr "Tagapangasiwa"
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
 msgstr ""
+"Hindi mo to pwedeng baguhin para sa kasalukuyang aktibong user/gumagamit"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
@@ -55,11 +56,11 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
-msgstr ""
+msgstr "Uri ng Account:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
@@ -67,11 +68,11 @@ msgstr "Wika:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr ""
+msgstr "Awtomatikong mag-log in :"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
@@ -79,19 +80,19 @@ msgstr "Password:"
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
-msgstr ""
+msgstr "Paganahin ang User Account"
 
 #: ../src/Widgets/UserSettingsView.vala:360
 msgid "Disable User Account"
-msgstr ""
+msgstr "Huwag paganahin ang  User account"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
-msgstr ""
+msgstr "Walang nakatalaga"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
-msgstr ""
+msgstr "Standard na User"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:64
 msgid "Full Name"
@@ -103,64 +104,64 @@ msgstr "Username"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Mga lower case letters, mga numero at walang spaces ang pupwede"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "Italaga na ngayon ang password"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "Walang nakatalagang password para sa login"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Hayaan ang user na gumawa ng password sa unang login niya"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
-msgstr ""
+msgstr "Gumawa ng User"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is already taken"
-msgstr ""
+msgstr "May gumagamit na ng username na 'to"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:169
 msgid "Username is not valid"
-msgstr ""
+msgstr "Hindi pupwede ang Username"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
-msgstr ""
+msgstr "Palitan ang Password"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
-msgstr ""
+msgstr "Alisin"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr ""
+msgstr "Magtalaga mula sa File..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
-msgstr ""
+msgstr "Pumili ng larawan"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
-msgstr ""
+msgstr "Magbukas"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
-msgstr ""
+msgstr "Mga Larawan"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "Gumawa ng user account"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Tanggalin ang user account at ang mga datos nito"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
@@ -168,83 +169,83 @@ msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "Hindi mo pwedeng tanggalin ang iyong user account"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
-msgstr ""
+msgstr "Kasalukuyang Password"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Pindutin para ma-authenticate"
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
-msgstr ""
+msgstr "Hindi mai-authenticate"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "New Password"
-msgstr ""
+msgstr "Bagong password"
 
 #: ../src/Widgets/PasswordEditor.vala:121
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "Hindi pupwedeng walang laman ang password"
 
 #: ../src/Widgets/PasswordEditor.vala:137
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Tiyakin ang Bagong Password"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Hindi nagtugma ang mga password"
 
 #: ../src/Widgets/PasswordEditor.vala:144
 msgid "Show passwords"
-msgstr ""
+msgstr "Ipakita ang mga password"
 
 #: ../src/Widgets/PasswordEditor.vala:165
 msgid "Password accepted"
-msgstr ""
+msgstr "Tinanngap ang password"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Weak password strength"
-msgstr ""
+msgstr "Mahina ang lakas ng password"
 
 #: ../src/Widgets/PasswordEditor.vala:188
 msgid "Medium password strength"
-msgstr ""
+msgstr "Katamtaman ang lakas ng password"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Strong password strength"
-msgstr ""
+msgstr "Malakas ang password"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Kahawig ng iyong kasalukuyang password"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "New password is too simple"
-msgstr ""
+msgstr "Masyadong simple ang password"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Pupwedeng pagbaligtarin ang bagong password"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "Aking Account"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "Iba pang mga Account"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
-msgstr ""
+msgstr "Pinagana"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr ""
+msgstr "Hindi pinagana"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -252,7 +253,7 @@ msgstr ""
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "Mga User Account"
 
 #: ../src/Plug.vala:37
 msgid ""
@@ -261,7 +262,7 @@ msgstr ""
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
-msgstr ""
+msgstr "Hindi maitalaga ang bagong password"
 
 #: ../src/Plug.vala:78
 msgid ""
