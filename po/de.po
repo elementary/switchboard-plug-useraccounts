@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2015-12-14 14:46+0000\n"
-"Last-Translator: Sebastian Schmidt <Unknown>\n"
+"PO-Revision-Date: 2016-07-25 23:05+0000\n"
+"Last-Translator: UweS <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-07-26 05:40+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -56,11 +56,11 @@ msgstr "Sie können dies nicht für den aktuell angemeldeten Benutzer ändern."
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
-msgstr "Sie können dem letzten Systemverwalter nicht die Rechte entziehen"
+msgstr "Sie können dem einzigen Systemverwalter nicht die Rechte entziehen"
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
-msgstr "Kontentyp:"
+msgstr "Kontotyp:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
@@ -76,7 +76,7 @@ msgstr "Klicken, um Sprach- und Ortseinstellungen anzupassen"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr "Automatischer Log In:"
+msgstr "Automatische Anmeldung:"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
@@ -100,7 +100,7 @@ msgstr "Standardbenutzer"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:64
 msgid "Full Name"
-msgstr "Voller Name"
+msgstr "Vollständiger Name"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:74
 msgid "Username"
@@ -108,7 +108,7 @@ msgstr "Benutzername"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Darf nur Kleinbuchstaben, Nummern und keine Leerzeichen enthalten"
+msgstr "Nur Kleinbuchstaben und Ziffern erlaubt, aber keine Leerzeichen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
@@ -116,11 +116,11 @@ msgstr "Jetzt ein Passwort festlegen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr "Kein Passwort für Login setzen"
+msgstr "Kein Passwort für Anmeldung setzen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr "Benutzer kann Passwort bei Anmeldung festlegen"
+msgstr "Benutzer kann Passwort bei erster Anmeldung festlegen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
@@ -165,7 +165,7 @@ msgstr "Benutzerkonto erstellen"
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr "Benutzerkonto und und seine Daten entfernen"
+msgstr "Benutzerkonto und damit verbundene Daten entfernen"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
@@ -181,7 +181,7 @@ msgstr "Aktuelles Passwort"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
-msgstr "Für Authentifikation drücken"
+msgstr "Zur Legitimierung klicken"
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
@@ -229,7 +229,7 @@ msgstr "Ähnelt dem aktuellen Passwort"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "New password is too simple"
-msgstr "Neues Passwort ist zu schlicht"
+msgstr "Neues Passwort ist zu schwach"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is a palindrome"
@@ -263,6 +263,8 @@ msgstr "Benutzer"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Kontoberechtigungen verwalten sowie Benutzernamen, -passwörter und -fotos "
+"einrichten"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
@@ -272,7 +274,7 @@ msgstr "Passwortänderung fehlgeschlagen"
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
-"Änderungen an der Gastsitzung werden erst nach einem Neustart angewendet"
+"Änderungen an der Gastsitzung werden erst nach einem Neustart wirksam"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
