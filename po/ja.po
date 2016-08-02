@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-02 00:28+0000\n"
+"Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-08-02 06:03+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
-msgstr ""
+msgstr "ゲストセッション"
 
 #: ../src/Widgets/GuestSettingsView.vala:66
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
@@ -43,7 +43,7 @@ msgstr ""
 #: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
 msgid "Administrator"
-msgstr ""
+msgstr "管理者"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
@@ -55,15 +55,15 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
-msgstr ""
+msgstr "アカウントの種類:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
-msgstr ""
+msgstr "標準"
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
-msgstr ""
+msgstr "言語:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
@@ -71,35 +71,35 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr ""
+msgstr "自動的にログインする"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
-msgstr ""
+msgstr "パスワード:"
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
-msgstr ""
+msgstr "アカウントを有効にする"
 
 #: ../src/Widgets/UserSettingsView.vala:360
 msgid "Disable User Account"
-msgstr ""
+msgstr "アカウントを無効にする"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
-msgstr ""
+msgstr "未設定"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
-msgstr ""
+msgstr "標準ユーザー"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:64
 msgid "Full Name"
-msgstr ""
+msgstr "フルネーム"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:74
 msgid "Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
@@ -111,15 +111,15 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "パスワードを設定しない"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "初回ログイン時にパスワードを設定する"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
-msgstr ""
+msgstr "ユーザー作成"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is already taken"
@@ -135,7 +135,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
@@ -143,19 +143,19 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
-msgstr ""
+msgstr "画像を選択する"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
-msgstr ""
+msgstr "画像"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "アカウントの作成"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
-msgstr ""
+msgstr "現在のパスワード"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
@@ -180,27 +180,27 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
-msgstr ""
+msgstr "認証に失敗しました"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "New Password"
-msgstr ""
+msgstr "新しいパスワード"
 
 #: ../src/Widgets/PasswordEditor.vala:121
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "パスワードは空にできません"
 
 #: ../src/Widgets/PasswordEditor.vala:137
 msgid "Confirm New Password"
-msgstr ""
+msgstr "新しいパスワードの確認"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Passwords do not match"
-msgstr ""
+msgstr "パスワードが一致しません"
 
 #: ../src/Widgets/PasswordEditor.vala:144
 msgid "Show passwords"
-msgstr ""
+msgstr "パスワードを表示"
 
 #: ../src/Widgets/PasswordEditor.vala:165
 msgid "Password accepted"
@@ -232,27 +232,27 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "自分のアカウント"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "その他のアカウント"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
-msgstr ""
+msgstr "有効にする"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr ""
+msgstr "無効にする"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "ユーザーのデータを変更するには認証が必要です"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr ""
+msgstr "ユーザーアカウント"
 
 #: ../src/Plug.vala:37
 msgid ""
@@ -261,13 +261,13 @@ msgstr ""
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
-msgstr ""
+msgstr "パスワード変更に失敗しました"
 
 #: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr ""
+msgstr "ゲストセッションの変更は再起動するまで反映されません"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "一部の設定変更には管理者権限が必要です"
