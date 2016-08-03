@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-08-02 00:28+0000\n"
+"PO-Revision-Date: 2016-08-02 15:38+0000\n"
 "Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-02 06:03+0000\n"
+"X-Launchpad-Export-Date: 2016-08-03 05:58+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "変更する権限がありません"
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+msgstr "ログアウトすると、設定やデータは削除されます。"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -38,7 +38,7 @@ msgstr "キャンセル"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
-msgstr ""
+msgstr "アバターを変更"
 
 #: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
@@ -47,7 +47,7 @@ msgstr "管理者"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "現在アクティブなユーザーのため変更することはできません"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
@@ -67,7 +67,7 @@ msgstr "言語:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "言語と地域の設定を変更する場合はクリックしてください"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
@@ -123,15 +123,15 @@ msgstr "ユーザー作成"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is already taken"
-msgstr ""
+msgstr "ユーザー名がすでに使われています"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:169
 msgid "Username is not valid"
-msgstr ""
+msgstr "ユーザー名が無効です"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
-msgstr ""
+msgstr "パスワードを変更"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
@@ -139,7 +139,7 @@ msgstr "削除"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr ""
+msgstr "ファイルから設定..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -155,20 +155,20 @@ msgstr "画像"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr "アカウントの作成"
+msgstr "ユーザーアカウントを追加します"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "ユーザーアカウントとデータを削除します"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "最後のユーザーアカウント削除を取り消します"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "自分自身のユーザーアカウントは削除できません"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
