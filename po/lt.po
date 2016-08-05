@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-08-02 12:56+0000\n"
+"PO-Revision-Date: 2016-08-04 14:24+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-03 05:58+0000\n"
+"X-Launchpad-Export-Date: 2016-08-05 05:45+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -113,7 +113,7 @@ msgstr "Nustatyti slaptažodį dabar"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "Prisijungiant, nereikalauti slaptažodžio"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"

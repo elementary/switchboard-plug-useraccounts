@@ -3,20 +3,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-07-25 23:05+0000\n"
+"PO-Revision-Date: 2016-08-04 08:42+0000\n"
 "Last-Translator: UweS <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-26 05:40+0000\n"
-"X-Generator: Launchpad (build 18153)\n"
+"X-Launchpad-Export-Date: 2016-08-05 05:45+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
 msgstr ""
-"Sie besitzen nicht die notwendigen Berechtigungen, um dies zu ändern."
+"Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern."
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -72,7 +72,7 @@ msgstr "Sprache:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Klicken, um Sprach- und Ortseinstellungen anzupassen"
+msgstr "Klicken, um zur Systemeinstellung »Sprache & Region« zu wechseln"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
