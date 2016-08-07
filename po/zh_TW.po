@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2015-12-27 02:12+0000\n"
+"PO-Revision-Date: 2016-08-06 09:50+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:43+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-08-07 05:47+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: zh_TW\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -258,7 +258,7 @@ msgstr "使用者帳號"
 #: ../src/Plug.vala:37
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
+msgstr "管理帳號權限和調整使用者名稱、密碼、和相片"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"

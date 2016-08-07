@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-08-04 19:51+0000\n"
-"Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
+"PO-Revision-Date: 2016-08-06 08:38+0000\n"
+"Last-Translator: Адмирал АнимЕ <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-05 05:45+0000\n"
+"X-Launchpad-Export-Date: 2016-08-07 05:47+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -26,6 +26,8 @@ msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"Сесията за гости позволява използването на системата с временен профил и без "
+"парола."
 
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -47,15 +49,15 @@ msgstr "Администратор"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "Не можете да промените това за текущо активния потребител"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "Не можете да премахнете правомощията на последния администратор"
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
-msgstr "Вид акаунт:"
+msgstr "Вид профил:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
@@ -67,7 +69,7 @@ msgstr "Език:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Щракнете за отиване към настройките на езика"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
@@ -79,15 +81,15 @@ msgstr "Парола:"
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
-msgstr ""
+msgstr "Активиране на потребителския профил"
 
 #: ../src/Widgets/UserSettingsView.vala:360
 msgid "Disable User Account"
-msgstr ""
+msgstr "Деактивиране на потребителския профил"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
-msgstr ""
+msgstr "Не е зададено"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -107,7 +109,7 @@ msgstr "Може да съдържа само малки букви и цифр�
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "Задаване на парола сега"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
@@ -115,7 +117,7 @@ msgstr "Да не се изисква парола при влизане"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Позволяване на потребителя да създаде парола при първото влизане"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
@@ -131,7 +133,7 @@ msgstr "Потребителското име не е валидно"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
-msgstr "Промени паролата"
+msgstr "Смяна на паролата"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
@@ -143,32 +145,32 @@ msgstr "Задаване от файл..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
-msgstr ""
+msgstr "Избиране на изображение"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
-msgstr "Отвори"
+msgstr "Отваряне"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
-msgstr ""
+msgstr "Изображения"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "Създаване на профил"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Премахване на  потребителския профил и данните му"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "Отмяна на последното изтриване на профил"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr "Не можете да премахнете собственият си потребителски акаунт"
+msgstr "Не можете да премахнете собствения си потребителски профил"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -176,11 +178,11 @@ msgstr "Текуща парола"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Натиснете за удостоверяване"
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
-msgstr "Неуспешна идентификация"
+msgstr "Неуспешно удостоверяване"
 
 #: ../src/Widgets/PasswordEditor.vala:117
 msgid "New Password"
@@ -192,7 +194,7 @@ msgstr "Паролата не може да бъде празна"
 
 #: ../src/Widgets/PasswordEditor.vala:137
 msgid "Confirm New Password"
-msgstr "Потвърди новата парола"
+msgstr "Потвърждение на новата парола"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Passwords do not match"
@@ -220,7 +222,7 @@ msgstr "Силна парола"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Подобна е на текущата ви парола"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "New password is too simple"
@@ -228,15 +230,15 @@ msgstr "Новата парола е твърде лесна"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Новата парола е палиндром"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "Моят профил"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "Други профили"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
@@ -244,11 +246,11 @@ msgstr "Включено"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr "Изключен"
+msgstr "Изключено"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
-msgstr "Изисква се идентифициране за промяна на потребителските данни"
+msgstr "Изисква се удостоверяване за промяна на потребителските данни"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
@@ -258,17 +260,20 @@ msgstr "Потребителски профили"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Управление и настройка на имената, паролите и снимките на потребителите"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
-msgstr ""
+msgstr "Неуспешна промяна на паролата"
 
 #: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Промените по сесията за гости няма да бъдат приложени, докато системата не "
+"бъде повторно пусната"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Някои настройки изискват администраторски права, за да бъдат променени"
+"Някои настройки изискват правомощия на администратор, за да бъдат променени"
