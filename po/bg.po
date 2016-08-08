@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-08-06 08:38+0000\n"
-"Last-Translator: Адмирал АнимЕ <Unknown>\n"
+"PO-Revision-Date: 2016-08-07 12:43+0000\n"
+"Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-07 05:47+0000\n"
+"X-Launchpad-Export-Date: 2016-08-08 05:40+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -32,6 +32,7 @@ msgstr ""
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
+"След излизане всички потребителски настройки и данни ще бъдат изтрити."
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -73,7 +74,7 @@ msgstr "Щракнете за отиване към настройките на 
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr "Автоматично влизане"
+msgstr "Автоматично влизане:"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
@@ -162,11 +163,11 @@ msgstr "Създаване на профил"
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr "Премахване на  потребителския профил и данните му"
+msgstr "Премахване на потребителския профил и неговите данни"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr "Отмяна на последното изтриване на профил"
+msgstr "Отмяна на последното премахване на профил"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
@@ -194,7 +195,7 @@ msgstr "Паролата не може да бъде празна"
 
 #: ../src/Widgets/PasswordEditor.vala:137
 msgid "Confirm New Password"
-msgstr "Потвърждение на новата парола"
+msgstr "Потвърждаване на новата парола"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Passwords do not match"
