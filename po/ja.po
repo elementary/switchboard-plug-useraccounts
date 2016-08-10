@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-08-07 10:55+0000\n"
-"Last-Translator: Ryo Nakano <Unknown>\n"
+"PO-Revision-Date: 2016-08-09 14:28+0000\n"
+"Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-08 05:40+0000\n"
+"X-Launchpad-Export-Date: 2016-08-10 05:43+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
@@ -51,7 +51,7 @@ msgstr "現在アクティブなユーザーのため変更することはでき
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "最後の管理者の権限を削除することはできません"
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
@@ -103,11 +103,11 @@ msgstr "ユーザー名"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "英字小文字と数字のみ、空白なし"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "今すぐパスワードを設定"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
@@ -257,7 +257,7 @@ msgstr "ユーザーアカウント"
 #: ../src/Plug.vala:37
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
+msgstr "アカウントのパーミッションの管理や、ユーザー名、パスワード、写真の設定をします"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
