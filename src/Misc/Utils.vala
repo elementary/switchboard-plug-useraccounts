@@ -152,7 +152,7 @@ namespace SwitchboardPlugUserAccounts {
         if (permission != null)
             return permission;
         try {
-            permission = new Polkit.Permission.sync ("org.pantheon.switchboard.user-accounts.administration", Polkit.UnixProcess.new (Posix.getpid ()));
+            permission = new Polkit.Permission.sync ("org.pantheon.switchboard.user-accounts.administration", new Polkit.UnixProcess (Posix.getpid ()));
             return permission;
         } catch (Error e) {
             critical (e.message);
