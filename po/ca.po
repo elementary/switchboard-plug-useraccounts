@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2015-02-08 03:24+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2016-12-02 13:21+0000\n"
+"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-02 07:03+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-12-03 05:19+0000\n"
+"X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "No teniu permís per canviar això"
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -31,7 +31,7 @@ msgstr ""
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
-"En sortir d'aquesta sessió se suprimiran tots els paràmetres i les dades."
+"En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -65,15 +65,15 @@ msgstr "Estàndard"
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
-msgstr "Idioma:"
+msgstr "Llengua:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Vés a Idioma i regió"
+msgstr "Vés a llengua i regió"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr ""
+msgstr "Entra automàticament:"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
@@ -81,15 +81,15 @@ msgstr "Contrasenya:"
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
-msgstr ""
+msgstr "Habilita el compte d'usuari"
 
 #: ../src/Widgets/UserSettingsView.vala:360
 msgid "Disable User Account"
-msgstr ""
+msgstr "Inhabilita el compte d'usuari"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
-msgstr ""
+msgstr "Cap"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -105,19 +105,19 @@ msgstr "Nom d'usuari"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Només pot contenir lletres minúscules y xifres, sense espais"
+msgstr "Només pot contenir lletres minúscules i xifres, sense espais"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "Estableix la contrasenya ara"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "No estableixis contrasenya per entrar"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Permet que l'usuari creï la contrasenya a la primera entrada"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
@@ -137,11 +137,11 @@ msgstr "Canvia la contrasenya"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
-msgstr ""
+msgstr "Suprimeix"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr ""
+msgstr "Estableix des d'un fitxer..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -162,15 +162,15 @@ msgstr "Crea un compte d'usuari"
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Elimina el compte d'usuari i les seves dades"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "Desfés la darrera eliminació de compte d'usuari"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr "No podeu suprimir el vostre propi compte"
+msgstr "No podeu eliminar el vostre compte"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -178,7 +178,7 @@ msgstr "Contrasenya actual"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
-msgstr "Premeu per autenticar-vos"
+msgstr "Premeu-ho per autenticar-vos"
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
@@ -210,15 +210,15 @@ msgstr "Contrasenya acceptada"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Weak password strength"
-msgstr "Contrasenya feble"
+msgstr "Contrasenya de complexitat feble"
 
 #: ../src/Widgets/PasswordEditor.vala:188
 msgid "Medium password strength"
-msgstr "Contrasenya mitjà"
+msgstr "Contrasenya de complexitat mitjana"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Strong password strength"
-msgstr "Contrasenya forta"
+msgstr "Contrasenya de complexitat forta"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
@@ -260,16 +260,21 @@ msgstr "Comptes d'usuari"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
+"contrasenyes i les fotografies."
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
-msgstr ""
+msgstr "Ha fallat el canvi de contrasenya"
 
 #: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
+"sistema."
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
