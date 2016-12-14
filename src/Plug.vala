@@ -31,11 +31,14 @@ namespace SwitchboardPlugUserAccounts {
         public const string policy_message = _("Authentication is required to change user data");
 
         public UserAccountsPlug () {
+            var settings = new Gee.TreeMap<string, string?> (null, null);
+            settings.set ("accounts", "null");
             Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-useraccounts",
                 display_name: _("User Accounts"),
                 description: _("Manage account permissions and configure user names, passwords, and photos"),
-                icon: "system-users");
+                icon: "system-users",
+                supported_settings: settings);
 
             plug = this;
         }
