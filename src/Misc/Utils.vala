@@ -296,19 +296,14 @@ namespace SwitchboardPlugUserAccounts {
         return passwd_handler;
     }
 
-    private static bool? guest_session_state;
-
-    public static bool? get_guest_session_state () {
-        if (guest_session_state != null)
-            return guest_session_state;
-
+    public static bool get_guest_session_state (string option) {
         string output;
         int status;
 
         try {
             var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
             Process.spawn_sync (null, 
-                {cli, "--show"}, 
+                {cli, "--%s".printf (option)}, 
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
@@ -316,42 +311,28 @@ namespace SwitchboardPlugUserAccounts {
                 null,
                 out status);
 
-            if (output == "off\n")
-                guest_session_state = false;
-            else
-                guest_session_state = true;
-
-            return guest_session_state;
+            return output == "on\n";
         } catch (Error e) {
             warning (e.message);
-            return null;
+            return false;
         }
     }
 
-    public static void set_guest_session_state (bool new_state) {
-        if (get_permission ().allowed && new_state != guest_session_state) {
-            string arg = "";
-            if (!new_state)
-                arg = "--off";
-            else if (new_state)
-                arg = "--on";
-
+    public static void set_guest_session_state (string option) {
+        if (get_permission ().allowed) {
             string output;
             int status;
 
             try {
                 var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
                 Process.spawn_sync (null, 
-                    {"pkexec", cli, arg}, 
+                    {"pkexec", cli, "--%s".printf (option)}, 
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
                     out output,
                     null,
                     out status);
-
-                if (output == "")
-                    guest_session_state = new_state;
             } catch (Error e) {
                 warning (e.message);
             }

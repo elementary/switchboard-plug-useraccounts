@@ -78,7 +78,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_guest () {
             string state_string = _("Enabled");
-            bool state = get_guest_session_state ();
+            bool state = get_guest_session_state ("show");
 
             if (!state)
                 state_string = _("Disabled");

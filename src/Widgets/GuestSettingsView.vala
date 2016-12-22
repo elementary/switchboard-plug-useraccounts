@@ -16,6 +16,8 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class GuestSettingsView : Gtk.Grid {
         private Gtk.Switch  guest_switch;
+        private Gtk.Switch  guest_autologin_switch;
+
         private Gtk.Image   guest_lock;
 
         public signal void guest_switch_changed ();
@@ -40,6 +42,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void build_ui () {
             Granite.Widgets.Avatar image = new Granite.Widgets.Avatar.with_default_icon (72);
+            image.halign = Gtk.Align.END;
             image.valign = Gtk.Align.START;
 
             var header_label = new Gtk.Label (_("Guest Session"));
@@ -50,12 +53,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             guest_switch = new Gtk.Switch ();
             guest_switch.halign = Gtk.Align.START;
             guest_switch.notify["active"].connect (() => {
-                if (get_guest_session_state () != guest_switch.active) {
+                if (get_guest_session_state ("show") != guest_switch.active) {
                     InfobarNotifier.get_default ().set_reboot ();
-                    set_guest_session_state (guest_switch.active);
+                    if (guest_switch.active) {
+                        set_guest_session_state ("on");
+                    } else {
+                        set_guest_session_state ("off");
+                        guest_autologin_switch.active = false;
+                    }
+
                     guest_switch_changed ();
                 }
+
+                update_ui ();
             });
+
+            guest_autologin_switch = new Gtk.Switch ();
+            guest_autologin_switch.halign = Gtk.Align.START;
+            guest_autologin_switch.notify["active"].connect (() => {
+                if (get_guest_session_state ("show-autologin") != guest_autologin_switch.active) {
+                    InfobarNotifier.get_default ().set_reboot ();
+                    if (guest_autologin_switch.active) {
+                        set_guest_session_state ("autologin-on");
+                    } else {
+                        set_guest_session_state ("autologin-off");
+                    }
+                }
+            });
+
+            Gtk.Label guest_autologin_label = new Gtk.Label (_("Log In automatically:"));
+            ((Gtk.Misc) guest_autologin_label).xalign = 0;
 
             guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             guest_lock.halign = Gtk.Align.START;
@@ -73,6 +100,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (guest_switch, 1, 1, 1, 1);
             attach (guest_lock, 2, 1, 1, 1);
             attach (label, 1, 2, 1, 1);
+            attach (guest_autologin_label, 0, 3, 1, 1);
+            attach (guest_autologin_switch, 1, 3, 1, 1);
 
             show_all ();
         }
@@ -83,10 +112,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             else
                 guest_lock.set_opacity (0.5);
 
-            if (guest_switch.get_sensitive () != get_permission ().allowed)
-                guest_switch.set_sensitive (get_permission ().allowed);
-            if (guest_switch.get_active () != get_guest_session_state ())
-                guest_switch.set_active (get_guest_session_state ());
+            bool allowed = get_permission ().allowed;
+            bool guest_enabled = get_guest_session_state ("show");
+            guest_switch.set_sensitive (allowed);
+            guest_switch.set_active (guest_enabled);
+
+            guest_autologin_switch.set_sensitive (allowed && guest_enabled);
+            guest_autologin_switch.set_active (get_guest_session_state ("show-autologin"));
         }
     }
 }
