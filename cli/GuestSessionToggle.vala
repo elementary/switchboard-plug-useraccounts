@@ -22,14 +22,20 @@ namespace GuestSessionToggle {
 	
 	const OptionEntry[] options = {
 		{ "show", 0, 0, OptionArg.NONE, ref SHOW, "Show whether guest-session is enabled", null },
+		{ "show-autologin", 0, 0, OptionArg.NONE, ref SHOW_AUTOLOGIN, "Show whether guest will be logged in automatically", null },
 		{ "on", 0, 0, OptionArg.NONE, ref ON, "Enable guest-session", null },
 		{ "off", 0, 0, OptionArg.NONE, ref OFF, "Disable guest-session", null },
+		{ "autologin-on", 0, 0, OptionArg.NONE, ref AUTOLOGIN_ON, "Enable guest autologin", null },
+		{ "autologin-off", 0, 0, OptionArg.NONE, ref AUTOLOGIN_OFF, "Disable guest autologin", null },
 		{ null }
 	};
 
 	static bool SHOW;
+	static bool SHOW_AUTOLOGIN;
 	static bool ON;
 	static bool OFF;
+	static bool AUTOLOGIN_ON;
+	static bool AUTOLOGIN_OFF;
 
 	public static int main (string[] args) {
 		var context = new OptionContext (null);
@@ -43,14 +49,25 @@ namespace GuestSessionToggle {
 		}
 
 		bool enabled;
+		bool autologin_enabled;
 
 		if (SHOW) {
 			enabled = get_allow_guest ();
 			
-			if (enabled)
+			if (enabled) 
 				print ("on\n");
 			else
 				print ("off\n");
+
+			return Posix.EXIT_SUCCESS;
+		} else if (SHOW_AUTOLOGIN) {
+			autologin_enabled = get_guest_autologin ();
+
+			if (autologin_enabled) {
+				print ("on\n");
+			} else {
+				print ("off\n");
+			}
 
 			return Posix.EXIT_SUCCESS;
 		}
@@ -61,13 +78,18 @@ namespace GuestSessionToggle {
 			printerr ("Must be run from administrative context\n");
 			return Posix.EXIT_FAILURE;
 		}
-				
+
 		enabled = get_allow_guest ();
+		autologin_enabled = get_guest_autologin ();
 
 		if (ON && !enabled)
 			set_allow_guest (true);
 		else if (OFF && enabled)
 			set_allow_guest (false);
+		else if (AUTOLOGIN_ON && !autologin_enabled)
+			set_guest_autologin (true);
+		else if (AUTOLOGIN_OFF && autologin_enabled)
+			set_guest_autologin (false);
 
 		return Posix.EXIT_SUCCESS;
 	}
@@ -78,11 +100,20 @@ namespace GuestSessionToggle {
 	}
 
 	private bool get_allow_guest () {
-		// Default is enabled if not set
-		string @value = get_setting ("SeatDefaults", "allow-guest", "true").down ();
+		string @value = get_setting ("SeatDefaults", "allow-guest", "false").down ();
 		return (@value == "true");
 	}
 	
+	private bool get_guest_autologin () {
+		string @value = get_setting ("SeatDefaults", "autologin-guest", "false").down ();
+		return (@value == "true");
+	}
+
+	private bool set_guest_autologin (bool enable) {
+		string @value = (enable ? "true" : "false");
+		return set_setting ("SeatDefaults", "autologin-guest", @value, GUEST_SESSION_CONF);
+	}
+
 	private string get_setting (string group, string key, string default_value) {
 		string? @value;
 
