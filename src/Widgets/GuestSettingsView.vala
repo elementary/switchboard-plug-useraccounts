@@ -42,6 +42,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void build_ui () {
             Granite.Widgets.Avatar image = new Granite.Widgets.Avatar.with_default_icon (72);
+            image.halign = Gtk.Align.END;
             image.valign = Gtk.Align.START;
 
             var header_label = new Gtk.Label (_("Guest Session"));
