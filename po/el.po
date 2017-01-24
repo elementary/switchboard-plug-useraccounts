@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2017-01-22 19:30+0000\n"
-"Last-Translator: Zarkopafilis <zarkopafilis@gmail.com>\n"
+"PO-Revision-Date: 2017-01-23 11:58+0000\n"
+"Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-23 06:24+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
+"X-Launchpad-Export-Date: 2017-01-24 06:09+0000\n"
+"X-Generator: Launchpad (build 18312)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -108,11 +108,11 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "Ορίστε συνθηματικό τώρα"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "Να μην οριστεί συνθηματικό για την είσοδο"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
-msgstr ""
+msgstr "Επιλέξτε μια εικόνα"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
