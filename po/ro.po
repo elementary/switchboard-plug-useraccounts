@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2015-01-03 05:43+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-01-26 16:17+0000\n"
+"Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-22 05:42+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
+"X-Launchpad-Export-Date: 2017-01-27 06:17+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -26,10 +26,12 @@ msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"Sesiunea oaspete permite cuiva să folosească un cont implicit temporar fără "
+"o parolă."
 
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+msgstr "Odata deconectaţi, toate setările lor vor fi şterse."
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -38,7 +40,7 @@ msgstr ""
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
-msgstr ""
+msgstr "Schimbă avatar"
 
 #: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
@@ -47,11 +49,11 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "Nu se poate schimba asta pentru utilizatorul activ curent"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "Nu se pot şterge privilegiile ultimului administrator"
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
@@ -67,11 +69,11 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Apasă pentru a schimba limba şi setările locale"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
-msgstr ""
+msgstr "Autentificare automată:"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
@@ -79,11 +81,11 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
-msgstr ""
+msgstr "Permite cont utilizator"
 
 #: ../src/Widgets/UserSettingsView.vala:360
 msgid "Disable User Account"
-msgstr ""
+msgstr "Dezactivează cont utilizator"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
@@ -103,19 +105,19 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Poate conţine doar litere mici, numere şi nici un spaţiu"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
-msgstr ""
+msgstr "Setează parola acum"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:98
 msgid "Set no password for login"
-msgstr ""
+msgstr "Nu seta nici o parolă pentru autentificare"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Permite utilizatorului să creeze parola la prima logare"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:124
 msgid "Create User"
@@ -123,11 +125,11 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is already taken"
-msgstr ""
+msgstr "Numele utilizatorului este deja folosit"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:169
 msgid "Username is not valid"
-msgstr ""
+msgstr "Numele utilizatorului nu este valid"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
@@ -139,7 +141,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr ""
+msgstr "Setează din fişier..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -155,20 +157,20 @@ msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr ""
+msgstr "Crează un cont utilizator"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Şterge contul utilizator şi datele lui"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "Anulează ştergerea ultimului cont de utilizator"
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "Nu se poate şterge propriul cont de utilizator"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -176,7 +178,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Apasă pentru autentificare"
 
 #: ../src/Widgets/PasswordEditor.vala:85
 msgid "Authentication failed"
@@ -204,31 +206,31 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:165
 msgid "Password accepted"
-msgstr ""
+msgstr "Parolă acceptată"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Weak password strength"
-msgstr ""
+msgstr "Parolă slabă"
 
 #: ../src/Widgets/PasswordEditor.vala:188
 msgid "Medium password strength"
-msgstr ""
+msgstr "Parolă medie"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Strong password strength"
-msgstr ""
+msgstr "Parolă puternică"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Asemănare cu parola curentă"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "New password is too simple"
-msgstr ""
+msgstr "Noua parolă este prea simplă"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Noua parolă este un palindrom"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -258,15 +260,19 @@ msgstr ""
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Administrează permisiunile contului şi configurează nume, parole si "
+"fotografii"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
-msgstr ""
+msgstr "Schimbarea parolei a eşuat"
 
 #: ../src/Plug.vala:78
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Schimbările pentru sesiunea oaspete vor avea efect doar după repornirea "
+"sistemului"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
