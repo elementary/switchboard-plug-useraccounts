@@ -60,7 +60,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_ui () {
             try {
-                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
+                var size = 32 * get_style_context ().get_scale ();
+                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
                 avatar.pixbuf = avatar_pixbuf;
             } catch (Error e) {
                 avatar.show_default (32);

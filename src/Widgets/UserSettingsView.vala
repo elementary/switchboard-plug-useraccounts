@@ -369,7 +369,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_avatar () {
             try {
-                avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 72, 72, true);
+                var size = 72 * get_style_context ().get_scale ();
+                avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
                 if (avatar == null)
                     avatar = new Granite.Widgets.Avatar.from_pixbuf (avatar_pixbuf);
                 else
