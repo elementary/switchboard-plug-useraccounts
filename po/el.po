@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2017-01-25 14:29+0000\n"
+"PO-Revision-Date: 2017-02-09 15:35+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 05:59+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Δεν έχετε τα δικαιώματα για να κάνετε αλλαγή σε αυτό"
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -26,6 +26,8 @@ msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"Η συνεδρία επισκέπτη επιτρέπει σε κάποιον να χρησιμοποιήσει έναν προσωρινό "
+"προεπιλεγμένο λογαριασμό χωρίς συνθηματικό."
 
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -39,7 +41,7 @@ msgstr "Ακύρωση"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
-msgstr ""
+msgstr "Αλλαγή εικόνας"
 
 #: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
@@ -49,6 +51,8 @@ msgstr "Διαχειριστής"
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
 msgstr ""
+"Δεν μπορείτε να πραγματοποιήσετε αυτήν την αλλαγή για τον τρέχοντα ενεργό "
+"χρήστη"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
@@ -68,7 +72,7 @@ msgstr "Γλώσσα:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσας και περιοχής"
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
@@ -104,7 +108,7 @@ msgstr "Όνομα χρήστη"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Μπορεί μόνο να περιέχει πεζά γράμματα, νούμερα και όχι κενά"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
@@ -124,7 +128,7 @@ msgstr "Δημιουργία χρήστη"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:166
 msgid "Username is already taken"
-msgstr ""
+msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:169
 msgid "Username is not valid"
@@ -140,7 +144,7 @@ msgstr "Αφαίρεση"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr ""
+msgstr "Ορισμός από φάκελο..."
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -197,7 +201,7 @@ msgstr "Επιβεβαίωση νέου συνθηματικού"
 
 #: ../src/Widgets/PasswordEditor.vala:140
 msgid "Passwords do not match"
-msgstr "Τα συνθηματικά δεν συμπίπτουν"
+msgstr "Τα συνθηματικά δε συμπίπτουν"
 
 #: ../src/Widgets/PasswordEditor.vala:144
 msgid "Show passwords"
@@ -221,7 +225,7 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Μοιάζει με το τρέχον συνθηματικό σας"
 
 #: ../src/Widgets/PasswordEditor.vala:207
 msgid "New password is too simple"
@@ -249,7 +253,7 @@ msgstr ""
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Απαιτείται επαλήθευση για την αλλαγή δεδομένων του χρήστη"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
@@ -259,6 +263,8 @@ msgstr "Λογαριασμοί χρηστών"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Διαχειριστείτε δικαιώματα λογαριασμών και ρυθμίστε ονόματα χρηστών, "
+"συνθηματικά και φωτογραφίες"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
