@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2017-02-09 15:35+0000\n"
+"PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 05:59+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 06:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
 msgid "You do not have permission to change this"
-msgstr "Δεν έχετε τα δικαιώματα για να κάνετε αλλαγή σε αυτό"
+msgstr "Δεν έχετε τα δικαιώματα για να το αλλάξετε"
 
 #: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
 msgid "Guest Session"
@@ -64,7 +64,7 @@ msgstr "Τύπος λογαριασμού:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
-msgstr ""
+msgstr "Τυπικός"
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
@@ -92,11 +92,11 @@ msgstr "Απενεργοποίηση λογαριασμού χρήστη"
 
 #: ../src/Widgets/UserSettingsView.vala:365
 msgid "None set"
-msgstr ""
+msgstr "Μη ορισμένο"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
-msgstr ""
+msgstr "Τυπικός χρήστης"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:64
 msgid "Full Name"
@@ -173,7 +173,7 @@ msgstr "Αναίρεση τελευταίας αφαίρεσης λογαρια�
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr "Δε μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
+msgstr "Δεν μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -213,15 +213,15 @@ msgstr "Το συνθηματικό έγινε δεκτό"
 
 #: ../src/Widgets/PasswordEditor.vala:186
 msgid "Weak password strength"
-msgstr ""
+msgstr "Ασθενές συνθηματικό"
 
 #: ../src/Widgets/PasswordEditor.vala:188
 msgid "Medium password strength"
-msgstr ""
+msgstr "Μέτριο συνθηματικό"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Strong password strength"
-msgstr ""
+msgstr "Ισχυρό συνθηματικό"
 
 #: ../src/Widgets/PasswordEditor.vala:205
 msgid "Resembles your current password"
@@ -233,7 +233,7 @@ msgstr "Το νέο σας συνθηματικό είναι πολύ απλό"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Το νέο σας συνθηματικό είναι παλίνδρομο"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
@@ -245,11 +245,11 @@ msgstr "Άλλοι λογαριασμοί"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
-msgstr ""
+msgstr "Ενεργοποιημένος"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr ""
+msgstr "Απενεργοποιημένος"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
