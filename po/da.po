@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2017-03-17 15:06+0000\n"
+"PO-Revision-Date: 2017-03-20 15:08+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-19 06:47+0000\n"
-"X-Generator: Launchpad (build 18332)\n"
+"X-Launchpad-Export-Date: 2017-03-22 07:15+0000\n"
+"X-Generator: Launchpad (build 18334)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -58,7 +58,7 @@ msgstr "Du kan ikke fjerne den sidste administrators privilegier"
 
 #: ../src/Widgets/UserSettingsView.vala:90
 msgid "Account type:"
-msgstr "Brugertype"
+msgstr "Kontotype:"
 
 #: ../src/Widgets/UserSettingsView.vala:95
 msgid "Standard"
@@ -66,11 +66,11 @@ msgstr "Standard"
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
-msgstr "Sprog"
+msgstr "Sprog:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Tryk for ændre sprogindstillinger"
+msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:185
 msgid "Log In automatically:"
@@ -142,7 +142,7 @@ msgstr "Fjern"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr "Sæt fra fil..."
+msgstr "Sæt fra fil…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -158,20 +158,20 @@ msgstr "Billeder"
 
 #: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
 msgid "Create user account"
-msgstr "Opret en bruger"
+msgstr "Opret en brugerkonto"
 
 #: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
 #: ../src/Widgets/ListFooter.vala:85
 msgid "Remove user account and its data"
-msgstr "Fjern bruger og al dens data"
+msgstr "Fjern brugerkonto og al dens data"
 
 #: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
 msgid "Undo last user account removal"
-msgstr "Fortryd fjernelse af bruger"
+msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:89
 msgid "You cannot remove your own user account"
-msgstr "Du kan ikke fjerne din egen bruger"
+msgstr "Du kan ikke fjerne din egen brugerkonto"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -235,11 +235,11 @@ msgstr "Den nye adgangskode er et palindrom"
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr "Min bruger"
+msgstr "Min konto"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr "Andre brugere"
+msgstr "Andre konti"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
@@ -255,7 +255,7 @@ msgstr "Godkendelse påkrævet for at kunne ændre brugerdata"
 
 #: ../src/Plug.vala:36
 msgid "User Accounts"
-msgstr "Brugere"
+msgstr "Brugerkonti"
 
 #: ../src/Plug.vala:37
 msgid ""
@@ -272,7 +272,7 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Ændringer for gæstesessionen vil ikke træde i kraft før du har genstartet "
-"systemet."
+"systemet"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
