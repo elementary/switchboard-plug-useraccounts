@@ -3,14 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-04-28 10:24+0000\n"
+"PO-Revision-Date: 2017-04-21 09:56+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/ko/>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -25,7 +28,9 @@ msgstr "게스트 세션"
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr "게스트 세션은 다른 사용자가 비밀번호 없이 임시 기본 계정을 사용하도록 해 줍니다."
+msgstr ""
+"게스트 세션은 다른 사용자가 비밀번호 없이 임시 기본 계정을 사용하도록 해 줍니"
+"다."
 
 #: ../src/Widgets/GuestSettingsView.vala:67
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -47,7 +52,7 @@ msgstr "관리자"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
-msgstr "현재 활동 중인 사용자의 설정을 변경할 수 없습니다."
+msgstr "현재 활동 중인 사용자의 설정은 변경할 수 없습니다"
 
 #: ../src/Widgets/UserSettingsView.vala:50
 msgid "You cannot remove the last administrator's privileges"
@@ -75,7 +80,7 @@ msgstr "자동 로그인:"
 
 #: ../src/Widgets/UserSettingsView.vala:197
 msgid "Password:"
-msgstr "비밀번호 :"
+msgstr "비밀번호:"
 
 #: ../src/Widgets/UserSettingsView.vala:357
 msgid "Enable User Account"
@@ -103,7 +108,7 @@ msgstr "사용자 이름"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "소문자, 숫자만을 포함할 수 있으며 스페이스는 입력할 수 없습니다."
+msgstr "소문자, 숫자만을 포함할 수 있으며 스페이스는 입력할 수 없습니다"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:96
 msgid "Set password now"
@@ -127,19 +132,19 @@ msgstr "사용자 이름이 이미 사용 중입니다"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:169
 msgid "Username is not valid"
-msgstr "사용자 이름이 유효하지 않습니다."
+msgstr "사용자 이름이 유효하지 않습니다"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:43
 msgid "Change Password"
-msgstr "비밀번호 변경하기"
+msgstr "비밀번호 바꾸기"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
-msgstr "제거하기"
+msgstr "제거"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr "사용할 파일 찾기..."
+msgstr "사용할 파일 찾기…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -188,7 +193,7 @@ msgstr "새 비밀번호"
 
 #: ../src/Widgets/PasswordEditor.vala:121
 msgid "Password cannot be empty"
-msgstr "비밀번호는 빈 칸일 수 없습니다."
+msgstr "비밀번호는 빈칸일 수 없습니다"
 
 #: ../src/Widgets/PasswordEditor.vala:137
 msgid "Confirm New Password"
@@ -257,7 +262,8 @@ msgstr "사용자 계정"
 #: ../src/Plug.vala:37
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr "사용자 권한 설정과 사용자 이름, 비밀번호, 그리고 프로필 사진 등을 관리합니다"
+msgstr ""
+"사용자 권한 설정과 사용자 이름, 비밀번호, 그리고 프로필 사진 등을 관리합니다"
 
 #: ../src/Plug.vala:64
 msgid "Password change failed"
@@ -270,4 +276,4 @@ msgstr "게스트 세션의 변경은 재부팅 후에 적용됩니다"
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
-msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다."
+msgstr "일부 설정은 바꾸려면 관리자 권한이 있어야 합니다"
