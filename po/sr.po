@@ -4,15 +4,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2017-01-07 14:57+0000\n"
+"PO-Revision-Date: 2017-05-06 09:05+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <(nothing)>\n"
+"Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=nplurals=3; plural=(n%10==1 && n%100!=11 ? "
+"0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/GuestSettingsView.vala:23
 #: ../src/Widgets/UserSettingsView.vala:48
@@ -248,7 +251,7 @@ msgstr "Укључен"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr "Искључен"
+msgstr "Искључено"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -278,5 +281,4 @@ msgstr ""
 
 #: ../src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Нека подешавања захтевају администраторска права да би могла да се измене"
+msgstr "За измену неких подешавања потребна су администраторска права"
