@@ -49,17 +49,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            this.hexpand = true;
-            this.halign = Gtk.Align.CENTER;
-            this.margin = 0;
-
             /*
              * users who don't have superuser privileges will need to auth against passwd.
              * therefore they will need these UI elements created and displayed to set is_authenticated.
              */
             if (!get_permission ().allowed) {
                 current_pw_entry = new Gtk.Entry ();
-                current_pw_entry.width_request = entry_width;
                 current_pw_entry.set_placeholder_text (_("Current Password"));
                 current_pw_entry.set_visibility (false);
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
@@ -114,6 +109,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 is_authenticated = true;
 
             new_pw_entry = new Gtk.Entry ();
+            new_pw_entry.width_request = entry_width;
             new_pw_entry.set_placeholder_text (_("New Password"));
             new_pw_entry.set_visibility (false);
             if (!get_permission ().allowed)
