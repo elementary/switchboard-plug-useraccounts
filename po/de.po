@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 09:25-0300\n"
+"POT-Creation-Date: 2017-05-07 10:05-0700\n"
 "PO-Revision-Date: 2016-08-04 08:42+0000\n"
 "Last-Translator: UweS <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,28 +13,74 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/GuestSettingsView.vala:23
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You do not have permission to change this"
-msgstr "Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern."
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr "Zur Änderung von Benutzerdaten ist eine Legitimierung erforderlich"
 
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+#: ../src/Plug.vala:38
+msgid "User Accounts"
+msgstr "Benutzer"
+
+#: ../src/Plug.vala:39
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
+"Kontoberechtigungen verwalten sowie Benutzernamen, -passwörter und -fotos "
+"einrichten"
+
+#: ../src/Plug.vala:67
+msgid "Password change failed"
+msgstr "Passwortänderung fehlgeschlagen"
+
+#: ../src/Plug.vala:81
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr "Änderungen an der Gastsitzung werden erst nach einem Neustart wirksam"
+
+#: ../src/Plug.vala:100
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Manche Einstellungen benötigen Administrator-Berechtigungen, um geändert zu "
+"werden"
+
+#: ../src/Widgets/UserItem.vala:48
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Administrator"
+msgstr "Systemverwalter"
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr "Weitere Konten"
+
+#: ../src/Widgets/UserListBox.vala:80
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: ../src/Widgets/UserListBox.vala:84
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
 msgstr "Gastsitzung"
 
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Die Gastsitzung ermöglicht es, ein temporäres Benutzerkonto ohne Passwort zu "
-"verwenden."
+#: ../src/Widgets/ListFooter.vala:44 ../src/Widgets/ListFooter.vala:45
+msgid "Create user account"
+msgstr "Benutzerkonto erstellen"
 
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Nach dem Beenden der Gastsitzung werden alle Einstellungen und Daten "
-"gelöscht."
+#: ../src/Widgets/ListFooter.vala:55 ../src/Widgets/ListFooter.vala:56
+#: ../src/Widgets/ListFooter.vala:80
+msgid "Remove user account and its data"
+msgstr "Benutzerkonto und damit verbundene Daten entfernen"
+
+#: ../src/Widgets/ListFooter.vala:84
+msgid "You cannot remove your own user account"
+msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -45,54 +91,9 @@ msgstr "Abbrechen"
 msgid "Change Avatar"
 msgstr "Benutzerbild ändern"
 
-#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-msgid "Administrator"
-msgstr "Systemverwalter"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "Sie können dies nicht für den aktuell angemeldeten Benutzer ändern."
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Sie können dem einzigen Systemverwalter nicht die Rechte entziehen"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Kontotyp:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Standard"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Sprache:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Klicken, um zur Systemeinstellung »Sprache & Region« zu wechseln"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Automatische Anmeldung:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Passwort:"
-
-#: ../src/Widgets/UserSettingsView.vala:357
-msgid "Enable User Account"
-msgstr "Benutzerkonto aktivieren"
-
-#: ../src/Widgets/UserSettingsView.vala:360
-msgid "Disable User Account"
-msgstr "Benutzerkonto deaktvieren"
-
-#: ../src/Widgets/UserSettingsView.vala:365
-msgid "None set"
-msgstr "Nicht gesetzt"
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Passwort ändern"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -134,10 +135,6 @@ msgstr "Benutzername ist bereits vergeben"
 msgid "Username is not valid"
 msgstr "Benutzername ist nicht zulässig"
 
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Passwort ändern"
-
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Entfernen"
@@ -157,23 +154,6 @@ msgstr "Öffnen"
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Bilder"
-
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Benutzerkonto erstellen"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Benutzerkonto und damit verbundene Daten entfernen"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Zuletzt gelöschtes Benutzerkonto wiederherstellen"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -235,48 +215,74 @@ msgstr "Neues Passwort ist zu schwach"
 msgid "New password is a palindrome"
 msgstr "Neues Passwort ist ein Palindrom"
 
-#: ../src/Widgets/UserListBox.vala:34
-msgid "My Account"
-msgstr "Mein Konto"
+#: ../src/Widgets/MainView.vala:34
+msgid "Undo last user account removal"
+msgstr "Zuletzt gelöschtes Benutzerkonto wiederherstellen"
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "Other Accounts"
-msgstr "Weitere Konten"
-
-#: ../src/Widgets/UserListBox.vala:80
-msgid "Enabled"
-msgstr "Aktiviert"
-
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Disabled"
-msgstr "Deaktiviert"
-
-#: ../src/Plug.vala:31
-msgid "Authentication is required to change user data"
-msgstr "Zur Änderung von Benutzerdaten ist eine Legitimierung erforderlich"
-
-#: ../src/Plug.vala:36
-msgid "User Accounts"
-msgstr "Benutzer"
-
-#: ../src/Plug.vala:37
-msgid ""
-"Manage account permissions and configure user names, passwords, and photos"
+#: ../src/Widgets/MainView.vala:35
+msgid "Undo"
 msgstr ""
-"Kontoberechtigungen verwalten sowie Benutzernamen, -passwörter und -fotos "
-"einrichten"
 
-#: ../src/Plug.vala:64
-msgid "Password change failed"
-msgstr "Passwortänderung fehlgeschlagen"
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:25
+msgid "You do not have permission to change this"
+msgstr "Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern."
 
-#: ../src/Plug.vala:78
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "Sie können dies nicht für den aktuell angemeldeten Benutzer ändern."
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Sie können dem einzigen Systemverwalter nicht die Rechte entziehen"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Kontotyp:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Standard"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Sprache:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Klicken, um zur Systemeinstellung »Sprache & Region« zu wechseln"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/GuestSettingsView.vala:84
+msgid "Log In automatically:"
+msgstr "Automatische Anmeldung:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Passwort:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Benutzerkonto aktivieren"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Benutzerkonto deaktvieren"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "Nicht gesetzt"
+
+#: ../src/Widgets/GuestSettingsView.vala:93
 msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr "Änderungen an der Gastsitzung werden erst nach einem Neustart wirksam"
-
-#: ../src/Plug.vala:97
-msgid "Some settings require administrator rights to be changed"
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
-"Manche Einstellungen benötigen Administrator-Berechtigungen, um geändert zu "
-"werden"
+"Die Gastsitzung ermöglicht es, ein temporäres Benutzerkonto ohne Passwort zu "
+"verwenden."
+
+#: ../src/Widgets/GuestSettingsView.vala:94
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Nach dem Beenden der Gastsitzung werden alle Einstellungen und Daten "
+"gelöscht."

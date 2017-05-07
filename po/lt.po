@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 09:25-0300\n"
+"POT-Creation-Date: 2017-05-07 10:05-0700\n"
 "PO-Revision-Date: 2016-08-13 20:57+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,26 +13,74 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/GuestSettingsView.vala:23
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You do not have permission to change this"
-msgstr "Jūs neturite leidimų, kad tai pakeistumėte"
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr "Norint keisti naudotojo duomenis, reikalingas tapatybės nustatymas"
 
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+#: ../src/Plug.vala:38
+msgid "User Accounts"
+msgstr "Naudotojų paskyros"
+
+#: ../src/Plug.vala:39
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
+"Tvarkyti paskyros leidimus ir konfigūruoti naudotojų vardus, slaptažodžius "
+"ir nuotraukas"
+
+#: ../src/Plug.vala:67
+msgid "Password change failed"
+msgstr "Slaptažodžio pakeisti nepavyko"
+
+#: ../src/Plug.vala:81
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Svečio seanso pakeitimai neįsigalios tol, kol iš naujo nepaleisite savo "
+"sistemos"
+
+#: ../src/Plug.vala:100
+msgid "Some settings require administrator rights to be changed"
+msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
+
+#: ../src/Widgets/UserItem.vala:48
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Administrator"
+msgstr "Administratorius"
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr "Mano paskyra"
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr "Kitos paskyros"
+
+#: ../src/Widgets/UserListBox.vala:80
+msgid "Enabled"
+msgstr "Įjungta"
+
+#: ../src/Widgets/UserListBox.vala:84
+msgid "Disabled"
+msgstr "Išjungta"
+
+#: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
 msgstr "Svečio seansas"
 
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Svečio seansas leidžia asmeniui pasinaudoti laikinąja numatytąja paskyra be "
-"slaptažodžio."
+#: ../src/Widgets/ListFooter.vala:44 ../src/Widgets/ListFooter.vala:45
+msgid "Create user account"
+msgstr "Sukurti naudotojo paskyrą"
 
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."
+#: ../src/Widgets/ListFooter.vala:55 ../src/Widgets/ListFooter.vala:56
+#: ../src/Widgets/ListFooter.vala:80
+msgid "Remove user account and its data"
+msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
+
+#: ../src/Widgets/ListFooter.vala:84
+msgid "You cannot remove your own user account"
+msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -43,54 +91,9 @@ msgstr "Atsisakyti"
 msgid "Change Avatar"
 msgstr "Keisti avatarą"
 
-#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-msgid "Administrator"
-msgstr "Administratorius"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "Jūs negalite to keisti šiuo metu prisijungusiam aktyviam naudotojui"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Jūs negalite pašalinti paskutiniojo administratoriaus teisių"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Paskyros tipas:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Standartinė"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Kalba:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Prisijungti automatiškai:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Slaptažodis:"
-
-#: ../src/Widgets/UserSettingsView.vala:357
-msgid "Enable User Account"
-msgstr "Įjungti naudotojo paskyrą"
-
-#: ../src/Widgets/UserSettingsView.vala:360
-msgid "Disable User Account"
-msgstr "Išjungti naudotojo paskyrą"
-
-#: ../src/Widgets/UserSettingsView.vala:365
-msgid "None set"
-msgstr "Nenustatyta"
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Keisti slaptažodį"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -132,10 +135,6 @@ msgstr "Naudotojo vardas jau užimtas"
 msgid "Username is not valid"
 msgstr "Naudotojo vardas neteisingas"
 
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Keisti slaptažodį"
-
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Šalinti"
@@ -155,23 +154,6 @@ msgstr "Atverti"
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Paveikslai"
-
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Sukurti naudotojo paskyrą"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Atšaukti paskutinį naudotojo paskyros šalinimą"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -233,48 +215,72 @@ msgstr "Naujas slaptažodis yra pernelyg paprastas"
 msgid "New password is a palindrome"
 msgstr "Naujas slaptažodis vienodai skaitomas iš abiejų pusių"
 
-#: ../src/Widgets/UserListBox.vala:34
-msgid "My Account"
-msgstr "Mano paskyra"
+#: ../src/Widgets/MainView.vala:34
+msgid "Undo last user account removal"
+msgstr "Atšaukti paskutinį naudotojo paskyros šalinimą"
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "Other Accounts"
-msgstr "Kitos paskyros"
-
-#: ../src/Widgets/UserListBox.vala:80
-msgid "Enabled"
-msgstr "Įjungta"
-
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Disabled"
-msgstr "Išjungta"
-
-#: ../src/Plug.vala:31
-msgid "Authentication is required to change user data"
-msgstr "Norint keisti naudotojo duomenis, reikalingas tapatybės nustatymas"
-
-#: ../src/Plug.vala:36
-msgid "User Accounts"
-msgstr "Naudotojų paskyros"
-
-#: ../src/Plug.vala:37
-msgid ""
-"Manage account permissions and configure user names, passwords, and photos"
+#: ../src/Widgets/MainView.vala:35
+msgid "Undo"
 msgstr ""
-"Tvarkyti paskyros leidimus ir konfigūruoti naudotojų vardus, slaptažodžius "
-"ir nuotraukas"
 
-#: ../src/Plug.vala:64
-msgid "Password change failed"
-msgstr "Slaptažodžio pakeisti nepavyko"
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:25
+msgid "You do not have permission to change this"
+msgstr "Jūs neturite leidimų, kad tai pakeistumėte"
 
-#: ../src/Plug.vala:78
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "Jūs negalite to keisti šiuo metu prisijungusiam aktyviam naudotojui"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Jūs negalite pašalinti paskutiniojo administratoriaus teisių"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Paskyros tipas:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Standartinė"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Kalba:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/GuestSettingsView.vala:84
+msgid "Log In automatically:"
+msgstr "Prisijungti automatiškai:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Slaptažodis:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Įjungti naudotojo paskyrą"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Išjungti naudotojo paskyrą"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "Nenustatyta"
+
+#: ../src/Widgets/GuestSettingsView.vala:93
 msgid ""
-"Guest session changes will not take effect until you restart your system"
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
-"Svečio seanso pakeitimai neįsigalios tol, kol iš naujo nepaleisite savo "
-"sistemos"
+"Svečio seansas leidžia asmeniui pasinaudoti laikinąja numatytąja paskyra be "
+"slaptažodžio."
 
-#: ../src/Plug.vala:97
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
+#: ../src/Widgets/GuestSettingsView.vala:94
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."

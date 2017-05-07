@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 09:25-0300\n"
+"POT-Creation-Date: 2017-05-07 10:05-0700\n"
 "PO-Revision-Date: 2015-11-16 20:25+0000\n"
 "Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,26 +13,70 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/GuestSettingsView.vala:23
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You do not have permission to change this"
-msgstr "თქვენ ამის შესაცვლელად უფლებები არ გაქვთ"
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
 
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+#: ../src/Plug.vala:38
+msgid "User Accounts"
+msgstr "მომხმარებლის ანგარიშები"
+
+#: ../src/Plug.vala:39
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
+
+#: ../src/Plug.vala:67
+msgid "Password change failed"
+msgstr "პაროლის შეცვლა ჩაიშალა"
+
+#: ../src/Plug.vala:81
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr "სტუმრის სესიის ცვლილებები სისტემის გადატვირთვამდე არ გააქტიურდება"
+
+#: ../src/Plug.vala:100
+msgid "Some settings require administrator rights to be changed"
+msgstr "ზოგიერთი პარამეტრი შესაცვლელად მოითხოვს ადმინისტრატორის უფლებებს"
+
+#: ../src/Widgets/UserItem.vala:48
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Administrator"
+msgstr "ადმინისტრატორი"
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr "ჩემი ანგარიში"
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr "სხვა ანგარიშები"
+
+#: ../src/Widgets/UserListBox.vala:80
+msgid "Enabled"
+msgstr "ჩართული"
+
+#: ../src/Widgets/UserListBox.vala:84
+msgid "Disabled"
+msgstr "გამორთული"
+
+#: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
 
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"სტუმრის სესია სხვას საშუალებას აძლევს გამოიყენოს დროებითი ნაგულისხმევი "
-"ანგარიში პაროლის გარეშე."
+#: ../src/Widgets/ListFooter.vala:44 ../src/Widgets/ListFooter.vala:45
+msgid "Create user account"
+msgstr "მომხმარებლის ანგარიშის შექმნა"
 
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "გამოვლენ თუ არა, მათი ყველა პარამეტრი და მონაცემები წაიშლება."
+#: ../src/Widgets/ListFooter.vala:55 ../src/Widgets/ListFooter.vala:56
+#: ../src/Widgets/ListFooter.vala:80
+msgid "Remove user account and its data"
+msgstr "მომხმარებლის ანგარიშის და მისი მონაცემების წაშლა"
+
+#: ../src/Widgets/ListFooter.vala:84
+msgid "You cannot remove your own user account"
+msgstr "თქვენ არ შეგიძლიათ თქვენივე მომხმარებლის ანგარიშის წაშლა"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -43,54 +87,9 @@ msgstr "გაუქმება"
 msgid "Change Avatar"
 msgstr "ავატარის შეცვლა"
 
-#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-msgid "Administrator"
-msgstr "ადმინისტრატორი"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "ამის შეცვლა ამჟამად აქტიური მომხმარებლისთვის შეუძლებელია"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "თქვენ არ შეგიძლიათ ბოლო ადმინისტრატორის პრივილეგიების წაშლა"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "ანგარიშის ტიპი:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "სტანდარტული"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "ენა:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "დააწკაპუნეთ ენის & ადგილის პარამეტრებზე გადასასვლელად"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "ავტომატური შესვლა"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "პაროლი:"
-
-#: ../src/Widgets/UserSettingsView.vala:357
-msgid "Enable User Account"
-msgstr "მომხმარებლის ანგარიშის ჩართვა"
-
-#: ../src/Widgets/UserSettingsView.vala:360
-msgid "Disable User Account"
-msgstr "მომხმარებლის ანგარიშის გამორთვა"
-
-#: ../src/Widgets/UserSettingsView.vala:365
-msgid "None set"
-msgstr "დაყენებული არაფერია"
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "პაროლის შეცვლა"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -132,10 +131,6 @@ msgstr "მომხმარებლის სახელი უკვე დ
 msgid "Username is not valid"
 msgstr "მომხმარებლის სახელი არასწორია"
 
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "პაროლის შეცვლა"
-
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "წაშლა"
@@ -155,23 +150,6 @@ msgstr "გახსნა"
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "სურათები"
-
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "მომხმარებლის ანგარიშის შექმნა"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "მომხმარებლის ანგარიშის და მისი მონაცემების წაშლა"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "ბოლო მომხმარებლის ანგარიშის წაშლის აღდგენა"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "თქვენ არ შეგიძლიათ თქვენივე მომხმარებლის ანგარიშის წაშლა"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -233,44 +211,72 @@ msgstr "ახალი პაროლი ძალიან მარტივ
 msgid "New password is a palindrome"
 msgstr "ახალი პაროლი პალინდრომია"
 
-#: ../src/Widgets/UserListBox.vala:34
-msgid "My Account"
-msgstr "ჩემი ანგარიში"
+#: ../src/Widgets/MainView.vala:34
+msgid "Undo last user account removal"
+msgstr "ბოლო მომხმარებლის ანგარიშის წაშლის აღდგენა"
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "Other Accounts"
-msgstr "სხვა ანგარიშები"
-
-#: ../src/Widgets/UserListBox.vala:80
-msgid "Enabled"
-msgstr "ჩართული"
-
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Disabled"
-msgstr "გამორთული"
-
-#: ../src/Plug.vala:31
-msgid "Authentication is required to change user data"
-msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
-
-#: ../src/Plug.vala:36
-msgid "User Accounts"
-msgstr "მომხმარებლის ანგარიშები"
-
-#: ../src/Plug.vala:37
-msgid ""
-"Manage account permissions and configure user names, passwords, and photos"
+#: ../src/Widgets/MainView.vala:35
+msgid "Undo"
 msgstr ""
 
-#: ../src/Plug.vala:64
-msgid "Password change failed"
-msgstr "პაროლის შეცვლა ჩაიშალა"
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:25
+msgid "You do not have permission to change this"
+msgstr "თქვენ ამის შესაცვლელად უფლებები არ გაქვთ"
 
-#: ../src/Plug.vala:78
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "ამის შეცვლა ამჟამად აქტიური მომხმარებლისთვის შეუძლებელია"
+
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "თქვენ არ შეგიძლიათ ბოლო ადმინისტრატორის პრივილეგიების წაშლა"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "ანგარიშის ტიპი:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "სტანდარტული"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "ენა:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "დააწკაპუნეთ ენის & ადგილის პარამეტრებზე გადასასვლელად"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/GuestSettingsView.vala:84
+msgid "Log In automatically:"
+msgstr "ავტომატური შესვლა"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "მომხმარებლის ანგარიშის ჩართვა"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "მომხმარებლის ანგარიშის გამორთვა"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "დაყენებული არაფერია"
+
+#: ../src/Widgets/GuestSettingsView.vala:93
 msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr "სტუმრის სესიის ცვლილებები სისტემის გადატვირთვამდე არ გააქტიურდება"
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"სტუმრის სესია სხვას საშუალებას აძლევს გამოიყენოს დროებითი ნაგულისხმევი "
+"ანგარიში პაროლის გარეშე."
 
-#: ../src/Plug.vala:97
-msgid "Some settings require administrator rights to be changed"
-msgstr "ზოგიერთი პარამეტრი შესაცვლელად მოითხოვს ადმინისტრატორის უფლებებს"
+#: ../src/Widgets/GuestSettingsView.vala:94
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr "გამოვლენ თუ არა, მათი ყველა პარამეტრი და მონაცემები წაიშლება."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 09:25-0300\n"
+"POT-Creation-Date: 2017-05-07 10:05-0700\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,27 +13,74 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 06:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/GuestSettingsView.vala:23
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You do not have permission to change this"
-msgstr "Δεν έχετε τα δικαιώματα για να το αλλάξετε"
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr "Απαιτείται επαλήθευση για την αλλαγή δεδομένων του χρήστη"
 
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+#: ../src/Plug.vala:38
+msgid "User Accounts"
+msgstr "Λογαριασμοί χρηστών"
+
+#: ../src/Plug.vala:39
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
+"Διαχειριστείτε δικαιώματα λογαριασμών και ρυθμίστε ονόματα χρηστών, "
+"συνθηματικά και φωτογραφίες"
+
+#: ../src/Plug.vala:67
+msgid "Password change failed"
+msgstr "Η αλλαγή συνθηματικού απέτυχε"
+
+#: ../src/Plug.vala:81
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Οι αλλαγές στη συνεδρία επισκέπτη δε θα τεθούν σε ισχύ μέχρι να "
+"επανεκκινήσετε το σύστημα σας"
+
+#: ../src/Plug.vala:100
+msgid "Some settings require administrator rights to be changed"
+msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
+
+#: ../src/Widgets/UserItem.vala:48
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Administrator"
+msgstr "Διαχειριστής"
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr "Ο λογαριασμός μου"
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr "Άλλοι λογαριασμοί"
+
+#: ../src/Widgets/UserListBox.vala:80
+msgid "Enabled"
+msgstr "Ενεργοποιημένος"
+
+#: ../src/Widgets/UserListBox.vala:84
+msgid "Disabled"
+msgstr "Απενεργοποιημένος"
+
+#: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
 msgstr "Συνεδρία επισκέπτη"
 
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Η συνεδρία επισκέπτη επιτρέπει σε κάποιον να χρησιμοποιήσει έναν προσωρινό "
-"προεπιλεγμένο λογαριασμό χωρίς συνθηματικό."
+#: ../src/Widgets/ListFooter.vala:44 ../src/Widgets/ListFooter.vala:45
+msgid "Create user account"
+msgstr "Δημιουργία λογαριασμού χρήστη"
 
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Μόλις αποσυνδεθούν, όλες οι ρυθμίσεις και τα δεδομένα τους θα διαγραφούν."
+#: ../src/Widgets/ListFooter.vala:55 ../src/Widgets/ListFooter.vala:56
+#: ../src/Widgets/ListFooter.vala:80
+msgid "Remove user account and its data"
+msgstr "Αφαίρεση λογαριασμού χρήστη και των δεδομένων του"
+
+#: ../src/Widgets/ListFooter.vala:84
+msgid "You cannot remove your own user account"
+msgstr "Δεν μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -44,56 +91,9 @@ msgstr "Ακύρωση"
 msgid "Change Avatar"
 msgstr "Αλλαγή εικόνας"
 
-#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-msgid "Administrator"
-msgstr "Διαχειριστής"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr ""
-"Δεν μπορείτε να πραγματοποιήσετε αυτήν την αλλαγή για τον τρέχοντα ενεργό "
-"χρήστη"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Δεν μπορείτε να αφαιρέσετε τα δικαιώματα του τελευταίου διαχειρηστή"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Τύπος λογαριασμού:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Τυπικός"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Γλώσσα:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσας και περιοχής"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Συνδεθείτε αυτόματα:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Συνθηματικό:"
-
-#: ../src/Widgets/UserSettingsView.vala:357
-msgid "Enable User Account"
-msgstr "Ενεργοποίηση λογαριασμού χρήστη"
-
-#: ../src/Widgets/UserSettingsView.vala:360
-msgid "Disable User Account"
-msgstr "Απενεργοποίηση λογαριασμού χρήστη"
-
-#: ../src/Widgets/UserSettingsView.vala:365
-msgid "None set"
-msgstr "Μη ορισμένο"
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Αλλαγή συνθηματικού"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -135,10 +135,6 @@ msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη"
 msgid "Username is not valid"
 msgstr "Το όνομα χρήστη δεν είναι έγκυρο"
 
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Αλλαγή συνθηματικού"
-
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Αφαίρεση"
@@ -158,23 +154,6 @@ msgstr "Άνοιγμα"
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Εικόνες"
-
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Δημιουργία λογαριασμού χρήστη"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Αφαίρεση λογαριασμού χρήστη και των δεδομένων του"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Αναίρεση τελευταίας αφαίρεσης λογαριασμού χρήστη"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "Δεν μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -236,48 +215,75 @@ msgstr "Το νέο σας συνθηματικό είναι πολύ απλό"
 msgid "New password is a palindrome"
 msgstr "Το νέο σας συνθηματικό είναι παλίνδρομο"
 
-#: ../src/Widgets/UserListBox.vala:34
-msgid "My Account"
-msgstr "Ο λογαριασμός μου"
+#: ../src/Widgets/MainView.vala:34
+msgid "Undo last user account removal"
+msgstr "Αναίρεση τελευταίας αφαίρεσης λογαριασμού χρήστη"
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "Other Accounts"
-msgstr "Άλλοι λογαριασμοί"
-
-#: ../src/Widgets/UserListBox.vala:80
-msgid "Enabled"
-msgstr "Ενεργοποιημένος"
-
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Disabled"
-msgstr "Απενεργοποιημένος"
-
-#: ../src/Plug.vala:31
-msgid "Authentication is required to change user data"
-msgstr "Απαιτείται επαλήθευση για την αλλαγή δεδομένων του χρήστη"
-
-#: ../src/Plug.vala:36
-msgid "User Accounts"
-msgstr "Λογαριασμοί χρηστών"
-
-#: ../src/Plug.vala:37
-msgid ""
-"Manage account permissions and configure user names, passwords, and photos"
+#: ../src/Widgets/MainView.vala:35
+msgid "Undo"
 msgstr ""
-"Διαχειριστείτε δικαιώματα λογαριασμών και ρυθμίστε ονόματα χρηστών, "
-"συνθηματικά και φωτογραφίες"
 
-#: ../src/Plug.vala:64
-msgid "Password change failed"
-msgstr "Η αλλαγή συνθηματικού απέτυχε"
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:25
+msgid "You do not have permission to change this"
+msgstr "Δεν έχετε τα δικαιώματα για να το αλλάξετε"
 
-#: ../src/Plug.vala:78
-msgid ""
-"Guest session changes will not take effect until you restart your system"
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
 msgstr ""
-"Οι αλλαγές στη συνεδρία επισκέπτη δε θα τεθούν σε ισχύ μέχρι να "
-"επανεκκινήσετε το σύστημα σας"
+"Δεν μπορείτε να πραγματοποιήσετε αυτήν την αλλαγή για τον τρέχοντα ενεργό "
+"χρήστη"
 
-#: ../src/Plug.vala:97
-msgid "Some settings require administrator rights to be changed"
-msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Δεν μπορείτε να αφαιρέσετε τα δικαιώματα του τελευταίου διαχειρηστή"
+
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Τύπος λογαριασμού:"
+
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Τυπικός"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Γλώσσα:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσας και περιοχής"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/GuestSettingsView.vala:84
+msgid "Log In automatically:"
+msgstr "Συνδεθείτε αυτόματα:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Συνθηματικό:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Ενεργοποίηση λογαριασμού χρήστη"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Απενεργοποίηση λογαριασμού χρήστη"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "Μη ορισμένο"
+
+#: ../src/Widgets/GuestSettingsView.vala:93
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"Η συνεδρία επισκέπτη επιτρέπει σε κάποιον να χρησιμοποιήσει έναν προσωρινό "
+"προεπιλεγμένο λογαριασμό χωρίς συνθηματικό."
+
+#: ../src/Widgets/GuestSettingsView.vala:94
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Μόλις αποσυνδεθούν, όλες οι ρυθμίσεις και τα δεδομένα τους θα διαγραφούν."
