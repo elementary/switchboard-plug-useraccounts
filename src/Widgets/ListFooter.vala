@@ -88,8 +88,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 if (get_removal_list () == null || get_removal_list ().last () == null) {
                     hide_undo_notification ();
-                } else if (get_removal_list () != null && get_removal_list ().last () != null)
-                    send_undo_notification ();
+                }
             } else if (selected_user == null) {
                 button_remove.set_sensitive (false);
             } else {
@@ -115,6 +114,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             selected_user = null;
             unfocused ();
             update_ui ();
+            send_undo_notification ();
         }
     }
 }
