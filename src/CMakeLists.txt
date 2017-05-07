@@ -17,7 +17,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Misc/Utils.vala
     Misc/UserUtils.vala
     Misc/InfobarNotifier.vala
-    Misc/ObscurityChecker.vala
     Widgets/MainView.vala
     Widgets/UserListBox.vala
     Widgets/ListFooter.vala
