@@ -21,6 +21,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public Gtk.ScrolledWindow   scrolled_window;
         public ListFooter           footer;
 
+        private Granite.Widgets.Toast toast;
+
         private GuestSettingsView   guest;
 
         public MainView () {
@@ -29,9 +31,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             content = new Gtk.Stack ();
+            toast = new Granite.Widgets.Toast (_("Undo last user account removal"));
+            toast.set_default_action (_("Undo"));
+
+            var overlay = new Gtk.Overlay ();
+            overlay.add (content);
+            overlay.add_overlay (toast);
 
             pack1 (sidebar, false, false);
-            pack2 (content, true, false);
+            pack2 (overlay, true, false);
 
             guest = new GuestSettingsView ();
             get_usermanager ().notify["is-loaded"].connect (update);
@@ -67,6 +75,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 content.set_visible_child_name (get_current_user ().get_user_name ());
                 userlist.select_row (userlist.get_row_at_index (1));
             });
+
+            footer.send_undo_notification.connect (() => {
+                toast.send_notification ();
+            });
+
+            footer.hide_undo_notification.connect (() => {
+                toast.reveal_child = false;
+            });
+
+            toast.default_action.connect (() => {
+                footer.undo_user_removal ();
+            });
+
             sidebar.pack_start (scrolled_window, true, true);
             sidebar.pack_end (footer, false, false);
 
