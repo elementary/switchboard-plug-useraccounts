@@ -35,7 +35,7 @@ PACKAGES
     gtk+-3.0
     gee-0.8
     switchboard-2.0
-    granite
+    granite>=0.4.1
     AccountsService-1.0
     gnome-desktop-3.0
     posix
