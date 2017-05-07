@@ -17,12 +17,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class ListFooter : Gtk.Toolbar {
         private Gtk.ToolButton  button_add;
         private Gtk.ToolButton  button_remove;
-        private Gtk.ToolButton  button_undo;
 
         private Act.User? selected_user = null;
 
         public signal void removal_changed ();
         public signal void unfocused ();
+
+        public signal void send_undo_notification ();
+        public signal void hide_undo_notification ();
 
         public ListFooter () {
             get_permission ().notify["allowed"].connect (update_ui);
@@ -62,17 +64,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             separator.set_expand (true);
             insert (separator, -1);
 
-            button_undo = new Gtk.ToolButton (null, _("Undo last user account removal"));
-            button_undo.set_tooltip_text (_("Undo last user account removal"));
-            button_undo.set_icon_name ("edit-undo-symbolic");
-            button_undo.set_no_show_all (true);
-            button_undo.clicked.connect (() => {
-                undo_removal ();
-                removal_changed ();
-                update_ui ();
-            });
-            insert (button_undo, -1);
+            update_ui ();
+        }
 
+        public void undo_user_removal () {
+            undo_removal ();
+            removal_changed ();
             update_ui ();
         }
 
@@ -92,17 +89,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
 
                 if (get_removal_list () == null || get_removal_list ().last () == null) {
-                    button_undo.set_no_show_all (true);
-                    button_undo.hide ();
+                    hide_undo_notification ();
                 } else if (get_removal_list () != null && get_removal_list ().last () != null)
-                    button_undo.set_no_show_all (false);
+                    send_undo_notification ();
             } else if (selected_user == null) {
                 button_remove.set_sensitive (false);
             } else {
                 button_add.set_sensitive (false);
                 button_remove.set_sensitive (false);
-                button_undo.set_no_show_all (true);
-                button_undo.hide ();
+                hide_undo_notification ();
             }
 
             show_all ();
