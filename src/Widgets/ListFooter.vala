@@ -63,8 +63,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             separator.set_draw (false);
             separator.set_expand (true);
             insert (separator, -1);
-
-            update_ui ();
         }
 
         public void undo_user_removal () {
