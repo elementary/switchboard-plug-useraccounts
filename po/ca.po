@@ -2,36 +2,88 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 09:25-0300\n"
-"PO-Revision-Date: 2016-12-02 13:21+0000\n"
-"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2017-05-07 10:05-0700\n"
+"PO-Revision-Date: 2017-05-03 14:26+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/GuestSettingsView.vala:23
-#: ../src/Widgets/UserSettingsView.vala:48
-msgid "You do not have permission to change this"
-msgstr "No teniu permís per canviar això"
+#: ../src/Plug.vala:31
+msgid "Authentication is required to change user data"
+msgstr "Cal autenticació per canviar les dades de l'usuari"
 
-#: ../src/Widgets/GuestSettingsView.vala:45 ../src/Widgets/UserListBox.vala:100
+#: ../src/Plug.vala:38
+msgid "User Accounts"
+msgstr "Comptes d'usuari"
+
+#: ../src/Plug.vala:39
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""
+"Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
+"contrasenyes i les fotografies."
+
+#: ../src/Plug.vala:67
+msgid "Password change failed"
+msgstr "Ha fallat el canvi de contrasenya"
+
+#: ../src/Plug.vala:81
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
+"sistema."
+
+#: ../src/Plug.vala:100
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
+
+#: ../src/Widgets/UserItem.vala:48
+#: ../src/Widgets/Popovers/NewUserPopover.vala:57
+#: ../src/Widgets/UserSettingsView.vala:96
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../src/Widgets/UserListBox.vala:34
+msgid "My Account"
+msgstr "El meu compte"
+
+#: ../src/Widgets/UserListBox.vala:38
+msgid "Other Accounts"
+msgstr "Altres comptes"
+
+#: ../src/Widgets/UserListBox.vala:80
+msgid "Enabled"
+msgstr "Habilitat"
+
+#: ../src/Widgets/UserListBox.vala:84
+msgid "Disabled"
+msgstr "Inhabilitat"
+
+#: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
 msgstr "Sessió de convidat"
 
-#: ../src/Widgets/GuestSettingsView.vala:66
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"La sessió de convidat permet utilitzar un compte temporal sense contrasenya."
+#: ../src/Widgets/ListFooter.vala:44 ../src/Widgets/ListFooter.vala:45
+msgid "Create user account"
+msgstr "Crea un compte d'usuari"
 
-#: ../src/Widgets/GuestSettingsView.vala:67
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
+#: ../src/Widgets/ListFooter.vala:55 ../src/Widgets/ListFooter.vala:56
+#: ../src/Widgets/ListFooter.vala:80
+msgid "Remove user account and its data"
+msgstr "Elimina el compte d'usuari i les seves dades"
+
+#: ../src/Widgets/ListFooter.vala:84
+msgid "You cannot remove your own user account"
+msgstr "No podeu eliminar el vostre compte"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
@@ -42,54 +94,9 @@ msgstr "Cancel·la"
 msgid "Change Avatar"
 msgstr "Canvia l'avatar"
 
-#: ../src/Widgets/UserItem.vala:48 ../src/Widgets/UserSettingsView.vala:96
-#: ../src/Widgets/Popovers/NewUserPopover.vala:57
-msgid "Administrator"
-msgstr "Administrador"
-
-#: ../src/Widgets/UserSettingsView.vala:49
-msgid "You cannot change this for the currently active user"
-msgstr "No podeu canviar aquesta opció per a l'usuari actiu"
-
-#: ../src/Widgets/UserSettingsView.vala:50
-msgid "You cannot remove the last administrator's privileges"
-msgstr "No podeu treure els permisos de l'últim compte administratiu"
-
-#: ../src/Widgets/UserSettingsView.vala:90
-msgid "Account type:"
-msgstr "Tipus de compte:"
-
-#: ../src/Widgets/UserSettingsView.vala:95
-msgid "Standard"
-msgstr "Estàndard"
-
-#: ../src/Widgets/UserSettingsView.vala:103
-msgid "Language:"
-msgstr "Llengua:"
-
-#: ../src/Widgets/UserSettingsView.vala:172
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Vés a llengua i regió"
-
-#: ../src/Widgets/UserSettingsView.vala:185
-msgid "Log In automatically:"
-msgstr "Entra automàticament:"
-
-#: ../src/Widgets/UserSettingsView.vala:197
-msgid "Password:"
-msgstr "Contrasenya:"
-
-#: ../src/Widgets/UserSettingsView.vala:357
-msgid "Enable User Account"
-msgstr "Habilita el compte d'usuari"
-
-#: ../src/Widgets/UserSettingsView.vala:360
-msgid "Disable User Account"
-msgstr "Inhabilita el compte d'usuari"
-
-#: ../src/Widgets/UserSettingsView.vala:365
-msgid "None set"
-msgstr "Cap"
+#: ../src/Widgets/Popovers/PasswordPopover.vala:43
+msgid "Change Password"
+msgstr "Canvia la contrasenya"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:56
 msgid "Standard User"
@@ -131,17 +138,13 @@ msgstr "El nom d'usuari ja existeix"
 msgid "Username is not valid"
 msgstr "El nom d'usuari no és vàlid"
 
-#: ../src/Widgets/Popovers/PasswordPopover.vala:43
-msgid "Change Password"
-msgstr "Canvia la contrasenya"
-
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
 msgstr "Suprimeix"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
-msgstr "Estableix des d'un fitxer..."
+msgstr "Estableix des d'un fitxer…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Select an image"
@@ -154,23 +157,6 @@ msgstr "Obre"
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
 msgstr "Imatges"
-
-#: ../src/Widgets/ListFooter.vala:42 ../src/Widgets/ListFooter.vala:43
-msgid "Create user account"
-msgstr "Crea un compte d'usuari"
-
-#: ../src/Widgets/ListFooter.vala:53 ../src/Widgets/ListFooter.vala:54
-#: ../src/Widgets/ListFooter.vala:85
-msgid "Remove user account and its data"
-msgstr "Elimina el compte d'usuari i les seves dades"
-
-#: ../src/Widgets/ListFooter.vala:65 ../src/Widgets/ListFooter.vala:66
-msgid "Undo last user account removal"
-msgstr "Desfés la darrera eliminació de compte d'usuari"
-
-#: ../src/Widgets/ListFooter.vala:89
-msgid "You cannot remove your own user account"
-msgstr "No podeu eliminar el vostre compte"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Current Password"
@@ -232,49 +218,72 @@ msgstr "La contrasenya nova és massa simple"
 msgid "New password is a palindrome"
 msgstr "La contrasenya nova és un palíndrom"
 
-#: ../src/Widgets/UserListBox.vala:34
-msgid "My Account"
-msgstr "El meu compte"
+#: ../src/Widgets/MainView.vala:34
+msgid "Undo last user account removal"
+msgstr "Desfés la darrera eliminació de compte d'usuari"
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "Other Accounts"
-msgstr "Altres comptes"
+#: ../src/Widgets/MainView.vala:35
+msgid "Undo"
+msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:80
-msgid "Enabled"
-msgstr "Habilitat"
+#: ../src/Widgets/UserSettingsView.vala:48
+#: ../src/Widgets/GuestSettingsView.vala:25
+msgid "You do not have permission to change this"
+msgstr "No teniu permís per canviar-ho"
 
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Disabled"
-msgstr "Inhabilitat"
+#: ../src/Widgets/UserSettingsView.vala:49
+msgid "You cannot change this for the currently active user"
+msgstr "No podeu canviar aquesta opció per a l'usuari actiu"
 
-#: ../src/Plug.vala:31
-msgid "Authentication is required to change user data"
-msgstr "Cal autenticació per canviar les dades de l'usuari"
+#: ../src/Widgets/UserSettingsView.vala:50
+msgid "You cannot remove the last administrator's privileges"
+msgstr "No podeu treure els permisos de l'últim compte administratiu"
 
-#: ../src/Plug.vala:36
-msgid "User Accounts"
-msgstr "Comptes d'usuari"
+#: ../src/Widgets/UserSettingsView.vala:90
+msgid "Account type:"
+msgstr "Tipus de compte:"
 
-#: ../src/Plug.vala:37
+#: ../src/Widgets/UserSettingsView.vala:95
+msgid "Standard"
+msgstr "Estàndard"
+
+#: ../src/Widgets/UserSettingsView.vala:103
+msgid "Language:"
+msgstr "Llengua:"
+
+#: ../src/Widgets/UserSettingsView.vala:172
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Vés a llengua i regió"
+
+#: ../src/Widgets/UserSettingsView.vala:185
+#: ../src/Widgets/GuestSettingsView.vala:84
+msgid "Log In automatically:"
+msgstr "Entra automàticament:"
+
+#: ../src/Widgets/UserSettingsView.vala:197
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: ../src/Widgets/UserSettingsView.vala:357
+msgid "Enable User Account"
+msgstr "Habilita el compte d'usuari"
+
+#: ../src/Widgets/UserSettingsView.vala:360
+msgid "Disable User Account"
+msgstr "Inhabilita el compte d'usuari"
+
+#: ../src/Widgets/UserSettingsView.vala:365
+msgid "None set"
+msgstr "Cap"
+
+#: ../src/Widgets/GuestSettingsView.vala:93
 msgid ""
-"Manage account permissions and configure user names, passwords, and photos"
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
-"Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
-"contrasenyes i les fotografies."
+"La sessió de convidat permet utilitzar un compte temporal sense contrasenya."
 
-#: ../src/Plug.vala:64
-msgid "Password change failed"
-msgstr "Ha fallat el canvi de contrasenya"
-
-#: ../src/Plug.vala:78
-msgid ""
-"Guest session changes will not take effect until you restart your system"
+#: ../src/Widgets/GuestSettingsView.vala:94
+msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
-"Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
-"sistema."
-
-#: ../src/Plug.vala:97
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
+"En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
