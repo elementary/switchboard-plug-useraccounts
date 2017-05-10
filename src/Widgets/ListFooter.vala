@@ -18,55 +18,40 @@
 */
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class ListFooter : Gtk.Toolbar {
-        private Gtk.ToolButton  button_add;
-        private Gtk.ToolButton  button_remove;
+    public class ListFooter : Gtk.ActionBar {
+        private Gtk.Button button_add;
+        private Gtk.Button button_remove;
 
         private Act.User? selected_user = null;
 
         public signal void removal_changed ();
         public signal void unfocused ();
-
         public signal void send_undo_notification ();
         public signal void hide_undo_notification ();
 
-        public ListFooter () {
-            get_permission ().notify["allowed"].connect (update_ui);
-            get_usermanager ().user_removed.connect (update_ui);
-            build_ui ();
-        }
+        construct {
+            button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            button_add.sensitive = false;
+            button_add.tooltip_text = _("Create user account");
 
-        private void build_ui () {
-            set_style (Gtk.ToolbarStyle.ICONS);
-            get_style_context ().add_class ("inline-toolbar");
+            button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            button_remove.sensitive = false;
+            button_remove.tooltip_text = _("Remove user account and its data");
+
             get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-            get_style_context ().set_junction_sides (Gtk.JunctionSides.TOP);
-            set_icon_size (Gtk.IconSize.SMALL_TOOLBAR);
-            set_show_arrow (false);
-            hexpand = true;
+            add (button_add);
+            add (button_remove);
 
-            button_add = new Gtk.ToolButton (null, _("Create user account"));
-            button_add.set_tooltip_text (_("Create user account"));
-            button_add.set_icon_name ("list-add-symbolic");
-            button_add.set_sensitive (false);
             button_add.clicked.connect (() => {
                 Widgets.NewUserPopover new_user = new Widgets.NewUserPopover (button_add);
                 new_user.show_all ();
                 new_user.request_user_creation.connect (create_new_user);
             });
-            insert (button_add, -1);
 
-            button_remove = new Gtk.ToolButton (null, _("Remove user account and its data"));
-            button_remove.set_tooltip_text (_("Remove user account and its data"));
-            button_remove.set_icon_name ("list-remove-symbolic");
-            button_remove.set_sensitive (false);
             button_remove.clicked.connect (mark_user_removal);
-            insert (button_remove, -1);
 
-            var separator = new Gtk.SeparatorToolItem ();
-            separator.set_draw (false);
-            separator.set_expand (true);
-            insert (separator, -1);
+            get_permission ().notify["allowed"].connect (update_ui);
+            get_usermanager ().user_removed.connect (update_ui);
         }
 
         public void undo_user_removal () {
@@ -84,10 +69,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     button_remove.set_tooltip_text (_("Remove user account and its data"));
                 } else {
                     button_remove.set_sensitive (false);
-                    if (selected_user != null)
+                    if (selected_user != null) {
                         button_remove.set_tooltip_text (_("You cannot remove your own user account"));
-                    else
+                    } else {
                         button_remove.set_tooltip_text ("");
+                    }
                 }
 
                 if (get_removal_list () == null || get_removal_list ().last () == null) {
