@@ -3,15 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-07 10:05-0700\n"
-"PO-Revision-Date: 2015-01-03 05:43+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-05-12 16:22+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Plug.vala:31
 msgid "Authentication is required to change user data"
@@ -37,7 +39,7 @@ msgstr ""
 
 #: ../src/Plug.vala:100
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: ../src/Widgets/UserItem.vala:48
 #: ../src/Widgets/Popovers/NewUserPopover.vala:57
@@ -47,19 +49,19 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:34
 msgid "My Account"
-msgstr ""
+msgstr "Mijn account"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "Other Accounts"
-msgstr ""
+msgstr "Andere accounts"
 
 #: ../src/Widgets/UserListBox.vala:80
 msgid "Enabled"
-msgstr ""
+msgstr "Ingeschakeld"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Disabled"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 #: ../src/Widgets/UserListBox.vala:100 ../src/Widgets/GuestSettingsView.vala:48
 msgid "Guest Session"
@@ -81,7 +83,7 @@ msgstr ""
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:67
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: ../src/Widgets/Dialogs/AvatarDialog.vala:68
 msgid "Change Avatar"
@@ -133,7 +135,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:37
 msgid "Remove"
-msgstr ""
+msgstr "Verwijderen"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
@@ -145,7 +147,7 @@ msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:65
 msgid "Open"
-msgstr ""
+msgstr "Open"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:68
 msgid "Images"
@@ -222,7 +224,7 @@ msgstr ""
 #: ../src/Widgets/UserSettingsView.vala:48
 #: ../src/Widgets/GuestSettingsView.vala:25
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "U heeft geen rechten om dit te veranderen"
 
 #: ../src/Widgets/UserSettingsView.vala:49
 msgid "You cannot change this for the currently active user"
@@ -242,7 +244,7 @@ msgstr ""
 
 #: ../src/Widgets/UserSettingsView.vala:103
 msgid "Language:"
-msgstr ""
+msgstr "Taal:"
 
 #: ../src/Widgets/UserSettingsView.vala:172
 msgid "Click to switch to Language & Locale Settings"
