@@ -169,20 +169,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box.add_attribute (renderer, "text", 1);
 
             } else {
-                language_button = new Gtk.Button ();
-                language_button.set_size_request (0, 25);
-                language_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+                language_button = new Gtk.LinkButton.with_label ("settings://language", "Language");
                 language_button.halign = Gtk.Align.START;
                 language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
-                language_button.clicked.connect (() => {
-                    InfobarNotifier.get_default ().unset_error ();
-                    //TODO locale plug might change its codename because that's not okay currently
-                    var command = new Granite.Services.SimpleCommand (
-                            Environment.get_home_dir (),
-                            "/usr/bin/switchboard -o system-pantheon-locale");
-                    command.run ();
-                    return;
-                });
                 attach (language_button, 1, 2, 1, 1);
             }
 
