@@ -18,7 +18,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Misc/Utils.vala
     Misc/UserUtils.vala
     Misc/InfobarNotifier.vala
-    Misc/ObscurityChecker.vala
     Views/GuestSettingsView.vala
     Views/MainView.vala
     Views/UserSettingsView.vala
