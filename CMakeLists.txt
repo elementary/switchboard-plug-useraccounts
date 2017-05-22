@@ -9,7 +9,7 @@ set (PLUGNAME "useraccounts")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
 set (PLUGTITLE "User Accounts")
 # Set the version for the plug
-set (VERSION "0.1.3")
+set (VERSION "0.1.4")
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
 project (${PLUGNAME})

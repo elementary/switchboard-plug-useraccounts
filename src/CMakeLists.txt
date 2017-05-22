@@ -14,21 +14,22 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
+    Dialogs/AvatarDialog.vala
     Misc/Utils.vala
     Misc/UserUtils.vala
     Misc/InfobarNotifier.vala
-    Widgets/MainView.vala
+    Misc/ObscurityChecker.vala
+    Views/GuestSettingsView.vala
+    Views/MainView.vala
+    Views/UserSettingsView.vala
     Widgets/UserListBox.vala
     Widgets/ListFooter.vala
     Widgets/UserItem.vala
-    Widgets/UserSettingsView.vala
-    Widgets/GuestSettingsView.vala
     Widgets/PasswordEditor.vala
     Widgets/CropView.vala
     Widgets/Popovers/NewUserPopover.vala
     Widgets/Popovers/PasswordPopover.vala
     Widgets/Popovers/AvatarPopover.vala
-    Widgets/Dialogs/AvatarDialog.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

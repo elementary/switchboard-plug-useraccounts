@@ -19,48 +19,43 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class AvatarPopover : Gtk.Popover {
-        private weak Act.User    user;
-        private weak UserUtils   utils;
-        private Gtk.Grid          button_grid;
-
-        private Dialogs.AvatarDialog    avatar_dialog;
-
         public signal void create_selection_dialog ();
+        public Act.User user { get; construct; }
+        public UserUtils utils { get; construct; }
 
-        public AvatarPopover (Gtk.Widget relative, Act.User user, UserUtils utils) {
-            this.user = user;
-            this.utils = utils;
-            set_relative_to (relative);
-            set_position (Gtk.PositionType.BOTTOM);
-            set_modal (true);
-
-            build_ui ();
+        public AvatarPopover (Gtk.Widget relative_to, Act.User user, UserUtils utils) {
+            Object (modal: true,
+                    position: Gtk.PositionType.BOTTOM,
+                    relative_to: relative_to,
+                    user: user,
+                    utils: utils);
         }
 
-        private void build_ui () {
-            Gtk.Button remove_button = new Gtk.Button.with_label (_("Remove"));
+        construct {
+            var remove_button = new Gtk.Button.with_label (_("Remove"));
             remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            remove_button.clicked.connect (() => utils.change_avatar (null));
 
-            Gtk.Button select_button = new Gtk.Button.with_label (_("Set from File…"));
+            var select_button = new Gtk.Button.with_label (_("Set from File…"));
             select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            select_button.clicked.connect (select_from_file);
             select_button.grab_focus ();
 
-            button_grid = new Gtk.Grid ();
+            var button_grid = new Gtk.Grid ();
             button_grid.margin = 6;
             button_grid.column_spacing = 6;
             button_grid.column_homogeneous = true;
-
             button_grid.add (remove_button);
             button_grid.add (select_button);
+
             add (button_grid);
 
-            if (user.get_icon_file ().contains (".face"))
+            if (user.get_icon_file ().contains (".face")) {
                 remove_button.set_sensitive (false);
-            else {
+            } else {
                 remove_button.set_sensitive (true);
             }
+
+            remove_button.clicked.connect (() => utils.change_avatar (null));
+            select_button.clicked.connect (select_from_file);
         }
 
         private void select_from_file () {
@@ -101,10 +96,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 var path = file_dialog.get_file ().get_path ();
                 file_dialog.hide ();
                 file_dialog.destroy ();
-                avatar_dialog = new Dialogs.AvatarDialog (path);
+                var avatar_dialog = new Dialogs.AvatarDialog (path);
                 avatar_dialog.request_avatar_change.connect (utils.change_avatar);
-            } else
+            } else {
                 file_dialog.close ();
+            }
         }
     }
 }
