@@ -53,19 +53,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void build_ui () {
-            this.hexpand = true;
-            this.halign = Gtk.Align.CENTER;
-            this.margin = 0;
-
             /*
              * users who don't have superuser privileges will need to auth against passwd.
              * therefore they will need these UI elements created and displayed to set is_authenticated.
              */
             if (!get_permission ().allowed) {
                 current_pw_entry = new Gtk.Entry ();
-                current_pw_entry.set_size_request (entry_width, 0);
                 current_pw_entry.set_placeholder_text (_("Current Password"));
-                current_pw_entry.halign = Gtk.Align.END;
                 current_pw_entry.set_visibility (false);
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
@@ -102,8 +96,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_new_label = new Gtk.Label ("");
                 error_new_label.set_halign (Gtk.Align.END);
                 error_new_label.get_style_context ().add_class ("error");
+                error_new_label.justify = Gtk.Justification.RIGHT;
                 error_new_label.use_markup = true;
+                error_new_label.wrap = true;
                 error_new_label.margin_top = 10;
+                error_new_label.max_width_chars = 30;
 
                 error_new_revealer = new Gtk.Revealer ();
                 error_new_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
@@ -116,8 +113,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 is_authenticated = true;
 
             new_pw_entry = new Gtk.Entry ();
-            new_pw_entry.set_size_request (entry_width, 0);
-            new_pw_entry.halign = Gtk.Align.END;
+            new_pw_entry.width_request = entry_width;
             new_pw_entry.set_placeholder_text (_("New Password"));
             new_pw_entry.set_visibility (false);
             if (!get_permission ().allowed)
@@ -136,8 +132,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (pw_level, 0, 4, 1, 1);
 
             confirm_pw_entry = new Gtk.Entry ();
-            confirm_pw_entry.set_size_request (entry_width, 0);
-            confirm_pw_entry.halign = Gtk.Align.END;
             confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
             confirm_pw_entry.set_visibility (false);
             confirm_pw_entry.margin_top = 10;
@@ -181,45 +175,39 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             bool is_obscure = false;
 
             if (new_pw_entry.get_text () != "") {
-                var val = pwquality.check (new_pw_entry.get_text ());
-                if (val <= 25)
-                    val = 25;
-                pw_level.set_value (val);
+                void* error;
+                var quality = pwquality.check (new_pw_entry.get_text (), current_pw_entry.get_text (), null, out error);
 
-                if (val >= 0 && val <= 50)
+                pw_level.set_value (quality);
+
+                if (quality >= 0 && quality <= 50) {
                     pw_level.set_tooltip_text (_("Weak password strength"));
-                else if (val > 50 && val <= 75)
+                } else if (quality > 50 && quality <= 75) {
                     pw_level.set_tooltip_text (_("Medium password strength"));
-                else if (val > 75)
+                } else if (quality > 75) {
                     pw_level.set_tooltip_text (_("Strong password strength"));
+                }
 
                 /*
                  * without superuser privileges your new password needs to pass an obscurity test
                  * which is based on passwd's one to guess passwd's response.
                  */
                 if (!get_permission ().allowed) {
-                    var result = ObscurityChecker.test (current_pw_entry.get_text (),
-                        new_pw_entry.get_text ());
-                    if (result == ObscurityChecker.Result.OBSCURE) {
+                    if (quality >= 0) {
                         is_obscure = true;
                         error_new_revealer.set_reveal_child (false);
                     } else {
-                        var error_msg = "test";
-                        if (result == ObscurityChecker.Result.SIMILIAR)
-                            error_msg = _("Resembles your current password");
-                        else if (result == ObscurityChecker.Result.SIMPLE)
-                            error_msg = _("New password is too simple");
-                        else if (result == ObscurityChecker.Result.PALINDROME)
-                            error_msg = _("New password is a palindrome");
+                        var pw_error = (PasswordQuality.Error) quality;
+                        var error_string = pw_error.to_string (error);
 
-                        error_new_label.set_label ("<span font_size=\"small\">%s</span>"
-                            .printf (error_msg));
+                        error_new_label.label = "<span font_size=\"small\">%s</span>".printf (error_string);
                         error_new_revealer.set_reveal_child (true);
                         is_obscure = false;
                     }
-                } else
+                } else {
                     //a superuser does not need to care about obscurity
                     is_obscure = true;
+                }
             }
 
             if (new_pw_entry.get_text () == confirm_pw_entry.get_text ()
