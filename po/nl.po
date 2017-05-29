@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:40+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -39,7 +39,8 @@ msgstr ""
 #: ../src/Views/GuestSettingsView.vala:98
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
-"Wanneer ze uitloggen, all hun instellingen en data zal verwijderd worden."
+"Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
+"worden."
 
 #: ../src/Views/MainView.vala:38
 msgid "Undo last user account removal"
