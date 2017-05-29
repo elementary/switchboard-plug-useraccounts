@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:45+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -103,7 +103,7 @@ msgstr "Maak nieuwe gebruikersaccount"
 
 #: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:69
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Verwijder gebruikers account en zijn data"
 
 #: ../src/Widgets/ListFooter.vala:73
 msgid "You cannot remove your own user account"
