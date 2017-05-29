@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:47+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -172,7 +172,7 @@ msgstr "Mag alleen kleine letters en cijfers bevatten, maar geen spaties"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Set password now"
-msgstr "Stel nu je wachtwoord in "
+msgstr "Wachtwoord nu instellen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:102
 msgid "Set no password for login"
