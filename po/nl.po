@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:47+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -176,11 +176,11 @@ msgstr "Wachtwoord nu instellen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:102
 msgid "Set no password for login"
-msgstr ""
+msgstr "Stel geen wachtwoord in voor het inloggen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:104
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Laat de gebruiker zijn wachtwoord invoeren bij de eerste inlog"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:128
 msgid "Create User"
