@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:43+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -83,11 +83,11 @@ msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
 
 #: ../src/Views/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "Wachtwoord:"
 
 #: ../src/Views/UserSettingsView.vala:350
 msgid "Enable User Account"
-msgstr ""
+msgstr "gebruikers account aanzetten."
 
 #: ../src/Views/UserSettingsView.vala:353
 msgid "Disable User Account"
