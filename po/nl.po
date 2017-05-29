@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-05-12 16:22+0000\n"
+"PO-Revision-Date: 2017-05-29 22:53+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: ../src/Views/GuestSettingsView.vala:29 ../src/Views/UserSettingsView.vala:52
@@ -21,22 +21,26 @@ msgstr "U heeft geen rechten om dit te veranderen"
 
 #: ../src/Views/GuestSettingsView.vala:52 ../src/Widgets/UserListBox.vala:104
 msgid "Guest Session"
-msgstr ""
+msgstr "Gastsessie"
 
 #: ../src/Views/GuestSettingsView.vala:88
 #: ../src/Views/UserSettingsView.vala:178
 msgid "Log In automatically:"
-msgstr ""
+msgstr "Automatisch inloggen:"
 
 #: ../src/Views/GuestSettingsView.vala:97
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"De gastsessie biedt de mogelijkheid om iemand tijdelijk gebruik te laten "
+"maken van het systeem zonder wachtwoord."
 
 #: ../src/Views/GuestSettingsView.vala:98
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
+"Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
+"worden."
 
 #: ../src/Views/MainView.vala:38
 msgid "Undo last user account removal"
@@ -44,28 +48,30 @@ msgstr ""
 
 #: ../src/Views/MainView.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "Ongedaan maken"
 
 #: ../src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "U kunt dit niet veranderen voor de huidige actieve gebruiker"
 
 #: ../src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
+"U kunt niet de beheerdersrechten verwijderen van het laatste account die "
+"deze privileges heeft"
 
 #: ../src/Views/UserSettingsView.vala:94
 msgid "Account type:"
-msgstr ""
+msgstr "Gebruikerstype:"
 
 #: ../src/Views/UserSettingsView.vala:99
 msgid "Standard"
-msgstr ""
+msgstr "Standaard"
 
 #: ../src/Views/UserSettingsView.vala:100 ../src/Widgets/UserItem.vala:52
 #: ../src/Widgets/Popovers/NewUserPopover.vala:61
 msgid "Administrator"
-msgstr ""
+msgstr "Beheerder"
 
 #: ../src/Views/UserSettingsView.vala:107
 msgid "Language:"
@@ -73,35 +79,35 @@ msgstr "Taal:"
 
 #: ../src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
 
 #: ../src/Views/UserSettingsView.vala:190
 msgid "Password:"
-msgstr ""
+msgstr "Wachtwoord:"
 
 #: ../src/Views/UserSettingsView.vala:350
 msgid "Enable User Account"
-msgstr ""
+msgstr "Gebruikersaccount activeren"
 
 #: ../src/Views/UserSettingsView.vala:353
 msgid "Disable User Account"
-msgstr ""
+msgstr "Gebruikersaccount uitschakelen"
 
 #: ../src/Views/UserSettingsView.vala:358
 msgid "None set"
-msgstr ""
+msgstr "Niets ingesteld"
 
 #: ../src/Widgets/ListFooter.vala:35
 msgid "Create user account"
-msgstr ""
+msgstr "Maak nieuwe gebruikersaccount"
 
 #: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:69
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Verwijder gebruikersaccount en zijn gegevens"
 
 #: ../src/Widgets/ListFooter.vala:73
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "My Account"
@@ -125,11 +131,11 @@ msgstr "Verwijderen"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr ""
+msgstr "Instellen uit bestand…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
-msgstr ""
+msgstr "Kies een afbeelding"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 #: ../src/Dialogs/AvatarDialog.vala:71
@@ -142,55 +148,55 @@ msgstr "Open"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:67
 msgid "Images"
-msgstr ""
+msgstr "Afbeeldingen"
 
 #: ../src/Widgets/Popovers/PasswordPopover.vala:47
 msgid "Change Password"
-msgstr ""
+msgstr "Verander wachtwoord"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:60
 msgid "Standard User"
-msgstr ""
+msgstr "Standaard gebruiker"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:68
 msgid "Full Name"
-msgstr ""
+msgstr "Volledige naam"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:78
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:82
 msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr ""
+msgstr "Mag alleen kleine letters en cijfers bevatten, maar geen spaties"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:100
 msgid "Set password now"
-msgstr ""
+msgstr "Wachtwoord nu instellen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:102
 msgid "Set no password for login"
-msgstr ""
+msgstr "Stel geen wachtwoord in voor het inloggen"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:104
 msgid "Let user create password on first login"
-msgstr ""
+msgstr "Laat de gebruiker zijn wachtwoord kiezen bij zijn eerste aanmelding"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:128
 msgid "Create User"
-msgstr ""
+msgstr "Maak gebruiker"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:170
 msgid "Username is already taken"
-msgstr ""
+msgstr "Gebruikersnaam is reeds in gebruik"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:173
 msgid "Username is not valid"
-msgstr ""
+msgstr "Gebruikersnaam is niet geldig"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Current Password"
-msgstr ""
+msgstr "Huige wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:71
 msgid "Press to authenticate"
@@ -202,68 +208,69 @@ msgstr ""
 
 #: ../src/Widgets/PasswordEditor.vala:121
 msgid "New Password"
-msgstr ""
+msgstr "Nieuw wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:125
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "Wachtwoord mag niet leeg zijn"
 
 #: ../src/Widgets/PasswordEditor.vala:141
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Bevestig nieuw wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Wachtwoorden komen niet overeen"
 
 #: ../src/Widgets/PasswordEditor.vala:148
 msgid "Show passwords"
-msgstr ""
+msgstr "Laat wachtwoord zien"
 
 #: ../src/Widgets/PasswordEditor.vala:169
 msgid "Password accepted"
-msgstr ""
+msgstr "Wachtwoord geaccepteerd"
 
 #: ../src/Widgets/PasswordEditor.vala:190
 msgid "Weak password strength"
-msgstr ""
+msgstr "Zwak wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:192
 msgid "Medium password strength"
-msgstr ""
+msgstr "Middelmatig wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:194
 msgid "Strong password strength"
-msgstr ""
+msgstr "Sterk wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:209
 msgid "Resembles your current password"
-msgstr ""
+msgstr "Lijkt op uw huidige wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:211
 msgid "New password is too simple"
-msgstr ""
+msgstr "Nieuw wachtwoord is te eenvoudig"
 
 #: ../src/Widgets/PasswordEditor.vala:213
 msgid "New password is a palindrome"
-msgstr ""
+msgstr "Nieuw wachtwoord is een palindroom"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Authenticatie is vereist om gebruikersgegevens te wijzigen"
 
 #: ../src/Plug.vala:42
 msgid "User Accounts"
-msgstr ""
+msgstr "Gebruikersaccounts"
 
 #: ../src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Beheer accountrechten en configureer gebruikersnamen, wachtwoorden en foto's"
 
 #: ../src/Plug.vala:71
 msgid "Password change failed"
-msgstr ""
+msgstr "Wachtwoordwijziging mislukt"
 
 #: ../src/Plug.vala:85
 msgid ""
@@ -276,4 +283,4 @@ msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: ../src/Dialogs/AvatarDialog.vala:72
 msgid "Change Avatar"
-msgstr ""
+msgstr "Verander profielfoto"
