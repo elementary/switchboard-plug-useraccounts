@@ -24,12 +24,12 @@ namespace SwitchboardPlugUserAccounts {
     public static UserAccountsPlug plug;
 
     public class UserAccountsPlug : Switchboard.Plug {
-        private Gtk.Grid?           main_grid;
-        private Gtk.InfoBar         infobar;
-        private Gtk.InfoBar         infobar_error;
-        private Gtk.InfoBar         infobar_reboot;
-        private Gtk.LockButton      lock_button;
-        private Widgets.MainView    main_view;
+        private Gtk.Grid? main_grid;
+        private Gtk.InfoBar infobar;
+        private Gtk.InfoBar infobar_error;
+        private Gtk.InfoBar infobar_reboot;
+        private Gtk.LockButton lock_button;
+        private Widgets.MainView main_view;
 
         //translatable string for org.pantheon.user-accounts.administration policy
         public const string policy_message = _("Authentication is required to change user data");
@@ -48,27 +48,23 @@ namespace SwitchboardPlugUserAccounts {
         }
 
         public override Gtk.Widget get_widget () {
-            if (main_grid != null)
+            if (main_grid != null) {
                 return main_grid;
-
-            main_grid = new Gtk.Grid ();
-            main_grid.expand = true;
+            }
 
             infobar_error = new Gtk.InfoBar ();
             infobar_error.message_type = Gtk.MessageType.ERROR;
             infobar_error.no_show_all = true;
 
-            var error_content = infobar_error.get_content_area () as Gtk.Container;
-            Gtk.Label error_label = new Gtk.Label ("");
-            error_content.add (error_label);
+            var error_label = new Gtk.Label ("");
 
-            main_grid.attach (infobar_error, 0, 0, 1, 1);
+            var error_content = infobar_error.get_content_area ();
+            error_content.add (error_label);
 
             InfobarNotifier.get_default ().error_notified.connect (() => {
                 if (InfobarNotifier.get_default ().is_error ()) {
                     infobar_error.no_show_all = false;
-                    error_label.set_label (("%s: %s".printf
-                        (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ())));
+                    error_label.label = "%s: %s".printf (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ());
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;
@@ -77,13 +73,11 @@ namespace SwitchboardPlugUserAccounts {
             });
 
             infobar_reboot = new Gtk.InfoBar ();
-            infobar_reboot.message_type = Gtk.MessageType.INFO;
+            infobar_reboot.message_type = Gtk.MessageType.WARNING;
             infobar_reboot.no_show_all = true;
-            main_grid.attach (infobar_reboot, 0, 1, 1, 1);
 
-            var reboot_content = infobar_reboot.get_content_area () as Gtk.Container;
-            Gtk.Label reboot_label = new Gtk.Label (_("Guest session changes will not take effect until you restart your system"));
-            reboot_content.add (reboot_label);
+            var reboot_content = infobar_reboot.get_content_area ();
+            reboot_content.add (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
 
             InfobarNotifier.get_default ().reboot_notified.connect (() => {
                 if (InfobarNotifier.get_default ().is_reboot ()) {
@@ -94,24 +88,27 @@ namespace SwitchboardPlugUserAccounts {
 
             infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.INFO;
-            main_grid.attach (infobar, 0, 2, 1, 1);
+
+            lock_button = new Gtk.LockButton (get_permission ());
 
             var area = infobar.get_action_area () as Gtk.Container;
-            lock_button = new Gtk.LockButton (get_permission ());
             area.add (lock_button);
 
-            var content = infobar.get_content_area () as Gtk.Container;
-            var label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-            content.add (label);
+            var content = infobar.get_content_area ();
+            content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
 
             main_view = new Widgets.MainView ();
+
+            main_grid = new Gtk.Grid ();
+            main_grid.attach (infobar_error, 0, 0, 1, 1);
+            main_grid.attach (infobar_reboot, 0, 1, 1, 1);
+            main_grid.attach (infobar, 0, 2, 1, 1);
             main_grid.attach (main_view, 0, 3, 1, 1);
             main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
                 if (get_permission ().allowed) {
-                    infobar.no_show_all = true;
-                    infobar.hide ();
+                    infobar.visible = false;
                 }
             });
 
@@ -120,8 +117,8 @@ namespace SwitchboardPlugUserAccounts {
 
         public override void shown () {
             if (!get_permission ().allowed) {
-                infobar.no_show_all = false;
                 infobar.show_all ();
+                infobar.visible = true;
             }
         }
 
