@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
 "PO-Revision-Date: 2017-05-29 22:45+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -107,7 +107,7 @@ msgstr "Verwijder gebruikersaccount en zijn gegevens"
 
 #: ../src/Widgets/ListFooter.vala:73
 msgid "You cannot remove your own user account"
-msgstr "U kan niet uw eigen gebruikers account verwijderen."
+msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
 
 #: ../src/Widgets/UserListBox.vala:38
 msgid "My Account"
@@ -131,7 +131,7 @@ msgstr "Verwijderen"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr ""
+msgstr "Instellen uit bestand…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
