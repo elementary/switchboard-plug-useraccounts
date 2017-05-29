@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-05-29 22:48+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"PO-Revision-Date: 2017-05-29 22:49+0000\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
@@ -192,11 +192,11 @@ msgstr "Gebruikersnaam is reeds in gebruik"
 
 #: ../src/Widgets/Popovers/NewUserPopover.vala:173
 msgid "Username is not valid"
-msgstr ""
+msgstr "Gebruikersnaam is niet geldig"
 
 #: ../src/Widgets/PasswordEditor.vala:67
 msgid "Current Password"
-msgstr ""
+msgstr "Huige wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:71
 msgid "Press to authenticate"
@@ -212,15 +212,15 @@ msgstr "Nieuw wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:125
 msgid "Password cannot be empty"
-msgstr ""
+msgstr "Wachtwoord mag niet leeg zijn"
 
 #: ../src/Widgets/PasswordEditor.vala:141
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Bevestig nieuw wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Wachtwoorden komen niet overeen."
 
 #: ../src/Widgets/PasswordEditor.vala:148
 msgid "Show passwords"
