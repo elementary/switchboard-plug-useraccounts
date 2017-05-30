@@ -242,7 +242,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_ui () {
-            if (!get_permission ().allowed) {
+            var allowed = get_permission ().allowed;
+            var current_user = get_current_user () == user;
+            var last_admin = is_last_admin (user);
+
+            if (!allowed) {
                 user_type_box.set_sensitive (false);
                 password_button.set_sensitive (false);
                 autologin_switch.set_sensitive (false);
@@ -255,15 +259,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
                 enable_lock.tooltip_text = NO_PERMISSION_STRING;
-            } else if (get_current_user () == user) {
+            } else if (current_user) {
                 user_type_lock.tooltip_text = CURRENT_USER_STRING;
                 enable_lock.tooltip_text = CURRENT_USER_STRING;
-            } else if (is_last_admin (user)) {
+            } else if (last_admin) {
                 user_type_lock.tooltip_text = LAST_ADMIN_STRING;
                 enable_lock.tooltip_text = LAST_ADMIN_STRING;
             }
 
-            if (get_current_user () == user || get_permission ().allowed) {
+            if (current_user || allowed) {
                 avatar_button.set_sensitive (true);
                 full_name_entry.set_sensitive (true);
                 full_name_lock.set_opacity (0);
@@ -274,18 +278,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     password_lock.set_opacity (0);
                 }
 
-                if (get_permission ().allowed) {
+                if (allowed) {
                     if (!user.get_locked ()) {
                         autologin_switch.set_sensitive (true);
                         autologin_lock.set_opacity (0);
                     }
-                    if (!is_last_admin (user) && get_current_user () != user) {
+                    if (!last_admin && !current_user) {
                         user_type_box.set_sensitive (true);
                         user_type_lock.set_opacity (0);
                     }
                 }
  
-                if (get_current_user () != user) {
+                if (!current_user) {
                     language_box.set_sensitive (true);
                     region_box.set_sensitive (true);
                 }
@@ -295,32 +299,45 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 full_name_lock.set_opacity (0.5);
                 language_lock.set_opacity (0.5);
 
-                if (get_current_user () != user) {
+                if (!current_user) {
                     language_box.set_sensitive (false);
                     region_box.set_sensitive (false);
                 }
             }
 
-            if (get_permission ().allowed && get_current_user () != user && !is_last_admin (user)) {
+            if (allowed && !current_user && !last_admin) {
                 enable_user_button.set_sensitive (true);
                 enable_lock.set_opacity (0);
             }
 
             //only update widgets if the user property has changed since last ui update
-            if (delta_user.real_name != user.get_real_name ())
+            if (delta_user.real_name != user.get_real_name ()) {
                 update_real_name ();
-            if (delta_user.icon_file != user.get_icon_file ())
+            }
+
+            if (delta_user.icon_file != user.get_icon_file ()) {
                 update_avatar ();
-            if (delta_user.account_type != user.get_account_type ())
+            }
+
+            if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
-            if (delta_user.password_mode != user.get_password_mode ())
+            }
+
+            if (delta_user.password_mode != user.get_password_mode ()) {
                 update_password ();
-            if (delta_user.automatic_login != user.get_automatic_login ())
+            }
+
+            if (delta_user.automatic_login != user.get_automatic_login ()) {
                 update_autologin ();
-            if (delta_user.locked != user.get_locked ())
+            }
+
+            if (delta_user.locked != user.get_locked ()) {
                 update_lock_state ();
-            if (delta_user.language != user.get_language ())
+            }
+
+            if (delta_user.language != user.get_language ()) {
                 update_language ();
+            }
 
             delta_user.update ();
             show_all ();
