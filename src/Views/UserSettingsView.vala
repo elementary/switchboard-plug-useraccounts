@@ -50,9 +50,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private Gee.HashMap<string, string> default_regions;
 
-        private const string no_permission_string   = _("You do not have permission to change this");
-        private const string current_user_string    = _("You cannot change this for the currently active user");
-        private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
+        private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
+        private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
+        private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
             Object (
@@ -81,7 +81,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     avatar_popover.hide.connect (() => { avatar_button.active = false;});
                 }
             });
-            attach (avatar_button, 0, 0, 1, 1);
 
             full_name_entry = new Gtk.Entry ();
             full_name_entry.get_style_context ().add_class ("h3");
@@ -89,11 +88,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 InfobarNotifier.get_default ().unset_error ();
                 utils.change_full_name (full_name_entry.get_text ());
             });
-            attach (full_name_entry, 1, 0, 1, 1);
 
             var user_type_label = new Gtk.Label (_("Account type:"));
             user_type_label.halign = Gtk.Align.END;
-            attach (user_type_label,0, 1, 1, 1);
 
             user_type_box = new Gtk.ComboBoxText ();
             user_type_box.append_text (_("Standard"));
@@ -102,11 +99,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 InfobarNotifier.get_default ().unset_error ();
                 utils.change_user_type (user_type_box.get_active ());
             });
-            attach (user_type_box, 1, 1, 1, 1);
+
 
             var lang_label = new Gtk.Label (_("Language:"));
             lang_label.halign = Gtk.Align.END;
-            attach (lang_label, 0, 2, 1, 1);
 
             if (user != get_current_user ()) {
                 language_box = new Gtk.ComboBox ();
@@ -159,7 +155,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 region_revealer = new Gtk.Revealer ();
                 region_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-                region_revealer.set_transition_duration (350);
                 region_revealer.set_reveal_child (true);
                 region_revealer.add (region_box);
                 attach (region_revealer, 1, 3, 1, 1);
@@ -178,18 +173,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var login_label = new Gtk.Label (_("Log In automatically:"));
             login_label.halign = Gtk.Align.END;
             login_label.margin_top = 20;
-            attach (login_label, 0, 4, 1, 1);
 
             autologin_switch = new Gtk.Switch ();
-            autologin_switch.hexpand = true;
             autologin_switch.halign = Gtk.Align.START;
             autologin_switch.margin_top = 24;
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
-            attach (autologin_switch, 1, 4, 1, 1);
 
             var change_password_label = new Gtk.Label (_("Password:"));
             change_password_label.halign = Gtk.Align.END;
-            attach (change_password_label, 0, 5, 1, 1);
 
             password_button = new Gtk.ToggleButton ();
             password_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
@@ -204,38 +195,45 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             });
 
-            attach (password_button, 1, 5, 1, 1);
-
             enable_user_button = new Gtk.Button ();
             enable_user_button.clicked.connect (utils.change_lock);
             enable_user_button.set_sensitive (false);
             enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            enable_user_button.set_size_request (0, 27);
-            attach (enable_user_button, 1, 6, 1, 1);
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            full_name_lock.set_tooltip_text (no_permission_string);
-            attach (full_name_lock, 2, 0, 1, 1);
+            full_name_lock.set_tooltip_text (NO_PERMISSION_STRING);
 
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            user_type_lock.set_tooltip_text (no_permission_string);
-            attach (user_type_lock, 2, 1, 1, 1);
+            user_type_lock.set_tooltip_text (NO_PERMISSION_STRING);
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            language_lock.set_tooltip_text (no_permission_string);
-            attach (language_lock, 2, 2, 1, 2);
+            language_lock.set_tooltip_text (NO_PERMISSION_STRING);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            autologin_lock.set_tooltip_text (no_permission_string);
+            autologin_lock.set_tooltip_text (NO_PERMISSION_STRING);
             autologin_lock.margin_top = 20;
-            attach (autologin_lock, 2, 4, 1, 1);
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            password_lock.set_tooltip_text (no_permission_string);
-            attach (password_lock, 2, 5, 1, 1);
+            password_lock.set_tooltip_text (NO_PERMISSION_STRING);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.set_tooltip_text (no_permission_string);
+            enable_lock.set_tooltip_text (NO_PERMISSION_STRING);
+
+            attach (avatar_button, 0, 0, 1, 1);
+            attach (full_name_entry, 1, 0, 1, 1);
+            attach (user_type_label,0, 1, 1, 1);
+            attach (user_type_box, 1, 1, 1, 1);
+            attach (lang_label, 0, 2, 1, 1);
+            attach (login_label, 0, 4, 1, 1);
+            attach (autologin_switch, 1, 4, 1, 1);
+            attach (change_password_label, 0, 5, 1, 1);
+            attach (password_button, 1, 5, 1, 1);
+            attach (enable_user_button, 1, 6, 1, 1);
+            attach (full_name_lock, 2, 0, 1, 1);
+            attach (user_type_lock, 2, 1, 1, 1);
+            attach (language_lock, 2, 2, 1, 2);
+            attach (autologin_lock, 2, 4, 1, 1);
+            attach (password_lock, 2, 5, 1, 1);
             attach (enable_lock, 2, 6, 1, 1);
 
             update_ui ();
@@ -256,14 +254,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 password_lock.set_opacity (0.5);
                 enable_lock.set_opacity (0.5);
 
-                user_type_lock.set_tooltip_text (no_permission_string);
-                enable_lock.set_tooltip_text (no_permission_string);
+                user_type_lock.set_tooltip_text (NO_PERMISSION_STRING);
+                enable_lock.set_tooltip_text (NO_PERMISSION_STRING);
             } else if (get_current_user () == user) {
-                user_type_lock.set_tooltip_text (current_user_string);
-                enable_lock.set_tooltip_text (current_user_string);
+                user_type_lock.set_tooltip_text (CURRENT_USER_STRING);
+                enable_lock.set_tooltip_text (CURRENT_USER_STRING);
             } else if (is_last_admin (user)) {
-                user_type_lock.set_tooltip_text (last_admin_string);
-                enable_lock.set_tooltip_text (last_admin_string);
+                user_type_lock.set_tooltip_text (LAST_ADMIN_STRING);
+                enable_lock.set_tooltip_text (LAST_ADMIN_STRING);
             }
 
             if (get_current_user () == user || get_permission ().allowed) {
