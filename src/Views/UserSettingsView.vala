@@ -19,7 +19,8 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettingsView : Gtk.Grid {
-        private weak Act.User       user;
+        public weak Act.User user { get; construct; }
+
         private UserUtils           utils;
         private DeltaUser           delta_user;
 
@@ -54,19 +55,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private const string last_admin_string      = _("You cannot remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
-            this.user = user;
-            utils = new UserUtils (this.user, this);
-            delta_user = new DeltaUser (this.user);
-            build_ui ();
-            this.user.changed.connect (update_ui);
+            Object (
+                column_spacing: 12,
+                halign: Gtk.Align.CENTER,
+                margin: 24,
+                row_spacing: 6,
+                user: user
+            );
         }
         
-        public void build_ui () {
-            margin = 24;
-            row_spacing = 6;
-            column_spacing = 12;
-            valign = Gtk.Align.START;
-            halign = Gtk.Align.CENTER;
+        construct {
+            utils = new UserUtils (user, this);
+            delta_user = new DeltaUser (user);
 
             default_regions = get_default_regions ();
 
@@ -240,6 +240,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             update_ui ();
             get_permission ().notify["allowed"].connect (update_ui);
+
+            user.changed.connect (update_ui);
         }
 
         public void update_ui () {
