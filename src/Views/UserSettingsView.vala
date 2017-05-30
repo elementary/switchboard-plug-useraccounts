@@ -100,7 +100,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 utils.change_user_type (user_type_box.get_active ());
             });
 
-
             var lang_label = new Gtk.Label (_("Language:"));
             lang_label.halign = Gtk.Align.END;
 
@@ -201,23 +200,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            full_name_lock.set_tooltip_text (NO_PERMISSION_STRING);
+            full_name_lock.tooltip_text = NO_PERMISSION_STRING;
 
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            user_type_lock.set_tooltip_text (NO_PERMISSION_STRING);
+            user_type_lock.tooltip_text = NO_PERMISSION_STRING;
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            language_lock.set_tooltip_text (NO_PERMISSION_STRING);
+            language_lock.tooltip_text = NO_PERMISSION_STRING;
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            autologin_lock.set_tooltip_text (NO_PERMISSION_STRING);
             autologin_lock.margin_top = 20;
+            autologin_lock.tooltip_text = NO_PERMISSION_STRING;
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            password_lock.set_tooltip_text (NO_PERMISSION_STRING);
+            password_lock.tooltip_text = NO_PERMISSION_STRING;
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.set_tooltip_text (NO_PERMISSION_STRING);
+            enable_lock.tooltip_text = NO_PERMISSION_STRING;
 
             attach (avatar_button, 0, 0, 1, 1);
             attach (full_name_entry, 1, 0, 1, 1);
@@ -254,14 +253,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 password_lock.set_opacity (0.5);
                 enable_lock.set_opacity (0.5);
 
-                user_type_lock.set_tooltip_text (NO_PERMISSION_STRING);
-                enable_lock.set_tooltip_text (NO_PERMISSION_STRING);
+                user_type_lock.tooltip_text = NO_PERMISSION_STRING;
+                enable_lock.tooltip_text = NO_PERMISSION_STRING;
             } else if (get_current_user () == user) {
-                user_type_lock.set_tooltip_text (CURRENT_USER_STRING);
-                enable_lock.set_tooltip_text (CURRENT_USER_STRING);
+                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+                enable_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
-                user_type_lock.set_tooltip_text (LAST_ADMIN_STRING);
-                enable_lock.set_tooltip_text (LAST_ADMIN_STRING);
+                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+                enable_lock.tooltip_text = LAST_ADMIN_STRING;
             }
 
             if (get_current_user () == user || get_permission ().allowed) {
