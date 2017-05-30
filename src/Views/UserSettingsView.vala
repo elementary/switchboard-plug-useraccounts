@@ -63,7 +63,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user: user
             );
         }
-        
+
         construct {
             utils = new UserUtils (user, this);
             delta_user = new DeltaUser (user);
