@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-05-31 22:05+0000\n"
+"PO-Revision-Date: 2017-05-31 22:06+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/sl/>\n"
@@ -128,7 +128,7 @@ msgstr "Odstrani"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Nastavi z datoteke..."
+msgstr "Nastavi z datoteke…"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
@@ -272,7 +272,7 @@ msgstr "Sprememba gesla je spodletela"
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
-"Spremembe seje za goste ne bodo veljavne, dokler sistema ponovno ne zaženete."
+"Spremembe seje za goste ne bodo veljavne, dokler sistema ponovno ne zaženete"
 
 #: ../src/Plug.vala:104
 msgid "Some settings require administrator rights to be changed"
