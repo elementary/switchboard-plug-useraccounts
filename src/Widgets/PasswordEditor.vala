@@ -31,19 +31,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private PasswordQuality.Settings pwquality;
 
-        public bool is_authenticated { public get; private set; }
-        public bool is_valid { public get; private set; }
+        public bool is_authenticated { get; construct set; default = false; }
+        public bool is_valid { get; construct set; default = false; }
         public int entry_width { get; construct; default = 200; }
 
         private signal void auth_changed ();
         public signal void validation_changed ();
-
-        public PasswordEditor () {
-            Object (
-                is_authenticated: false,
-                is_valid: false
-            );
-        }
 
         public PasswordEditor.from_width (int entry_width) {
             Object (entry_width: entry_width);
@@ -51,11 +44,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         construct {
             pwquality = new PasswordQuality.Settings ();
+            is_authenticated = get_permission ().allowed;
             /*
              * users who don't have superuser privileges will need to auth against passwd.
              * therefore they will need these UI elements created and displayed to set is_authenticated.
              */
-            if (!get_permission ().allowed) {
+            if (!is_authenticated) {
                 current_pw_entry = new Gtk.Entry ();
                 current_pw_entry.set_placeholder_text (_("Current Password"));
                 current_pw_entry.set_visibility (false);
@@ -108,8 +102,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (error_revealer, 0, 1, 1, 1);
                 attach (error_new_revealer, 0, 3, 1, 1);
 
-            } else if (get_permission ().allowed) {
-                is_authenticated = true;
             }
 
             new_pw_entry = new Gtk.Entry ();
@@ -117,7 +109,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.set_placeholder_text (_("New Password"));
             new_pw_entry.set_visibility (false);
 
-            if (!get_permission ().allowed) {
+            if (!is_authenticated) {
                 new_pw_entry.margin_top = 10;
             }
 
@@ -196,7 +188,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                  * without superuser privileges your new password needs to pass an obscurity test
                  * which is based on passwd's one to guess passwd's response.
                  */
-                if (!get_permission ().allowed) {
+                if (!is_authenticated) {
                     if (quality >= 0) {
                         is_obscure = true;
                         error_new_revealer.set_reveal_child (false);
