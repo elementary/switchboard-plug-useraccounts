@@ -101,7 +101,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (current_pw_entry, 0, 0, 1, 1);
                 attach (error_revealer, 0, 1, 1, 1);
                 attach (error_new_revealer, 0, 3, 1, 1);
-
             }
 
             new_pw_entry = new Gtk.Entry ();
