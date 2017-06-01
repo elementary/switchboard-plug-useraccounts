@@ -32,27 +32,25 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private PasswordQuality.Settings pwquality;
 
         public bool is_authenticated { public get; private set; }
-        private signal void auth_changed ();
-
         public bool is_valid { public get; private set; }
+        public int entry_width { get; construct; default = 200; }
+
+        private signal void auth_changed ();
         public signal void validation_changed ();
 
-        private int entry_width = 200;
-
         public PasswordEditor () {
-            pwquality = new PasswordQuality.Settings ();
-            is_authenticated = false;
-            is_valid = false;
-            build_ui ();
+            Object (
+                is_authenticated: false,
+                is_valid: false
+            );
         }
 
         public PasswordEditor.from_width (int entry_width) {
-            this.entry_width = entry_width;
-            pwquality = new PasswordQuality.Settings ();
-            build_ui ();
+            Object (entry_width: entry_width);
         }
 
-        private void build_ui () {
+        construct {
+            pwquality = new PasswordQuality.Settings ();
             /*
              * users who don't have superuser privileges will need to auth against passwd.
              * therefore they will need these UI elements created and displayed to set is_authenticated.
@@ -70,7 +68,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 });
                 current_pw_entry.activate.connect (password_auth);
                 current_pw_entry.icon_release.connect (password_auth);
-                attach (current_pw_entry, 0, 0, 1, 1);
 
                 //use TAB to "activate" the GtkEntry for the current password
                 this.key_press_event.connect ((e) => {
@@ -91,7 +88,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_revealer.set_transition_duration (200);
                 error_revealer.set_reveal_child (false);
                 error_revealer.add (error_pw_label);
-                attach (error_revealer, 0, 1, 1, 1);
 
                 error_new_label = new Gtk.Label ("");
                 error_new_label.set_halign (Gtk.Align.END);
@@ -107,20 +103,26 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_new_revealer.set_transition_duration (200);
                 error_new_revealer.set_reveal_child (false);
                 error_new_revealer.add (error_new_label);
+
+                attach (current_pw_entry, 0, 0, 1, 1);
+                attach (error_revealer, 0, 1, 1, 1);
                 attach (error_new_revealer, 0, 3, 1, 1);
 
-            } else if (get_permission ().allowed)
+            } else if (get_permission ().allowed) {
                 is_authenticated = true;
+            }
 
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.width_request = entry_width;
             new_pw_entry.set_placeholder_text (_("New Password"));
             new_pw_entry.set_visibility (false);
-            if (!get_permission ().allowed)
+
+            if (!get_permission ().allowed) {
                 new_pw_entry.margin_top = 10;
+            }
+
             new_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password cannot be empty"));
             new_pw_entry.changed.connect (compare_passwords);
-            attach (new_pw_entry, 0, 2, 1, 1);
 
             pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
             pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
@@ -129,7 +131,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             pw_level.add_offset_value ("low", 50.0);
             pw_level.add_offset_value ("high", 75.0);
             pw_level.add_offset_value ("middle", 75.0);
-            attach (pw_level, 0, 4, 1, 1);
 
             confirm_pw_entry = new Gtk.Entry ();
             confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
@@ -137,7 +138,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             confirm_pw_entry.margin_top = 10;
             confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
             confirm_pw_entry.changed.connect (compare_passwords);
-            attach (confirm_pw_entry, 0, 5, 1, 1);
 
             show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
             show_pw_check.margin_top = 10;
@@ -150,6 +150,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     confirm_pw_entry.set_visibility (false);
                 }
             });
+
+            attach (new_pw_entry, 0, 2, 1, 1);
+            attach (pw_level, 0, 4, 1, 1);
+            attach (confirm_pw_entry, 0, 5, 1, 1);
             attach (show_pw_check, 0, 6, 1, 1);
 
             auth_changed.connect (update_ui);
@@ -218,10 +222,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             } else {
                 is_valid = false;
 
-                if (new_pw_entry.get_text () != confirm_pw_entry.get_text ())
+                if (new_pw_entry.get_text () != confirm_pw_entry.get_text ()) {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                else
+                } else {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                }
 
                 if (new_pw_entry.get_text () == "") {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
@@ -253,10 +258,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public string? get_password () {
-            if (is_valid)
+            if (is_valid) {
                 return new_pw_entry.get_text ();
-            else
+            } else {
                 return null;
+            }
         }
 
         public void reset () {
