@@ -81,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 button_remove.set_tooltip_text (_("You cannot remove your own user account"));
             }
 
-            if (get_removal_list () == null || get_removal_list ().last () == null) {
+            if (get_removal_list ().last () == null) {
                 hide_undo_notification ();
             }
         }
