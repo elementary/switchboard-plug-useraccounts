@@ -19,23 +19,37 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class MainView : Gtk.Paned {
-        public UserListBox          userlist;
-        public Gtk.Stack            content;
-        public Gtk.Box              sidebar;
-        public Gtk.ScrolledWindow   scrolled_window;
-        public ListFooter           footer;
-
-        private Granite.Widgets.Toast toast;
-
-        private GuestSettingsView   guest;
+        private UserListBox userlist;
+        private Gtk.Stack content;
+        private Gtk.ScrolledWindow scrolled_window;
+        private ListFooter footer;
+        private GuestSettingsView guest;
 
         public MainView () {
-            expand = true;
-            orientation = Gtk.Orientation.HORIZONTAL;
+            Object (
+                orientation: Gtk.Orientation.HORIZONTAL,
+                position: 240
+            );
+        }
 
-            sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        construct {
+            scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window.expand = true;
+            scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
+
+            footer = new ListFooter ();
+
+            var sidebar = new Gtk.Grid ();
+            sidebar.orientation = Gtk.Orientation.VERTICAL;
+            sidebar.add (scrolled_window);
+            sidebar.add (footer);
+
+            guest = new GuestSettingsView ();
+
             content = new Gtk.Stack ();
-            toast = new Granite.Widgets.Toast (_("Undo last user account removal"));
+            content.add_named (guest, "guest_session");
+
+            var toast = new Granite.Widgets.Toast (_("Undo last user account removal"));
             toast.set_default_action (_("Undo"));
 
             var overlay = new Gtk.Overlay ();
@@ -45,40 +59,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             pack1 (sidebar, false, false);
             pack2 (overlay, true, false);
 
-            guest = new GuestSettingsView ();
             get_usermanager ().notify["is-loaded"].connect (update);
 
-            if (get_usermanager ().is_loaded)
-                update ();
-        }
-
-        private void update () {
             if (get_usermanager ().is_loaded) {
-                get_usermanager ().user_added.connect (add_user_settings);
-                get_usermanager ().user_removed.connect (remove_user_settings);
-
-                userlist = new UserListBox ();
-                userlist.row_selected.connect (userlist_selected);
-
-                foreach (Act.User user in get_usermanager ().list_users ())
-                    add_user_settings (user);
-
-                content.add_named (guest, "guest_session");
-                build_ui ();
+                update ();
             }
-        }
-
-        public void build_ui () {
-            scrolled_window = new Gtk.ScrolledWindow (null, null);
-            scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
-            scrolled_window.add (userlist);
-
-            footer = new ListFooter ();
-            footer.removal_changed.connect (userlist.update_ui);
-            footer.unfocused.connect (() => {
-                content.set_visible_child_name (get_current_user ().get_user_name ());
-                userlist.select_row (userlist.get_row_at_index (1));
-            });
 
             footer.send_undo_notification.connect (() => {
                 toast.send_notification ();
@@ -91,9 +76,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             toast.default_action.connect (() => {
                 footer.undo_user_removal ();
             });
+        }
 
-            sidebar.pack_start (scrolled_window, true, true);
-            sidebar.pack_end (footer, false, false);
+        private void update () {
+            get_usermanager ().user_added.connect (add_user_settings);
+            get_usermanager ().user_removed.connect (remove_user_settings);
+
+            userlist = new UserListBox ();
+            userlist.row_selected.connect (userlist_selected);
+
+            foreach (Act.User user in get_usermanager ().list_users ()) {
+                add_user_settings (user);
+            }
+
+            scrolled_window.add (userlist);
+
+            footer.removal_changed.connect (userlist.update_ui);
+
+            footer.unfocused.connect (() => {
+                content.set_visible_child_name (get_current_user ().get_user_name ());
+                userlist.select_row (userlist.get_row_at_index (1));
+            });
 
             guest.guest_switch_changed.connect (() => {
                 userlist.update_guest ();
@@ -101,7 +104,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             //auto select current user row in userlist widget
             userlist.select_row (userlist.get_row_at_index (0));
-            set_position (240);
             show_all ();
         }
 
