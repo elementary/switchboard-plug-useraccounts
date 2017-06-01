@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-05-29 22:53+0000\n"
+"PO-Revision-Date: 2017-06-01 20:16+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/nl/>\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../src/Views/MainView.vala:38
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "Ongedaan maken laatste verwijdering gebruikersaccount"
 
 #: ../src/Views/MainView.vala:39
 msgid "Undo"
@@ -200,11 +200,11 @@ msgstr "Huige wachtwoord"
 
 #: ../src/Widgets/PasswordEditor.vala:71
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Druk om te verifiëren"
 
 #: ../src/Widgets/PasswordEditor.vala:89
 msgid "Authentication failed"
-msgstr ""
+msgstr "Verificatie mislukt"
 
 #: ../src/Widgets/PasswordEditor.vala:121
 msgid "New Password"
@@ -276,6 +276,8 @@ msgstr "Wachtwoordwijziging mislukt"
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
+"Veranderingen aan de gastsessie zullen niet toegepast worden totdat u het "
+"systeem herstart"
 
 #: ../src/Plug.vala:104
 msgid "Some settings require administrator rights to be changed"
