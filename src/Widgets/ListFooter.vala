@@ -43,7 +43,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (button_remove);
 
             button_add.clicked.connect (() => {
-                Widgets.NewUserPopover new_user = new Widgets.NewUserPopover (button_add);
+                var new_user = new Widgets.NewUserPopover (button_add);
                 new_user.show_all ();
                 new_user.request_user_creation.connect (create_new_user);
             });
@@ -62,32 +62,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void update_ui () {
             if (get_permission ().allowed) {
-                button_add.set_sensitive (true);
-                if (selected_user != null && selected_user != get_current_user ()
-                && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
-                    button_remove.set_sensitive (true);
-                    button_remove.set_tooltip_text (_("Remove user account and its data"));
-                } else {
-                    button_remove.set_sensitive (false);
-                    if (selected_user != null) {
-                        button_remove.set_tooltip_text (_("You cannot remove your own user account"));
-                    } else {
-                        button_remove.set_tooltip_text ("");
-                    }
-                }
-
-                if (get_removal_list () == null || get_removal_list ().last () == null) {
-                    hide_undo_notification ();
-                }
-            } else if (selected_user == null) {
-                button_remove.set_sensitive (false);
+                button_add.sensitive = true;
             } else {
-                button_add.set_sensitive (false);
-                button_remove.set_sensitive (false);
+                button_add.sensitive = false;
+                button_remove.sensitive = false;
                 hide_undo_notification ();
+                return;
             }
 
-            show_all ();
+            if (selected_user == null) {
+                button_remove.sensitive = false;
+                button_remove.tooltip_text = "";
+            } else if (selected_user != get_current_user () && !is_last_admin (selected_user) && !selected_user.get_automatic_login ()) {
+                button_remove.sensitive = true;
+                button_remove.tooltip_text = _("Remove user account and its data");
+            } else {
+                button_remove.sensitive = false;
+                button_remove.set_tooltip_text (_("You cannot remove your own user account"));
+            }
+
+            if (get_removal_list () == null || get_removal_list ().last () == null) {
+                hide_undo_notification ();
+            }
         }
 
         public void set_selected_user (Act.User? _user) {
