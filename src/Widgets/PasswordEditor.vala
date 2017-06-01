@@ -31,8 +31,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private PasswordQuality.Settings pwquality;
 
-        public bool is_authenticated { get; construct set; default = false; }
-        public bool is_valid { get; construct set; default = false; }
+        public bool is_authenticated { get; private set; default = false; }
+        public bool is_valid { get; private set; default = false; }
         public int entry_width { get; construct; default = 200; }
 
         private signal void auth_changed ();
