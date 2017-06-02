@@ -19,27 +19,18 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        private Gtk.Grid                grid;
-        private Granite.Widgets.Avatar  avatar;
-        private Gtk.Label               full_name_label;
-        private Gtk.Label               username_label;
-        private Gtk.Label               description_label;
+        private Granite.Widgets.Avatar avatar;
+        private Gtk.Label full_name_label;
+        private Gtk.Label username_label;
+        private Gtk.Label description_label;
 
-        public weak Act.User user { public get; private set; }
+        public weak Act.User user { get; construct; }
 
         public UserItem (Act.User user) {
-            this.user = user;
-            user.changed.connect (update_ui);
-            update_ui ();
+            Object (user: user);
         }
 
         construct {
-            grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.margin_left = 12;
-            grid.column_spacing = 6;
-            add (grid);
-
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
             full_name_label.get_style_context ().add_class ("h3");
@@ -56,10 +47,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             avatar = new Granite.Widgets.Avatar ();
 
+            var grid = new Gtk.Grid ();
+            grid.margin = 6;
+            grid.margin_left = 12;
+            grid.column_spacing = 6;
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
             grid.attach (username_label, 1, 1, 1, 1);
             grid.attach (description_label, 2, 1, 1, 1);
+
+            add (grid);
+
+            user.changed.connect (update_ui);
+            update_ui ();
         }
 
         public void update_ui () {
@@ -73,6 +73,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             full_name_label.label = user.get_real_name ();
             username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
+
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                 description_label.no_show_all = false;
             } else {
@@ -80,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 description_label.no_show_all = true;
             }
 
-            grid.show_all ();
+            show_all ();
         }
     }
 }
