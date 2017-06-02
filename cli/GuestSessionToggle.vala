@@ -100,7 +100,7 @@ namespace GuestSessionToggle {
 	}
 
 	private bool get_allow_guest () {
-		string @value = get_setting ("SeatDefaults", "allow-guest", "false").down ();
+		string @value = get_setting ("SeatDefaults", "allow-guest", "true").down ();
 		return (@value == "true");
 	}
 	
