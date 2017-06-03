@@ -36,7 +36,7 @@ namespace SwitchboardPlugUserAccounts {
 
         public UserAccountsPlug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
-            settings.set ("accounts", "null");
+            settings.set ("accounts", null);
             Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-useraccounts",
                 display_name: _("User Accounts"),
