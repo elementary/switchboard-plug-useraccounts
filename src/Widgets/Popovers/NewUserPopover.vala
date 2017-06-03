@@ -19,7 +19,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class NewUserPopover : Gtk.Popover {
-        private Gtk.Grid                grid;
+        private Gtk.Grid grid;
         private Gtk.ComboBoxText        accounttype_combobox;
         private Gtk.Entry               fullname_entry;
         private Gtk.Entry               username_entry;
