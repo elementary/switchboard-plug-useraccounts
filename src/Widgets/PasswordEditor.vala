@@ -139,8 +139,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             });
 
-            attach (error_new_revealer, 0, 3, 1, 1);
             attach (new_pw_entry, 0, 2, 1, 1);
+            attach (error_new_revealer, 0, 3, 1, 1);
             attach (pw_level, 0, 4, 1, 1);
             attach (confirm_pw_entry, 0, 5, 1, 1);
             attach (show_pw_check, 0, 6, 1, 1);
