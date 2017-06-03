@@ -55,11 +55,25 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 current_pw_entry.set_visibility (false);
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
+
+                error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
+                error_pw_label.set_halign (Gtk.Align.END);
+                error_pw_label.get_style_context ().add_class ("error");
+                error_pw_label.use_markup = true;
+                error_pw_label.margin_top = 10;
+
+                error_revealer = new Gtk.Revealer ();
+                error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+                error_revealer.add (error_pw_label);
+
                 current_pw_entry.changed.connect (() => {
-                    if (current_pw_entry.get_text ().length > 0)
+                    if (current_pw_entry.get_text ().length > 0) {
                         current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
+                    }
+
                     error_revealer.set_reveal_child (false);
                 });
+
                 current_pw_entry.activate.connect (password_auth);
                 current_pw_entry.icon_release.connect (password_auth);
 
@@ -71,19 +85,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 });
 
                 attach (current_pw_entry, 0, 0, 1, 1);
+                attach (error_revealer, 0, 1, 1, 1);
             }
-
-            error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
-            error_pw_label.set_halign (Gtk.Align.END);
-            error_pw_label.get_style_context ().add_class ("error");
-            error_pw_label.use_markup = true;
-            error_pw_label.margin_top = 10;
-
-            error_revealer = new Gtk.Revealer ();
-            error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-            error_revealer.set_transition_duration (200);
-            error_revealer.set_reveal_child (false);
-            error_revealer.add (error_pw_label);
 
             error_new_label = new Gtk.Label ("");
             error_new_label.set_halign (Gtk.Align.END);
@@ -96,8 +99,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             error_new_revealer = new Gtk.Revealer ();
             error_new_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-            error_new_revealer.set_transition_duration (200);
-            error_new_revealer.set_reveal_child (false);
             error_new_revealer.add (error_new_label);
 
             new_pw_entry = new Gtk.Entry ();
@@ -138,7 +139,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             });
 
-            attach (error_revealer, 0, 1, 1, 1);
             attach (error_new_revealer, 0, 3, 1, 1);
             attach (new_pw_entry, 0, 2, 1, 1);
             attach (pw_level, 0, 4, 1, 1);
