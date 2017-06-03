@@ -70,38 +70,35 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     return false;
                 });
 
-                error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".
-                    printf (_("Authentication failed")));
-                error_pw_label.set_halign (Gtk.Align.END);
-                error_pw_label.get_style_context ().add_class ("error");
-                error_pw_label.use_markup = true;
-                error_pw_label.margin_top = 10;
-
-                error_revealer = new Gtk.Revealer ();
-                error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-                error_revealer.set_transition_duration (200);
-                error_revealer.set_reveal_child (false);
-                error_revealer.add (error_pw_label);
-
-                error_new_label = new Gtk.Label ("");
-                error_new_label.set_halign (Gtk.Align.END);
-                error_new_label.get_style_context ().add_class ("error");
-                error_new_label.justify = Gtk.Justification.RIGHT;
-                error_new_label.use_markup = true;
-                error_new_label.wrap = true;
-                error_new_label.margin_top = 10;
-                error_new_label.max_width_chars = 30;
-
-                error_new_revealer = new Gtk.Revealer ();
-                error_new_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-                error_new_revealer.set_transition_duration (200);
-                error_new_revealer.set_reveal_child (false);
-                error_new_revealer.add (error_new_label);
-
                 attach (current_pw_entry, 0, 0, 1, 1);
-                attach (error_revealer, 0, 1, 1, 1);
-                attach (error_new_revealer, 0, 3, 1, 1);
             }
+
+            error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
+            error_pw_label.set_halign (Gtk.Align.END);
+            error_pw_label.get_style_context ().add_class ("error");
+            error_pw_label.use_markup = true;
+            error_pw_label.margin_top = 10;
+
+            error_revealer = new Gtk.Revealer ();
+            error_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+            error_revealer.set_transition_duration (200);
+            error_revealer.set_reveal_child (false);
+            error_revealer.add (error_pw_label);
+
+            error_new_label = new Gtk.Label ("");
+            error_new_label.set_halign (Gtk.Align.END);
+            error_new_label.get_style_context ().add_class ("error");
+            error_new_label.justify = Gtk.Justification.RIGHT;
+            error_new_label.use_markup = true;
+            error_new_label.wrap = true;
+            error_new_label.margin_top = 10;
+            error_new_label.max_width_chars = 30;
+
+            error_new_revealer = new Gtk.Revealer ();
+            error_new_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+            error_new_revealer.set_transition_duration (200);
+            error_new_revealer.set_reveal_child (false);
+            error_new_revealer.add (error_new_label);
 
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.width_request = entry_width;
@@ -117,7 +114,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
             pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
-            pw_level.set_hexpand (false);
             pw_level.margin_top = 10;
             pw_level.add_offset_value ("low", 50.0);
             pw_level.add_offset_value ("high", 75.0);
@@ -142,6 +138,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             });
 
+            attach (error_revealer, 0, 1, 1, 1);
+            attach (error_new_revealer, 0, 3, 1, 1);
             attach (new_pw_entry, 0, 2, 1, 1);
             attach (pw_level, 0, 4, 1, 1);
             attach (confirm_pw_entry, 0, 5, 1, 1);
@@ -183,24 +181,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     pw_level.set_tooltip_text (_("Strong password strength"));
                 }
 
+                if (quality >= 0) {
+                    is_obscure = true;
+                    error_new_revealer.set_reveal_child (false);
+                } else {
+                    var pw_error = (PasswordQuality.Error) quality;
+                    var error_string = pw_error.to_string (error);
+
+                    error_new_label.label = "<span font_size=\"small\">%s</span>".printf (error_string);
+                    error_new_revealer.set_reveal_child (true);
+                    is_obscure = false;
+                }
+
                 /*
                  * without superuser privileges your new password needs to pass an obscurity test
                  * which is based on passwd's one to guess passwd's response.
                  */
-                if (!is_authenticated) {
-                    if (quality >= 0) {
-                        is_obscure = true;
-                        error_new_revealer.set_reveal_child (false);
-                    } else {
-                        var pw_error = (PasswordQuality.Error) quality;
-                        var error_string = pw_error.to_string (error);
-
-                        error_new_label.label = "<span font_size=\"small\">%s</span>".printf (error_string);
-                        error_new_revealer.set_reveal_child (true);
-                        is_obscure = false;
-                    }
-                } else {
-                    //a superuser does not need to care about obscurity
+                if (is_authenticated) {
                     is_obscure = true;
                 }
             }
