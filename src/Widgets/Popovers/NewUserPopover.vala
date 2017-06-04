@@ -115,8 +115,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             grid.attach (button_create, 0, 7, 1, 1);
 
             add (grid);
-
-            show_all ();
         }
 
         private void check_input () {
