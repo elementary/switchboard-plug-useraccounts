@@ -190,15 +190,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                     error_new_label.label = "<span font_size=\"small\">%s</span>".printf (error_string);
                     error_new_revealer.reveal_child = true;
-                    is_obscure = false;
-                }
 
-                /*
-                 * without superuser privileges your new password needs to pass an obscurity test
-                 * which is based on passwd's one to guess passwd's response.
-                 */
-                if (is_authenticated) {
-                    is_obscure = true;
+                    /* With admin privileges the new password doesn't need to pass the obscurity test */
+                    is_obscure = is_authenticated;
                 }
             }
 
