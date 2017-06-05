@@ -19,6 +19,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class MainView : Gtk.Paned {
+        private Act.UserManager? user_manager;
         private UserListBox userlist;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
@@ -59,9 +60,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             pack1 (sidebar, false, false);
             pack2 (overlay, true, false);
 
-            get_usermanager ().notify["is-loaded"].connect (update);
+            user_manager = get_usermanager ();
 
-            if (get_usermanager ().is_loaded) {
+            user_manager.notify["is-loaded"].connect (update);
+
+            if (user_manager.is_loaded) {
                 update ();
             }
 
@@ -79,13 +82,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void update () {
-            get_usermanager ().user_added.connect (add_user_settings);
-            get_usermanager ().user_removed.connect (remove_user_settings);
+            user_manager.user_added.connect (add_user_settings);
+            user_manager.user_removed.connect (remove_user_settings);
 
             userlist = new UserListBox ();
             userlist.row_selected.connect (userlist_selected);
 
-            foreach (Act.User user in get_usermanager ().list_users ()) {
+            foreach (Act.User user in user_manager.list_users ()) {
                 add_user_settings (user);
             }
 
