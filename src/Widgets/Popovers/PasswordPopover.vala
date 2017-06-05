@@ -48,8 +48,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             add (main_grid);
 
-            show_all ();
-
             pw_editor.validation_changed.connect (() => {
                 if (pw_editor.is_valid && pw_editor.is_authenticated) {
                     button_change.sensitive = true;
