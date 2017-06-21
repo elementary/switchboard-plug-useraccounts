@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-06-21 00:28+0000\n"
+"PO-Revision-Date: 2017-07-04 09:05+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://l10n.elementary.io/projects/switchboard/switchboard-plug-"
@@ -45,7 +45,7 @@ msgstr "还原上一次删除的用户账户"
 
 #: ../src/Views/MainView.vala:39
 msgid "Undo"
-msgstr ""
+msgstr "撤销"
 
 #: ../src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
