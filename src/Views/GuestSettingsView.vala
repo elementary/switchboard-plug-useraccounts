@@ -19,13 +19,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class GuestSettingsView : Gtk.Grid {
-        private Gtk.Switch guest_switch;
-        private Gtk.Switch guest_autologin_switch;
-        private Gtk.Image guest_lock;
-
         public signal void guest_switch_changed ();
-
-        private const string no_permission_string = _("You do not have permission to change this");
 
         public GuestSettingsView () {
             Object (
@@ -42,47 +36,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var header_label = new Gtk.Label (_("Guest Session"));
             header_label.halign = Gtk.Align.START;
-            header_label.label = header_label.get_label ();
             header_label.get_style_context ().add_class ("h2");
 
-            guest_switch = new Gtk.Switch ();
+            var guest_switch = new Gtk.Switch ();
             guest_switch.halign = Gtk.Align.START;
-            guest_switch.notify["active"].connect (() => {
-                if (get_guest_session_state ("show") != guest_switch.active) {
-                    InfobarNotifier.get_default ().set_reboot ();
-                    if (guest_switch.active) {
-                        set_guest_session_state ("on");
-                    } else {
-                        set_guest_session_state ("off");
-                        guest_autologin_switch.active = false;
-                    }
 
-                    guest_switch_changed ();
-                }
-
-                update_ui ();
-            });
-
-            guest_autologin_switch = new Gtk.Switch ();
+            var guest_autologin_switch = new Gtk.Switch ();
             guest_autologin_switch.halign = Gtk.Align.START;
-            guest_autologin_switch.notify["active"].connect (() => {
-                if (get_guest_session_state ("show-autologin") != guest_autologin_switch.active) {
-                    InfobarNotifier.get_default ().set_reboot ();
-                    if (guest_autologin_switch.active) {
-                        set_guest_session_state ("autologin-on");
-                    } else {
-                        set_guest_session_state ("autologin-off");
-                    }
-                }
-            });
 
             var guest_autologin_label = new Gtk.Label (_("Log In automatically:"));
             guest_autologin_label.xalign = 0;
-
-            guest_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            guest_lock.halign = Gtk.Align.START;
-            guest_lock.set_opacity (0.5);
-            guest_lock.set_tooltip_text (no_permission_string);
 
             var label = new Gtk.Label ("%s %s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),
@@ -93,33 +56,51 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (image, 0, 0, 1, 3);
             attach (header_label, 1, 0, 1, 1);
             attach (guest_switch, 1, 1, 1, 1);
-            attach (guest_lock, 2, 1, 1, 1);
             attach (label, 1, 2, 1, 1);
             attach (guest_autologin_label, 0, 3, 1, 1);
             attach (guest_autologin_switch, 1, 3, 1, 1);
 
             show_all ();
 
-            update_ui ();
+            guest_switch.active = get_guest_session_state ("show");
 
-            get_permission ().notify["allowed"].connect (update_ui);
-        }
-
-        public void update_ui () {
-            bool allowed = get_permission ().allowed;
-
-            if (allowed) {
-                guest_lock.set_opacity (0);
-            } else {
-                guest_lock.set_opacity (0.5);
-            }
-
-            bool guest_enabled = get_guest_session_state ("show");
-            guest_switch.sensitive = allowed;
-            guest_switch.active = guest_enabled ;
-
-            guest_autologin_switch.sensitive = allowed && guest_enabled;
             guest_autologin_switch.active = get_guest_session_state ("show-autologin");
+
+            var permission = get_permission ();
+            sensitive = permission.allowed;
+
+            permission.notify["allowed"].connect (() => {
+                sensitive = permission.allowed;
+            });
+
+            guest_switch.bind_property ("active", guest_autologin_switch, "sensitive", BindingFlags.DEFAULT);
+
+            guest_switch.notify["active"].connect (() => {
+                if (get_guest_session_state ("show") != guest_switch.active) {
+                    InfobarNotifier.get_default ().set_reboot ();
+
+                    if (guest_switch.active) {
+                        set_guest_session_state ("on");
+                    } else {
+                        set_guest_session_state ("off");
+                        guest_autologin_switch.active = false;
+                    }
+
+                    guest_switch_changed ();
+                }
+            });
+
+            guest_autologin_switch.notify["active"].connect (() => {
+                if (get_guest_session_state ("show-autologin") != guest_autologin_switch.active) {
+                    InfobarNotifier.get_default ().set_reboot ();
+
+                    if (guest_autologin_switch.active) {
+                        set_guest_session_state ("autologin-on");
+                    } else {
+                        set_guest_session_state ("autologin-off");
+                    }
+                }
+            });
         }
     }
 }
