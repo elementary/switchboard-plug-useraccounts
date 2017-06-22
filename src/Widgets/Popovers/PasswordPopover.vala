@@ -19,53 +19,51 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordPopover : Gtk.Popover {
-        private unowned Act.User        user;
-        private Gtk.Grid                main_grid;
-        private Widgets.PasswordEditor  pw_editor;
-        private Gtk.Button              button_change;
-
+        public unowned Act.User user { get; construct; }
         public signal void request_password_change (Act.UserPasswordMode mode, string? new_password);
 
         public PasswordPopover (Gtk.Widget relative, Act.User user) {
-            this.user = user;
-            set_relative_to (relative);
-            set_position (Gtk.PositionType.TOP);
-            set_modal (true);
-
-            build_ui ();
+            Object (
+                modal: true,
+                position: Gtk.PositionType.TOP,
+                relative_to: relative,
+                user: user
+            );
         }
 
-        private void build_ui () {
-            pw_editor = new Widgets.PasswordEditor ();
+        construct {
+            var pw_editor = new Widgets.PasswordEditor ();
+
+            var button_change = new Gtk.Button.with_label (_("Change Password"));
+            button_change.halign = Gtk.Align.END;
+            button_change.sensitive = false;
+            button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+            var main_grid = new Gtk.Grid ();
+            main_grid.margin = 12;
+            main_grid.orientation = Gtk.Orientation.VERTICAL;
+            main_grid.row_spacing = 24;
+            main_grid.add (pw_editor);
+            main_grid.add (button_change);
+
+            add (main_grid);
+
             pw_editor.validation_changed.connect (() => {
-                if (pw_editor.is_valid && pw_editor.is_authenticated)
-                    button_change.set_sensitive (true);
-                else
-                    button_change.set_sensitive (false);
+                if (pw_editor.is_valid && pw_editor.is_authenticated) {
+                    button_change.sensitive = true;
+                } else {
+                    button_change.sensitive = false;
+                }
             });
 
-            button_change = new Gtk.Button.with_label (_("Change Password"));
-            button_change.halign = Gtk.Align.END;
-            button_change.set_sensitive (false);
-            button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             button_change.clicked.connect (() => {
-                if (pw_editor.is_valid)
+                if (pw_editor.is_valid) {
                     request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
+                }
 
                 hide ();
                 destroy ();
             });
-
-            main_grid = new Gtk.Grid ();
-            main_grid.orientation = Gtk.Orientation.VERTICAL;
-            main_grid.margin = 12;
-            main_grid.row_spacing = 24;
-
-            main_grid.add (pw_editor);
-            main_grid.add (button_change);
-            add (main_grid);
-
-            show_all ();
         }
     }
 }
