@@ -115,7 +115,7 @@ msgstr "Otras cuentas"
 
 #: ../src/Widgets/UserListBox.vala:84
 msgid "Enabled"
-msgstr "Activada"
+msgstr "Habilitado"
 
 #: ../src/Widgets/UserListBox.vala:88
 msgid "Disabled"
