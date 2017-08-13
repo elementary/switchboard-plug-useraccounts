@@ -83,6 +83,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
 
             full_name_entry = new Gtk.Entry ();
+            full_name_entry.valign = Gtk.Align.CENTER;
             full_name_entry.get_style_context ().add_class ("h3");
             full_name_entry.activate.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
