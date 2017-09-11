@@ -255,12 +255,13 @@ namespace SwitchboardPlugUserAccounts {
         string username = "";
         bool met_alpha = false;
 
-        foreach (char c in fullname.to_utf8 ()) {
+        foreach (char c in fullname.to_ascii ().to_utf8 ()) {
             if (c.isalpha ()) {
                 username += c.to_string ().down ();
                 met_alpha = true;
-            } else if (c.isdigit () && met_alpha)
+            } else if (c.isdigit () && met_alpha) {
                 username += c.to_string ();
+            }
         }
 
         return username;
