@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 14:36-0500\n"
-"PO-Revision-Date: 2017-08-28 08:06+0000\n"
-"Last-Translator: Flyus Fly <fly_fly@popstar.com>\n"
+"PO-Revision-Date: 2017-09-16 01:26+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "useraccounts/en_GB/>\n"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:88
 msgid "Disabled"
-msgstr ""
+msgstr "Disabled"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -135,7 +135,7 @@ msgstr ""
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 #: ../src/Dialogs/AvatarDialog.vala:71
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Cancel"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Open"
