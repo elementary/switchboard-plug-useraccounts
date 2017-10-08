@@ -51,7 +51,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (!is_authenticated) {
                 current_pw_entry = new Gtk.Entry ();
                 current_pw_entry.set_placeholder_text (_("Current Password"));
-                current_pw_entry.set_visibility (false);
+                current_pw_entry.visibility = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
 
@@ -78,7 +78,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 //use TAB to "activate" the GtkEntry for the current password
                 this.key_press_event.connect ((e) => {
-                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true) {
+                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.sensitive == true) {
                         password_auth ();
                     }
                     return false;
@@ -104,7 +104,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.width_request = entry_width;
             new_pw_entry.set_placeholder_text (_("New Password"));
-            new_pw_entry.set_visibility (false);
+            new_pw_entry.visibility = false;
 
             if (!is_authenticated) {
                 new_pw_entry.margin_top = 10;
@@ -122,7 +122,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             confirm_pw_entry = new Gtk.Entry ();
             confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
-            confirm_pw_entry.set_visibility (false);
+            confirm_pw_entry.visibility = false;
             confirm_pw_entry.margin_top = 10;
             confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
             confirm_pw_entry.changed.connect (compare_passwords);
@@ -130,12 +130,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
             show_pw_check.margin_top = 10;
             show_pw_check.clicked.connect (() => {
-                if (show_pw_check.get_active ()) {
-                    new_pw_entry.set_visibility (true);
-                    confirm_pw_entry.set_visibility (true);
+                if (show_pw_check.active) {
+                    new_pw_entry.visibility = true;
+                    confirm_pw_entry.visibility = true;
                 } else {
-                    new_pw_entry.set_visibility (false);
-                    confirm_pw_entry.set_visibility (false);
+                    new_pw_entry.visibility = false;
+                    confirm_pw_entry.visibility = false;
                 }
             });
 
