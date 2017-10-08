@@ -19,15 +19,14 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
-        private Gtk.Entry           current_pw_entry;
-        private Gtk.Entry           new_pw_entry;
-        private Gtk.Entry           confirm_pw_entry;
-        private Gtk.CheckButton     show_pw_check;
-        private Gtk.LevelBar        pw_level;
-        private Gtk.Revealer        error_revealer;
-        private Gtk.Label           error_pw_label;
-        private Gtk.Revealer        error_new_revealer;
-        private Gtk.Label           error_new_label;
+        private Gtk.Entry current_pw_entry;
+        private Gtk.Entry new_pw_entry;
+        private Gtk.Entry confirm_pw_entry;
+        private Gtk.CheckButton show_pw_check;
+        private Gtk.LevelBar pw_level;
+        private Gtk.Revealer error_revealer;
+        private Gtk.Revealer error_new_revealer;
+        private Gtk.Label error_new_label;
 
         private PasswordQuality.Settings pwquality;
 
@@ -51,12 +50,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
              */
             if (!is_authenticated) {
                 current_pw_entry = new Gtk.Entry ();
-                current_pw_entry.set_placeholder_text (_("Current Password"));
-                current_pw_entry.set_visibility (false);
+                current_pw_entry.placeholder_text = _("Current Password");
+                current_pw_entry.visibility = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
 
-                error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
+                var error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
                 error_pw_label.halign = Gtk.Align.END;
                 error_pw_label.margin_top = 10;
                 error_pw_label.use_markup = true;
@@ -67,11 +66,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_revealer.add (error_pw_label);
 
                 current_pw_entry.changed.connect (() => {
-                    if (current_pw_entry.get_text ().length > 0) {
+                    if (current_pw_entry.text.length > 0) {
                         current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
                     }
 
-                    error_revealer.set_reveal_child (false);
+                    error_revealer.reveal_child = false;
                 });
 
                 current_pw_entry.activate.connect (password_auth);
@@ -79,8 +78,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 //use TAB to "activate" the GtkEntry for the current password
                 this.key_press_event.connect ((e) => {
-                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true)
+                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.sensitive == true) {
                         password_auth ();
+                    }
                     return false;
                 });
 
@@ -102,9 +102,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             error_new_revealer.add (error_new_label);
 
             new_pw_entry = new Gtk.Entry ();
+            new_pw_entry.placeholder_text = _("New Password");
+            new_pw_entry.visibility = false;
             new_pw_entry.width_request = entry_width;
-            new_pw_entry.set_placeholder_text (_("New Password"));
-            new_pw_entry.set_visibility (false);
 
             if (!is_authenticated) {
                 new_pw_entry.margin_top = 10;
@@ -114,28 +114,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.changed.connect (compare_passwords);
 
             pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
-            pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
             pw_level.margin_top = 10;
+            pw_level.mode = Gtk.LevelBarMode.CONTINUOUS;
             pw_level.add_offset_value ("low", 50.0);
             pw_level.add_offset_value ("high", 75.0);
             pw_level.add_offset_value ("middle", 75.0);
 
             confirm_pw_entry = new Gtk.Entry ();
-            confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
-            confirm_pw_entry.set_visibility (false);
             confirm_pw_entry.margin_top = 10;
+            confirm_pw_entry.placeholder_text = _("Confirm New Password");
+            confirm_pw_entry.visibility = false;
             confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
             confirm_pw_entry.changed.connect (compare_passwords);
 
             show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
             show_pw_check.margin_top = 10;
             show_pw_check.clicked.connect (() => {
-                if (show_pw_check.get_active ()) {
-                    new_pw_entry.set_visibility (true);
-                    confirm_pw_entry.set_visibility (true);
+                if (show_pw_check.active) {
+                    new_pw_entry.visibility = true;
+                    confirm_pw_entry.visibility = true;
                 } else {
-                    new_pw_entry.set_visibility (false);
-                    confirm_pw_entry.set_visibility (false);
+                    new_pw_entry.visibility = false;
+                    confirm_pw_entry.visibility = false;
                 }
             });
 
@@ -151,27 +151,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void update_ui () {
             if (is_authenticated) {
-                current_pw_entry.set_sensitive (false);
+                current_pw_entry.sensitive = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password accepted"));
 
+                new_pw_entry.sensitive = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                new_pw_entry.set_sensitive (true);
                 new_pw_entry.grab_focus ();
 
-                confirm_pw_entry.set_sensitive (true);
-                show_pw_check.set_sensitive (true);
+                confirm_pw_entry.sensitive = true;
+                show_pw_check.sensitive = true;
             }
         }
 
         private void compare_passwords () {
             bool is_obscure = false;
 
-            if (new_pw_entry.get_text () != "") {
+            if (new_pw_entry.text != "") {
                 void* error;
-                var quality = pwquality.check (new_pw_entry.get_text (), current_pw_entry.get_text (), null, out error);
+                var quality = pwquality.check (new_pw_entry.text, current_pw_entry.text, null, out error);
 
-                pw_level.set_value (quality);
+                pw_level.value = quality;
 
                 if (quality >= 0 && quality <= 50) {
                     pw_level.set_tooltip_text (_("Weak password strength"));
@@ -196,38 +196,37 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            if (new_pw_entry.get_text () == confirm_pw_entry.get_text ()
-            && new_pw_entry.get_text () != "" && is_obscure) {
+            if (new_pw_entry.text == confirm_pw_entry.text && new_pw_entry.text != "" && is_obscure) {
                 is_valid = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
             } else {
                 is_valid = false;
 
-                if (new_pw_entry.get_text () != confirm_pw_entry.get_text ()) {
+                if (new_pw_entry.text != confirm_pw_entry.text) {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
                 } else {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 }
 
-                if (new_pw_entry.get_text () == "") {
+                if (new_pw_entry.text == "") {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                    error_new_revealer.set_reveal_child (false);
-                    confirm_pw_entry.set_sensitive (false);
-                    confirm_pw_entry.set_text ("");
+                    error_new_revealer.reveal_child = false;
+                    confirm_pw_entry.sensitive = false;
+                    confirm_pw_entry.text  = "";
                 } else {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                    confirm_pw_entry.set_sensitive (true);
+                    confirm_pw_entry.sensitive = true;
                 }
             }
             validation_changed ();
         }
 
         private void password_auth () {
-            Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.get_text (), (h, e) => {
+            Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
                 if (e != null) {
                     debug ("Authentication error: %s".printf (e.message));
-                    error_revealer.set_reveal_child (true);
+                    error_revealer.reveal_child = true;
                     error_revealer.show_all ();
                     is_authenticated = false;
                     auth_changed ();
@@ -241,15 +240,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public string? get_password () {
             if (is_valid) {
-                return new_pw_entry.get_text ();
+                return new_pw_entry.text;
             } else {
                 return null;
             }
         }
 
         public void reset () {
-            new_pw_entry.set_text ("");
-            confirm_pw_entry.set_text ("");
+            new_pw_entry.text = "";
+            confirm_pw_entry.text = "";
         }
     }
 }
