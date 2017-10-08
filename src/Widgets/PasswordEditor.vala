@@ -66,7 +66,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 error_revealer.add (error_pw_label);
 
                 current_pw_entry.changed.connect (() => {
-                    if (current_pw_entry.get_text ().length > 0) {
+                    if (current_pw_entry.text.length > 0) {
                         current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
                     }
 
@@ -167,9 +167,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private void compare_passwords () {
             bool is_obscure = false;
 
-            if (new_pw_entry.get_text () != "") {
+            if (new_pw_entry.text != "") {
                 void* error;
-                var quality = pwquality.check (new_pw_entry.get_text (), current_pw_entry.get_text (), null, out error);
+                var quality = pwquality.check (new_pw_entry.text, current_pw_entry.text, null, out error);
 
                 pw_level.set_value (quality);
 
@@ -196,20 +196,20 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            if (new_pw_entry.get_text () == confirm_pw_entry.get_text () && new_pw_entry.get_text () != "" && is_obscure) {
+            if (new_pw_entry.text == confirm_pw_entry.text && new_pw_entry.text != "" && is_obscure) {
                 is_valid = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
             } else {
                 is_valid = false;
 
-                if (new_pw_entry.get_text () != confirm_pw_entry.get_text ()) {
+                if (new_pw_entry.text != confirm_pw_entry.text) {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
                 } else {
                     confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 }
 
-                if (new_pw_entry.get_text () == "") {
+                if (new_pw_entry.text == "") {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
                     error_new_revealer.reveal_child = false;
                     confirm_pw_entry.sensitive = false;
@@ -223,7 +223,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void password_auth () {
-            Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.get_text (), (h, e) => {
+            Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
                 if (e != null) {
                     debug ("Authentication error: %s".printf (e.message));
                     error_revealer.set_reveal_child (true);
@@ -240,7 +240,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public string? get_password () {
             if (is_valid) {
-                return new_pw_entry.get_text ();
+                return new_pw_entry.text;
             } else {
                 return null;
             }
