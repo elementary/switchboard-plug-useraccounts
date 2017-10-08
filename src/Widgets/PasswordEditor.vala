@@ -19,15 +19,14 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
-        private Gtk.Entry           current_pw_entry;
-        private Gtk.Entry           new_pw_entry;
-        private Gtk.Entry           confirm_pw_entry;
-        private Gtk.CheckButton     show_pw_check;
-        private Gtk.LevelBar        pw_level;
-        private Gtk.Revealer        error_revealer;
-        private Gtk.Label           error_pw_label;
-        private Gtk.Revealer        error_new_revealer;
-        private Gtk.Label           error_new_label;
+        private Gtk.Entry current_pw_entry;
+        private Gtk.Entry new_pw_entry;
+        private Gtk.Entry confirm_pw_entry;
+        private Gtk.CheckButton show_pw_check;
+        private Gtk.LevelBar pw_level;
+        private Gtk.Revealer error_revealer;
+        private Gtk.Revealer error_new_revealer;
+        private Gtk.Label error_new_label;
 
         private PasswordQuality.Settings pwquality;
 
@@ -56,7 +55,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
 
-                error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
+                var error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
                 error_pw_label.halign = Gtk.Align.END;
                 error_pw_label.margin_top = 10;
                 error_pw_label.use_markup = true;
@@ -79,8 +78,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 //use TAB to "activate" the GtkEntry for the current password
                 this.key_press_event.connect ((e) => {
-                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true)
+                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.get_sensitive () == true) {
                         password_auth ();
+                    }
                     return false;
                 });
 
@@ -151,16 +151,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private void update_ui () {
             if (is_authenticated) {
-                current_pw_entry.set_sensitive (false);
+                current_pw_entry.sensitive = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password accepted"));
 
+                new_pw_entry.sensitive = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                new_pw_entry.set_sensitive (true);
                 new_pw_entry.grab_focus ();
 
-                confirm_pw_entry.set_sensitive (true);
-                show_pw_check.set_sensitive (true);
+                confirm_pw_entry.sensitive = true;
+                show_pw_check.sensitive = true;
             }
         }
 
@@ -196,8 +196,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            if (new_pw_entry.get_text () == confirm_pw_entry.get_text ()
-            && new_pw_entry.get_text () != "" && is_obscure) {
+            if (new_pw_entry.get_text () == confirm_pw_entry.get_text () && new_pw_entry.get_text () != "" && is_obscure) {
                 is_valid = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 confirm_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
@@ -212,12 +211,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 if (new_pw_entry.get_text () == "") {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                    error_new_revealer.set_reveal_child (false);
-                    confirm_pw_entry.set_sensitive (false);
-                    confirm_pw_entry.set_text ("");
+                    error_new_revealer.reveal_child = false;
+                    confirm_pw_entry.sensitive = false;
+                    confirm_pw_entry.text  = "";
                 } else {
                     new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                    confirm_pw_entry.set_sensitive (true);
+                    confirm_pw_entry.sensitive = true;
                 }
             }
             validation_changed ();
@@ -248,8 +247,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void reset () {
-            new_pw_entry.set_text ("");
-            confirm_pw_entry.set_text ("");
+            new_pw_entry.text = "";
+            confirm_pw_entry.text = "";
         }
     }
 }
