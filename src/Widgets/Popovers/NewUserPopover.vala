@@ -128,7 +128,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             } else {
                 button_create.sensitive = false;
 
-                if (username_entry_text = "") {
+                if (username_entry_text == "") {
                     error_revealer.reveal_child = false;
                 } else {
                     if (username_is_taken) {
