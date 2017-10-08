@@ -50,7 +50,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
              */
             if (!is_authenticated) {
                 current_pw_entry = new Gtk.Entry ();
-                current_pw_entry.set_placeholder_text (_("Current Password"));
+                current_pw_entry.placeholder_text = _("Current Password");
                 current_pw_entry.visibility = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
@@ -70,7 +70,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                         current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
                     }
 
-                    error_revealer.set_reveal_child (false);
+                    error_revealer.reveal_child = false;
                 });
 
                 current_pw_entry.activate.connect (password_auth);
@@ -102,9 +102,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             error_new_revealer.add (error_new_label);
 
             new_pw_entry = new Gtk.Entry ();
-            new_pw_entry.width_request = entry_width;
-            new_pw_entry.set_placeholder_text (_("New Password"));
+            new_pw_entry.placeholder_text = _("New Password");
             new_pw_entry.visibility = false;
+            new_pw_entry.width_request = entry_width;
 
             if (!is_authenticated) {
                 new_pw_entry.margin_top = 10;
@@ -114,16 +114,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.changed.connect (compare_passwords);
 
             pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
-            pw_level.set_mode (Gtk.LevelBarMode.CONTINUOUS);
             pw_level.margin_top = 10;
+            pw_level.mode = Gtk.LevelBarMode.CONTINUOUS;
             pw_level.add_offset_value ("low", 50.0);
             pw_level.add_offset_value ("high", 75.0);
             pw_level.add_offset_value ("middle", 75.0);
 
             confirm_pw_entry = new Gtk.Entry ();
-            confirm_pw_entry.set_placeholder_text (_("Confirm New Password"));
-            confirm_pw_entry.visibility = false;
             confirm_pw_entry.margin_top = 10;
+            confirm_pw_entry.placeholder_text = _("Confirm New Password");
+            confirm_pw_entry.visibility = false;
             confirm_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Passwords do not match"));
             confirm_pw_entry.changed.connect (compare_passwords);
 
@@ -171,7 +171,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 void* error;
                 var quality = pwquality.check (new_pw_entry.text, current_pw_entry.text, null, out error);
 
-                pw_level.set_value (quality);
+                pw_level.value = quality;
 
                 if (quality >= 0 && quality <= 50) {
                     pw_level.set_tooltip_text (_("Weak password strength"));
@@ -226,7 +226,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
                 if (e != null) {
                     debug ("Authentication error: %s".printf (e.message));
-                    error_revealer.set_reveal_child (true);
+                    error_revealer.reveal_child = true;
                     error_revealer.show_all ();
                     is_authenticated = false;
                     auth_changed ();
