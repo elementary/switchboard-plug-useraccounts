@@ -20,16 +20,16 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class NewUserPopover : Gtk.Popover {
         private Gtk.Grid grid;
-        private Gtk.ComboBoxText        accounttype_combobox;
-        private Gtk.Entry               fullname_entry;
-        private Gtk.Entry               username_entry;
-        private Gtk.Revealer            error_revealer;
-        private Gtk.Label               error_label;
+        private Gtk.ComboBoxText accounttype_combobox;
+        private Gtk.Entry fullname_entry;
+        private Gtk.Entry username_entry;
+        private Gtk.Revealer error_revealer;
+        private Gtk.Label error_label;
 
-        private Gtk.Revealer            pw_revealer;
-        private Widgets.PasswordEditor  pw_editor;
+        private Gtk.Revealer pw_revealer;
+        private Widgets.PasswordEditor pw_editor;
 
-        private Gtk.Button              button_create;
+        private Gtk.Button button_create;
 
         public signal void             request_user_creation 
             (string _fullname, string _username, Act.UserAccountType _usertype, 
