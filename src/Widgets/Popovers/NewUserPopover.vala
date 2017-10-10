@@ -111,6 +111,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     accounttype = Act.UserAccountType.ADMINISTRATOR;
                 }
 
+                if (pw_editor.is_valid) {
+                    pw = pw_editor.get_password ();
+                    mode = Act.UserPasswordMode.REGULAR;
+                } else {
+                    mode = Act.UserPasswordMode.SET_AT_LOGIN;
+                }
+
                 request_user_creation (fullname, username, accounttype, mode, pw);
                 hide ();
                 destroy ();
