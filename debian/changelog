@@ -1,3 +1,9 @@
+switchboard-plug-useraccounts (0.1.6) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 10 Oct 2017 13:55:37 -0500
+
 switchboard-plug-useraccounts (0.1.5) xenial; urgency=medium
 
   * New upstream release.
