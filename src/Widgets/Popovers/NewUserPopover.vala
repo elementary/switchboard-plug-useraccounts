@@ -94,7 +94,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (grid);
 
             fullname_entry.changed.connect (check_input);
-            fullname_entry.changed.connect (() => username_entry.set_text (gen_username (fullname_entry.get_text ())));
+            fullname_entry.changed.connect (() => {
+                var username = gen_username (fullname_entry.text);
+                username_entry.text = username;
+            });
 
             username_entry.changed.connect (check_input);
 
@@ -125,13 +128,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void check_input () {
-            string username_entry_text = username_entry.get_text ();
+            string username_entry_text = username_entry.text;
             bool username_is_valid = is_valid_username (username_entry_text);
             bool username_is_taken = is_taken_username (username_entry_text);
 
-            if (fullname_entry.get_text () != "" && username_entry_text != "" && pw_editor.is_valid && username_is_valid && !username_is_taken) {
-                button_create.sensitive = true;
+            if (fullname_entry.text != "" && username_entry_text != "" && username_is_valid && !username_is_taken) {
                 error_revealer.reveal_child = false;
+
+                if (pw_editor.is_valid ) {
+                    button_create.sensitive = true;
+                } else {
+                    button_create.sensitive = false;
+                }
             } else {
                 button_create.sensitive = false;
 
