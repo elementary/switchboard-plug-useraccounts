@@ -76,15 +76,6 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         confirm_entry_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
         var show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
-        show_pw_check.clicked.connect (() => {
-            if (show_pw_check.active) {
-                pw_entry.visibility = true;
-                confirm_entry.visibility = true;
-            } else {
-                pw_entry.visibility = false;
-                confirm_entry.visibility = false;
-            }
-        });
 
         var form_grid = new Gtk.Grid ();
         form_grid.margin_start = form_grid.margin_end = 12;
@@ -130,6 +121,9 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         action_area.add (cancel_button);
         action_area.add (create_button);
         action_area.show_all ();
+
+        show_pw_check.bind_property ("active", pw_entry, "visibility", GLib.BindingFlags.DEFAULT);
+        show_pw_check.bind_property ("active", confirm_entry, "visibility", GLib.BindingFlags.DEFAULT);
 
         realname_entry.changed.connect (() => {
             var username = gen_username (realname_entry.text);
