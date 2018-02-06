@@ -75,6 +75,17 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         confirm_entry_revealer = new ErrorRevealer (".");
         confirm_entry_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
+        var show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
+        show_pw_check.clicked.connect (() => {
+            if (show_pw_check.active) {
+                pw_entry.visibility = true;
+                confirm_entry.visibility = true;
+            } else {
+                pw_entry.visibility = false;
+                confirm_entry.visibility = false;
+            }
+        });
+
         var form_grid = new Gtk.Grid ();
         form_grid.margin_start = form_grid.margin_end = 12;
         form_grid.orientation = Gtk.Orientation.VERTICAL;
@@ -97,6 +108,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         form_grid.add (confirm_label);
         form_grid.add (confirm_entry);
         form_grid.add (confirm_entry_revealer);
+        form_grid.add (show_pw_check);
         form_grid.show_all ();
 
         deletable = false;
@@ -114,7 +126,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
 
         var action_area = (Gtk.Container) get_action_area ();
         action_area.margin = 6;
-        action_area.margin_top = 8;
+        action_area.margin_top = 14;
         action_area.add (cancel_button);
         action_area.add (create_button);
         action_area.show_all ();
