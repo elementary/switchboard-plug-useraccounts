@@ -43,9 +43,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (button_remove);
 
             button_add.clicked.connect (() => {
-                var new_user = new Widgets.NewUserPopover (button_add);
-                new_user.show_all ();
-                new_user.request_user_creation.connect (create_new_user);
+                var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_toplevel ());
+                new_user.present ();
             });
 
             button_remove.clicked.connect (mark_user_removal);
