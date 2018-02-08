@@ -20,14 +20,26 @@
 private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Revealer {
     public Gtk.Label label_widget;
 
+    private string _label;
     public string label {
-        set {
-            label_widget.label = "<span font_size=\"small\">%s</span>".printf (value);
+        get {
+            return _label;
+        }
+        construct set {
+            _label = value;
+
+            if (label_widget != null) {
+                label_widget.label = "<span font_size=\"small\">%s</span>".printf (value);
+            }
         }
     }
 
     public ErrorRevealer (string label) {
-        label_widget = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (label));
+        Object (label: label);
+    }
+
+    construct {
+        label_widget = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_label));
         label_widget.halign = Gtk.Align.END;
         label_widget.justify = Gtk.Justification.RIGHT;
         label_widget.max_width_chars = 55;
