@@ -31,14 +31,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public bool is_authenticated { get; private set; default = false; }
         public bool is_valid { get; private set; default = false; }
-        public int entry_width { get; construct; default = 200; }
 
         private signal void auth_changed ();
         public signal void validation_changed ();
-
-        public PasswordEditor.from_width (int entry_width) {
-            Object (entry_width: entry_width);
-        }
 
         construct {
             pwquality = new PasswordQuality.Settings ();
@@ -88,7 +83,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.placeholder_text = _("New Password");
             new_pw_entry.visibility = false;
-            new_pw_entry.width_request = entry_width;
+            new_pw_entry.hexpand = true;
 
             if (!is_authenticated) {
                 new_pw_entry.margin_top = 10;
@@ -153,7 +148,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             if (new_pw_entry.text != "") {
                 void* error;
-                var quality = pwquality.check (new_pw_entry.text, current_pw_entry.text, null, out error);
+
+                string? current_pw = null;
+                if (current_pw_entry != null) {
+                    current_pw = current_pw_entry.text;
+                }
+
+                var quality = pwquality.check (new_pw_entry.text, current_pw, null, out error);
 
                 pw_level.value = quality;
 

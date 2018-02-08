@@ -15,6 +15,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
     Dialogs/AvatarDialog.vala
+    Dialogs/ChangePasswordDialog.vala
     Dialogs/NewUserDialog.vala
     Misc/Utils.vala
     Misc/UserUtils.vala
@@ -28,7 +29,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/UserItem.vala
     Widgets/PasswordEditor.vala
     Widgets/CropView.vala
-    Widgets/Popovers/PasswordPopover.vala
     Widgets/Popovers/AvatarPopover.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
