@@ -22,6 +22,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Views/GuestSettingsView.vala
     Views/MainView.vala
     Views/UserSettingsView.vala
+    Widgets/ErrorRevealer.vala
     Widgets/UserListBox.vala
     Widgets/ListFooter.vala
     Widgets/UserItem.vala
