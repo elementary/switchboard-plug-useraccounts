@@ -149,7 +149,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (new_pw_entry.text != "") {
                 void* error;
 
-                string current_pw = null;
+                string? current_pw = null;
                 if (current_pw_entry != null) {
                     current_pw = current_pw_entry.text;
                 }
