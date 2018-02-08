@@ -81,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (error_revealer, 0, 1, 1, 1);
             }
 
-            error_new_revealer = new ErrorRevealer (".");
+            error_new_revealer = new ErrorRevealer ("."); // Pango needs a non-null string to set markup
             error_new_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
             error_new_revealer.margin_top = 3;
 
