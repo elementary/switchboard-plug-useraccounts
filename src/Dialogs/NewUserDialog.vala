@@ -65,7 +65,6 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         pw_error_revealer = new ErrorRevealer (".");
         pw_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
 
-
         var confirm_label = new Granite.HeaderLabel (_("Confirm Password"));
 
         confirm_entry = new ValidatedEntry ();
