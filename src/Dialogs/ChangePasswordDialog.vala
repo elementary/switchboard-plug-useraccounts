@@ -111,11 +111,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
         });
 
         button_change.clicked.connect (() => {
-            if (pw_editor.is_valid) {
-                request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
-            }
-
-            hide ();
+            request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
             destroy ();
         });
 
