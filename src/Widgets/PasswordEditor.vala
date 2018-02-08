@@ -148,7 +148,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             if (new_pw_entry.text != "") {
                 void* error;
-                var quality = pwquality.check (new_pw_entry.text, current_pw_entry.text, null, out error);
+
+                string current_pw = null;
+                if (current_pw_entry != null) {
+                    current_pw = current_pw_entry.text;
+                }
+
+                var quality = pwquality.check (new_pw_entry.text, current_pw, null, out error);
 
                 pw_level.value = quality;
 
