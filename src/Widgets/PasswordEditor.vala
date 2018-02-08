@@ -19,14 +19,13 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
+        private ErrorRevealer error_revealer;
+        private ErrorRevealer error_new_revealer;
         private Gtk.Entry current_pw_entry;
         private Gtk.Entry new_pw_entry;
         private Gtk.Entry confirm_pw_entry;
         private Gtk.CheckButton show_pw_check;
         private Gtk.LevelBar pw_level;
-        private Gtk.Revealer error_revealer;
-        private Gtk.Revealer error_new_revealer;
-        private Gtk.Label error_new_label;
 
         private PasswordQuality.Settings pwquality;
 
@@ -50,15 +49,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
 
-                var error_pw_label = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_("Authentication failed")));
-                error_pw_label.halign = Gtk.Align.END;
-                error_pw_label.margin_top = 10;
-                error_pw_label.use_markup = true;
-                error_pw_label.get_style_context ().add_class ("error");
-
-                error_revealer = new Gtk.Revealer ();
-                error_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-                error_revealer.add (error_pw_label);
+                error_revealer = new ErrorRevealer (_("Authentication failed"));
+                error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+                error_revealer.margin_top = 3;
 
                 current_pw_entry.changed.connect (() => {
                     if (current_pw_entry.text.length > 0) {
@@ -83,18 +76,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (error_revealer, 0, 1, 1, 1);
             }
 
-            error_new_label = new Gtk.Label ("");
-            error_new_label.halign = Gtk.Align.END;
-            error_new_label.justify = Gtk.Justification.RIGHT;
-            error_new_label.margin_top = 10;
-            error_new_label.max_width_chars = 30;
-            error_new_label.use_markup = true;
-            error_new_label.wrap = true;
-            error_new_label.get_style_context ().add_class ("error");
-
-            error_new_revealer = new Gtk.Revealer ();
-            error_new_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-            error_new_revealer.add (error_new_label);
+            error_new_revealer = new ErrorRevealer ("."); // Pango needs a non-null string to set markup
+            error_new_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
+            error_new_revealer.margin_top = 3;
 
             new_pw_entry = new Gtk.Entry ();
             new_pw_entry.placeholder_text = _("New Password");
@@ -109,7 +93,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.changed.connect (compare_passwords);
 
             pw_level = new Gtk.LevelBar.for_interval (0.0, 100.0);
-            pw_level.margin_top = 10;
+            pw_level.margin_top = 3;
             pw_level.mode = Gtk.LevelBarMode.CONTINUOUS;
             pw_level.add_offset_value ("low", 50.0);
             pw_level.add_offset_value ("high", 75.0);
@@ -135,8 +119,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
 
             attach (new_pw_entry, 0, 2, 1, 1);
-            attach (error_new_revealer, 0, 3, 1, 1);
-            attach (pw_level, 0, 4, 1, 1);
+            attach (pw_level, 0, 3, 1, 1);
+            attach (error_new_revealer, 0, 4, 1, 1);
             attach (confirm_pw_entry, 0, 5, 1, 1);
             attach (show_pw_check, 0, 6, 1, 1);
 
@@ -183,7 +167,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     var pw_error = (PasswordQuality.Error) quality;
                     var error_string = pw_error.to_string (error);
 
-                    error_new_label.label = "<span font_size=\"small\">%s</span>".printf (error_string);
+                    error_new_revealer.label_widget.label = "<span font_size=\"small\">%s</span>".printf (error_string);
                     error_new_revealer.reveal_child = true;
 
                     /* With admin privileges the new password doesn't need to pass the obscurity test */
