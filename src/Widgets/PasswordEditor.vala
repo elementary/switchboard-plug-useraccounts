@@ -79,18 +79,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             pw_entry.changed.connect (() => {
                 pw_entry.is_valid = check_password ();
-                confirm_entry.is_valid = confirm_password ();
                 validate_form ();
             });
 
             confirm_entry.changed.connect (() => {
-                confirm_entry.is_valid = confirm_password ();
                 validate_form ();
             });
         }
 
         private void validate_form () {
-            is_valid = pw_entry.is_valid && confirm_entry.is_valid;
+            is_valid = pw_entry.is_valid && confirm_password ();
             validation_changed ();
         }
 
