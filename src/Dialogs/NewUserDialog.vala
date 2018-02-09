@@ -53,18 +53,17 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
 
         var pw_label = new Granite.HeaderLabel (_("Choose a Password"));
 
-        pw_error_revealer = new ErrorRevealer (".");
-        pw_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
-
         pw_entry = new ValidatedEntry ();
         pw_entry.visibility = false;
 
-        pw_levelbar = new Gtk.LevelBar ();
         pw_levelbar = new Gtk.LevelBar.for_interval (0.0, 100.0);
         pw_levelbar.set_mode (Gtk.LevelBarMode.CONTINUOUS);
         pw_levelbar.add_offset_value ("low", 50.0);
         pw_levelbar.add_offset_value ("high", 75.0);
         pw_levelbar.add_offset_value ("middle", 75.0);
+
+        pw_error_revealer = new ErrorRevealer (".");
+        pw_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
 
         var confirm_label = new Granite.HeaderLabel (_("Confirm Password"));
 
