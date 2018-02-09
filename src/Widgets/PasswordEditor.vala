@@ -43,7 +43,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             pw_entry.visibility = false;
 
             pw_levelbar = new Gtk.LevelBar.for_interval (0.0, 100.0);
-            pw_levelbar.set_mode (Gtk.LevelBarMode.CONTINUOUS);
+            pw_levelbar.mode = Gtk.LevelBarMode.CONTINUOUS;
             pw_levelbar.add_offset_value ("low", 50.0);
             pw_levelbar.add_offset_value ("high", 75.0);
             pw_levelbar.add_offset_value ("middle", 75.0);
