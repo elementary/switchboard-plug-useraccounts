@@ -106,9 +106,9 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
             var permission = get_permission ();
             if (permission != null) {
                 bool admin_requirements = pw_editor.is_valid && permission.allowed;
-                bool pleb_requirements = pw_editor.is_valid && pw_editor.is_obscure && is_authenticated;
+                bool standard_requirements = pw_editor.is_valid && pw_editor.is_obscure && is_authenticated;
 
-                if (admin_requirements || pleb_requirements) {
+                if (admin_requirements || standard_requirements) {
                     button_change.sensitive = true;
                 } else {
                     button_change.sensitive = false;
