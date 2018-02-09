@@ -139,7 +139,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private bool confirm_password () {
             if (confirm_entry.text != "") {
                 if (pw_entry.text != confirm_entry.text) {
-                    confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
+                    confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
                     confirm_entry_revealer.label = _("Passwords do not match");
                     confirm_entry_revealer.reveal_child = true;
                 } else {
