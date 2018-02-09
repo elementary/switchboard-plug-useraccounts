@@ -31,7 +31,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public signal void validation_changed ();
 
-        public PasswordEditor (Gtk.Entry? current_pw_entry) {
+        public PasswordEditor (Gtk.Entry? current_pw_entry = null) {
             Object (current_pw_entry: current_pw_entry);
         }
 
