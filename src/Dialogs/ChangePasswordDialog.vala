@@ -103,7 +103,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
         action_area.show_all ();
 
         pw_editor.validation_changed.connect (() => {
-            if (pw_editor.is_valid && is_authenticated) {
+            if (pw_editor.is_valid && get_permission ().allowed || pw_editor.is_valid && pw_editor.is_obscure && is_authenticated) {
                 button_change.sensitive = true;
             } else {
                 button_change.sensitive = false;

@@ -21,14 +21,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
         private ErrorRevealer confirm_entry_revealer;
         private ErrorRevealer pw_error_revealer;
-        private Gtk.Entry new_pw_entry;
-        private Gtk.Entry confirm_entry;
         private Gtk.LevelBar pw_levelbar;
-
-        private PasswordQuality.Settings pwquality;
+        private ValidatedEntry pw_entry;
+        private ValidatedEntry confirm_entry;
 
         public Gtk.Entry current_pw_entry { get; construct; }
-        private bool is_authenticated { get; private set; default = false; }
+        public bool is_obscure { get; private set; default = false; }
         public bool is_valid { get; private set; default = false; }
 
         public signal void validation_changed ();
@@ -38,17 +36,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         construct {
-            pwquality = new PasswordQuality.Settings ();
-            is_authenticated = get_permission ().allowed;
+            var pw_label = new Granite.HeaderLabel (_("Choose a Password"));
 
-            var pw_label = new Granite.HeaderLabel (_("New Password"));
-
-            new_pw_entry = new Gtk.Entry ();
-            new_pw_entry.visibility = false;
-            new_pw_entry.hexpand = true;
+            pw_entry = new ValidatedEntry ();
+            pw_entry.hexpand = true;
+            pw_entry.visibility = false;
 
             pw_levelbar = new Gtk.LevelBar.for_interval (0.0, 100.0);
-            pw_levelbar.mode = Gtk.LevelBarMode.CONTINUOUS;
+            pw_levelbar.set_mode (Gtk.LevelBarMode.CONTINUOUS);
             pw_levelbar.add_offset_value ("low", 50.0);
             pw_levelbar.add_offset_value ("high", 75.0);
             pw_levelbar.add_offset_value ("middle", 75.0);
@@ -58,7 +53,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var confirm_label = new Granite.HeaderLabel (_("Confirm Password"));
 
-            confirm_entry = new Gtk.Entry ();
+            confirm_entry = new ValidatedEntry ();
+            confirm_entry.sensitive = false;
             confirm_entry.visibility = false;
 
             confirm_entry_revealer = new ErrorRevealer (".");
@@ -69,88 +65,108 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             orientation = Gtk.Orientation.VERTICAL;
             row_spacing = 3;
             add (pw_label);
-            add (new_pw_entry);
+            add (pw_entry);
             add (pw_levelbar);
             add (pw_error_revealer);
             add (confirm_label);
             add (confirm_entry);
             add (confirm_entry_revealer);
             add (show_pw_check);
+            show_all ();
 
-            show_pw_check.bind_property ("active", new_pw_entry, "visibility", GLib.BindingFlags.DEFAULT);
+            show_pw_check.bind_property ("active", pw_entry, "visibility", GLib.BindingFlags.DEFAULT);
             show_pw_check.bind_property ("active", confirm_entry, "visibility", GLib.BindingFlags.DEFAULT);
 
-            new_pw_entry.changed.connect (compare_passwords);
-            confirm_entry.changed.connect (compare_passwords);
+            pw_entry.changed.connect (() => {
+                pw_entry.is_valid = check_password ();
+                confirm_entry.is_valid = confirm_password ();
+                validate_form ();
+            });
 
-            show_all ();
+            confirm_entry.changed.connect (() => {
+                confirm_entry.is_valid = confirm_password ();
+                validate_form ();
+            });
         }
 
-        private void compare_passwords () {
-            bool is_obscure = false;
+        private void validate_form () {
+            is_valid = pw_entry.is_valid && confirm_entry.is_valid;
+            validation_changed ();
+        }
 
-            if (new_pw_entry.text != "") {
-                void* error;
+        private bool check_password () {
+            if (pw_entry.text == "") {
+                confirm_entry.text = "";
+                confirm_entry.sensitive = false;
+
+                pw_levelbar.value = 0;
+
+                pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                pw_error_revealer.reveal_child = false;
+            } else {
+                confirm_entry.sensitive = true;
 
                 string? current_pw = null;
                 if (current_pw_entry != null) {
                     current_pw = current_pw_entry.text;
                 }
-
-                var quality = pwquality.check (new_pw_entry.text, current_pw, null, out error);
-
-                pw_levelbar.value = quality;
+ 
+                var pwquality = new PasswordQuality.Settings ();
+                void* error;
+                var quality = pwquality.check (pw_entry.text, current_pw, null, out error);
 
                 if (quality >= 0) {
-                    is_obscure = true;
+                    pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
                     pw_error_revealer.reveal_child = false;
+
+                    pw_levelbar.value = quality;
+
+                    is_obscure = true;
                 } else {
-                    var pw_error = (PasswordQuality.Error) quality;
-                    var error_string = pw_error.to_string (error);
+                    pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-warning-symbolic");
 
-                    pw_error_revealer.label_widget.label = "<span font_size=\"small\">%s</span>".printf (error_string);
                     pw_error_revealer.reveal_child = true;
+                    pw_error_revealer.label = ((PasswordQuality.Error) quality).to_string (error);
 
-                    /* With admin privileges the new password doesn't need to pass the obscurity test */
-                    is_obscure = is_authenticated;
+                    pw_levelbar.value = 0;
+
+                    is_obscure = false;
                 }
+                return true;
             }
 
-            if (new_pw_entry.text == confirm_entry.text && new_pw_entry.text != "" && is_obscure) {
-                is_valid = true;
-                new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-            } else {
-                is_valid = false;
+            return false;
+        }
 
-                if (new_pw_entry.text != confirm_entry.text) {
+        private bool confirm_password () {
+            if (confirm_entry.text != "") {
+                if (pw_entry.text != confirm_entry.text) {
                     confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
                     confirm_entry_revealer.label = _("Passwords do not match");
                     confirm_entry_revealer.reveal_child = true;
                 } else {
-                    confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                    confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
                     confirm_entry_revealer.reveal_child = false;
+                    return true;
                 }
-
-                if (new_pw_entry.text == "") {
-                    new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                    pw_error_revealer.reveal_child = false;
-                    confirm_entry.sensitive = false;
-                    confirm_entry.text  = "";
-                } else {
-                    new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                    confirm_entry.sensitive = true;
-                }
+            } else {
+                confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                confirm_entry_revealer.reveal_child = false;
             }
-            validation_changed ();
+
+            return false;
         }
 
         public string? get_password () {
             if (is_valid) {
-                return new_pw_entry.text;
+                return pw_entry.text;
             } else {
                 return null;
             }
+        }
+
+        private class ValidatedEntry : Gtk.Entry {
+            public bool is_valid { get; set; default = false; }
         }
     }
 }
