@@ -20,61 +20,26 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class PasswordEditor : Gtk.Grid {
         private ErrorRevealer confirm_entry_revealer;
-        private ErrorRevealer error_revealer;
         private ErrorRevealer pw_error_revealer;
-        private Gtk.Entry current_pw_entry;
         private Gtk.Entry new_pw_entry;
         private Gtk.Entry confirm_entry;
         private Gtk.LevelBar pw_levelbar;
 
         private PasswordQuality.Settings pwquality;
 
-        public bool is_authenticated { get; private set; default = false; }
+        public Gtk.Entry current_pw_entry { get; construct; }
+        private bool is_authenticated { get; private set; default = false; }
         public bool is_valid { get; private set; default = false; }
 
-        private signal void auth_changed ();
         public signal void validation_changed ();
+
+        public PasswordEditor (Gtk.Entry? current_pw_entry) {
+            Object (current_pw_entry: current_pw_entry);
+        }
 
         construct {
             pwquality = new PasswordQuality.Settings ();
             is_authenticated = get_permission ().allowed;
-            /*
-             * users who don't have superuser privileges will need to auth against passwd.
-             * therefore they will need these UI elements created and displayed to set is_authenticated.
-             */
-            if (!is_authenticated) {
-                current_pw_entry = new Gtk.Entry ();
-                current_pw_entry.placeholder_text = _("Current Password");
-                current_pw_entry.visibility = false;
-                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
-                current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
-
-                error_revealer = new ErrorRevealer (_("Authentication failed"));
-                error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
-                error_revealer.margin_top = 3;
-
-                current_pw_entry.changed.connect (() => {
-                    if (current_pw_entry.text.length > 0) {
-                        current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
-                    }
-
-                    error_revealer.reveal_child = false;
-                });
-
-                current_pw_entry.activate.connect (password_auth);
-                current_pw_entry.icon_release.connect (password_auth);
-
-                //use TAB to "activate" the GtkEntry for the current password
-                this.key_press_event.connect ((e) => {
-                    if (e.keyval == Gdk.Key.Tab && current_pw_entry.sensitive == true) {
-                        password_auth ();
-                    }
-                    return false;
-                });
-
-                attach (current_pw_entry, 0, 0, 1, 1);
-                attach (error_revealer, 0, 1, 1, 1);
-            }
 
             var pw_label = new Granite.HeaderLabel (_("New Password"));
 
@@ -118,22 +83,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             new_pw_entry.changed.connect (compare_passwords);
             confirm_entry.changed.connect (compare_passwords);
 
-            auth_changed.connect (update_ui);
             show_all ();
-        }
-
-        private void update_ui () {
-            if (is_authenticated) {
-                current_pw_entry.sensitive = false;
-                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
-                current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Password accepted"));
-
-                new_pw_entry.sensitive = true;
-                new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
-                new_pw_entry.grab_focus ();
-
-                confirm_entry.sensitive = true;
-            }
         }
 
         private void compare_passwords () {
@@ -195,33 +145,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             validation_changed ();
         }
 
-        private void password_auth () {
-            Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
-                if (e != null) {
-                    debug ("Authentication error: %s".printf (e.message));
-                    error_revealer.reveal_child = true;
-                    error_revealer.show_all ();
-                    is_authenticated = false;
-                    auth_changed ();
-                } else {
-                    debug ("User is authenticated for password change now");
-                    is_authenticated = true;
-                    auth_changed ();
-                }
-            });
-        }
-
         public string? get_password () {
             if (is_valid) {
                 return new_pw_entry.text;
             } else {
                 return null;
             }
-        }
-
-        public void reset () {
-            new_pw_entry.text = "";
-            confirm_entry.text = "";
         }
     }
 }

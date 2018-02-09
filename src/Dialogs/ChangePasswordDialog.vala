@@ -18,6 +18,11 @@
 */
 
 public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
+    private bool is_authenticated { get; private set; default = false; }
+
+    private ErrorRevealer current_pw_error;
+    private Gtk.Entry current_pw_entry;
+
     public unowned Act.User user { get; construct; }
     public signal void request_password_change (Act.UserPasswordMode mode, string? new_password);
 
@@ -29,15 +34,60 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
     }
 
     construct {
-        var pw_editor = new Widgets.PasswordEditor ();
-        pw_editor.margin_start = pw_editor.margin_end = 12;
+        var form_grid = new Gtk.Grid ();
+        form_grid.margin_start = form_grid.margin_end = 12;
+        form_grid.orientation = Gtk.Orientation.VERTICAL;
+        form_grid.row_spacing = 3;
+
+        is_authenticated = get_permission ().allowed;
+
+        if (!is_authenticated) {
+            var current_pw_label = new Granite.HeaderLabel (_("Current Password"));
+
+            current_pw_entry = new Gtk.Entry ();
+            current_pw_entry.visibility = false;
+            current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
+
+            current_pw_error = new ErrorRevealer (_("Authentication failed"));
+            current_pw_error.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+
+            form_grid.add (current_pw_label);
+            form_grid.add (current_pw_entry);
+            form_grid.add (current_pw_error);
+
+            current_pw_entry.changed.connect (() => {
+                if (current_pw_entry.text.length > 0) {
+                    current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
+                } else {
+                    current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                }
+
+                current_pw_error.reveal_child = false;
+            });
+
+            current_pw_entry.activate.connect (password_auth);
+            current_pw_entry.icon_release.connect (password_auth);
+
+            //use TAB to "activate" the GtkEntry for the current password
+            key_press_event.connect ((e) => {
+                if (e.keyval == Gdk.Key.Tab && current_pw_entry.sensitive == true) {
+                    password_auth ();
+                }
+                return false;
+            });
+        }
+
+        var pw_editor = new Widgets.PasswordEditor (current_pw_entry);
+
+        form_grid.add (pw_editor);
+        form_grid.show_all ();
 
         deletable = false;
         modal = true;
         resizable= false;
         width_request = 560;
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
-        get_content_area ().add (pw_editor);
+        get_content_area ().add (form_grid);
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
@@ -53,7 +103,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
         action_area.show_all ();
 
         pw_editor.validation_changed.connect (() => {
-            if (pw_editor.is_valid && pw_editor.is_authenticated) {
+            if (pw_editor.is_valid && is_authenticated) {
                 button_change.sensitive = true;
             } else {
                 button_change.sensitive = false;
@@ -67,6 +117,22 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
 
         cancel_button.clicked.connect (() => {
             destroy ();
+        });
+    }
+
+    private void password_auth () {
+        Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
+            if (e != null) {
+                debug ("Authentication error: %s".printf (e.message));
+                current_pw_error.reveal_child = true;
+                is_authenticated = false;
+            } else {
+                debug ("User is authenticated for password change now");
+                is_authenticated = true;
+
+                current_pw_entry.sensitive = false;
+                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
+            }
         });
     }
 }
