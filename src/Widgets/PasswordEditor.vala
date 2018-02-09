@@ -120,6 +120,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 is_valid = true;
                 new_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
                 confirm_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                confirm_entry_revealer.reveal_child = false;
             } else {
                 is_valid = false;
 
