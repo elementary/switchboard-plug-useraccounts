@@ -141,7 +141,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
             }
 
             username_error_revealer.reveal_child = true;
-            username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic");
+            username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
         }
 
         return false;
