@@ -179,12 +179,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             autologin_switch.margin_top = 24;
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
 
-            var change_password_label = new Gtk.Label (_("Password:"));
-            change_password_label.halign = Gtk.Align.END;
-
-            password_button = new Gtk.Button ();
-            password_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            password_button.halign = Gtk.Align.START;
+            password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
 
@@ -224,7 +219,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (lang_label, 0, 2, 1, 1);
             attach (login_label, 0, 4, 1, 1);
             attach (autologin_switch, 1, 4, 1, 1);
-            attach (change_password_label, 0, 5, 1, 1);
             attach (password_button, 1, 5, 1, 1);
             attach (enable_user_button, 1, 6, 1, 1);
             attach (full_name_lock, 2, 0, 1, 1);
@@ -322,10 +316,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 update_account_type ();
             }
 
-            if (delta_user.password_mode != user.get_password_mode ()) {
-                update_password ();
-            }
-
             if (delta_user.automatic_login != user.get_automatic_login ()) {
                 update_autologin ();
             }
@@ -366,13 +356,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             } else if (!user.get_locked ())
                 enable_user_button.set_label (_("Disable User Account"));
-        }
-
-        public void update_password () {
-            if (user.get_password_mode () == Act.UserPasswordMode.NONE)
-                password_button.set_label (_("None set"));
-            else
-                password_button.set_label ("**********");
         }
 
         public void update_avatar () {
