@@ -39,8 +39,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var guest_autologin_label = new Gtk.Label (_("Log In automatically:"));
             guest_autologin_label.xalign = 0;
 
-            content_area.attach (guest_autologin_label, 0, 3, 1, 1);
-            content_area.attach (guest_autologin_switch, 1, 3, 1, 1);
+            content_area.attach (guest_autologin_label, 0, 0, 1, 1);
+            content_area.attach (guest_autologin_switch, 1, 0, 1, 1);
 
             margin = 12;
             show_all ();
