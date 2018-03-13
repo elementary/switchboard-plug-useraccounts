@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-11 18:15+0000\n"
+"PO-Revision-Date: 2018-03-14 00:02+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/it/>\n"
@@ -39,11 +39,11 @@ msgstr "Accesso automatico:"
 
 #: ../src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "Non disponi dei permessi necessari per cambiare questo"
+msgstr "Non disponi dei permessi necessari per cambiare questo parametro"
 
 #: ../src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
-msgstr "Non è possibile modificare questo per l'utente attivo"
+msgstr "Non è possibile modificare questo parametro per l'utente attivo"
 
 #: ../src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
@@ -68,7 +68,7 @@ msgstr "Lingua:"
 
 #: ../src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Clicca per passare alle impostazioni di Lingua e Regione"
+msgstr "Clicca per passare alle impostazioni di lingua e regione"
 
 #: ../src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
