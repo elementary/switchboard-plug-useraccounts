@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-14 00:02+0000\n"
+"PO-Revision-Date: 2018-03-17 00:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/ja/>\n"
@@ -202,11 +202,11 @@ msgstr "その他のアカウント"
 
 #: ../src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr "有効にする"
+msgstr "有効"
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "無効にする"
+msgstr "無効"
 
 #: ../src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
