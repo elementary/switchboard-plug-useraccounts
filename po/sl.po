@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2017-05-31 22:06+0000\n"
+"PO-Revision-Date: 2018-03-21 19:53+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
-"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/sl/>\n"
+"Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.14\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: ../src/Views/GuestSettingsView.vala:28
@@ -71,9 +71,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr "Kliknite za jezikovne in področne nastavitve"
 
 #: ../src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "Spremeni geslo"
+msgstr "Spremeni geslo…"
 
 #: ../src/Views/UserSettingsView.vala:355
 msgid "Enable User Account"
@@ -146,7 +145,6 @@ msgid "Change Password"
 msgstr "Spremeni geslo"
 
 #: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
 msgstr "Vrsta računa:"
 
@@ -171,9 +169,9 @@ msgid "Username is already taken"
 msgstr "Uporabniško ime je že zasedeno"
 
 #: ../src/Dialogs/NewUserDialog.vala:140
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Vsebuje lahko le male črke in številke, brez presledkov"
+msgstr ""
+"Uporabniško ime lahko vsebuje lahko le male črke in številke, brez presledkov"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -212,12 +210,10 @@ msgid "Disabled"
 msgstr "Onemogočeno"
 
 #: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Spremeni geslo"
+msgstr "Izberite geslo"
 
 #: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
 msgstr "Potrdite novo geslo"
 
