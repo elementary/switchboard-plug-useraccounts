@@ -165,6 +165,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private class ValidatedEntry : Gtk.Entry {
             public bool is_valid { get; set; default = false; }
+
+            construct {
+                activates_default = true;
+            }
         }
     }
 }
