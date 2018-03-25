@@ -77,6 +77,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         create_button = new Gtk.Button.with_label (_("Create User"));
+        create_button.can_default = true;
         create_button.sensitive = false;
         create_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -150,6 +151,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
     private void update_create_button () {
         if (username_entry.is_valid && pw_editor.is_valid) {
             create_button.sensitive = true;
+            create_button.has_default = true;
         } else {
             create_button.sensitive = false;
         }
