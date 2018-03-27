@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2017-05-12 11:26+0000\n"
-"Last-Translator: Ryo Nakano <nscnskichiro0911@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/ja/>\n"
+"PO-Revision-Date: 2018-03-17 00:10+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: ../src/Views/GuestSettingsView.vala:28
@@ -70,9 +70,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr "言語と地域の設定を変更する場合はクリックしてください"
 
 #: ../src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "パスワードを変更"
+msgstr "パスワードを変更…"
 
 #: ../src/Views/UserSettingsView.vala:355
 msgid "Enable User Account"
@@ -146,9 +145,8 @@ msgid "Change Password"
 msgstr "パスワードを変更"
 
 #: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "アカウントの種類:"
+msgstr "アカウントの種類"
 
 #: ../src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -171,9 +169,8 @@ msgid "Username is already taken"
 msgstr "ユーザー名がすでに使われています"
 
 #: ../src/Dialogs/NewUserDialog.vala:140
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "英字小文字と数字のみ、空白なし"
+msgstr "ユーザー名は英字小文字と数字だけを含むことができ、空白は使用できません"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -205,21 +202,19 @@ msgstr "その他のアカウント"
 
 #: ../src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr "有効にする"
+msgstr "有効"
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "無効にする"
+msgstr "無効"
 
 #: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "パスワードを変更"
+msgstr "パスワードを選択"
 
 #: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
-msgstr "新しいパスワードの確認"
+msgstr "パスワードの確認"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
