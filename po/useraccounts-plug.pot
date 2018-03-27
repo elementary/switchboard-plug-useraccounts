@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 13:39-0800\n"
+"POT-Creation-Date: 2018-03-11 11:01-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,23 +103,23 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:37 ../src/Widgets/UserListBox.vala:104
-msgid "Guest Session"
-msgstr ""
-
-#: ../src/Views/GuestSettingsView.vala:47
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr ""
-
-#: ../src/Views/GuestSettingsView.vala:51
+#: ../src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:52
+#: ../src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr ""
+
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
 msgstr ""
 
 #: ../src/Views/MainView.vala:52
@@ -159,19 +159,15 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr ""
 
 #: ../src/Views/UserSettingsView.vala:182
-msgid "Password:"
+msgid "Change Password…"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:365
+#: ../src/Views/UserSettingsView.vala:355
 msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:368
+#: ../src/Views/UserSettingsView.vala:358
 msgid "Disable User Account"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:373
-msgid "None set"
 msgstr ""
 
 #: ../src/Widgets/ListFooter.vala:35
@@ -222,18 +218,18 @@ msgstr ""
 msgid "Images"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:38
+#: ../src/Widgets/UserListBox.vala:33
 msgid "My Account"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:42
+#: ../src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:84
+#: ../src/Widgets/UserListBox.vala:102
 msgid "Enabled"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:88
+#: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr ""

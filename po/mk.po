@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 14:36-0500\n"
+"POT-Creation-Date: 2018-02-27 22:07+0300\n"
 "PO-Revision-Date: 2015-06-13 17:54+0000\n"
 "Last-Translator: Goran Maksimovski <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,238 +13,78 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Views/GuestSettingsView.vala:29 ../src/Views/UserSettingsView.vala:52
-msgid "You do not have permission to change this"
-msgstr ""
-
-#: ../src/Views/GuestSettingsView.vala:52 ../src/Widgets/UserListBox.vala:104
-msgid "Guest Session"
-msgstr "Сесија за гостин"
-
-#: ../src/Views/GuestSettingsView.vala:88
-#: ../src/Views/UserSettingsView.vala:178
-msgid "Log In automatically:"
-msgstr "Логирај се автоматски:"
-
-#: ../src/Views/GuestSettingsView.vala:97
+#: ../src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:98
+#: ../src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: ../src/Views/MainView.vala:38
-msgid "Undo last user account removal"
-msgstr ""
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Сесија за гостин"
 
-#: ../src/Views/MainView.vala:39
-msgid "Undo"
-msgstr ""
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "Логирај се автоматски:"
 
 #: ../src/Views/UserSettingsView.vala:53
-msgid "You cannot change this for the currently active user"
+msgid "You do not have permission to change this"
 msgstr ""
 
 #: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:94
+#: ../src/Views/UserSettingsView.vala:93
 msgid "Account type:"
 msgstr "Тип на акаунт:"
 
-#: ../src/Views/UserSettingsView.vala:99
+#: ../src/Views/UserSettingsView.vala:97
 msgid "Standard"
 msgstr "Стандардно"
 
-#: ../src/Views/UserSettingsView.vala:100 ../src/Widgets/UserItem.vala:52
-#: ../src/Widgets/Popovers/NewUserPopover.vala:61
+#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "Администратор"
 
-#: ../src/Views/UserSettingsView.vala:107
+#: ../src/Views/UserSettingsView.vala:104
 msgid "Language:"
 msgstr "Јазик:"
 
-#: ../src/Views/UserSettingsView.vala:174
+#: ../src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:190
-msgid "Password:"
-msgstr "Лозинка:"
+#: ../src/Views/UserSettingsView.vala:182
+#, fuzzy
+msgid "Change Password…"
+msgstr "Смени Лозинка"
 
-#: ../src/Views/UserSettingsView.vala:350
+#: ../src/Views/UserSettingsView.vala:355
 msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:353
+#: ../src/Views/UserSettingsView.vala:358
 msgid "Disable User Account"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:358
-msgid "None set"
-msgstr "Не е поставено"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Создади кориснички акаунт"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:69
-msgid "Remove user account and its data"
-msgstr "Отстрани кориснички акаунт и неговите податоци"
-
-#: ../src/Widgets/ListFooter.vala:73
-msgid "You cannot remove your own user account"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
 msgstr ""
 
-#: ../src/Widgets/UserListBox.vala:38
-msgid "My Account"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
 msgstr ""
-
-#: ../src/Widgets/UserListBox.vala:42
-msgid "Other Accounts"
-msgstr ""
-
-#: ../src/Widgets/UserListBox.vala:84
-msgid "Enabled"
-msgstr "Овозможено"
-
-#: ../src/Widgets/UserListBox.vala:88
-msgid "Disabled"
-msgstr "Оневозможено"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Отстрани"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr ""
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
-msgid "Select an image"
-msgstr "Одбери слика"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-#: ../src/Dialogs/AvatarDialog.vala:71
-msgid "Cancel"
-msgstr "Откажи"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
-msgid "Open"
-msgstr "Отвори"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Слики"
-
-#: ../src/Widgets/Popovers/PasswordPopover.vala:47
-msgid "Change Password"
-msgstr "Смени Лозинка"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:60
-msgid "Standard User"
-msgstr "Стандарден корисник"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:68
-msgid "Full Name"
-msgstr "Цело име"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:78
-msgid "Username"
-msgstr "Корисничко име"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:82
-msgid "Can only contain lower case letters, numbers and no spaces"
-msgstr "Може да содржи само мали букви, бројки и без празни места"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:100
-msgid "Set password now"
-msgstr "Подеси лозинка сега"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:102
-msgid "Set no password for login"
-msgstr "Да нема лозинка за логирање"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:104
-msgid "Let user create password on first login"
-msgstr "Нека создаде корисникот лозинка на првото логирање"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:128
-msgid "Create User"
-msgstr "Креирај корисник"
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:170
-msgid "Username is already taken"
-msgstr "Корисничкото име е веќе зафатено."
-
-#: ../src/Widgets/Popovers/NewUserPopover.vala:173
-msgid "Username is not valid"
-msgstr "Корисничкото име не е валидно"
-
-#: ../src/Widgets/PasswordEditor.vala:67
-msgid "Current Password"
-msgstr "Сегашна лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:71
-msgid "Press to authenticate"
-msgstr "Притисни за автентикација"
-
-#: ../src/Widgets/PasswordEditor.vala:89
-msgid "Authentication failed"
-msgstr "Автентикацијата не успеа"
-
-#: ../src/Widgets/PasswordEditor.vala:121
-msgid "New Password"
-msgstr "Нова лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:125
-msgid "Password cannot be empty"
-msgstr "Лозинката не може да биде празна"
-
-#: ../src/Widgets/PasswordEditor.vala:141
-msgid "Confirm New Password"
-msgstr "Потврди нова лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:144
-msgid "Passwords do not match"
-msgstr "Лозинките не се совпаѓаат"
-
-#: ../src/Widgets/PasswordEditor.vala:148
-msgid "Show passwords"
-msgstr "Покажи лозинки"
-
-#: ../src/Widgets/PasswordEditor.vala:169
-msgid "Password accepted"
-msgstr "Лозинката е прифатена"
-
-#: ../src/Widgets/PasswordEditor.vala:190
-msgid "Weak password strength"
-msgstr "Слаба лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:192
-msgid "Medium password strength"
-msgstr "Средно-добра лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:194
-msgid "Strong password strength"
-msgstr "Силна лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:209
-msgid "Resembles your current password"
-msgstr "Слична на сегашната лозинка"
-
-#: ../src/Widgets/PasswordEditor.vala:211
-msgid "New password is too simple"
-msgstr "Новата лозинка е многу едноставна"
-
-#: ../src/Widgets/PasswordEditor.vala:213
-msgid "New password is a palindrome"
-msgstr "Новата лозинка е палиндром"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -259,19 +99,183 @@ msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: ../src/Plug.vala:71
+#: ../src/Plug.vala:67
 msgid "Password change failed"
 msgstr "Промената на лозинката не успеа"
 
-#: ../src/Plug.vala:85
+#: ../src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 
-#: ../src/Plug.vala:104
+#: ../src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Откажи"
 
 #: ../src/Dialogs/AvatarDialog.vala:72
 msgid "Change Avatar"
 msgstr "Промени аватар"
+
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Сегашна лозинка"
+
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Притисни за автентикација"
+
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Автентикацијата не успеа"
+
+#: ../src/Dialogs/ChangePasswordDialog.vala:94
+msgid "Change Password"
+msgstr "Смени Лозинка"
+
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
+msgstr "Тип на акаунт:"
+
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Стандарден корисник"
+
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Цело име"
+
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Корисничко име"
+
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Креирај корисник"
+
+#: ../src/Dialogs/NewUserDialog.vala:138
+msgid "Username is already taken"
+msgstr "Корисничкото име е веќе зафатено."
+
+#: ../src/Dialogs/NewUserDialog.vala:140
+#, fuzzy
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "Може да содржи само мали букви, бројки и без празни места"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:35
+msgid "Remove"
+msgstr "Отстрани"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:38
+msgid "Set from File…"
+msgstr ""
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+msgid "Select an image"
+msgstr "Одбери слика"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+msgid "Open"
+msgstr "Отвори"
+
+#: ../src/Widgets/Popovers/AvatarPopover.vala:67
+msgid "Images"
+msgstr "Слики"
+
+#: ../src/Widgets/UserListBox.vala:33
+msgid "My Account"
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:35
+msgid "Other Accounts"
+msgstr ""
+
+#: ../src/Widgets/UserListBox.vala:102
+msgid "Enabled"
+msgstr "Овозможено"
+
+#: ../src/Widgets/UserListBox.vala:106
+msgid "Disabled"
+msgstr "Оневозможено"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "Смени Лозинка"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "Потврди нова лозинка"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Покажи лозинки"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Лозинките не се совпаѓаат"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Создади кориснички акаунт"
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Отстрани кориснички акаунт и неговите податоци"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr ""
+
+#~ msgid "Password:"
+#~ msgstr "Лозинка:"
+
+#~ msgid "None set"
+#~ msgstr "Не е поставено"
+
+#~ msgid "Set password now"
+#~ msgstr "Подеси лозинка сега"
+
+#~ msgid "Set no password for login"
+#~ msgstr "Да нема лозинка за логирање"
+
+#~ msgid "Let user create password on first login"
+#~ msgstr "Нека создаде корисникот лозинка на првото логирање"
+
+#~ msgid "Username is not valid"
+#~ msgstr "Корисничкото име не е валидно"
+
+#~ msgid "New Password"
+#~ msgstr "Нова лозинка"
+
+#~ msgid "Password cannot be empty"
+#~ msgstr "Лозинката не може да биде празна"
+
+#~ msgid "Password accepted"
+#~ msgstr "Лозинката е прифатена"
+
+#~ msgid "Weak password strength"
+#~ msgstr "Слаба лозинка"
+
+#~ msgid "Medium password strength"
+#~ msgstr "Средно-добра лозинка"
+
+#~ msgid "Strong password strength"
+#~ msgstr "Силна лозинка"
+
+#~ msgid "Resembles your current password"
+#~ msgstr "Слична на сегашната лозинка"
+
+#~ msgid "New password is too simple"
+#~ msgstr "Новата лозинка е многу едноставна"
+
+#~ msgid "New password is a palindrome"
+#~ msgstr "Новата лозинка е палиндром"
