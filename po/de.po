@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-28 00:04+0000\n"
-"Last-Translator: Justin <justin.hucke@t-online.de>\n"
+"PO-Revision-Date: 2018-04-15 00:10+0000\n"
+"Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/de/>\n"
 "Language: de\n"
@@ -219,9 +219,8 @@ msgid "Choose a Password"
 msgstr "Wähle ein Passwort"
 
 #: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Neues Passwort bestätigen"
+msgstr "Passwort bestätigen"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
