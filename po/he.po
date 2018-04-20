@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-11 13:10+0000\n"
+"PO-Revision-Date: 2018-04-21 00:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/he/>\n"
@@ -202,7 +202,7 @@ msgstr "פעיל"
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "מושבת"
+msgstr "מושבתת"
 
 #: ../src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
