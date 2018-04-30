@@ -107,9 +107,7 @@ namespace SwitchboardPlugUserAccounts {
             main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
-                if (get_permission ().allowed) {
-                    infobar.visible = false;
-                }
+                infobar.visible = !get_permission ().allowed;
             });
 
             return main_grid;
