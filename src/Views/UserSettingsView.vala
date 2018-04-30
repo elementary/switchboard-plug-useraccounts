@@ -182,7 +182,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
-
+                if (user == get_current_user ()) {
+                    get_permission ().release ();
+                }
                 var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_toplevel (), user);
                 change_password_dialog.present ();
                 change_password_dialog.request_password_change.connect (utils.change_password);
