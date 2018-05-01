@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-04-15 00:10+0000\n"
+"PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/de/>\n"
@@ -97,7 +97,7 @@ msgstr "Zur Änderung von Benutzerdaten ist eine Legitimierung erforderlich"
 
 #: ../src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Benutzer"
+msgstr "Benutzerkonten"
 
 #: ../src/Plug.vala:43
 msgid ""
