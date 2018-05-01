@@ -182,12 +182,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
                 InfobarNotifier.get_default ().unset_error ();
-                if (user == get_current_user () && get_permission ().allowed) {
+                var permission = get_permission ();
+                if (user == get_current_user () && permission.allowed) {
                     try {
-                        get_permission ().release ();
+                        permission.release ();
                     } catch (Error e){
-                        warning ("Error releasing privileges:");
-                        warning (e.message);
+                        critical ("Error releasing privileges: %s", e.message);
                     }
                 }
 
