@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-04-21 00:11+0000\n"
+"PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/he/>\n"
@@ -93,7 +93,7 @@ msgstr "נדרש אימות כדי לשנות נתוני משתמש"
 
 #: ../src/Plug.vala:42
 msgid "User Accounts"
-msgstr "חשבונות משתמש"
+msgstr "חשבונות משתמשים"
 
 #: ../src/Plug.vala:43
 msgid ""
