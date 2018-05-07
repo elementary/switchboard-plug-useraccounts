@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2017-05-18 20:16+0000\n"
+"PO-Revision-Date: 2018-04-19 19:13+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/cs/>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: ../src/Views/GuestSettingsView.vala:28
@@ -69,9 +69,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr "Klikněte pro přepnutí do nastavení Jazyka & Národního prostředí"
 
 #: ../src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "Změna hesla"
+msgstr "Změnit heslo…"
 
 #: ../src/Views/UserSettingsView.vala:355
 msgid "Enable User Account"
@@ -144,9 +143,8 @@ msgid "Change Password"
 msgstr "Změna hesla"
 
 #: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Typ účtu:"
+msgstr "Typ účtu"
 
 #: ../src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -169,9 +167,8 @@ msgid "Username is already taken"
 msgstr "Uživatelské jméno již existuje"
 
 #: ../src/Dialogs/NewUserDialog.vala:140
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Může obsahovat pouze malá písmena a číslice bez mezer"
+msgstr "Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -210,14 +207,12 @@ msgid "Disabled"
 msgstr "Vypnuto"
 
 #: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Změna hesla"
+msgstr "Vybrat heslo"
 
 #: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Potvrď te nové heslo"
+msgstr "Potvrdit heslo"
 
 #: ../src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"

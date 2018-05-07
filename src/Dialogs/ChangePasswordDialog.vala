@@ -65,15 +65,13 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
                 current_pw_error.reveal_child = false;
             });
 
+            this.set_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
+
             current_pw_entry.activate.connect (password_auth);
             current_pw_entry.icon_release.connect (password_auth);
 
-            //use TAB to "activate" the GtkEntry for the current password
-            key_press_event.connect ((e) => {
-                if (e.keyval == Gdk.Key.Tab && current_pw_entry.sensitive == true) {
-                    password_auth ();
-                }
-                return false;
+            current_pw_entry.focus_out_event.connect (() => {
+                password_auth ();
             });
         }
 
@@ -127,11 +125,15 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
     }
 
     private void password_auth () {
+        current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-working-symbolic");
+        current_pw_entry.get_style_context ().add_class ("spin");
+
         Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
             if (e != null) {
                 debug ("Authentication error: %s".printf (e.message));
                 current_pw_error.reveal_child = true;
                 is_authenticated = false;
+                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
             } else {
                 debug ("User is authenticated for password change now");
                 is_authenticated = true;
@@ -139,6 +141,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
                 current_pw_entry.sensitive = false;
                 current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
             }
+            current_pw_entry.get_style_context ().remove_class ("spin");
         });
     }
 }

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-24 21:42+0000\n"
+"PO-Revision-Date: 2018-05-07 00:03+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/da/>\n"
@@ -96,7 +96,7 @@ msgstr "Godkendelse påkrævet for at kunne ændre brugerdata"
 
 #: ../src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Brugerkonti"
+msgstr "Bruger Konti"
 
 #: ../src/Plug.vala:43
 msgid ""

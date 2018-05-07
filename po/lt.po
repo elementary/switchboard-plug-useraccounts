@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-27 22:07+0300\n"
-"PO-Revision-Date: 2018-03-11 18:24+0000\n"
+"PO-Revision-Date: 2018-04-21 00:11+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/lt/>\n"
@@ -211,7 +211,7 @@ msgstr "Įjungta"
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "Išjungta"
+msgstr "Išjungtas"
 
 #: ../src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
