@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-useraccounts/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,77 +15,65 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבון בררת מחדל זמני ללא ססמה."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "ביטול"
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתונים יימחקו."
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "החלפת תמונת המשתמש"
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "הפעלת אורח"
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "הססמה הנוכחית"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr "כניסה אוטומטית:"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "יש ללחוץ לאימות"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "אין לך הרשאה לשנות את זה"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "האימות נכשל"
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "החלפת הססמה"
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
+#: ../src/Dialogs/NewUserDialog.vala:31
+msgid "Account Type"
+msgstr "סוג החשבון"
 
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "סוג החשבון:"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "משתמש רגיל"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "רגיל"
-
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "מנהל"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "שפה:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "שם מלא"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "שם משתמש"
 
-#: ../src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "החלפת הססמה…"
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "יצירת משתמש"
 
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
-msgstr "הפעלת חשבון משתמש"
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "שם המשתמש כבר תפוס"
 
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr "השבתת חשבון משתמש"
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "ביטול הסרת החשבון האחרון"
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
-msgstr "חזרה"
+#: ../src/Dialogs/NewUserDialog.vala:141
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנות, מספרים וללא רווחים"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -113,60 +101,100 @@ msgstr "השינויים שנערכים בהפעלת המשתמש לא יחול�
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "ביטול"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבון בררת מחדל זמני ללא ססמה."
 
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "החלפת תמונת המשתמש"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתונים יימחקו."
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "הססמה הנוכחית"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "הפעלת אורח"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "יש ללחוץ לאימות"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "כניסה אוטומטית:"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "האימות נכשל"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr "ביטול הסרת החשבון האחרון"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "החלפת הססמה"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr "חזרה"
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-msgid "Account Type"
-msgstr "סוג החשבון"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr "אין לך הרשאה לשנות את זה"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "משתמש רגיל"
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "שם מלא"
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "שם משתמש"
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
+msgstr "סוג החשבון:"
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "יצירת משתמש"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "רגיל"
 
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
-msgstr "שם המשתמש כבר תפוס"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "שפה:"
 
-#: ../src/Dialogs/NewUserDialog.vala:140
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנות, מספרים וללא רווחים"
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
+
+#: ../src/Views/UserSettingsView.vala:182
+msgid "Change Password…"
+msgstr "החלפת הססמה…"
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr "הפעלת חשבון משתמש"
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "השבתת חשבון משתמש"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "יצירת חשבון משתמש"
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "הסרת חשבון משתמש לרבות הנתונים"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+msgid "Choose a Password"
+msgstr "נא לבחור ססמה"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+msgid "Confirm Password"
+msgstr "אימות הססמה"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "הצגת הססמאות"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "הססמאות אינן תואמות"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -203,34 +231,6 @@ msgstr "פעיל"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "מושבתת"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-msgid "Choose a Password"
-msgstr "נא לבחור ססמה"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-msgid "Confirm Password"
-msgstr "אימות הססמה"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "הצגת הססמאות"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "הססמאות אינן תואמות"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "יצירת חשבון משתמש"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "הסרת חשבון משתמש לרבות הנתונים"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
 
 #~ msgid "Password:"
 #~ msgstr "ססמה:"

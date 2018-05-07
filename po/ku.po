@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Rokar <mail@rokar.de>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,77 +15,65 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-27 05:52+0000\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Betal bike"
+
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Cihwêne Biguherîne"
+
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Danişîna Mêvanî"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Têketin serneket"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr ""
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Şîfreyê Biguherîne"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
 msgstr "Cureyê hesabê:"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Standart"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "Rêveber"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Ziman:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Nav û paşnav"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Navê bikarhêner"
+
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:182
-#, fuzzy
-msgid "Change Password…"
-msgstr "Şîfreyê Biguherîne"
-
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr ""
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr ""
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
+#: ../src/Dialogs/NewUserDialog.vala:141
+msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 
 #: ../src/Plug.vala:35
@@ -114,61 +102,103 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Betal bike"
-
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Cihwêne Biguherîne"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Têketin serneket"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Danişîna Mêvanî"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "Şîfreyê Biguherîne"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr ""
+
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr "Cureyê hesabê:"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "Standart"
+
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "Ziman:"
+
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Nav û paşnav"
+#: ../src/Views/UserSettingsView.vala:182
+#, fuzzy
+msgid "Change Password…"
+msgstr "Şîfreyê Biguherîne"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Navê bikarhêner"
-
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:140
-msgid "Username can only contain lowercase letters and numbers, without spaces"
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
 msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "Şîfreyê Biguherîne"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "Şîfreyê Biguherîne"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Şîfreyan nîşan bide"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Şîfre ne weke hev in"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -205,36 +235,6 @@ msgstr "Çalake"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Na çalak"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
-msgid "Choose a Password"
-msgstr "Şîfreyê Biguherîne"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
-msgid "Confirm Password"
-msgstr "Şîfreyê Biguherîne"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Şîfreyan nîşan bide"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Şîfre ne weke hev in"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr ""
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr ""
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr ""
 
 #~ msgid "Password:"
 #~ msgstr "Şîfre:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2016-04-29 15:01+0000\n"
 "Last-Translator: Alexander Grechko <AlexXxander1111@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,81 +13,68 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Гостьовий сеанс дозволяє будь-кому використати тимчасовий обліковий запис "
-"без паролю."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Скасувати"
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Як тільки сеанс буде завершено всі дані та налаштування будуть вилучені."
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Змінити аватар"
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Гостьовий сеанс"
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Поточний пароль"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr "Входити автоматично:"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Натисніть для автентифікації"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "У вас не має дозволу щоб змінити це"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Не вдалося автентифікуватись"
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Ви не можете змінити це для активного користувача"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Змінити пароль"
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Ви не можете вилучити останнього адміністратора"
-
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
 msgstr "Тип облікового запису:"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Стандартний"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Звичайний користувач"
 
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "Адміністратор"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Мова:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Повне ім'я"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Натисніть для переходу в налаштування мови та локалі"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Користувач"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Створити користувача"
+
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Ім’я користувача вже зайнято"
+
+#: ../src/Dialogs/NewUserDialog.vala:141
 #, fuzzy
-msgid "Change Password…"
-msgstr "Змінити пароль"
-
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
-msgstr "Увімкнути обліковий запис"
-
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr "Вимкнути обліковий запис"
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Відмінити останнє вилучення облікового запису"
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
+msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
+"Може містити тільки букви в нижньому регістрі, цифри та не містити пробілів"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -119,63 +106,106 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Скасувати"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"Гостьовий сеанс дозволяє будь-кому використати тимчасовий обліковий запис "
+"без паролю."
 
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Змінити аватар"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Як тільки сеанс буде завершено всі дані та налаштування будуть вилучені."
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Поточний пароль"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Гостьовий сеанс"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Натисніть для автентифікації"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "Входити автоматично:"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Не вдалося автентифікуватись"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr "Відмінити останнє вилучення облікового запису"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "Змінити пароль"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr "У вас не має дозволу щоб змінити це"
+
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr "Ви не можете змінити це для активного користувача"
+
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Ви не можете вилучити останнього адміністратора"
+
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr "Тип облікового запису:"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Звичайний користувач"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "Стандартний"
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Повне ім'я"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "Мова:"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Користувач"
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Натисніть для переходу в налаштування мови та локалі"
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Створити користувача"
-
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
-msgstr "Ім’я користувача вже зайнято"
-
-#: ../src/Dialogs/NewUserDialog.vala:140
+#: ../src/Views/UserSettingsView.vala:182
 #, fuzzy
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr ""
-"Може містити тільки букви в нижньому регістрі, цифри та не містити пробілів"
+msgid "Change Password…"
+msgstr "Змінити пароль"
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr "Увімкнути обліковий запис"
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Вимкнути обліковий запис"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Створити обліковий запис користувача"
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Вилучити обліковий запис користувача та його дані"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "Ви не можете вилучити власний обліковий запис"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "Змінити пароль"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "Підтвердження нового пароля"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Показати паролі"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Паролі не співпадають"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -212,36 +242,6 @@ msgstr "Увімкнено"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Вимкнено"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
-msgid "Choose a Password"
-msgstr "Змінити пароль"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
-msgid "Confirm Password"
-msgstr "Підтвердження нового пароля"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Показати паролі"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Паролі не співпадають"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Створити обліковий запис користувача"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "Вилучити обліковий запис користувача та його дані"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "Ви не можете вилучити власний обліковий запис"
 
 #~ msgid "Password:"
 #~ msgstr "Пароль:"

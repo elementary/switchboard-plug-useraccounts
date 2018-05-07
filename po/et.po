@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,80 +13,67 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr "Külalisseanssiga on võimalik arvutit ilma paroolita kasutada."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Loobu"
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-"Külalisseanssist väljalogides kustutatakse kõik külalise konto eelistused "
-"ning loodud andmed."
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Konto pildi muutmine"
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Külalisseanss"
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Praegune parool"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr "Automaatne sisselogimine:"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Autentimiseks vajuta"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "Sul pole õigusi selle muutmiseks"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Autentimine ebaõnnestus"
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Seda ei saa sisselogitud konto puhul muuta"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Muuda parooli"
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Ainukese administraatori õiguseid pole võimalik eemaldada"
-
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
 msgstr "Konto tüüp:"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Tavaline"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Tavakasutaja"
 
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "Administraator"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Keel:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Täisnimi"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Ava keele ja piirkonna eelistused"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Kasutajanimi"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Loo kasutaja"
+
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Sisestatud kasutajanimi on juba võetud"
+
+#: ../src/Dialogs/NewUserDialog.vala:141
 #, fuzzy
-msgid "Change Password…"
-msgstr "Muuda parooli"
-
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
-msgstr "Luba konto"
-
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr "Keela konto"
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Taasta kustutatud konto"
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
-msgstr ""
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "Lubatud on ainult väiketähed, numbrid ning tühikut pole lubatud"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -114,62 +101,105 @@ msgstr "Külalisseanssi eelistused rakenduvad pärast süsteemi taaskäivitamist
 msgid "Some settings require administrator rights to be changed"
 msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Loobu"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr "Külalisseanssiga on võimalik arvutit ilma paroolita kasutada."
 
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Konto pildi muutmine"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr ""
+"Külalisseanssist väljalogides kustutatakse kõik külalise konto eelistused "
+"ning loodud andmed."
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Praegune parool"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Külalisseanss"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Autentimiseks vajuta"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "Automaatne sisselogimine:"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Autentimine ebaõnnestus"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr "Taasta kustutatud konto"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "Muuda parooli"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr "Sul pole õigusi selle muutmiseks"
+
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr "Seda ei saa sisselogitud konto puhul muuta"
+
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Ainukese administraatori õiguseid pole võimalik eemaldada"
+
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr "Konto tüüp:"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Tavakasutaja"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "Tavaline"
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Täisnimi"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "Keel:"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Kasutajanimi"
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Ava keele ja piirkonna eelistused"
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Loo kasutaja"
-
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
-msgstr "Sisestatud kasutajanimi on juba võetud"
-
-#: ../src/Dialogs/NewUserDialog.vala:140
+#: ../src/Views/UserSettingsView.vala:182
 #, fuzzy
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Lubatud on ainult väiketähed, numbrid ning tühikut pole lubatud"
+msgid "Change Password…"
+msgstr "Muuda parooli"
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr "Luba konto"
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Keela konto"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Uue konto loomine..."
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Kustuta konto ning sellega seonduvad andmed"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "Enda kontot pole võimalik eemaldada"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "Muuda parooli"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "Kinnita uus parool"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Paroolide näitamine"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Sisestatud paroolid ei kattu"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -206,36 +236,6 @@ msgstr "Lubatud"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Keelatud"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
-msgid "Choose a Password"
-msgstr "Muuda parooli"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
-msgid "Confirm Password"
-msgstr "Kinnita uus parool"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Paroolide näitamine"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Sisestatud paroolid ei kattu"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Uue konto loomine..."
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "Kustuta konto ning sellega seonduvad andmed"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "Enda kontot pole võimalik eemaldada"
 
 #~ msgid "Password:"
 #~ msgstr "Parool:"

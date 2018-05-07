@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2017-06-19 14:11+0000\n"
 "Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -15,76 +15,64 @@ msgstr ""
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Gyae"
+
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
 msgstr ""
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
+#: ../src/Dialogs/NewUserDialog.vala:31
+msgid "Account Type"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr ""
-
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr ""
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr ""
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
+#: ../src/Dialogs/NewUserDialog.vala:141
+msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 
 #: ../src/Plug.vala:35
@@ -113,59 +101,99 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Gyae"
-
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-msgid "Account Type"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:140
-msgid "Username can only contain lowercase letters and numbers, without spaces"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:182
+msgid "Change Password…"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr ""
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr ""
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:39
+msgid "Choose a Password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:54
+msgid "Confirm Password"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr ""
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
 msgstr ""
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
@@ -202,32 +230,4 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr ""
-
-#: ../src/Widgets/PasswordEditor.vala:39
-msgid "Choose a Password"
-msgstr ""
-
-#: ../src/Widgets/PasswordEditor.vala:54
-msgid "Confirm Password"
-msgstr ""
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr ""
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr ""
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr ""
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr ""
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
 msgstr ""

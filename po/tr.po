@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2018-02-12 21:21+0000\n"
 "Last-Translator: Seyit Ali Doğan <seyit822@yandex.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,80 +15,67 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"Misafir Oturumu, birilerine varsayılan hesabı şifresiz olarak kullanmasına "
-"olanak sağlar."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "İptal"
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "Bir kez çıkış yapıldığında tüm ayarlar ve veriler silinecektir."
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Kullanıcı Resmini Değiştir"
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Konuk Oturumu"
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Geçerli Şifre"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr "Otomatik Giriş:"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Kimlik denetimi için tıklayınız"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "Değiştirmek için yetkiniz yok"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Kimlik denetimi başarısız"
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Şuan geçerli kullanıcı için bunu değiştiremezsiniz"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Şifreyi Değiştir"
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Son yöneticinin ayrıcalıklarını kaldıramazsınız"
-
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
 msgstr "Hesap türü:"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Normal"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Normal Kullanıcı"
 
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "Yönetici"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Dil:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Tam İsim"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Dil & Konum ayarlarına geçmek için tıklayınız"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Kullanıcı Adı"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Kullanıcı Oluştur"
+
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Bu kullanıcı adı zaten alınmış"
+
+#: ../src/Dialogs/NewUserDialog.vala:141
 #, fuzzy
-msgid "Change Password…"
-msgstr "Şifreyi Değiştir"
-
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
-msgstr "Kullanıcı Hesabını Aktif Et"
-
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Son yapılan kullanıcı hesabı kaldırma işlemini geri al"
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
-msgstr "Geri Al"
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "Boşluk hariç, sadece küçük harf ve sayı içerebilir"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -119,62 +106,105 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "İptal"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"Misafir Oturumu, birilerine varsayılan hesabı şifresiz olarak kullanmasına "
+"olanak sağlar."
 
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Kullanıcı Resmini Değiştir"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr "Bir kez çıkış yapıldığında tüm ayarlar ve veriler silinecektir."
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Geçerli Şifre"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Konuk Oturumu"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Kimlik denetimi için tıklayınız"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "Otomatik Giriş:"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Kimlik denetimi başarısız"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr "Son yapılan kullanıcı hesabı kaldırma işlemini geri al"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "Şifreyi Değiştir"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr "Geri Al"
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr "Değiştirmek için yetkiniz yok"
+
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr "Şuan geçerli kullanıcı için bunu değiştiremezsiniz"
+
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Son yöneticinin ayrıcalıklarını kaldıramazsınız"
+
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr "Hesap türü:"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Normal Kullanıcı"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "Normal"
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Tam İsim"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "Dil:"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Kullanıcı Adı"
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Dil & Konum ayarlarına geçmek için tıklayınız"
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Kullanıcı Oluştur"
-
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
-msgstr "Bu kullanıcı adı zaten alınmış"
-
-#: ../src/Dialogs/NewUserDialog.vala:140
+#: ../src/Views/UserSettingsView.vala:182
 #, fuzzy
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Boşluk hariç, sadece küçük harf ve sayı içerebilir"
+msgid "Change Password…"
+msgstr "Şifreyi Değiştir"
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr "Kullanıcı Hesabını Aktif Et"
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Kullanıcı hesabı oluştur"
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Kullanıcı hesabını ve verilerini kaldırın"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "Kendi kullanıcı hesabınızı kaldıramazsınız"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "Şifreyi Değiştir"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "Yeni şifreyi tekrarlayın"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Şifreleri Göster"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Şifreler uyuşmuyor"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -211,36 +241,6 @@ msgstr "Aktif"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Pasif"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
-msgid "Choose a Password"
-msgstr "Şifreyi Değiştir"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
-msgid "Confirm Password"
-msgstr "Yeni şifreyi tekrarlayın"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Şifreleri Göster"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Şifreler uyuşmuyor"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Kullanıcı hesabı oluştur"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "Kullanıcı hesabını ve verilerini kaldırın"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "Kendi kullanıcı hesabınızı kaldıramazsınız"
 
 #~ msgid "Password:"
 #~ msgstr "Şifre:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 22:07+0300\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -15,80 +15,67 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: ../src/Views/GuestSettingsView.vala:28
-msgid ""
-"The Guest Session allows someone to use a temporary default account without "
-"a password."
-msgstr ""
-"სტუმრის სესია სხვას საშუალებას აძლევს გამოიყენოს დროებითი ნაგულისხმევი "
-"ანგარიში პაროლის გარეშე."
+#: ../src/Dialogs/AvatarDialog.vala:71
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
+#: ../src/Dialogs/NewUserDialog.vala:77
+#: ../src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "გაუქმება"
 
-#: ../src/Views/GuestSettingsView.vala:29
-msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "გამოვლენ თუ არა, მათი ყველა პარამეტრი და მონაცემები წაიშლება."
+#: ../src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "ავატარის შეცვლა"
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "სტუმრის სესია"
+#: ../src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "მიმდინარე პაროლი"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
-msgid "Log In automatically:"
-msgstr "ავტომატური შესვლა"
+#: ../src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "დააჭირეთ დასამოწმებლად"
 
-#: ../src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "თქვენ ამის შესაცვლელად უფლებები არ გაქვთ"
+#: ../src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "დამოწმება ვერ მოხერხდა"
 
-#: ../src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "ამის შეცვლა ამჟამად აქტიური მომხმარებლისთვის შეუძლებელია"
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "პაროლის შეცვლა"
 
-#: ../src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "თქვენ არ შეგიძლიათ ბოლო ადმინისტრატორის პრივილეგიების წაშლა"
-
-#: ../src/Views/UserSettingsView.vala:93
-msgid "Account type:"
+#: ../src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
 msgstr "ანგარიშის ტიპი:"
 
-#: ../src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "სტანდარტული"
+#: ../src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "სტანდარტული მომხმარებელი"
 
-#: ../src/Views/UserSettingsView.vala:98 ../src/Dialogs/NewUserDialog.vala:35
+#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
 #: ../src/Widgets/UserItem.vala:43
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
 
-#: ../src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "ენა:"
+#: ../src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "სრული სახელი"
 
-#: ../src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "დააწკაპუნეთ ენის & ადგილის პარამეტრებზე გადასასვლელად"
+#: ../src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "მომხმარებლის სახელი"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: ../src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "მომხმარებლის შექმნა"
+
+#: ../src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
+
+#: ../src/Dialogs/NewUserDialog.vala:141
 #, fuzzy
-msgid "Change Password…"
-msgstr "პაროლის შეცვლა"
-
-#: ../src/Views/UserSettingsView.vala:355
-msgid "Enable User Account"
-msgstr "მომხმარებლის ანგარიშის ჩართვა"
-
-#: ../src/Views/UserSettingsView.vala:358
-msgid "Disable User Account"
-msgstr "მომხმარებლის ანგარიშის გამორთვა"
-
-#: ../src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "ბოლო მომხმარებლის ანგარიშის წაშლის აღდგენა"
-
-#: ../src/Views/MainView.vala:53
-msgid "Undo"
-msgstr ""
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "უნდა შეიცავდეს მხოლოდ პატარა ასოებს, რიცხვებს და არა გამოტოვებებს."
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -116,62 +103,105 @@ msgstr "სტუმრის სესიის ცვლილებები 
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "გაუქმება"
+#: ../src/Views/GuestSettingsView.vala:28
+msgid ""
+"The Guest Session allows someone to use a temporary default account without "
+"a password."
+msgstr ""
+"სტუმრის სესია სხვას საშუალებას აძლევს გამოიყენოს დროებითი ნაგულისხმევი "
+"ანგარიში პაროლის გარეშე."
 
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "ავატარის შეცვლა"
+#: ../src/Views/GuestSettingsView.vala:29
+msgid "Once they log out, all of their settings and data will be deleted."
+msgstr "გამოვლენ თუ არა, მათი ყველა პარამეტრი და მონაცემები წაიშლება."
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "მიმდინარე პაროლი"
+#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "სტუმრის სესია"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "დააჭირეთ დასამოწმებლად"
+#: ../src/Views/GuestSettingsView.vala:39
+#: ../src/Views/UserSettingsView.vala:173
+msgid "Log In automatically:"
+msgstr "ავტომატური შესვლა"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "დამოწმება ვერ მოხერხდა"
+#: ../src/Views/MainView.vala:52
+msgid "Undo last user account removal"
+msgstr "ბოლო მომხმარებლის ანგარიშის წაშლის აღდგენა"
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
-msgid "Change Password"
-msgstr "პაროლის შეცვლა"
+#: ../src/Views/MainView.vala:53
+msgid "Undo"
+msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
+#: ../src/Views/UserSettingsView.vala:53
+msgid "You do not have permission to change this"
+msgstr "თქვენ ამის შესაცვლელად უფლებები არ გაქვთ"
+
+#: ../src/Views/UserSettingsView.vala:54
+msgid "You cannot change this for the currently active user"
+msgstr "ამის შეცვლა ამჟამად აქტიური მომხმარებლისთვის შეუძლებელია"
+
+#: ../src/Views/UserSettingsView.vala:55
+msgid "You cannot remove the last administrator's privileges"
+msgstr "თქვენ არ შეგიძლიათ ბოლო ადმინისტრატორის პრივილეგიების წაშლა"
+
+#: ../src/Views/UserSettingsView.vala:93
+msgid "Account type:"
 msgstr "ანგარიშის ტიპი:"
 
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "სტანდარტული მომხმარებელი"
+#: ../src/Views/UserSettingsView.vala:97
+msgid "Standard"
+msgstr "სტანდარტული"
 
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "სრული სახელი"
+#: ../src/Views/UserSettingsView.vala:104
+msgid "Language:"
+msgstr "ენა:"
 
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "მომხმარებლის სახელი"
+#: ../src/Views/UserSettingsView.vala:169
+msgid "Click to switch to Language & Locale Settings"
+msgstr "დააწკაპუნეთ ენის & ადგილის პარამეტრებზე გადასასვლელად"
 
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "მომხმარებლის შექმნა"
-
-#: ../src/Dialogs/NewUserDialog.vala:138
-msgid "Username is already taken"
-msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
-
-#: ../src/Dialogs/NewUserDialog.vala:140
+#: ../src/Views/UserSettingsView.vala:182
 #, fuzzy
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "უნდა შეიცავდეს მხოლოდ პატარა ასოებს, რიცხვებს და არა გამოტოვებებს."
+msgid "Change Password…"
+msgstr "პაროლის შეცვლა"
+
+#: ../src/Views/UserSettingsView.vala:363
+msgid "Enable User Account"
+msgstr "მომხმარებლის ანგარიშის ჩართვა"
+
+#: ../src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "მომხმარებლის ანგარიშის გამორთვა"
+
+#: ../src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "მომხმარებლის ანგარიშის შექმნა"
+
+#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "მომხმარებლის ანგარიშის და მისი მონაცემების წაშლა"
+
+#: ../src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "თქვენ არ შეგიძლიათ თქვენივე მომხმარებლის ანგარიშის წაშლა"
+
+#: ../src/Widgets/PasswordEditor.vala:39
+#, fuzzy
+msgid "Choose a Password"
+msgstr "პაროლის შეცვლა"
+
+#: ../src/Widgets/PasswordEditor.vala:54
+#, fuzzy
+msgid "Confirm Password"
+msgstr "ახალი პაროლის დადასტურება"
+
+#: ../src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "პაროლების ჩვენება"
+
+#: ../src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "პაროლები არ ემთხვევა"
 
 #: ../src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -208,36 +238,6 @@ msgstr "ჩართულია"
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "გამორთულია"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-#, fuzzy
-msgid "Choose a Password"
-msgstr "პაროლის შეცვლა"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-#, fuzzy
-msgid "Confirm Password"
-msgstr "ახალი პაროლის დადასტურება"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "პაროლების ჩვენება"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "პაროლები არ ემთხვევა"
-
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "მომხმარებლის ანგარიშის შექმნა"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "მომხმარებლის ანგარიშის და მისი მონაცემების წაშლა"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "თქვენ არ შეგიძლიათ თქვენივე მომხმარებლის ანგარიშის წაშლა"
 
 #~ msgid "Password:"
 #~ msgstr "პაროლი:"

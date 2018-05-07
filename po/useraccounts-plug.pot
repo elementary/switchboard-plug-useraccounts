@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-11 11:01-0700\n"
+"POT-Creation-Date: 2018-05-07 10:28-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
+#: ../src/Dialogs/ChangePasswordDialog.vala:90
 #: ../src/Dialogs/NewUserDialog.vala:77
 #: ../src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/Dialogs/ChangePasswordDialog.vala:94
+#: ../src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
 msgstr ""
 
@@ -69,11 +69,11 @@ msgstr ""
 msgid "Create User"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:138
+#: ../src/Dialogs/NewUserDialog.vala:139
 msgid "Username is already taken"
 msgstr ""
 
-#: ../src/Dialogs/NewUserDialog.vala:140
+#: ../src/Dialogs/NewUserDialog.vala:141
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 
@@ -162,11 +162,11 @@ msgstr ""
 msgid "Change Password…"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:355
+#: ../src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:358
+#: ../src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr ""
 
