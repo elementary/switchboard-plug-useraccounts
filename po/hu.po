@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 10:28-0700\n"
-"PO-Revision-Date: 2018-05-30 00:05+0000\n"
+"PO-Revision-Date: 2018-05-31 00:03+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/hu/>\n"
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
 
 #: ../src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nincs jogosultságod megváltoztatni"
 
 #: ../src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
@@ -221,11 +221,11 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:33
 msgid "My Account"
-msgstr ""
+msgstr "A fiókom"
 
 #: ../src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
-msgstr ""
+msgstr "Egyéb fiókok"
 
 #: ../src/Widgets/UserListBox.vala:102
 msgid "Enabled"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr ""
+msgstr "Letiltva"
 
 #~ msgid "New Password"
 #~ msgstr "Új jelszó"
