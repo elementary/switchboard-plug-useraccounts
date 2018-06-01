@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 10:28-0700\n"
-"PO-Revision-Date: 2018-06-01 00:08+0000\n"
+"PO-Revision-Date: 2018-06-02 00:07+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/hu/>\n"
@@ -74,7 +74,7 @@ msgstr "Ez a felhasználónév már foglalt"
 #: ../src/Dialogs/NewUserDialog.vala:141
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
-"A felhasználónév csak kisbetűket és számokat tartalmazhat, szóközök nélkül"
+"A felhasználónév csak kisbetűket és számokat tartalmazhat, szóközöket nem"
 
 #: ../src/Plug.vala:35
 msgid "Authentication is required to change user data"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
+msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
 
 #: ../src/Views/GuestSettingsView.vala:28
 msgid ""
