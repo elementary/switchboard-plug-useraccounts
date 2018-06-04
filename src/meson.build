@@ -32,10 +32,10 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('polkit-gobject-1'),
         dependency('pwquality'),
+        run_passwd_dep,
         posix_dep,
         switchboard_dep
     ],
-    link_with : run_passwd,
     install: true,
     install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'system')
 )
