@@ -14,6 +14,5 @@ configuration_data.set('GETTEXT_PACKAGE', gettext_name)
 
 subdir('cli')
 subdir('data')
-subdir('lib')
 subdir('src')
 subdir('po')

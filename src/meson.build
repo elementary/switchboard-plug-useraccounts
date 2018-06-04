@@ -18,9 +18,15 @@ plug_files = files(
     'Widgets/UserListBox.vala'
 )
 
+run_passwd_files = files(
+    'run-passwd.c',
+    'run-passwd.h'
+)
+
 shared_module(
     meson.project_name(),
     plug_files,
+    run_passwd_files,
     dependencies: [
         dependency('accountsservice'),
         dependency('gee-0.8'),
@@ -32,7 +38,7 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('polkit-gobject-1'),
         dependency('pwquality'),
-        run_passwd_dep,
+        meson.get_compiler('vala').find_library('run-passwd', dirs: join_paths(meson.current_source_dir())),
         posix_dep,
         switchboard_dep
     ],
