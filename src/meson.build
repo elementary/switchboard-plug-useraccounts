@@ -18,8 +18,6 @@ plug_files = files(
     'Widgets/UserListBox.vala'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
-
 shared_module(
     meson.project_name(),
     plug_files,
@@ -34,7 +32,7 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('polkit-gobject-1'),
         dependency('pwquality'),
-        meson.get_compiler('vala').find_library('posix'),
+        posix_dep,
         switchboard_dep
     ],
     install: true,
