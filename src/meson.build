@@ -1,3 +1,9 @@
+pkgdatadir_declaration = configure_file(
+    configuration: configuration_data,
+    input: 'config.vala.in',
+    output: '@BASENAME@'
+)
+
 plug_files = files(
     'Plug.vala',
     'Dialogs/AvatarDialog.vala',
@@ -25,6 +31,7 @@ run_passwd_files = files(
 
 shared_module(
     meson.project_name(),
+    pkgdatadir_declaration,
     plug_files,
     run_passwd_files,
     dependencies: [

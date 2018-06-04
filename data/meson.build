@@ -6,5 +6,5 @@ gettext_declaration = configure_file(
 
 install_data(
     gettext_declaration,
-    install_dir: join_paths(get_option('datadir'), 'polkit-1', 'actions')
+    install_dir: pkg_data_dir
 )
