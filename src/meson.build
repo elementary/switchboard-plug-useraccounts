@@ -35,7 +35,7 @@ shared_module(
         posix_dep,
         switchboard_dep
     ],
-    link_with : lib,
+    link_with : run_passwd,
     install: true,
     install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'system')
 )
