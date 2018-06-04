@@ -8,6 +8,9 @@ run_passwd = shared_library(
 )
 
 run_passwd_dep = declare_dependency(
+    include_directories : include_directories('.'),
     link_with : run_passwd,
-    include_directories : include_directories('.')
+    dependencies: [
+        dependency('glib-2.0')
+    ]
 )
