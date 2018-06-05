@@ -5,7 +5,6 @@
 
 You'll need the following dependencies:
 
-* cmake
 * libaccountsservice-dev
 * libgirepository1.0-dev 
 * libgnome-desktop-3-dev
@@ -13,20 +12,15 @@ You'll need the following dependencies:
 * libpolkit-gobject-1-dev
 * libpwquality-dev
 * libswitchboard-2.0-dev
+* meson
 * valac
 
-It's recommended to create a clean build environment
+Run `meson build` to configure the build environment and then change to the build directory and run `ninja` to build
 
-    mkdir build
-    cd build/
-    
-Run `cmake` to configure the build environment and then `make` to build
+    meson build --prefix=/usr 
+    cd build
+    ninja
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-    
-To install, use `make install`, then execute with `switchboard`
+To install, use `ninja install`
 
-    sudo make install
-    switchboard
-
+    sudo ninja install
