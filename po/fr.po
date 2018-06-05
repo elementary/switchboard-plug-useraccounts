@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 10:28-0700\n"
+"POT-Creation-Date: 2018-06-05 11:01-0700\n"
 "PO-Revision-Date: 2018-03-11 18:36+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
@@ -15,99 +15,97 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:90
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Annuler"
-
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Modifier l'image de l'utilisateur"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Mot de passe actuel"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Appuyez pour vous authentifier"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Échec d'authentification"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Modifier le mot de passe"
-
-#: ../src/Dialogs/NewUserDialog.vala:31
-msgid "Account Type"
-msgstr "Type de compte :"
-
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Utilisateur standard"
-
-#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
-#: ../src/Widgets/UserItem.vala:43
-msgid "Administrator"
-msgstr "Administrateur"
-
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Nom complet"
-
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Nom d'utilisateur"
-
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Créer l'utilisateur"
-
-#: ../src/Dialogs/NewUserDialog.vala:139
-msgid "Username is already taken"
-msgstr "Le nom d'utilisateur est déjà pris"
-
-#: ../src/Dialogs/NewUserDialog.vala:141
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Ne peut contenir que des minuscules et des nombres mais pas d'espaces"
-
-#: ../src/Plug.vala:35
+#: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr ""
 "Il est nécessaire de s'authentifier pour modifier des données utilisateur"
 
-#: ../src/Plug.vala:42
+#: src/Plug.vala:42
 msgid "User Accounts"
 msgstr "Comptes utilisateur"
 
-#: ../src/Plug.vala:43
+#: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gérer les permission des comptes, configurer les noms d'utilisateur, mots de "
 "passe et photos"
 
-#: ../src/Plug.vala:67
+#: src/Plug.vala:67
 msgid "Password change failed"
 msgstr "Impossible de changer le mot de passe"
 
-#: ../src/Plug.vala:80
+#: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Les changements effectués à la session invité prendront effet au prochain "
 "démarrage du système"
 
-#: ../src/Plug.vala:98
+#: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
 
-#: ../src/Views/GuestSettingsView.vala:28
+#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
+#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Annuler"
+
+#: src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Modifier l'image de l'utilisateur"
+
+#: src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Mot de passe actuel"
+
+#: src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Appuyez pour vous authentifier"
+
+#: src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Échec d'authentification"
+
+#: src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Modifier le mot de passe"
+
+#: src/Dialogs/NewUserDialog.vala:31
+msgid "Account Type"
+msgstr "Type de compte :"
+
+#: src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Utilisateur standard"
+
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
+#: src/Widgets/UserItem.vala:43
+msgid "Administrator"
+msgstr "Administrateur"
+
+#: src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Nom complet"
+
+#: src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Créer l'utilisateur"
+
+#: src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Le nom d'utilisateur est déjà pris"
+
+#: src/Dialogs/NewUserDialog.vala:141
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "Ne peut contenir que des minuscules et des nombres mais pas d'espaces"
+
+#: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -115,130 +113,129 @@ msgstr ""
 "La session invité permet d'utiliser une session temporaire sans avoir besoin "
 "de mot de passe."
 
-#: ../src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Dès que l'utilisateur se déconnecte, toutes les données de la session invité "
 "sont supprimés."
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Session invité"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
 msgstr "Connexion automatique :"
 
-#: ../src/Views/MainView.vala:52
+#: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
 msgstr "Annuler la suppression de l'utilisateur"
 
-#: ../src/Views/MainView.vala:53
+#: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr "Annuler"
 
-#: ../src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Vous n'avez pas la permission de modifier cela"
 
-#: ../src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Impossible de changer ceci pour l'utilisateur actuel"
 
-#: ../src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Impossible de supprimer le dernier administrateur"
 
-#: ../src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
 msgstr "Type de compte :"
 
-#: ../src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:97
 msgid "Standard"
 msgstr "Normal"
 
-#: ../src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:104
 msgid "Language:"
 msgstr "Langue :"
 
-#: ../src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Cliquez pour basculer sur les paramètres de langues et régions"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
 msgstr "Modifier le mot de passe…"
 
-#: ../src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
 msgstr "Activer le compte utilisateur"
 
-#: ../src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Désactiver le compte utilisateur"
 
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Créer un compte utilisateur"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "Supprimer le compte utilisateur et ses données"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "Impossible de supprimer votre propre compte"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-msgid "Choose a Password"
-msgstr "Choisissez un mot-de-passe"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-msgid "Confirm Password"
-msgstr "Confirmez le mot-de-passe"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Afficher les mots de passe"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Les mots de passe ne correspondent pas"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
 msgstr "Supprimer"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Depuis un fichier…"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
 msgstr "Sélectionner une image"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Open"
 msgstr "Ouvrir"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:67
+#: src/Widgets/Popovers/AvatarPopover.vala:67
 msgid "Images"
 msgstr "Images"
 
-#: ../src/Widgets/UserListBox.vala:33
+#: src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Créer un compte utilisateur"
+
+#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Supprimer le compte utilisateur et ses données"
+
+#: src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "Impossible de supprimer votre propre compte"
+
+#: src/Widgets/PasswordEditor.vala:39
+msgid "Choose a Password"
+msgstr "Choisissez un mot-de-passe"
+
+#: src/Widgets/PasswordEditor.vala:54
+msgid "Confirm Password"
+msgstr "Confirmez le mot-de-passe"
+
+#: src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Afficher les mots de passe"
+
+#: src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Les mots de passe ne correspondent pas"
+
+#: src/Widgets/UserListBox.vala:33
 msgid "My Account"
 msgstr "Mon compte"
 
-#: ../src/Widgets/UserListBox.vala:35
+#: src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
 msgstr "Autres comptes"
 
-#: ../src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
 msgstr "Activé"
 
-#: ../src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Désactivé"
 

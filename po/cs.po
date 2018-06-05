@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 10:28-0700\n"
+"POT-Creation-Date: 2018-06-05 11:01-0700\n"
 "PO-Revision-Date: 2018-04-19 19:13+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -15,223 +15,220 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:90
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Změnit ikonu uživatele"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Současné heslo"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Kliknětě pro ověření"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Autentizace selhala"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Změna hesla"
-
-#: ../src/Dialogs/NewUserDialog.vala:31
-msgid "Account Type"
-msgstr "Typ účtu"
-
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Normální uživatel"
-
-#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
-#: ../src/Widgets/UserItem.vala:43
-msgid "Administrator"
-msgstr "Správce"
-
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Celé jméno"
-
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Uživatelské jméno"
-
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Vytvořit uživatele"
-
-#: ../src/Dialogs/NewUserDialog.vala:139
-msgid "Username is already taken"
-msgstr "Uživatelské jméno již existuje"
-
-#: ../src/Dialogs/NewUserDialog.vala:141
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr ""
-"Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
-
-#: ../src/Plug.vala:35
+#: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Ke změně uživatelských dat je požadováno ověření"
 
-#: ../src/Plug.vala:42
+#: src/Plug.vala:42
 msgid "User Accounts"
 msgstr "Uživatelské účty"
 
-#: ../src/Plug.vala:43
+#: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Spravovat práva uživatelů a konfigurovat uživatelská jména, hesla a fotky"
 
-#: ../src/Plug.vala:67
+#: src/Plug.vala:67
 msgid "Password change failed"
 msgstr "Změna hesla se nezdařila"
 
-#: ../src/Plug.vala:80
+#: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Změny v nastavení sezení hosta se projeví až po restartování počítače"
 
-#: ../src/Plug.vala:98
+#: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
-#: ../src/Views/GuestSettingsView.vala:28
+#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
+#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Změnit ikonu uživatele"
+
+#: src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Současné heslo"
+
+#: src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Kliknětě pro ověření"
+
+#: src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Autentizace selhala"
+
+#: src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Změna hesla"
+
+#: src/Dialogs/NewUserDialog.vala:31
+msgid "Account Type"
+msgstr "Typ účtu"
+
+#: src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Normální uživatel"
+
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
+#: src/Widgets/UserItem.vala:43
+msgid "Administrator"
+msgstr "Správce"
+
+#: src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Celé jméno"
+
+#: src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Vytvořit uživatele"
+
+#: src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Uživatelské jméno již existuje"
+
+#: src/Dialogs/NewUserDialog.vala:141
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr ""
+"Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
+
+#: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
 "Sezení hosta umožňuje uživatelům použít dočasný výchozí účet bez hesla."
 
-#: ../src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Jakmile se odhlásí, budou odstraněna všechna jejich nastavení a data."
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Sezení hosta"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
 msgstr "Přihlásit automaticky:"
 
-#: ../src/Views/MainView.vala:52
+#: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
 msgstr "Vrátit odstranění posledního uživatelského účtu"
 
-#: ../src/Views/MainView.vala:53
+#: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr "Zpět"
 
-#: ../src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Nemáte oprávnění k této změně"
 
-#: ../src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Pro aktuálně aktivního uživatele toto nelze změnit"
 
-#: ../src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nemůžete odstranit oprávnění posledního administrátora"
 
-#: ../src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
 msgstr "Typ účtu:"
 
-#: ../src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:97
 msgid "Standard"
 msgstr "Standardní"
 
-#: ../src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:104
 msgid "Language:"
 msgstr "Jazyk:"
 
-#: ../src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klikněte pro přepnutí do nastavení Jazyka & Národního prostředí"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
 msgstr "Změnit heslo…"
 
-#: ../src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
 msgstr "Povolit uživatelský účet"
 
-#: ../src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Zakázat uživatelský účet"
 
-#: ../src/Widgets/ListFooter.vala:35
-msgid "Create user account"
-msgstr "Vytvořit uživatelský účet"
-
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
-msgid "Remove user account and its data"
-msgstr "Smazat uživatelský účet a jeho data"
-
-#: ../src/Widgets/ListFooter.vala:80
-msgid "You cannot remove your own user account"
-msgstr "Nemůžete odstranit svůj vlastní uživatelský účet"
-
-#: ../src/Widgets/PasswordEditor.vala:39
-msgid "Choose a Password"
-msgstr "Vybrat heslo"
-
-#: ../src/Widgets/PasswordEditor.vala:54
-msgid "Confirm Password"
-msgstr "Potvrdit heslo"
-
-#: ../src/Widgets/PasswordEditor.vala:63
-msgid "Show passwords"
-msgstr "Zobrazit hesla"
-
-#: ../src/Widgets/PasswordEditor.vala:143
-msgid "Passwords do not match"
-msgstr "Hesla se neshodují"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
 msgstr "Odebrat"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Nastavit ze souboru…"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
 msgstr "Zvolit obrázek"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Open"
 msgstr "Otevřít"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:67
+#: src/Widgets/Popovers/AvatarPopover.vala:67
 msgid "Images"
 msgstr "Obrázky"
 
-#: ../src/Widgets/UserListBox.vala:33
+#: src/Widgets/ListFooter.vala:35
+msgid "Create user account"
+msgstr "Vytvořit uživatelský účet"
+
+#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+msgid "Remove user account and its data"
+msgstr "Smazat uživatelský účet a jeho data"
+
+#: src/Widgets/ListFooter.vala:80
+msgid "You cannot remove your own user account"
+msgstr "Nemůžete odstranit svůj vlastní uživatelský účet"
+
+#: src/Widgets/PasswordEditor.vala:39
+msgid "Choose a Password"
+msgstr "Vybrat heslo"
+
+#: src/Widgets/PasswordEditor.vala:54
+msgid "Confirm Password"
+msgstr "Potvrdit heslo"
+
+#: src/Widgets/PasswordEditor.vala:63
+msgid "Show passwords"
+msgstr "Zobrazit hesla"
+
+#: src/Widgets/PasswordEditor.vala:143
+msgid "Passwords do not match"
+msgstr "Hesla se neshodují"
+
+#: src/Widgets/UserListBox.vala:33
 msgid "My Account"
 msgstr "Můj účet"
 
-#: ../src/Widgets/UserListBox.vala:35
+#: src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 
-#: ../src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
 msgstr "Zapnuto"
 
-#: ../src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Vypnuto"
 

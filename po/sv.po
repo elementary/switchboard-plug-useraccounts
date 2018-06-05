@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 10:28-0700\n"
+"POT-Creation-Date: 2018-06-05 11:01-0700\n"
 "PO-Revision-Date: 2018-03-26 00:06+0000\n"
 "Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,95 +15,93 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: ../src/Dialogs/AvatarDialog.vala:71
-#: ../src/Dialogs/ChangePasswordDialog.vala:90
-#: ../src/Dialogs/NewUserDialog.vala:77
-#: ../src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../src/Dialogs/AvatarDialog.vala:72
-msgid "Change Avatar"
-msgstr "Byt visningsbild"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:45
-msgid "Current Password"
-msgstr "Nuvarande lösenord"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:49
-msgid "Press to authenticate"
-msgstr "Tryck för att verifiera"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:51
-msgid "Authentication failed"
-msgstr "Verifieringen misslyckades"
-
-#: ../src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Byt lösenord"
-
-#: ../src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
-msgid "Account Type"
-msgstr "Kontotyp:"
-
-#: ../src/Dialogs/NewUserDialog.vala:34
-msgid "Standard User"
-msgstr "Standardanvändare"
-
-#: ../src/Dialogs/NewUserDialog.vala:35 ../src/Views/UserSettingsView.vala:98
-#: ../src/Widgets/UserItem.vala:43
-msgid "Administrator"
-msgstr "Administratör"
-
-#: ../src/Dialogs/NewUserDialog.vala:38
-msgid "Full Name"
-msgstr "Fullständigt namn"
-
-#: ../src/Dialogs/NewUserDialog.vala:43
-msgid "Username"
-msgstr "Användarnamn"
-
-#: ../src/Dialogs/NewUserDialog.vala:79
-msgid "Create User"
-msgstr "Skapa användare"
-
-#: ../src/Dialogs/NewUserDialog.vala:139
-msgid "Username is already taken"
-msgstr "Användarnamnet är upptaget"
-
-#: ../src/Dialogs/NewUserDialog.vala:141
-#, fuzzy
-msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Kan bara innehålla små bokstäver, siffror, men inga mellanslag"
-
-#: ../src/Plug.vala:35
+#: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Verifiering krävs för att ändra användardata"
 
-#: ../src/Plug.vala:42
+#: src/Plug.vala:42
 msgid "User Accounts"
 msgstr "Användarkonton"
 
-#: ../src/Plug.vala:43
+#: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Hantera kontobehörighet och ställ in användarnamn, lösenord och foton"
 
-#: ../src/Plug.vala:67
+#: src/Plug.vala:67
 msgid "Password change failed"
 msgstr "Lösenordsändringen misslyckades"
 
-#: ../src/Plug.vala:80
+#: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Ändringarna för gästsessionen kommer att tillämpas vid omstart"
 
-#: ../src/Plug.vala:98
+#: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
-#: ../src/Views/GuestSettingsView.vala:28
+#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
+#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/Dialogs/AvatarDialog.vala:72
+msgid "Change Avatar"
+msgstr "Byt visningsbild"
+
+#: src/Dialogs/ChangePasswordDialog.vala:45
+msgid "Current Password"
+msgstr "Nuvarande lösenord"
+
+#: src/Dialogs/ChangePasswordDialog.vala:49
+msgid "Press to authenticate"
+msgstr "Tryck för att verifiera"
+
+#: src/Dialogs/ChangePasswordDialog.vala:51
+msgid "Authentication failed"
+msgstr "Verifieringen misslyckades"
+
+#: src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Byt lösenord"
+
+#: src/Dialogs/NewUserDialog.vala:31
+#, fuzzy
+msgid "Account Type"
+msgstr "Kontotyp:"
+
+#: src/Dialogs/NewUserDialog.vala:34
+msgid "Standard User"
+msgstr "Standardanvändare"
+
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
+#: src/Widgets/UserItem.vala:43
+msgid "Administrator"
+msgstr "Administratör"
+
+#: src/Dialogs/NewUserDialog.vala:38
+msgid "Full Name"
+msgstr "Fullständigt namn"
+
+#: src/Dialogs/NewUserDialog.vala:43
+msgid "Username"
+msgstr "Användarnamn"
+
+#: src/Dialogs/NewUserDialog.vala:79
+msgid "Create User"
+msgstr "Skapa användare"
+
+#: src/Dialogs/NewUserDialog.vala:139
+msgid "Username is already taken"
+msgstr "Användarnamnet är upptaget"
+
+#: src/Dialogs/NewUserDialog.vala:141
+#, fuzzy
+msgid "Username can only contain lowercase letters and numbers, without spaces"
+msgstr "Kan bara innehålla små bokstäver, siffror, men inga mellanslag"
+
+#: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -111,131 +109,130 @@ msgstr ""
 "Med en gästsession kan en användare tillfälligt använda datorn utan ett "
 "lösenord."
 
-#: ../src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Alla inställningar och all data raderas vid utloggning."
 
-#: ../src/Views/GuestSettingsView.vala:31 ../src/Widgets/UserListBox.vala:41
+#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Gästsession"
 
-#: ../src/Views/GuestSettingsView.vala:39
-#: ../src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
 msgstr "Automatisk inloggning:"
 
-#: ../src/Views/MainView.vala:52
+#: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
 msgstr "Ångra borttagning av användarkonto"
 
-#: ../src/Views/MainView.vala:53
+#: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr ""
 
-#: ../src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Du har inte behörighet att ändra detta"
 
-#: ../src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Du kan inte ändra detta för den nu aktiva användaren"
 
-#: ../src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Du kan inte ta bort den senaste administratörens rättigheter"
 
-#: ../src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
 msgstr "Kontotyp:"
 
-#: ../src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:97
 msgid "Standard"
 msgstr "Standard"
 
-#: ../src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:104
 msgid "Language:"
 msgstr "Språk:"
 
-#: ../src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klicka för att ändra Språk- och regionsinställningar"
 
-#: ../src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:182
 #, fuzzy
 msgid "Change Password…"
 msgstr "Byt lösenord"
 
-#: ../src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
 msgstr "Aktivera användarkonto"
 
-#: ../src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Avaktivera användarkonto"
 
-#: ../src/Widgets/ListFooter.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:35
+msgid "Remove"
+msgstr "Ta bort"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:38
+msgid "Set from File…"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:62
+msgid "Select an image"
+msgstr "Välj en bild"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:64
+msgid "Open"
+msgstr "Öppna"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:67
+msgid "Images"
+msgstr "Bilder"
+
+#: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
 msgstr "Skapa användarkonto"
 
-#: ../src/Widgets/ListFooter.vala:39 ../src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
 msgstr "Ta bort användarkontot och dess data"
 
-#: ../src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
 msgstr "Du kan inte ta bort ditt eget användarkonto"
 
-#: ../src/Widgets/PasswordEditor.vala:39
+#: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
 msgid "Choose a Password"
 msgstr "Byt lösenord"
 
-#: ../src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:54
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Bekräfta nytt lösenord"
 
-#: ../src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
 msgstr "Visa lösenord"
 
-#: ../src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
 msgstr "Lösenorden stämmer inte överens"
 
-#: ../src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Ta bort"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr ""
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:62
-msgid "Select an image"
-msgstr "Välj en bild"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:64
-msgid "Open"
-msgstr "Öppna"
-
-#: ../src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Bilder"
-
-#: ../src/Widgets/UserListBox.vala:33
+#: src/Widgets/UserListBox.vala:33
 msgid "My Account"
 msgstr "Mitt konto"
 
-#: ../src/Widgets/UserListBox.vala:35
+#: src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
 msgstr "Övriga konton"
 
-#: ../src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#: ../src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
 msgstr "Inaktiverad"
 
