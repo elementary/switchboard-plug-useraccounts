@@ -10,10 +10,10 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ 
+	dh $@ --buildsystem=meson
+
+override_dh_missing:
+	dh_missing --fail-missing --list-missing
 
 override_dh_strip:
-	dh_strip --dbg-package=switchboard-plug-useraccounts-dbg
-
-override_dh_auto_install:
-	dh_auto_install --destdir=debian/switchboard-plug-useraccounts
+	dh_strip -p switchboard-plug-useraccounts --dbgsym-migration='switchboard-plug-useraccounts-dbg (<< 0.1.6)'

@@ -1,0 +1,17 @@
+src/Plug.vala
+src/Dialogs/AvatarDialog.vala
+src/Dialogs/ChangePasswordDialog.vala
+src/Dialogs/NewUserDialog.vala
+src/Misc/InfobarNotifier.vala
+src/Misc/UserUtils.vala
+src/Misc/Utils.vala
+src/Views/GuestSettingsView.vala
+src/Views/MainView.vala
+src/Views/UserSettingsView.vala
+src/Widgets/Popovers/AvatarPopover.vala
+src/Widgets/CropView.vala
+src/Widgets/ErrorRevealer.vala
+src/Widgets/ListFooter.vala
+src/Widgets/PasswordEditor.vala
+src/Widgets/UserItem.vala
+src/Widgets/UserListBox.vala
