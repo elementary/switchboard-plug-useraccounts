@@ -25,17 +25,6 @@ Replaces: switchboard-plug-gcc-users
 Description: Manage local user accounts
  Switchboard plug for managing local user accounts
 
-Package: switchboard-plug-useraccounts-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: switchboard-plug-useraccounts (= ${binary:Version}), ${misc:Depends}
-Enhances: switchboard-plug-useraccounts
-Description: Manage local user accounts (debugging symbols)
- Switchboard plug for managing local user accounts
- .
- This package contains debugging symbols for switchboard-plug-useraccounts.
-
 Package: switchboard-plug-users
 Architecture: any
 Depends: switchboard-plug-useraccounts
