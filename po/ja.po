@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-05-30 00:05+0000\n"
+"PO-Revision-Date: 2018-06-12 00:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/ja/>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-useraccounts/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,11 +119,11 @@ msgstr "ゲストセッション"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr "自動的にログインする:"
+msgstr "自動的にログイン:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "最後のユーザーアカウント削除を取り消します"
+msgstr "最後に行ったユーザーアカウントの削除を取り消します"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
@@ -179,7 +179,7 @@ msgstr "ファイルから設定…"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
-msgstr "画像を選択する"
+msgstr "画像を選択"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Open"
