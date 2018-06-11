@@ -12,7 +12,8 @@ You'll need the following dependencies:
 * libpolkit-gobject-1-dev
 * libpwquality-dev
 * libswitchboard-2.0-dev
-* meson
+* meson >= 0.46.1
+* policykit-1
 * valac
 
 Run `meson build` to configure the build environment and then change to the build directory and run `ninja` to build
