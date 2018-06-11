@@ -1,4 +1,4 @@
-project('useraccounts', 'vala', 'c')
+project('useraccounts', 'vala', 'c', meson_version: '>= 0.46.1')
 
 gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
