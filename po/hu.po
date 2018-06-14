@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-06-14 08:45+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/hu/>\n"
@@ -55,7 +55,7 @@ msgstr "Avatar megváltoztatása"
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
-msgstr "Jelenlegi jelszó"
+msgstr "Aktuális jelszó"
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
@@ -235,7 +235,7 @@ msgstr "Bekapcsolva"
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "Letiltva"
+msgstr "Kikapcsolva"
 
 #~ msgid "New Password"
 #~ msgstr "Új jelszó"
