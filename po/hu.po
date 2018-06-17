@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-06-15 00:11+0000\n"
+"PO-Revision-Date: 2018-06-18 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-useraccounts/hu/>\n"
@@ -26,8 +26,7 @@ msgstr "Felhasználói fiókok"
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
-"Állítsa be a fiókengedélyeket, felhasználói neveket, jelszavakat és fotókat"
+msgstr "Fiókengedélyek, felhasználói nevek, jelszavak és fotók beállítása"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -42,7 +41,7 @@ msgstr ""
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
+msgstr "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
