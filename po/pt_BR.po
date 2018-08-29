@@ -4,7 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
 "PO-Revision-Date: 2018-08-29 16:42+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -72,9 +73,8 @@ msgid "Change Password"
 msgstr "Alterar senha"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Tipo de conta:"
+msgstr "Tipo de conta"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
