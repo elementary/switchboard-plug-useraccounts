@@ -3,9 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-08-29 16:42+0000\n"
-"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
-"\n"
+"PO-Revision-Date: 2018-08-29 16:43+0000\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -74,7 +73,7 @@ msgstr "Alterar senha"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
-msgstr "Tipo de conta"
+msgstr "Tipo de Conta"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -102,9 +101,9 @@ msgid "Username is already taken"
 msgstr "Nome de usuário já utilizado"
 
 #: src/Dialogs/NewUserDialog.vala:141
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Pode apenas conter letras minúsculas, números e sem espaços"
+msgstr ""
+"O nome de usuário só pode conter letras minúsculas e números, sem espaços"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
