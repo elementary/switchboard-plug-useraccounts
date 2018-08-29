@@ -4,7 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
 "PO-Revision-Date: 2018-08-29 16:44+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -206,9 +207,8 @@ msgid "You cannot remove your own user account"
 msgstr "Você não pode remover sua própria conta de usuário"
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Alterar senha"
+msgstr "Escolha uma Senha"
 
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
