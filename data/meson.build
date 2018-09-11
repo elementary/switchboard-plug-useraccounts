@@ -9,5 +9,5 @@ i18n.merge_file(
     output: 'org.pantheon.switchboard.user-accounts.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
-    install_dir: pkg_data_dir
+    install_dir: act_dir
 )
