@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-08-30 00:08+0000\n"
+"PO-Revision-Date: 2018-09-20 00:05+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
@@ -21,7 +21,7 @@ msgstr "Autenticação é necessária para alterar dados de usuário"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Contas de usuário"
+msgstr "Contas de Usuário"
 
 #: src/Plug.vala:43
 msgid ""
