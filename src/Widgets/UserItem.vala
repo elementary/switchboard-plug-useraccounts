@@ -49,7 +49,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var grid = new Gtk.Grid ();
             grid.margin = 6;
-            grid.margin_left = 12;
+            grid.margin_start = grid.margin_end = 12;
             grid.column_spacing = 6;
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
