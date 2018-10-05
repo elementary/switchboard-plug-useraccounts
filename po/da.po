@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-05-07 00:03+0000\n"
+"PO-Revision-Date: 2018-10-03 00:11+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/da/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-24 06:30+0000\n"
 
 #: src/Plug.vala:35
@@ -162,7 +162,7 @@ msgstr "Klik for at skifte til Sprog og lokalitet-indstillinger"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
-msgstr "Skift Password…"
+msgstr "Skift Adgangskode…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
@@ -206,11 +206,11 @@ msgstr "Du kan ikke fjerne din egen brugerkonto"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Vælg et Password"
+msgstr "Vælg en Adgangskode"
 
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Bekræft Password"
+msgstr "Bekræft Adgangskode"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
