@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -41,6 +41,40 @@ msgstr "השינויים שנערכים בהפעלת המשתמש לא יחול�
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "החלפת תמונת המשתמש"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "שם מלא"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "סוג החשבון:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "שפה:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "כניסה אוטומטית:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "החלפת הססמה"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "הפעלת אורח"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -61,10 +95,6 @@ msgstr "יש ללחוץ לאימות"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "האימות נכשל"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "החלפת הססמה"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -108,10 +138,6 @@ msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבו�
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתונים יימחקו."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "הפעלת אורח"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

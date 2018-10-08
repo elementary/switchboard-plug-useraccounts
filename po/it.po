@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-09-07 00:06+0000\n"
 "Last-Translator: strozzascotte <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
@@ -47,6 +47,40 @@ msgstr ""
 "Alcune impostazioni richiedono i diritti di amministratore per essere "
 "modificate"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Cambia avatar"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Nome completo"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Tipo di account:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Lingua:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Accesso automatico:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Cambia password"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Sessione ospite"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -67,10 +101,6 @@ msgstr "Premere per autenticare"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autenticazione fallita"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Cambia password"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -118,10 +148,6 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Una volta disconnesso, tutte le impostazioni e i dati verranno eliminati."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Sessione ospite"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

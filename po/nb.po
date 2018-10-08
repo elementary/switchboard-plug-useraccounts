@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-07-22 12:09+0000\n"
 "Last-Translator: Nils K <slx@nilsk.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
@@ -42,6 +42,40 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Bytt profilbilde"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Fullt navn"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Kontotype:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Språk:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Logg på automatisk:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Endre passord"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Gjesteøkt"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -62,10 +96,6 @@ msgstr "Trykk for å autentisere"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autentisering mislyktes"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Endre passord"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -110,10 +140,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Når de logger ut, vil alle deres innstillinger og data bli slettet."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Gjesteøkt"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

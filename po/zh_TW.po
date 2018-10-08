@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-03-13 02:53+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -41,6 +41,40 @@ msgstr "訪客作業階段直到您重新啟動系統後才會生效"
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "變更代表頭像"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "全名"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "帳號類型："
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "語言："
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "自動登入："
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "變更密碼"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "訪客作業階段"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -61,10 +95,6 @@ msgstr "按下以核對身份"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "身份核對失敗"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "變更密碼"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -108,10 +138,6 @@ msgstr "訪客作業階段允許任何人使用暫時性的無密碼預設帳號
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "一旦他們登出，所有的設定值與資料都會全部刪除。"
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "訪客作業階段"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

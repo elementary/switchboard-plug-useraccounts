@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-06-04 00:10+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -42,6 +42,40 @@ msgstr "게스트 세션의 변경은 재부팅 후에 적용됩니다"
 msgid "Some settings require administrator rights to be changed"
 msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "아바타 변경"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "전체 이름"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "계정 형식:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "언어:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "자동 로그인:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "비밀번호 바꾸기"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "게스트 세션"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -62,10 +96,6 @@ msgstr "눌러서 인증하기"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "인증에 실패했습니다"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "비밀번호 바꾸기"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -111,10 +141,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "로그아웃하면, 모든 설정과 데이터는 지워집니다."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "게스트 세션"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

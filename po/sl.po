@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-03-21 19:53+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -43,6 +43,40 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Spremeni sliko"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Polno ime"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Vrsta računa:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Jezik:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Prijavi samodejno:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Spremeni geslo"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Seja za goste"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -63,10 +97,6 @@ msgstr "Pritisnite za overitev"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Overitev je spodletela"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Spremeni geslo"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -113,10 +143,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Po odjavi bodo vse nastavitve in podatki izbrisani."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Seja za goste"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

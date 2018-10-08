@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-05-11 03:39+0000\n"
 "Last-Translator: Pedro Ferreira <pmaf.ferreira@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
@@ -45,6 +45,40 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas definições requerem privilégios administrativos para serem alteradas"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Alterar Avatar"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Nome completo"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Tipo de conta:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Idioma:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Login automaticamente:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Alterar Palavra-passe"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Sessão de Convidado"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -65,10 +99,6 @@ msgstr "Premir para autenticar"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autenticação falhou"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Alterar Palavra-passe"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -117,10 +147,6 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Quando for terminada a sessão, todas as definições e dados relativos a essa "
 "sessão serão apagados."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Sessão de Convidado"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
