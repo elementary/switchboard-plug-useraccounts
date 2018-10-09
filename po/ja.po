@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-10-02 00:04+0000\n"
+"PO-Revision-Date: 2018-10-09 01:53+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -43,29 +43,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "アバターを変更"
+msgstr "アバター"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "フルネーム"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "アカウントの種類:"
+msgstr "アカウントの種類"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "言語:"
+msgstr "言語"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "自動的にログイン:"
+msgstr "自動的にログイン"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
