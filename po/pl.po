@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-03-11 13:28+0000\n"
-"Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"PO-Revision-Date: 2018-10-09 00:59+0000\n"
+"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pl/>\n"
 "Language: pl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:35
@@ -46,6 +46,35 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
+#: src/Plug.vala:148
+msgid "Avatar"
+msgstr "Awatar"
+
+#: src/Plug.vala:149
+msgid "Full name"
+msgstr "Imię i nazwisko"
+
+#: src/Plug.vala:150
+msgid "Account type"
+msgstr "Rodzaj konta"
+
+#: src/Plug.vala:151
+msgid "Language"
+msgstr "Język"
+
+#: src/Plug.vala:152
+msgid "Log in automatically"
+msgstr "Zaloguj automatycznie"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Zmień hasło"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Sesja gościa"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -66,10 +95,6 @@ msgstr "Kliknij, aby autoryzować"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Błąd uwierzytelnienia"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Zmień hasło"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -115,10 +140,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Po wylogowaniu, wszystkie ustawienia i pliki zostaną skasowane."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Sesja gościa"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

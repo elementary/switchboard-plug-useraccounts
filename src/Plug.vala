@@ -144,7 +144,15 @@ namespace SwitchboardPlugUserAccounts {
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
+            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            search_results.set ("%s → %s".printf (display_name, _("Avatar")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Full name")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Account type")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Language")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Log in automatically")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Change Password")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Guest Session")), "");
+            return search_results;
         }
     }
 }

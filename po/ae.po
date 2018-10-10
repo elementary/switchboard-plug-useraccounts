@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -31,6 +31,35 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
+#: src/Plug.vala:148
+msgid "Avatar"
+msgstr ""
+
+#: src/Plug.vala:149
+msgid "Full name"
+msgstr ""
+
+#: src/Plug.vala:150
+msgid "Account type"
+msgstr ""
+
+#: src/Plug.vala:151
+msgid "Language"
+msgstr ""
+
+#: src/Plug.vala:152
+msgid "Log in automatically"
+msgstr ""
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr ""
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr ""
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -50,10 +79,6 @@ msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr ""
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:31
@@ -97,10 +122,6 @@ msgstr ""
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
 msgstr ""
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173

@@ -1,6 +1,8 @@
 # Switchboard User Accounts Plug
 [![l10n](https://l10n.elementary.io/widgets/switchboard/switchboard-plug-useraccounts/svg-badge.svg)](https://l10n.elementary.io/projects/switchboard/switchboard-plug-useraccounts)
 
+![screenshot](data/screenshot.png?raw=true)
+
 ## Building and Installation
 
 You'll need the following dependencies:

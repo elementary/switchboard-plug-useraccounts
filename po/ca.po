@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-04-25 00:04+0000\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"PO-Revision-Date: 2018-10-09 13:44+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: src/Plug.vala:35
@@ -46,6 +46,35 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alguns paràmetres necessiten permisos d'administrador per ser modificats"
 
+#: src/Plug.vala:148
+msgid "Avatar"
+msgstr "Avatar"
+
+#: src/Plug.vala:149
+msgid "Full name"
+msgstr "Nom complet"
+
+#: src/Plug.vala:150
+msgid "Account type"
+msgstr "Tipus de compte"
+
+#: src/Plug.vala:151
+msgid "Language"
+msgstr "Llengua"
+
+#: src/Plug.vala:152
+msgid "Log in automatically"
+msgstr "Entra-hi automàticament"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Canvia la contrasenya"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Sessió de convidat"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -66,10 +95,6 @@ msgstr "Premeu-ho per autenticar-vos"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Ha fallat l'autenticació"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Canvia la contrasenya"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -117,10 +142,6 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Sessió de convidat"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

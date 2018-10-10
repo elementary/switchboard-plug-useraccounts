@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2016-01-15 15:22+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,40 @@ msgstr "Relácia pre hosťa nemá vplyv pokým nereštartujete váš systém"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Zmeniť avatar"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Celé meno"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Typ konta:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Jazyk:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Automatické prihlásenie:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Zmeniť heslo"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Relácia pre hosťa"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -59,10 +93,6 @@ msgstr "Stlač pre autentifikovanie"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autentifikácia neúspešná"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Zmeniť heslo"
 
 #: src/Dialogs/NewUserDialog.vala:31
 #, fuzzy
@@ -110,10 +140,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Po odhlásení budú všetky ich nastavenia a dáta odstránené."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Relácia pre hosťa"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

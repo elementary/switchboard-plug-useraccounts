@@ -1,4 +1,9 @@
-project('useraccounts', 'vala', 'c', meson_version: '>= 0.46.1')
+project(
+    'useraccounts',
+    'vala', 'c',
+    meson_version: '>= 0.46.1',
+    version: '2.1.7'
+)
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'

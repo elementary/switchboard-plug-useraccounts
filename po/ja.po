@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
-"PO-Revision-Date: 2018-10-02 00:04+0000\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"PO-Revision-Date: 2018-10-09 01:53+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -26,7 +26,8 @@ msgstr "ユーザーアカウント"
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr "アカウントの権限を管理し、ユーザー名、パスワード、アカウント画像を設定します"
+msgstr ""
+"アカウントの権限を管理し、ユーザー名、パスワード、アカウント画像を設定します"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -40,6 +41,35 @@ msgstr "ゲストセッションの変更は再起動後に反映されます"
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
+
+#: src/Plug.vala:148
+msgid "Avatar"
+msgstr "アバター"
+
+#: src/Plug.vala:149
+msgid "Full name"
+msgstr "フルネーム"
+
+#: src/Plug.vala:150
+msgid "Account type"
+msgstr "アカウントの種類"
+
+#: src/Plug.vala:151
+msgid "Language"
+msgstr "言語"
+
+#: src/Plug.vala:152
+msgid "Log in automatically"
+msgstr "自動的にログイン"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "パスワードを変更"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "ゲストセッション"
 
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
@@ -61,10 +91,6 @@ msgstr "認証するにはクリックしてください"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "認証に失敗しました"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "パスワードを変更"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -103,15 +129,13 @@ msgstr "ユーザー名は英字小文字と数字だけを含むことができ
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr "ゲストセッションは、誰かが一時的なデフォルトのアカウントをパスワードなしに使うことを可能にします。"
+msgstr ""
+"ゲストセッションは、誰かが一時的なデフォルトのアカウントをパスワードなしに使"
+"うことを可能にします。"
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "ログアウトすると、設定やデータは削除されます。"
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "ゲストセッション"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 11:01-0700\n"
+"POT-Creation-Date: 2018-10-08 13:45-0700\n"
 "PO-Revision-Date: 2018-04-19 19:13+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -42,6 +42,40 @@ msgstr "Změny v nastavení sezení hosta se projeví až po restartování poč
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
+#: src/Plug.vala:148
+#, fuzzy
+msgid "Avatar"
+msgstr "Změnit ikonu uživatele"
+
+#: src/Plug.vala:149
+#, fuzzy
+msgid "Full name"
+msgstr "Celé jméno"
+
+#: src/Plug.vala:150
+#, fuzzy
+msgid "Account type"
+msgstr "Typ účtu:"
+
+#: src/Plug.vala:151
+#, fuzzy
+msgid "Language"
+msgstr "Jazyk:"
+
+#: src/Plug.vala:152
+#, fuzzy
+msgid "Log in automatically"
+msgstr "Přihlásit automaticky:"
+
+#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+msgid "Change Password"
+msgstr "Změna hesla"
+
+#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Widgets/UserListBox.vala:41
+msgid "Guest Session"
+msgstr "Sezení hosta"
+
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
@@ -62,10 +96,6 @@ msgstr "Kliknětě pro ověření"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autentizace selhala"
-
-#: src/Dialogs/ChangePasswordDialog.vala:92
-msgid "Change Password"
-msgstr "Změna hesla"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -111,10 +141,6 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Jakmile se odhlásí, budou odstraněna všechna jejich nastavení a data."
-
-#: src/Views/GuestSettingsView.vala:31 src/Widgets/UserListBox.vala:41
-msgid "Guest Session"
-msgstr "Sezení hosta"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
