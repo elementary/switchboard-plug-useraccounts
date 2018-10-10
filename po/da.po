@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-10-03 00:11+0000\n"
+"PO-Revision-Date: 2018-10-10 21:17+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/da/>\n"
@@ -46,29 +46,24 @@ msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Skift billede"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
-msgstr "Fuldt navn"
+msgstr "Fulde navn"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Kontotype:"
+msgstr "Kontotype"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Sprog:"
+msgstr "Sprog"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Log in automatisk:"
+msgstr "Log ind automatisk"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
