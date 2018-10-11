@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-05-03 00:06+0000\n"
+"PO-Revision-Date: 2018-10-11 17:57+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fi/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:35
@@ -46,29 +46,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Vaihda kuva"
+msgstr "Profiilikuva"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Koko nimi"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Käyttäjätilin tyyppi:"
+msgstr "Käyttäjätilin tyyppi"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Kieli:"
+msgstr "Kieli"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Kirjaudu automaattisesti:"
+msgstr "Kirjaudu automaattisesti"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
