@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-09-20 00:05+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"PO-Revision-Date: 2018-10-11 00:48+0000\n"
+"Last-Translator: Deyvison Rocha <deyvison@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -47,29 +47,24 @@ msgstr ""
 "modificadas"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Alterar imagem de exibição"
+msgstr "Imagem de exibição"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Nome completo"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Tipo de conta:"
+msgstr "Tipo de conta"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Idioma:"
+msgstr "Idioma"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Entrar automaticamente:"
+msgstr "Entrar automaticamente"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -139,7 +134,8 @@ msgstr ""
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr "A Sessão de convidado permite usar uma conta padrão sem uma senha."
+msgstr ""
+"A Sessão de convidado permite usar uma conta temporária padrão sem uma senha."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
