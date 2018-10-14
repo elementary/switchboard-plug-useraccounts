@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2018-10-13 17:15-0700\n"
 "PO-Revision-Date: 2018-10-10 21:17+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-24 06:30+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Godkendelse påkrævet for at kunne ændre brugerdata"
@@ -229,6 +230,7 @@ msgstr "Du kan ikke fjerne din egen brugerkonto"
 msgid "Choose a Password"
 msgstr "Vælg en Adgangskode"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Bekræft Adgangskode"

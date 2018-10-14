@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: useraccounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2018-10-13 17:15-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr ""
@@ -224,6 +225,7 @@ msgstr ""
 msgid "Choose a Password"
 msgstr ""
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr ""

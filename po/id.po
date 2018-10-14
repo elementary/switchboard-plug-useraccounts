@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2018-10-13 17:15-0700\n"
 "PO-Revision-Date: 2018-06-12 07:30+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Otentikasi diperlukan untuk mengubah data pengguna"
@@ -232,6 +233,7 @@ msgstr "Anda tidak dapat menghapus akun pengguna Anda sendiri"
 msgid "Choose a Password"
 msgstr "Pilih sebuah Kata Sandi"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Konfirmasi Kata Sandi"

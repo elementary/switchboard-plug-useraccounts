@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2018-10-13 17:15-0700\n"
 "PO-Revision-Date: 2015-06-25 18:43+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Kërkohet identifikimi për të ndryshuar të dhënat e përdoruesit"
@@ -233,6 +234,7 @@ msgstr "Nuk mund të heqësh llogarinë tënde të përdoruesit"
 msgid "Choose a Password"
 msgstr "Ndrysho fjalëkalimin"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 #, fuzzy
 msgid "Confirm Password"

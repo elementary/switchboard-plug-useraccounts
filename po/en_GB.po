@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2018-10-13 17:15-0700\n"
 "PO-Revision-Date: 2018-04-29 14:26+0000\n"
 "Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
 "Language-Team: English (United Kingdom) <https://weblate.elementary.io/"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Authentication is required to change user data"
@@ -232,6 +233,7 @@ msgstr "You cannot remove your own user account"
 msgid "Choose a Password"
 msgstr "Choose a Password"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Confirm Password"
