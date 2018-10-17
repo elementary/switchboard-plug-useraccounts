@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-14 00:04+0000\n"
+"PO-Revision-Date: 2018-10-18 00:11+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/mr/>\n"
@@ -246,7 +246,7 @@ msgstr "अन्य खाती"
 
 #: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr ""
+msgstr "सक्षम"
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
