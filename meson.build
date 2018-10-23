@@ -2,7 +2,7 @@ project(
     'useraccounts',
     'vala', 'c',
     meson_version: '>= 0.46.1',
-    version: '2.1.7'
+    version: '2.2.0'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
