@@ -19,7 +19,7 @@ namespace GuestSessionToggle {
 	const string LIGHTDM_CONF = "/etc/lightdm/lightdm.conf";
 	const string LIGHTDM_CONF_D = "/etc/lightdm/lightdm.conf.d";
 	const string GUEST_SESSION_CONF = "/usr/share/lightdm/lightdm.conf.d/60-guest-session.conf";
-	
+
 	const OptionEntry[] options = {
 		{ "show", 0, 0, OptionArg.NONE, ref SHOW, "Show whether guest-session is enabled", null },
 		{ "show-autologin", 0, 0, OptionArg.NONE, ref SHOW_AUTOLOGIN, "Show whether guest will be logged in automatically", null },
@@ -40,7 +40,7 @@ namespace GuestSessionToggle {
 	public static int main (string[] args) {
 		var context = new OptionContext (null);
 		context.add_main_entries (options, null);
-			
+
 		try {
 			context.parse (ref args);
 		} catch (OptionError e) {
@@ -53,8 +53,8 @@ namespace GuestSessionToggle {
 
 		if (SHOW) {
 			enabled = get_allow_guest ();
-			
-			if (enabled) 
+
+			if (enabled)
 				print ("on\n");
 			else
 				print ("off\n");
@@ -71,7 +71,7 @@ namespace GuestSessionToggle {
 
 			return Posix.EXIT_SUCCESS;
 		}
-			
+
 		var uid = Posix.getuid ();
 
 		if (uid > 0) {
@@ -96,22 +96,22 @@ namespace GuestSessionToggle {
 
 	private bool set_allow_guest (bool enable) {
 		string @value = (enable ? "true" : "false");
-		return set_setting ("SeatDefaults", "allow-guest", @value, GUEST_SESSION_CONF);
+		return set_setting ("Seat:*", "allow-guest", @value, GUEST_SESSION_CONF);
 	}
 
 	private bool get_allow_guest () {
-		string @value = get_setting ("SeatDefaults", "allow-guest", "true").down ();
+		string @value = get_setting ("Seat:*", "allow-guest", "true").down ();
 		return (@value == "true");
 	}
-	
+
 	private bool get_guest_autologin () {
-		string @value = get_setting ("SeatDefaults", "autologin-guest", "false").down ();
+		string @value = get_setting ("Seat:*", "autologin-guest", "false").down ();
 		return (@value == "true");
 	}
 
 	private bool set_guest_autologin (bool enable) {
 		string @value = (enable ? "true" : "false");
-		return set_setting ("SeatDefaults", "autologin-guest", @value, GUEST_SESSION_CONF);
+		return set_setting ("Seat:*", "autologin-guest", @value, GUEST_SESSION_CONF);
 	}
 
 	private string get_setting (string group, string key, string default_value) {
@@ -122,7 +122,7 @@ namespace GuestSessionToggle {
 		@value = get_config_from_file (LIGHTDM_CONF, group, key);
 		if (@value != null)
 			return @value;
-		
+
 		@value = get_config_from_directory (LIGHTDM_CONF_D, group, key);
 		if (@value != null)
 			return @value;
@@ -130,7 +130,7 @@ namespace GuestSessionToggle {
 		@value = get_config_from_directories (Environment.get_system_config_dirs (), group, key);
 		if (@value != null)
 			return @value;
-		
+
 		@value = get_config_from_directories (Environment.get_system_data_dirs (), group, key);
 		if (@value != null)
 			return @value;
@@ -148,7 +148,7 @@ namespace GuestSessionToggle {
 			if (result != null)
 				return result;
 		}
-		
+
 		return null;
 	}
 
@@ -179,7 +179,7 @@ namespace GuestSessionToggle {
 				printerr ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
 			}
 		}
-		
+
 		return null;
 	}
 
@@ -192,7 +192,7 @@ namespace GuestSessionToggle {
 		} catch (FileError e) {
 			printerr ("Failed to open configuration file %s: %s\n", path, e.message);
 		}
-		
+
 		return null;
 	}
 
@@ -201,13 +201,13 @@ namespace GuestSessionToggle {
 
 		if (set_config_in_file (LIGHTDM_CONF, group, key, @value))
 			return true;
-		
+
 		if (set_config_in_directory (LIGHTDM_CONF_D, group, key, @value))
 			return true;
 
 		if (set_config_in_directories (Environment.get_system_config_dirs (), group, key, @value))
 			return true;
-		
+
 		if (set_config_in_directories (Environment.get_system_data_dirs (), group, key, @value))
 			return true;
 
@@ -221,7 +221,7 @@ namespace GuestSessionToggle {
 			if (set_config_in_directory (full_dir, group, key, @value))
 				return true;
 		}
-		
+
 		return false;
 	}
 
@@ -250,7 +250,7 @@ namespace GuestSessionToggle {
 				printerr ("Ignoring configuration file %s, it does not have .conf suffix", conf_path);
 			}
 		}
-		
+
 		return false;
 	}
 
@@ -267,12 +267,12 @@ namespace GuestSessionToggle {
 				key_file.set_string (group, key, @value);
 				key_file.save_to_file (path);
 				return true;
-			}			
+			}
 		} catch (KeyFileError e) {
 		} catch (FileError e) {
 			printerr ("Failed to load/save configuration file %s: %s\n", path, e.message);
 		}
-		
+
 		return false;
 	}
 }
