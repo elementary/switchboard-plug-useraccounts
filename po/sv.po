@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-03-26 00:06+0000\n"
-"Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
+"PO-Revision-Date: 2018-10-20 13:32+0000\n"
+"Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sv/>\n"
 "Language: sv\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
@@ -43,29 +43,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Byt visningsbild"
+msgstr "Visningsbild"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Fullständigt namn"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Kontotyp:"
+msgstr "Kontotyp"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Språk:"
+msgstr "Språk"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Automatisk inloggning:"
+msgstr "Logga in automatiskt"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -98,9 +93,8 @@ msgid "Authentication failed"
 msgstr "Verifieringen misslyckades"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Kontotyp:"
+msgstr "Kontotyp"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -128,9 +122,10 @@ msgid "Username is already taken"
 msgstr "Användarnamnet är upptaget"
 
 #: src/Dialogs/NewUserDialog.vala:141
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Kan bara innehålla små bokstäver, siffror, men inga mellanslag"
+msgstr ""
+"Användarnamn kan bara innehålla små bokstäver och siffror, och inga "
+"mellanslag"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -154,7 +149,7 @@ msgstr "Ångra borttagning av användarkonto"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr ""
+msgstr "Ångra"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
@@ -185,9 +180,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr "Klicka för att ändra Språk- och regionsinställningar"
 
 #: src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "Byt lösenord"
+msgstr "Byt lösenord…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
@@ -203,7 +197,7 @@ msgstr "Ta bort"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr ""
+msgstr "Ange från fil…"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
@@ -230,15 +224,13 @@ msgid "You cannot remove your own user account"
 msgstr "Du kan inte ta bort ditt eget användarkonto"
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Byt lösenord"
+msgstr "Välj ett lösenord"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Bekräfta nytt lösenord"
+msgstr "Bekräfta lösenord"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"

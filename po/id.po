@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-06-12 07:30+0000\n"
+"PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
@@ -46,29 +46,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Ganti Avatar"
+msgstr "Gambar Profil"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
-msgstr "Nama Lengkap"
+msgstr "Nama lengkap"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Tipe akun:"
+msgstr "Tipe akun"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Bahasa:"
+msgstr "Bahasa"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Masuk otomtis:"
+msgstr "Masuk secara otomatis"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
