@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-18 00:11+0000\n"
+"PO-Revision-Date: 2018-10-25 07:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -149,7 +149,7 @@ msgstr "Entra automàticament:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "Desfés la darrera eliminació de compte d'usuari"
+msgstr "Desfés la darrera supressió de compte d'usuari"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
@@ -197,7 +197,7 @@ msgstr "Inhabilita el compte d'usuari"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr "Elimina"
+msgstr "Suprimeix"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
@@ -221,11 +221,11 @@ msgstr "Crea un compte d'usuari"
 
 #: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
-msgstr "Elimina el compte d'usuari i les seves dades"
+msgstr "Suprimeix el compte d'usuari i les seves dades"
 
 #: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
-msgstr "No podeu eliminar el vostre compte"
+msgstr "No podeu suprimir el compte propi"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

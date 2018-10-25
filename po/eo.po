@@ -3,15 +3,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2015-04-11 16:50+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-10-25 07:18+0000\n"
+"Last-Translator: Jesse ALTER <jesse@jessealter.com>\n"
+"Language-Team: Esperanto <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/eo/>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
@@ -38,7 +40,7 @@ msgstr ""
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Kelkaj agordoj postulas administrantajn rajtojn por esti ŝanĝitaj"
 
 #: src/Plug.vala:148
 msgid "Avatar"
@@ -191,7 +193,7 @@ msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
@@ -211,30 +213,28 @@ msgstr "Bildoj"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
-msgstr ""
+msgstr "Krei uzanto-konton"
 
 #: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
-msgstr ""
+msgstr "Forigi uzanto-konton kaj siaj datumoj"
 
 #: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
-msgstr ""
+msgstr "Oni ne povas forigi sian propran uzanto-konton"
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Nova pasvorto"
+msgstr "Elektu pasvorton"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Aktuala pasvorto"
+msgstr "Konfirmu pasvorton"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
-msgstr ""
+msgstr "Montri pasvortojn"
 
 #: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
