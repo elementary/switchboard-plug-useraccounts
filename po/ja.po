@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-09 01:53+0000\n"
+"PO-Revision-Date: 2018-11-07 14:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "ユーザーのデータを変更するには認証が必要です"
+msgstr "ユーザーデータを変更するには認証が必要です"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -27,8 +27,7 @@ msgstr "ユーザーアカウント"
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
-"アカウントの権限を管理し、ユーザー名、パスワード、アカウント画像を設定します"
+msgstr "アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -120,11 +119,11 @@ msgstr "ユーザーを作成"
 
 #: src/Dialogs/NewUserDialog.vala:139
 msgid "Username is already taken"
-msgstr "ユーザー名がすでに使われています"
+msgstr "ユーザー名はすでに使われています"
 
 #: src/Dialogs/NewUserDialog.vala:141
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "ユーザー名は英字小文字と数字だけを含むことができ、空白は使用できません"
+msgstr "ユーザー名は小文字と数字のみを含むことができます。空白は使用しないでください"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -229,7 +228,7 @@ msgstr "パスワードを選択"
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "パスワードの確認"
+msgstr "パスワードを確認"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
