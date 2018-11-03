@@ -21,19 +21,34 @@
 
 namespace SwitchboardPlugUserAccounts {
     public static string get_display_manager () {
-        //TODO: add file location for different, non-debian-based distros
-        string file = "/etc/X11/default-display-manager";
-        string output = "";
+        string file = "/etc/systemd/system/display-manager.service";
 
-        try {
-            FileUtils.get_contents (file, out output);
-        } catch (Error e) {
-            warning (e.message);
+        if (FileUtils.test(file, FileTest.IS_REGULAR)) {
+            string output = "";
+            Regex regex = new Regex ("^ExecStart");
+            string? read_content = "";
+            try {
+                FileUtils.get_contents (file, out read_content);
+            } catch (Error e) {
+                warning (e.message);
+                return "";
+            }
+            var content_array = read_content.split ("\n");
+            foreach (string line in content_array) {
+                if (regex.match (line)) {
+                    output = line;
+                    break;
+                }
+            }
+            if (output.index_of ("/") != -1) {
+                output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
+            } else if (output.index_of ("=") != -1) {
+                output = output.slice (output.last_index_of ("=") + 1, output.length).chomp ();
+            }
+            return output;
+        } else {
             return "";
         }
-
-        output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
-        return output;
     }
 
     private static string[]? installed_languages = null;
@@ -46,8 +61,8 @@ namespace SwitchboardPlugUserAccounts {
         int status;
 
         try {
-            Process.spawn_sync (null, 
-                {"/usr/share/language-tools/language-options" , null}, 
+            Process.spawn_sync (null,
+                {"/usr/share/language-tools/language-options" , null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
@@ -271,8 +286,8 @@ namespace SwitchboardPlugUserAccounts {
 
         try {
             var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
-            Process.spawn_sync (null, 
-                {cli, "--%s".printf (option)}, 
+            Process.spawn_sync (null,
+                {cli, "--%s".printf (option)},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
@@ -294,8 +309,8 @@ namespace SwitchboardPlugUserAccounts {
 
             try {
                 var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
-                Process.spawn_sync (null, 
-                    {"pkexec", cli, "--%s".printf (option)}, 
+                Process.spawn_sync (null,
+                    {"pkexec", cli, "--%s".printf (option)},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,
