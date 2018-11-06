@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-05-25 20:46+0000\n"
-"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
+"PO-Revision-Date: 2018-11-06 21:18+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/tr/>\n"
 "Language: tr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
@@ -46,29 +46,24 @@ msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Kullanıcı Resmini Değiştir"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Tam İsim"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Hesap türü:"
+msgstr "Hesap türü"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Dil:"
+msgstr "Dil"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Otomatik Giriş:"
+msgstr "Otomatik giriş yap"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
