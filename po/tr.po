@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-11-06 21:18+0000\n"
+"PO-Revision-Date: 2018-11-10 22:04+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/tr/>\n"
@@ -199,7 +199,7 @@ msgstr "Kaldır"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Dosyadan ayarla..."
+msgstr "Dosyadan ayarla…"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:62
 msgid "Select an image"
