@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-03-11 18:36+0000\n"
+"PO-Revision-Date: 2018-11-16 08:27+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fr/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
@@ -49,29 +49,24 @@ msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Modifier l'image de l'utilisateur"
+msgstr "Image de l'utilisateur"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Nom complet"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Type de compte :"
+msgstr "Type de compte"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Langue :"
+msgstr "Langue"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Connexion automatique :"
+msgstr "Connexion automatique"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
