@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-11-07 14:10+0000\n"
+"PO-Revision-Date: 2018-11-24 12:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -139,7 +139,7 @@ msgstr "ログアウトすると、設定やデータは削除されます。"
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr "自動的にログイン:"
+msgstr "自動的にログイン："
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
@@ -163,7 +163,7 @@ msgstr "最後の管理者の権限を削除することはできません"
 
 #: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
-msgstr "アカウントの種類:"
+msgstr "アカウントの種類："
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
@@ -171,7 +171,7 @@ msgstr "標準"
 
 #: src/Views/UserSettingsView.vala:104
 msgid "Language:"
-msgstr "言語:"
+msgstr "言語："
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
