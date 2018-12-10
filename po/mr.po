@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-18 00:11+0000\n"
+"PO-Revision-Date: 2018-12-14 22:10+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/mr/>\n"
@@ -74,7 +74,7 @@ msgstr ""
 #: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
 #: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Dialogs/AvatarDialog.vala:72
 msgid "Change Avatar"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr ""
+msgstr "काढा"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
@@ -226,7 +226,7 @@ msgstr ""
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr ""
+msgstr "पासवर्डची पुष्टी करा"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
