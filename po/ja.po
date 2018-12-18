@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-12-02 06:52+0000\n"
+"PO-Revision-Date: 2018-12-19 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -36,7 +36,7 @@ msgstr "パスワードの変更に失敗しました"
 #: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr "ゲストセッションの変更は再起動後に反映されます"
+msgstr "ゲストセッションの変更は、再起動後に反映されます"
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
