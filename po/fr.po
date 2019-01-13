@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-11-16 08:27+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"PO-Revision-Date: 2019-01-14 00:10+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fr/>\n"
 "Language: fr\n"
@@ -231,12 +231,12 @@ msgstr "Impossible de supprimer votre propre compte"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Choisissez un mot-de-passe"
+msgstr "Choisissez un mot de passe"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Confirmez le mot-de-passe"
+msgstr "Confirmez le mot de passe"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
