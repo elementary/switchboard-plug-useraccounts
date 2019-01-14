@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-31 01:51+0000\n"
+"PO-Revision-Date: 2019-01-15 00:06+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
@@ -52,15 +52,15 @@ msgstr "全名"
 
 #: src/Plug.vala:150
 msgid "Account type"
-msgstr "账户类型："
+msgstr "账户类型"
 
 #: src/Plug.vala:151
 msgid "Language"
-msgstr "账户语言："
+msgstr "账户语言"
 
 #: src/Plug.vala:152
 msgid "Log in automatically"
-msgstr "自动登录："
+msgstr "自动登录"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -94,7 +94,7 @@ msgstr "认证失败"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
-msgstr "账户类型："
+msgstr "账户类型"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -149,7 +149,7 @@ msgstr "撤销"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "您没有更改此项内容的权限"
+msgstr "您没有权限更改此项内容"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
