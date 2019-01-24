@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-10-15 14:46+0000\n"
-"Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
+"PO-Revision-Date: 2019-01-25 00:01+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt/>\n"
 "Language: pt\n"
@@ -82,7 +82,7 @@ msgstr "Cancelar"
 
 #: src/Dialogs/AvatarDialog.vala:72
 msgid "Change Avatar"
-msgstr "Alterar Avatar"
+msgstr "Alterar Imagem de perfil"
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
@@ -146,7 +146,7 @@ msgstr ""
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr "Login automaticamente:"
+msgstr "Iniciar sessão automaticamente:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
@@ -158,7 +158,7 @@ msgstr "Reverter"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "Não tens permissão para modificar isto"
+msgstr "Não tem permissão para modificar isto"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
@@ -222,7 +222,7 @@ msgstr "Criar conta de utilizador"
 
 #: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
-msgstr "Remover conta de utilizador e documentos associados"
+msgstr "Remover conta de utilizador e dados associados"
 
 #: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
