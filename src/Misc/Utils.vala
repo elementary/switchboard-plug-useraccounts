@@ -141,10 +141,17 @@ namespace SwitchboardPlugUserAccounts {
     private static Act.User? current_user = null;
 
     public static unowned Act.User? get_current_user () {
-        if (current_user != null)
+        if (current_user != null) {
             return current_user;
+        }
 
-        current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+        foreach (unowned Act.User user in get_usermanager ().list_users ()) {
+            if (user.get_user_name () == GLib.Environment.get_user_name ()) {
+                current_user = user;
+                break;
+            }
+        }
+
         return current_user;
     }
 
