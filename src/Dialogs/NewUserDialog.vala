@@ -116,7 +116,23 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
                 accounttype = Act.UserAccountType.ADMINISTRATOR;
             }
 
-            create_new_user (fullname, username, accounttype, Act.UserPasswordMode.REGULAR, password);
+            if (get_permission ().allowed) {
+                try {
+                    var created_user = get_usermanager ().create_user (username, fullname, accounttype);
+
+                    get_usermanager ().user_added.connect ((user) => {
+                        if (user == created_user) {
+                            created_user.set_locked (false);
+
+                            if (password != null) {
+                                created_user.set_password (password, "");
+                            }
+                        }
+                    });
+                } catch (Error e) {
+                    critical ("Creation of user '%s' failed".printf (username));
+                }
+            }
 
             destroy ();
         });
@@ -159,28 +175,5 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
 
     private class ValidatedEntry : Gtk.Entry {
         public bool is_valid { get; set; default = false; }
-    }
-
-    private void create_new_user (string fullname, string username,
-    Act.UserAccountType usertype, Act.UserPasswordMode mode, string? password = null) {
-        if (get_permission ().allowed) {
-            try {
-                Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
-
-                get_usermanager ().user_added.connect ((user) => {
-                    if (user == created_user) {
-                        created_user.set_locked (false);
-                            if (mode == Act.UserPasswordMode.REGULAR && password != null)
-                                created_user.set_password (password, "");
-                            else if (mode == Act.UserPasswordMode.NONE)
-                                created_user.set_password_mode (Act.UserPasswordMode.NONE);
-                            else if (mode == Act.UserPasswordMode.SET_AT_LOGIN)
-                                created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-                    }
-                });
-            } catch (Error e) {
-                critical ("Creation of user '%s' failed".printf (username));
-            }
-        }
     }
 }
