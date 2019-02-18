@@ -239,29 +239,6 @@ namespace SwitchboardPlugUserAccounts {
         return username;
     }
 
-    public static void create_new_user (string fullname, string username,
-    Act.UserAccountType usertype, Act.UserPasswordMode mode, string? password = null) {
-        if (get_permission ().allowed) {
-            try {
-                Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
-
-                get_usermanager ().user_added.connect ((user) => {
-                    if (user == created_user) {
-                        created_user.set_locked (false);
-                            if (mode == Act.UserPasswordMode.REGULAR && password != null)
-                                created_user.set_password (password, "");
-                            else if (mode == Act.UserPasswordMode.NONE)
-                                created_user.set_password_mode (Act.UserPasswordMode.NONE);
-                            else if (mode == Act.UserPasswordMode.SET_AT_LOGIN)
-                                created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-                    }
-                });
-            } catch (Error e) {
-                critical ("Creation of user '%s' failed".printf (username));
-            }
-        }
-    }
-
     private static Passwd.Handler? passwd_handler;
 
     public static unowned Passwd.Handler? get_passwd_handler (bool _force_new = false) {

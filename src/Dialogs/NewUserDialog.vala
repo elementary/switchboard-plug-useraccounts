@@ -116,7 +116,23 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
                 accounttype = Act.UserAccountType.ADMINISTRATOR;
             }
 
-            create_new_user (fullname, username, accounttype, Act.UserPasswordMode.REGULAR, password);
+            if (get_permission ().allowed) {
+                try {
+                    var created_user = get_usermanager ().create_user (username, fullname, accounttype);
+
+                    get_usermanager ().user_added.connect ((user) => {
+                        if (user == created_user) {
+                            created_user.set_locked (false);
+
+                            if (password != null) {
+                                created_user.set_password (password, "");
+                            }
+                        }
+                    });
+                } catch (Error e) {
+                    critical ("Creation of user '%s' failed".printf (username));
+                }
+            }
 
             destroy ();
         });
