@@ -20,22 +20,6 @@
 */
 
 namespace SwitchboardPlugUserAccounts {
-    public static string get_display_manager () {
-        //TODO: add file location for different, non-debian-based distros
-        string file = "/etc/X11/default-display-manager";
-        string output = "";
-
-        try {
-            FileUtils.get_contents (file, out output);
-        } catch (Error e) {
-            warning (e.message);
-            return "";
-        }
-
-        output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
-        return output;
-    }
-
     private static string[]? installed_languages = null;
 
     public static string[]? get_installed_languages () {
@@ -141,10 +125,17 @@ namespace SwitchboardPlugUserAccounts {
     private static Act.User? current_user = null;
 
     public static unowned Act.User? get_current_user () {
-        if (current_user != null)
+        if (current_user != null) {
             return current_user;
+        }
 
-        current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+        foreach (unowned Act.User user in get_usermanager ().list_users ()) {
+            if (user.get_user_name () == GLib.Environment.get_user_name ()) {
+                current_user = user;
+                break;
+            }
+        }
+
         return current_user;
     }
 
@@ -230,29 +221,6 @@ namespace SwitchboardPlugUserAccounts {
         }
 
         return username;
-    }
-
-    public static void create_new_user (string fullname, string username,
-    Act.UserAccountType usertype, Act.UserPasswordMode mode, string? password = null) {
-        if (get_permission ().allowed) {
-            try {
-                Act.User created_user = get_usermanager ().create_user (username, fullname, usertype);
-
-                get_usermanager ().user_added.connect ((user) => {
-                    if (user == created_user) {
-                        created_user.set_locked (false);
-                            if (mode == Act.UserPasswordMode.REGULAR && password != null)
-                                created_user.set_password (password, "");
-                            else if (mode == Act.UserPasswordMode.NONE)
-                                created_user.set_password_mode (Act.UserPasswordMode.NONE);
-                            else if (mode == Act.UserPasswordMode.SET_AT_LOGIN)
-                                created_user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-                    }
-                });
-            } catch (Error e) {
-                critical ("Creation of user '%s' failed".printf (username));
-            }
-        }
     }
 
     private static Passwd.Handler? passwd_handler;
