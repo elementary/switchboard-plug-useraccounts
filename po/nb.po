@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2018-07-22 12:09+0000\n"
-"Last-Translator: Nils K <slx@nilsk.net>\n"
+"PO-Revision-Date: 2019-02-22 00:05+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
 "Language: nb\n"
@@ -188,11 +188,12 @@ msgstr "Endre passord…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
-msgstr "Aktiver brukerkonto"
+msgstr "Skru på brukerkonto"
 
 #: src/Views/UserSettingsView.vala:366
+#, fuzzy
 msgid "Disable User Account"
-msgstr "Deaktiver brukerkonto"
+msgstr "Steng brukerkonto"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
