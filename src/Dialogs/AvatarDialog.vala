@@ -19,70 +19,66 @@
 
 namespace SwitchboardPlugUserAccounts.Dialogs {
     public class AvatarDialog : Gtk.Dialog {
-        private string              pixbuf_path;
-
-        private Gtk.Grid            main_grid;
-        private Gtk.Widget          button_change;
-        private Gtk.Widget          button_cancel;
-        private Widgets.CropView    cropview;
-
         public signal void request_avatar_change (Gdk.Pixbuf pixbuf);
 
-        public AvatarDialog (string pixbuf_path) {
-            this.pixbuf_path = pixbuf_path;
+        public string pixbuf_path { get; construct; }
 
+        private Widgets.CropView cropview;
+
+        public AvatarDialog (string pixbuf_path) {
+            Object (pixbuf_path: pixbuf_path);
+        }
+
+        construct {
             set_size_request (400, 0);
             set_resizable (false);
             set_deletable (false);
             set_modal (true);
 
-            build_ui ();
-            build_buttons ();
-            show_all ();
-        }
-
-        private void build_ui () {
-            var content = get_content_area () as Gtk.Box;
-            get_action_area ().margin = 6;
-            main_grid = new Gtk.Grid ();
+            var main_grid = new Gtk.Grid ();
             main_grid.expand = true;
             main_grid.margin = 12;
             main_grid.row_spacing = 10;
             main_grid.column_spacing = 20;
             main_grid.halign = Gtk.Align.CENTER;
-            content.add (main_grid);
+
+            get_content_area ().add (main_grid);
+
+            get_action_area ().margin = 6;
+
+            add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
+
+            var button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
+            button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+            response.connect (on_response);
 
             try {
                 cropview = new Widgets.CropView.from_pixbuf_with_size (new Gdk.Pixbuf.from_file (pixbuf_path), 400, 300);
                 cropview.quadratic_selection = true;
                 cropview.handles_visible = false;
 
-                Gtk.Frame frame = new Gtk.Frame (null);
+                var frame = new Gtk.Frame (null);
                 frame.add (cropview);
 
-                main_grid.attach (frame, 0, 0, 1, 1);
+                main_grid.attach (frame, 0, 0);
             } catch (Error e) {
                 critical (e.message);
                 button_change.set_sensitive (false);
             }
-        }
 
-        private void build_buttons () {
-            button_cancel = add_button (_("Cancel"), Gtk.ResponseType.CLOSE);
-            button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
-            button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            this.response.connect (on_response);
+            show_all ();
         }
 
         private void on_response (Gtk.Dialog source, int response_id) {
             if (response_id == Gtk.ResponseType.OK) {
                 var pixbuf = cropview.get_selection ();
-                if (pixbuf.get_width () > 200)
+                if (pixbuf.get_width () > 200) {
                     request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
-                else
+                } else {
                     request_avatar_change (pixbuf);
+                }
             }
-            hide ();
             destroy ();
         }
     }
