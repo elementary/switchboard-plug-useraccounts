@@ -83,7 +83,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 // We only display local files:
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
-                        string fix_uri = uri.replace ("%20", " ").replace ("%5B", "[").replace ("%5D", "]");
+                        string fix_uri = Uri.unescape_string (uri);
                         Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (fix_uri.substring (7), 256, 256, true);
                         preview_area.set_from_pixbuf (pixbuf);
                         preview_area.show ();
