@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
 "PO-Revision-Date: 2017-05-23 12:10+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,6 +16,7 @@ msgstr ""
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr ""
@@ -77,12 +78,15 @@ msgstr ""
 msgid "Guest Session"
 msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Anulează"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Schimbă avatar"
 
@@ -97,6 +101,11 @@ msgstr "Apasă pentru autentificare"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr ""
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Anulează"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -123,11 +132,11 @@ msgstr ""
 msgid "Create User"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Numele utilizatorului este deja folosit"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Poate conţine doar litere mici, numere şi nici un spaţiu"
@@ -204,16 +213,16 @@ msgstr ""
 msgid "Set from File…"
 msgstr "Setează din fişier..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
 msgstr ""
 
 #: src/Widgets/ListFooter.vala:35
@@ -233,6 +242,7 @@ msgstr "Nu se poate şterge propriul cont de utilizator"
 msgid "Choose a Password"
 msgstr "Parolă:"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 #, fuzzy
 msgid "Confirm Password"

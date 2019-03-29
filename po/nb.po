@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-07-22 12:09+0000\n"
-"Last-Translator: Nils K <slx@nilsk.net>\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2019-02-22 00:05+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
 "Language: nb\n"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:43+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Autentisering kreves for å endre brukerdata"
@@ -76,12 +77,15 @@ msgstr "Endre passord"
 msgid "Guest Session"
 msgstr "Gjesteøkt"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Avbryt"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Bytt profilbilde"
 
@@ -96,6 +100,11 @@ msgstr "Trykk for å autentisere"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autentisering mislyktes"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Avbryt"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -122,11 +131,11 @@ msgstr "Brukernavn"
 msgid "Create User"
 msgstr "Opprett bruker"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Brukernavn er opptatt"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Kan bare inneholde små bokstaver, tall og ikke tomrom"
 
@@ -187,11 +196,12 @@ msgstr "Endre passord…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
-msgstr "Aktiver brukerkonto"
+msgstr "Skru på brukerkonto"
 
 #: src/Views/UserSettingsView.vala:366
+#, fuzzy
 msgid "Disable User Account"
-msgstr "Deaktiver brukerkonto"
+msgstr "Steng brukerkonto"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -201,17 +211,17 @@ msgstr "Fjern"
 msgid "Set from File…"
 msgstr "Sett fra fil…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Bilder"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Velg et bilde"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Åpne"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Bilder"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -229,6 +239,7 @@ msgstr "Du kan ikke fjerne din egen brukerkonto"
 msgid "Choose a Password"
 msgstr "Velg et passord"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Bekreft passord"

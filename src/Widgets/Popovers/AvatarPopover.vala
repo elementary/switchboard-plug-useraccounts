@@ -59,19 +59,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void select_from_file () {
-            var file_dialog = new Gtk.FileChooserDialog (_("Select an image"),
-            get_parent_window () as Gtk.Window?, Gtk.FileChooserAction.OPEN, _("Cancel"),
-            Gtk.ResponseType.CANCEL, _("Open"), Gtk.ResponseType.ACCEPT);
-
-            Gtk.FileFilter filter = new Gtk.FileFilter ();
+            var filter = new Gtk.FileFilter ();
             filter.set_filter_name (_("Images"));
-            file_dialog.set_filter (filter);
             filter.add_mime_type ("image/jpeg");
             filter.add_mime_type ("image/jpg");
             filter.add_mime_type ("image/png");
 
-            // Add a preview widget
-            Gtk.Image preview_area = new Gtk.Image ();
+            var preview_area = new Gtk.Image ();
+
+            var file_dialog = new Gtk.FileChooserNative (
+                _("Select an image"),
+                get_parent_window () as Gtk.Window?,
+                Gtk.FileChooserAction.OPEN,
+                _("Open"),
+                _("Cancel")
+            );
+            file_dialog.filter = filter;
             file_dialog.set_preview_widget (preview_area);
             file_dialog.update_preview.connect (() => {
                 string uri = file_dialog.get_preview_uri ().replace ("%20", " ");
@@ -99,7 +102,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 var avatar_dialog = new Dialogs.AvatarDialog (path);
                 avatar_dialog.request_avatar_change.connect (utils.change_avatar);
             } else {
-                file_dialog.close ();
+                file_dialog.destroy ();
             }
         }
     }

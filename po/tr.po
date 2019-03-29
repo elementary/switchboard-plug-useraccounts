@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-05-25 20:46+0000\n"
-"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-11-10 22:04+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/tr/>\n"
 "Language: tr\n"
@@ -12,9 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Kullanıcı verisini değiştirmek için kimlik doğrulama gerekiyor"
@@ -45,29 +46,24 @@ msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Kullanıcı Resmini Değiştir"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Tam İsim"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Hesap türü:"
+msgstr "Hesap türü"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Dil:"
+msgstr "Dil"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Otomatik Giriş:"
+msgstr "Otomatik giriş yap"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -78,12 +74,15 @@ msgstr "Şifreyi Değiştir"
 msgid "Guest Session"
 msgstr "Konuk Oturumu"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "İptal"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Kullanıcı Resmini Değiştir"
 
@@ -98,6 +97,11 @@ msgstr "Kimlik denetimi için tıklayınız"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Kimlik denetimi başarısız"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "İptal"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -124,11 +128,11 @@ msgstr "Kullanıcı Adı"
 msgid "Create User"
 msgstr "Kullanıcı Oluştur"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Bu kullanıcı adı zaten alınmış"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Kullanıcı adı yalnızca küçük harf ve rakam içerebilir, boşluk içermemelidir"
@@ -203,19 +207,19 @@ msgstr "Kaldır"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Dosyadan ayarla..."
+msgstr "Dosyadan ayarla…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Resimler"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Bir resim seçin"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Aç"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Resimler"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -233,6 +237,7 @@ msgstr "Kendi kullanıcı hesabınızı kaldıramazsınız"
 msgid "Choose a Password"
 msgstr "Bir Parola Seç"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Şifreyi Onayla"

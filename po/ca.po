@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-10-09 13:44+0000\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-10-25 07:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Cal autenticació per canviar les dades de l'usuari"
@@ -28,7 +29,7 @@ msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
-"contrasenyes i les fotografies."
+"contrasenyes i les fotografies"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -43,8 +44,7 @@ msgstr ""
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
+msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
 #: src/Plug.vala:148
 msgid "Avatar"
@@ -75,12 +75,15 @@ msgstr "Canvia la contrasenya"
 msgid "Guest Session"
 msgstr "Sessió de convidat"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Cancel·la"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Canvia l'avatar"
 
@@ -95,6 +98,11 @@ msgstr "Premeu-ho per autenticar-vos"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Ha fallat l'autenticació"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Cancel·la"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -121,11 +129,11 @@ msgstr "Nom d'usuari"
 msgid "Create User"
 msgstr "Crea un usuari"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "El nom d'usuari ja existeix"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "El nom d'usuari només pot contenir lletres minúscules i números, sense "
@@ -149,7 +157,7 @@ msgstr "Entra automàticament:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "Desfés la darrera eliminació de compte d'usuari"
+msgstr "Desfés la darrera supressió de compte d'usuari"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
@@ -181,7 +189,7 @@ msgstr "Llengua:"
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Vés a llengua i regió"
+msgstr "Cliqueu per canviar als paràmetres de la llengua i la regió"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -197,23 +205,23 @@ msgstr "Inhabilita el compte d'usuari"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr "Elimina"
+msgstr "Suprimeix"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Estableix des d'un fitxer…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Imatges"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Trieu una imatge"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Obre"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Imatges"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -221,16 +229,17 @@ msgstr "Crea un compte d'usuari"
 
 #: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
-msgstr "Elimina el compte d'usuari i les seves dades"
+msgstr "Suprimeix el compte d'usuari i les seves dades"
 
 #: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
-msgstr "No podeu eliminar el vostre compte"
+msgstr "No podeu suprimir el compte propi"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Trieu una contrasenya"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Confirmeu la contrasenya"

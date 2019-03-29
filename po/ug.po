@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -13,6 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "ئابونت ئۇچۇرىنى ئۆزگەرتىش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
@@ -75,12 +76,15 @@ msgstr "پارولنى ئۆزگەرتىش"
 msgid "Guest Session"
 msgstr "مېھمان"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇرۇش"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "باش سۈرەتنى ئۆزگەرتىش"
 
@@ -95,6 +99,11 @@ msgstr "دەلىللەش ئۈچۈن بىسىڭ"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "سالاھىيەت دەلىللەش مەغلۇپ بولدى"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "ئەمەلدىن قالدۇرۇش"
 
 #: src/Dialogs/NewUserDialog.vala:31
 #, fuzzy
@@ -122,11 +131,11 @@ msgstr "ئابونت ئىسمى"
 msgid "Create User"
 msgstr "ئابونت قۇرۇش"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "ئابونت ئىسمى ئىشلىتىلىپ بولغان"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "پەقەت كىچىك ھەرپ ۋە سانلارنى كىرگۈزەلەيسىز"
@@ -203,17 +212,17 @@ msgstr "ئۆچۈرۈش"
 msgid "Set from File…"
 msgstr "ھۆججەتتىن تەڭشەش...."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "رەسىملەر"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "رەسىم تاللاش"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "ئىچىش"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "رەسىملەر"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -232,6 +241,7 @@ msgstr "ئۆزىڭىزنىڭ ھىساۋاتىڭىزنى ئۆچۈرەلمەيسى
 msgid "Choose a Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 #, fuzzy
 msgid "Confirm Password"

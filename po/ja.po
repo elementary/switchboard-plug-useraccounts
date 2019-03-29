@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-10-09 01:53+0000\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-12-19 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -15,9 +15,10 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "ユーザーのデータを変更するには認証が必要です"
+msgstr "ユーザーデータを変更するには認証が必要です"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -27,7 +28,7 @@ msgstr "ユーザーアカウント"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"アカウントの権限を管理し、ユーザー名、パスワード、アカウント画像を設定します"
+"アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -36,7 +37,7 @@ msgstr "パスワードの変更に失敗しました"
 #: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr "ゲストセッションの変更は再起動後に反映されます"
+msgstr "ゲストセッションの変更は、再起動後に反映されます"
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
@@ -71,12 +72,15 @@ msgstr "パスワードを変更"
 msgid "Guest Session"
 msgstr "ゲストセッション"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "キャンセル"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "アバターを変更"
 
@@ -91,6 +95,11 @@ msgstr "認証するにはクリックしてください"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "認証に失敗しました"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "キャンセル"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -117,13 +126,14 @@ msgstr "ユーザー名"
 msgid "Create User"
 msgstr "ユーザーを作成"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
-msgstr "ユーザー名がすでに使われています"
+msgstr "ユーザー名はすでに使われています"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "ユーザー名は英字小文字と数字だけを含むことができ、空白は使用できません"
+msgstr ""
+"ユーザー名は小文字と数字のみを含むことができます。空白は使用しないでください"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -197,17 +207,17 @@ msgstr "削除"
 msgid "Set from File…"
 msgstr "ファイルから設定…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "画像"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "画像を選択"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "開く"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "画像"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -225,9 +235,10 @@ msgstr "自分自身のユーザーアカウントは削除できません"
 msgid "Choose a Password"
 msgstr "パスワードを選択"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "パスワードの確認"
+msgstr "パスワードを確認"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"

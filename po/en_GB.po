@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-04-29 14:26+0000\n"
-"Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-10-29 08:06+0000\n"
+"Last-Translator: Ciaran Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://weblate.elementary.io/"
 "projects/switchboard/switchboard-plug-useraccounts/en_GB/>\n"
 "Language: en_GB\n"
@@ -12,9 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Authentication is required to change user data"
@@ -44,29 +45,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Some settings require administrator rights to be changed"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Change Avatar"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
-msgstr "Full Name"
+msgstr "Full name"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Account type:"
+msgstr "Account type"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Language:"
+msgstr "Language"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Log In automatically:"
+msgstr "Log in automatically"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -77,12 +73,15 @@ msgstr "Change Password"
 msgid "Guest Session"
 msgstr "Guest Session"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Cancel"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Change Avatar"
 
@@ -97,6 +96,11 @@ msgstr "Press to authenticate"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Authentication failed"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Cancel"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -123,11 +127,11 @@ msgstr "Username"
 msgid "Create User"
 msgstr "Create User"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Username is already taken"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Username can only contain lowercase letters and numbers, without spaces"
@@ -204,17 +208,17 @@ msgstr "Remove"
 msgid "Set from File…"
 msgstr "Set from File…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Images"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Select an image"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Open"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Images"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -232,6 +236,7 @@ msgstr "You cannot remove your own user account"
 msgid "Choose a Password"
 msgstr "Choose a Password"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Confirm Password"

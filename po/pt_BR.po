@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-09-20 00:05+0000\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-10-18 00:11+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
@@ -15,9 +15,10 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Autenticação é necessária para alterar dados de usuário"
+msgstr "É necessária autenticação para alterar dados de usuário"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -47,29 +48,24 @@ msgstr ""
 "modificadas"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Alterar imagem de exibição"
+msgstr "Imagem de exibição"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Nome completo"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Tipo de conta:"
+msgstr "Tipo de conta"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Idioma:"
+msgstr "Idioma"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Entrar automaticamente:"
+msgstr "Entrar automaticamente"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -80,12 +76,15 @@ msgstr "Alterar senha"
 msgid "Guest Session"
 msgstr "Sessão de convidado"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Cancelar"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Alterar imagem de exibição"
 
@@ -100,6 +99,11 @@ msgstr "Clique para autenticar"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "A autenticação falhou"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -126,11 +130,11 @@ msgstr "Nome de usuário"
 msgid "Create User"
 msgstr "Criar usuário"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Nome de usuário já utilizado"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "O nome de usuário só pode conter letras minúsculas e números, sem espaços"
@@ -139,7 +143,8 @@ msgstr ""
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr "A Sessão de convidado permite usar uma conta padrão sem uma senha."
+msgstr ""
+"A Sessão de convidado permite usar uma conta temporária padrão sem uma senha."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -207,17 +212,17 @@ msgstr "Remover"
 msgid "Set from File…"
 msgstr "Escolher de um arquivo…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Imagens"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Selecionar uma imagem"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Abrir"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Imagens"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -235,6 +240,7 @@ msgstr "Você não pode remover sua própria conta de usuário"
 msgid "Choose a Password"
 msgstr "Escolha uma Senha"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Confirmar Senha"

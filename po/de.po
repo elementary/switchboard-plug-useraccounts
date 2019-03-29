@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-05-03 00:06+0000\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-10-13 12:36+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -12,9 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Zur Änderung von Benutzerdaten ist eine Legitimierung erforderlich"
@@ -46,29 +47,24 @@ msgstr ""
 "werden"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Benutzerbild ändern"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Vollständiger Name"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Kontotyp:"
+msgstr "Kontotyp"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Sprache:"
+msgstr "Sprache"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Automatische Anmeldung:"
+msgstr "Automatische Anmeldung"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -79,12 +75,15 @@ msgstr "Passwort ändern"
 msgid "Guest Session"
 msgstr "Gastsitzung"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Abbrechen"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Benutzerbild ändern"
 
@@ -99,6 +98,11 @@ msgstr "Zur Legitimierung klicken"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Legitimierung fehlgeschlagen"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Abbrechen"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -125,11 +129,11 @@ msgstr "Benutzername"
 msgid "Create User"
 msgstr "Benutzer erstellen"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Benutzername ist bereits vergeben"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Der Nutzername darf nur Kleinbuchstaben und Ziffern enthalten, aber keine "
@@ -209,17 +213,17 @@ msgstr "Entfernen"
 msgid "Set from File…"
 msgstr "Bild auswählen …"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Bilder"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Bild auswählen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Öffnen"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Bilder"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -237,6 +241,7 @@ msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
 msgid "Choose a Password"
 msgstr "Wähle ein Passwort"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Passwort bestätigen"

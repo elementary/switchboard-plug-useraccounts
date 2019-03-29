@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
@@ -75,12 +76,15 @@ msgstr "პაროლის შეცვლა"
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "გაუქმება"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "ავატარის შეცვლა"
 
@@ -95,6 +99,11 @@ msgstr "დააჭირეთ დასამოწმებლად"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "დამოწმება ვერ მოხერხდა"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "გაუქმება"
 
 #: src/Dialogs/NewUserDialog.vala:31
 #, fuzzy
@@ -122,11 +131,11 @@ msgstr "მომხმარებლის სახელი"
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "უნდა შეიცავდეს მხოლოდ პატარა ასოებს, რიცხვებს და არა გამოტოვებებს."
@@ -204,17 +213,17 @@ msgstr "წაშლა"
 msgid "Set from File…"
 msgstr "დაყენება ფაილიდან..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "სურათები"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "სურათის არჩევა"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "გახსნა"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "სურათები"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -233,6 +242,7 @@ msgstr "თქვენ არ შეგიძლიათ თქვენივ
 msgid "Choose a Password"
 msgstr "პაროლის შეცვლა"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 #, fuzzy
 msgid "Confirm Password"

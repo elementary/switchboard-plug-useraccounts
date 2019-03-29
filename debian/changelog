@@ -1,3 +1,15 @@
+switchboard-plug-useraccounts (2.2.1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <codygarver@gmail.com>  Fri, 15 Mar 2019 11:51:19 -0500
+
+switchboard-plug-useraccounts (2.2.0) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 23 Oct 2018 04:16:11 -0500
+
 switchboard-plug-useraccounts (2.1.7) bionic; urgency=medium
 
   * New upstream release.

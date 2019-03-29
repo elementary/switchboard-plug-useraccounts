@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 13:45-0700\n"
-"PO-Revision-Date: 2018-04-19 19:13+0000\n"
+"POT-Creation-Date: 2019-03-11 17:06-0700\n"
+"PO-Revision-Date: 2018-10-11 17:40+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/cs/>\n"
@@ -12,9 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
+#. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Ke změně uživatelských dat je požadováno ověření"
@@ -43,29 +44,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Změnit ikonu uživatele"
+msgstr "Ikona uživatele"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Celé jméno"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Typ účtu:"
+msgstr "Typ účtu"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Jazyk:"
+msgstr "Jazyk"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Přihlásit automaticky:"
+msgstr "Přihlašovat automaticky"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
@@ -76,12 +72,15 @@ msgstr "Změna hesla"
 msgid "Guest Session"
 msgstr "Sezení hosta"
 
-#: src/Dialogs/AvatarDialog.vala:71 src/Dialogs/ChangePasswordDialog.vala:90
-#: src/Dialogs/NewUserDialog.vala:77 src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Cancel"
-msgstr "Zrušit"
+#: src/Dialogs/AvatarDialog.vala:30
+msgid "Crop & Position"
+msgstr ""
 
-#: src/Dialogs/AvatarDialog.vala:72
+#: src/Dialogs/AvatarDialog.vala:31
+msgid "Choose the part of the image to use as an avatar."
+msgstr ""
+
+#: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
 msgstr "Změnit ikonu uživatele"
 
@@ -96,6 +95,11 @@ msgstr "Kliknětě pro ověření"
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
 msgstr "Autentizace selhala"
+
+#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
+msgid "Cancel"
+msgstr "Zrušit"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -122,11 +126,11 @@ msgstr "Uživatelské jméno"
 msgid "Create User"
 msgstr "Vytvořit uživatele"
 
-#: src/Dialogs/NewUserDialog.vala:139
+#: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
 msgstr "Uživatelské jméno již existuje"
 
-#: src/Dialogs/NewUserDialog.vala:141
+#: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
@@ -202,17 +206,17 @@ msgstr "Odebrat"
 msgid "Set from File…"
 msgstr "Nastavit ze souboru…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "Obrázky"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "Zvolit obrázek"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "Otevřít"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "Obrázky"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -230,6 +234,7 @@ msgstr "Nemůžete odstranit svůj vlastní uživatelský účet"
 msgid "Choose a Password"
 msgstr "Vybrat heslo"
 
+#. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
 msgstr "Potvrdit heslo"
