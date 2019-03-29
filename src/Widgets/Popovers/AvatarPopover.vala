@@ -74,7 +74,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Gtk.Image preview_area = new Gtk.Image ();
             file_dialog.set_preview_widget (preview_area);
             file_dialog.update_preview.connect (() => {
-                string uri = file_dialog.get_preview_uri ();
+                string uri = file_dialog.get_preview_uri ().replace ("%20", " ");
                 // We only display local files:
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
