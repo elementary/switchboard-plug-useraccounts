@@ -77,7 +77,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             file_dialog.filter = filter;
             file_dialog.set_preview_widget (preview_area);
             file_dialog.update_preview.connect (() => {
-                string uri = file_dialog.get_preview_uri ().replace ("%20", " ");
+                string uri = file_dialog.get_preview_uri ().replace ("%20", " ").replace ("%5B", "[").replace ("%5D", "]");
                 // We only display local files:
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
