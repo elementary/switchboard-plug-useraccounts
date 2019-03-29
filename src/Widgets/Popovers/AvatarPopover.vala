@@ -65,7 +65,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             filter.add_mime_type ("image/jpg");
             filter.add_mime_type ("image/png");
 
-            var preview_area = new Gtk.Image ();
+            var preview_area = new Granite.AsyncImage (false);
+            preview_area.pixel_size = 256;
+            preview_area.margin_end = 12;
 
             var file_dialog = new Gtk.FileChooserNative (
                 _("Select an image"),
@@ -77,11 +79,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             file_dialog.filter = filter;
             file_dialog.set_preview_widget (preview_area);
             file_dialog.update_preview.connect (() => {
-                string uri = file_dialog.get_preview_uri ().replace ("%20", " ").replace ("%5B", "[").replace ("%5D", "]");
+                string uri = file_dialog.get_preview_uri ();
                 // We only display local files:
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
-                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (uri.substring (7), 150, 150, true);
+                        string fix_uri = uri.replace ("%20", " ").replace ("%5B", "[").replace ("%5D", "]");
+                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (fix_uri.substring (7), 150, 150, true);
                         preview_area.set_from_pixbuf (pixbuf);
                         preview_area.show ();
                         file_dialog.set_preview_widget_active (true);
