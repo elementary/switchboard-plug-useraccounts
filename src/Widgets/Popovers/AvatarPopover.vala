@@ -84,7 +84,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
                         string fix_uri = uri.replace ("%20", " ").replace ("%5B", "[").replace ("%5D", "]");
-                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (fix_uri.substring (7), 150, 150, true);
+                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (fix_uri.substring (7), 256, 256, true);
                         preview_area.set_from_pixbuf (pixbuf);
                         preview_area.show ();
                         file_dialog.set_preview_widget_active (true);
