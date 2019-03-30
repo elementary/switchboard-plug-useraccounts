@@ -79,11 +79,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             file_dialog.filter = filter;
             file_dialog.set_preview_widget (preview_area);
             file_dialog.update_preview.connect (() => {
-                string uri = Uri.unescape_string (file_dialog.get_preview_uri ());
+                string uri = file_dialog.get_preview_uri ();
                 // We only display local files:
                 if (uri != null && uri.has_prefix ("file://") == true) {
                     try {
-                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (uri.substring (7), 256, 256, true);
+                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (file_dialog.get_file ().get_path (), 256, 256, true);
                         preview_area.set_from_pixbuf (pixbuf);
                         preview_area.show ();
                         file_dialog.set_preview_widget_active (true);
