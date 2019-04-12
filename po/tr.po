@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:15-0700\n"
-"PO-Revision-Date: 2019-04-11 21:53+0000\n"
+"PO-Revision-Date: 2019-04-13 18:55+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/tr/>\n"
@@ -179,7 +179,7 @@ msgstr "Dil:"
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Dil & Konum ayarlarına geçmek için tıklayınız"
+msgstr "Dil & Konum Ayarlarına geçmek için tıklayınız"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -256,7 +256,7 @@ msgstr "Etkin"
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "Devre Dışı"
+msgstr "Devre dışı bırakıldı"
 
 #~ msgid "Password:"
 #~ msgstr "Şifre:"
