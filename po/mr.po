@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:15-0700\n"
+"POT-Creation-Date: 2019-04-23 11:35-0700\n"
 "PO-Revision-Date: 2019-03-29 02:49+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -28,8 +28,7 @@ msgstr "वापरकर्ता खाती"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"खाते परवानग्या व्यवस्थापित करा आणि वापरकर्ता नावे, पासवर्ड आणि फोटो कॉन्फिगर "
-"करा"
+"खाते परवानग्या व्यवस्थापित करा आणि वापरकर्ता नावे, पासवर्ड आणि फोटो कॉन्फिगर करा"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -133,16 +132,13 @@ msgstr "वापरकर्तानाव आधीपासूनच घे�
 
 #: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr ""
-"वापरकर्तानावात केवळ रिकाम्या जागाशिवाय लोअरकेस अक्षरे आणि संख्या असू शकतात"
+msgstr "वापरकर्तानावात केवळ रिकाम्या जागाशिवाय लोअरकेस अक्षरे आणि संख्या असू शकतात"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr ""
-"अतिथी सत्र एखाद्यास पासवर्डशिवाय तात्पुरते डीफॉल्ट खाते वापरण्याची परवानगी "
-"देते."
+msgstr "अतिथी सत्र एखाद्यास पासवर्डशिवाय तात्पुरते डीफॉल्ट खाते वापरण्याची परवानगी देते."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -208,17 +204,17 @@ msgstr "काढा"
 msgid "Set from File…"
 msgstr "फाइलमधून सेट करा…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:62
+#: src/Widgets/Popovers/AvatarPopover.vala:63
+msgid "Images"
+msgstr "प्रतिमा"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
 msgstr "एक प्रतिमा निवडा"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
 msgstr "उघडा"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:67
-msgid "Images"
-msgstr "प्रतिमा"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
