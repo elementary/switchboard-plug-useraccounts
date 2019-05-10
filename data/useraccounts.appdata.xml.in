@@ -5,9 +5,9 @@
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
   <screenshots>
-      <screenshot type="default">
-          <image>https://raw.githubusercontent.com/elementary/switchboard-plug-useraccounts/master/data/screenshot.png</image>
-      </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-useraccounts/master/data/screenshot.png</image>
+    </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/switchboard-plug-useraccounts/issues</url>
