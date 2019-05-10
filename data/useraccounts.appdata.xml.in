@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.useraccountst</id>
+  <id>io.elementary.switchboard.useraccounts</id>
   <extends>io.elementary.switchboard</extends>
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
