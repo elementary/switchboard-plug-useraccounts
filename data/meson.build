@@ -11,3 +11,12 @@ i18n.merge_file(
     install: true,
     install_dir: act_dir
 )
+
+i18n.merge_file(
+    input: 'useraccounts.appdata.xml.in',
+    output: 'io.elementary.switchboard.useraccounts.appdata.xml',
+    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    type: 'xml',
+    install: true,
+    install_dir: join_paths(get_option('datadir'), 'metainfo'),
+)
