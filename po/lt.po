@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-05-09 16:32+0000\n"
+"PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/lt/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Norint keisti naudotojo duomenis, reikalingas tapatybės nustatymas"
+msgstr "Norint keisti naudotojų duomenis, reikalingas tapatybės nustatymas"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
