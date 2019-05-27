@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-05-09 15:32+0000\n"
+"PO-Revision-Date: 2019-05-28 21:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ko/>\n"
@@ -53,7 +53,7 @@ msgstr "전체 이름"
 
 #: src/Plug.vala:150
 msgid "Account type"
-msgstr "계정 형식"
+msgstr "계정 유형"
 
 #: src/Plug.vala:151
 msgid "Language"
@@ -103,7 +103,7 @@ msgstr "취소"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
-msgstr "계정 형식"
+msgstr "계정 유형"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -172,7 +172,7 @@ msgstr "마지막 남은 관리자의 권한을 제거할 수 없습니다"
 
 #: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
-msgstr "계정 형식:"
+msgstr "계정 유형:"
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
