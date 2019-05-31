@@ -41,11 +41,22 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             avatar = new Granite.Widgets.Avatar ();
 
+            var lock_image = new Gtk.Image.from_icon_name ("locked", Gtk.IconSize.LARGE_TOOLBAR);
+            lock_image.halign = lock_image.valign = Gtk.Align.END;
+
+            var lock_revealer = new Gtk.Revealer ();
+            lock_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
+            lock_revealer.add (lock_image);
+
+            var overlay = new Gtk.Overlay ();
+            overlay.add (avatar);
+            overlay.add_overlay (lock_revealer);
+
             var grid = new Gtk.Grid ();
             grid.margin = 6;
             grid.margin_start = grid.margin_end = 12;
             grid.column_spacing = 6;
-            grid.attach (avatar, 0, 0, 1, 2);
+            grid.attach (overlay, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
             grid.attach (description_label, 1, 1);
 
@@ -53,6 +64,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             user.changed.connect (update_ui);
             update_ui ();
+
+            user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
         }
 
         public void update_ui () {
@@ -67,9 +80,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             full_name_label.label = user.get_real_name ();
 
             var escaped_username = GLib.Markup.escape_text (user.get_user_name ());
-            if (user.locked) {
-                description_label.label = "<small>%s (%s)</small>".printf (escaped_username, _("Disabled"));
-            } else if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                 description_label.label = "<small>%s (%s)</small>".printf (escaped_username, _("Administrator"));
             } else {
                 description_label.label = "<small>%s</small>".printf (escaped_username);
