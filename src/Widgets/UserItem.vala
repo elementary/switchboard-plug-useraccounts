@@ -72,6 +72,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.changed.connect (update_ui);
             update_ui ();
 
+            user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
         }
 
@@ -84,7 +85,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 avatar.show_default (32);
             }
 
-            full_name_label.label = user.get_real_name ();
             username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
 
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
