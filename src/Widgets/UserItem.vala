@@ -40,7 +40,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             username_label.use_markup = true;
             username_label.ellipsize = Pango.EllipsizeMode.END;
 
-            description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator")));
+            description_label = new Gtk.Label ("<span font_size=\"small\">(%s)</span>".printf (_("Administrator")));
             description_label.halign = Gtk.Align.START;
             description_label.use_markup = true;
             description_label.no_show_all = true;
@@ -85,7 +85,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             full_name_label.label = user.get_real_name ();
-            username_label.label = "<small>%s</small>".printf (GLib.Markup.escape_text (user.user_name));
+            username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
 
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                 description_label.no_show_all = false;
