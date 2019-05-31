@@ -21,6 +21,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
         private Granite.Widgets.Avatar avatar;
         private Gtk.Label full_name_label;
+        private Gtk.Label username_label;
         private Gtk.Label description_label;
 
         public weak Act.User user { get; construct; }
@@ -34,10 +35,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             full_name_label.halign = Gtk.Align.START;
             full_name_label.get_style_context ().add_class ("h3");
 
-            description_label = new Gtk.Label ("");
+            username_label = new Gtk.Label ("");
+            username_label.halign = Gtk.Align.START;
+            username_label.use_markup = true;
+            username_label.ellipsize = Pango.EllipsizeMode.END;
+
+            description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator")));
             description_label.halign = Gtk.Align.START;
-            description_label.ellipsize = Pango.EllipsizeMode.END;
             description_label.use_markup = true;
+            description_label.no_show_all = true;
 
             avatar = new Granite.Widgets.Avatar ();
 
@@ -58,7 +64,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             grid.column_spacing = 6;
             grid.attach (overlay, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
-            grid.attach (description_label, 1, 1);
+            grid.attach (username_label, 1, 1, 1, 1);
+            grid.attach (description_label, 2, 1, 1, 1);
 
             add (grid);
 
@@ -78,12 +85,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             full_name_label.label = user.get_real_name ();
+            username_label.label = "<small>%s</small>".printf (GLib.Markup.escape_text (user.user_name));
 
-            var escaped_username = GLib.Markup.escape_text (user.get_user_name ());
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
-                description_label.label = "<small>%s (%s)</small>".printf (escaped_username, _("Administrator"));
+                description_label.no_show_all = false;
             } else {
-                description_label.label = "<small>%s</small>".printf (escaped_username);
+                description_label.hide ();
+                description_label.no_show_all = true;
             }
 
             show_all ();
