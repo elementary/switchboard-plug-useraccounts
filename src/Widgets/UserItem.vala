@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2014-2017 elementary LLC. (https://elementary.io)
+* Copyright 2014-2019 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -22,9 +22,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Granite.Widgets.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
-        private Gtk.Label description_label;
+        private Gtk.Revealer description_revealer;
 
         public weak Act.User user { get; construct; }
+
+        public int account_type {
+            set {
+                description_revealer.reveal_child = value == Act.UserAccountType.ADMINISTRATOR;
+            }
+        }
 
         public string user_name {
             set {
@@ -57,10 +63,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             username_label.use_markup = true;
             username_label.ellipsize = Pango.EllipsizeMode.END;
 
-            description_label = new Gtk.Label ("<span font_size=\"small\">(%s)</span>".printf (_("Administrator")));
+            var description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator")));
             description_label.halign = Gtk.Align.START;
             description_label.use_markup = true;
-            description_label.no_show_all = true;
+
+            description_revealer = new Gtk.Revealer ();
+            description_revealer.add (description_label);
 
             avatar = new Granite.Widgets.Avatar ();
 
@@ -82,28 +90,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             grid.attach (overlay, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
             grid.attach (username_label, 1, 1, 1, 1);
-            grid.attach (description_label, 2, 1, 1, 1);
+            grid.attach (description_revealer, 2, 1);
 
             add (grid);
 
-            user.changed.connect (update_ui);
-            update_ui ();
-
+            user.bind_property ("account-type", this, "account-type", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("user-name", this, "user-name", GLib.BindingFlags.SYNC_CREATE);
-        }
-
-        public void update_ui () {
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
-                description_label.no_show_all = false;
-            } else {
-                description_label.hide ();
-                description_label.no_show_all = true;
-            }
-
-            show_all ();
         }
     }
 }
