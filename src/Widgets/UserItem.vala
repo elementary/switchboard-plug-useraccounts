@@ -26,6 +26,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public weak Act.User user { get; construct; }
 
+        public string icon_file {
+            set {
+                try {
+                    var size = 32 * get_style_context ().get_scale ();
+                    avatar.pixbuf = new Gdk.Pixbuf.from_file_at_scale (value, size, size, true);
+                } catch (Error e) {
+                    avatar.show_default (32);
+                }
+            }
+        }
+
         public UserItem (Act.User user) {
             Object (user: user);
         }
@@ -72,19 +83,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.changed.connect (update_ui);
             update_ui ();
 
+            user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
         }
 
         public void update_ui () {
-            try {
-                var size = 32 * get_style_context ().get_scale ();
-                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-                avatar.pixbuf = avatar_pixbuf;
-            } catch (Error e) {
-                avatar.show_default (32);
-            }
-
             username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
 
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
