@@ -28,7 +28,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public string user_name {
             set {
-                username_label.label = "<small>%s</small>".printf (GLib.Markup.escape_text (value));
+                username_label.label = GLib.Markup.printf_escaped ("<small>%s</small>", value);
+            }
+        }
+
+        public string icon_file {
+            set {
+                try {
+                    var size = 32 * get_style_context ().get_scale ();
+                    avatar.pixbuf = new Gdk.Pixbuf.from_file_at_scale (value, size, size, true);
+                } catch (Error e) {
+                    avatar.show_default (32);
+                }
             }
         }
 
@@ -78,20 +89,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.changed.connect (update_ui);
             update_ui ();
 
+            user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("user-name", this, "user-name", GLib.BindingFlags.SYNC_CREATE);
         }
 
         public void update_ui () {
-            try {
-                var size = 32 * get_style_context ().get_scale ();
-                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-                avatar.pixbuf = avatar_pixbuf;
-            } catch (Error e) {
-                avatar.show_default (32);
-            }
-
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                 description_label.no_show_all = false;
             } else {
