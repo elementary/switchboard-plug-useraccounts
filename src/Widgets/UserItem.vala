@@ -26,6 +26,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public weak Act.User user { get; construct; }
 
+        public string user_name {
+            set {
+                username_label.label = GLib.Markup.printf_escaped ("<small>%s</small>", value);
+            }
+        }
+
         public string icon_file {
             set {
                 try {
@@ -86,11 +92,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
+            user.bind_property ("user-name", this, "user-name", GLib.BindingFlags.SYNC_CREATE);
         }
 
         public void update_ui () {
-            username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
-
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                 description_label.no_show_all = false;
             } else {
