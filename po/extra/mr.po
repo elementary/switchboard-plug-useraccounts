@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
-"Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/mr/>\n"
+"Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,3 +26,13 @@ msgstr "वापरकर्ता खाती व्यवस्थापि�
 #: data/org.pantheon.switchboard.user-accounts.policy.in.in:11
 msgid "Authentication is required to change user data"
 msgstr "वापरकर्ता डेटा बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
+
+#: data/useraccounts.appdata.xml.in:5
+#, fuzzy
+msgid "User Accounts"
+msgstr "वापरकर्ता खाती व्यवस्थापित करा"
+
+#: data/useraccounts.appdata.xml.in:6
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""

@@ -1,315 +1,258 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-14 20:41+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/lt/>\n"
-"Language: lt\n"
+"PO-Revision-Date: 2019-06-26 18:53+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: szl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 3.6.1\n"
-"X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Norint keisti naudotojų duomenis, reikalingas tapatybės nustatymas"
+msgstr ""
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Naudotojų paskyros"
+msgstr ""
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Tvarkyti paskyros leidimus ir konfigūruoti naudotojų vardus, slaptažodžius "
-"ir nuotraukas"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
-msgstr "Slaptažodžio pakeisti nepavyko"
+msgstr ""
 
 #: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
-"Svečio seanso pakeitimai neįsigalios tol, kol iš naujo nepaleisite savo "
-"sistemos"
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
+msgstr ""
 
 #: src/Plug.vala:148
 msgid "Avatar"
-msgstr "Avataras"
+msgstr ""
 
 #: src/Plug.vala:149
 msgid "Full name"
-msgstr "Pilnas vardas"
+msgstr ""
 
 #: src/Plug.vala:150
 msgid "Account type"
-msgstr "Paskyros tipas"
+msgstr ""
 
 #: src/Plug.vala:151
 msgid "Language"
-msgstr "Kalba"
+msgstr ""
 
 #: src/Plug.vala:152
 msgid "Log in automatically"
-msgstr "Prisijungti automatiškai"
+msgstr ""
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
-msgstr "Keisti slaptažodį"
+msgstr ""
 
 #: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
-msgstr "Svečio seansas"
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr "Apkirpimas ir pozicija"
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr "Pasirinkite paveikslo dalį, kurią naudosite kaip avatarą."
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
-msgstr "Keisti avatarą"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
-msgstr "Dabartinis slaptažodis"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
-msgstr "Spustelėkite, kad patvirtintumėte tapatybę"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr "Tapatybės nustatymas nepavyko"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Cancel"
-msgstr "Atsisakyti"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
-msgstr "Paskyros tipas"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
-msgstr "Standartinis naudotojas"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
 #: src/Widgets/UserItem.vala:66
 msgid "Administrator"
-msgstr "Administratorius"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:38
 msgid "Full Name"
-msgstr "Pilnas vardas"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:43
 msgid "Username"
-msgstr "Naudotojo vardas"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:79
 msgid "Create User"
-msgstr "Sukurti naudotoją"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
-msgstr "Naudotojo vardas jau užimtas"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
-"Naudotojo vardas gali būti sudarytas tik iš mažųjų raidžių ir skaičių, be "
-"tarpų"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"Svečio seansas leidžia asmeniui pasinaudoti laikinąja numatytąja paskyra be "
-"slaptažodžio."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr "Prisijungti automatiškai:"
+msgstr ""
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "Atšaukti paskutinį naudotojo paskyros šalinimą"
+msgstr ""
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr "Atšaukti"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "Jūs neturite leidimų tai pakeisti"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
-msgstr "Jūs negalite to keisti šiuo metu prisijungusiam aktyviam naudotojui"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
-msgstr "Jūs negalite pašalinti paskutiniojo administratoriaus teisių"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
-msgstr "Paskyros tipas:"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
-msgstr "Standartinė"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:104
 msgid "Language:"
-msgstr "Kalba:"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
-msgstr "Keisti slaptažodį…"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
-msgstr "Įjungti naudotojo paskyrą"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
-msgstr "Išjungti naudotojo paskyrą"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr "Šalinti"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Nustatyti iš failo…"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Images"
-msgstr "Paveikslai"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
-msgstr "Pasirinkite paveikslą"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
-msgstr "Atverti"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
-msgstr "Sukurti naudotojo paskyrą"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
 msgid "Remove user account and its data"
-msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:80
 msgid "You cannot remove your own user account"
-msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Pasirinkite slaptažodį"
+msgstr ""
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Patvirtinkite slaptažodį"
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
-msgstr "Rodyti slaptažodžius"
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
-msgstr "Slaptažodžiai nesutampa"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:33
 msgid "My Account"
-msgstr "Mano paskyra"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
-msgstr "Kitos paskyros"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr "Įjungta"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "Išjungta"
-
-#~ msgid "Password:"
-#~ msgstr "Slaptažodis:"
-
-#~ msgid "None set"
-#~ msgstr "Nenustatyta"
-
-#~ msgid "Set password now"
-#~ msgstr "Nustatyti slaptažodį dabar"
-
-#~ msgid "Set no password for login"
-#~ msgstr "Prisijungiant, nereikalauti slaptažodžio"
-
-#~ msgid "Let user create password on first login"
-#~ msgstr "Leisti naudotojui susikurti slaptažodį pirmojo prisijungimo metu"
-
-#~ msgid "Username is not valid"
-#~ msgstr "Naudotojo vardas neteisingas"
-
-#~ msgid "New Password"
-#~ msgstr "Naujas slaptažodis"
-
-#~ msgid "Password cannot be empty"
-#~ msgstr "Slaptažodis negali būti tuščias"
-
-#~ msgid "Password accepted"
-#~ msgstr "Slaptažodis priimtas"
-
-#~ msgid "Weak password strength"
-#~ msgstr "Nesudėtingas slaptažodis"
-
-#~ msgid "Medium password strength"
-#~ msgstr "Vidutinio sudėtingumo slaptažodis"
-
-#~ msgid "Strong password strength"
-#~ msgstr "Sudėtingas slaptažodis"
-
-#~ msgid "Resembles your current password"
-#~ msgstr "Panašus į jūsų dabartinį slaptažodį"
-
-#~ msgid "New password is too simple"
-#~ msgstr "Naujas slaptažodis yra pernelyg paprastas"
-
-#~ msgid "New password is a palindrome"
-#~ msgstr "Naujas slaptažodis vienodai skaitomas iš abiejų pusių"
+msgstr ""

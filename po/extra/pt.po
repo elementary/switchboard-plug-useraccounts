@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -26,3 +26,13 @@ msgstr "Gerir contas de utilizador"
 #: data/org.pantheon.switchboard.user-accounts.policy.in.in:11
 msgid "Authentication is required to change user data"
 msgstr "É necessária autenticação para alterar dados de utilizador"
+
+#: data/useraccounts.appdata.xml.in:5
+#, fuzzy
+msgid "User Accounts"
+msgstr "Gerir contas de utilizador"
+
+#: data/useraccounts.appdata.xml.in:6
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""

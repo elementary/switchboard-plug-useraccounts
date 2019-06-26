@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2018-06-11 09:15-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,4 +23,13 @@ msgstr ""
 
 #: data/org.pantheon.switchboard.user-accounts.policy.in.in:11
 msgid "Authentication is required to change user data"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:5
+msgid "User Accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:6
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: useraccounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 11:35-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,7 +111,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:43
+#: src/Widgets/UserItem.vala:66
 msgid "Administrator"
 msgstr ""
 
