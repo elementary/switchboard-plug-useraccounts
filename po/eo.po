@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-07-03 10:28+0000\n"
+"PO-Revision-Date: 2019-07-06 05:46+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/eo/>\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordoj postulas administrantajn rajtojn por esti ŝanĝitaj"
+msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
 #: src/Plug.vala:148
 msgid "Avatar"
@@ -160,7 +160,7 @@ msgstr ""
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Vi ne havas la permeson ŝanĝi tion"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
