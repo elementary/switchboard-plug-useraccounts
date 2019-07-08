@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-07-06 05:46+0000\n"
+"PO-Revision-Date: 2019-07-10 21:46+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/eo/>\n"
@@ -47,14 +47,12 @@ msgid "Avatar"
 msgstr ""
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Full name"
 msgstr "Plena nomo"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Account type"
-msgstr "Mia konto"
+msgstr "Tipo de konto"
 
 #: src/Plug.vala:151
 msgid "Language"
@@ -103,9 +101,8 @@ msgid "Cancel"
 msgstr "Rezigni"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Mia konto"
+msgstr "Tipo de konto"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -187,9 +184,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr ""
 
 #: src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "Nova pasvorto"
+msgstr "Ŝanĝi pasvorton…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
