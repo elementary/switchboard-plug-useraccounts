@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-07-10 21:46+0000\n"
+"PO-Revision-Date: 2019-07-15 19:11+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/eo/>\n"
@@ -12,13 +12,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Aŭtentigo necesas por ŝanĝi uzantajn datumojn"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -28,15 +28,17 @@ msgstr "Uzantkontoj"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Mastrumi kontajn permesojn kaj agordi uzantonomojn, pasvortojn, kaj "
+"profilbildojn"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
-msgstr ""
+msgstr "Neeblis ŝanĝi la pasvorton"
 
 #: src/Plug.vala:80
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr ""
+msgstr "Gastaj seancaj ŝanĝoj efektiviĝos post restarto de la sistemo"
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
@@ -44,7 +46,7 @@ msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
 #: src/Plug.vala:148
 msgid "Avatar"
-msgstr ""
+msgstr "Profilbildo"
 
 #: src/Plug.vala:149
 msgid "Full name"
@@ -56,32 +58,32 @@ msgstr "Tipo de konto"
 
 #: src/Plug.vala:151
 msgid "Language"
-msgstr ""
+msgstr "Lingvo"
 
 #: src/Plug.vala:152
 msgid "Log in automatically"
-msgstr ""
+msgstr "Aŭtomate ensaluti"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
-msgstr ""
+msgstr "Modifi pasvorton"
 
 #: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
-msgstr ""
+msgstr "Gasta seanco"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Stuci kaj poziciigi"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Elektu parton de la bildo por uzi ĝin kiel profilbildon."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
-msgstr ""
+msgstr "Modifi profilbildon"
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
@@ -89,11 +91,11 @@ msgstr "Aktuala pasvorto"
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
-msgstr ""
+msgstr "Premi por aŭtentigi"
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr ""
+msgstr "Aŭtentigo fiaskis"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
@@ -106,7 +108,7 @@ msgstr "Tipo de konto"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
-msgstr ""
+msgstr "Normala uzanto"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
 #: src/Widgets/UserItem.vala:43
@@ -123,37 +125,38 @@ msgstr "Uzantnomo"
 
 #: src/Dialogs/NewUserDialog.vala:79
 msgid "Create User"
-msgstr ""
+msgstr "Krei uzanton"
 
 #: src/Dialogs/NewUserDialog.vala:155
 msgid "Username is already taken"
-msgstr ""
+msgstr "Uzantonomo jam prenita"
 
 #: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr ""
+msgstr "Uzantonomo konsistu nur el minuskloj kaj ciferoj, sen spaco"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
+"La gasta seanco permesas al iu uzi portempan aprioran konton sen pasvorto."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr ""
+msgstr "Post elsaluto, ĉiuj gastaj agordoj kaj datumoj forviŝiĝos."
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr ""
+msgstr "Aŭtomate ensaluti:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr ""
+msgstr "Malfari la forigon de la lasta uzantokonto"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr ""
+msgstr "Malfari"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
@@ -161,27 +164,27 @@ msgstr "Vi ne havas la permeson ŝanĝi tion"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
-msgstr ""
+msgstr "Neeblas ŝanĝi tion por la nun aktiva uzanto"
 
 #: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
-msgstr ""
+msgstr "Neeblas forigi la permesojn de la lasta administranto"
 
 #: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
-msgstr ""
+msgstr "Konta tipo:"
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
-msgstr ""
+msgstr "Normala"
 
 #: src/Views/UserSettingsView.vala:104
 msgid "Language:"
-msgstr ""
+msgstr "Lingvo:"
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr ""
+msgstr "Klaku por baskuli la lingvon kaj regionajn agordojn"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -189,11 +192,11 @@ msgstr "Ŝanĝi pasvorton…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
-msgstr ""
+msgstr "Ebligi uzantokonton"
 
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
-msgstr ""
+msgstr "Malebligi uzantokonton"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -201,7 +204,7 @@ msgstr "Forigi"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr ""
+msgstr "Starigi per dosiero…"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Images"
@@ -209,11 +212,11 @@ msgstr "Bildoj"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
-msgstr ""
+msgstr "Elekti bildon"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
-msgstr ""
+msgstr "Malfermi"
 
 #: src/Widgets/ListFooter.vala:35
 msgid "Create user account"
@@ -234,7 +237,7 @@ msgstr "Elektu pasvorton"
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Konfirmu pasvorton"
+msgstr "Konfirmi pasvorton"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
@@ -242,7 +245,7 @@ msgstr "Montri pasvortojn"
 
 #: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Pasvortoj ne kongruas"
 
 #: src/Widgets/UserListBox.vala:33
 msgid "My Account"
@@ -254,11 +257,11 @@ msgstr "Aliaj kontoj"
 
 #: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr ""
+msgstr "Ebligita"
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr ""
+msgstr "Malaktivigita"
 
 #~ msgid "Password:"
 #~ msgstr "Pasvorto:"
