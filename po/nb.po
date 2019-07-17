@@ -2,23 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-02-22 00:05+0000\n"
+"POT-Creation-Date: 2019-04-23 11:35-0700\n"
+"PO-Revision-Date: 2019-06-27 14:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
+"Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:43+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Autentisering kreves for å endre brukerdata"
+msgstr "Identitetsbekreftelse kreves for å endre brukerdata"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -79,11 +79,11 @@ msgstr "Gjesteøkt"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Beskjæring og posisjon"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Velg en del av bildet å bruke som avatar."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
