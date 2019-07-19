@@ -31,7 +31,7 @@ namespace SwitchboardPlugUserAccounts {
         private Gtk.LockButton lock_button;
         private Widgets.MainView main_view;
 
-        //translatable string for org.pantheon.user-accounts.administration policy
+        //translatable string for io.elementary.switchboard.useraccounts.administration policy
         public const string policy_message = _("Authentication is required to change user data");
 
         public UserAccountsPlug () {
