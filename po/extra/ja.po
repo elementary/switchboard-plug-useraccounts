@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-18 22:09+0000\n"
+"PO-Revision-Date: 2019-08-11 10:22+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/org.pantheon.switchboard.user-accounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -28,11 +28,10 @@ msgid "Authentication is required to change user data"
 msgstr "ユーザーデータを変更するには認証が必要です"
 
 #: data/useraccounts.appdata.xml.in:5
-#, fuzzy
 msgid "User Accounts"
-msgstr "ユーザーアカウントを管理"
+msgstr "ユーザーアカウント"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
+msgstr "アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
