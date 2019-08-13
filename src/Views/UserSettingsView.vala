@@ -203,22 +203,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             full_name_lock.tooltip_text = NO_PERMISSION_STRING;
+            full_name_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             user_type_lock.tooltip_text = NO_PERMISSION_STRING;
+            user_type_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             language_lock.tooltip_text = NO_PERMISSION_STRING;
+            language_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             autologin_lock.margin_top = 20;
             autologin_lock.tooltip_text = NO_PERMISSION_STRING;
+            autologin_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             password_lock.tooltip_text = NO_PERMISSION_STRING;
+            password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             enable_lock.tooltip_text = NO_PERMISSION_STRING;
+            enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             attach (avatar_button, 0, 0, 1, 1);
             attach (full_name_entry, 1, 0, 1, 1);
@@ -252,11 +258,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 password_button.set_sensitive (false);
                 autologin_switch.set_sensitive (false);
                 enable_user_button.set_sensitive (false);
-
-                user_type_lock.set_opacity (0.5);
-                autologin_lock.set_opacity (0.5);
-                password_lock.set_opacity (0.5);
-                enable_lock.set_opacity (0.5);
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
                 enable_lock.tooltip_text = NO_PERMISSION_STRING;
@@ -297,8 +298,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             } else {
                 avatar_button.set_sensitive (false);
                 full_name_entry.set_sensitive (false);
-                full_name_lock.set_opacity (0.5);
-                language_lock.set_opacity (0.5);
 
                 if (!current_user) {
                     language_box.set_sensitive (false);
