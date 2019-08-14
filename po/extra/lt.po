@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-08-14 12:31-0700\n"
 "PO-Revision-Date: 2019-07-18 18:24+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,11 +21,11 @@ msgstr ""
 "1 : 2);\n"
 "X-Generator: Weblate 3.7.1\n"
 
-#: data/org.pantheon.switchboard.user-accounts.policy.in.in:10
+#: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
 msgstr "Tvarkyti naudotojų paskyras"
 
-#: data/org.pantheon.switchboard.user-accounts.policy.in.in:11
+#: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
 msgstr "Norint keisti naudotojų duomenis, reikalingas tapatybės nustatymas"
 
