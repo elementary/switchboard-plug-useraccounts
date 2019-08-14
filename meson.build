@@ -18,7 +18,8 @@ switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 pkgdatadir = join_paths(switchboard_plugsdir, 'system', 'pantheon-useraccounts')
 
-polkit_actiondir = join_paths(get_option('datadir'), 'polkit-1', 'actions')
+polkit_dep = dependency('polkit-gobject-1')
+polkit_actiondir = polkit_dep.get_pkgconfig_variable('actiondir', define_variable: ['prefix', prefix])
 
 posix_dep = meson.get_compiler('vala').find_library('posix')
 
