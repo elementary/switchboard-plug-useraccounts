@@ -9,7 +9,7 @@ i18n.merge_file(
     output: 'org.pantheon.switchboard.user-accounts.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
-    install_dir: act_dir
+    install_dir: polkit_actiondir
 )
 
 i18n.merge_file(
@@ -18,5 +18,5 @@ i18n.merge_file(
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     type: 'xml',
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo'),
+    install_dir: join_paths(datadir, 'metainfo'),
 )
