@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2019-05-28 21:04+0000\n"
+"PO-Revision-Date: 2019-08-20 04:22+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/pt_BR/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -28,11 +28,11 @@ msgid "Authentication is required to change user data"
 msgstr "A autenticação é necessária para alterar os dados do usuário"
 
 #: data/useraccounts.appdata.xml.in:5
-#, fuzzy
 msgid "User Accounts"
-msgstr "Gerenciar contas de usuários"
+msgstr "Contas de usuário"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Gerenciar permissões de conta e configurar nomes de usuário, senhas e fotos"
