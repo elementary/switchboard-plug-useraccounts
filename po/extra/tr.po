@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2019-05-14 20:41+0000\n"
+"PO-Revision-Date: 2019-08-20 04:22+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
-"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/tr/>\n"
+"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -28,11 +28,11 @@ msgid "Authentication is required to change user data"
 msgstr "Kullanıcı verisini değiştirmek için kimlik doğrulama gerekiyor"
 
 #: data/useraccounts.appdata.xml.in:5
-#, fuzzy
 msgid "User Accounts"
-msgstr "Kullanıcı hesaplarını yönetin"
+msgstr "Kullanıcı Hesapları"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Hesap izinlerini, kullanıcı adlarını, parolaları ve fotoğrafları yönetin"
