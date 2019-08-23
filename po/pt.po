@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-10 14:33+0000\n"
-"Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
+"PO-Revision-Date: 2019-08-16 19:22+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
 "Language: pt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
@@ -22,14 +22,14 @@ msgstr "É necessária autenticação para alterar dados de utilizador"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Contas de Utilizador"
+msgstr "Contas de utilizador"
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Gestão de permissões de conta e configuração de nomes de utilizador, "
-"palavras-passe e fotos"
+"Gerir permissões de conta e configurar nomes de utilizadores, palavras-passe "
+"e fotos"
 
 #: src/Plug.vala:67
 msgid "Password change failed"

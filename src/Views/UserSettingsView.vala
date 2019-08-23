@@ -247,7 +247,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.changed.connect (update_ui);
         }
 
-        public void update_ui () {
+        private void update_ui () {
             var allowed = get_permission ().allowed;
             var current_user = get_current_user () == user;
             var last_admin = is_last_admin (user);
@@ -355,14 +355,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_active (0);
         }
 
-        public void update_autologin () {
+        private void update_autologin () {
             if (user.get_automatic_login () && !autologin_switch.get_active ())
                 autologin_switch.set_active (true);
             else if (!user.get_automatic_login () && autologin_switch.get_active ())
                 autologin_switch.set_active (false);
         }
 
-        public void update_lock_state () {
+        private void update_lock_state () {
             if (user.get_locked ()) {
                 enable_user_button.set_label (_("Enable User Account"));
                 enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);

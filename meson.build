@@ -5,14 +5,23 @@ project(
     version: '2.2.1'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
-gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
 i18n = import('i18n')
-pkg_data_dir =  join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'system', 'pantheon-useraccounts')
-act_dir =  join_paths(get_option('datadir'), 'polkit-1', 'actions')
-posix_dep = meson.get_compiler('vala').find_library('posix')
 
+gettext_name = meson.project_name() + '-plug'
+
+prefix = get_option('prefix')
+datadir = join_paths(prefix, get_option('datadir'))
+libdir = join_paths(prefix, get_option('libdir'))
+
+switchboard_dep = dependency('switchboard-2.0')
+switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
+pkgdatadir = join_paths(switchboard_plugsdir, 'system', 'pantheon-useraccounts')
+
+polkit_dep = dependency('polkit-gobject-1')
+polkit_actiondir = polkit_dep.get_pkgconfig_variable('actiondir', define_variable: ['prefix', prefix])
+
+posix_dep = meson.get_compiler('vala').find_library('posix')
 
 add_project_arguments('-DGETTEXT_PACKAGE="@0@"'.format(gettext_name), language:'c')
 add_project_arguments('-DGNOME_DESKTOP_USE_UNSTABLE_API', language: 'c')
@@ -20,7 +29,7 @@ add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi
 
 configuration_data = configuration_data()
 configuration_data.set('GETTEXT_PACKAGE', gettext_name)
-configuration_data.set('PKGDATADIR', pkg_data_dir)
+configuration_data.set('PKGDATADIR', pkgdatadir)
 
 subdir('cli')
 subdir('data')
