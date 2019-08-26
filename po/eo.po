@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-23 11:35-0700\n"
-"PO-Revision-Date: 2019-07-18 18:23+0000\n"
+"PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/eo/>\n"
@@ -22,14 +22,13 @@ msgstr "Aŭtentigo necesas por ŝanĝi uzantajn datumojn"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Uzantkontoj"
+msgstr "Uzantokontoj"
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Mastrumi kontajn permesojn kaj agordi uzantonomojn, pasvortojn, kaj "
-"profilbildojn"
+"Mastrumi kontajn permesojn kaj agordi uzantajn nomojn, pasvortojn kaj bildojn"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
