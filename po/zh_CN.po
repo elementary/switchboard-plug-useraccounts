@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-09-17 09:22+0000\n"
+"PO-Revision-Date: 2019-09-20 04:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "更改用户数据需要认证"
+msgstr "更改用户数据需要认证您的权限"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -161,7 +161,7 @@ msgstr "您没有权限更改此项内容"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
-msgstr "正在使用中的用户无法更改此项"
+msgstr "正在使用中的账户无法更改此项"
 
 #: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
@@ -173,7 +173,7 @@ msgstr "账户类型："
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
-msgstr "标准"
+msgstr "标准账户"
 
 #: src/Views/UserSettingsView.vala:104
 msgid "Language:"
@@ -181,7 +181,7 @@ msgstr "账户语言："
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "点击切换到语言和区域设置"
+msgstr "点击跳转语言和区域设置"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -189,11 +189,11 @@ msgstr "更改密码…"
 
 #: src/Views/UserSettingsView.vala:363
 msgid "Enable User Account"
-msgstr "启用用户账户"
+msgstr "启用账户"
 
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
-msgstr "禁用用户账户"
+msgstr "禁用账户"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
