@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2019-09-17 09:22+0000\n"
+"PO-Revision-Date: 2019-09-20 04:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/zh_Hans/>\n"
@@ -25,7 +25,7 @@ msgstr "管理用户账户"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr "更改用户数据需要认证"
+msgstr "更改用户数据需要认证您的权限"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts"
