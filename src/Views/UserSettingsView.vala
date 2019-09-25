@@ -21,32 +21,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserSettingsView : Gtk.Grid {
         public weak Act.User user { get; construct; }
 
-        private UserUtils           utils;
-        private DeltaUser           delta_user;
+        private UserUtils utils;
+        private DeltaUser delta_user;
 
-        private Gtk.ListStore       language_store;
-        private Gtk.ListStore       region_store;
+        private Gtk.ListStore language_store;
+        private Gtk.ListStore region_store;
 
         private Granite.Widgets.Avatar avatar;
-        private Gdk.Pixbuf?         avatar_pixbuf;
-        private Gtk.ToggleButton    avatar_button;
-        private Gtk.Entry           full_name_entry;
+        private Gdk.Pixbuf? avatar_pixbuf;
+        private Gtk.ToggleButton avatar_button;
+        private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
-        private Gtk.Button          enable_user_button;
-        private Gtk.ComboBoxText    user_type_box;
-        private Gtk.ComboBox        language_box;
-        private Gtk.Revealer        region_revealer;
-        private Gtk.ComboBox        region_box;
-        private Gtk.Button          language_button;
-        private Gtk.Switch          autologin_switch;
+        private Gtk.Button enable_user_button;
+        private Gtk.ComboBoxText user_type_box;
+        private Gtk.ComboBox language_box;
+        private Gtk.Revealer region_revealer;
+        private Gtk.ComboBox region_box;
+        private Gtk.Button language_button;
+        private Gtk.Switch autologin_switch;
 
         //lock widgets
-        private Gtk.Image           full_name_lock;
-        private Gtk.Image           user_type_lock;
-        private Gtk.Image           language_lock;
-        private Gtk.Image           autologin_lock;
-        private Gtk.Image           password_lock;
-        private Gtk.Image           enable_lock;
+        private Gtk.Image full_name_lock;
+        private Gtk.Image user_type_lock;
+        private Gtk.Image language_lock;
+        private Gtk.Image autologin_lock;
+        private Gtk.Image password_lock;
+        private Gtk.Image enable_lock;
 
         private Gee.HashMap<string, string> default_regions;
 
@@ -186,7 +186,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 if (user == get_current_user () && permission.allowed) {
                     try {
                         permission.release ();
-                    } catch (Error e){
+                    } catch (Error e) {
                         critical ("Error releasing privileges: %s", e.message);
                     }
                 }
@@ -228,7 +228,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             attach (avatar_button, 0, 0, 1, 1);
             attach (full_name_entry, 1, 0, 1, 1);
-            attach (user_type_label,0, 1, 1, 1);
+            attach (user_type_label, 0, 1);
             attach (user_type_box, 1, 1, 1, 1);
             attach (lang_label, 0, 2, 1, 1);
             attach (login_label, 0, 4, 1, 1);
@@ -290,7 +290,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                         user_type_lock.set_opacity (0);
                     }
                 }
- 
+
                 if (!current_user) {
                     language_box.set_sensitive (true);
                     region_box.set_sensitive (true);
@@ -384,7 +384,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 var languages = get_languages ();
                 language_store = new Gtk.ListStore (2, typeof (string), typeof (string));
                 Gtk.TreeIter iter;
- 
+
                 language_box.set_model (language_store);
 
                 foreach (string language in languages) {
