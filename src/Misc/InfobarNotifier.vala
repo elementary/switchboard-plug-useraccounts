@@ -19,12 +19,12 @@
 
 namespace SwitchboardPlugUserAccounts {
     public class InfobarNotifier : Object {
-        private bool        error = false;
-        private string      error_message = "";
-        private bool        reboot = false;
+        private bool error = false;
+        private string error_message = "";
+        private bool reboot = false;
 
-        public signal void  error_notified ();
-        public signal void  reboot_notified ();
+        public signal void error_notified ();
+        public signal void reboot_notified ();
 
         public InfobarNotifier () { }
 
