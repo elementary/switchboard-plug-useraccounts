@@ -32,7 +32,7 @@ namespace SwitchboardPlugUserAccounts {
         private Widgets.MainView main_view;
 
         //translatable string for io.elementary.switchboard.useraccounts.administration policy
-        public const string policy_message = _("Authentication is required to change user data");
+        public const string policy_message = _("Authentication is required to change user data"); // vala-lint=naming-convention
 
         public UserAccountsPlug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
