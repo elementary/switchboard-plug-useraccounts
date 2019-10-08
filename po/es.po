@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2019-10-09 17:23+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"Last-Translator: Rodrigo Lledó Milanca <rodhos92@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/es/>\n"
 "Language: es\n"
@@ -48,9 +48,8 @@ msgstr ""
 "Algunos ajustes requieren permisos de administrador para ser modificados"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Avatar"
-msgstr "Cambiar avatar"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
 msgid "Full name"
@@ -61,14 +60,12 @@ msgid "Account type"
 msgstr "Tipo de cuenta"
 
 #: src/Plug.vala:151
-#, fuzzy
 msgid "Language"
-msgstr "Idioma:"
+msgstr "Idioma"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Acceder automáticamente:"
+msgstr "Acceder automáticamente"
 
 #: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
 msgid "Change Password"
