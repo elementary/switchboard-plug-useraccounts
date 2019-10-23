@@ -61,10 +61,11 @@ namespace SwitchboardPlugUserAccounts {
             var error_content = infobar_error.get_content_area ();
             error_content.add (error_label);
 
-            InfobarNotifier.get_default ().error_notified.connect (() => {
-                if (InfobarNotifier.get_default ().is_error ()) {
+            InfobarNotifier.get_default ().notify["error-message"].connect (() => {
+                var error_message = InfobarNotifier.get_default ().error_message;
+                if (error_message != "") {
                     infobar_error.no_show_all = false;
-                    error_label.label = "%s: %s".printf (_("Password change failed"), InfobarNotifier.get_default ().get_error_message ());
+                    error_label.label = "%s: %s".printf (_("Password change failed"), error_message);
                     infobar_error.show_all ();
                 } else {
                     infobar_error.no_show_all = true;
@@ -74,16 +75,13 @@ namespace SwitchboardPlugUserAccounts {
 
             infobar_reboot = new Gtk.InfoBar ();
             infobar_reboot.message_type = Gtk.MessageType.WARNING;
-            infobar_reboot.no_show_all = true;
+            infobar_reboot.revealed = false;
 
             var reboot_content = infobar_reboot.get_content_area ();
             reboot_content.add (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
 
-            InfobarNotifier.get_default ().reboot_notified.connect (() => {
-                if (InfobarNotifier.get_default ().is_reboot ()) {
-                    infobar_reboot.no_show_all = false;
-                    infobar_reboot.show_all ();
-                }
+            InfobarNotifier.get_default ().notify["reboot-required"].connect (() => {
+                infobar_reboot.revealed = InfobarNotifier.get_default ().reboot_required;
             });
 
             infobar = new Gtk.InfoBar ();

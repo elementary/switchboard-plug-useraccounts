@@ -60,7 +60,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             status_switch.notify["active"].connect (() => {
                 if (get_guest_session_state ("show") != status_switch.active) {
-                    InfobarNotifier.get_default ().set_reboot ();
+                    InfobarNotifier.get_default ().reboot_required = true;
 
                     if (status_switch.active) {
                         set_guest_session_state ("on");
@@ -75,7 +75,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             guest_autologin_switch.notify["active"].connect (() => {
                 if (get_guest_session_state ("show-autologin") != guest_autologin_switch.active) {
-                    InfobarNotifier.get_default ().set_reboot ();
+                    InfobarNotifier.get_default ().reboot_required = true;
 
                     if (guest_autologin_switch.active) {
                         set_guest_session_state ("autologin-on");
