@@ -2,33 +2,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 17:06-0700\n"
-"PO-Revision-Date: 2018-10-18 00:11+0000\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"PO-Revision-Date: 2019-08-20 04:22+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
+"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "É necessária autenticação para alterar dados de usuário"
+msgstr "A autenticação é necessária para alterar os dados do usuário"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Contas de Usuário"
+msgstr "Contas de usuário"
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Gerencie contas, permissões e configure nomes de usuários, senhas e fotos"
+"Gerenciar permissões de conta e configurar nomes de usuário, senhas e fotos"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/Plug.vala:148
 msgid "Avatar"
-msgstr "Imagem de exibição"
+msgstr "Avatar"
 
 #: src/Plug.vala:149
 msgid "Full name"
@@ -78,11 +78,11 @@ msgstr "Sessão de convidado"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Recortar & Posicionar"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Escolher que parte da imagem usar como avatar."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Usuário padrão"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:43
+#: src/Widgets/UserItem.vala:66
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -137,14 +137,15 @@ msgstr "Nome de usuário já utilizado"
 #: src/Dialogs/NewUserDialog.vala:157
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
-"O nome de usuário só pode conter letras minúsculas e números, sem espaços"
+"Nome de usuário pode conter apenas letras minúsculas e números, sem espaços"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"A Sessão de convidado permite usar uma conta temporária padrão sem uma senha."
+"A Sessão de convidado permite qualquer um usar uma conta padrão sem uma "
+"senha."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -202,7 +203,7 @@ msgstr "Ativar conta de usuário"
 
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
-msgstr "Desativar conta de usuário"
+msgstr "Desativar Conta de Usuário"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"

@@ -2,30 +2,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 17:06-0700\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"PO-Revision-Date: 2019-09-30 14:23+0000\n"
+"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/gl/>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Requírese autenticación para cambiar os datos do usuario"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr ""
+msgstr "Contas de usuario"
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Administrar permisos de contas e configurar nomes de usuario, contrasinais e "
+"fotos"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -96,7 +100,7 @@ msgstr ""
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -107,7 +111,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:43
+#: src/Widgets/UserItem.vala:66
 msgid "Administrator"
 msgstr ""
 
@@ -232,7 +236,7 @@ msgstr ""
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmar contrasinal"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
@@ -256,4 +260,4 @@ msgstr ""
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"

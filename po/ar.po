@@ -2,16 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 17:06-0700\n"
-"PO-Revision-Date: 2015-01-03 05:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"PO-Revision-Date: 2019-08-29 04:22+0000\n"
+"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
+"Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/ar/>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #. translatable string for org.pantheon.user-accounts.administration policy
 #: src/Plug.vala:35
@@ -38,7 +41,7 @@ msgstr ""
 
 #: src/Plug.vala:98
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "تتطلب بعض الإعدادات تغيير الصلاحيات للمسؤول"
 
 #: src/Plug.vala:148
 msgid "Avatar"
@@ -96,7 +99,7 @@ msgstr ""
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Cancel"
-msgstr ""
+msgstr "الغاء"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -107,7 +110,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:43
+#: src/Widgets/UserItem.vala:66
 msgid "Administrator"
 msgstr ""
 
@@ -252,8 +255,8 @@ msgstr ""
 
 #: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr ""
+msgstr "مفعل"
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr ""
+msgstr "غير مفعل"

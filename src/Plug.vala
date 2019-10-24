@@ -31,14 +31,14 @@ namespace SwitchboardPlugUserAccounts {
         private Gtk.LockButton lock_button;
         private Widgets.MainView main_view;
 
-        //translatable string for org.pantheon.user-accounts.administration policy
-        public const string policy_message = _("Authentication is required to change user data");
+        //translatable string for io.elementary.switchboard.useraccounts.administration policy
+        public const string policy_message = _("Authentication is required to change user data"); // vala-lint=naming-convention
 
         public UserAccountsPlug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts", null);
             Object (category: Category.SYSTEM,
-                code_name: "system-pantheon-useraccounts",
+                code_name: "io.elementary.switchboard.useraccounts",
                 display_name: _("User Accounts"),
                 description: _("Manage account permissions and configure user names, passwords, and photos"),
                 icon: "system-users",

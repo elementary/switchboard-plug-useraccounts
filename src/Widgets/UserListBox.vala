@@ -24,7 +24,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListBoxRow guest_session_row;
         private Gtk.Label guest_description_label;
 
-        construct { 
+        construct {
             selection_mode = Gtk.SelectionMode.SINGLE;
             get_usermanager ().user_added.connect (update_ui);
             get_usermanager ().user_removed.connect (update_ui);

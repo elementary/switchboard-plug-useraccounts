@@ -38,18 +38,18 @@ shared_module(
     dependencies: [
         dependency('accountsservice'),
         dependency('gee-0.8'),
+        dependency('gio-2.0'),
         dependency('glib-2.0'),
         dependency('gnome-desktop-3.0'),
-        dependency('gio-2.0'),
         dependency('gobject-2.0'),
         dependency('granite', version: '>=5.2.0'),
         dependency('gtk+-3.0'),
-        dependency('polkit-gobject-1'),
         dependency('pwquality'),
         meson.get_compiler('vala').find_library('run-passwd', dirs: join_paths(meson.current_source_dir())),
+        polkit_dep,
         posix_dep,
-        switchboard_dep
+        switchboard_dep,
     ],
     install: true,
-    install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'system')
+    install_dir : join_paths(switchboard_plugsdir, 'system')
 )

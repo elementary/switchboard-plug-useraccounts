@@ -108,7 +108,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 if (current_pw_entry != null) {
                     current_pw = current_pw_entry.text;
                 }
- 
+
                 var pwquality = new PasswordQuality.Settings ();
                 void* error;
                 var quality = pwquality.check (pw_entry.text, current_pw, null, out error);

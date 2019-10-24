@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:15-0700\n"
+"POT-Creation-Date: 2019-08-14 12:31-0700\n"
 "PO-Revision-Date: 2018-06-11 09:15-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,10 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/org.pantheon.switchboard.user-accounts.policy.in.in:10
+#: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
 msgstr "Manage user accounts"
 
-#: data/org.pantheon.switchboard.user-accounts.policy.in.in:11
+#: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
 msgstr "Authentication is required to change user data"
+
+#: data/useraccounts.appdata.xml.in:5
+#, fuzzy
+msgid "User Accounts"
+msgstr "Manage user accounts"
+
+#: data/useraccounts.appdata.xml.in:6
+msgid ""
+"Manage account permissions and configure user names, passwords, and photos"
+msgstr ""

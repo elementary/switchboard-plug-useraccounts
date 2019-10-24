@@ -30,17 +30,19 @@ namespace SwitchboardPlugUserAccounts {
         int status;
 
         try {
-            Process.spawn_sync (null, 
-                {"/usr/share/language-tools/language-options" , null}, 
+            Process.spawn_sync (
+                null,
+                {"/usr/share/language-tools/language-options" , null},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
                 out output,
                 null,
-                out status);
+                out status
+            );
 
-                installed_languages = output.split("\n");
-                return installed_languages;
+            installed_languages = output.split ("\n");
+            return installed_languages;
         } catch (Error e) {
             critical (e.message);
             return null;
@@ -104,7 +106,7 @@ namespace SwitchboardPlugUserAccounts {
         if (permission != null)
             return permission;
         try {
-            permission = new Polkit.Permission.sync ("org.pantheon.switchboard.user-accounts.administration", new Polkit.UnixProcess (Posix.getpid ()));
+            permission = new Polkit.Permission.sync ("io.elementary.switchboard.useraccounts.administration", new Polkit.UnixProcess (Posix.getpid ()));
             return permission;
         } catch (Error e) {
             critical (e.message);
@@ -190,8 +192,9 @@ namespace SwitchboardPlugUserAccounts {
 
     public static bool is_valid_username (string username) {
         try {
-            if (new Regex("^[a-z]+[a-z0-9]*$").match (username))
+            if (new Regex ("^[a-z]+[a-z0-9]*$").match (username)) {
                 return true;
+            }
             return false;
         } catch (Error e) {
             critical (e.message);
@@ -239,14 +242,16 @@ namespace SwitchboardPlugUserAccounts {
 
         try {
             var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
-            Process.spawn_sync (null, 
-                {cli, "--%s".printf (option)}, 
+            Process.spawn_sync (
+                null,
+                {cli, "--%s".printf (option)},
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
                 null,
                 out output,
                 null,
-                out status);
+                out status
+            );
 
             return output == "on\n";
         } catch (Error e) {
@@ -262,8 +267,8 @@ namespace SwitchboardPlugUserAccounts {
 
             try {
                 var cli = "%s/guest-session-toggle".printf (Build.PKGDATADIR);
-                Process.spawn_sync (null, 
-                    {"pkexec", cli, "--%s".printf (option)}, 
+                Process.spawn_sync (null,
+                    {"pkexec", cli, "--%s".printf (option)},
                     Environ.get (),
                     SpawnFlags.SEARCH_PATH,
                     null,

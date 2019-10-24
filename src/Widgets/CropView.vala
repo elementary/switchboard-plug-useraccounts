@@ -105,7 +105,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
          * Indicates wether a mouse button is pressed or not.
          */
         bool mouse_button_down = false;
-        
+
         /**
          * signal that is emitted when the selection area is changed in any way
          */
@@ -114,17 +114,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         /**
          * constant value for the area handles' radius
          */
-        const int r = 12;
+        const int RADIUS = 12;
 
         public CropView.from_pixbuf (Gdk.Pixbuf pixbuf) {
             this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
-            if (pixbuf.get_width () > pixbuf.get_height ())
+
+            if (pixbuf.get_width () > pixbuf.get_height ()) {
                 area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
-            else if (pixbuf.get_width () < pixbuf.get_height ())
+            } else if (pixbuf.get_width () < pixbuf.get_height ()) {
                 area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_width () / 2};
-            else 
+            } else {
                 area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_height () / 2};
+            }
         }
 
         public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y, bool quadratic_selection = false) {
@@ -169,7 +171,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (!mouse_button_down) {
                 bool determined_cursortype = false;
 
-                const Gdk.CursorType[] cursor = {
+                const Gdk.CursorType[] CURSOR = {
                     Gdk.CursorType.TOP_LEFT_CORNER,
                     Gdk.CursorType.TOP_SIDE,
                     Gdk.CursorType.TOP_RIGHT_CORNER,
@@ -181,8 +183,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 };
 
                 for (var i = 0; i < 8; i++) {
-                    if (in_quad (pos[i, 0] - r, pos[i, 1] - r, r * 2, r * 2, (int) event.x, (int) event.y)) {
-                        current_operation = cursor[i];
+                    if (in_quad (pos[i, 0] - RADIUS, pos[i, 1] - RADIUS, RADIUS * 2, RADIUS * 2, (int) event.x, (int) event.y)) {
+                        current_operation = CURSOR[i];
                         determined_cursortype = true;
                         break;
                     }
@@ -477,8 +479,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             cr.stroke ();
 
             if (handles_visible) {
-                for (var i = 0;i < 8; i++){
-                    cr.arc (pos[i,0], pos[i,1], r, 0.0, 2 * Math.PI);
+                for (var i = 0;i < 8; i++) {
+                    cr.arc (pos[i,0], pos[i,1], RADIUS, 0.0, 2 * Math.PI);
                     cr.set_source_rgb (0.7, 0.7, 0.7);
                     cr.fill ();
                 }
