@@ -54,7 +54,7 @@ namespace SwitchboardPlugUserAccounts {
 
             infobar_error = new Gtk.InfoBar ();
             infobar_error.message_type = Gtk.MessageType.ERROR;
-            infobar_error.no_show_all = true;
+            infobar_error.revealed = false;
 
             var error_label = new Gtk.Label ("");
 
@@ -64,12 +64,11 @@ namespace SwitchboardPlugUserAccounts {
             InfobarNotifier.get_default ().notify["error-message"].connect (() => {
                 var error_message = InfobarNotifier.get_default ().error_message;
                 if (error_message != "") {
-                    infobar_error.no_show_all = false;
                     error_label.label = "%s: %s".printf (_("Password change failed"), error_message);
                     infobar_error.show_all ();
+                    infobar_error.revealed = true;
                 } else {
-                    infobar_error.no_show_all = true;
-                    infobar_error.hide ();
+                    infobar_error.revealed = false;
                 }
             });
 
