@@ -80,6 +80,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
 
         create_button = (Gtk.Button) add_button (_("Create User"), Gtk.ResponseType.OK);
         create_button.margin = 6;
+        create_button.margin_start = 0;
         create_button.margin_top = 14;
         create_button.can_default = true;
         create_button.sensitive = false;
