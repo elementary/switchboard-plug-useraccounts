@@ -65,7 +65,6 @@ namespace SwitchboardPlugUserAccounts {
                 var error_message = InfobarNotifier.get_default ().error_message;
                 if (error_message != "") {
                     error_label.label = "%s: %s".printf (_("Password change failed"), error_message);
-                    infobar_error.show_all ();
                     infobar_error.revealed = true;
                 } else {
                     infobar_error.revealed = false;
