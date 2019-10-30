@@ -31,11 +31,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         construct {
             button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            button_add.sensitive = false;
             button_add.tooltip_text = _("Create user account");
 
             button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            button_remove.sensitive = false;
             button_remove.tooltip_text = _("Remove user account and its data");
 
             get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
@@ -43,6 +41,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (button_remove);
 
             button_add.clicked.connect (() => {
+                var permission = get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        critical (e.message);
+                        return;
+                    }
+                }
+
                 var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_toplevel ());
                 new_user.present ();
             });
@@ -60,13 +68,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void update_ui () {
-            if (get_permission ().allowed) {
-                button_add.sensitive = true;
-            } else {
-                button_add.sensitive = false;
-                button_remove.sensitive = false;
+            if (!get_permission ().allowed) {
                 hide_undo_notification ();
-                return;
             }
 
             if (selected_user == null) {
@@ -93,6 +96,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void mark_user_removal () {
+            var permission = get_permission ();
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    critical (e.message);
+                    return;
+                }
+            }
+
             debug ("Marking user %s for removal".printf (selected_user.get_user_name ()));
             mark_removal (selected_user);
             removal_changed ();
