@@ -87,18 +87,16 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         get_content_area ().add (form_grid);
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+        cancel_button.margin_bottom = 6;
+        cancel_button.margin_top = 14;
 
-        var button_change = new Gtk.Button.with_label (_("Change Password"));
+        var button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
+        button_change.margin = 6;
+        button_change.margin_top = 14;
+        button_change.margin_start = 0;
         button_change.sensitive = false;
         button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var action_area = (Gtk.Container) get_action_area ();
-        action_area.margin = 6;
-        action_area.margin_top = 14;
-        action_area.add (cancel_button);
-        action_area.add (button_change);
-        action_area.show_all ();
 
         pw_editor.validation_changed.connect (() => {
             var permission = get_permission ();
@@ -114,12 +112,11 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
             }
         });
 
-        button_change.clicked.connect (() => {
-            request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
-            destroy ();
-        });
+        response.connect ((response_id) => {
+            if (response_id == Gtk.ResponseType.OK) {
+                request_password_change (Act.UserPasswordMode.REGULAR, pw_editor.get_password ());
+            }
 
-        cancel_button.clicked.connect (() => {
             destroy ();
         });
     }
