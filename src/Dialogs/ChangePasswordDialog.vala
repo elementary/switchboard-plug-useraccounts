@@ -94,6 +94,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
         var button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
         button_change.margin = 6;
         button_change.margin_top = 14;
+        button_change.margin_start = 0;
         button_change.sensitive = false;
         button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
