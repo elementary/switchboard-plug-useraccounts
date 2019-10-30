@@ -333,14 +333,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            if (delta_user.locked != user_locked) {
-                if (user_locked) {
-                    enable_user_button.label = _("Enable User Account");
-                    enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-                } else {
-                    enable_user_button.label = _("Disable User Account");
-                    enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-                }
+            if (user_locked) {
+                enable_user_button.label = _("Enable User Account");
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            } else {
+                enable_user_button.label = _("Disable User Account");
+                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {
