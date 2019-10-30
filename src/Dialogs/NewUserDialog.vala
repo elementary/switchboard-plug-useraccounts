@@ -124,7 +124,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
                             }
                         });
                     } catch (Error e) {
-                        critical ("Creation of user '%s' failed".printf (username));
+                        critical ("Creation of user '%s' failed", username);
                     }
                 }
             }
