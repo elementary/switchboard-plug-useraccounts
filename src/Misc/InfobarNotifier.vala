@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2014-2017 elementary LLC. (https://elementary.io)
+* Copyright 2014-2019 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -17,50 +17,15 @@
 * Boston, MA 02110-1301 USA
 */
 
-namespace SwitchboardPlugUserAccounts {
-    public class InfobarNotifier : Object {
-        private bool error = false;
-        private string error_message = "";
-        private bool reboot = false;
+public class SwitchboardPlugUserAccounts.InfobarNotifier : Object {
+    public string error_message { get; set; default = ""; }
+    public bool reboot_required { get; set; default = false; }
 
-        public signal void error_notified ();
-        public signal void reboot_notified ();
+    private static GLib.Once<InfobarNotifier> instance;
 
-        public InfobarNotifier () { }
+    private InfobarNotifier () { }
 
-        public void set_error (string error_message) {
-            error = true;
-            this.error_message = error_message;
-            error_notified ();
-        }
-
-        public void unset_error () {
-            error = false;
-            error_message = "";
-            error_notified ();
-        }
-
-        public bool is_error () {
-            return error;
-        }
-
-        public void set_reboot () {
-            reboot = true;
-            reboot_notified ();
-        }
-
-        public bool is_reboot () {
-            return reboot;
-        }
-
-        public string get_error_message () {
-            return error_message;
-        }
-
-        private static GLib.Once<InfobarNotifier> instance;
-
-        public static unowned InfobarNotifier get_default () {
-            return instance.once (() => { return new InfobarNotifier (); });
-        }
+    public static unowned InfobarNotifier get_default () {
+        return instance.once (() => { return new InfobarNotifier (); });
     }
 }

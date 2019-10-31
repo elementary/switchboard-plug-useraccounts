@@ -75,7 +75,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             avatar_button.toggled.connect (() => {
                 if (avatar_button.active) {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
                     AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
                     avatar_popover.show_all ();
                     avatar_popover.hide.connect (() => { avatar_button.active = false;});
@@ -86,7 +86,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             full_name_entry.valign = Gtk.Align.CENTER;
             full_name_entry.get_style_context ().add_class ("h3");
             full_name_entry.activate.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
+                InfobarNotifier.get_default ().error_message = "";
                 utils.change_full_name (full_name_entry.get_text ());
             });
 
@@ -97,7 +97,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
             user_type_box.changed.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
+                InfobarNotifier.get_default ().error_message = "";
                 utils.change_user_type (user_type_box.active);
             });
 
@@ -108,7 +108,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 language_box = new Gtk.ComboBox ();
                 language_box.set_sensitive (false);
                 language_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
 
                     Gtk.TreeIter? iter;
                     Value cell;
@@ -135,7 +135,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box = new Gtk.ComboBox ();
                 region_box.set_sensitive (false);
                 region_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
 
                     string new_language;
                     Gtk.TreeIter? iter;
@@ -181,7 +181,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
+                InfobarNotifier.get_default ().error_message = "";
                 var permission = get_permission ();
                 if (user == get_current_user () && permission.allowed) {
                     try {
