@@ -46,7 +46,20 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     try {
                         permission.acquire ();
                     } catch (Error e) {
-                        critical (e.message);
+                        if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
+                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                                _("Unable to acquire permission"),
+                                _("A new account cannot be created without the required system permission."),
+                                "dialog-password",
+                                Gtk.ButtonsType.CLOSE
+                            );
+                            message_dialog.badge_icon = new ThemedIcon ("dialog-error");
+                            message_dialog.show_error_details (e.message);
+                            message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+                            message_dialog.run ();
+                            message_dialog.destroy ();
+                        }
+
                         return;
                     }
                 }
@@ -101,7 +114,20 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 try {
                     permission.acquire ();
                 } catch (Error e) {
-                    critical (e.message);
+                    if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                            _("Unable to acquire permission"),
+                            _("An account cannot be removed without the required system permission."),
+                            "dialog-password",
+                            Gtk.ButtonsType.CLOSE
+                        );
+                        message_dialog.badge_icon = new ThemedIcon ("dialog-error");
+                        message_dialog.show_error_details (e.message);
+                        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }
+
                     return;
                 }
             }
