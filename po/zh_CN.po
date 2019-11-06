@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2019-09-20 04:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "更改用户数据需要认证您的权限"
@@ -33,40 +33,40 @@ msgstr "管理账户权限、配置用户信息及头像"
 msgid "Password change failed"
 msgstr "密码更改失败"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "对访客会话的更改将会在重启系统后生效"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "某些设置需要管理员权限才能更改"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "更改头像"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "全名"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "账户类型"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "账户语言"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "自动登录"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "更改密码"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "访客会话"
@@ -121,15 +121,15 @@ msgstr "姓名"
 msgid "Username"
 msgstr "用户名"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "创建用户"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "用户名已存在"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "用户名只能包含无空格的小写字母和数字"
 
@@ -187,11 +187,11 @@ msgstr "点击跳转语言和区域设置"
 msgid "Change Password…"
 msgstr "更改密码…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "启用账户"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "禁用账户"
 

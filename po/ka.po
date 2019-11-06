@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
@@ -33,45 +33,45 @@ msgstr ""
 msgid "Password change failed"
 msgstr "პაროლის შეცვლა ჩაიშალა"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "სტუმრის სესიის ცვლილებები სისტემის გადატვირთვამდე არ გააქტიურდება"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "ავატარის შეცვლა"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "სრული სახელი"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "ანგარიშის ტიპი:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "ენა:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ავტომატური შესვლა"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
@@ -127,15 +127,15 @@ msgstr "სრული სახელი"
 msgid "Username"
 msgstr "მომხმარებლის სახელი"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "უნდა შეიცავდეს მხოლოდ პატარა ასოებს, რიცხვებს და არა გამოტოვებებს."
@@ -197,11 +197,11 @@ msgstr "დააწკაპუნეთ ენის & ადგილის �
 msgid "Change Password…"
 msgstr "პაროლის შეცვლა"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "მომხმარებლის ანგარიშის ჩართვა"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "მომხმარებლის ანგარიშის გამორთვა"
 

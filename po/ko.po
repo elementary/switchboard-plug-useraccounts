@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2019-05-28 21:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "사용자 데이터를 바꾸려면 인증이 필요합니다"
@@ -34,40 +34,40 @@ msgstr ""
 msgid "Password change failed"
 msgstr "비밀번호 변경 실패"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "게스트 세션의 변경은 재부팅 후에 적용됩니다"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "아바타"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "전체 이름"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "계정 유형"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "언어"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "자동 로그인"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "비밀번호 바꾸기"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "게스트 세션"
@@ -122,15 +122,15 @@ msgstr "전체 이름"
 msgid "Username"
 msgstr "사용자 이름"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "새 사용자 만들기"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "사용자 이름이 이미 사용 중입니다"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "사용자 계정은 빈칸 없이 소문자 및 숫자만을 포함할 수 있습니다"
 
@@ -190,11 +190,11 @@ msgstr "언어 & 로케일 설정으로 전환하려면 클릭하세요"
 msgid "Change Password…"
 msgstr "비밀번호 바꾸기…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "사용자 계정 활성화"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "사용자 계정 비활성화"
 

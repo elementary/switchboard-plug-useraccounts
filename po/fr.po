@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2019-05-09 10:33+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr ""
@@ -36,43 +36,43 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Impossible de changer le mot de passe"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Les changements effectués à la session invité prendront effet au prochain "
 "démarrage du système"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "Image de l'utilisateur"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "Type de compte"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "Langue"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "Connexion automatique"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Modifier le mot de passe"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Session invité"
@@ -127,15 +127,15 @@ msgstr "Nom complet"
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Créer l'utilisateur"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "Le nom d'utilisateur est déjà pris"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Ne peut contenir que des minuscules et des nombres mais pas d'espaces"
 
@@ -197,11 +197,11 @@ msgstr "Cliquez pour basculer sur les paramètres de langues et régions"
 msgid "Change Password…"
 msgstr "Modifier le mot de passe…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Activer le compte utilisateur"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Désactiver le compte utilisateur"
 
