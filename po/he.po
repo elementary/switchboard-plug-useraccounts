@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2018-10-09 06:18+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "נדרש אימות כדי לשנות נתוני משתמש"
@@ -33,40 +33,40 @@ msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמ�
 msgid "Password change failed"
 msgstr "החלפת הססמה נכשלה"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "השינויים שנערכים בהפעלת המשתמש לא יחולו עד להפעלת המערכת שלך מחדש"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "תמונת משתמש"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "שם מלא"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "סוג חשבון"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "שפה"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "כניסה אוטומטית"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "החלפת הססמה"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "הפעלת אורח"
@@ -121,15 +121,15 @@ msgstr "שם מלא"
 msgid "Username"
 msgstr "שם משתמש"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "יצירת משתמש"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "שם המשתמש כבר תפוס"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנות, מספרים וללא רווחים"
 
@@ -187,11 +187,11 @@ msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
 msgid "Change Password…"
 msgstr "החלפת הססמה…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "הפעלת חשבון משתמש"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "השבתת חשבון משתמש"
 

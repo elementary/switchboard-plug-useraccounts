@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2016-08-07 12:43+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Изисква се удостоверяване за промяна на потребителските данни"
@@ -32,48 +32,48 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Неуспешна промяна на паролата"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Промените по сесията за гости няма да бъдат приложени, докато системата не "
 "бъде повторно пусната"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Някои настройки изискват правомощия на администратор, за да бъдат променени"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "Смяна на аватар"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "Пълно име"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "Вид профил:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "Език:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Автоматично влизане:"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Смяна на паролата"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Сесия за гости"
@@ -129,15 +129,15 @@ msgstr "Пълно име"
 msgid "Username"
 msgstr "Потребителско име"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Създаване на потребител"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "Потребителското име вече е заето"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Може да съдържа само малки букви и цифри, без интервал"
@@ -199,11 +199,11 @@ msgstr "Щракнете за отиване към настройките на 
 msgid "Change Password…"
 msgstr "Смяна на паролата"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Активиране на потребителския профил"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Деактивиране на потребителския профил"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2018-05-28 09:13+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Este necesară autentificarea pentru a schimba datele utilizatorului"
@@ -33,47 +33,47 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Modificarea parolei a eșuat"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Modificările sesiuni de invitați nu vor avea efect până când nu reporniți "
 "sistemul"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatarul"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "Numele complet"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "Tipul de cont:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "Limba:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentifică-te automat:"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Schimbă Parola"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Sesiune de invitat"
@@ -128,15 +128,15 @@ msgstr "Numele complet"
 msgid "Username"
 msgstr "Nume de utilizator"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Crează utilizator"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "Numele este deja folosit"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Numele de utilizator poate conține numai litere mici și numere, fără spații"
@@ -198,11 +198,11 @@ msgstr "Faceți clic pentru a comuta la Setări de limbă și de localizare"
 msgid "Change Password…"
 msgstr "Schimbați Parola…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Activați Contul de utilizator"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Dezactivați contul de utilizator"
 

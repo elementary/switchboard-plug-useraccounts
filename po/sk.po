@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2016-01-15 15:22+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Na zmenu používateľských údajov je vyžadované overenie totožnosti"
@@ -31,45 +31,45 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Zmena hesla zlyhala"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Relácia pre hosťa nemá vplyv pokým nereštartujete váš systém"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "Zmeniť avatar"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "Celé meno"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "Typ konta:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "Jazyk:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Automatické prihlásenie:"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Zmeniť heslo"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Relácia pre hosťa"
@@ -125,15 +125,15 @@ msgstr "Celé meno"
 msgid "Username"
 msgstr "Užívateľské meno:"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Vytvoriť používateľa"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "Použivateľské meno je už zabrané"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Môže obsahovať len malé písmena, čísla a nemôže obsahovať medzery"
@@ -195,11 +195,11 @@ msgstr "Kliknite pre prenutie Jazyka & Regionálne nastavenia"
 msgid "Change Password…"
 msgstr "Zmeniť heslo"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Aktivovať účet používateľa"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Deaktivovať účet použivateľa"
 
