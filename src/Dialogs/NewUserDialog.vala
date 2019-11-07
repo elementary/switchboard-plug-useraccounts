@@ -74,19 +74,17 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         get_content_area ().add (form_grid);
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+        cancel_button.margin_bottom = 6;
+        cancel_button.margin_top = 14;
 
-        create_button = new Gtk.Button.with_label (_("Create User"));
+        create_button = (Gtk.Button) add_button (_("Create User"), Gtk.ResponseType.OK);
+        create_button.margin = 6;
+        create_button.margin_start = 0;
+        create_button.margin_top = 14;
         create_button.can_default = true;
         create_button.sensitive = false;
         create_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var action_area = (Gtk.Container) get_action_area ();
-        action_area.margin = 6;
-        action_area.margin_top = 14;
-        action_area.add (cancel_button);
-        action_area.add (create_button);
-        action_area.show_all ();
 
         realname_entry.changed.connect (() => {
             var username = gen_username (realname_entry.text);
@@ -102,35 +100,33 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
             update_create_button ();
         });
 
-        ((Gtk.Button) cancel_button).clicked.connect (() => {
-            destroy ();
-        });
+        response.connect ((response_id) => {
+            if (response_id == Gtk.ResponseType.OK) {
+                string fullname = realname_entry.text;
+                string username = username_entry.text;
+                string password = pw_editor.get_password ();
+                Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
 
-        create_button.clicked.connect (() => {
-            string fullname = realname_entry.text;
-            string username = username_entry.text;
-            string password = pw_editor.get_password ();
-            Act.UserAccountType accounttype = Act.UserAccountType.STANDARD;
+                if (accounttype_combobox.get_active () == 1) {
+                    accounttype = Act.UserAccountType.ADMINISTRATOR;
+                }
 
-            if (accounttype_combobox.get_active () == 1) {
-                accounttype = Act.UserAccountType.ADMINISTRATOR;
-            }
+                if (get_permission ().allowed) {
+                    try {
+                        var created_user = get_usermanager ().create_user (username, fullname, accounttype);
 
-            if (get_permission ().allowed) {
-                try {
-                    var created_user = get_usermanager ().create_user (username, fullname, accounttype);
+                        get_usermanager ().user_added.connect ((user) => {
+                            if (user == created_user) {
+                                created_user.set_locked (false);
 
-                    get_usermanager ().user_added.connect ((user) => {
-                        if (user == created_user) {
-                            created_user.set_locked (false);
-
-                            if (password != null) {
-                                created_user.set_password (password, "");
+                                if (password != null) {
+                                    created_user.set_password (password, "");
+                                }
                             }
-                        }
-                    });
-                } catch (Error e) {
-                    critical ("Creation of user '%s' failed".printf (username));
+                        });
+                    } catch (Error e) {
+                        critical ("Creation of user '%s' failed", username);
+                    }
                 }
             }
 

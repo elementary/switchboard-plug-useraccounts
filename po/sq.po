@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2019-10-17 17:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Albanian <https://l10n.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Kërkohet identifikimi për të ndryshuar të dhënat e përdoruesit"
@@ -33,47 +33,47 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Ndryshimi i fjalëkalimit dështoi"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Ndryshimet e llogarisë si i ftuar nuk do kenë efekt deri kur të riniset "
 "kompjuteri"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Disa parametra kanë nevojë për të drejtat e administratorit për tu ndryshuar"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "Ndrysho foton personale"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "Emri i plotë"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "Tipi i llogarisë:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "Gjuha:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr ""
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Ndrysho fjalëkalimin"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Seksion si i ftuar"
@@ -129,15 +129,15 @@ msgstr "Emri i plotë"
 msgid "Username"
 msgstr "Emri i përdoruesit"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Krijo përdoruesin"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "Emri i përdoruesit është tashmë i zënë"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
@@ -199,11 +199,11 @@ msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
 msgid "Change Password…"
 msgstr "Ndrysho fjalëkalimin"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Aktivo llogarinë e përdoruesin"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Çaktivizo llogarinë e përdoruesit"
 

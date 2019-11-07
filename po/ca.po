@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-06 00:22+0000\n"
 "PO-Revision-Date: 2019-05-18 22:09+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Cal autenticació per canviar les dades de l'usuari."
@@ -35,42 +35,42 @@ msgstr ""
 msgid "Password change failed"
 msgstr "Ha fallat el canvi de contrasenya."
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
 "sistema."
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "Tipus de compte"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "Llengua"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "Entra-hi automàticament"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Sessió de convidat"
@@ -125,15 +125,15 @@ msgstr "Nom i cognoms"
 msgid "Username"
 msgstr "Nom d'usuari"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Crea un usuari"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
 msgstr "El nom d'usuari ja existeix"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "El nom d'usuari només pot contenir lletres minúscules i números, sense "
@@ -195,11 +195,11 @@ msgstr "Cliqueu per canviar als paràmetres de la llengua i la regió"
 msgid "Change Password…"
 msgstr "Canvia la contrasenya…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
 msgstr "Habilita el compte d'usuari"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
 msgstr "Inhabilita el compte d'usuari"
 
