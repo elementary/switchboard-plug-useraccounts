@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 18:04+0000\n"
+"POT-Creation-Date: 2019-11-07 18:25+0000\n"
 "PO-Revision-Date: 2019-09-30 14:23+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
@@ -37,3 +37,19 @@ msgid ""
 msgstr ""
 "Administrar permisos de contas e configurar nomes de usuario, contrasinais e "
 "fotos"
+
+#: data/useraccounts.appdata.xml.in:11
+msgid "Show in sidebar if an account is disabled"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:12
+msgid "Ask for permission when adding and removing accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:13
+msgid "Animate Infobars"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:14
+msgid "Updated translations"
+msgstr ""
