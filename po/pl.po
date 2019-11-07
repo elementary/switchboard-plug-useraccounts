@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 00:22+0000\n"
+"POT-Creation-Date: 2019-11-07 18:04+0000\n"
 "PO-Revision-Date: 2018-10-09 00:59+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -222,17 +222,29 @@ msgstr "Wybierz obraz"
 msgid "Open"
 msgstr "Otwórz"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "Utwórz konto użytkownika"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "Usuń konto użytkownika i jego pliki"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "Nie możesz usunąć swojego własnego konta"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
