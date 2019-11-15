@@ -1,3 +1,43 @@
+switchboard-plug-useraccounts (2.3.0) bionic; urgency=medium
+
+  * Release 2.3.0 (#134)
+  * Update translation template
+  * AppData: Add 2.3.0 release info
+  * Update translation template
+  * ListFooter: ask for permission when needed (#132)
+  * Update translation template
+  * Delete CODE_OF_CONDUCT.md
+  * Add Gettext Updates to Actions
+  * Add Release to Actions
+  * Split Debian packaging into its own branch
+  * InfobarNotifier: Use only properties (#130)
+  * UserSettingsView: Cache some gets and cleanup (#128)
+  * Fix deprecations (#131)
+  * DeltaUser: Change null booleans to false (#129)
+  * run installation in CI (#127)
+  * Add Lint to CI (#124)
+  * Fix code style errors (#126)
+  * lint project with vala-lint (#125)
+  * Delete FUNDING.yml
+  * Use GitHub CI (#123)
+  * build: fix install path for switchboard plug (#120)
+  * Update translation files
+  * Fix RDNN for policy file (#116)
+  * UserSettingsView: Make things private (#119)
+  * UserSettingsView: Use DIM_LABEL instead of opacity (#117)
+  * Plug: Change code name to RDNN
+  * Add Silesian and update translation template
+  * UserItem: Use a revealer for admin label and bind property (#113)
+  * UserItem: bind username change to its own property (#111)
+  * UserItem: Bind user iconfile to property (#112)
+  * UserItem: bind realname property (#110)
+  * Show in sidebar if an account is disabled (#109)
+  * Create FUNDING.yml
+  * Add appdata file (#108)
+  * Update translation files
+
+ -- elementary LLC. <builds@elementary.io>  Fri, 15 Nov 2019 22:27:20 +0000
+
 switchboard-plug-useraccounts (2.2.1) bionic; urgency=medium
 
   * New upstream release.
