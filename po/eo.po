@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 00:22+0000\n"
+"POT-Creation-Date: 2019-11-07 18:25+0000\n"
 "PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -217,17 +217,29 @@ msgstr "Elekti bildon"
 msgid "Open"
 msgstr "Malfermi"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "Krei uzanto-konton"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "Forigi uzanto-konton kaj siaj datumoj"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "Oni ne povas forigi sian propran uzanto-konton"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

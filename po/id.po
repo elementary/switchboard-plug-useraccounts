@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 00:22+0000\n"
+"POT-Creation-Date: 2019-11-07 18:25+0000\n"
 "PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -220,17 +220,29 @@ msgstr "Pilih gambar"
 msgid "Open"
 msgstr "Buka"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "Buat akun pengguna"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "Hapus akun pengguna dan datanya"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "Anda tidak dapat menghapus akun pengguna Anda sendiri"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

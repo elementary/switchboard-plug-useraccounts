@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 00:22+0000\n"
+"POT-Creation-Date: 2019-11-07 18:25+0000\n"
 "PO-Revision-Date: 2019-05-09 10:32+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -223,17 +223,29 @@ msgstr "Valitse kuva"
 msgid "Open"
 msgstr "Avaa"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "Luo käyttäjätunnus"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "Poista käyttäjätunnus ja sen kaikki tiedostot"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "Et voi poistaa omaa käyttäjätunnustasi"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

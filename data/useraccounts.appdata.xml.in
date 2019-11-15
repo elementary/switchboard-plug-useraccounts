@@ -4,6 +4,18 @@
   <extends>io.elementary.switchboard</extends>
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
+  <releases>
+    <release version="2.3.0" date="2019-11-04" urgency="medium">
+      <description>
+        <ul>
+          <li>Show in sidebar if an account is disabled</li>
+          <li>Ask for permission when adding and removing accounts</li>
+          <li>Animate Infobars</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/elementary/switchboard-plug-useraccounts/master/data/screenshot.png</image>

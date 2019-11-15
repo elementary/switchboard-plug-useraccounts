@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 00:22+0000\n"
+"POT-Creation-Date: 2019-11-07 18:25+0000\n"
 "PO-Revision-Date: 2019-09-20 04:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -215,17 +215,29 @@ msgstr "选择图片"
 msgid "Open"
 msgstr "打开"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "创建用户账户"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "删除用户账户和使用数据"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "您不能删除自己的用户账户"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
