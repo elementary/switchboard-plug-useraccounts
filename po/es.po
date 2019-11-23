@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2019-10-09 17:23+0000\n"
-"Last-Translator: Rodrigo Lledó Milanca <rodhos92@gmail.com>\n"
+"PO-Revision-Date: 2019-11-25 09:25+0000\n"
+"Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/es/>\n"
 "Language: es\n"
@@ -234,11 +234,11 @@ msgstr "Eliminar la cuenta y los datos asociados"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "No es posible obtener permiso"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "No se puede crear una nueva cuenta sin los permisos necesarios."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -246,7 +246,7 @@ msgstr "No puede eliminar su propia cuenta"
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "No se puede eliminar una cuenta sin los permisos necesarios."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
