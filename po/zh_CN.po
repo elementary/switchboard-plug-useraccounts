@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2019-09-20 04:22+0000\n"
+"PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -225,11 +225,11 @@ msgstr "删除用户账户和使用数据"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "无法获取权限"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "创建新账户需要管理员权限。"
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -237,7 +237,7 @@ msgstr "您不能删除自己的用户账户"
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "删除账户需要管理员权限。"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
