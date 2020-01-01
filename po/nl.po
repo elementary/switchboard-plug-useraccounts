@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2018-04-01 11:21+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -46,29 +46,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: src/Plug.vala:144
-#, fuzzy
 msgid "Avatar"
-msgstr "Verander profielfoto"
+msgstr "Profielfoto"
 
 #: src/Plug.vala:145
-#, fuzzy
 msgid "Full name"
 msgstr "Volledige naam"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Account type"
-msgstr "Gebruikerstype:"
+msgstr "Gebruikerstype"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Language"
-msgstr "Taal:"
+msgstr "Taal"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Automatisch inloggen:"
+msgstr "Automatisch inloggen"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
@@ -81,11 +76,12 @@ msgstr "Gastsessie"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Bijsnijden en positie"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
 msgstr ""
+"Kies een gedeelte van de afbeelding om dit als profielfoto te gebruiken."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -240,11 +236,13 @@ msgstr "Verwijder gebruikersaccount en zijn gegevens"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Niet in staat om toestemming te krijgen"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
+"Een nieuwe gebruiker kan niet worden aangemaakt zonder de vereiste "
+"systeemrechten."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -253,6 +251,7 @@ msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
+"Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
