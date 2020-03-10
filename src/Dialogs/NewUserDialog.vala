@@ -114,16 +114,11 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
                 if (get_permission ().allowed) {
                     try {
                         var created_user = get_usermanager ().create_user (username, fullname, accounttype);
+                        if (password != null) {
+                            created_user.set_password (password, "");
+                        }
 
-                        get_usermanager ().user_added.connect ((user) => {
-                            if (user == created_user) {
-                                created_user.set_locked (false);
-
-                                if (password != null) {
-                                    created_user.set_password (password, "");
-                                }
-                            }
-                        });
+                        created_user.set_locked (false);
                     } catch (Error e) {
                         critical ("Creation of user '%s' failed", username);
                     }
