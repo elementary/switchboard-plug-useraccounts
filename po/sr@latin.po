@@ -1,328 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the useraccounts-plug package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: useraccounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2019-11-22 17:24+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/fr/>\n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sr@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
-"X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr ""
-"Il est nécessaire de s'authentifier pour modifier des données utilisateur"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Comptes utilisateur"
+msgstr ""
 
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Gérer les permission des comptes, configurer les noms d'utilisateur, mots de "
-"passe et photos"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
-msgstr "Impossible de changer le mot de passe"
+msgstr ""
 
 #: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
-"Les changements effectués à la session invité prendront effet au prochain "
-"démarrage du système"
 
 #: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"La modification de certains paramètres nécessite les droits d'administrateur"
 
 #: src/Plug.vala:144
 msgid "Avatar"
-msgstr "Image de l'utilisateur"
+msgstr ""
 
 #: src/Plug.vala:145
 msgid "Full name"
-msgstr "Nom complet"
+msgstr ""
 
 #: src/Plug.vala:146
 msgid "Account type"
-msgstr "Type de compte"
+msgstr ""
 
 #: src/Plug.vala:147
 msgid "Language"
-msgstr "Langue"
+msgstr ""
 
 #: src/Plug.vala:148
 msgid "Log in automatically"
-msgstr "Connexion automatique"
+msgstr ""
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
-msgstr "Modifier le mot de passe"
+msgstr ""
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
-msgstr "Session invité"
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr "Recadrage et positionnement"
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr "Sélectionnez la partie de l'image à utiliser comme avatar."
+msgstr ""
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
-msgstr "Modifier l'avatar de l'utilisateur"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
-msgstr "Mot de passe actuel"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
-msgstr "Appuyez pour vous authentifier"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr "Échec d'authentification"
+msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
-msgstr "Type de compte :"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
-msgstr "Utilisateur standard"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
 #: src/Widgets/UserItem.vala:66
 msgid "Administrator"
-msgstr "Administrateur"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:38
 msgid "Full Name"
-msgstr "Nom complet"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:43
 msgid "Username"
-msgstr "Nom d'utilisateur"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
-msgstr "Créer l'utilisateur"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:151
 msgid "Username is already taken"
-msgstr "Le nom d'utilisateur est déjà pris"
+msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:153
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Ne peut contenir que des minuscules et des nombres mais pas d'espaces"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"La session invité permet d'utiliser une session temporaire sans avoir besoin "
-"de mot de passe."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
-"Dès que l'utilisateur se déconnecte, toutes les données de la session invité "
-"sont supprimés."
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
 msgid "Log In automatically:"
-msgstr "Connexion automatique :"
+msgstr ""
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "Annuler la suppression de l'utilisateur"
+msgstr ""
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr "Annuler"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "Vous n'avez pas la permission de modifier cela"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
-msgstr "Impossible de changer ceci pour l'utilisateur actuel"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
-msgstr "Impossible de supprimer le dernier administrateur"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:93
 msgid "Account type:"
-msgstr "Type de compte :"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:97
 msgid "Standard"
-msgstr "Normal"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:104
 msgid "Language:"
-msgstr "Langue :"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Cliquez pour basculer sur les paramètres de langues et régions"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
-msgstr "Modifier le mot de passe…"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:337
 msgid "Enable User Account"
-msgstr "Activer le compte utilisateur"
+msgstr ""
 
 #: src/Views/UserSettingsView.vala:340
 msgid "Disable User Account"
-msgstr "Désactiver le compte utilisateur"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
-msgstr "Supprimer"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Depuis un fichier…"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Images"
-msgstr "Images"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:71
 msgid "Select an image"
-msgstr "Sélectionner une image"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Open"
-msgstr "Ouvrir"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
-msgstr "Créer un compte utilisateur"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
-msgstr "Supprimer le compte utilisateur et ses données"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr "Impossible de récupérer les permissions"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr "Impossible de créer un nouveau compte sans les permissions requises."
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
-msgstr "Impossible de supprimer votre propre compte"
+msgstr ""
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr "Impossible de supprimer un compte sans les permissions requises."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Choisissez un mot de passe"
+msgstr ""
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Confirmez le mot de passe"
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
-msgstr "Afficher les mots de passe"
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
-msgstr "Les mots de passe ne correspondent pas"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:33
 msgid "My Account"
-msgstr "Mon compte"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:35
 msgid "Other Accounts"
-msgstr "Autres comptes"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:102
 msgid "Enabled"
-msgstr "Activé"
+msgstr ""
 
 #: src/Widgets/UserListBox.vala:106
 msgid "Disabled"
-msgstr "Désactivé"
-
-#~ msgid "Password:"
-#~ msgstr "Mot de passe :"
-
-#~ msgid "None set"
-#~ msgstr "Aucun"
-
-#~ msgid "Set password now"
-#~ msgstr "Attribuer un mot de passe maintenant"
-
-#~ msgid "Set no password for login"
-#~ msgstr "Ne pas utiliser de mot de passe"
-
-#~ msgid "Let user create password on first login"
-#~ msgstr "Attribuer un mot de passe lors de la permière connexion"
-
-#~ msgid "Username is not valid"
-#~ msgstr "Nom d'utilisateur invalide"
-
-#~ msgid "New Password"
-#~ msgstr "Nouveau mot de passe"
-
-#~ msgid "Password cannot be empty"
-#~ msgstr "Le mot de passe ne peut pas étre vide"
-
-#~ msgid "Password accepted"
-#~ msgstr "Mot de passe accepté"
-
-#~ msgid "Weak password strength"
-#~ msgstr "Mot de passe faible"
-
-#~ msgid "Medium password strength"
-#~ msgstr "Mot de passe moyen"
-
-#~ msgid "Strong password strength"
-#~ msgstr "Mot de passe fort"
-
-#~ msgid "Resembles your current password"
-#~ msgstr "Ressemble au mot de passe actuel"
-
-#~ msgid "New password is too simple"
-#~ msgstr "Le nouveau mot de passe est trop simple"
-
-#~ msgid "New password is a palindrome"
-#~ msgstr "Le nouveau mot de passe est un palindrome"
+msgstr ""

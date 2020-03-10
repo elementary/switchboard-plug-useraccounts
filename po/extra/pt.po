@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 18:25+0000\n"
-"PO-Revision-Date: 2019-08-11 10:22+0000\n"
+"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"PO-Revision-Date: 2019-11-29 00:25+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pt/>\n"
@@ -40,16 +40,16 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:11
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
+msgstr "Mostrar na barra lateral se uma conta está desativada"
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "Pedir permissão ao adicionar e remover contas"
 
 #: data/useraccounts.appdata.xml.in:13
 msgid "Animate Infobars"
-msgstr ""
+msgstr "Animar barras de informação"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduções atualizadas"

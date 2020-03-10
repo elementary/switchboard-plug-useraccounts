@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 18:25+0000\n"
-"PO-Revision-Date: 2019-05-10 06:32+0000\n"
+"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/mr/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -226,11 +226,11 @@ msgstr "वापरकर्ता खाते आणि त्याचा �
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "परवानगी मिळविण्यात अक्षम"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "आवश्यक सिस्टम परवानगीशिवाय नवीन खाते तयार केले जाऊ शकत नाही."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -238,7 +238,7 @@ msgstr "आपण आपले स्वत: चे वापरकर्ता 
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "आवश्यक सिस्टम परवानगीशिवाय खाते हटविले जाऊ शकत नाही."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
