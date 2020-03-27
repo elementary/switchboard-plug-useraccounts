@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2018-10-09 06:18+0000\n"
+"PO-Revision-Date: 2020-03-26 23:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -73,11 +73,11 @@ msgstr "הפעלת אורח"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "חיתוך ומיקום"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "נא לבחור את החלק בתמונה שישמש כתמונה מייצגת."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -153,7 +153,7 @@ msgstr "ביטול הסרת החשבון האחרון"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr "חזרה"
+msgstr "ביטול"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
@@ -225,11 +225,11 @@ msgstr "הסרת חשבון משתמש לרבות הנתונים"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "לא ניתן לקבל הרשאות"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -237,7 +237,7 @@ msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-20 09:16-0800\n"
-"PO-Revision-Date: 2019-11-27 20:25+0000\n"
+"PO-Revision-Date: 2020-03-26 23:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/he/>\n"
@@ -17,36 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "ניהול חשבונות משתמשים"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "נדרש אימות כדי לשנות נתוני משתמש"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts"
-msgstr ""
+msgstr "חשבונות משתמשים"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
+msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, ססמאות ותמונות"
 
 #: data/useraccounts.appdata.xml.in:11
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
+msgstr "הצגה בסרגל הצד אם חשבון מושבת"
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "לבקש הרשאה בעת הוספה והסרה של חשבונות"
 
 #: data/useraccounts.appdata.xml.in:13
 msgid "Animate Infobars"
-msgstr ""
+msgstr "הנפשת סרגלי מידע"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Updated translations"
