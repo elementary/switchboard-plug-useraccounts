@@ -197,7 +197,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             });
 
             enable_user_button = new Gtk.Button ();
-            enable_user_button.clicked.connect (utils.change_lock);
+            enable_user_button.clicked.connect (change_lock);
             enable_user_button.set_sensitive (false);
             enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -223,7 +223,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.tooltip_text = NO_PERMISSION_STRING;
             enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             attach (avatar_button, 0, 0, 1, 1);
@@ -258,16 +257,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_sensitive (false);
                 password_button.set_sensitive (false);
                 autologin_switch.set_sensitive (false);
-                enable_user_button.set_sensitive (false);
+
+                user_type_lock.set_opacity (1);
+                autologin_lock.set_opacity (1);
+                password_lock.set_opacity (1);
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
-                enable_lock.tooltip_text = NO_PERMISSION_STRING;
-            } else if (current_user) {
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
-                enable_lock.tooltip_text = CURRENT_USER_STRING;
-            } else if (last_admin) {
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
-                enable_lock.tooltip_text = LAST_ADMIN_STRING;
             }
 
             if (current_user || allowed) {
@@ -306,8 +301,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            if (allowed && !current_user && !last_admin) {
-                enable_user_button.set_sensitive (true);
+            if (current_user) {
+                enable_lock.tooltip_text = CURRENT_USER_STRING;
+                enable_lock.set_opacity (1);
+
+                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+            } else if (last_admin) {
+                enable_lock.tooltip_text = LAST_ADMIN_STRING;
+                enable_lock.set_opacity (1);
+
+                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+            } else {
+                enable_user_button.sensitive = true;
                 enable_lock.set_opacity (0);
             }
 
@@ -440,6 +445,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 region_box.set_active_iter (active_iter);
             }
+        }
+
+        private void change_lock () {
+            var permission = get_permission ();
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    critical (e.message);
+                    return;
+                }
+            }
+
+            var user_locked = user.get_locked ();
+            if (user_locked) {
+                user.set_password_mode (Act.UserPasswordMode.REGULAR);
+            } else {
+                user.set_automatic_login (false);
+            }
+
+            user.set_locked (!user_locked);
         }
     }
 }
