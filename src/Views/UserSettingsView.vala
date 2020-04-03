@@ -307,10 +307,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             if (current_user) {
                 enable_lock.tooltip_text = CURRENT_USER_STRING;
-                enable_lock.set_opacity (0.5);
+                enable_lock.set_opacity (1);
             } else if (last_admin) {
                 enable_lock.tooltip_text = LAST_ADMIN_STRING;
-                enable_lock.set_opacity (0.5);
+                enable_lock.set_opacity (1);
             } else {
                 enable_user_button.sensitive = true;
                 enable_lock.set_opacity (0);
