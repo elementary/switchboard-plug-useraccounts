@@ -263,10 +263,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 password_lock.set_opacity (1);
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
-            } else if (current_user) {
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
-            } else if (last_admin) {
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
             }
 
             if (current_user || allowed) {
@@ -308,9 +304,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (current_user) {
                 enable_lock.tooltip_text = CURRENT_USER_STRING;
                 enable_lock.set_opacity (1);
+
+                user_type_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (last_admin) {
                 enable_lock.tooltip_text = LAST_ADMIN_STRING;
                 enable_lock.set_opacity (1);
+
+                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
                 enable_lock.set_opacity (0);
