@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-12-24 22:07+0000\n"
 "Last-Translator: Marko <marko.dolar@gmail.com>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
@@ -38,17 +38,29 @@ msgid ""
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:11
-msgid "Show in sidebar if an account is disabled"
+msgid "Show more accurate reasons for locked settings"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
-msgid "Ask for permission when adding and removing accounts"
+msgid "Improve reliability of account creation"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:13
-msgid "Animate Infobars"
+msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:14
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
 msgid "Updated translations"
 msgstr "Posodobljeni prevodi"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Show in sidebar if an account is disabled"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Ask for permission when adding and removing accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:23
+msgid "Animate Infobars"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -37,17 +37,31 @@ msgid ""
 msgstr "管理帳號權限並調整使用者的名稱、密碼、相片等設定"
 
 #: data/useraccounts.appdata.xml.in:11
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:12
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:13
+#, fuzzy
+#| msgid "Ask for permission when adding and removing accounts"
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "加入與移除帳號時詢問是否獲得許可"
+
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "翻譯更新"
+
+#: data/useraccounts.appdata.xml.in:21
 msgid "Show in sidebar if an account is disabled"
 msgstr "如果帳號停用則顯示在側邊欄"
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:22
 msgid "Ask for permission when adding and removing accounts"
 msgstr "加入與移除帳號時詢問是否獲得許可"
 
-#: data/useraccounts.appdata.xml.in:13
+#: data/useraccounts.appdata.xml.in:23
 msgid "Animate Infobars"
 msgstr "讓資訊列有動畫表現"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "翻譯更新"
