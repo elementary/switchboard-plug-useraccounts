@@ -5,6 +5,16 @@
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
   <releases>
+    <release version="2.3.1" date="2020-04-07" urgency="medium">
+      <description>
+        <ul>
+          <li>Show more accurate reasons for locked settings</li>
+          <li>Improve reliability of account creation</li>
+          <li>Get permission on demand for enabling or disabling accounts</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.0" date="2019-11-15" urgency="medium">
       <description>
         <ul>
