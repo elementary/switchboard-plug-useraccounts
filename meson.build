@@ -2,7 +2,7 @@ project(
     'useraccounts',
     'vala', 'c',
     meson_version: '>= 0.46.1',
-    version: '2.3.0'
+    version: '2.3.1'
 )
 
 gnome = import('gnome')
