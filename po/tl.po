@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,11 +129,11 @@ msgstr "Username"
 msgid "Create User"
 msgstr "Gumawa ng User"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "May gumagamit na ng username na 'to"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Mga lower case letters, mga numero at walang spaces ang pupwede"
@@ -194,11 +194,11 @@ msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 msgid "Change Password…"
 msgstr "Palitan ang Password"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Paganahin ang User Account"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Huwag paganahin ang  User account"
 

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2020-04-08 17:00+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
-"Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/ar/>\n"
+"Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,17 +38,29 @@ msgid ""
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:11
-msgid "Show in sidebar if an account is disabled"
+msgid "Show more accurate reasons for locked settings"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
-msgid "Ask for permission when adding and removing accounts"
+msgid "Improve reliability of account creation"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:13
-msgid "Animate Infobars"
+msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:14
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
 msgid "Updated translations"
 msgstr "ترجمات محدثة"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Show in sidebar if an account is disabled"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Ask for permission when adding and removing accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:23
+msgid "Animate Infobars"
+msgstr ""

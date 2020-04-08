@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,11 +133,11 @@ msgstr "Όνομα χρήστη"
 msgid "Create User"
 msgstr "Δημιουργία χρήστη"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Μπορεί μόνο να περιέχει πεζά γράμματα, νούμερα και όχι κενά"
@@ -202,11 +202,11 @@ msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσα�
 msgid "Change Password…"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Ενεργοποίηση λογαριασμού χρήστη"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Απενεργοποίηση λογαριασμού χρήστη"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-11-22 17:24+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -130,11 +130,11 @@ msgstr "Nome de usuário"
 msgid "Create User"
 msgstr "Criar usuário"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Nome de usuário já utilizado"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Nome de usuário pode conter apenas letras minúsculas e números, sem espaços"
@@ -197,11 +197,11 @@ msgstr "Clique para mudar as configurações regionais e de idioma"
 msgid "Change Password…"
 msgstr "Alterar Senha…"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Ativar conta de usuário"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Desativar Conta de Usuário"
 

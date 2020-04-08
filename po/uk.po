@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2016-04-29 15:01+0000\n"
 "Last-Translator: Alexander Grechko <AlexXxander1111@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,11 +133,11 @@ msgstr "Користувач"
 msgid "Create User"
 msgstr "Створити користувача"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Ім’я користувача вже зайнято"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
@@ -201,11 +201,11 @@ msgstr "Натисніть для переходу в налаштування �
 msgid "Change Password…"
 msgstr "Змінити пароль"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Увімкнути обліковий запис"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Вимкнути обліковий запис"
 

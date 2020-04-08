@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2016-01-15 15:22+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,11 +129,11 @@ msgstr "Užívateľské meno:"
 msgid "Create User"
 msgstr "Vytvoriť používateľa"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Použivateľské meno je už zabrané"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Môže obsahovať len malé písmena, čísla a nemôže obsahovať medzery"
@@ -195,11 +195,11 @@ msgstr "Kliknite pre prenutie Jazyka & Regionálne nastavenia"
 msgid "Change Password…"
 msgstr "Zmeniť heslo"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Aktivovať účet používateľa"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Deaktivovať účet použivateľa"
 

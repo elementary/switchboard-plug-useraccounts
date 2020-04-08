@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-11-22 17:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,17 +39,31 @@ msgstr ""
 "contrasenyes i les fotografies."
 
 #: data/useraccounts.appdata.xml.in:11
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:12
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:13
+#, fuzzy
+#| msgid "Ask for permission when adding and removing accounts"
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Demana permís en afegir i suprimir comptes."
+
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "Traduccions actualitzades"
+
+#: data/useraccounts.appdata.xml.in:21
 msgid "Show in sidebar if an account is disabled"
 msgstr "Es mostra a la barra lateral si el compte està inhabilitat."
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:22
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Demana permís en afegir i suprimir comptes."
 
-#: data/useraccounts.appdata.xml.in:13
+#: data/useraccounts.appdata.xml.in:23
 msgid "Animate Infobars"
 msgstr "Barres d'informació animades"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "Traduccions actualitzades"

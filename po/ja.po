@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -126,11 +126,11 @@ msgstr "ユーザー名"
 msgid "Create User"
 msgstr "ユーザーを作成"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "ユーザー名はすでに使われています"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "ユーザー名は小文字と数字のみを含むことができます。空白は使用しないでください"
@@ -191,11 +191,11 @@ msgstr "言語と地域の設定を変更する場合はクリックしてくだ
 msgid "Change Password…"
 msgstr "パスワードを変更…"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "アカウントを有効にする"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "アカウントを無効にする"
 

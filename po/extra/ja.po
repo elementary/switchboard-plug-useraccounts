@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -38,17 +38,32 @@ msgstr ""
 "アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
 
 #: data/useraccounts.appdata.xml.in:11
-msgid "Show in sidebar if an account is disabled"
-msgstr "アカウントが無効になっている場合は、サイドバーに”無効”と表示するように修正"
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:13
+#, fuzzy
+#| msgid "Ask for permission when adding and removing accounts"
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "アカウントの追加時および削除時に管理者権限を確認するように変更"
+
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "翻訳の更新"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Show in sidebar if an account is disabled"
+msgstr ""
+"アカウントが無効になっている場合は、サイドバーに”無効”と表示するように修正"
+
+#: data/useraccounts.appdata.xml.in:22
 msgid "Ask for permission when adding and removing accounts"
 msgstr "アカウントの追加時および削除時に管理者権限を確認するように変更"
 
-#: data/useraccounts.appdata.xml.in:13
+#: data/useraccounts.appdata.xml.in:23
 msgid "Animate Infobars"
 msgstr "情報バーをアニメーション表示するように変更"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "翻訳の更新"

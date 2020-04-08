@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -130,11 +130,11 @@ msgstr "Nazwa użytkownika"
 msgid "Create User"
 msgstr "Utwórz użytkownika"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Nazwa użytkownika jest już zajęta"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Nazwa użytkownika może zawierać tylko małe litery, cyfry, bez spacji"
 
@@ -194,11 +194,11 @@ msgstr "Kliknij, aby zmienić język i ustawienia lokalizacji"
 msgid "Change Password…"
 msgstr "Zmień hasło…"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Aktywuj konto użytkownika"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Wyłącz konto użytkownika"
 

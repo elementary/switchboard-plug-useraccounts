@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2020-03-19 19:09+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -38,17 +38,31 @@ msgstr ""
 "Manage account permissions and configure user names, passwords, and photos"
 
 #: data/useraccounts.appdata.xml.in:11
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:12
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:13
+#, fuzzy
+#| msgid "Ask for permission when adding and removing accounts"
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Ask for permission when adding and removing accounts"
+
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "Updated translations"
+
+#: data/useraccounts.appdata.xml.in:21
 msgid "Show in sidebar if an account is disabled"
 msgstr "Show in sidebar if an account is disabled"
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:22
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Ask for permission when adding and removing accounts"
 
-#: data/useraccounts.appdata.xml.in:13
+#: data/useraccounts.appdata.xml.in:23
 msgid "Animate Infobars"
 msgstr "Animate Infobars"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Updated translations"
-msgstr "Updated translations"
