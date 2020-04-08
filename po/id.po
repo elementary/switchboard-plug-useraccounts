@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -128,11 +128,11 @@ msgstr "Nama Pengguna"
 msgid "Create User"
 msgstr "Buat Pengguna"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Nama pengguna sudah diambil"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Nama pengguna hanya boleh berisi huruf kecil dan angka, tanpa spasi"
 
@@ -192,11 +192,11 @@ msgstr "Klik untuk beralih ke Pengaturan Bahasa & Lokalisasi"
 msgid "Change Password…"
 msgstr "Ganti Kata Sandi…"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Aktifkan Akun Pengguna"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Nonaktifkan Akun Pengguna"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -131,11 +131,11 @@ msgstr "ئابونت ئىسمى"
 msgid "Create User"
 msgstr "ئابونت قۇرۇش"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "ئابونت ئىسمى ئىشلىتىلىپ بولغان"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "پەقەت كىچىك ھەرپ ۋە سانلارنى كىرگۈزەلەيسىز"
@@ -196,11 +196,11 @@ msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش �
 msgid "Change Password…"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "ئابونت ھىساۋاتىنى قوزغىتىش"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "ئابونت ھىساۋاتىنى چەكلەش"
 

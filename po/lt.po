@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -130,11 +130,11 @@ msgstr "Naudotojo vardas"
 msgid "Create User"
 msgstr "Sukurti naudotoją"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Naudotojo vardas jau užimtas"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Naudotojo vardas gali būti sudarytas tik iš mažųjų raidžių ir skaičių, be "
@@ -196,11 +196,11 @@ msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
 msgid "Change Password…"
 msgstr "Keisti slaptažodį…"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Įjungti naudotojo paskyrą"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Išjungti naudotojo paskyrą"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -131,11 +131,11 @@ msgstr "მომხმარებლის სახელი"
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "უნდა შეიცავდეს მხოლოდ პატარა ასოებს, რიცხვებს და არა გამოტოვებებს."
@@ -197,11 +197,11 @@ msgstr "დააწკაპუნეთ ენის & ადგილის �
 msgid "Change Password…"
 msgstr "პაროლის შეცვლა"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "მომხმარებლის ანგარიშის ჩართვა"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "მომხმარებლის ანგარიშის გამორთვა"
 

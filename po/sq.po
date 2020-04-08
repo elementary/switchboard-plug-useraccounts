@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 09:16-0800\n"
+"POT-Creation-Date: 2020-04-08 23:10+0000\n"
 "PO-Revision-Date: 2019-10-17 17:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Albanian <https://l10n.elementary.io/projects/switchboard/"
@@ -133,11 +133,11 @@ msgstr "Emri i përdoruesit"
 msgid "Create User"
 msgstr "Krijo përdoruesin"
 
-#: src/Dialogs/NewUserDialog.vala:151
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Emri i përdoruesit është tashmë i zënë"
 
-#: src/Dialogs/NewUserDialog.vala:153
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
@@ -199,11 +199,11 @@ msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
 msgid "Change Password…"
 msgstr "Ndrysho fjalëkalimin"
 
-#: src/Views/UserSettingsView.vala:337
+#: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
 msgstr "Aktivo llogarinë e përdoruesin"
 
-#: src/Views/UserSettingsView.vala:340
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Çaktivizo llogarinë e përdoruesit"
 
