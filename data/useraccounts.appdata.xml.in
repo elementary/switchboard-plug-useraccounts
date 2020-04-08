@@ -5,7 +5,7 @@
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
   <releases>
-    <release version="2.3.1" date="2020-04-07" urgency="medium">
+    <release version="2.3.1" date="2020-04-08" urgency="medium">
       <description>
         <ul>
           <li>Show more accurate reasons for locked settings</li>
