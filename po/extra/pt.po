@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2019-11-29 00:25+0000\n"
+"PO-Revision-Date: 2020-04-09 14:46+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -40,17 +40,15 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:11
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "Mostra razões mais precisas para definições bloqueadas"
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "Melhora a fiabilidade da criação de contas"
 
 #: data/useraccounts.appdata.xml.in:13
-#, fuzzy
-#| msgid "Ask for permission when adding and removing accounts"
 msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Pedir permissão ao adicionar e remover contas"
+msgstr "Obter autorização a pedido para ativar ou desativar contas"
 
 #: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
 msgid "Updated translations"
