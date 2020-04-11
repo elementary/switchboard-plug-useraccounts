@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2020-02-06 23:08+0000\n"
+"PO-Revision-Date: 2020-04-12 06:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/Plug.vala:67
 msgid "Password change failed"
-msgstr "A alteração da palavra-passe falhou"
+msgstr "Falha ao alterar a palavra-passe"
 
 #: src/Plug.vala:79
 msgid ""
@@ -68,7 +68,7 @@ msgstr "Iniciar sessão automaticamente"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
-msgstr "Alterar Palavra-passe"
+msgstr "Alterar palavra-passe"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
@@ -194,7 +194,7 @@ msgstr "Clique para ir a Definições de Idioma e Região"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
-msgstr "Alterar Palavra-passe…"
+msgstr "Alterar palavra-passe…"
 
 #: src/Views/UserSettingsView.vala:342
 msgid "Enable User Account"
@@ -251,12 +251,12 @@ msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Escolha uma Palavra-passe"
+msgstr "Escolha uma palavra-passe"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
 msgid "Confirm Password"
-msgstr "Confirmar Palavra-passe"
+msgstr "Confirmar palavra-passe"
 
 #: src/Widgets/PasswordEditor.vala:63
 msgid "Show passwords"
