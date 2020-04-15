@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>User Accounts</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
+  <icon type="stock">system-users</icon>
+  <translation type="gettext">useraccounts-plug</translation>
   <releases>
     <release version="2.3.1" date="2020-04-08" urgency="medium">
       <description>
