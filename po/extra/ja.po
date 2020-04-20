@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2019-11-25 09:25+0000\n"
+"PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -39,17 +39,15 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:11
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "ロックされた設定項目に、より正確な変更できない理由を表示するように修正"
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "アカウント作成の信頼性を向上"
 
 #: data/useraccounts.appdata.xml.in:13
-#, fuzzy
-#| msgid "Ask for permission when adding and removing accounts"
 msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "アカウントの追加時および削除時に管理者権限を確認するように変更"
+msgstr "アカウントの有効化時および無効化時に、必要に応じて管理者権限を取得するように変更"
 
 #: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
 msgid "Updated translations"
