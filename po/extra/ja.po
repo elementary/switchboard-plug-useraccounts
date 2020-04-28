@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 23:10+0000\n"
+"POT-Creation-Date: 2020-04-28 22:23+0000\n"
 "PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,7 +28,9 @@ msgid "Authentication is required to change user data"
 msgstr "ユーザーデータを変更するには認証が必要です"
 
 #: data/useraccounts.appdata.xml.in:5
-msgid "User Accounts"
+#, fuzzy
+#| msgid "User Accounts"
+msgid "User Accounts Settings"
 msgstr "ユーザーアカウント"
 
 #: data/useraccounts.appdata.xml.in:6
@@ -37,31 +39,33 @@ msgid ""
 msgstr ""
 "アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
 
-#: data/useraccounts.appdata.xml.in:11
+#: data/useraccounts.appdata.xml.in:13
 msgid "Show more accurate reasons for locked settings"
 msgstr "ロックされた設定項目に、より正確な変更できない理由を表示するように修正"
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:14
 msgid "Improve reliability of account creation"
 msgstr "アカウント作成の信頼性を向上"
 
-#: data/useraccounts.appdata.xml.in:13
+#: data/useraccounts.appdata.xml.in:15
 msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "アカウントの有効化時および無効化時に、必要に応じて管理者権限を取得するように変更"
+msgstr ""
+"アカウントの有効化時および無効化時に、必要に応じて管理者権限を取得するように"
+"変更"
 
-#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:24
+#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:26
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/useraccounts.appdata.xml.in:21
+#: data/useraccounts.appdata.xml.in:23
 msgid "Show in sidebar if an account is disabled"
 msgstr ""
 "アカウントが無効になっている場合は、サイドバーに”無効”と表示するように修正"
 
-#: data/useraccounts.appdata.xml.in:22
+#: data/useraccounts.appdata.xml.in:24
 msgid "Ask for permission when adding and removing accounts"
 msgstr "アカウントの追加時および削除時に管理者権限を確認するように変更"
 
-#: data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:25
 msgid "Animate Infobars"
 msgstr "情報バーをアニメーション表示するように変更"
