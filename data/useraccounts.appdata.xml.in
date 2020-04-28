@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.useraccounts</id>
   <extends>io.elementary.switchboard</extends>
-  <name>User Accounts</name>
+  <name>User Accounts Settings</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
   <icon type="stock">system-users</icon>
   <translation type="gettext">useraccounts-plug</translation>
