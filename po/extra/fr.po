@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:23+0000\n"
-"PO-Revision-Date: 2020-04-09 14:46+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/fr/>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,10 +29,8 @@ msgstr ""
 "Il est nécessaire de s'authentifier pour modifier des données utilisateur"
 
 #: data/useraccounts.appdata.xml.in:5
-#, fuzzy
-#| msgid "User Accounts"
 msgid "User Accounts Settings"
-msgstr "Comptes utilisateur"
+msgstr "Paramètres des comptes utilisateur"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
