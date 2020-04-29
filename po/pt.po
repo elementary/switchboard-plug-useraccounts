@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2020-04-12 06:10+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
@@ -22,7 +22,7 @@ msgstr "É necessária autenticação para alterar dados de utilizador"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
-msgstr "Contas de utilizador"
+msgstr "Contas de Utilizador"
 
 #: src/Plug.vala:43
 msgid ""
