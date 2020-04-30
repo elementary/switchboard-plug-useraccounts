@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2020-03-10 17:09+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/es/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Necesita autentificarse para cambiar los datos de usuario"
+msgstr "Necesita autenticarse para cambiar los datos de usuario"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -28,7 +28,7 @@ msgstr "Cuentas de usuario"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Gestiona los permisos de la cuenta y configura nombres de usuario, "
+"Gestione los permisos de la cuenta y configure nombres de usuario, "
 "contraseñas y fotos"
 
 #: src/Plug.vala:67
@@ -81,7 +81,7 @@ msgstr "Recorte y posición"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr "Eligir la parte de la imagen para usar como avatar."
+msgstr "Elija la parte de la imagen que quiera usar como avatar."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -115,7 +115,7 @@ msgstr "Usuario estándar"
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
 #: src/Widgets/UserItem.vala:66
 msgid "Administrator"
-msgstr "Administrador"
+msgstr "Administrativa"
 
 #: src/Dialogs/NewUserDialog.vala:38
 msgid "Full Name"
@@ -248,7 +248,7 @@ msgstr "No se puede eliminar una cuenta sin los permisos necesarios."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Elija en la contraseña"
+msgstr "Elija una contraseña"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:54
