@@ -44,9 +44,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             pw_levelbar = new Gtk.LevelBar.for_interval (0.0, 100.0);
             pw_levelbar.mode = Gtk.LevelBarMode.CONTINUOUS;
-            pw_levelbar.add_offset_value ("low", 50.0);
-            pw_levelbar.add_offset_value ("high", 75.0);
-            pw_levelbar.add_offset_value ("middle", 75.0);
+            pw_levelbar.add_offset_value ("low", 30.0);
+            pw_levelbar.add_offset_value ("middle", 50.0);
+            pw_levelbar.add_offset_value ("high", 80.0);
+            pw_levelbar.add_offset_value ("full", 100.0);
 
             pw_error_revealer = new ErrorRevealer ("."); // Pango needs a non-null string to set markup
             pw_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
