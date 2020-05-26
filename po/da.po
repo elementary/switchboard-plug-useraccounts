@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2018-10-10 21:17+0000\n"
-"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-05-27 13:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-24 06:30+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -77,11 +77,11 @@ msgstr "Gæstesession"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Beskæring & Position"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Brug den bedste del af billedet til brug som avatar."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -232,11 +232,11 @@ msgstr "Fjern brugerkonto og al dens data"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Kan ikke få tilladelse"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "En ny konto kan ikke oprettes uden den krævede systemtilladelse."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -244,7 +244,7 @@ msgstr "Du kan ikke fjerne din egen brugerkonto"
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "En konto kan ikke fjernes uden den krævede systemtilladelse."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
