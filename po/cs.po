@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-08 23:10+0000\n"
-"PO-Revision-Date: 2020-05-11 21:10+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/cs/>\n"
@@ -42,7 +42,7 @@ msgstr "Změny v nastavení sezení hosta se projeví až po restartování poč
 
 #: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
+msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
 #: src/Plug.vala:144
 msgid "Avatar"
@@ -95,7 +95,7 @@ msgstr "Kliknětě pro ověření"
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr "Autentizace selhala"
+msgstr "Ověření se nezdařilo"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
@@ -129,7 +129,7 @@ msgstr "Vytvořit uživatele"
 
 #: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
-msgstr "Uživatelské jméno již existuje"
+msgstr "Uživatelské jméno už existuje"
 
 #: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
@@ -185,7 +185,7 @@ msgstr "Jazyk:"
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Klikněte pro přepnutí do nastavení Jazyka & Národního prostředí"
+msgstr "Klikněte pro přepnutí do nastavení Jazyka a Národního prostředí"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -197,7 +197,7 @@ msgstr "Povolit uživatelský účet"
 
 #: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
-msgstr "Zakázat uživatelský účet"
+msgstr "Znepřístupnit uživatelský účet"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:35
 msgid "Remove"
@@ -258,7 +258,7 @@ msgstr "Zobrazit hesla"
 
 #: src/Widgets/PasswordEditor.vala:143
 msgid "Passwords do not match"
-msgstr "Hesla se neshodují"
+msgstr "Zadání hesla se neshodují"
 
 #: src/Widgets/UserListBox.vala:33
 msgid "My Account"
