@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:23+0000\n"
-"PO-Revision-Date: 2020-05-28 14:11+0000\n"
+"PO-Revision-Date: 2020-06-15 15:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/da/>\n"
@@ -25,7 +25,7 @@ msgstr "Administrer bruger konti"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr "Godkendelse påkrævet for at kunne ændre brugerdata"
+msgstr "Godkendelse er påkrævet for at kunne ændre brugerdata"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
