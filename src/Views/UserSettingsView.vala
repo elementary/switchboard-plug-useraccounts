@@ -199,7 +199,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             enable_user_button = new Gtk.Button ();
             enable_user_button.clicked.connect (change_lock);
             enable_user_button.set_sensitive (false);
-            enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             full_name_lock.tooltip_text = NO_PERMISSION_STRING;
@@ -340,10 +339,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
+                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
                 enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             } else {
                 enable_user_button.label = _("Disable User Account");
                 enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {
