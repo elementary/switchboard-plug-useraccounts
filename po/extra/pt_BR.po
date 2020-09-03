@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:23+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2020-05-21 00:11+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -37,30 +37,31 @@ msgid ""
 msgstr ""
 "Gerenciar permissões de conta e configurar nomes de usuário, senhas e fotos"
 
-#: data/useraccounts.appdata.xml.in:13
-msgid "Show more accurate reasons for locked settings"
-msgstr "Mostra motivos mais precisos para configurações bloqueadas"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Improve reliability of account creation"
-msgstr "Melhora a confiabilidade da criação de contas"
-
-#: data/useraccounts.appdata.xml.in:15
-msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Obter permissão sob demanda para ativar ou desativar contas"
-
-#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:26
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Mostra motivos mais precisos para configurações bloqueadas"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "Melhora a confiabilidade da criação de contas"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Obter permissão sob demanda para ativar ou desativar contas"
+
+#: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"
 msgstr "Mostrar na barra lateral se uma conta estiver desativada"
 
-#: data/useraccounts.appdata.xml.in:24
+#: data/useraccounts.appdata.xml.in:31
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Solicitar permissão ao adicionar e remover contas"
 
-#: data/useraccounts.appdata.xml.in:25
+#: data/useraccounts.appdata.xml.in:32
 msgid "Animate Infobars"
 msgstr "Animar Infobars"

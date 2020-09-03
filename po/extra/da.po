@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:23+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2020-06-15 15:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
-"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/da/>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,30 +37,31 @@ msgid ""
 msgstr ""
 "Håndter kontorettigheder og konfigurer brugernavne, adgangskoder og billeder"
 
-#: data/useraccounts.appdata.xml.in:13
-msgid "Show more accurate reasons for locked settings"
-msgstr "Vis mere nøjagtige årsager for låste indstillinger"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Improve reliability of account creation"
-msgstr "Forbedre pålideligheden af oprettelse af konti"
-
-#: data/useraccounts.appdata.xml.in:15
-msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Få tilladelse på anmodning til aktivering eller deaktivering af konti"
-
-#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:26
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Opdaterede oversættelser"
 
-#: data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Vis mere nøjagtige årsager for låste indstillinger"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "Forbedre pålideligheden af oprettelse af konti"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Få tilladelse på anmodning til aktivering eller deaktivering af konti"
+
+#: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"
 msgstr "Hvis i sidebaren hvis en konti er deaktiveret"
 
-#: data/useraccounts.appdata.xml.in:24
+#: data/useraccounts.appdata.xml.in:31
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Bed om tilladelse når der tilføjes eller fjernes konti"
 
-#: data/useraccounts.appdata.xml.in:25
+#: data/useraccounts.appdata.xml.in:32
 msgid "Animate Infobars"
 msgstr "Animer Infobarer"

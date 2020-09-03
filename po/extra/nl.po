@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:23+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2020-06-09 10:11+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,30 +37,31 @@ msgid ""
 msgstr ""
 "Beheer accountrechten en configureer gebruikersnamen, wachtwoorden en foto's"
 
-#: data/useraccounts.appdata.xml.in:13
-msgid "Show more accurate reasons for locked settings"
-msgstr "Toon duidelijkere redenen voor vergrendelde instellingen"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Improve reliability of account creation"
-msgstr "De betrouwbaarheid van het creëren van accounts is verbeterd"
-
-#: data/useraccounts.appdata.xml.in:15
-msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Vraag om toestemming tijdens het activeren en deactiveren van accounts"
-
-#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:26
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
-#: data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Toon duidelijkere redenen voor vergrendelde instellingen"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "De betrouwbaarheid van het creëren van accounts is verbeterd"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Vraag om toestemming tijdens het activeren en deactiveren van accounts"
+
+#: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"
 msgstr "Toon het in de zijbalk als een account uitgeschakeld is"
 
-#: data/useraccounts.appdata.xml.in:24
+#: data/useraccounts.appdata.xml.in:31
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Vraag om toestemming tijdens het toevoegen en verwijderen van accounts"
 
-#: data/useraccounts.appdata.xml.in:25
+#: data/useraccounts.appdata.xml.in:32
 msgid "Animate Infobars"
 msgstr "Animeer de infobalken"
