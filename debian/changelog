@@ -1,3 +1,15 @@
+switchboard-plug-useraccounts (2.3.2) bionic; urgency=medium
+
+  * Release 2.3.2 (#146)
+  * UserSettingsView: destructive OR suggested action (#145)
+  * PasswordEditor: Adjust password levelbar values (#143)
+  * Update translation files
+  * Update translation template
+  * AppData: Add "Settings" to name (#141)
+  * AppData: Add Icon & Gettext domain (#139)
+
+ -- elementary LLC. <builds@elementary.io>  Thu, 03 Sep 2020 21:35:22 +0000
+
 switchboard-plug-useraccounts (2.3.1) bionic; urgency=medium
 
   * Release 2.3.1 (#137)
