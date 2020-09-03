@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 23:10+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -194,7 +194,7 @@ msgstr "Kliknij, aby zmienić język i ustawienia lokalizacji"
 msgid "Change Password…"
 msgstr "Zmień hasło…"
 
-#: src/Views/UserSettingsView.vala:342
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "Aktywuj konto użytkownika"
 
@@ -251,15 +251,15 @@ msgid "Choose a Password"
 msgstr "Wybierz hasło"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "Wyświetl hasła"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Hasła nie pasują do siebie"
 

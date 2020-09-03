@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 23:10+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,7 +195,7 @@ msgstr "Ava keele ja piirkonna eelistused"
 msgid "Change Password…"
 msgstr "Muuda parooli"
 
-#: src/Views/UserSettingsView.vala:342
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "Luba konto"
 
@@ -253,16 +253,16 @@ msgid "Choose a Password"
 msgstr "Muuda parooli"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Kinnita uus parool"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "Paroolide näitamine"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Sisestatud paroolid ei kattu"
 

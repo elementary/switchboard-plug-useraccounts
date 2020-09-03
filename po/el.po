@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 23:10+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -202,7 +202,7 @@ msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσα�
 msgid "Change Password…"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Views/UserSettingsView.vala:342
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "Ενεργοποίηση λογαριασμού χρήστη"
 
@@ -260,16 +260,16 @@ msgid "Choose a Password"
 msgstr "Αλλαγή συνθηματικού"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση νέου συνθηματικού"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "Εμφάνιση συνθηματικών"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Τα συνθηματικά δε συμπίπτουν"
 
