@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-09-17 00:14+0000\n"
+"PO-Revision-Date: 2020-09-19 14:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/uk/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Потрібна автентифікація, щоб змінити дані користувача"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
