@@ -3,20 +3,23 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2016-04-29 15:01+0000\n"
-"Last-Translator: Alexander Grechko <AlexXxander1111@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-09-19 14:14+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-useraccounts/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Потрібна автентифікація, щоб змінити дані про користувача"
+msgstr "Потрібна автентифікація, щоб змінити дані користувача"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -31,7 +34,7 @@ msgstr ""
 
 #: src/Plug.vala:67
 msgid "Password change failed"
-msgstr "Зміна паролю зазнала невдачі"
+msgstr "Не вдалося змінити пароль"
 
 #: src/Plug.vala:79
 msgid ""
@@ -45,24 +48,20 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
 #: src/Plug.vala:144
-#, fuzzy
 msgid "Avatar"
-msgstr "Змінити аватар"
+msgstr "Аватар"
 
 #: src/Plug.vala:145
-#, fuzzy
 msgid "Full name"
 msgstr "Повне ім'я"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Account type"
-msgstr "Тип облікового запису:"
+msgstr "Тип облікового запису"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Language"
-msgstr "Мова:"
+msgstr "Мова"
 
 #: src/Plug.vala:148
 #, fuzzy
@@ -108,9 +107,8 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Тип облікового запису:"
+msgstr "Тип облікового запису"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -239,7 +237,7 @@ msgstr "Вилучити обліковий запис користувача т
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Не вдалося отримати дозвіл"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
@@ -251,18 +249,16 @@ msgstr "Ви не можете вилучити власний облікови�
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "Обліковий запис не можна вилучити без обов'язкового дозволу системи."
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Змінити пароль"
+msgstr "Вибрати пароль"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:55
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Підтвердження нового пароля"
+msgstr "Підтвердити пароль"
 
 #: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
@@ -270,7 +266,7 @@ msgstr "Показати паролі"
 
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
-msgstr "Паролі не співпадають"
+msgstr "Паролі не збігаються"
 
 #: src/Widgets/UserListBox.vala:33
 msgid "My Account"
