@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-09-19 14:14+0000\n"
+"PO-Revision-Date: 2020-09-20 14:33+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/uk/>\n"
@@ -29,8 +29,8 @@ msgstr "Облікові записи"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Керування дозволами облікового запису і налаштувати імена користувачів, "
-"паролі та фотографії"
+"Керування дозволами облікового запису і налаштування імен користувачів, "
+"паролів та світлин"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -195,9 +195,8 @@ msgid "Click to switch to Language & Locale Settings"
 msgstr "Натисніть для переходу в налаштування мови та локалі"
 
 #: src/Views/UserSettingsView.vala:182
-#, fuzzy
 msgid "Change Password…"
-msgstr "Змінити пароль"
+msgstr "Змінити пароль…"
 
 #: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
@@ -213,7 +212,7 @@ msgstr "Вилучити"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
-msgstr "Вибрати з Файлу..."
+msgstr "Вибрати з файлу…"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:63
 msgid "Images"
