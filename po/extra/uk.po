@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-09-20 14:33+0000\n"
+"PO-Revision-Date: 2020-09-24 16:44+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/uk/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "Керування обліковими записами"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
@@ -30,13 +30,13 @@ msgstr "Потрібна автентифікація, щоб змінити д�
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "Параметри облікових записів"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Керування дозволами облікового запису і налаштування імен користувачів, "
+"Керування дозволами облікового запису та налаштування імен користувачів, "
 "паролів та світлин"
 
 #: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
@@ -46,24 +46,25 @@ msgstr "Оновлено переклади"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "Показ точніших причин блокування налаштувань"
 
 #: data/useraccounts.appdata.xml.in:21
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "Підвищено ймовірність створення облікових записів"
 
 #: data/useraccounts.appdata.xml.in:22
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
+"Отримання дозволу на вимогу для ввімкнення або вимкнення облікових записів"
 
 #: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
+msgstr "Показ на бічній панелі, якщо обліковий запис вимкнено"
 
 #: data/useraccounts.appdata.xml.in:31
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "Запит дозволу під час додавання та вилучення облікових записів"
 
 #: data/useraccounts.appdata.xml.in:32
 msgid "Animate Infobars"
-msgstr ""
+msgstr "Анімовано панель подробиць"
