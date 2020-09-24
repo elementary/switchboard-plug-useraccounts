@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-09-24 16:44+0000\n"
+"PO-Revision-Date: 2020-09-24 20:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/uk/>\n"
@@ -64,9 +64,8 @@ msgid "Language"
 msgstr "Мова"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Входити автоматично:"
+msgstr "Входити автоматично"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
@@ -79,11 +78,11 @@ msgstr "Гостьовий сеанс"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Обтинання та положення"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Виберіть частину зображення, яку потрібно використовувати як аватар."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -99,7 +98,7 @@ msgstr "Натисніть для автентифікації"
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr "Не вдалося автентифікуватись"
+msgstr "Не вдалося автентифікувати"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
@@ -125,7 +124,7 @@ msgstr "Повне ім'я"
 
 #: src/Dialogs/NewUserDialog.vala:43
 msgid "Username"
-msgstr "Користувач"
+msgstr "Ім'я користувача"
 
 #: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
@@ -136,10 +135,8 @@ msgid "Username is already taken"
 msgstr "Ім’я користувача вже зайнято"
 
 #: src/Dialogs/NewUserDialog.vala:148
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr ""
-"Може містити тільки букви в нижньому регістрі, цифри та не містити пробілів"
+msgstr "Ім'я користувача може містити лише малі літери та цифри, без пробілів"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -160,15 +157,15 @@ msgstr "Входити автоматично:"
 
 #: src/Views/MainView.vala:52
 msgid "Undo last user account removal"
-msgstr "Відмінити останнє вилучення облікового запису"
+msgstr "Скасувати останнє вилучення облікового запису"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
-msgstr "У вас не має дозволу щоб змінити це"
+msgstr "У вас немає дозволу щоб змінити це"
 
 #: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
@@ -192,7 +189,7 @@ msgstr "Мова:"
 
 #: src/Views/UserSettingsView.vala:169
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Натисніть для переходу в налаштування мови та локалі"
+msgstr "Натисніть для переходу до параметрів мови та регіону"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
@@ -240,7 +237,7 @@ msgstr "Не вдалося отримати дозвіл"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "Неможливо створити новий обліковий запис без системного дозволу."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
