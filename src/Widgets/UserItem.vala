@@ -19,7 +19,7 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        private Granite.Widgets.Avatar avatar;
+        private Hdy.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
         private Gtk.Revealer description_revealer;
@@ -38,39 +38,37 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
         }
 
-        public string icon_file {
-            set {
-                try {
-                    var size = 32 * get_style_context ().get_scale ();
-                    avatar.pixbuf = new Gdk.Pixbuf.from_file_at_scale (value, size, size, true);
-                } catch (Error e) {
-                    avatar.show_default (32);
-                }
-            }
-        }
-
         public UserItem (Act.User user) {
             Object (user: user);
         }
 
         construct {
-            full_name_label = new Gtk.Label ("");
-            full_name_label.halign = Gtk.Align.START;
-            full_name_label.get_style_context ().add_class ("h3");
+            full_name_label = new Gtk.Label ("") {
+                halign = Gtk.Align.START,
+                valign = Gtk.Align.END
+            };
+            full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-            username_label = new Gtk.Label ("");
-            username_label.halign = Gtk.Align.START;
+            username_label = new Gtk.Label ("") {
+                halign = Gtk.Align.START,
+                valign = Gtk.Align.START
+            };
             username_label.use_markup = true;
             username_label.ellipsize = Pango.EllipsizeMode.END;
 
-            var description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator")));
-            description_label.halign = Gtk.Align.START;
-            description_label.use_markup = true;
+            var description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator"))) {
+                halign = Gtk.Align.START,
+                use_markup = true,
+                valign = Gtk.Align.START
+            };
 
             description_revealer = new Gtk.Revealer ();
             description_revealer.add (description_label);
 
-            avatar = new Granite.Widgets.Avatar ();
+            avatar = new Hdy.Avatar (32, user.real_name, true) {
+                margin = 6
+            };
+            avatar.set_image_load_func (avatar_image_load_func);
 
             var lock_image = new Gtk.Image.from_icon_name ("locked", Gtk.IconSize.LARGE_TOOLBAR);
             lock_image.halign = lock_image.valign = Gtk.Align.END;
@@ -83,10 +81,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             overlay.add (avatar);
             overlay.add_overlay (lock_revealer);
 
-            var grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.margin_start = grid.margin_end = 12;
-            grid.column_spacing = 6;
+            var grid = new Gtk.Grid () {
+                column_spacing = 6,
+                margin_end = 12,
+                margin_start = 6
+            };
             grid.attach (overlay, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
             grid.attach (username_label, 1, 1, 1, 1);
@@ -97,8 +96,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.bind_property ("account-type", this, "account-type", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
+            user.bind_property ("real-name", avatar, "text", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("user-name", this, "user-name", GLib.BindingFlags.SYNC_CREATE);
+
+            user.changed.connect (() => {
+                avatar.set_image_load_func (avatar_image_load_func);
+            });
+        }
+
+        private Gdk.Pixbuf? avatar_image_load_func (int size) {
+            try {
+                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
+            } catch (Error e) {
+                return null;
+            }
         }
     }
 }

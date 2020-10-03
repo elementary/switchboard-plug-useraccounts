@@ -36,20 +36,38 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             //only build the guest session list entry / row when lightDM is X11's display manager
             if (get_display_manager () == "lightdm") {
-                var avatar = new Granite.Widgets.Avatar.with_default_icon (32);
+                var avatar = new Hdy.Avatar (32, null, false);
+
+                // We want to use the user's accent, not a random color
+                unowned Gtk.StyleContext avatar_context = avatar.get_style_context ();
+                avatar_context.remove_class ("color1");
+                avatar_context.remove_class ("color2");
+                avatar_context.remove_class ("color3");
+                avatar_context.remove_class ("color4");
+                avatar_context.remove_class ("color5");
+                avatar_context.remove_class ("color6");
+                avatar_context.remove_class ("color7");
+                avatar_context.remove_class ("color8");
+                avatar_context.remove_class ("color9");
+                avatar_context.remove_class ("color10");
+                avatar_context.remove_class ("color11");
+                avatar_context.remove_class ("color12");
+                avatar_context.remove_class ("color13");
+                avatar_context.remove_class ("color14");
 
                 var full_name_label = new Gtk.Label (_("Guest Session"));
                 full_name_label.halign = Gtk.Align.START;
-                full_name_label.get_style_context ().add_class ("h3");
+                full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
                 guest_description_label = new Gtk.Label (null);
                 guest_description_label.halign = Gtk.Align.START;
                 guest_description_label.use_markup = true;
 
-                var row_grid = new Gtk.Grid ();
-                row_grid.margin = 6;
-                row_grid.margin_start = 12;
-                row_grid.column_spacing = 6;
+                var row_grid = new Gtk.Grid () {
+                    column_spacing = 12,
+                    margin = 6,
+                    margin_start = 12
+                };
                 row_grid.attach (avatar, 0, 0, 1, 2);
                 row_grid.attach (full_name_label, 1, 0, 1, 1);
                 row_grid.attach (guest_description_label, 1, 1, 1, 1);
