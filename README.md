@@ -11,6 +11,7 @@ You'll need the following dependencies:
 * libgirepository1.0-dev 
 * libgnome-desktop-3-dev
 * libgranite-dev
+* libhandy-1-dev >= 0.90.0
 * libpolkit-gobject-1-dev
 * libpwquality-dev
 * libswitchboard-2.0-dev
