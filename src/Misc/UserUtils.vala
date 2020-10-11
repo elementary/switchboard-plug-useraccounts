@@ -41,14 +41,12 @@ namespace SwitchboardPlugUserAccounts {
                         new_pixbuf.savev (path, "png", {}, {});
                         debug ("Setting avatar icon file for %s from temporary file %s".printf (user.get_user_name (), path));
                         user.set_icon_file (path);
-                        widget.update_avatar ();
                     } catch (Error e) {
                         critical (e.message);
                     }
                 } else {
                     debug ("Setting no avatar icon file for %s".printf (user.get_user_name ()));
                     user.set_icon_file ("");
-                    widget.update_avatar ();
                 }
             }
         }

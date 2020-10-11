@@ -27,8 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore language_store;
         private Gtk.ListStore region_store;
 
-        private Granite.Widgets.Avatar avatar;
-        private Gdk.Pixbuf? avatar_pixbuf;
+        private Hdy.Avatar avatar;
         private Gtk.ToggleButton avatar_button;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
@@ -70,9 +69,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
+            avatar = new Hdy.Avatar (64, user.real_name, true);
+            avatar.set_image_load_func (avatar_image_load_func);
+
             avatar_button = new Gtk.ToggleButton ();
             avatar_button.halign = Gtk.Align.END;
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            avatar_button.add (avatar);
+
             avatar_button.toggled.connect (() => {
                 if (avatar_button.active) {
                     InfobarNotifier.get_default ().error_message = "";
@@ -321,7 +325,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             if (delta_user.icon_file != user.get_icon_file ()) {
-                update_avatar ();
+                avatar.set_image_load_func (avatar_image_load_func);
             }
 
             if (delta_user.account_type != user.get_account_type ()) {
@@ -366,18 +370,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_active (0);
         }
 
-        public void update_avatar () {
+        private Gdk.Pixbuf? avatar_image_load_func (int size) {
             try {
-                var size = 72 * get_style_context ().get_scale ();
-                avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-                if (avatar == null)
-                    avatar = new Granite.Widgets.Avatar.from_pixbuf (avatar_pixbuf);
-                else
-                    avatar.pixbuf = avatar_pixbuf;
+                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
             } catch (Error e) {
-                avatar = new Granite.Widgets.Avatar.with_default_icon (72);
+                return null;
             }
-            avatar_button.set_image (avatar);
         }
 
         public void update_language () {
