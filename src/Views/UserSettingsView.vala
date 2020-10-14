@@ -269,7 +269,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             if (current_user || allowed) {
-                avatar_button.set_sensitive (true);
                 full_name_entry.set_sensitive (true);
                 full_name_lock.set_opacity (0);
                 language_lock.set_opacity (0);
@@ -295,7 +294,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     region_box.set_sensitive (true);
                 }
             } else {
-                avatar_button.set_sensitive (false);
                 full_name_entry.set_sensitive (false);
 
                 if (!current_user) {

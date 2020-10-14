@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2014-2017 elementary LLC. (https://elementary.io)
+* Copyright 2014-2020 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -32,29 +32,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         construct {
-            var remove_button = new Gtk.Button.with_label (_("Remove"));
+            var remove_button = new Gtk.ModelButton () {
+                text = _("Remove")
+            };
             remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            var select_button = new Gtk.Button.with_label (_("Set from File…"));
-            select_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            var select_button = new Gtk.ModelButton () {
+                text = _("Set from File…")
+            };
             select_button.grab_focus ();
 
-            var button_grid = new Gtk.Grid ();
-            button_grid.margin = 6;
-            button_grid.column_spacing = 6;
-            button_grid.column_homogeneous = true;
-            button_grid.add (remove_button);
-            button_grid.add (select_button);
+            var button_grid = new Gtk.Grid () {
+                margin_bottom = 3,
+                margin_top = 3
+            };
+            button_grid.attach (remove_button, 0, 0);
+            button_grid.attach (select_button, 0, 1);
 
             add (button_grid);
 
             if (user.get_icon_file ().contains (".face")) {
-                remove_button.set_sensitive (false);
+                remove_button.sensitive = false;
             } else {
-                remove_button.set_sensitive (true);
+                remove_button.sensitive = true;
             }
 
-            remove_button.clicked.connect (() => utils.change_avatar (null));
+            remove_button.clicked.connect (() => change_avatar (null));
             select_button.clicked.connect (select_from_file);
         }
 
@@ -100,9 +103,43 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 file_dialog.hide ();
                 file_dialog.destroy ();
                 var avatar_dialog = new Dialogs.AvatarDialog (path);
-                avatar_dialog.request_avatar_change.connect (utils.change_avatar);
+                avatar_dialog.request_avatar_change.connect (change_avatar);
             } else {
                 file_dialog.destroy ();
+            }
+        }
+
+        private void change_avatar (Gdk.Pixbuf? new_pixbuf) {
+            if (get_current_user () != user) {
+                var permission = get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        critical (e.message);
+                        return;
+                    }
+                }
+            }
+
+            if (new_pixbuf != null) {
+                var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-0");
+                int i = 0;
+                while (FileUtils.test (path, FileTest.EXISTS)) {
+                    path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%d".printf (i));
+                    i++;
+                }
+                try {
+                    debug ("Saving temporary avatar file to %s".printf (path));
+                    new_pixbuf.savev (path, "png", {}, {});
+                    debug ("Setting avatar icon file for %s from temporary file %s".printf (user.get_user_name (), path));
+                    user.set_icon_file (path);
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            } else {
+                debug ("Setting no avatar icon file for %s".printf (user.get_user_name ()));
+                user.set_icon_file ("");
             }
         }
     }
