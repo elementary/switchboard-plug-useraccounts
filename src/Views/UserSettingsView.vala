@@ -245,16 +245,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (enable_lock, 2, 6, 1, 1);
 
             update_ui ();
-            get_permission ().notify["allowed"].connect (update_ui);
+            update_sensitivity ();
+
+            get_permission ().notify["allowed"].connect (update_sensitivity);
 
             user.changed.connect (update_ui);
         }
 
-        private void update_ui () {
+        private void update_sensitivity () {
             var allowed = get_permission ().allowed;
             var current_user = get_current_user () == user;
-            var last_admin = is_last_admin (user);
             var user_locked = user.get_locked ();
+            var last_admin = is_last_admin (user);
 
             if (!allowed) {
                 user_type_box.set_sensitive (false);
@@ -301,6 +303,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     region_box.set_sensitive (false);
                 }
             }
+        }
+
+        private void update_ui () {
+            var current_user = get_current_user () == user;
+            var last_admin = is_last_admin (user);
 
             if (current_user) {
                 enable_lock.tooltip_text = CURRENT_USER_STRING;
@@ -339,6 +346,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
+            var user_locked = user.get_locked ();
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
                 enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
