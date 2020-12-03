@@ -322,9 +322,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 update_real_name ();
             }
 
-            if (delta_user.icon_file != user.get_icon_file ()) {
-                avatar.set_image_load_func (avatar_image_load_func);
-            }
+            // Checking delt_user icon file doesn't seem to always update correctly
+            avatar.set_image_load_func (avatar_image_load_func);
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
