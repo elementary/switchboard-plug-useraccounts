@@ -245,14 +245,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (enable_lock, 2, 6, 1, 1);
 
             update_ui ();
-            update_sensitivity ();
+            update_permission ();
 
-            get_permission ().notify["allowed"].connect (update_sensitivity);
+            get_permission ().notify["allowed"].connect (update_permission);
 
             user.changed.connect (update_ui);
         }
 
-        private void update_sensitivity () {
+        private void update_permission () {
             var allowed = get_permission ().allowed;
             var current_user = get_current_user () == user;
             var user_locked = user.get_locked ();
