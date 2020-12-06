@@ -27,7 +27,6 @@ public class SwitchboardPlugUserAccounts.DeltaUser : Object {
     public bool automatic_login { public get; private set; }
     public bool locked { public get; private set; }
     public Act.UserPasswordMode? password_mode { public get; private set; }
-    public string? icon_file { public get; private set; }
     public string? language { public get; private set; }
 
     public DeltaUser (Act.User user) {
@@ -41,7 +40,6 @@ public class SwitchboardPlugUserAccounts.DeltaUser : Object {
         automatic_login = false;
         locked = false;
         password_mode = null;
-        icon_file = null;
         language = null;
     }
 
@@ -51,7 +49,6 @@ public class SwitchboardPlugUserAccounts.DeltaUser : Object {
         automatic_login = user.get_automatic_login ();
         locked = user.get_locked ();
         password_mode = user.get_password_mode ();
-        icon_file = user.get_icon_file ();
         language = user.get_language ();
     }
 }
