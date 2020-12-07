@@ -129,8 +129,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box.add_attribute (renderer, "text", 1);
 
                 var region_revealer = new Gtk.Revealer () {
-                    transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-                    reveal_child = true;
+                    transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                    reveal_child = true
                 };
                 region_revealer.add (region_box);
 
