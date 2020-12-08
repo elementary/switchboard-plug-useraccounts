@@ -34,7 +34,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button enable_user_button;
         private Gtk.ComboBoxText user_type_box;
         private Gtk.ComboBox language_box;
-        private Gtk.Revealer region_revealer;
         private Gtk.ComboBox region_box;
         private Gtk.Button language_button;
         private Gtk.Switch autologin_switch;
@@ -72,8 +71,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar = new Hdy.Avatar (64, user.real_name, true);
             avatar.set_image_load_func (avatar_image_load_func);
 
-            avatar_button = new Gtk.ToggleButton ();
-            avatar_button.halign = Gtk.Align.END;
+            avatar_button = new Gtk.ToggleButton () {
+                halign = Gtk.Align.END
+            };
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             avatar_button.add (avatar);
 
@@ -86,16 +86,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             });
 
-            full_name_entry = new Gtk.Entry ();
-            full_name_entry.valign = Gtk.Align.CENTER;
-            full_name_entry.get_style_context ().add_class ("h3");
+            full_name_entry = new Gtk.Entry () {
+                valign = Gtk.Align.CENTER
+            };
+            full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             full_name_entry.activate.connect (() => {
                 InfobarNotifier.get_default ().error_message = "";
                 utils.change_full_name (full_name_entry.get_text ());
             });
 
-            var user_type_label = new Gtk.Label (_("Account type:"));
-            user_type_label.halign = Gtk.Align.END;
+            var user_type_label = new Gtk.Label (_("Account type:")) {
+                halign = Gtk.Align.END
+            };
 
             user_type_box = new Gtk.ComboBoxText ();
             user_type_box.append_text (_("Standard"));
@@ -105,12 +107,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 utils.change_user_type (user_type_box.active);
             });
 
-            var lang_label = new Gtk.Label (_("Language:"));
-            lang_label.halign = Gtk.Align.END;
+            var lang_label = new Gtk.Label (_("Language:")) {
+                halign = Gtk.Align.END
+            };
 
             if (user != get_current_user ()) {
-                language_box = new Gtk.ComboBox ();
-                language_box.set_sensitive (false);
+                var renderer = new Gtk.CellRendererText ();
+
+                language_box = new Gtk.ComboBox () {
+                    sensitive = false
+                };
+                language_box.pack_start (renderer, true);
+                language_box.add_attribute (renderer, "text", 1);
+
+                renderer = new Gtk.CellRendererText ();
+
+                region_box = new Gtk.ComboBox () {
+                    sensitive = false
+                };
+                region_box.pack_start (renderer, true);
+                region_box.add_attribute (renderer, "text", 1);
+
+                var region_revealer = new Gtk.Revealer () {
+                    transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                    reveal_child = true
+                };
+                region_revealer.add (region_box);
+
+                attach (language_box, 1, 2);
+                attach (region_revealer, 1, 3);
+
                 language_box.changed.connect (() => {
                     InfobarNotifier.get_default ().error_message = "";
 
@@ -121,23 +147,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     language_store.get_value (iter, 0, out cell);
 
                     if (get_regions ((string)cell).size == 0) {
-                        region_revealer.set_reveal_child (false);
-                        if (user.get_language () != (string)cell)
+                        region_revealer.reveal_child = false;
+                        if (user.get_language () != (string)cell) {
                             utils.change_language ((string)cell);
+                        }
                     } else {
-                        region_revealer.set_reveal_child (true);
-                        region_box.set_no_show_all (false);
+                        region_revealer.reveal_child = true;
                         update_region ((string)cell);
                     }
                 });
-                attach (language_box, 1, 2, 1, 1);
 
-                var renderer = new Gtk.CellRendererText ();
-                language_box.pack_start (renderer, true);
-                language_box.add_attribute (renderer, "text", 1);
-
-                region_box = new Gtk.ComboBox ();
-                region_box.set_sensitive (false);
                 region_box.changed.connect (() => {
                     InfobarNotifier.get_default ().error_message = "";
 
@@ -153,34 +172,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     region_store.get_value (iter, 0, out cell);
                     new_language += "_%s".printf ((string)cell);
 
-                    if (new_language != "" && new_language != user.get_language ())
+                    if (new_language != "" && new_language != user.get_language ()) {
                         utils.change_language (new_language);
+                    }
                 });
-
-                region_revealer = new Gtk.Revealer ();
-                region_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-                region_revealer.set_reveal_child (true);
-                region_revealer.add (region_box);
-                attach (region_revealer, 1, 3, 1, 1);
-
-                renderer = new Gtk.CellRendererText ();
-                region_box.pack_start (renderer, true);
-                region_box.add_attribute (renderer, "text", 1);
-
             } else {
-                language_button = new Gtk.LinkButton.with_label ("settings://language", "Language");
-                language_button.halign = Gtk.Align.START;
-                language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
-                attach (language_button, 1, 2, 1, 1);
+                language_button = new Gtk.LinkButton.with_label ("settings://language", "Language") {
+                    halign = Gtk.Align.START,
+                    tooltip_text = _("Click to switch to Language & Locale Settings")
+                };
+
+                attach (language_button, 1, 2);
             }
 
-            var login_label = new Gtk.Label (_("Log In automatically:"));
-            login_label.halign = Gtk.Align.END;
-            login_label.margin_top = 20;
+            var login_label = new Gtk.Label (_("Log In automatically:")) {
+                halign = Gtk.Align.END,
+                margin_top = 20
+            };
 
-            autologin_switch = new Gtk.Switch ();
-            autologin_switch.halign = Gtk.Align.START;
-            autologin_switch.margin_top = 24;
+            autologin_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START,
+                margin_top = 24
+            };
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.active));
 
             password_button = new Gtk.Button.with_label (_("Change Password…"));
@@ -200,49 +213,55 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 change_password_dialog.request_password_change.connect (utils.change_password);
             });
 
-            enable_user_button = new Gtk.Button ();
+            enable_user_button = new Gtk.Button () {
+                sensitive = false
+            };
             enable_user_button.clicked.connect (change_lock);
-            enable_user_button.set_sensitive (false);
 
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            full_name_lock.tooltip_text = NO_PERMISSION_STRING;
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             full_name_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            user_type_lock.tooltip_text = NO_PERMISSION_STRING;
+            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             user_type_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            language_lock.tooltip_text = NO_PERMISSION_STRING;
+            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             language_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            autologin_lock.margin_top = 20;
-            autologin_lock.tooltip_text = NO_PERMISSION_STRING;
+            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                margin_top = 20,
+                tooltip_text = NO_PERMISSION_STRING
+            };
             autologin_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            password_lock.tooltip_text = NO_PERMISSION_STRING;
+            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            attach (avatar_button, 0, 0, 1, 1);
-            attach (full_name_entry, 1, 0, 1, 1);
+            attach (avatar_button, 0, 0);
+            attach (full_name_entry, 1, 0);
             attach (user_type_label, 0, 1);
-            attach (user_type_box, 1, 1, 1, 1);
-            attach (lang_label, 0, 2, 1, 1);
-            attach (login_label, 0, 4, 1, 1);
-            attach (autologin_switch, 1, 4, 1, 1);
-            attach (password_button, 1, 5, 1, 1);
-            attach (enable_user_button, 1, 6, 1, 1);
-            attach (full_name_lock, 2, 0, 1, 1);
-            attach (user_type_lock, 2, 1, 1, 1);
+            attach (user_type_box, 1, 1);
+            attach (lang_label, 0, 2);
+            attach (login_label, 0, 4);
+            attach (autologin_switch, 1, 4);
+            attach (password_button, 1, 5);
+            attach (enable_user_button, 1, 6);
+            attach (full_name_lock, 2, 0);
+            attach (user_type_lock, 2, 1);
             attach (language_lock, 2, 2, 1, 2);
-            attach (autologin_lock, 2, 4, 1, 1);
-            attach (password_lock, 2, 5, 1, 1);
-            attach (enable_lock, 2, 6, 1, 1);
+            attach (autologin_lock, 2, 4);
+            attach (password_lock, 2, 5);
+            attach (enable_lock, 2, 6);
 
             update_ui ();
             update_permission ();
@@ -270,9 +289,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var last_admin = is_last_admin (user);
 
             if (!allowed) {
-                user_type_box.set_sensitive (false);
-                password_button.set_sensitive (false);
-                autologin_switch.set_sensitive (false);
+                user_type_box.sensitive = false;
+                password_button.sensitive = false;
+                autologin_switch.sensitive = false;
 
                 user_type_lock.set_opacity (1);
                 autologin_lock.set_opacity (1);
@@ -282,36 +301,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             if (current_user || allowed) {
-                full_name_entry.set_sensitive (true);
+                full_name_entry.sensitive = true;
                 full_name_lock.set_opacity (0);
                 language_lock.set_opacity (0);
 
                 if (!user_locked) {
-                    password_button.set_sensitive (true);
+                    password_button.sensitive = true;
                     password_lock.set_opacity (0);
                 }
 
                 if (allowed) {
                     if (!user_locked) {
-                        autologin_switch.set_sensitive (true);
+                        autologin_switch.sensitive = true;
                         autologin_lock.set_opacity (0);
                     }
                     if (!last_admin && !current_user) {
-                        user_type_box.set_sensitive (true);
+                        user_type_box.sensitive = true;
                         user_type_lock.set_opacity (0);
                     }
                 }
 
                 if (!current_user) {
-                    language_box.set_sensitive (true);
-                    region_box.set_sensitive (true);
+                    language_box.sensitive = true;
+                    region_box.sensitive = true;
                 }
             } else {
-                full_name_entry.set_sensitive (false);
+                full_name_entry.sensitive = false;
 
                 if (!current_user) {
-                    language_box.set_sensitive (false);
-                    region_box.set_sensitive (false);
+                    language_box.sensitive = false;
+                    region_box.sensitive = false;
                 }
             }
         }
