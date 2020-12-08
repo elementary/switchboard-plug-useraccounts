@@ -27,32 +27,6 @@ namespace SwitchboardPlugUserAccounts {
             this.widget = widget;
         }
 
-        public void change_avatar (Gdk.Pixbuf? new_pixbuf) {
-            if (get_current_user () == user || get_permission ().allowed) {
-                if (new_pixbuf != null) {
-                    var path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-0");
-                    int i = 0;
-                    while (FileUtils.test (path, FileTest.EXISTS)) {
-                        path = Path.build_filename (Environment.get_tmp_dir (), "user-icon-%d".printf (i));
-                        i++;
-                    }
-                    try {
-                        debug ("Saving temporary avatar file to %s".printf (path));
-                        new_pixbuf.savev (path, "png", {}, {});
-                        debug ("Setting avatar icon file for %s from temporary file %s".printf (user.get_user_name (), path));
-                        user.set_icon_file (path);
-                        widget.update_avatar ();
-                    } catch (Error e) {
-                        critical (e.message);
-                    }
-                } else {
-                    debug ("Setting no avatar icon file for %s".printf (user.get_user_name ()));
-                    user.set_icon_file ("");
-                    widget.update_avatar ();
-                }
-            }
-        }
-
         public void change_full_name (string new_full_name) {
             if (get_current_user () == user || get_permission ().allowed) {
                 if (new_full_name != user.get_real_name ()) {
@@ -132,24 +106,10 @@ namespace SwitchboardPlugUserAccounts {
                         if (e != null) {
                             warning ("Password change for %s failed".printf (user.get_user_name ()));
                             warning (e.message);
-                            InfobarNotifier.get_default ().set_error (e.message);
+                            InfobarNotifier.get_default ().error_message = e.message;
                         } else
                             debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
                     });
-                }
-            }
-        }
-
-        public void change_lock () {
-            if (get_permission ().allowed && get_current_user () != user) {
-                if (user.get_locked ()) {
-                    debug ("Unlocking user %s".printf (user.get_user_name ()));
-                    user.set_password_mode (Act.UserPasswordMode.REGULAR);
-                    user.set_locked (false);
-                } else {
-                    debug ("Locking user %s".printf (user.get_user_name ()));
-                    user.set_automatic_login (false);
-                    user.set_locked (true);
                 }
             }
         }

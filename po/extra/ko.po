@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:31-0700\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2019-08-11 10:22+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/user-"
@@ -28,10 +28,41 @@ msgid "Authentication is required to change user data"
 msgstr "사용자 데이터를 바꾸려면 인증이 필요합니다"
 
 #: data/useraccounts.appdata.xml.in:5
-msgid "User Accounts"
+#, fuzzy
+#| msgid "User Accounts"
+msgid "User Accounts Settings"
 msgstr "사용자 계정"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "사용자 이름, 비밀번호, 사진 등의 설정과 계정의 접근 권한을 관리합니다"
+
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:30
+msgid "Show in sidebar if an account is disabled"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Ask for permission when adding and removing accounts"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:32
+msgid "Animate Infobars"
+msgstr ""

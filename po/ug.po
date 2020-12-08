@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "ئابونت ئۇچۇرىنى ئۆزگەرتىش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
@@ -32,46 +32,46 @@ msgstr ""
 msgid "Password change failed"
 msgstr "پارول ئۆزگەرتىش مەغلۇپ بولدى"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "مىھمان تەڭشەكلىرى سىستېمىنى قايتا قوزغاتقاندىن كىيىن كۈچكە ئىگە بولىدۇ"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "بەزى تەڭشەكلەرنى باشقۇرغۇچىلىق سالاھىيىتى بولغاندىلا ئۆزگەرتكىلى بولىدۇ"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "باش سۈرەتنى ئۆزگەرتىش"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "تولۇق ئىسمى"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "ھېسابات تىپى:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "تىل:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ئاپتوماتىك كىرىش:"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "مېھمان"
@@ -127,15 +127,15 @@ msgstr "تولۇق ئىسمى"
 msgid "Username"
 msgstr "ئابونت ئىسمى"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "ئابونت قۇرۇش"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "ئابونت ئىسمى ئىشلىتىلىپ بولغان"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "پەقەت كىچىك ھەرپ ۋە سانلارنى كىرگۈزەلەيسىز"
@@ -196,11 +196,11 @@ msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش �
 msgid "Change Password…"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "ئابونت ھىساۋاتىنى قوزغىتىش"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "ئابونت ھىساۋاتىنى چەكلەش"
 
@@ -224,17 +224,29 @@ msgstr "رەسىم تاللاش"
 msgid "Open"
 msgstr "ئىچىش"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "ئابونت ھىساۋاتى قۇرۇش"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "ئابونت ھىساۋاتى ۋە ئۇچۇرلىرىنى ئۆچۈرۈش"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "ئۆزىڭىزنىڭ ھىساۋاتىڭىزنى ئۆچۈرەلمەيسىز"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
@@ -242,16 +254,16 @@ msgid "Choose a Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 #, fuzzy
 msgid "Confirm Password"
 msgstr "يىڭى پارولنى قايتا كىرگۈزۈڭ"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "پارولنى كۆرسىتىش"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "ئىككى قىتىمدا كىرگۈزگەن پارول بىردەك ئەمەس"
 

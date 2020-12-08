@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2019-08-16 19:22+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -28,8 +28,8 @@ msgid "Authentication is required to change user data"
 msgstr "Cal autenticació per canviar les dades de l'usuari."
 
 #: data/useraccounts.appdata.xml.in:5
-msgid "User Accounts"
-msgstr "Comptes d'usuari"
+msgid "User Accounts Settings"
+msgstr "Paràmetres dels comptes d'usuari"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
@@ -37,3 +37,32 @@ msgid ""
 msgstr ""
 "Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
 "contrasenyes i les fotografies."
+
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "Traduccions actualitzades"
+
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Es mostren més raons precises per a la configuració del bloqueig."
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "Millora de la fiabilitat de la creació de comptes"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "S'obté permís segons demanda per habilitar o inhabilitar comptes."
+
+#: data/useraccounts.appdata.xml.in:30
+msgid "Show in sidebar if an account is disabled"
+msgstr "Es mostra a la barra lateral si el compte està inhabilitat."
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Ask for permission when adding and removing accounts"
+msgstr "Demana permís en afegir i suprimir comptes."
+
+#: data/useraccounts.appdata.xml.in:32
+msgid "Animate Infobars"
+msgstr "Barres d'informació animades"

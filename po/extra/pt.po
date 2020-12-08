@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2019-08-11 10:22+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -28,8 +28,8 @@ msgid "Authentication is required to change user data"
 msgstr "É necessária autenticação para alterar dados de utilizador"
 
 #: data/useraccounts.appdata.xml.in:5
-msgid "User Accounts"
-msgstr "Contas de utilizador"
+msgid "User Accounts Settings"
+msgstr "Definições das Contas de Utilizador"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
@@ -37,3 +37,32 @@ msgid ""
 msgstr ""
 "Gerir permissões de conta e configurar nomes de utilizadores, palavras-passe "
 "e fotos"
+
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "Traduções atualizadas"
+
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Mostra razões mais precisas para definições bloqueadas"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "Melhora a fiabilidade da criação de contas"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr "Obter autorização a pedido para ativar ou desativar contas"
+
+#: data/useraccounts.appdata.xml.in:30
+msgid "Show in sidebar if an account is disabled"
+msgstr "Mostrar na barra lateral se uma conta está desativada"
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Ask for permission when adding and removing accounts"
+msgstr "Pedir permissão ao adicionar e remover contas"
+
+#: data/useraccounts.appdata.xml.in:32
+msgid "Animate Infobars"
+msgstr "Animar barras de informação"

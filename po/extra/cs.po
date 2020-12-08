@@ -7,29 +7,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-14 12:31-0700\n"
-"PO-Revision-Date: 2018-06-11 09:15-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "Spravovat uživatelské účty"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Ke změně uživatelských dat je požadováno ověření"
 
 #: data/useraccounts.appdata.xml.in:5
-msgid "User Accounts"
-msgstr ""
+msgid "User Accounts Settings"
+msgstr "Nastavení uživatelských účtů"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Spravovat oprávnění uživatelů a nastavovat uživatelská jména, hesla a jejich "
+"fotky"
+
+#: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
+#: data/useraccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "Aktualizovány překlady"
+
+#: data/useraccounts.appdata.xml.in:20
+msgid "Show more accurate reasons for locked settings"
+msgstr "Zobrazování přesnějších důvodů pro uzamčená nastavení"
+
+#: data/useraccounts.appdata.xml.in:21
+msgid "Improve reliability of account creation"
+msgstr "Zlepšení spolehlivosti vytváření účtů"
+
+#: data/useraccounts.appdata.xml.in:22
+msgid "Get permission on demand for enabling or disabling accounts"
+msgstr ""
+"Získávání oprávnění pro povolování či zakazování účtů na základě potřeby"
+
+#: data/useraccounts.appdata.xml.in:30
+msgid "Show in sidebar if an account is disabled"
+msgstr "V postranním panelu je zobrazeno zda je účet zakázán"
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Ask for permission when adding and removing accounts"
+msgstr "Zeptat se na oprávnění při přidávání nebo odebírání účtů"
+
+#: data/useraccounts.appdata.xml.in:32
+msgid "Animate Infobars"
+msgstr "Animovat informační pruhy"

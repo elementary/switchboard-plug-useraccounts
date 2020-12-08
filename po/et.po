@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "Kasutaja andmete muutmiseks on vajalik autentimine"
@@ -31,45 +31,45 @@ msgstr "Kontode õiguste, nimede, paroolide ja profiilipiltide haldamine."
 msgid "Password change failed"
 msgstr "Parooli muutmine ebaõnnestus"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Külalisseanssi eelistused rakenduvad pärast süsteemi taaskäivitamist"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 #, fuzzy
 msgid "Avatar"
 msgstr "Konto pildi muutmine"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 #, fuzzy
 msgid "Full name"
 msgstr "Täisnimi"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Account type"
 msgstr "Konto tüüp:"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Language"
 msgstr "Keel:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Automaatne sisselogimine:"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Muuda parooli"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "Külalisseanss"
@@ -125,15 +125,15 @@ msgstr "Täisnimi"
 msgid "Username"
 msgstr "Kasutajanimi"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "Loo kasutaja"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "Sisestatud kasutajanimi on juba võetud"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:148
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Lubatud on ainult väiketähed, numbrid ning tühikut pole lubatud"
@@ -195,11 +195,11 @@ msgstr "Ava keele ja piirkonna eelistused"
 msgid "Change Password…"
 msgstr "Muuda parooli"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "Luba konto"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "Keela konto"
 
@@ -223,17 +223,29 @@ msgstr "Pildi avamine"
 msgid "Open"
 msgstr "Ava"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "Uue konto loomine..."
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "Kustuta konto ning sellega seonduvad andmed"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "Enda kontot pole võimalik eemaldada"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
@@ -241,16 +253,16 @@ msgid "Choose a Password"
 msgstr "Muuda parooli"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Kinnita uus parool"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "Paroolide näitamine"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Sisestatud paroolid ei kattu"
 

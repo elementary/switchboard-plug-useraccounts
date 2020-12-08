@@ -27,15 +27,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore language_store;
         private Gtk.ListStore region_store;
 
-        private Granite.Widgets.Avatar avatar;
-        private Gdk.Pixbuf? avatar_pixbuf;
+        private Hdy.Avatar avatar;
         private Gtk.ToggleButton avatar_button;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
         private Gtk.ComboBoxText user_type_box;
         private Gtk.ComboBox language_box;
-        private Gtk.Revealer region_revealer;
         private Gtk.ComboBox region_box;
         private Gtk.Button language_button;
         private Gtk.Switch autologin_switch;
@@ -70,45 +68,77 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
-            avatar_button = new Gtk.ToggleButton ();
-            avatar_button.halign = Gtk.Align.END;
+            avatar = new Hdy.Avatar (64, user.real_name, true);
+            avatar.set_image_load_func (avatar_image_load_func);
+
+            avatar_button = new Gtk.ToggleButton () {
+                halign = Gtk.Align.END
+            };
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            avatar_button.add (avatar);
+
             avatar_button.toggled.connect (() => {
                 if (avatar_button.active) {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
                     AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
                     avatar_popover.show_all ();
                     avatar_popover.hide.connect (() => { avatar_button.active = false;});
                 }
             });
 
-            full_name_entry = new Gtk.Entry ();
-            full_name_entry.valign = Gtk.Align.CENTER;
-            full_name_entry.get_style_context ().add_class ("h3");
+            full_name_entry = new Gtk.Entry () {
+                valign = Gtk.Align.CENTER
+            };
+            full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             full_name_entry.activate.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
+                InfobarNotifier.get_default ().error_message = "";
                 utils.change_full_name (full_name_entry.get_text ());
             });
 
-            var user_type_label = new Gtk.Label (_("Account type:"));
-            user_type_label.halign = Gtk.Align.END;
+            var user_type_label = new Gtk.Label (_("Account type:")) {
+                halign = Gtk.Align.END
+            };
 
             user_type_box = new Gtk.ComboBoxText ();
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
             user_type_box.changed.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
-                utils.change_user_type (user_type_box.get_active ());
+                InfobarNotifier.get_default ().error_message = "";
+                utils.change_user_type (user_type_box.active);
             });
 
-            var lang_label = new Gtk.Label (_("Language:"));
-            lang_label.halign = Gtk.Align.END;
+            var lang_label = new Gtk.Label (_("Language:")) {
+                halign = Gtk.Align.END
+            };
 
             if (user != get_current_user ()) {
-                language_box = new Gtk.ComboBox ();
-                language_box.set_sensitive (false);
+                var renderer = new Gtk.CellRendererText ();
+
+                language_box = new Gtk.ComboBox () {
+                    sensitive = false
+                };
+                language_box.pack_start (renderer, true);
+                language_box.add_attribute (renderer, "text", 1);
+
+                renderer = new Gtk.CellRendererText ();
+
+                region_box = new Gtk.ComboBox () {
+                    sensitive = false
+                };
+                region_box.pack_start (renderer, true);
+                region_box.add_attribute (renderer, "text", 1);
+
+                var region_revealer = new Gtk.Revealer () {
+                    transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+                    reveal_child = true
+                };
+                region_revealer.add (region_box);
+
+                attach (language_box, 1, 2);
+                attach (region_revealer, 1, 3);
+
                 language_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
 
                     Gtk.TreeIter? iter;
                     Value cell;
@@ -117,25 +147,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     language_store.get_value (iter, 0, out cell);
 
                     if (get_regions ((string)cell).size == 0) {
-                        region_revealer.set_reveal_child (false);
-                        if (user.get_language () != (string)cell)
+                        region_revealer.reveal_child = false;
+                        if (user.get_language () != (string)cell) {
                             utils.change_language ((string)cell);
+                        }
                     } else {
-                        region_revealer.set_reveal_child (true);
-                        region_box.set_no_show_all (false);
+                        region_revealer.reveal_child = true;
                         update_region ((string)cell);
                     }
                 });
-                attach (language_box, 1, 2, 1, 1);
 
-                var renderer = new Gtk.CellRendererText ();
-                language_box.pack_start (renderer, true);
-                language_box.add_attribute (renderer, "text", 1);
-
-                region_box = new Gtk.ComboBox ();
-                region_box.set_sensitive (false);
                 region_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().unset_error ();
+                    InfobarNotifier.get_default ().error_message = "";
 
                     string new_language;
                     Gtk.TreeIter? iter;
@@ -149,39 +172,33 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     region_store.get_value (iter, 0, out cell);
                     new_language += "_%s".printf ((string)cell);
 
-                    if (new_language != "" && new_language != user.get_language ())
+                    if (new_language != "" && new_language != user.get_language ()) {
                         utils.change_language (new_language);
+                    }
                 });
-
-                region_revealer = new Gtk.Revealer ();
-                region_revealer.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
-                region_revealer.set_reveal_child (true);
-                region_revealer.add (region_box);
-                attach (region_revealer, 1, 3, 1, 1);
-
-                renderer = new Gtk.CellRendererText ();
-                region_box.pack_start (renderer, true);
-                region_box.add_attribute (renderer, "text", 1);
-
             } else {
-                language_button = new Gtk.LinkButton.with_label ("settings://language", "Language");
-                language_button.halign = Gtk.Align.START;
-                language_button.set_tooltip_text (_("Click to switch to Language & Locale Settings"));
-                attach (language_button, 1, 2, 1, 1);
+                language_button = new Gtk.LinkButton.with_label ("settings://language", "Language") {
+                    halign = Gtk.Align.START,
+                    tooltip_text = _("Click to switch to Language & Locale Settings")
+                };
+
+                attach (language_button, 1, 2);
             }
 
-            var login_label = new Gtk.Label (_("Log In automatically:"));
-            login_label.halign = Gtk.Align.END;
-            login_label.margin_top = 20;
+            var login_label = new Gtk.Label (_("Log In automatically:")) {
+                halign = Gtk.Align.END,
+                margin_top = 20
+            };
 
-            autologin_switch = new Gtk.Switch ();
-            autologin_switch.halign = Gtk.Align.START;
-            autologin_switch.margin_top = 24;
-            autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.get_active ()));
+            autologin_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START,
+                margin_top = 24
+            };
+            autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.active));
 
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
-                InfobarNotifier.get_default ().unset_error ();
+                InfobarNotifier.get_default ().error_message = "";
                 var permission = get_permission ();
                 if (user == get_current_user () && permission.allowed) {
                     try {
@@ -196,139 +213,159 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 change_password_dialog.request_password_change.connect (utils.change_password);
             });
 
-            enable_user_button = new Gtk.Button ();
-            enable_user_button.clicked.connect (utils.change_lock);
-            enable_user_button.set_sensitive (false);
-            enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            enable_user_button = new Gtk.Button () {
+                sensitive = false
+            };
+            enable_user_button.clicked.connect (change_lock);
 
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            full_name_lock.tooltip_text = NO_PERMISSION_STRING;
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             full_name_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            user_type_lock.tooltip_text = NO_PERMISSION_STRING;
+            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             user_type_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            language_lock.tooltip_text = NO_PERMISSION_STRING;
+            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             language_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            autologin_lock.margin_top = 20;
-            autologin_lock.tooltip_text = NO_PERMISSION_STRING;
+            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                margin_top = 20,
+                tooltip_text = NO_PERMISSION_STRING
+            };
             autologin_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            password_lock.tooltip_text = NO_PERMISSION_STRING;
+            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
             password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.tooltip_text = NO_PERMISSION_STRING;
             enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            attach (avatar_button, 0, 0, 1, 1);
-            attach (full_name_entry, 1, 0, 1, 1);
+            attach (avatar_button, 0, 0);
+            attach (full_name_entry, 1, 0);
             attach (user_type_label, 0, 1);
-            attach (user_type_box, 1, 1, 1, 1);
-            attach (lang_label, 0, 2, 1, 1);
-            attach (login_label, 0, 4, 1, 1);
-            attach (autologin_switch, 1, 4, 1, 1);
-            attach (password_button, 1, 5, 1, 1);
-            attach (enable_user_button, 1, 6, 1, 1);
-            attach (full_name_lock, 2, 0, 1, 1);
-            attach (user_type_lock, 2, 1, 1, 1);
+            attach (user_type_box, 1, 1);
+            attach (lang_label, 0, 2);
+            attach (login_label, 0, 4);
+            attach (autologin_switch, 1, 4);
+            attach (password_button, 1, 5);
+            attach (enable_user_button, 1, 6);
+            attach (full_name_lock, 2, 0);
+            attach (user_type_lock, 2, 1);
             attach (language_lock, 2, 2, 1, 2);
-            attach (autologin_lock, 2, 4, 1, 1);
-            attach (password_lock, 2, 5, 1, 1);
-            attach (enable_lock, 2, 6, 1, 1);
+            attach (autologin_lock, 2, 4);
+            attach (password_lock, 2, 5);
+            attach (enable_lock, 2, 6);
 
             update_ui ();
-            get_permission ().notify["allowed"].connect (update_ui);
+            update_permission ();
+
+            if (get_current_user () == user) {
+                enable_lock.tooltip_text = CURRENT_USER_STRING;
+                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+            } else if (is_last_admin (user)) {
+                enable_lock.tooltip_text = LAST_ADMIN_STRING;
+                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+            } else {
+                enable_user_button.sensitive = true;
+                enable_lock.set_opacity (0);
+            }
+
+            get_permission ().notify["allowed"].connect (update_permission);
 
             user.changed.connect (update_ui);
         }
 
-        private void update_ui () {
+        private void update_permission () {
             var allowed = get_permission ().allowed;
             var current_user = get_current_user () == user;
+            var user_locked = user.get_locked ();
             var last_admin = is_last_admin (user);
 
             if (!allowed) {
-                user_type_box.set_sensitive (false);
-                password_button.set_sensitive (false);
-                autologin_switch.set_sensitive (false);
-                enable_user_button.set_sensitive (false);
+                user_type_box.sensitive = false;
+                password_button.sensitive = false;
+                autologin_switch.sensitive = false;
+
+                user_type_lock.set_opacity (1);
+                autologin_lock.set_opacity (1);
+                password_lock.set_opacity (1);
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
-                enable_lock.tooltip_text = NO_PERMISSION_STRING;
-            } else if (current_user) {
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
-                enable_lock.tooltip_text = CURRENT_USER_STRING;
-            } else if (last_admin) {
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
-                enable_lock.tooltip_text = LAST_ADMIN_STRING;
             }
 
             if (current_user || allowed) {
-                avatar_button.set_sensitive (true);
-                full_name_entry.set_sensitive (true);
+                full_name_entry.sensitive = true;
                 full_name_lock.set_opacity (0);
                 language_lock.set_opacity (0);
 
-                if (!user.get_locked ()) {
-                    password_button.set_sensitive (true);
+                if (!user_locked) {
+                    password_button.sensitive = true;
                     password_lock.set_opacity (0);
                 }
 
                 if (allowed) {
-                    if (!user.get_locked ()) {
-                        autologin_switch.set_sensitive (true);
+                    if (!user_locked) {
+                        autologin_switch.sensitive = true;
                         autologin_lock.set_opacity (0);
                     }
                     if (!last_admin && !current_user) {
-                        user_type_box.set_sensitive (true);
+                        user_type_box.sensitive = true;
                         user_type_lock.set_opacity (0);
                     }
                 }
 
                 if (!current_user) {
-                    language_box.set_sensitive (true);
-                    region_box.set_sensitive (true);
+                    language_box.sensitive = true;
+                    region_box.sensitive = true;
                 }
             } else {
-                avatar_button.set_sensitive (false);
-                full_name_entry.set_sensitive (false);
+                full_name_entry.sensitive = false;
 
                 if (!current_user) {
-                    language_box.set_sensitive (false);
-                    region_box.set_sensitive (false);
+                    language_box.sensitive = false;
+                    region_box.sensitive = false;
                 }
             }
+        }
 
-            if (allowed && !current_user && !last_admin) {
-                enable_user_button.set_sensitive (true);
-                enable_lock.set_opacity (0);
-            }
-
+        private void update_ui () {
             //only update widgets if the user property has changed since last ui update
             if (delta_user.real_name != user.get_real_name ()) {
                 update_real_name ();
             }
 
-            if (delta_user.icon_file != user.get_icon_file ()) {
-                update_avatar ();
-            }
+            // Checking delta_user icon file doesn't seem to always update correctly
+            avatar.set_image_load_func (avatar_image_load_func);
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
             }
 
-            if (delta_user.automatic_login != user.get_automatic_login ()) {
-                update_autologin ();
+            var user_automatic_login = user.get_automatic_login ();
+            if (delta_user.automatic_login != user_automatic_login) {
+                if (user_automatic_login && !autologin_switch.active) {
+                    autologin_switch.active = true;
+                } else if (!user_automatic_login && autologin_switch.active) {
+                    autologin_switch.active = false;
+                }
             }
 
-            if (delta_user.locked != user.get_locked ()) {
-                update_lock_state ();
+            var user_locked = user.get_locked ();
+            if (user_locked) {
+                enable_user_button.label = _("Enable User Account");
+                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            } else {
+                enable_user_button.label = _("Disable User Account");
+                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {
@@ -350,33 +387,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_active (0);
         }
 
-        private void update_autologin () {
-            if (user.get_automatic_login () && !autologin_switch.get_active ())
-                autologin_switch.set_active (true);
-            else if (!user.get_automatic_login () && autologin_switch.get_active ())
-                autologin_switch.set_active (false);
-        }
-
-        private void update_lock_state () {
-            if (user.get_locked ()) {
-                enable_user_button.set_label (_("Enable User Account"));
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-            } else if (!user.get_locked ())
-                enable_user_button.set_label (_("Disable User Account"));
-        }
-
-        public void update_avatar () {
+        private Gdk.Pixbuf? avatar_image_load_func (int size) {
             try {
-                var size = 72 * get_style_context ().get_scale ();
-                avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-                if (avatar == null)
-                    avatar = new Granite.Widgets.Avatar.from_pixbuf (avatar_pixbuf);
-                else
-                    avatar.pixbuf = avatar_pixbuf;
+                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
             } catch (Error e) {
-                avatar = new Granite.Widgets.Avatar.with_default_icon (72);
+                return null;
             }
-            avatar_button.set_image (avatar);
         }
 
         public void update_language () {
@@ -445,6 +461,27 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 region_box.set_active_iter (active_iter);
             }
+        }
+
+        private void change_lock () {
+            var permission = get_permission ();
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    critical (e.message);
+                    return;
+                }
+            }
+
+            var user_locked = user.get_locked ();
+            if (user_locked) {
+                user.set_password_mode (Act.UserPasswordMode.REGULAR);
+            } else {
+                user.set_automatic_login (false);
+            }
+
+            user.set_locked (!user_locked);
         }
     }
 }

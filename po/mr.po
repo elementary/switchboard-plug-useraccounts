@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-10 06:32+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/mr/>\n"
@@ -12,10 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
 msgstr "वापरकर्ता डेटा बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
@@ -34,40 +34,40 @@ msgstr ""
 msgid "Password change failed"
 msgstr "पासवर्ड बदल अयशस्वी"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "आपण आपले सिस्टम रीस्टार्ट करेपर्यंत अतिथी सत्र बदल प्रभावी होणार नाहीत"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:144
 msgid "Avatar"
 msgstr "अवतार"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "पूर्ण नाव"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:146
 msgid "Account type"
 msgstr "खाते प्रकार"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:147
 msgid "Language"
 msgstr "भाषा"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:148
 msgid "Log in automatically"
 msgstr "स्वयंचलितपणे लॉग इन करा"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "पासवर्ड बदला"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "अतिथी सत्र"
@@ -122,15 +122,15 @@ msgstr "पूर्ण नाव"
 msgid "Username"
 msgstr "वापरकर्तानाव"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "वापरकर्ता तयार करा"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "वापरकर्तानाव आधीपासूनच घेतलेले आहे"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "वापरकर्तानावात केवळ रिकाम्या जागाशिवाय लोअरकेस अक्षरे आणि संख्या असू शकतात"
 
@@ -188,11 +188,11 @@ msgstr "भाषा आणि लोकॅल सेटिंग्जवर �
 msgid "Change Password…"
 msgstr "पासवर्ड बदला…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "वापरकर्ता खाते सक्षम करा"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "वापरकर्ता खाते अक्षम करा"
 
@@ -216,32 +216,44 @@ msgstr "एक प्रतिमा निवडा"
 msgid "Open"
 msgstr "उघडा"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "वापरकर्ता खाते तयार करा"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "वापरकर्ता खाते आणि त्याचा डेटा काढा"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr "परवानगी मिळविण्यात अक्षम"
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr "आवश्यक सिस्टम परवानगीशिवाय नवीन खाते तयार केले जाऊ शकत नाही."
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "आपण आपले स्वत: चे वापरकर्ता खाते काढू शकत नाही"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr "आवश्यक सिस्टम परवानगीशिवाय खाते हटविले जाऊ शकत नाही."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "एक पासवर्ड निवडा"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 msgid "Confirm Password"
 msgstr "पासवर्डची पुष्टी करा"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "पासवर्ड दाखवा"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "पासवर्ड जुळत नाही"
 

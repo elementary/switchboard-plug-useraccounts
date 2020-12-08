@@ -2,23 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2018-03-13 02:53+0000\n"
+"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-useraccounts/zh_TW/>\n"
+"Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-useraccounts/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for org.pantheon.user-accounts.administration policy
+#. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "需要通過身份核對才能變更使用者資料"
+msgstr "變更使用者資料需要先通過身分核對"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -27,62 +27,57 @@ msgstr "使用者帳號"
 #: src/Plug.vala:43
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr "管理帳號權限和調整使用者名稱、密碼、和相片"
+msgstr "管理帳號權限並調整使用者的名稱、密碼、相片等設定"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
 msgstr "密碼變更失敗"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "訪客作業階段直到您重新啟動系統後才會生效"
 
-#: src/Plug.vala:98
+#: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
-#: src/Plug.vala:148
-#, fuzzy
+#: src/Plug.vala:144
 msgid "Avatar"
-msgstr "變更代表頭像"
+msgstr "代表頭像"
 
-#: src/Plug.vala:149
-#, fuzzy
+#: src/Plug.vala:145
 msgid "Full name"
 msgstr "全名"
 
-#: src/Plug.vala:150
-#, fuzzy
+#: src/Plug.vala:146
 msgid "Account type"
-msgstr "帳號類型："
+msgstr "帳號類型"
 
-#: src/Plug.vala:151
-#, fuzzy
+#: src/Plug.vala:147
 msgid "Language"
-msgstr "語言："
+msgstr "語言"
 
-#: src/Plug.vala:152
-#, fuzzy
+#: src/Plug.vala:148
 msgid "Log in automatically"
-msgstr "自動登入："
+msgstr "自動登入"
 
-#: src/Plug.vala:153 src/Dialogs/ChangePasswordDialog.vala:92
+#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "變更密碼"
 
-#: src/Plug.vala:154 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:41
 msgid "Guest Session"
 msgstr "訪客作業階段"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "裁切與調整位置"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "選擇影像的部分作為個人頭像使用。"
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -126,15 +121,15 @@ msgstr "全名"
 msgid "Username"
 msgstr "使用者名稱"
 
-#: src/Dialogs/NewUserDialog.vala:79
+#: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
 msgstr "建立使用者"
 
-#: src/Dialogs/NewUserDialog.vala:155
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username is already taken"
 msgstr "使用者名稱已經有人使用"
 
-#: src/Dialogs/NewUserDialog.vala:157
+#: src/Dialogs/NewUserDialog.vala:148
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "使用者名稱僅能有小寫字母和數字，不能有空格"
 
@@ -192,11 +187,11 @@ msgstr "點按以切換到「語言和區域」設定值"
 msgid "Change Password…"
 msgstr "變更密碼…"
 
-#: src/Views/UserSettingsView.vala:363
+#: src/Views/UserSettingsView.vala:341
 msgid "Enable User Account"
 msgstr "啟用使用者帳號"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:345
 msgid "Disable User Account"
 msgstr "停用使用者帳號"
 
@@ -220,32 +215,44 @@ msgstr "選取影像"
 msgid "Open"
 msgstr "開啟"
 
-#: src/Widgets/ListFooter.vala:35
+#: src/Widgets/ListFooter.vala:34
 msgid "Create user account"
 msgstr "建立使用者帳號"
 
-#: src/Widgets/ListFooter.vala:39 src/Widgets/ListFooter.vala:77
+#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
 msgid "Remove user account and its data"
 msgstr "移除使用帳號與其資料"
 
-#: src/Widgets/ListFooter.vala:80
+#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+msgid "Unable to acquire permission"
+msgstr "無法取得許可"
+
+#: src/Widgets/ListFooter.vala:52
+msgid "A new account cannot be created without the required system permission."
+msgstr "無法在未獲得系統許可的情況下建立新帳號。"
+
+#: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
 msgstr "您無法移除您自身的使用者帳號"
+
+#: src/Widgets/ListFooter.vala:120
+msgid "An account cannot be removed without the required system permission."
+msgstr "無法在未獲得系統許可的情況下移除帳號。"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "設定密碼"
 
 #. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:54
+#: src/Widgets/PasswordEditor.vala:55
 msgid "Confirm Password"
 msgstr "確認密碼"
 
-#: src/Widgets/PasswordEditor.vala:63
+#: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
 msgstr "顯示密碼"
 
-#: src/Widgets/PasswordEditor.vala:143
+#: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "密碼不相符"
 
