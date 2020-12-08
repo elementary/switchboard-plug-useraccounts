@@ -266,6 +266,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             update_ui ();
             update_permission ();
 
+            if (get_current_user () == user) {
+                enable_lock.tooltip_text = CURRENT_USER_STRING;
+                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+            } else if (is_last_admin (user)) {
+                enable_lock.tooltip_text = LAST_ADMIN_STRING;
+                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+            } else {
+                enable_user_button.sensitive = true;
+                enable_lock.set_opacity (0);
+            }
+
             get_permission ().notify["allowed"].connect (update_permission);
 
             user.changed.connect (update_ui);
@@ -325,24 +336,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void update_ui () {
-            var current_user = get_current_user () == user;
-            var last_admin = is_last_admin (user);
-
-            if (current_user) {
-                enable_lock.tooltip_text = CURRENT_USER_STRING;
-                enable_lock.set_opacity (1);
-
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
-            } else if (last_admin) {
-                enable_lock.tooltip_text = LAST_ADMIN_STRING;
-                enable_lock.set_opacity (1);
-
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
-            } else {
-                enable_user_button.sensitive = true;
-                enable_lock.set_opacity (0);
-            }
-
             //only update widgets if the user property has changed since last ui update
             if (delta_user.real_name != user.get_real_name ()) {
                 update_real_name ();
