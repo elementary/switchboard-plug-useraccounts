@@ -24,7 +24,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Label username_label;
         private Gtk.Revealer description_revealer;
 
-        public weak Act.User user { get; construct; }
+        public Act.User user { get; construct; }
 
         public int account_type {
             set {
