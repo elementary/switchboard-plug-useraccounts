@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-public class SwitchboardPlugUserAccounts.NewUserDialog : Gtk.Dialog {
+public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     private ErrorRevealer username_error_revealer;
     private Gtk.Button create_button;
     private Widgets.PasswordEditor pw_editor;
