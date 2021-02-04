@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Gtk.Dialog {
+public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
     private bool is_authenticated { get; private set; default = false; }
 
     private ErrorRevealer current_pw_error;
