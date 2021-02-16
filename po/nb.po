@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2019-06-27 14:13+0000\n"
+"PO-Revision-Date: 2021-02-13 12:34+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:43+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -54,19 +54,16 @@ msgid "Full name"
 msgstr "Fullt navn"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Account type"
-msgstr "Kontotype:"
+msgstr "Kontotype"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Language"
-msgstr "Språk:"
+msgstr "Språk"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Logg på automatisk:"
+msgstr "Logg på automatisk"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
@@ -233,11 +230,11 @@ msgstr "Fjern brukerkonto og dens data"
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Fikk ikke tilgang"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "En ny konto kan ikke opprettes uten påkrevd systemtilgang."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -245,7 +242,7 @@ msgstr "Du kan ikke fjerne din egen brukerkonto"
 
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
