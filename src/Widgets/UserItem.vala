@@ -94,7 +94,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (grid);
 
             user.bind_property ("account-type", this, "account-type", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", avatar, "text", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
