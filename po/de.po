@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-10-27 23:15+0000\n"
+"PO-Revision-Date: 2021-03-14 20:25+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -12,13 +12,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Zur Änderung von Benutzerdaten ist eine Legitimierung erforderlich"
+msgstr "Authentifizierung benötigt zur Änderung von Benutzerdaten"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -28,7 +28,7 @@ msgstr "Benutzerkonten"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Kontoberechtigungen verwalten sowie Benutzernamen, -passwörter und -fotos "
+"Benutzerberechtigungen, Benutzernamen, Passwörter und Benutzerfotos "
 "einrichten"
 
 #: src/Plug.vala:67
