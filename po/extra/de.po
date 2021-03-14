@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2021-03-14 14:49+0000\n"
+"PO-Revision-Date: 2021-03-14 20:25+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/de/>\n"
@@ -21,20 +21,22 @@ msgstr ""
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "Benutzerkonten verwalten"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Authentifizierung benötigt zur Änderung von Benutzerdaten"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "Einstellungen für Benutzerkonten"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Benutzerberechtigungen, Benutzernamen, Passwörter und Benutzerfotos "
+"einrichten"
 
 #: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
 #: data/useraccounts.appdata.xml.in:33
@@ -43,23 +45,24 @@ msgstr "Aktualisierte Übersetzungen"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "Präzisere Angabe der Gründe für gesperrte Einstellungen"
 
 #: data/useraccounts.appdata.xml.in:21
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "Höhere Zuverlässigkeit beim Erstellen neuer Benutzerkonten"
 
 #: data/useraccounts.appdata.xml.in:22
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
+"Bei Bedarf Genehmigung fürs Aktivieren oder Deaktivieren von Konten einholen"
 
 #: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
+msgstr "In Seitenleiste anzeigen, wenn ein Konto deaktiviert ist"
 
 #: data/useraccounts.appdata.xml.in:31
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "Genehmigungsabfrage fürs Hinzufügen oder Entfernen von Benutzerkonten"
 
 #: data/useraccounts.appdata.xml.in:32
 msgid "Animate Infobars"
