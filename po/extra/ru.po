@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2021-03-05 18:36+0000\n"
+"PO-Revision-Date: 2021-03-15 22:59+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ru/>\n"
@@ -22,20 +22,22 @@ msgstr ""
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "Управление учетными записями"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Необходима аутентификация, чтобы изменить данные пользователя"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "Настройки учетных записей"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Управление разрешениями учетной записи, а также настройка имен "
+"пользователей, паролей и фотографий"
 
 #: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
 #: data/useraccounts.appdata.xml.in:33
