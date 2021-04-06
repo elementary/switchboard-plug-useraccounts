@@ -133,9 +133,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 var username = selected_user.get_user_name ();
 
                 mark_removal (selected_user);
+
                 userlist.update_ui ();
-                content.set_visible_child_name (username);
-                userlist.select_row (userlist.get_row_at_index (1));
+                userlist.select_row (userlist.get_row_at_index (0));
+
                 toast.title = _("Removed “%s”").printf (username);
                 toast.send_notification ();
             });
