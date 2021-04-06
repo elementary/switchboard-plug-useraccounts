@@ -26,7 +26,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public signal void removal_changed ();
         public signal void unfocused ();
-        public signal void send_undo_notification ();
+        public signal void send_undo_notification (string username);
         public signal void hide_undo_notification ();
 
         construct {
@@ -132,13 +132,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             }
 
-            debug ("Marking user %s for removal".printf (selected_user.get_user_name ()));
+            var username = selected_user.get_user_name ();
+
             mark_removal (selected_user);
             removal_changed ();
             selected_user = null;
             unfocused ();
             update_ui ();
-            send_undo_notification ();
+            send_undo_notification (username);
         }
     }
 }
