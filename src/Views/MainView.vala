@@ -49,7 +49,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             content = new Gtk.Stack ();
             content.add_named (guest, "guest_session");
 
-            var toast = new Granite.Widgets.Toast (_("Undo last user account removal"));
+            var toast = new Granite.Widgets.Toast ("");
             toast.set_default_action (_("Undo"));
 
             var overlay = new Gtk.Overlay ();
@@ -65,7 +65,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 update ();
             }
 
-            footer.send_undo_notification.connect (() => {
+            footer.send_undo_notification.connect ((username) => {
+                toast.title = _("Removed “%s”").printf (username);
                 toast.send_notification ();
             });
 
