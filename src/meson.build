@@ -19,7 +19,7 @@ plug_files = files(
     'Widgets/Popovers/AvatarPopover.vala',
     'Widgets/CropView.vala',
     'Widgets/ErrorRevealer.vala',
-    'Widgets/ListFooter.vala',
+    # 'Widgets/ListFooter.vala',
     'Widgets/PasswordEditor.vala',
     'Widgets/UserItem.vala',
     'Widgets/UserListBox.vala'
