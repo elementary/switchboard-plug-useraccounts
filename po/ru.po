@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-04-12 06:10+0000\n"
-"Last-Translator: Stas <SedovSG@yandex.ru>\n"
+"PO-Revision-Date: 2021-03-15 22:59+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ru/>\n"
 "Language: ru\n"
@@ -13,13 +13,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Для изменения пользовательских данных требуется аутентификация"
+msgstr "Необходима аутентификация, чтобы изменить данные пользователя"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -29,8 +29,8 @@ msgstr "Учётные записи"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Управление учетными записями, настройка имен пользователей, паролей и "
-"фотографий"
+"Управление разрешениями учетной записи, а также настройка имен "
+"пользователей, паролей и фотографий"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -78,11 +78,11 @@ msgstr "Гостевой сеанс"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Обрезка и положение"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Выберите часть изображения для использования в качестве аватара."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -103,7 +103,7 @@ msgstr "Ошибка аутентификации"
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "Отменить"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -233,11 +233,13 @@ msgstr "Удалить аккаунт пользователя и его дан�
 
 #: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Не удалось получить разрешение"
 
 #: src/Widgets/ListFooter.vala:52
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
+"Новая учетная запись не может быть создана без требуемого системного "
+"разрешения."
 
 #: src/Widgets/ListFooter.vala:96
 msgid "You cannot remove your own user account"
@@ -246,6 +248,7 @@ msgstr "Вы не можете удалить собственную учётн�
 #: src/Widgets/ListFooter.vala:120
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
+"Учетная запись не может быть удалена без требуемого системного разрешения."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
