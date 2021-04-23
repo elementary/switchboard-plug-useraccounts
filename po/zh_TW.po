@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-04-23 14:32+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -67,7 +67,7 @@ msgid "Change Password"
 msgstr "變更密碼"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "訪客作業階段"
 
@@ -96,7 +96,7 @@ msgid "Authentication failed"
 msgstr "身份核對失敗"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "取消"
 
@@ -108,8 +108,8 @@ msgstr "帳號類型"
 msgid "Standard User"
 msgstr "標準使用者"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:59
 msgid "Administrator"
 msgstr "管理員"
 
@@ -125,11 +125,11 @@ msgstr "使用者名稱"
 msgid "Create User"
 msgstr "建立使用者"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "使用者名稱已經有人使用"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "使用者名稱僅能有小寫字母和數字，不能有空格"
 
@@ -143,75 +143,76 @@ msgstr "訪客作業階段允許任何人使用暫時性的無密碼預設帳號
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "一旦他們登出，所有的設定值與資料都會全部刪除。"
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "自動登入："
-
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "取消上一個使用者帳號的移除"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr "取消動作"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:69
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "您無權更改此設定"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "您無法為目前啟用中的使用者變更這個項目"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "您無法移除最後一位管理員的特殊權利"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "帳號類型："
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "標準"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "語言："
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "點按以切換到「語言和區域」設定值"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
 msgstr "變更密碼…"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "啟用使用者帳號"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "停用使用者帳號"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "移除"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "從檔案設定…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "影像"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "選取影像"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "開啟"
 
@@ -264,13 +265,16 @@ msgstr "我的帳號"
 msgid "Other Accounts"
 msgstr "其他帳號"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "已啟用"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "已停用"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "取消上一個使用者帳號的移除"
 
 #~ msgid "Password:"
 #~ msgstr "密碼："

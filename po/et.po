@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-04-23 14:32+0000\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,7 +70,7 @@ msgid "Change Password"
 msgstr "Muuda parooli"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Külalisseanss"
 
@@ -99,7 +99,7 @@ msgid "Authentication failed"
 msgstr "Autentimine ebaõnnestus"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Loobu"
 
@@ -112,8 +112,8 @@ msgstr "Konto tüüp:"
 msgid "Standard User"
 msgstr "Tavakasutaja"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:59
 msgid "Administrator"
 msgstr "Administraator"
 
@@ -129,11 +129,11 @@ msgstr "Kasutajanimi"
 msgid "Create User"
 msgstr "Loo kasutaja"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Sisestatud kasutajanimi on juba võetud"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Lubatud on ainult väiketähed, numbrid ning tühikut pole lubatud"
@@ -150,76 +150,77 @@ msgstr ""
 "Külalisseanssist väljalogides kustutatakse kõik külalise konto eelistused "
 "ning loodud andmed."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Automaatne sisselogimine:"
-
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Taasta kustutatud konto"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:69
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Sul pole õigusi selle muutmiseks"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Seda ei saa sisselogitud konto puhul muuta"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Ainukese administraatori õiguseid pole võimalik eemaldada"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Konto tüüp:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Tavaline"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Keel:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Ava keele ja piirkonna eelistused"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 #, fuzzy
 msgid "Change Password…"
 msgstr "Muuda parooli"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Luba konto"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Keela konto"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Eemalda"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "Vali pildifail..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Pildid"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Pildi avamine"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Ava"
 
@@ -274,13 +275,16 @@ msgstr "Minu konto:"
 msgid "Other Accounts"
 msgstr "Teised kontod:"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Lubatud"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Keelatud"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Taasta kustutatud konto"
 
 #~ msgid "Password:"
 #~ msgstr "Parool:"

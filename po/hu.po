@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-04-23 14:32+0000\n"
 "PO-Revision-Date: 2018-06-18 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -75,7 +75,7 @@ msgid "Change Password"
 msgstr "Jelszó megváltoztatása"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Vendég munkamenet"
 
@@ -104,7 +104,7 @@ msgid "Authentication failed"
 msgstr "Sikertelen hitelesítés"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -116,8 +116,8 @@ msgstr "Fiók típusa"
 msgid "Standard User"
 msgstr "Normál felhasználó"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:59
 msgid "Administrator"
 msgstr "Rendszergazda"
 
@@ -133,11 +133,11 @@ msgstr "Felhasználónév"
 msgid "Create User"
 msgstr "Felhasználó létrehozása"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Ez a felhasználónév már foglalt"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "A felhasználónév csak kisbetűket és számokat tartalmazhat, szóközöket nem"
@@ -154,77 +154,78 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "A kijelentkezés után az összes beállítás és adat törlődik."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Automatikus bejelentkezés:"
-
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "A felhasználói fiók eltávolításának visszavonása"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr "Visszavonás"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:69
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Nincs jogosultságod megváltoztatni"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Ezt a jelenleg aktív felhasználó nem módosíthatja"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 "Nem lehet eltávolítani az utolsó rendszergazdai jogosultságokkal rendelkező "
 "felhasználót"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Fiók típus:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Normál"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Nyelv:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kattintson a Nyelv- és helybeállítások módosításához"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
 msgstr "Jelszó megváltoztatása…"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Felhasználói fiók engedélyezése"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Felhasználói fiók letiltása"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "Beállítás fájlból…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Képek"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Válasszon egy képet"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Megnyitás"
 
@@ -277,13 +278,16 @@ msgstr "A fiókom"
 msgid "Other Accounts"
 msgstr "Egyéb fiókok"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Bekapcsolva"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Kikapcsolva"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "A felhasználói fiók eltávolításának visszavonása"
 
 #~ msgid "New Password"
 #~ msgstr "Új jelszó"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-04-23 14:32+0000\n"
 "PO-Revision-Date: 2019-11-22 17:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -71,7 +71,7 @@ msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sessió de convidat"
 
@@ -100,7 +100,7 @@ msgid "Authentication failed"
 msgstr "Ha fallat l'autenticació"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -112,8 +112,8 @@ msgstr "Tipus de compte"
 msgid "Standard User"
 msgstr "Usuari estàndard"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:59
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -129,11 +129,11 @@ msgstr "Nom d'usuari"
 msgid "Create User"
 msgstr "Crea un usuari"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "El nom d'usuari ja existeix"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "El nom d'usuari només pot contenir lletres minúscules i números, sense "
@@ -151,75 +151,76 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Entra automàticament:"
-
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Desfés la darrera supressió de compte d'usuari"
 
 #: src/Views/MainView.vala:53
 msgid "Undo"
 msgstr "Desfés-ho"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:69
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "No teniu permís per canviar això."
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "No podeu canviar aquesta opció per a l'usuari actiu"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "No podeu treure els permisos de l'últim compte administratiu"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Tipus de compte:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Estàndard"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Llengua:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Cliqueu per canviar als paràmetres de la llengua i la regió"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
 msgstr "Canvia la contrasenya…"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Habilita el compte d'usuari"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Inhabilita el compte d'usuari"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Suprimeix"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "Estableix des d'un fitxer…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Imatges"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Trieu una imatge"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Obre"
 
@@ -272,13 +273,16 @@ msgstr "El meu compte"
 msgid "Other Accounts"
 msgstr "Altres comptes"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Inhabilitat"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Desfés la darrera supressió de compte d'usuari"
 
 #~ msgid "Password:"
 #~ msgstr "Contrasenya:"
