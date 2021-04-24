@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-23 14:32+0000\n"
-"PO-Revision-Date: 2021-03-14 20:25+0000\n"
+"PO-Revision-Date: 2021-04-24 13:12+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -164,7 +164,7 @@ msgstr "rückgängig machen"
 #: src/Views/MainView.vala:69
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "»%s« entfernt"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
