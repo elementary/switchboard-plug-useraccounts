@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-23 14:32+0000\n"
-"PO-Revision-Date: 2019-11-22 17:24+0000\n"
+"PO-Revision-Date: 2021-04-27 00:27+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -162,7 +162,7 @@ msgstr "Desfés-ho"
 #: src/Views/MainView.vala:69
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "Suprimit: %s"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
