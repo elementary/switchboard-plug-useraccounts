@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-23 14:32+0000\n"
-"PO-Revision-Date: 2019-12-04 21:25+0000\n"
+"PO-Revision-Date: 2021-05-04 12:26+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fi/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -162,7 +162,7 @@ msgstr "Kumoa"
 #: src/Views/MainView.vala:69
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "Poistettu “%s”"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
