@@ -21,7 +21,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     private ErrorRevealer username_error_revealer;
     private Gtk.Button create_button;
     private Widgets.PasswordEditor pw_editor;
-    private ValidatedEntry username_entry;
+    private Granite.ValidatedEntry username_entry;
 
     public NewUserDialog (Gtk.Window parent) {
         Object (transient_for: parent);
@@ -42,7 +42,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
 
         var username_label = new Granite.HeaderLabel (_("Username"));
 
-        username_entry = new ValidatedEntry ();
+        username_entry = new Granite.ValidatedEntry ();
 
         username_error_revealer = new ErrorRevealer (".");
         username_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
@@ -136,10 +136,8 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
 
         if (username_entry_text == "") {
             username_error_revealer.reveal_child = false;
-            username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
         } else if (username_is_valid && !username_is_taken) {
             username_error_revealer.reveal_child = false;
-            username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
             return true;
         } else {
             if (username_is_taken) {
@@ -149,7 +147,6 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
             }
 
             username_error_revealer.reveal_child = true;
-            username_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
         }
 
         return false;
@@ -162,9 +159,5 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         } else {
             create_button.sensitive = false;
         }
-    }
-
-    private class ValidatedEntry : Gtk.Entry {
-        public bool is_valid { get; set; default = false; }
     }
 }
