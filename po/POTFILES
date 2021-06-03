@@ -11,7 +11,6 @@ src/Views/UserSettingsView.vala
 src/Widgets/Popovers/AvatarPopover.vala
 src/Widgets/CropView.vala
 src/Widgets/ErrorRevealer.vala
-src/Widgets/ListFooter.vala
 src/Widgets/PasswordEditor.vala
 src/Widgets/UserItem.vala
 src/Widgets/UserListBox.vala
