@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2021-05-04 12:26+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr "Peruskäyttäjä"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Ylläpitäjä"
 
@@ -155,14 +155,43 @@ msgstr "Kirjautumisen yhteydessä kaikki tiedot poistetaan."
 msgid "Log In automatically:"
 msgstr "Kirjaudu automaattisesti:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Luo käyttäjätunnus"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Kumoa"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Käyttöoikeuden saaminen ei onnistu"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+"Uutta tiliä ei voi luoda ilman vaadittua järjestemätason käyttöoikeutta."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Tiliä ei voi poistaa ilman vaadittua järjestelmätason käyttöoikeutta."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "Poistettu “%s”"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Poistettu “%s”"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Et voi poistaa omaa käyttäjätunnustasi"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -224,31 +253,6 @@ msgstr "Valitse kuva"
 msgid "Open"
 msgstr "Avaa"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Luo käyttäjätunnus"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Poista käyttäjätunnus ja sen kaikki tiedostot"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "Käyttöoikeuden saaminen ei onnistu"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-"Uutta tiliä ei voi luoda ilman vaadittua järjestemätason käyttöoikeutta."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Et voi poistaa omaa käyttäjätunnustasi"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "Tiliä ei voi poistaa ilman vaadittua järjestelmätason käyttöoikeutta."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Valitse salasana"
@@ -281,6 +285,9 @@ msgstr "Käytössä"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Pois käytöstä"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Poista käyttäjätunnus ja sen kaikki tiedostot"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Kumoa viimeisin käyttäjätunnuksen poistaminen"

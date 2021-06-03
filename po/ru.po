@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2021-04-24 13:12+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Пользователь"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -155,14 +155,45 @@ msgstr "После завершения работы все настройки �
 msgid "Log In automatically:"
 msgstr "Входить автоматически:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Создать аккаунт пользователя"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Не удалось получить разрешение"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+"Новая учетная запись не может быть создана без требуемого системного "
+"разрешения."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+"Учетная запись не может быть удалена без требуемого системного разрешения."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "Удален «%s»"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Удален «%s»"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Вы не можете удалить собственную учётную запись"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -224,33 +255,6 @@ msgstr "Выбрать изображение"
 msgid "Open"
 msgstr "Открыть"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Создать аккаунт пользователя"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Удалить аккаунт пользователя и его данные"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "Не удалось получить разрешение"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-"Новая учетная запись не может быть создана без требуемого системного "
-"разрешения."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Вы не можете удалить собственную учётную запись"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
-"Учетная запись не может быть удалена без требуемого системного разрешения."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Выберите пароль"
@@ -283,6 +287,9 @@ msgstr "Включено"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Отключено"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Удалить аккаунт пользователя и его данные"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Отменить последнее удаление пользователя"

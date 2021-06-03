@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2021-04-24 01:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -109,7 +109,7 @@ msgid "Standard User"
 msgstr "משתמש רגיל"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "מנהל"
 
@@ -147,14 +147,42 @@ msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתוני
 msgid "Log In automatically:"
 msgstr "כניסה אוטומטית:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "יצירת חשבון משתמש"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "לא ניתן לקבל הרשאות"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "„%s” הוסר"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "„%s” הוסר"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -216,30 +244,6 @@ msgstr "בחירת תמונה"
 msgid "Open"
 msgstr "פתיחה"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "יצירת חשבון משתמש"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "הסרת חשבון משתמש לרבות הנתונים"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "לא ניתן לקבל הרשאות"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "נא לבחור ססמה"
@@ -272,6 +276,9 @@ msgstr "פעיל"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "מושבתת"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "הסרת חשבון משתמש לרבות הנתונים"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "ביטול הסרת החשבון האחרון"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2021-06-03 15:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -112,7 +112,7 @@ msgid "Standard User"
 msgstr "Standard bruker"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -151,14 +151,42 @@ msgstr "Når de logger ut, vil alle deres innstillinger og data bli slettet."
 msgid "Log In automatically:"
 msgstr "Logg på automatisk:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Lag brukerkonto"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Angre"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Fikk ikke tilgang"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "En ny konto kan ikke opprettes uten påkrevd systemtilgang."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "Fjernet «%s»"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Fjernet «%s»"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Du kan ikke fjerne din egen brukerkonto"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -221,30 +249,6 @@ msgstr "Velg et bilde"
 msgid "Open"
 msgstr "Åpne"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Lag brukerkonto"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Fjern brukerkonto og dens data"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "Fikk ikke tilgang"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "En ny konto kan ikke opprettes uten påkrevd systemtilgang."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Du kan ikke fjerne din egen brukerkonto"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Velg et passord"
@@ -277,6 +281,9 @@ msgstr "Påslått"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Slått av"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Fjern brukerkonto og dens data"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Angre siste fjerning av brukerkonto"

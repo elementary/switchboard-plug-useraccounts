@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2021-04-24 13:12+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr "Standardbenutzer"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Systemverwalter"
 
@@ -157,14 +157,42 @@ msgstr ""
 msgid "Log In automatically:"
 msgstr "Automatische Anmeldung:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Benutzerkonto erstellen"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "rückgängig machen"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Zugriffsrecht nicht erhalten"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "Neue Konten können nur mit Systemzugriffsrechten angelegt werden."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Konten können nur mit Systemzugriffsrechten gelöscht werden."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "»%s« entfernt"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "»%s« entfernt"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -226,30 +254,6 @@ msgstr "Bild auswählen"
 msgid "Open"
 msgstr "Öffnen"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Benutzerkonto erstellen"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Benutzerkonto und damit verbundene Daten entfernen"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "Zugriffsrecht nicht erhalten"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "Neue Konten können nur mit Systemzugriffsrechten angelegt werden."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Das eigene Benutzerkonto kann nicht entfernt werden"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "Konten können nur mit Systemzugriffsrechten gelöscht werden."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Wähle ein Passwort"
@@ -282,6 +286,9 @@ msgstr "Aktiviert"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Deaktiviert"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Benutzerkonto und damit verbundene Daten entfernen"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Zuletzt gelöschtes Benutzerkonto wiederherstellen"
