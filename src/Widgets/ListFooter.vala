@@ -30,8 +30,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         public signal void hide_undo_notification ();
 
         construct {
-            button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            button_add.tooltip_text = _("Create user account");
+            button_add = new Gtk.Button () {
+                always_show_image = true,
+                image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
+                label = _("Create Account…")
+            };
+            button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
             button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             button_remove.tooltip_text = _("Remove user account and its data");
