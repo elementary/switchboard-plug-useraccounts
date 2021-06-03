@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-04-24 01:16+0000\n"
+"PO-Revision-Date: 2021-06-03 23:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/uk/>\n"
@@ -156,10 +156,8 @@ msgid "Log In automatically:"
 msgstr "Входити автоматично:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Створити обліковий запис користувача"
+msgstr "Створити обліковий запис користувача…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
@@ -183,10 +181,9 @@ msgid "Removed “%s”"
 msgstr "Вилучено «%s»"
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Removed “%s”"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "Вилучено «%s»"
+msgstr "Вилучити «%s» та їхні дані"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
