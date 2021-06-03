@@ -39,7 +39,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
 
             var button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR) {
-                tooltip_text = _("Create user account")
+                tooltip_text = _("Create user account…")
             };
 
             button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
