@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-04-27 00:27+0000\n"
+"PO-Revision-Date: 2021-06-04 13:21+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -156,10 +156,8 @@ msgid "Log In automatically:"
 msgstr "Entra automàticament:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Crea un compte d'usuari"
+msgstr "Crea un compte d'usuari…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
@@ -183,10 +181,9 @@ msgid "Removed “%s”"
 msgstr "Suprimit: %s"
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Removed “%s”"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "Suprimit: %s"
+msgstr "Suprimeix %s i les dades associades"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
