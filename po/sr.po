@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2017-05-06 09:05+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-02-17 13:39+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sr/>\n"
@@ -12,9 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=nplurals=3; plural=(n%10==1 && n%100!=11 ? "
-"0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -46,49 +45,44 @@ msgstr ""
 
 #: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
-msgstr "За измену неких подешавања потребна су администраторска права"
+msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
 #: src/Plug.vala:144
-#, fuzzy
 msgid "Avatar"
-msgstr "Измени аватар"
+msgstr "Аватар"
 
 #: src/Plug.vala:145
-#, fuzzy
 msgid "Full name"
 msgstr "Име и презиме"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Account type"
-msgstr "Врста налога:"
+msgstr "Врста налога"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Language"
-msgstr "Језик:"
+msgstr "Језик"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Сам се пријави:"
+msgstr "Аутоматски се пријави"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Измените лозинку"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Сесија госта"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Исеци и постави"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Изаберите део слике да користите као аватар."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -107,21 +101,20 @@ msgid "Authentication failed"
 msgstr "Потврђивање идентитета није успело"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Откажи"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Врста налога:"
+msgstr "Врста налога"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
 msgstr "Обичан корисник"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -137,14 +130,13 @@ msgstr "Корисничко име"
 msgid "Create User"
 msgstr "Направи корисника"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Корисничко име је већ заузето"
 
-#: src/Dialogs/NewUserDialog.vala:148
-#, fuzzy
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Може да садржи само мала слова, бројеве и без размака"
+msgstr "Корисничко име може да садржи само мала слова, бројеве и без размака"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
@@ -158,113 +150,115 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Када се одјаве, сва њихова подешавања и подаци биће обрисани."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Сам се пријави:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Поништи уклањање последњег корисничког налога"
-
-#: src/Views/MainView.vala:53
-msgid "Undo"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "Немате овлашћење да измените ово"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Ово не можете да измените за тренутно активног корисника"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Не можете уклонити последња овлашћења администратора"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "Врста налога:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Обичан"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Језик:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Кликните да пређете на подешавања језика и локалитета"
-
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/MainView.vala:42
 #, fuzzy
-msgid "Change Password…"
-msgstr "Измените лозинку"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "Укључи налог корисника"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "Искључи налог корисника"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Уклони"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "Постави из датотеке…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "Слике"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "Изаберите слику"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "Отвори"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
+#| msgid "Create user account"
+msgid "Create user account…"
 msgstr "Направи кориснички налог"
 
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
+#: src/Views/MainView.vala:63
+msgid "Undo"
+msgstr "Поништи"
+
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Не могу да добијем овлашћења"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "Нови налог се не може направити без потребних системских овлашћења."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Налог се не може уклонити без потребних системских овлашћења."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
 msgstr "Уклони кориснички налог и његове податке"
 
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "Не можете уклонити ваш лични кориснички налог"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "Немате овлашћење да измените ово"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "Ово не можете да измените за тренутно активног корисника"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Не можете уклонити последња овлашћења администратора"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "Врста налога:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "Обичан"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "Језик:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Кликните да пређете на подешавања језика и локалитета"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "Измени лозинку…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "Укључи налог корисника"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Искључи налог корисника"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "Уклони"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "Постави из датотеке…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "Слике"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "Изаберите слику"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "Отвори"
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Измените лозинку"
+msgstr "Изаберите лозинку"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:55
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Потврди нову лозинку"
+msgstr "Потврди лозинку"
 
 #: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
@@ -282,13 +276,16 @@ msgstr "Мој налог"
 msgid "Other Accounts"
 msgstr "Остали налози"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Укључен"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
-msgstr "Искључено"
+msgstr "Искључен"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Поништи уклањање последњег корисничког налога"
 
 #~ msgid "Password:"
 #~ msgstr "Лозинка:"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-05-18 21:11+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-03-05 13:36+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/user-"
 "accounts-plug-extra/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -52,7 +52,7 @@ msgstr "Hesap oluşturmanın güvenilirliği geliştirildi"
 
 #: data/useraccounts.appdata.xml.in:22
 msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Hesap eklerken veya kaldırırken isteğe bağlı olarak  izin istenecek"
+msgstr "Hesap eklerken veya kaldırırken isteğe bağlı olarak izin istenecek"
 
 #: data/useraccounts.appdata.xml.in:30
 msgid "Show in sidebar if an account is disabled"

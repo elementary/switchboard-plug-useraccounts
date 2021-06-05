@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-01-25 15:08+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-04-24 07:53+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -68,7 +68,7 @@ msgid "Change Password"
 msgstr "パスワードを変更"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "ゲストセッション"
 
@@ -97,7 +97,7 @@ msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -109,8 +109,8 @@ msgstr "アカウントの種類"
 msgid "Standard User"
 msgstr "標準ユーザー"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "管理者"
 
@@ -126,11 +126,11 @@ msgstr "ユーザー名"
 msgid "Create User"
 msgstr "ユーザーを作成"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "ユーザー名はすでに使われています"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "ユーザー名は小文字と数字のみを含むことができます。空白は使用しないでください"
@@ -147,101 +147,106 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "ログアウトすると、設定やデータは削除されます。"
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "自動的にログイン:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "最後に行ったユーザーアカウントの削除を取り消します"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "ユーザーアカウントを追加します"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "元に戻す"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "これを変更する権限がありません"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "現在アクティブなユーザーのため変更することはできません"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "最後の管理者の権限を削除することはできません"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "アカウントの種類:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "標準"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "言語:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "言語と地域の設定を変更する場合はクリックしてください"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "パスワードを変更…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "アカウントを有効にする"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "アカウントを無効にする"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "削除"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "ファイルから設定…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "画像"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "画像を選択"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "開く"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "ユーザーアカウントを追加します"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "ユーザーアカウントとデータを削除します"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "権限を取得できません"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr "必要なシステム権限がないと、新しいアカウントを作成できません。"
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "必要なシステム権限がないと、アカウントを削除できません。"
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr "“%s” を削除しました"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "“%s” を削除しました"
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "自分自身のユーザーアカウントは削除できません"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "必要なシステム権限がないと、アカウントを削除できません。"
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "これを変更する権限がありません"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "現在アクティブなユーザーのため変更することはできません"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "最後の管理者の権限を削除することはできません"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "アカウントの種類:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "標準"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "言語:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "言語と地域の設定を変更する場合はクリックしてください"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "パスワードを変更…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "アカウントを有効にする"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "アカウントを無効にする"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "削除"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "ファイルから設定…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "画像"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "画像を選択"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "開く"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -268,13 +273,19 @@ msgstr "自分のアカウント"
 msgid "Other Accounts"
 msgstr "ほかのアカウント"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "有効"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "無効"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "ユーザーアカウントとデータを削除します"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "最後に行ったユーザーアカウントの削除を取り消します"
 
 #~ msgid "Password:"
 #~ msgstr "パスワード:"

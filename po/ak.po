@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2017-06-19 14:11+0000\n"
 "Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -67,7 +67,7 @@ msgid "Change Password"
 msgstr ""
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr ""
 
@@ -96,7 +96,7 @@ msgid "Authentication failed"
 msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Gyae"
 
@@ -108,8 +108,8 @@ msgstr ""
 msgid "Standard User"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr ""
 
@@ -125,11 +125,11 @@ msgstr ""
 msgid "Create User"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 
@@ -143,100 +143,102 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr ""
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
+#: src/Views/MainView.vala:42
+msgid "Create user account…"
 msgstr ""
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr ""
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr ""
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, c-format
+msgid "Remove “%s” and their data"
+msgstr ""
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr ""
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr ""
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
 msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
@@ -264,10 +266,10 @@ msgstr ""
 msgid "Other Accounts"
 msgstr ""
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr ""
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr ""

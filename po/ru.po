@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-04-12 06:10+0000\n"
-"Last-Translator: Stas <SedovSG@yandex.ru>\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-04-24 13:12+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ru/>\n"
 "Language: ru\n"
@@ -13,13 +13,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Для изменения пользовательских данных требуется аутентификация"
+msgstr "Необходима аутентификация, чтобы изменить данные пользователя"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -29,8 +29,8 @@ msgstr "Учётные записи"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
-"Управление учетными записями, настройка имен пользователей, паролей и "
-"фотографий"
+"Управление разрешениями учетной записи, а также настройка имен "
+"пользователей, паролей и фотографий"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -72,17 +72,17 @@ msgid "Change Password"
 msgstr "Изменить пароль"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Гостевой сеанс"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Обрезка и положение"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Выберите часть изображения для использования в качестве аватара."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
@@ -101,9 +101,9 @@ msgid "Authentication failed"
 msgstr "Ошибка аутентификации"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "Отменить"
 
 #: src/Dialogs/NewUserDialog.vala:31
 msgid "Account Type"
@@ -113,8 +113,8 @@ msgstr "Тип пользователя"
 msgid "Standard User"
 msgstr "Пользователь"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -130,11 +130,11 @@ msgstr "Имя пользователя"
 msgid "Create User"
 msgstr "Создать пользователя"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Имя пользователя уже занято"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Имя пользователя может содержать только строчные буквы и цифры, без пробелов"
@@ -151,101 +151,109 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "После завершения работы все настройки и данные будут удалены."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Входить автоматически:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Отменить последнее удаление пользователя"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Создать аккаунт пользователя"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "У вас недостаточно прав для изменения"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Это не может быть изменено для активного пользователя"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Вы не можете удалить последние привилегии администратора"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "Тип пользователя:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Стандартный"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Язык:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Нажать, чтобы изменить язык и локальные настройки"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "Изменить пароль…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "Включить пользователя"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "Отключить пользователя"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Удалить"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "Выбрать из файла…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "Изображения"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "Выбрать изображение"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "Открыть"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Создать аккаунт пользователя"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Удалить аккаунт пользователя и его данные"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Не удалось получить разрешение"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
+"Новая учетная запись не может быть создана без требуемого системного "
+"разрешения."
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+"Учетная запись не может быть удалена без требуемого системного разрешения."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr "Удален «%s»"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Удален «%s»"
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "Вы не можете удалить собственную учётную запись"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "У вас недостаточно прав для изменения"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "Это не может быть изменено для активного пользователя"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Вы не можете удалить последние привилегии администратора"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "Тип пользователя:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "Стандартный"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "Язык:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Нажать, чтобы изменить язык и локальные настройки"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "Изменить пароль…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "Включить пользователя"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Отключить пользователя"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "Выбрать из файла…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "Изображения"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "Выбрать изображение"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "Открыть"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -272,13 +280,19 @@ msgstr "Моя учётная запись"
 msgid "Other Accounts"
 msgstr "Другие учётные записи"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Включено"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Отключено"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Удалить аккаунт пользователя и его данные"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Отменить последнее удаление пользователя"
 
 #~ msgid "Password:"
 #~ msgstr "Пароль:"

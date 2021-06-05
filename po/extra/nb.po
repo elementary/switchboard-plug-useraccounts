@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2019-06-27 14:13+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-05-06 05:14+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -29,7 +29,7 @@ msgstr "Identitetsbekreftelse kreves for å endre brukerdata"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "Brukerkontoinnstillinger"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 #: data/useraccounts.appdata.xml.in:13 data/useraccounts.appdata.xml.in:23
 #: data/useraccounts.appdata.xml.in:33
 msgid "Updated translations"
-msgstr ""
+msgstr "Oppdaterte oversettelser"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Show more accurate reasons for locked settings"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2016-08-07 12:43+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,7 +74,7 @@ msgid "Change Password"
 msgstr "Смяна на паролата"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Сесия за гости"
 
@@ -103,7 +103,7 @@ msgid "Authentication failed"
 msgstr "Неуспешно удостоверяване"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Отказ"
 
@@ -116,8 +116,8 @@ msgstr "Вид профил:"
 msgid "Standard User"
 msgstr "Стандартен потребител"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -133,11 +133,11 @@ msgstr "Потребителско име"
 msgid "Create User"
 msgstr "Създаване на потребител"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Потребителското име вече е заето"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Може да съдържа само малки букви и цифри, без интервал"
@@ -154,102 +154,107 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "След излизане всички потребителски настройки и данни ще бъдат изтрити."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Автоматично влизане:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Отмяна на последното премахване на профил"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Създаване на профил"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Премахване на потребителския профил и неговите данни"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Не можете да премахнете собствения си потребителски профил"
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Нямате права да променяте това"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Не можете да промените това за текущо активния потребител"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Не можете да премахнете правомощията на последния администратор"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Вид профил:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Стандартен"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Език:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Щракнете за отиване към настройките на езика"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 #, fuzzy
 msgid "Change Password…"
 msgstr "Смяна на паролата"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Активиране на потребителския профил"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Деактивиране на потребителския профил"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Премахване"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "Задаване от файл..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Изображения"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Избиране на изображение"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Отваряне"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Създаване на профил"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Премахване на потребителския профил и неговите данни"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Не можете да премахнете собствения си потребителски профил"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
@@ -278,13 +283,16 @@ msgstr "Моят профил"
 msgid "Other Accounts"
 msgstr "Други профили"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Включено"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Изключено"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Отмяна на последното премахване на профил"
 
 #~ msgid "Password:"
 #~ msgstr "Парола:"

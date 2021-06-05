@@ -19,9 +19,6 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        private Hdy.Avatar avatar;
-        private Gtk.Label full_name_label;
-        private Gtk.Label username_label;
         private Gtk.Revealer description_revealer;
 
         public weak Act.User user { get; construct; }
@@ -32,29 +29,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
         }
 
-        public string user_name {
-            set {
-                username_label.label = GLib.Markup.printf_escaped ("<small>%s</small>", value);
-            }
-        }
-
         public UserItem (Act.User user) {
             Object (user: user);
         }
 
         construct {
-            full_name_label = new Gtk.Label ("") {
+            var full_name_label = new Gtk.Label ("") {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END
             };
             full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-            username_label = new Gtk.Label ("") {
+            var username_label = new Gtk.Label ("") {
                 halign = Gtk.Align.START,
-                valign = Gtk.Align.START
+                valign = Gtk.Align.START,
+                ellipsize = Pango.EllipsizeMode.END
             };
-            username_label.use_markup = true;
-            username_label.ellipsize = Pango.EllipsizeMode.END;
+            username_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
             var description_label = new Gtk.Label ("<small>(%s)</small>".printf (_("Administrator"))) {
                 halign = Gtk.Align.START,
@@ -65,7 +56,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             description_revealer = new Gtk.Revealer ();
             description_revealer.add (description_label);
 
-            avatar = new Hdy.Avatar (32, user.real_name, true) {
+            var avatar = new Hdy.Avatar (32, user.real_name, true) {
                 margin = 6
             };
             avatar.set_image_load_func (avatar_image_load_func);
@@ -94,11 +85,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             add (grid);
 
             user.bind_property ("account-type", this, "account-type", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("icon-file", this, "icon-file", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("real-name", avatar, "text", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("user-name", this, "user-name", GLib.BindingFlags.SYNC_CREATE);
+            user.bind_property ("user-name", username_label, "label", GLib.BindingFlags.SYNC_CREATE);
 
             user.changed.connect (() => {
                 avatar.set_image_load_func (avatar_image_load_func);

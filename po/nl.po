@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2020-01-04 11:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -70,7 +70,7 @@ msgid "Change Password"
 msgstr "Verander wachtwoord"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Gastsessie"
 
@@ -100,7 +100,7 @@ msgid "Authentication failed"
 msgstr "Verificatie mislukt"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -112,8 +112,8 @@ msgstr "Gebruikerstype"
 msgid "Standard User"
 msgstr "Standaard gebruiker"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Beheerder"
 
@@ -129,11 +129,11 @@ msgstr "Gebruikersnaam"
 msgid "Create User"
 msgstr "Maak gebruiker"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Gebruikersnaam is reeds in gebruik"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Gebruikersnaam mag alleen kleine letters en cijfers bevatten, zonder spaties"
@@ -152,106 +152,111 @@ msgstr ""
 "Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
 "worden."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Automatisch inloggen:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Ongedaan maken laatste verwijdering gebruikersaccount"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Maak nieuwe gebruikersaccount"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "U heeft geen rechten om dit te veranderen"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "U kunt dit niet veranderen voor de huidige actieve gebruiker"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr ""
-"U kunt niet de beheerdersrechten verwijderen van het laatste account die "
-"deze privileges heeft"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "Gebruikerstype:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Standaard"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Taal:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "Wachtwoord veranderen…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "Gebruikersaccount activeren"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "Gebruikersaccount uitschakelen"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Verwijder"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "Instellen uit bestand…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "Afbeeldingen"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "Kies een afbeelding"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "Open"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Maak nieuwe gebruikersaccount"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Verwijder gebruikersaccount en zijn gegevens"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "Niet in staat om toestemming te krijgen"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Een nieuwe gebruiker kan niet worden aangemaakt zonder de vereiste "
 "systeemrechten."
 
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
-
-#: src/Widgets/ListFooter.vala:120
+#: src/Views/MainView.vala:116
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Verwijder gebruikersaccount en zijn gegevens"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
+
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "U heeft geen rechten om dit te veranderen"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "U kunt dit niet veranderen voor de huidige actieve gebruiker"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr ""
+"U kunt niet de beheerdersrechten verwijderen van het laatste account die "
+"deze privileges heeft"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "Gebruikerstype:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "Standaard"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "Taal:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "Wachtwoord veranderen…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "Gebruikersaccount activeren"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Gebruikersaccount uitschakelen"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "Verwijder"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "Instellen uit bestand…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "Kies een afbeelding"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "Open"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -278,13 +283,16 @@ msgstr "Mijn account"
 msgid "Other Accounts"
 msgstr "Andere accounts"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Uitgeschakeld"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Ongedaan maken laatste verwijdering gebruikersaccount"
 
 #~ msgid "Password:"
 #~ msgstr "Wachtwoord:"

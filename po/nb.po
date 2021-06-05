@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2019-06-27 14:13+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-06-03 15:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:43+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -54,26 +54,23 @@ msgid "Full name"
 msgstr "Fullt navn"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Account type"
-msgstr "Kontotype:"
+msgstr "Kontotype"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Language"
-msgstr "Språk:"
+msgstr "Språk"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Logg på automatisk:"
+msgstr "Logg på automatisk"
 
 #: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Endre passord"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Gjesteøkt"
 
@@ -102,7 +99,7 @@ msgid "Authentication failed"
 msgstr "Autentisering mislyktes"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -114,8 +111,8 @@ msgstr "Kontotype"
 msgid "Standard User"
 msgstr "Standard bruker"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -131,11 +128,11 @@ msgstr "Brukernavn"
 msgid "Create User"
 msgstr "Opprett bruker"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Brukernavn er opptatt"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Kan bare inneholde små bokstaver, tall og ikke tomrom"
 
@@ -150,102 +147,107 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Når de logger ut, vil alle deres innstillinger og data bli slettet."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Logg på automatisk:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Angre siste fjerning av brukerkonto"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Lag brukerkonto"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Angre"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Fikk ikke tilgang"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "En ny konto kan ikke opprettes uten påkrevd systemtilgang."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr "Fjernet «%s»"
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Fjernet «%s»"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Du kan ikke fjerne din egen brukerkonto"
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Du har ikke rettigheter til å endre dette"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Du kan ikke endre dette for den aktive bruker"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Du kan ikke fjerne den siste administrators rettigheter"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Kontotype:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Språk:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klikk for å endre språk og innstillinger for region"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
 msgstr "Endre passord…"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Skru på brukerkonto"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 #, fuzzy
 msgid "Disable User Account"
 msgstr "Steng brukerkonto"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Fjern"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "Sett fra fil…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Bilder"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Velg et bilde"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Åpne"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Lag brukerkonto"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Fjern brukerkonto og dens data"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Du kan ikke fjerne din egen brukerkonto"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -272,13 +274,19 @@ msgstr "Min konto"
 msgid "Other Accounts"
 msgstr "Andre kontoer"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Påslått"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Slått av"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Fjern brukerkonto og dens data"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Angre siste fjerning av brukerkonto"
 
 #~ msgid "Password:"
 #~ msgstr "Passord:"

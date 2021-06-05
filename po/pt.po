@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-05-01 03:10+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-04-24 01:16+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -71,7 +71,7 @@ msgid "Change Password"
 msgstr "Alterar palavra-passe"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sessão de Convidado"
 
@@ -100,7 +100,7 @@ msgid "Authentication failed"
 msgstr "Autenticação falhou"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -112,8 +112,8 @@ msgstr "Tipo de conta"
 msgid "Standard User"
 msgstr "Utilizador Padrão"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -129,11 +129,11 @@ msgstr "Nome de utilizador"
 msgid "Create User"
 msgstr "Criar Utilizador"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Nome de utilizador já foi usado"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "O nome de utilizador só pode conter letras minúsculas e números, sem espaços"
@@ -152,102 +152,107 @@ msgstr ""
 "Quando for terminada a sessão, todas as definições e dados relativos a essa "
 "sessão serão eliminados."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Iniciar sessão automaticamente:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Desfazer última remoção da conta do utilizador"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Criar conta de utilizador"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Desfazer"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "Não tem permissão para modificar isto"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Não pode alterar isto para o utilizador ativo agora"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Não pode remover os privilégios do último administrador"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "Tipo de conta:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Padrão"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Idioma:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Clique para ir a Definições de Idioma e Região"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "Alterar palavra-passe…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "Ativar Conta de Utilizador"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "Desativar Conta de Utilizador"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Remover"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "Definir a partir de Ficheiro…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "Imagens"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "Escolha uma imagem"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "Abrir"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Criar conta de utilizador"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Remover conta de utilizador e dados associados"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "Incapaz de adquirir permissão"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Uma nova conta não pode ser criada sem a permissão necessária do sistema."
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr "Removido \"%s\""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Removed “%s”"
+msgid "Remove “%s” and their data"
+msgstr "Removido \"%s\""
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "Não pode remover a sua própria conta"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "Não tem permissão para modificar isto"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "Não pode alterar isto para o utilizador ativo agora"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Não pode remover os privilégios do último administrador"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "Tipo de conta:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "Padrão"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "Idioma:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Clique para ir a Definições de Idioma e Região"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "Alterar palavra-passe…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "Ativar Conta de Utilizador"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Desativar Conta de Utilizador"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "Remover"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "Definir a partir de Ficheiro…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "Imagens"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "Escolha uma imagem"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "Abrir"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -274,13 +279,19 @@ msgstr "A Minha Conta"
 msgid "Other Accounts"
 msgstr "Outras Contas"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Ativo"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Desativado"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Remover conta de utilizador e dados associados"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Desfazer última remoção da conta do utilizador"
 
 #~ msgid "Password:"
 #~ msgstr "Palavra-passe:"

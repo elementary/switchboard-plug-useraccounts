@@ -20,9 +20,10 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class MainView : Gtk.Paned {
         private UserListBox userlist;
+        private Granite.Widgets.Toast toast;
+        private Gtk.Button button_remove;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
-        private ListFooter footer;
         private GuestSettingsView guest;
 
         public MainView () {
@@ -37,19 +38,28 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             scrolled_window.expand = true;
             scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
 
-            footer = new ListFooter ();
+            var button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR) {
+                tooltip_text = _("Create user account…")
+            };
+
+            button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+
+            var actionbar = new Gtk.ActionBar ();
+            actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+            actionbar.add (button_add);
+            actionbar.add (button_remove);
 
             var sidebar = new Gtk.Grid ();
             sidebar.orientation = Gtk.Orientation.VERTICAL;
             sidebar.add (scrolled_window);
-            sidebar.add (footer);
+            sidebar.add (actionbar);
 
             guest = new GuestSettingsView ();
 
             content = new Gtk.Stack ();
             content.add_named (guest, "guest_session");
 
-            var toast = new Granite.Widgets.Toast (_("Undo last user account removal"));
+            toast = new Granite.Widgets.Toast ("");
             toast.set_default_action (_("Undo"));
 
             var overlay = new Gtk.Overlay ();
@@ -65,22 +75,92 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 update ();
             }
 
-            footer.send_undo_notification.connect (() => {
+            button_add.clicked.connect (() => {
+                var permission = get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
+                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                                _("Unable to acquire permission"),
+                                _("A new account cannot be created without the required system permission."),
+                                "dialog-password",
+                                Gtk.ButtonsType.CLOSE
+                            ) {
+                                badge_icon = new ThemedIcon ("dialog-error"),
+                                transient_for = (Gtk.Window) get_toplevel ()
+                            };
+                            message_dialog.show_error_details (e.message);
+                            message_dialog.run ();
+                            message_dialog.destroy ();
+                        }
+
+                        return;
+                    }
+                }
+
+                var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_toplevel ());
+                new_user.present ();
+            });
+
+            button_remove.clicked.connect (() => {
+                var permission = get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
+                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                                _("Unable to acquire permission"),
+                                _("An account cannot be removed without the required system permission."),
+                                "dialog-password",
+                                Gtk.ButtonsType.CLOSE
+                            ) {
+                                badge_icon = new ThemedIcon ("dialog-error"),
+                                transient_for = (Gtk.Window) get_toplevel ()
+                            };
+                            message_dialog.show_error_details (e.message);
+                            message_dialog.run ();
+                            message_dialog.destroy ();
+                        }
+
+                        return;
+                    }
+                }
+
+                var selected_user = ((UserItem) userlist.get_selected_row ()).user;
+                mark_removal (selected_user);
+
+                userlist.update_ui ();
+                userlist.select_row (userlist.get_row_at_index (0));
+
+                toast.title = _("Removed “%s”").printf (selected_user.get_user_name ());
                 toast.send_notification ();
             });
 
-            footer.hide_undo_notification.connect (() => {
-                toast.reveal_child = false;
+            get_permission ().notify["allowed"].connect (() => {
+                if (!get_permission ().allowed) {
+                    toast.reveal_child = false;
+                }
             });
 
             toast.default_action.connect (() => {
-                footer.undo_user_removal ();
+                undo_removal ();
+                userlist.update_ui ();
             });
         }
 
         private void update () {
             get_usermanager ().user_added.connect (add_user_settings);
-            get_usermanager ().user_removed.connect (remove_user_settings);
+
+            get_usermanager ().user_removed.connect ((user) => {
+                remove_user_settings (user);
+
+                if (get_removal_list ().last () == null) {
+                    toast.reveal_child = false;
+                }
+            });
 
             userlist = new UserListBox ();
             userlist.row_selected.connect (userlist_selected);
@@ -90,13 +170,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             scrolled_window.add (userlist);
-
-            footer.removal_changed.connect (userlist.update_ui);
-
-            footer.unfocused.connect (() => {
-                content.set_visible_child_name (get_current_user ().get_user_name ());
-                userlist.select_row (userlist.get_row_at_index (1));
-            });
 
             guest.guest_switch_changed.connect (() => {
                 userlist.update_guest ();
@@ -121,11 +194,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Act.User? user = null;
             if (user_item != null && user_item.name != "guest_session") {
                 user = ((UserItem)user_item).user;
-                content.set_visible_child_name (user.get_user_name ());
-                footer.set_selected_user (user);
+                var username = user.get_user_name ();
+
+                content.set_visible_child_name (username);
+
+                if (user != get_current_user () && !is_last_admin (user) && !user.get_automatic_login ()) {
+                    button_remove.sensitive = true;
+                    button_remove.tooltip_text = _("Remove “%s” and their data").printf (username);
+                } else {
+                    button_remove.sensitive = false;
+                    button_remove.tooltip_text = _("You cannot remove your own user account");
+                }
             } else if (user_item != null && user_item.name == "guest_session") {
                 content.set_visible_child_name ("guest_session");
-                footer.set_selected_user (null);
+                button_remove.sensitive = false;
+                button_remove.tooltip_text = "";
             }
         }
     }

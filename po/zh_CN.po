@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -67,7 +67,7 @@ msgid "Change Password"
 msgstr "更改密码"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "访客会话"
 
@@ -96,7 +96,7 @@ msgid "Authentication failed"
 msgstr "认证失败"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "取消"
 
@@ -108,8 +108,8 @@ msgstr "账户类型"
 msgid "Standard User"
 msgstr "标准用户"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "管理员"
 
@@ -125,11 +125,11 @@ msgstr "用户名"
 msgid "Create User"
 msgstr "创建用户"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "用户名已存在"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "用户名只能包含无空格的小写字母和数字"
 
@@ -143,101 +143,106 @@ msgstr "访客账户允许他人使用一个无密码的临时账户。"
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "注销后，其设置和用户数据将会被删除。"
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "自动登录："
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "还原上一次删除的用户账户"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "创建用户账户"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "撤销"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "您没有权限更改此项内容"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "正在使用中的账户无法更改此项"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "您不能移除上一个管理员的权限"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "账户类型："
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "标准账户"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "账户语言："
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "点击跳转语言和区域设置"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "更改密码…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "启用账户"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "禁用账户"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "删除"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "选择图片…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "图片"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "选择图片"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "打开"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "创建用户账户"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "删除用户账户和使用数据"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "无法获取权限"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr "创建新账户需要管理员权限。"
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "删除账户需要管理员权限。"
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "删除用户账户和使用数据"
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "您不能删除自己的用户账户"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "删除账户需要管理员权限。"
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "您没有权限更改此项内容"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "正在使用中的账户无法更改此项"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "您不能移除上一个管理员的权限"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "账户类型："
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "标准账户"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "账户语言："
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "点击跳转语言和区域设置"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "更改密码…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "启用账户"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "禁用账户"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "删除"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "选择图片…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "图片"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "选择图片"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "打开"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -264,13 +269,16 @@ msgstr "我的账户"
 msgid "Other Accounts"
 msgstr "其他账户"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "已启用"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "已禁用"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "还原上一次删除的用户账户"
 
 #~ msgid "Password:"
 #~ msgstr "网络密码："

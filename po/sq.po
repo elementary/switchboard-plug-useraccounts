@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2019-10-17 17:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Albanian <https://l10n.elementary.io/projects/switchboard/"
@@ -74,7 +74,7 @@ msgid "Change Password"
 msgstr "Ndrysho fjalëkalimin"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Seksion si i ftuar"
 
@@ -103,7 +103,7 @@ msgid "Authentication failed"
 msgstr "Identifikimi dështoi"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Anulo"
 
@@ -116,8 +116,8 @@ msgstr "Tipi i llogarisë:"
 msgid "Standard User"
 msgstr "Prëdorues standard"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -133,11 +133,11 @@ msgstr "Emri i përdoruesit"
 msgid "Create User"
 msgstr "Krijo përdoruesin"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Emri i përdoruesit është tashmë i zënë"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Mund të përmbajë vetëm germa të vogla, numra dhe jo hapësira"
@@ -154,102 +154,107 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr ""
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Anulo heqjen e fundit të llogarisë së përdoruesit"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Krijo llogari përdoruesi"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Hiqe llogarinë e përdoruesit dhe të dhënat e saja"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Nuk mund të heqësh llogarinë tënde të përdoruesit"
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Nuk mund ta ndryshoni këtë për përdoruesin aktualisht aktiv"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nuk mund të hiqni të drejtat e administratorit e fundit"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Tipi i llogarisë:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "Gjuha:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 #, fuzzy
 msgid "Change Password…"
 msgstr "Ndrysho fjalëkalimin"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Aktivo llogarinë e përdoruesin"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Çaktivizo llogarinë e përdoruesit"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "Hiqe"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "Imazhet"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "Zgjidh një foto"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Hap"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Krijo llogari përdoruesi"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Hiqe llogarinë e përdoruesit dhe të dhënat e saja"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Nuk mund të heqësh llogarinë tënde të përdoruesit"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
@@ -278,13 +283,16 @@ msgstr "Llogaria ime"
 msgid "Other Accounts"
 msgstr "Llogaritë e tjera"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr ""
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Çaktivizuar"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Anulo heqjen e fundit të llogarisë së përdoruesit"
 
 #~ msgid "Password:"
 #~ msgstr "Fjalëkalimi:"

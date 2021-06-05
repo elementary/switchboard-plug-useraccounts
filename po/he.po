@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
-"PO-Revision-Date: 2020-03-26 23:09+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-06-04 13:21+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/he/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -67,7 +67,7 @@ msgid "Change Password"
 msgstr "החלפת הססמה"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "הפעלת אורח"
 
@@ -96,7 +96,7 @@ msgid "Authentication failed"
 msgstr "האימות נכשל"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -108,8 +108,8 @@ msgstr "סוג החשבון"
 msgid "Standard User"
 msgstr "משתמש רגיל"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "מנהל"
 
@@ -125,11 +125,11 @@ msgstr "שם משתמש"
 msgid "Create User"
 msgstr "יצירת משתמש"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "שם המשתמש כבר תפוס"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנות, מספרים וללא רווחים"
 
@@ -143,101 +143,103 @@ msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבו�
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתונים יימחקו."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "כניסה אוטומטית:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "ביטול הסרת החשבון האחרון"
+#: src/Views/MainView.vala:42
+msgid "Create user account…"
+msgstr "יצירת חשבון משתמש…"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "אין לך הרשאה לשנות את זה"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "סוג החשבון:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "רגיל"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "שפה:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "החלפת הססמה…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "הפעלת חשבון משתמש"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "השבתת חשבון משתמש"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "הסרה"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "הגדרה מקובץ…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "תמונות"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "בחירת תמונה"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "פתיחה"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "יצירת חשבון משתמש"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "הסרת חשבון משתמש לרבות הנתונים"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "לא ניתן לקבל הרשאות"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr "„%s” הוסר"
+
+#: src/Views/MainView.vala:203
+#, c-format
+msgid "Remove “%s” and their data"
+msgstr "להסיר את „%s” ואת הנתונים שלהם"
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "אין לך הרשאה לשנות את זה"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "סוג החשבון:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "רגיל"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "שפה:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "החלפת הססמה…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "הפעלת חשבון משתמש"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "השבתת חשבון משתמש"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "הסרה"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "הגדרה מקובץ…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "תמונות"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "בחירת תמונה"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "פתיחה"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -264,13 +266,19 @@ msgstr "החשבון שלי"
 msgid "Other Accounts"
 msgstr "חשבונות אחרים"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "פעיל"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "מושבתת"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "הסרת חשבון משתמש לרבות הנתונים"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "ביטול הסרת החשבון האחרון"
 
 #~ msgid "Password:"
 #~ msgstr "ססמה:"

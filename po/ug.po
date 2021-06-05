@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -72,7 +72,7 @@ msgid "Change Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "مېھمان"
 
@@ -101,7 +101,7 @@ msgid "Authentication failed"
 msgstr "سالاھىيەت دەلىللەش مەغلۇپ بولدى"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
@@ -114,8 +114,8 @@ msgstr "ھېسابات تىپى:"
 msgid "Standard User"
 msgstr "ئۆلچەملىك ئابونت"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "باشقۇرغۇچى"
 
@@ -131,11 +131,11 @@ msgstr "ئابونت ئىسمى"
 msgid "Create User"
 msgstr "ئابونت قۇرۇش"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "ئابونت ئىسمى ئىشلىتىلىپ بولغان"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "پەقەت كىچىك ھەرپ ۋە سانلارنى كىرگۈزەلەيسىز"
@@ -151,102 +151,107 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "چىكىنگەن چاغدا، ئۇلارنىڭ بارلىق تەڭشەكلىرى ۋە ئۇچۇرلىرى ئۆچۈرىلىدۇ."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "ئاپتوماتىك كىرىش:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "ئالدىنقى قىتىم ئۆچۈرۈلگەن ئابونت ھىساۋاتىنى ئەسلىگە كەلتۈرۈش"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "ئابونت ھىساۋاتى قۇرۇش"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "ئابونت ھىساۋاتى ۋە ئۇچۇرلىرىنى ئۆچۈرۈش"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "ئۆزىڭىزنىڭ ھىساۋاتىڭىزنى ئۆچۈرەلمەيسىز"
+
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "ھازىر ئىشلىتىۋاتقان ئابونت بۇ تۈرنى ئۆزگەرتەلمەيدۇ"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "سىز ئالدىنقى باشقۇرغۇچىنىڭ ھوقۇقىنى ئۆچۈرەلمەيسىز"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "ھېسابات تىپى:"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "ئۆلچەملىك"
 
-#: src/Views/UserSettingsView.vala:104
+#: src/Views/UserSettingsView.vala:110
 msgid "Language:"
 msgstr "تىل:"
 
-#: src/Views/UserSettingsView.vala:169
+#: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
 msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش ئۈچۈن بىسىڭ"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:199
 #, fuzzy
 msgid "Change Password…"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Views/UserSettingsView.vala:341
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "ئابونت ھىساۋاتىنى قوزغىتىش"
 
-#: src/Views/UserSettingsView.vala:345
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "ئابونت ھىساۋاتىنى چەكلەش"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:35
+#: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
 msgstr "ئۆچۈرۈش"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:41
 msgid "Set from File…"
 msgstr "ھۆججەتتىن تەڭشەش...."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:63
+#: src/Widgets/Popovers/AvatarPopover.vala:66
 msgid "Images"
 msgstr "رەسىملەر"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:71
+#: src/Widgets/Popovers/AvatarPopover.vala:74
 msgid "Select an image"
 msgstr "رەسىم تاللاش"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "ئىچىش"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "ئابونت ھىساۋاتى قۇرۇش"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "ئابونت ھىساۋاتى ۋە ئۇچۇرلىرىنى ئۆچۈرۈش"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "ئۆزىڭىزنىڭ ھىساۋاتىڭىزنى ئۆچۈرەلمەيسىز"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy
@@ -275,13 +280,16 @@ msgstr "ھىساۋاتىم"
 msgid "Other Accounts"
 msgstr "باشقا ھىساۋاتلار"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "قوزغىتىلغان"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "چەكلەنگەن"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "ئالدىنقى قىتىم ئۆچۈرۈلگەن ئابونت ھىساۋاتىنى ئەسلىگە كەلتۈرۈش"
 
 #~ msgid "Password:"
 #~ msgstr "پارول"

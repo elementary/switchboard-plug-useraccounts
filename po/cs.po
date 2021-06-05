@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-03 21:34+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -69,7 +69,7 @@ msgid "Change Password"
 msgstr "Změna hesla"
 
 #: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
-#: src/Widgets/UserListBox.vala:41
+#: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sezení hosta"
 
@@ -98,7 +98,7 @@ msgid "Authentication failed"
 msgstr "Ověření se nezdařilo"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Cancel"
 msgstr "Storno"
 
@@ -110,8 +110,8 @@ msgstr "Typ účtu"
 msgid "Standard User"
 msgstr "Normální uživatel"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:98
-#: src/Widgets/UserItem.vala:66
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Správce"
 
@@ -127,11 +127,11 @@ msgstr "Uživatelské jméno"
 msgid "Create User"
 msgstr "Vytvořit uživatele"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
 msgstr "Uživatelské jméno už existuje"
 
-#: src/Dialogs/NewUserDialog.vala:148
+#: src/Dialogs/NewUserDialog.vala:146
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
@@ -147,101 +147,106 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Jakmile se odhlásí, budou odstraněna všechna jejich nastavení a data."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:173
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
 msgstr "Přihlásit automaticky:"
 
-#: src/Views/MainView.vala:52
-msgid "Undo last user account removal"
-msgstr "Vrátit odstranění posledního uživatelského účtu"
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Vytvořit uživatelský účet"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Zpět"
 
-#: src/Views/UserSettingsView.vala:53
-msgid "You do not have permission to change this"
-msgstr "Nemáte oprávnění k této změně"
-
-#: src/Views/UserSettingsView.vala:54
-msgid "You cannot change this for the currently active user"
-msgstr "Pro aktuálně aktivního uživatele toto nelze změnit"
-
-#: src/Views/UserSettingsView.vala:55
-msgid "You cannot remove the last administrator's privileges"
-msgstr "Nemůžete odstranit oprávnění posledního administrátora"
-
-#: src/Views/UserSettingsView.vala:93
-msgid "Account type:"
-msgstr "Typ účtu:"
-
-#: src/Views/UserSettingsView.vala:97
-msgid "Standard"
-msgstr "Standardní"
-
-#: src/Views/UserSettingsView.vala:104
-msgid "Language:"
-msgstr "Jazyk:"
-
-#: src/Views/UserSettingsView.vala:169
-msgid "Click to switch to Language & Locale Settings"
-msgstr "Klikněte pro přepnutí do nastavení Jazyka a Národního prostředí"
-
-#: src/Views/UserSettingsView.vala:182
-msgid "Change Password…"
-msgstr "Změnit heslo…"
-
-#: src/Views/UserSettingsView.vala:341
-msgid "Enable User Account"
-msgstr "Povolit uživatelský účet"
-
-#: src/Views/UserSettingsView.vala:345
-msgid "Disable User Account"
-msgstr "Znepřístupnit uživatelský účet"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:35
-msgid "Remove"
-msgstr "Odebrat"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:38
-msgid "Set from File…"
-msgstr "Nastavit ze souboru…"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:63
-msgid "Images"
-msgstr "Obrázky"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:71
-msgid "Select an image"
-msgstr "Zvolit obrázek"
-
-#: src/Widgets/Popovers/AvatarPopover.vala:74
-msgid "Open"
-msgstr "Otevřít"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Vytvořit uživatelský účet"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Smazat uživatelský účet a jeho data"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
 msgstr "Nedaří se získat oprávnění"
 
-#: src/Widgets/ListFooter.vala:52
+#: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
 msgstr "Bez potřebných systémových oprávnění není možné vytvořit nový účet."
 
-#: src/Widgets/ListFooter.vala:96
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Bez potřebných systémových oprávnění není možné smazat účet."
+
+#: src/Views/MainView.vala:138
+#, c-format
+msgid "Removed “%s”"
+msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Smazat uživatelský účet a jeho data"
+
+#: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
 msgstr "Nemůžete odstranit svůj vlastní uživatelský účet"
 
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "Bez potřebných systémových oprávnění není možné smazat účet."
+#: src/Views/UserSettingsView.vala:51
+msgid "You do not have permission to change this"
+msgstr "Nemáte oprávnění k této změně"
+
+#: src/Views/UserSettingsView.vala:52
+msgid "You cannot change this for the currently active user"
+msgstr "Pro aktuálně aktivního uživatele toto nelze změnit"
+
+#: src/Views/UserSettingsView.vala:53
+msgid "You cannot remove the last administrator's privileges"
+msgstr "Nemůžete odstranit oprávnění posledního administrátora"
+
+#: src/Views/UserSettingsView.vala:98
+msgid "Account type:"
+msgstr "Typ účtu:"
+
+#: src/Views/UserSettingsView.vala:103
+msgid "Standard"
+msgstr "Standardní"
+
+#: src/Views/UserSettingsView.vala:110
+msgid "Language:"
+msgstr "Jazyk:"
+
+#: src/Views/UserSettingsView.vala:182
+msgid "Click to switch to Language & Locale Settings"
+msgstr "Klikněte pro přepnutí do nastavení Jazyka a Národního prostředí"
+
+#: src/Views/UserSettingsView.vala:199
+msgid "Change Password…"
+msgstr "Změnit heslo…"
+
+#: src/Views/UserSettingsView.vala:362
+msgid "Enable User Account"
+msgstr "Povolit uživatelský účet"
+
+#: src/Views/UserSettingsView.vala:366
+msgid "Disable User Account"
+msgstr "Znepřístupnit uživatelský účet"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:36
+msgid "Remove"
+msgstr "Odebrat"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:41
+msgid "Set from File…"
+msgstr "Nastavit ze souboru…"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:66
+msgid "Images"
+msgstr "Obrázky"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:74
+msgid "Select an image"
+msgstr "Zvolit obrázek"
+
+#: src/Widgets/Popovers/AvatarPopover.vala:77
+msgid "Open"
+msgstr "Otevřít"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
@@ -268,13 +273,16 @@ msgstr "Můj účet"
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 
-#: src/Widgets/UserListBox.vala:102
+#: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
 msgstr "Zapnuto"
 
-#: src/Widgets/UserListBox.vala:106
+#: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Vypnuto"
+
+#~ msgid "Undo last user account removal"
+#~ msgstr "Vrátit odstranění posledního uživatelského účtu"
 
 #~ msgid "Password:"
 #~ msgstr "Heslo:"
