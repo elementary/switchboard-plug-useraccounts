@@ -84,8 +84,18 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             file_dialog.update_preview.connect (() => {
                 string uri = file_dialog.get_preview_uri ();
                 if (uri != null && uri.has_prefix ("file://")) {
-                    preview_area.set_from_gicon_async.begin (new FileIcon (file_dialog.get_file ()), 256);
-                    preview_area.show ();
+                    preview_area.set_from_gicon_async.begin (
+                        new FileIcon (file_dialog.get_file ()),
+                        256,
+                        null,
+                        (obj, res) => {
+                            try {
+                                preview_area.set_from_gicon_async.end (res);
+                                preview_area.show ();
+                            } catch (Error e) {
+                                preview_area.hide ();
+                            }
+                        });
                 } else {
                     preview_area.hide ();
                 }
