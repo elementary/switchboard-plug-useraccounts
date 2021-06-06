@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgid "Standard User"
 msgstr "Τυπικός χρήστης"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Διαχειριστής"
 
@@ -159,14 +159,42 @@ msgstr ""
 msgid "Log In automatically:"
 msgstr "Συνδεθείτε αυτόματα:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Δημιουργία λογαριασμού χρήστη"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Αφαίρεση λογαριασμού χρήστη και των δεδομένων του"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Δεν μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -230,30 +258,6 @@ msgstr "Επιλέξτε μια εικόνα"
 #: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Άνοιγμα"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Δημιουργία λογαριασμού χρήστη"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Αφαίρεση λογαριασμού χρήστη και των δεδομένων του"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Δεν μπορείτε να αφαιρέσετε τον δικό σας λογαριασμό χρήστη"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 #, fuzzy

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
-"PO-Revision-Date: 2021-04-24 01:16+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"PO-Revision-Date: 2021-06-03 23:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/uk/>\n"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Звичайний користувач"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Адміністратор"
 
@@ -155,14 +155,39 @@ msgstr ""
 msgid "Log In automatically:"
 msgstr "Входити автоматично:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+msgid "Create user account…"
+msgstr "Створити обліковий запис користувача…"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Скасувати"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "Не вдалося отримати дозвіл"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "Неможливо створити новий обліковий запис без системного дозволу."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "Обліковий запис не можна вилучити без обов'язкового дозволу системи."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr "Вилучено «%s»"
+
+#: src/Views/MainView.vala:203
+#, c-format
+msgid "Remove “%s” and their data"
+msgstr "Вилучити «%s» та їхні дані"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Ви не можете вилучити власний обліковий запис"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -224,30 +249,6 @@ msgstr "Виберіть зображення"
 msgid "Open"
 msgstr "Відкрити"
 
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Створити обліковий запис користувача"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Вилучити обліковий запис користувача та його дані"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "Не вдалося отримати дозвіл"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "Неможливо створити новий обліковий запис без системного дозволу."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Ви не можете вилучити власний обліковий запис"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "Обліковий запис не можна вилучити без обов'язкового дозволу системи."
-
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
 msgstr "Вибрати пароль"
@@ -280,6 +281,9 @@ msgstr "Увімкнено"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Вимкнено"
+
+#~ msgid "Remove user account and its data"
+#~ msgstr "Вилучити обліковий запис користувача та його дані"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Скасувати останнє вилучення облікового запису"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Standartinis naudotojas"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "Administratorius"
 
@@ -156,14 +156,42 @@ msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."
 msgid "Log In automatically:"
 msgstr "Prisijungti automatiškai:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "Sukurti naudotojo paskyrą"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr ""
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -224,30 +252,6 @@ msgstr "Pasirinkite paveikslą"
 #: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "Atverti"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "Sukurti naudotojo paskyrą"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr ""
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr ""
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

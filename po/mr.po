@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -110,7 +110,7 @@ msgid "Standard User"
 msgstr "मानक वापरकर्ता"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "प्रशासक"
 
@@ -148,14 +148,42 @@ msgstr "एकदा ते लॉग आउट झाल्यानंतर �
 msgid "Log In automatically:"
 msgstr "स्वयंचलितपणे लॉग इन करा:"
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "वापरकर्ता खाते तयार करा"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "पूर्ववत करा"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "परवानगी मिळविण्यात अक्षम"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "आवश्यक सिस्टम परवानगीशिवाय नवीन खाते तयार केले जाऊ शकत नाही."
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "आवश्यक सिस्टम परवानगीशिवाय खाते हटविले जाऊ शकत नाही."
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "वापरकर्ता खाते आणि त्याचा डेटा काढा"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "आपण आपले स्वत: चे वापरकर्ता खाते काढू शकत नाही"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -216,30 +244,6 @@ msgstr "एक प्रतिमा निवडा"
 #: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "उघडा"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "वापरकर्ता खाते तयार करा"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "वापरकर्ता खाते आणि त्याचा डेटा काढा"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "परवानगी मिळविण्यात अक्षम"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "आवश्यक सिस्टम परवानगीशिवाय नवीन खाते तयार केले जाऊ शकत नाही."
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "आपण आपले स्वत: चे वापरकर्ता खाते काढू शकत नाही"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "आवश्यक सिस्टम परवानगीशिवाय खाते हटविले जाऊ शकत नाही."
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"

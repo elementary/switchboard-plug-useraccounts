@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-23 14:32+0000\n"
+"POT-Creation-Date: 2021-06-03 22:08+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -109,7 +109,7 @@ msgid "Standard User"
 msgstr "標準使用者"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:59
+#: src/Widgets/UserItem.vala:50
 msgid "Administrator"
 msgstr "管理員"
 
@@ -147,14 +147,42 @@ msgstr "一旦他們登出，所有的設定值與資料都會全部刪除。"
 msgid "Log In automatically:"
 msgstr "自動登入："
 
-#: src/Views/MainView.vala:53
+#: src/Views/MainView.vala:42
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create user account…"
+msgstr "建立使用者帳號"
+
+#: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "取消動作"
 
-#: src/Views/MainView.vala:69
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+msgid "Unable to acquire permission"
+msgstr "無法取得許可"
+
+#: src/Views/MainView.vala:87
+msgid "A new account cannot be created without the required system permission."
+msgstr "無法在未獲得系統許可的情況下建立新帳號。"
+
+#: src/Views/MainView.vala:116
+msgid "An account cannot be removed without the required system permission."
+msgstr "無法在未獲得系統許可的情況下移除帳號。"
+
+#: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:203
+#, fuzzy, c-format
+#| msgid "Remove user account and its data"
+msgid "Remove “%s” and their data"
+msgstr "移除使用帳號與其資料"
+
+#: src/Views/MainView.vala:206
+msgid "You cannot remove your own user account"
+msgstr "您無法移除您自身的使用者帳號"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -215,30 +243,6 @@ msgstr "選取影像"
 #: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Open"
 msgstr "開啟"
-
-#: src/Widgets/ListFooter.vala:34
-msgid "Create user account"
-msgstr "建立使用者帳號"
-
-#: src/Widgets/ListFooter.vala:37 src/Widgets/ListFooter.vala:93
-msgid "Remove user account and its data"
-msgstr "移除使用帳號與其資料"
-
-#: src/Widgets/ListFooter.vala:51 src/Widgets/ListFooter.vala:119
-msgid "Unable to acquire permission"
-msgstr "無法取得許可"
-
-#: src/Widgets/ListFooter.vala:52
-msgid "A new account cannot be created without the required system permission."
-msgstr "無法在未獲得系統許可的情況下建立新帳號。"
-
-#: src/Widgets/ListFooter.vala:96
-msgid "You cannot remove your own user account"
-msgstr "您無法移除您自身的使用者帳號"
-
-#: src/Widgets/ListFooter.vala:120
-msgid "An account cannot be removed without the required system permission."
-msgstr "無法在未獲得系統許可的情況下移除帳號。"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
