@@ -120,7 +120,7 @@ namespace SwitchboardPlugUserAccounts {
             try {
                 foreach (Act.User user in get_removal_list ()) {
                     debug ("Removing user %s from system".printf (user.get_user_name ()));
-                    // Need to add a ref to stop possible after clearing the removal list.
+                    // Need to add a ref to stop possible crash after clearing the removal list.
                     user.ref ();
                     get_usermanager ().delete_user (user, true);
                 }
