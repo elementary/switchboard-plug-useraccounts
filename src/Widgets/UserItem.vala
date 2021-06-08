@@ -20,6 +20,7 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
         private Gtk.Revealer description_revealer;
+        private Hdy.Avatar avatar;
 
         public weak Act.User user { get; construct; }
 
@@ -56,10 +57,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             description_revealer = new Gtk.Revealer ();
             description_revealer.add (description_label);
 
-            var avatar = new Hdy.Avatar (32, user.real_name, true) {
+            avatar = new Hdy.Avatar (32, user.real_name, true) {
                 margin = 6
             };
-            avatar.set_image_load_func (avatar_image_load_func);
+            update_avatar_icon ();
 
             var lock_image = new Gtk.Image.from_icon_name ("locked", Gtk.IconSize.LARGE_TOOLBAR);
             lock_image.halign = lock_image.valign = Gtk.Align.END;
@@ -90,17 +91,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
             user.bind_property ("user-name", username_label, "label", GLib.BindingFlags.SYNC_CREATE);
 
-            user.changed.connect (() => {
-                avatar.set_image_load_func (avatar_image_load_func);
-            });
+            // Need to make a weak signal connection for automatic disconnection when finalised
+            // Otherwise UserItem is never destroyed (memory leak)
+            unowned UserItem weak_this = this;
+            user.changed.connect (weak_this.update_avatar_icon);
         }
 
-        private Gdk.Pixbuf? avatar_image_load_func (int size) {
-            try {
-                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-            } catch (Error e) {
-                return null;
-            }
+        private void update_avatar_icon () {
+            avatar.set_loadable_icon (new FileIcon (File.new_for_path (user.get_icon_file ())));
         }
     }
 }
