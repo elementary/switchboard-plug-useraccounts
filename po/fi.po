@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-05-04 12:26+0000\n"
+"PO-Revision-Date: 2021-06-13 10:19+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fi/>\n"
@@ -156,10 +156,8 @@ msgid "Log In automatically:"
 msgstr "Kirjaudu automaattisesti:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Luo käyttäjätunnus"
+msgstr "Luo käyttäjätunnus…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
@@ -184,10 +182,9 @@ msgid "Removed “%s”"
 msgstr "Poistettu “%s”"
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Removed “%s”"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "Poistettu “%s”"
+msgstr "Poista “%s” ja liittyvät tiedot"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
