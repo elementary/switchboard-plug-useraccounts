@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-06-04 13:21+0000\n"
+"PO-Revision-Date: 2021-06-22 01:58+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -163,7 +163,7 @@ msgstr "Benutzerkonto erstellen …"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
-msgstr "rückgängig machen"
+msgstr "Rückgängig"
 
 #: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
@@ -217,7 +217,7 @@ msgstr "Sprache:"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Klicken, um zur Systemeinstellung »Sprache & Region« zu wechseln"
+msgstr "Mit einem Klick zur Systemeinstellung »Sprache & Region« wechseln"
 
 #: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
@@ -253,7 +253,7 @@ msgstr "Öffnen"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "Wähle ein Passwort"
+msgstr "Passwort wählen"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:55
