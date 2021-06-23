@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-06-22 13:03+0000\n"
+"PO-Revision-Date: 2021-06-23 13:38+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Authentifizierung benötigt zur Änderung von Benutzerdaten"
+msgstr "Authentifizierung zur Änderung von Benutzerdaten benötigt"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
