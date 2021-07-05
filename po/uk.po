@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-03 22:08+0000\n"
-"PO-Revision-Date: 2021-06-03 23:20+0000\n"
+"PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/uk/>\n"
@@ -215,7 +215,7 @@ msgstr "Мова:"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Натисніть для переходу до параметрів мови та регіону"
+msgstr "Натисніть для переходу до налаштувань мови та регіону"
 
 #: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
