@@ -43,7 +43,7 @@ shared_module(
         dependency('gobject-2.0'),
         dependency('granite', version: '>=6.0.0'),
         dependency('gtk+-3.0'),
-        dependency('libhandy-1', version: '>= 0.90.0'),
+        dependency('libhandy-1', version: '>= 1.1.90'),
         dependency('pwquality'),
         meson.get_compiler('vala').find_library('run-passwd', dirs: join_paths(meson.current_source_dir())),
         polkit_dep,
