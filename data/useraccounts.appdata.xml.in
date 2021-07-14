@@ -7,6 +7,18 @@
   <icon type="stock">system-users</icon>
   <translation type="gettext">useraccounts-plug</translation>
   <releases>
+    <release version="2.4.0" date="2021-07-14" urgency="medium">
+      <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>New colorful avatar fallback</li>
+          <li>Performance improvements</li>
+          <li>Improved tooltips and labels</li>
+          <li>Fix possible crash when deleting an account</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.2" date="2020-09-02" urgency="medium">
       <description>
         <ul>
