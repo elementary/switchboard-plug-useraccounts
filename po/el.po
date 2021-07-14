@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,36 +44,36 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Avatar"
 msgstr "Αλλαγή εικόνας"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Full name"
 msgstr "Ονοματεπώνυμο"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Account type"
 msgstr "Τύπος λογαριασμού:"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Language"
 msgstr "Γλώσσα:"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Συνδεθείτε αυτόματα:"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Συνεδρία επισκέπτη"
@@ -103,7 +103,7 @@ msgid "Authentication failed"
 msgstr "Αποτυχία επαλήθευσης"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -117,7 +117,7 @@ msgid "Standard User"
 msgstr "Τυπικός χρήστης"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "Διαχειριστής"
 
@@ -251,11 +251,11 @@ msgstr "Ορισμός από φάκελο..."
 msgid "Images"
 msgstr "Εικόνες"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "Επιλέξτε μια εικόνα"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "Άνοιγμα"
 

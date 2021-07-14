@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2021-06-19 20:44+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -47,31 +47,31 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 msgid "Avatar"
 msgstr "Аватар"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 msgid "Full name"
 msgstr "Полное имя"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 msgid "Account type"
 msgstr "Тип пользователя"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 msgid "Language"
 msgstr "Язык"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 msgid "Log in automatically"
 msgstr "Входить автоматически"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Изменить пароль"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Гостевой сеанс"
@@ -101,7 +101,7 @@ msgid "Authentication failed"
 msgstr "Ошибка аутентификации"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Отменить"
 
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Пользователь"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -244,11 +244,11 @@ msgstr "Выбрать из файла…"
 msgid "Images"
 msgstr "Изображения"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "Выбрать изображение"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "Открыть"
 

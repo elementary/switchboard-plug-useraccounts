@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -42,36 +42,36 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "بەزى تەڭشەكلەرنى باشقۇرغۇچىلىق سالاھىيىتى بولغاندىلا ئۆزگەرتكىلى بولىدۇ"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Avatar"
 msgstr "باش سۈرەتنى ئۆزگەرتىش"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Full name"
 msgstr "تولۇق ئىسمى"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Account type"
 msgstr "ھېسابات تىپى:"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Language"
 msgstr "تىل:"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ئاپتوماتىك كىرىش:"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "مېھمان"
@@ -101,7 +101,7 @@ msgid "Authentication failed"
 msgstr "سالاھىيەت دەلىللەش مەغلۇپ بولدى"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
@@ -115,7 +115,7 @@ msgid "Standard User"
 msgstr "ئۆلچەملىك ئابونت"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "باشقۇرغۇچى"
 
@@ -245,11 +245,11 @@ msgstr "ھۆججەتتىن تەڭشەش...."
 msgid "Images"
 msgstr "رەسىملەر"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "رەسىم تاللاش"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "ئىچىش"
 

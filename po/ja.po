@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2021-06-06 13:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -43,31 +43,31 @@ msgstr "ゲストセッションの変更は、再起動後に反映されます
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 msgid "Avatar"
 msgstr "アバター"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 msgid "Full name"
 msgstr "フルネーム"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 msgid "Account type"
 msgstr "アカウントの種類"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 msgid "Language"
 msgstr "言語"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 msgid "Log in automatically"
 msgstr "自動的にログイン"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "ゲストセッション"
@@ -97,7 +97,7 @@ msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -110,7 +110,7 @@ msgid "Standard User"
 msgstr "標準ユーザー"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "管理者"
 
@@ -237,11 +237,11 @@ msgstr "ファイルから設定…"
 msgid "Images"
 msgstr "画像"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "画像を選択"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "開く"
 

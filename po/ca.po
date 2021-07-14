@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2021-06-04 13:21+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -46,31 +46,31 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 msgid "Account type"
 msgstr "Tipus de compte"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 msgid "Language"
 msgstr "Llengua"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 msgid "Log in automatically"
 msgstr "Entra-hi automàticament"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sessió de convidat"
@@ -100,7 +100,7 @@ msgid "Authentication failed"
 msgstr "Ha fallat l'autenticació"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr "Usuari estàndard"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -241,11 +241,11 @@ msgstr "Estableix des d'un fitxer…"
 msgid "Images"
 msgstr "Imatges"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "Trieu una imatge"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "Obre"
 

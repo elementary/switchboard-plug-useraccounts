@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2017-05-23 12:10+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -47,33 +47,33 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatar"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 msgid "Full name"
 msgstr ""
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 msgid "Account type"
 msgstr ""
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 msgid "Language"
 msgstr ""
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentificare automată:"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr ""
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr ""
@@ -103,7 +103,7 @@ msgid "Authentication failed"
 msgstr ""
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Anulează"
 
@@ -116,7 +116,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr ""
 
@@ -246,11 +246,11 @@ msgstr "Setează din fişier..."
 msgid "Images"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr ""
 

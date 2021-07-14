@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -45,31 +45,31 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 msgid "Avatar"
 msgstr "Gambar Profil"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 msgid "Full name"
 msgstr "Nama lengkap"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 msgid "Account type"
 msgstr "Tipe akun"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 msgid "Language"
 msgstr "Bahasa"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 msgid "Log in automatically"
 msgstr "Masuk secara otomatis"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Ganti Kata Sandi"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sesi Tamu"
@@ -99,7 +99,7 @@ msgid "Authentication failed"
 msgstr "Otentikasi gagal"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Batal"
 
@@ -112,7 +112,7 @@ msgid "Standard User"
 msgstr "Pengguna Standar"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -241,11 +241,11 @@ msgstr "Atur dari Berkas…"
 msgid "Images"
 msgstr "Gambar"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "Pilih gambar"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "Buka"
 

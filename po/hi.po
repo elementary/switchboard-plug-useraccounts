@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2019-10-17 17:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Hindi <https://l10n.elementary.io/projects/switchboard/"
@@ -42,34 +42,34 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 msgid "Avatar"
 msgstr ""
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Full name"
 msgstr "पूरा नाम"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Account type"
 msgstr "खाता प्रकार:"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Language"
 msgstr "भाषा:"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 msgid "Log in automatically"
 msgstr ""
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "कूटशब्द बदलें"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "अतिथि सत्र"
@@ -99,7 +99,7 @@ msgid "Authentication failed"
 msgstr "सत्यापन असफल"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "रद्द"
 
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "प्रशासक"
 
@@ -238,11 +238,11 @@ msgstr ""
 msgid "Images"
 msgstr "छवियाँ"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "खोलें"
 

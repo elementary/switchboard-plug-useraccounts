@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 22:08+0000\n"
+"POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2018-05-28 09:13+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -44,36 +44,36 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/Plug.vala:144
+#: src/Plug.vala:146
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatarul"
 
-#: src/Plug.vala:145
+#: src/Plug.vala:147
 #, fuzzy
 msgid "Full name"
 msgstr "Numele complet"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:148
 #, fuzzy
 msgid "Account type"
 msgstr "Tipul de cont:"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Language"
 msgstr "Limba:"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentifică-te automat:"
 
-#: src/Plug.vala:149 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Schimbă Parola"
 
-#: src/Plug.vala:150 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sesiune de invitat"
@@ -103,7 +103,7 @@ msgid "Authentication failed"
 msgstr "Autentificare eșuată"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Anulare"
 
@@ -116,7 +116,7 @@ msgid "Standard User"
 msgstr "Utilizator standard"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:50
+#: src/Widgets/UserItem.vala:51
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -247,11 +247,11 @@ msgstr "Setați din Fișier …"
 msgid "Images"
 msgstr "Imagini"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:74
+#: src/Widgets/Popovers/AvatarPopover.vala:76
 msgid "Select an image"
 msgstr "Selectați o imagine"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Open"
 msgstr "Deschide"
 
