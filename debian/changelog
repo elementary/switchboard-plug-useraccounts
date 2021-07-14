@@ -1,3 +1,29 @@
+switchboard-plug-useraccounts (2.4.0) bionic; urgency=medium
+
+  * Release 2.4.0 (#169)
+  * meson: require libhandy-1 >= 1.1.90 (#168)
+  * AvatarPopover: Use a FileIcon for filechooser previews (#107)
+  * Fix crash after deleting a newly added user; ensure UserItem
+    destruct (#166)
+  * Update translation files
+  * Update translation template
+  * MainView: create actionbar here (#161)
+  * UserItem: use style constants and cleanup (#163)
+  * Use Granite.ValidatedEntry (#162)
+  * Undo Toast: Use username and avoid double negative (#160)
+  * UserItem: The icon-file property doesn't exist anymore (#158)
+  * Replace Gtk.Dialog with Granite.Dialog (#157)
+  * LINGUAS: sort, remove en_US
+  * UserSettingsView: Update code style (#154)
+  * UserSettingsView: Only set current/last tooltips once (#153)
+  * UserSettingsView: split update_ui and update_permission (#152)
+  * UserSettingsView: skip checking delta user when updating avatar
+    (#151)
+  * AvatarPopover: Ask for permission when needed (#149)
+  * Replace Granite.Avatar with Hdy.Avatar (#148)
+
+ -- elementary LLC. <builds@elementary.io>  Wed, 14 Jul 2021 21:11:32 +0000
+
 switchboard-plug-useraccounts (2.3.2) bionic; urgency=medium
 
   * Release 2.3.2 (#146)
