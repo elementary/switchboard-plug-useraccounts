@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-07-05 13:54+0000\n"
+"PO-Revision-Date: 2021-07-15 01:02+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/uk/>\n"
@@ -41,23 +41,23 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Minor updates:"
-msgstr ""
+msgstr "Незначні оновлення:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Новий барвистий аватар"
 
 #: data/useraccounts.appdata.xml.in:15
 msgid "Performance improvements"
-msgstr ""
+msgstr "Поліпшено швидкодію"
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improved tooltips and labels"
-msgstr ""
+msgstr "Вдосконалено підказки та ярлики"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Fix possible crash when deleting an account"
-msgstr ""
+msgstr "Виправлено можливі збої під час видалення облікового запису"
 
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:25
 #: data/useraccounts.appdata.xml.in:35 data/useraccounts.appdata.xml.in:45
