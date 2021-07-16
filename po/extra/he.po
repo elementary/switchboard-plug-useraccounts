@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-07-15 01:02+0000\n"
+"PO-Revision-Date: 2021-07-16 09:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/he/>\n"
@@ -42,19 +42,19 @@ msgstr "עדכונים משניים:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "תמונה ייצוגית צבעונית חדשה כנסיגה"
 
 #: data/useraccounts.appdata.xml.in:15
 msgid "Performance improvements"
-msgstr ""
+msgstr "שיפורי ביצועים"
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improved tooltips and labels"
-msgstr ""
+msgstr "חלוניות עצה ותוויות משופרות"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Fix possible crash when deleting an account"
-msgstr ""
+msgstr "תוקנה קריסה שמתרחשת לעתים במחיקת חשבון"
 
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:25
 #: data/useraccounts.appdata.xml.in:35 data/useraccounts.appdata.xml.in:45
