@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
+"PO-Revision-Date: 2021-07-25 12:43+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/fi/>\n"
@@ -28,10 +28,8 @@ msgid "Authentication is required to change user data"
 msgstr "Käyttäjätietojen muuttaminen vaatii tunnistautumisen"
 
 #: data/useraccounts.appdata.xml.in:5
-#, fuzzy
-#| msgid "User Accounts"
 msgid "User Accounts Settings"
-msgstr "Käyttäjätilit"
+msgstr "Käyttäjätilien asetukset"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
