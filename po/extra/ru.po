@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2021-08-13 17:30+0000\n"
-"Last-Translator: asdffdsdaf <useruseruser1233211@gmail.com>\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -45,7 +45,7 @@ msgstr "Незначительные обновления:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Новый красочный аватар"
 
 #: data/useraccounts.appdata.xml.in:15
 msgid "Performance improvements"
@@ -53,11 +53,11 @@ msgstr "Улучшения производительности"
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improved tooltips and labels"
-msgstr ""
+msgstr "Улучшения подсказок и названий"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Fix possible crash when deleting an account"
-msgstr ""
+msgstr "Исправление возможной поломки при удалении аккаунта"
 
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:25
 #: data/useraccounts.appdata.xml.in:35 data/useraccounts.appdata.xml.in:45
@@ -66,15 +66,16 @@ msgstr "Обновлены переводы"
 
 #: data/useraccounts.appdata.xml.in:32
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "Отображение более детальных причин блокировки настроек"
 
 #: data/useraccounts.appdata.xml.in:33
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "Улучшение надёжности создания аккаунта"
 
 #: data/useraccounts.appdata.xml.in:34
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
+"Получение прав по доверенности для разблокировки или блокировки аккаунтов"
 
 #: data/useraccounts.appdata.xml.in:42
 msgid "Show in sidebar if an account is disabled"
@@ -82,8 +83,8 @@ msgstr "Показывать в боковой панели если аккау�
 
 #: data/useraccounts.appdata.xml.in:43
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "Запрос разрешения при добавлении и удалении учетных записей"
 
 #: data/useraccounts.appdata.xml.in:44
 msgid "Animate Infobars"
-msgstr ""
+msgstr "Анимированная панель подробностей"
