@@ -13,6 +13,7 @@ gettext_name = meson.project_name() + '-plug'
 prefix = get_option('prefix')
 datadir = join_paths(prefix, get_option('datadir'))
 libdir = join_paths(prefix, get_option('libdir'))
+localedir = join_paths(prefix, get_option('localedir'))
 
 switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
@@ -29,6 +30,7 @@ add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi
 
 configuration_data = configuration_data()
 configuration_data.set('GETTEXT_PACKAGE', gettext_name)
+configuration_data.set('LOCALEDIR', localedir)
 configuration_data.set('PKGDATADIR', pkgdatadir)
 
 subdir('cli')

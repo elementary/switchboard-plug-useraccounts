@@ -35,6 +35,9 @@ namespace SwitchboardPlugUserAccounts {
         public const string policy_message = _("Authentication is required to change user data"); // vala-lint=naming-convention
 
         public UserAccountsPlug () {
+            GLib.Intl.bindtextdomain (Build.GETTEXT_PACKAGE, Build.LOCALEDIR);
+            GLib.Intl.bind_textdomain_codeset (Build.GETTEXT_PACKAGE, "UTF-8");
+
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts", null);
             Object (category: Category.SYSTEM,
