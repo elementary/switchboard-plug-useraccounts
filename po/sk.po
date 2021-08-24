@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-23 14:23+0000\n"
+"PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:35
 msgid "Authentication is required to change user data"
-msgstr "Na zmenu používateľských údajov je vyžadované overenie totožnosti"
+msgstr "Pre zmenu používateľských údajov sa vyžaduje overenie"
 
 #: src/Plug.vala:42
 msgid "User Accounts"
@@ -28,6 +28,7 @@ msgstr "Používateľské účty"
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"Spravujte oprávnenia účtov a nastavujte používateľské mená, heslá a ich fotky"
 
 #: src/Plug.vala:67
 msgid "Password change failed"
@@ -287,7 +288,7 @@ msgstr "Povolené"
 
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
-msgstr "Vypnutý"
+msgstr "Vypnuté"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Vrátiť späť posledné odstránenie používateľského účtu"
