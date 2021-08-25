@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2021-08-25 18:30+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sk/>\n"
@@ -37,40 +37,35 @@ msgstr "Zmena hesla zlyhala"
 #: src/Plug.vala:79
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr "Relácia pre hosťa nemá vplyv pokým nereštartujete váš systém"
+msgstr "Zmeny nastavení relácie pre hosťa sa prejavia až po reštarte zariadenia"
 
 #: src/Plug.vala:94
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
 #: src/Plug.vala:146
-#, fuzzy
 msgid "Avatar"
-msgstr "Zmeniť avatar"
+msgstr "Ikonka používateľa"
 
 #: src/Plug.vala:147
-#, fuzzy
 msgid "Full name"
 msgstr "Celé meno"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Account type"
-msgstr "Typ konta:"
+msgstr "Typ účtu"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Language"
-msgstr "Jazyk:"
+msgstr "Jazyk"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Automatické prihlásenie:"
+msgstr "Prihlasovať automaticky"
 
 #: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
-msgstr "Zmeniť heslo"
+msgstr "Zmena hesla"
 
 #: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
@@ -79,27 +74,27 @@ msgstr "Relácia pre hosťa"
 
 #: src/Dialogs/AvatarDialog.vala:30
 msgid "Crop & Position"
-msgstr ""
+msgstr "Orezať a zarovnať"
 
 #: src/Dialogs/AvatarDialog.vala:31
 msgid "Choose the part of the image to use as an avatar."
-msgstr ""
+msgstr "Vyberte časť obrázku, ktorá sa použije ako ikonka používateľa."
 
 #: src/Dialogs/AvatarDialog.vala:38
 msgid "Change Avatar"
-msgstr "Zmeniť avatar"
+msgstr "Zmeniť ikonku používateľa"
 
 #: src/Dialogs/ChangePasswordDialog.vala:45
 msgid "Current Password"
-msgstr "Súčasné heslo"
+msgstr "Aktuálne heslo"
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
-msgstr "Stlač pre autentifikovanie"
+msgstr "Stlačte pre overenie"
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
-msgstr "Autentifikácia neúspešná"
+msgstr "Overenie zlyhalo"
 
 #: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
 #: src/Widgets/Popovers/AvatarPopover.vala:80
@@ -107,9 +102,8 @@ msgid "Cancel"
 msgstr "Zrušiť"
 
 #: src/Dialogs/NewUserDialog.vala:31
-#, fuzzy
 msgid "Account Type"
-msgstr "Typ konta:"
+msgstr "Typ účtu"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
@@ -126,7 +120,7 @@ msgstr "Celé meno"
 
 #: src/Dialogs/NewUserDialog.vala:43
 msgid "Username"
-msgstr "Užívateľské meno:"
+msgstr "Používateľské meno"
 
 #: src/Dialogs/NewUserDialog.vala:81
 msgid "Create User"
@@ -134,46 +128,43 @@ msgstr "Vytvoriť používateľa"
 
 #: src/Dialogs/NewUserDialog.vala:144
 msgid "Username is already taken"
-msgstr "Použivateľské meno je už zabrané"
+msgstr "Používateľské meno už existuje"
 
 #: src/Dialogs/NewUserDialog.vala:146
-#, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
-msgstr "Môže obsahovať len malé písmena, čísla a nemôže obsahovať medzery"
+msgstr "Používateľské meno môže obsahovať iba malé písmená a čísla bez medzier"
 
 #: src/Views/GuestSettingsView.vala:28
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"Relácia pre hosťa umožňuje niekomu používať dočasne užívateľský účet bez "
+"Relácia pre hosťa umožňuje niekomu dočasne použiť používateľský účet bez "
 "hesla."
 
 #: src/Views/GuestSettingsView.vala:29
 msgid "Once they log out, all of their settings and data will be deleted."
-msgstr "Po odhlásení budú všetky ich nastavenia a dáta odstránené."
+msgstr "Keď sa odhlásia, všetky ich nastavenia a dáta budú odstránené."
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
 msgid "Log In automatically:"
-msgstr "Automatické prihlásenie:"
+msgstr "Prihlasovať automaticky:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Vytvoriť používateľský účet"
+msgstr "Vytvoriť používateľský účet…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
-msgstr ""
+msgstr "Späť"
 
 #: src/Views/MainView.vala:86 src/Views/MainView.vala:115
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "Nedarí sa získať oprávnenie"
 
 #: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "Bez požadovaných systémových oprávnení nie je možné vytvoriť nový účet."
 
 #: src/Views/MainView.vala:116
 msgid "An account cannot be removed without the required system permission."
