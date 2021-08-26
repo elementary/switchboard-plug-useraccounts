@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-26 08:14+0000\n"
+"PO-Revision-Date: 2021-08-26 08:31+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sk/>\n"
@@ -187,7 +187,7 @@ msgstr "Nemôžte odstrániť svoj vlastný používateľský účet"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
-msgstr "Nemáte oprávnenie na zmenu tohto"
+msgstr "Nemáte oprávnenie na túto zmenu"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
