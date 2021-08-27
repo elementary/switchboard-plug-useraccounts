@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-26 03:05+0000\n"
+"PO-Revision-Date: 2021-08-27 08:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -56,19 +56,16 @@ msgid "Full name"
 msgstr "Teljes név"
 
 #: src/Plug.vala:148
-#, fuzzy
 msgid "Account type"
-msgstr "Fiók típus:"
+msgstr "Fióktípus"
 
 #: src/Plug.vala:149
-#, fuzzy
 msgid "Language"
-msgstr "Nyelv:"
+msgstr "Nyelv"
 
 #: src/Plug.vala:150
-#, fuzzy
 msgid "Log in automatically"
-msgstr "Automatikus bejelentkezés:"
+msgstr "Automatikus bejelentkezés"
 
 #: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
@@ -159,10 +156,8 @@ msgid "Log In automatically:"
 msgstr "Automatikus bejelentkezés:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Felhasználói fiók létrehozása"
+msgstr "Felhasználói fiók létrehozása…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
