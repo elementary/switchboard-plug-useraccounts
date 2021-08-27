@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-27 14:50+0000\n"
+"PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -92,7 +92,7 @@ msgstr "Aktuális jelszó"
 
 #: src/Dialogs/ChangePasswordDialog.vala:49
 msgid "Press to authenticate"
-msgstr "A hitelesítéshez nyomja meg a gombot"
+msgstr "Kattintson ide a hitelesítéshez"
 
 #: src/Dialogs/ChangePasswordDialog.vala:51
 msgid "Authentication failed"
@@ -142,7 +142,7 @@ msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
-"A Vendég munkamenet lehetővé teszi egy ideiglenes alapértelmezett fiók, "
+"A Vendég munkamenet lehetővé teszi egy ideiglenes alapértelmezett fiók "
 "jelszó nélküli használatát."
 
 #: src/Views/GuestSettingsView.vala:29
@@ -185,7 +185,7 @@ msgstr "\"%s\" és adatainak eltávolítása"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
-msgstr "Nem tudod eltávolítani a saját felhasználói fiókodat"
+msgstr "Nem tudja eltávolítani a saját felhasználói fiókját"
 
 #: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
@@ -193,7 +193,7 @@ msgstr "Nincs jogosultsága megváltoztatni"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
-msgstr "Ezt a jelenleg aktív felhasználó nem módosíthatja"
+msgstr "Nem módosítható a jelenleg aktív felhasználó számára"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
-msgstr "Fiók típus:"
+msgstr "Fiók típusa:"
 
 #: src/Views/UserSettingsView.vala:103
 msgid "Standard"
@@ -215,7 +215,7 @@ msgstr "Nyelv:"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Kattintson a Nyelv- és helybeállítások módosításához"
+msgstr "Kattintson a Nyelv- és régióbeállítások módosításához"
 
 #: src/Views/UserSettingsView.vala:199
 msgid "Change Password…"
