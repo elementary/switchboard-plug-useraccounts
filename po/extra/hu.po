@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"PO-Revision-Date: 2021-08-27 08:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/hu/>\n"
@@ -59,7 +59,7 @@ msgstr ""
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:25
 #: data/useraccounts.appdata.xml.in:35 data/useraccounts.appdata.xml.in:45
 msgid "Updated translations"
-msgstr ""
+msgstr "Frissített fordítások"
 
 #: data/useraccounts.appdata.xml.in:32
 msgid "Show more accurate reasons for locked settings"
