@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-08-26 08:31+0000\n"
+"PO-Revision-Date: 2021-08-28 17:06+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sk/>\n"
@@ -107,7 +107,7 @@ msgstr "Typ účtu"
 
 #: src/Dialogs/NewUserDialog.vala:34
 msgid "Standard User"
-msgstr "Štandardný používateľ"
+msgstr "Bežný používateľ"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:51
@@ -168,18 +168,17 @@ msgstr "Bez požadovaných systémových oprávnení nie je možné vytvoriť no
 
 #: src/Views/MainView.vala:116
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "Nie je možné odstrániť účet bez požadovaných systémových oprávnení."
 
 #: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "„%s“ bol odstránený"
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "Odstrániť používateľský účet a jeho dáta"
+msgstr "Odstrániť „%s“ a ich dáta"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
@@ -191,19 +190,19 @@ msgstr "Nemáte oprávnenie na túto zmenu"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
-msgstr "Nemôžte toto zmeniť pre práve aktívneho používateľa"
+msgstr "Nie je možné vykonať túto zmenu pre práve aktívneho používateľa"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
-msgstr "Nemôžete zrušiť práva posledného administrátora"
+msgstr "Nemôžete odstrániť oprávnenia predchádzajúceho administrátora"
 
 #: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
-msgstr "Typ konta:"
+msgstr "Typ účtu:"
 
 #: src/Views/UserSettingsView.vala:103
 msgid "Standard"
-msgstr "Štandardné"
+msgstr "Bežný"
 
 #: src/Views/UserSettingsView.vala:110
 msgid "Language:"
@@ -211,20 +210,19 @@ msgstr "Jazyk:"
 
 #: src/Views/UserSettingsView.vala:182
 msgid "Click to switch to Language & Locale Settings"
-msgstr "Kliknite pre prenutie Jazyka & Regionálne nastavenia"
+msgstr "Kliknite pre prepnutie do nastavení Jazyka a oblastí"
 
 #: src/Views/UserSettingsView.vala:199
-#, fuzzy
 msgid "Change Password…"
-msgstr "Zmeniť heslo"
+msgstr "Zmeniť heslo…"
 
 #: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
-msgstr "Aktivovať účet používateľa"
+msgstr "Aktivovať používateľský účet"
 
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
-msgstr "Deaktivovať účet použivateľa"
+msgstr "Deaktivovať používateľský účet"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -247,15 +245,13 @@ msgid "Open"
 msgstr "Otvoriť"
 
 #: src/Widgets/PasswordEditor.vala:39
-#, fuzzy
 msgid "Choose a Password"
-msgstr "Zmeniť heslo"
+msgstr "Vyberte si heslo"
 
 #. Pango needs a non-null string to set markup
 #: src/Widgets/PasswordEditor.vala:55
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Potvrdenie nového hesla"
+msgstr "Potvrďte heslo"
 
 #: src/Widgets/PasswordEditor.vala:64
 msgid "Show passwords"
@@ -275,7 +271,7 @@ msgstr "Ostatné účty"
 
 #: src/Widgets/UserListBox.vala:120
 msgid "Enabled"
-msgstr "Povolené"
+msgstr "Zapnuté"
 
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
