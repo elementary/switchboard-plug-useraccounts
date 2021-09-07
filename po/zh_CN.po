@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
 "PO-Revision-Date: 2021-09-07 09:39+0000\n"
-"Last-Translator: Yuchen Deng <inbz@qq.com>\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -170,7 +170,7 @@ msgstr "删除账户需要管理员权限。"
 #: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
-msgstr "移除 “%s”"
+msgstr "“%s” 已删除"
 
 #: src/Views/MainView.vala:203
 #, c-format
