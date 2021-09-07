@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2020-10-24 13:15+0000\n"
-"Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
+"PO-Revision-Date: 2021-09-07 09:38+0000\n"
+"Last-Translator: Yuchen Deng <inbz@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -148,10 +148,8 @@ msgid "Log In automatically:"
 msgstr "自动登录："
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "创建用户账户"
+msgstr "创建用户账户…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
