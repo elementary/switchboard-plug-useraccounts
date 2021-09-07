@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:11+0000\n"
-"PO-Revision-Date: 2021-09-07 09:39+0000\n"
+"PO-Revision-Date: 2021-09-07 17:31+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hans/>\n"
@@ -175,7 +175,7 @@ msgstr "“%s” 已删除"
 #: src/Views/MainView.vala:203
 #, c-format
 msgid "Remove “%s” and their data"
-msgstr "删除“%s”和他的数据"
+msgstr "删除“%s”和账户数据"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
