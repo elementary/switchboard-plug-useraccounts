@@ -21,6 +21,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
         private Gtk.Revealer description_revealer;
         private Hdy.Avatar avatar;
+        private Gtk.Label full_name_label;
+        private Gtk.Label username_label;
+        private Gtk.Revealer lock_revealer;
 
         public weak Act.User user { get; construct; }
 
@@ -35,13 +38,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         construct {
-            var full_name_label = new Gtk.Label ("") {
+            full_name_label = new Gtk.Label ("") {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END
             };
             full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-            var username_label = new Gtk.Label ("") {
+            username_label = new Gtk.Label ("") {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.START,
                 ellipsize = Pango.EllipsizeMode.END
@@ -60,12 +63,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar = new Hdy.Avatar (32, user.real_name, true) {
                 margin = 6
             };
-            update_avatar_icon ();
 
             var lock_image = new Gtk.Image.from_icon_name ("locked", Gtk.IconSize.LARGE_TOOLBAR);
             lock_image.halign = lock_image.valign = Gtk.Align.END;
 
-            var lock_revealer = new Gtk.Revealer ();
+            lock_revealer = new Gtk.Revealer ();
             lock_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
             lock_revealer.add (lock_image);
 
@@ -83,22 +85,24 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             grid.attach (username_label, 1, 1, 1, 1);
             grid.attach (description_revealer, 2, 1);
 
-            add (grid);
+            update ();
 
-            user.bind_property ("account-type", this, "account-type", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("real-name", full_name_label, "label", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("real-name", avatar, "text", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("locked", lock_revealer, "reveal-child", GLib.BindingFlags.SYNC_CREATE);
-            user.bind_property ("user-name", username_label, "label", GLib.BindingFlags.SYNC_CREATE);
+            add (grid);
 
             // Need to make a weak signal connection for automatic disconnection when finalised
             // Otherwise UserItem is never destroyed (memory leak)
             unowned UserItem weak_this = this;
-            user.changed.connect (weak_this.update_avatar_icon);
+            user.changed.connect (weak_this.update);
         }
 
-        private void update_avatar_icon () {
+        private void update () {
             avatar.set_loadable_icon (new FileIcon (File.new_for_path (user.get_icon_file ())));
+
+            account_type = user.account_type;
+            full_name_label.label = user.real_name;
+            avatar.text = user.real_name;
+            lock_revealer.reveal_child = user.locked;
+            username_label.label = user.user_name;
         }
     }
 }
