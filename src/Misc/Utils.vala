@@ -302,7 +302,7 @@ namespace SwitchboardPlugUserAccounts {
         }
     }
 
-    public static string get_display_manager () {
+    public static unowned string get_display_manager () {
         if (display_manager != null) {
             return display_manager;
         }
@@ -323,7 +323,7 @@ namespace SwitchboardPlugUserAccounts {
                 dm_path
             );
 
-            foreach (var name in dm.names) {
+            foreach (unowned string name in dm.names) {
                 // Ignore the generic "display-manager" name for this service
                 if (name != "display-manager.service") {
                     // Examples of the remaining names are "gdm.service" or "lightdm.service"

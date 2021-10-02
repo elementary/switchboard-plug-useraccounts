@@ -34,7 +34,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             other_accounts_label = new Granite.HeaderLabel (_("Other Accounts"));
 
-            //only build the guest session list entry / row when lightDM is X11's display manager
+            //only build the guest session list entry / row when lightDM is the display manager
             if (get_display_manager () == "lightdm") {
                 var avatar = new Hdy.Avatar (32, null, false);
 
