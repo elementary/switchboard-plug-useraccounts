@@ -283,7 +283,7 @@ namespace SwitchboardPlugUserAccounts {
                 "/org/freedesktop/locale1"
             );
 
-            foreach (var locale in locale_bus.locale) {
+            foreach (unowned var locale in locale_bus.locale) {
                 if (locale.has_prefix ("LANG=")) {
                     return locale.replace ("LANG=", "");
                 }
