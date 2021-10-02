@@ -46,7 +46,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image password_lock;
         private Gtk.Image enable_lock;
 
-        private Gee.HashMap<string, string> default_regions;
+        private Gee.HashMap<string, string>? default_regions;
 
         private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
         private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
@@ -475,7 +475,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     Value cell;
                     region_store.get_value (iter, 0, out cell);
 
-                    if (default_regions.has_key (language)
+                    if (default_regions != null && default_regions.has_key (language)
                     && default_regions.@get (language) == "%s_%s".printf (language, (string)cell))
                         active_iter = iter;
 
