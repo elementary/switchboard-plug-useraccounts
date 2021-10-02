@@ -30,6 +30,11 @@ namespace SwitchboardPlugUserAccounts {
         public abstract ObjectPath get_unit (string name) throws GLib.Error;
     }
 
+    [DBus (name = "org.freedesktop.locale1")]
+    public interface Locale1Proxy : GLib.Object {
+        public abstract string[] locale { owned get; }
+    }
+
     private static string[]? installed_languages = null;
     private static string? display_manager = null;
 
@@ -37,27 +42,9 @@ namespace SwitchboardPlugUserAccounts {
         if (installed_languages != null)
             return installed_languages;
 
-        string output;
-        int status;
+        installed_languages = Gnome.Languages.get_all_locales ();
 
-        try {
-            Process.spawn_sync (
-                null,
-                {"/usr/share/language-tools/language-options" , null},
-                Environ.get (),
-                SpawnFlags.SEARCH_PATH,
-                null,
-                out output,
-                null,
-                out status
-            );
-
-            installed_languages = output.split ("\n");
-            return installed_languages;
-        } catch (Error e) {
-            critical (e.message);
-            return null;
-        }
+        return installed_languages;
     }
 
     private static Gee.HashMap<string, string>? default_regions;
@@ -66,14 +53,16 @@ namespace SwitchboardPlugUserAccounts {
         if (default_regions != null)
             return default_regions;
 
-        default_regions = new Gee.HashMap<string, string> ();
         string file = "/usr/share/language-tools/main-countries";
         string? output = "";
         try {
             FileUtils.get_contents (file, out output);
         } catch (Error e) {
             warning (e.message);
+            return null;
         }
+
+        default_regions = new Gee.HashMap<string, string> ();
 
         var output_array = output.split ("\n");
         foreach (string line in output_array) {
@@ -89,7 +78,11 @@ namespace SwitchboardPlugUserAccounts {
     public static Gee.ArrayList<string> get_languages () {
         Gee.ArrayList<string> languages = new Gee.ArrayList<string> ();
         foreach (string locale in get_installed_languages ()) {
-            string code = locale.slice (0, 2);
+            string code;
+            if (!Gnome.Languages.parse_locale (locale, out code, null, null, null)) {
+                continue;
+            }
+
             if (!languages.contains (code))
                 languages.add (code);
         }
@@ -99,15 +92,16 @@ namespace SwitchboardPlugUserAccounts {
 
     public static Gee.ArrayList<string> get_regions (string language) {
         Gee.ArrayList<string> regions = new Gee.ArrayList<string> ();
-            foreach (string locale in get_installed_languages ()) {
-                if (locale.length == 5) {
-                    string code = locale.slice (0, 2);
-                    string region = locale.slice (3, 5);
-
-                    if (!regions.contains (region) && code == language)
-                        regions.add (region);
-                }
+        foreach (string locale in get_installed_languages ()) {
+            string code, region;
+            if (!Gnome.Languages.parse_locale (locale, out code, out region, null, null)) {
+                continue;
             }
+
+            if (!regions.contains (region) && code == language)
+                regions.add (region);
+        }
+
         return regions;
     }
 
@@ -348,5 +342,26 @@ namespace SwitchboardPlugUserAccounts {
 
         display_manager = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
         return display_manager;
+    }
+
+    public static string? get_system_locale () {
+        try {
+            Locale1Proxy locale_bus = GLib.Bus.get_proxy_sync (
+                GLib.BusType.SYSTEM,
+                "org.freedesktop.locale1",
+                "/org/freedesktop/locale1"
+            );
+
+            foreach (unowned var locale in locale_bus.locale) {
+                if (locale.has_prefix ("LANG=")) {
+                    return locale.replace ("LANG=", "");
+                }
+            }
+        } catch (Error e) {
+            warning ("Unable to get locale from locale1 bus: %s", e.message);
+            return null;
+        }
+
+        return null;
     }
 }
