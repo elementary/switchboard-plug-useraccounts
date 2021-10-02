@@ -46,7 +46,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image password_lock;
         private Gtk.Image enable_lock;
 
-        private Gee.HashMap<string, string> default_regions;
+        private Gee.HashMap<string, string>? default_regions;
 
         private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
         private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
@@ -396,6 +396,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         public void update_language () {
+            string user_lang = user.get_language ();
+            // If accountsservice doesn't have a specific language for the user, then get the system locale
+            if (user_lang == null || user_lang.length == 0) {
+                // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = get_system_locale () ?? "en_US.UTF-8";
+            }
+
+            string user_lang_code;
+            if (!Gnome.Languages.parse_locale (user_lang, out user_lang_code, null, null, null)) {
+                // If we somehow still ended up with an invalid locale, display the user as using English
+                user_lang_code = "en";
+            }
+
             if (user != get_current_user ()) {
                 var languages = get_languages ();
                 language_store = new Gtk.ListStore (2, typeof (string), typeof (string));
@@ -406,12 +419,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 foreach (string language in languages) {
                     language_store.insert (out iter, 0);
                     language_store.set (iter, 0, language, 1, Gnome.Languages.get_language_from_code (language, null));
-                    if (user.get_language ().slice (0, 2) == language)
+                    if (user_lang_code == language)
                         language_box.set_active_iter (iter);
                 }
 
             } else {
-                var language = Gnome.Languages.get_language_from_code (user.get_language ().slice (0, 2), null);
+                var language = Gnome.Languages.get_language_from_code (user_lang_code, null);
                 language_button.set_label (language);
             }
         }
@@ -433,10 +446,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             region_box.set_model (region_store);
 
+            string user_lang = user.get_language ();
+            // If accountsservice doesn't have a specific language for the user, then get the system locale
+            if (user_lang == null || user_lang.length == 0) {
+                // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = get_system_locale () ?? "en_US.UTF-8";
+            }
+
+            string user_region_code;
+            if (!Gnome.Languages.parse_locale (user_lang, null, out user_region_code, null, null)) {
+                // If we somehow still ended up with an invalid locale, display the region as US
+                user_region_code = "US";
+            }
+
             foreach (string region in regions) {
                 region_store.insert (out iter, 0);
                 region_store.set (iter, 0, region, 1, Gnome.Languages.get_country_from_code (region, null));
-                if (user.get_language ().length == 5 && user.get_language ().slice (3, 5) == region) {
+                if (user_region_code == region) {
                     region_box.set_active_iter (iter);
                     iter_set = true;
                 }
@@ -449,7 +475,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     Value cell;
                     region_store.get_value (iter, 0, out cell);
 
-                    if (default_regions.has_key (language)
+                    if (default_regions != null && default_regions.has_key (language)
                     && default_regions.@get (language) == "%s_%s".printf (language, (string)cell))
                         active_iter = iter;
 
