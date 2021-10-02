@@ -126,19 +126,5 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             guest_description_label.label = "<span font_size=\"small\">%s</span>".printf (state_string);
         }
-
-        private static string get_display_manager () {
-            string output = "";
-
-            try {
-                //TODO: add file location for different, non-debian-based distros
-                FileUtils.get_contents ("/etc/X11/default-display-manager", out output);
-            } catch (Error e) {
-                critical (e.message);
-                return "";
-            }
-
-            return output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
-        }
     }
 }

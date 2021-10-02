@@ -20,7 +20,18 @@
 */
 
 namespace SwitchboardPlugUserAccounts {
+    [DBus (name = "org.freedesktop.systemd1.Unit")]
+    public interface SystemdUnit : GLib.Object {
+        public abstract string[] names { owned get; }
+    }
+
+    [DBus (name = "org.freedesktop.systemd1.Manager")]
+    public interface SystemdManager : GLib.Object {
+        public abstract ObjectPath get_unit (string name) throws GLib.Error;
+    }
+
     private static string[]? installed_languages = null;
+    private static string? display_manager = null;
 
     public static string[]? get_installed_languages () {
         if (installed_languages != null)
@@ -237,6 +248,11 @@ namespace SwitchboardPlugUserAccounts {
     }
 
     public static bool get_guest_session_state (string option) {
+        // We only support guest session stuff with lightdm
+        if (get_display_manager () != "lightdm") {
+            return false;
+        }
+
         string output;
         int status;
 
@@ -261,6 +277,11 @@ namespace SwitchboardPlugUserAccounts {
     }
 
     public static void set_guest_session_state (string option) {
+        // We only support guest session stuff with lightdm
+        if (get_display_manager () != "lightdm") {
+            return;
+        }
+
         if (get_permission ().allowed) {
             string output;
             int status;
@@ -279,5 +300,53 @@ namespace SwitchboardPlugUserAccounts {
                 warning (e.message);
             }
         }
+    }
+
+    public static string get_display_manager () {
+        if (display_manager != null) {
+            return display_manager;
+        }
+
+        try {
+            SystemdManager systemd = GLib.Bus.get_proxy_sync (
+                GLib.BusType.SYSTEM,
+                "org.freedesktop.systemd1",
+                "/org/freedesktop/systemd1"
+            );
+
+            // The systemd display-manager is a symlink to the real display manager unit
+            var dm_path = systemd.get_unit ("display-manager.service");
+
+            SystemdUnit dm = GLib.Bus.get_proxy_sync (
+                GLib.BusType.SYSTEM,
+                "org.freedesktop.systemd1",
+                dm_path
+            );
+
+            foreach (var name in dm.names) {
+                // Ignore the generic "display-manager" name for this service
+                if (name != "display-manager.service") {
+                    // Examples of the remaining names are "gdm.service" or "lightdm.service"
+                    // So strip .service off the end
+                    display_manager = name.replace (".service", "");
+                    return display_manager;
+                }
+            }
+        } catch (Error e) {
+            warning ("Unable to get display manager name from systemd, falling back to config files: %s", e.message);
+        }
+
+        string output = "";
+
+        try {
+            //TODO: add file location for different, non-debian-based distros
+            FileUtils.get_contents ("/etc/X11/default-display-manager", out output);
+        } catch (Error e) {
+            critical (e.message);
+            return "";
+        }
+
+        display_manager = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
+        return display_manager;
     }
 }
