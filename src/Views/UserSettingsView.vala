@@ -397,14 +397,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_language () {
             string user_lang = user.get_language ();
-            // If accountsservice doesn't have a specific language for the user, they get the system locale
+            // If accountsservice doesn't have a specific language for the user, then get the system locale
             if (user_lang == null || user_lang.length == 0) {
-                user_lang = get_system_locale ();
+                // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = get_system_locale () ?? "en_US.UTF-8";
             }
 
             string user_lang_code;
             if (!Gnome.Languages.parse_locale (user_lang, out user_lang_code, null, null, null)) {
-                // If we somehow haven't got a valid user or system locale, display the user as using English
+                // If we somehow still ended up with an invalid locale, display the user as using English
                 user_lang_code = "en";
             }
 
@@ -446,14 +447,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             region_box.set_model (region_store);
 
             string user_lang = user.get_language ();
-            // If accountsservice doesn't have a specific language for the user, they get the system locale
+            // If accountsservice doesn't have a specific language for the user, then get the system locale
             if (user_lang == null || user_lang.length == 0) {
-                user_lang = get_system_locale ();
+                // If we can't get a system locale either, fall back to displaying the user as using en_US
+                user_lang = get_system_locale () ?? "en_US.UTF-8";
             }
 
             string user_region_code;
             if (!Gnome.Languages.parse_locale (user_lang, null, out user_region_code, null, null)) {
-                // If we somehow haven't got a valid user or system locale, display the region as US
+                // If we somehow still ended up with an invalid locale, display the region as US
                 user_region_code = "US";
             }
 
