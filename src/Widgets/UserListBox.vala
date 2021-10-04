@@ -34,7 +34,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             other_accounts_label = new Granite.HeaderLabel (_("Other Accounts"));
 
-            //only build the guest session list entry / row when lightDM is X11's display manager
+            //only build the guest session list entry / row when lightDM is the display manager
             if (get_display_manager () == "lightdm") {
                 var avatar = new Hdy.Avatar (32, null, false);
 
@@ -125,20 +125,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             guest_description_label.label = "<span font_size=\"small\">%s</span>".printf (state_string);
-        }
-
-        private static string get_display_manager () {
-            string output = "";
-
-            try {
-                //TODO: add file location for different, non-debian-based distros
-                FileUtils.get_contents ("/etc/X11/default-display-manager", out output);
-            } catch (Error e) {
-                critical (e.message);
-                return "";
-            }
-
-            return output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
         }
     }
 }
