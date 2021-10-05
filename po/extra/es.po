@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2021-07-15 13:41+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
-"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/es/>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,51 +39,72 @@ msgstr ""
 "contraseñas y fotos"
 
 #: data/useraccounts.appdata.xml.in:12
-msgid "Minor updates:"
-msgstr "Actualizaciones menores:"
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "New colorful avatar fallback"
+msgid "Fixes:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:15
-msgid "Performance improvements"
+#: data/useraccounts.appdata.xml.in:14
+msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:16
-msgid "Improved tooltips and labels"
+msgid "Improvements:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:17
-msgid "Fix possible crash when deleting an account"
+#: data/useraccounts.appdata.xml.in:18
+msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:25
-#: data/useraccounts.appdata.xml.in:35 data/useraccounts.appdata.xml.in:45
+#: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
+msgid "Performance improvements"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:20
+msgid "Better support for non-Ubuntu based distributions"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
+#: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
+#: data/useraccounts.appdata.xml.in:60
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
+#: data/useraccounts.appdata.xml.in:27
+msgid "Minor updates:"
+msgstr "Actualizaciones menores:"
+
+#: data/useraccounts.appdata.xml.in:29
+msgid "New colorful avatar fallback"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Improved tooltips and labels"
+msgstr ""
+
 #: data/useraccounts.appdata.xml.in:32
+msgid "Fix possible crash when deleting an account"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:47
 msgid "Show more accurate reasons for locked settings"
 msgstr ""
 "Se muestran razones más precisas para el bloqueo de determinadas opciones"
 
-#: data/useraccounts.appdata.xml.in:33
+#: data/useraccounts.appdata.xml.in:48
 msgid "Improve reliability of account creation"
 msgstr "Se mejoró la fiabilidad de la creación de cuentas"
 
-#: data/useraccounts.appdata.xml.in:34
+#: data/useraccounts.appdata.xml.in:49
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr "Se obtiene permiso bajo petición para activar o desactivar cuentas"
 
-#: data/useraccounts.appdata.xml.in:42
+#: data/useraccounts.appdata.xml.in:57
 msgid "Show in sidebar if an account is disabled"
 msgstr "Mostrar en la barra lateral si una cuenta está desactivada"
 
-#: data/useraccounts.appdata.xml.in:43
+#: data/useraccounts.appdata.xml.in:58
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Solicitar permiso al añadir y eliminar cuentas"
 
-#: data/useraccounts.appdata.xml.in:44
+#: data/useraccounts.appdata.xml.in:59
 msgid "Animate Infobars"
 msgstr "Barras de información animadas"
