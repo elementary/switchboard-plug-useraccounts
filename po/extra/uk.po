@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-07-15 01:02+0000\n"
+"PO-Revision-Date: 2021-10-06 01:03+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/uk/>\n"
@@ -41,19 +41,21 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Виправлення:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
+"Забезпечено появу інформації користувача в оновленнях бічної панелі після "
+"внесення змін"
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improvements:"
-msgstr ""
+msgstr "Удосконалення:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Підтримка мов із тризначними кодами"
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
@@ -61,7 +63,7 @@ msgstr "Поліпшено швидкодію"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Краща підтримка дистрибутивів, що не базуються на Ubuntu"
 
 #: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
 #: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
