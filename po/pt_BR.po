@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2019-11-22 17:24+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -20,58 +20,58 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "A autenticação é necessária para alterar os dados do usuário"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Contas de usuário"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gerenciar permissões de conta e configurar nomes de usuário, senhas e fotos"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "A troca de senha falhou"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "As mudanças na sessão de convidado terão efeito apenas após você reiniciar "
 "seu sistema"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas configurações precisam de direitos administrativos para serem "
 "modificadas"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 msgid "Full name"
 msgstr "Nome completo"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 msgid "Account type"
 msgstr "Tipo de conta"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 msgid "Language"
 msgstr "Idioma"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 msgid "Log in automatically"
 msgstr "Entrar automaticamente"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Alterar senha"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sessão de convidado"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Usuário padrão"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrador"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,58 +20,58 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "მომხმარებლის ანგარიშები"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "პაროლის შეცვლა ჩაიშალა"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "სტუმრის სესიის ცვლილებები სისტემის გადატვირთვამდე არ გააქტიურდება"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Avatar"
 msgstr "ავატარის შეცვლა"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Full name"
 msgstr "სრული სახელი"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 #, fuzzy
 msgid "Account type"
 msgstr "ანგარიშის ტიპი:"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 #, fuzzy
 msgid "Language"
 msgstr "ენა:"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ავტომატური შესვლა"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
@@ -115,7 +115,7 @@ msgid "Standard User"
 msgstr "სტანდარტული მომხმარებელი"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
 

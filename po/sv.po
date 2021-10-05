@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2018-10-20 13:32+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -20,53 +20,53 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "Verifiering krävs för att ändra användardata"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Användarkonton"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Hantera kontobehörighet och ställ in användarnamn, lösenord och foton"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Lösenordsändringen misslyckades"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Ändringarna för gästsessionen kommer att tillämpas vid omstart"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 msgid "Avatar"
 msgstr "Visningsbild"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 msgid "Full name"
 msgstr "Fullständigt namn"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 msgid "Account type"
 msgstr "Kontotyp"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 msgid "Language"
 msgstr "Språk"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 msgid "Log in automatically"
 msgstr "Logga in automatiskt"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Byt lösenord"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Gästsession"
@@ -109,7 +109,7 @@ msgid "Standard User"
 msgstr "Standardanvändare"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administratör"
 

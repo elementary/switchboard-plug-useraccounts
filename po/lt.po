@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,57 +21,57 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "Norint keisti naudotojų duomenis, reikalingas tapatybės nustatymas"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Naudotojų paskyros"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Tvarkyti paskyros leidimus ir konfigūruoti naudotojų vardus, slaptažodžius "
 "ir nuotraukas"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Slaptažodžio pakeisti nepavyko"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Svečio seanso pakeitimai neįsigalios tol, kol iš naujo nepaleisite savo "
 "sistemos"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 msgid "Avatar"
 msgstr "Avataras"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 msgid "Full name"
 msgstr "Pilnas vardas"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 msgid "Account type"
 msgstr "Paskyros tipas"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 msgid "Language"
 msgstr "Kalba"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 msgid "Log in automatically"
 msgstr "Prisijungti automatiškai"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Keisti slaptažodį"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Svečio seansas"
@@ -114,7 +114,7 @@ msgid "Standard User"
 msgstr "Standartinis naudotojas"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administratorius"
 

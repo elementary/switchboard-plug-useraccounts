@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2021-06-13 10:19+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,57 +20,57 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "Käyttäjätietojen muuttaminen vaatii tunnistautumisen"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Käyttäjätilit"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Hallitse käyttäjätilien oikeuksia ja muokkaa käyttäjätunnuksia, salasanoja "
 "sekä käyttäjien kuvia"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Salasanan vaihtaminen epäonnistui"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Vierasistunnon muutokset eivät tule voimaan, ennen kuin käynnistät "
 "järjestelmän uudelleen"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 msgid "Avatar"
 msgstr "Profiilikuva"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 msgid "Full name"
 msgstr "Koko nimi"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 msgid "Account type"
 msgstr "Käyttäjätilin tyyppi"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 msgid "Language"
 msgstr "Kieli"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 msgid "Log in automatically"
 msgstr "Kirjaudu automaattisesti"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Vaihda salasana"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Vierasistunto"
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr "Peruskäyttäjä"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Ylläpitäjä"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2021-08-28 17:06+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@tutanota.de>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -20,54 +20,55 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "Pre zmenu používateľských údajov sa vyžaduje overenie"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Používateľské účty"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Spravujte oprávnenia účtov a nastavujte používateľské mená, heslá a ich fotky"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Zmena hesla zlyhala"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
-msgstr "Zmeny nastavení relácie pre hosťa sa prejavia až po reštarte zariadenia"
+msgstr ""
+"Zmeny nastavení relácie pre hosťa sa prejavia až po reštarte zariadenia"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 msgid "Avatar"
 msgstr "Ikonka používateľa"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 msgid "Full name"
 msgstr "Celé meno"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 msgid "Account type"
 msgstr "Typ účtu"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 msgid "Language"
 msgstr "Jazyk"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 msgid "Log in automatically"
 msgstr "Prihlasovať automaticky"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Zmena hesla"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Relácia pre hosťa"
@@ -110,7 +111,7 @@ msgid "Standard User"
 msgstr "Bežný používateľ"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrátor"
 
@@ -164,7 +165,8 @@ msgstr "Nedarí sa získať oprávnenie"
 
 #: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
-msgstr "Bez požadovaných systémových oprávnení nie je možné vytvoriť nový účet."
+msgstr ""
+"Bez požadovaných systémových oprávnení nie je možné vytvoriť nový účet."
 
 #: src/Views/MainView.vala:116
 msgid "An account cannot be removed without the required system permission."

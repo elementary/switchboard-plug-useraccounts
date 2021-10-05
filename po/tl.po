@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,58 +18,58 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr ""
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Mga User Account"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Hindi maitalaga ang bagong password"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Avatar"
 msgstr "Baguhin ang Avatar"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Full name"
 msgstr "Buong Pangalan"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 #, fuzzy
 msgid "Account type"
 msgstr "Uri ng Account:"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 #, fuzzy
 msgid "Language"
 msgstr "Wika:"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Awtomatikong mag-log in :"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Palitan ang Password"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr ""
@@ -113,7 +113,7 @@ msgid "Standard User"
 msgstr "Standard na User"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Tagapangasiwa"
 

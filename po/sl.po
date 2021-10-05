@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:11+0000\n"
+"POT-Creation-Date: 2021-10-05 20:41+0000\n"
 "PO-Revision-Date: 2018-03-21 19:53+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -21,59 +21,59 @@ msgstr ""
 msgid "Authentication is required to change user data"
 msgstr "Za spremembo podatkov uporabnika je potrebna overitev"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:45
 msgid "User Accounts"
 msgstr "Uporabniški računi"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:46
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Nastavitve uporabniških računov, gesel in drugih dovoljenj"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:70
 msgid "Password change failed"
 msgstr "Sprememba gesla je spodletela"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:82
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Spremembe seje za goste ne bodo veljavne, dokler sistema ponovno ne zaženete"
 
-#: src/Plug.vala:94
+#: src/Plug.vala:97
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: src/Plug.vala:146
+#: src/Plug.vala:149
 #, fuzzy
 msgid "Avatar"
 msgstr "Spremeni sliko"
 
-#: src/Plug.vala:147
+#: src/Plug.vala:150
 #, fuzzy
 msgid "Full name"
 msgstr "Polno ime"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:151
 #, fuzzy
 msgid "Account type"
 msgstr "Vrsta računa:"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:152
 #, fuzzy
 msgid "Language"
 msgstr "Jezik:"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:153
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Prijavi samodejno:"
 
-#: src/Plug.vala:151 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Spremeni geslo"
 
-#: src/Plug.vala:152 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Seja za goste"
@@ -116,7 +116,7 @@ msgid "Standard User"
 msgstr "Navaden uporabnik"
 
 #: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
-#: src/Widgets/UserItem.vala:51
+#: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Skrbnik"
 
