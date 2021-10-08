@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-07-25 12:43+0000\n"
+"PO-Revision-Date: 2021-10-08 08:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/fi/>\n"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Korjaukset:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Ensure user information in sidebar updates upon changes"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improvements:"
-msgstr ""
+msgstr "Parannukset:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
