@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-10-06 01:03+0000\n"
+"PO-Revision-Date: 2021-10-15 08:53+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/he/>\n"
@@ -50,7 +50,7 @@ msgstr "שיפורים:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr "תמיכה בשפות עם קודים ב־3 תווים"
+msgstr "תמיכה בשפות עם קודים ב־3 אותיות"
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
@@ -58,7 +58,7 @@ msgstr "שיפורי ביצועים"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Better support for non-Ubuntu based distributions"
-msgstr "תמיכה טובה ביותר בהפצות שאינן אובונטו"
+msgstr "שופרה התמיכה במערכות שאינן מבוססות על אובונטו"
 
 #: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
 #: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
