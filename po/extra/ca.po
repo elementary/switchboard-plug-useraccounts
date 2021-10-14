@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-10-06 01:03+0000\n"
+"PO-Revision-Date: 2021-10-15 08:53+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ca/>\n"
@@ -54,7 +54,7 @@ msgstr "Millores:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr "S'admeten llengües amb codis de 3 lletres."
+msgstr "S'admeten codis de llengua de tres lletres."
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
