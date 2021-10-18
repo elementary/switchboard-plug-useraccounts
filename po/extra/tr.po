@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-07-16 13:51+0000\n"
+"PO-Revision-Date: 2021-10-18 21:15+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
-"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/tr/>\n"
+"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,19 +39,19 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Düzeltmeler:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
+msgstr " "
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improvements:"
-msgstr ""
+msgstr " "
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr " "
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
@@ -59,7 +59,7 @@ msgstr "Performans iyileştirmeleri"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr " "
 
 #: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
 #: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
