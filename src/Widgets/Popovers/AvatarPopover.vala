@@ -42,13 +42,23 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             select_button.grab_focus ();
 
+            var gravatar_button = new Gtk.ModelButton () {
+                text = _("Download from Gravatar…")
+            };
+
+            var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+                margin_top = 3,
+                margin_bottom = 3
+            };
+
             var button_grid = new Gtk.Grid () {
                 margin_bottom = 3,
                 margin_top = 3
             };
-            button_grid.attach (remove_button, 0, 0);
-            button_grid.attach (select_button, 0, 1);
-
+            button_grid.attach (select_button, 0, 0);
+            button_grid.attach (gravatar_button, 0, 1);
+            button_grid.attach (separator, 0, 2);
+            button_grid.attach (remove_button, 0, 3);
             add (button_grid);
 
             if (user.get_icon_file ().contains (".face")) {
@@ -59,6 +69,39 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             remove_button.clicked.connect (() => change_avatar (null));
             select_button.clicked.connect (select_from_file);
+            gravatar_button.clicked.connect (download_from_gravatar);
+        }
+
+        private void download_from_gravatar () {
+            if (get_current_user () != user) {
+                var permission = get_permission ();
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        critical (e.message);
+                        return;
+                    }
+                }
+            }
+
+            var email_address = "danielle@elementary.io";
+
+            //TODO: Create a dialog if user.email is blank or null
+
+            var uri = "https://secure.gravatar.com/avatar/%s?d=404&s=%d".printf (
+                Checksum.compute_for_string (ChecksumType.MD5, email_address.strip ().down ()),
+                128
+            );
+            var server_file = File.new_for_uri (uri);
+            var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
+            var local_file = File.new_for_path (path);
+
+            if (!local_file.query_exists (null)) {
+                server_file.copy (local_file, FileCopyFlags.OVERWRITE, null, null);
+            }
+
+            user.set_icon_file (path);
         }
 
         private void select_from_file () {
