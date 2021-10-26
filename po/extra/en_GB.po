@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-07-18 00:36+0000\n"
+"PO-Revision-Date: 2021-10-25 20:25+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/en_GB/>\n"
@@ -39,19 +39,19 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Fixes:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
+msgstr "Ensure user information in sidebar updates upon changes"
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improvements:"
-msgstr ""
+msgstr "Improvements:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Support locales with 3-letter codes"
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
@@ -59,7 +59,7 @@ msgstr "Performance improvements"
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Better support for non-Ubuntu based distributions"
 
 #: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
 #: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
