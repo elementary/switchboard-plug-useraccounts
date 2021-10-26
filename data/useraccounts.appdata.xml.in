@@ -7,7 +7,7 @@
   <icon type="stock">system-users</icon>
   <translation type="gettext">useraccounts-plug</translation>
   <releases>
-    <release version="2.4.1" date="2021-10-22" urgency="medium">
+    <release version="2.4.1" date="2021-10-26" urgency="medium">
       <description>
         <p>Fixes:</p>
         <ul>
