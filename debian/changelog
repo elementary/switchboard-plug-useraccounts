@@ -1,3 +1,17 @@
+switchboard-plug-useraccounts (2.4.1) bionic; urgency=medium
+
+  * Release 2.4.1 (#179)
+  * Update translation files
+  * Update translation template
+  * AppData updates (#177)
+  * Use systemd to detect display manager (#174)
+  * Update run-passwd from g-c-c (#176)
+  * Utils: Replace usage of language-options (#175)
+  * UserItem: Don't use bind_property with accountsservice (#173)
+  * l10n: Correctly setup the locales (#170)
+
+ -- elementary LLC. <builds@elementary.io>  Tue, 26 Oct 2021 17:51:05 +0000
+
 switchboard-plug-useraccounts (2.4.0) bionic; urgency=medium
 
   * Release 2.4.0 (#169)
