@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-10-19 15:45+0000\n"
+"PO-Revision-Date: 2021-10-29 12:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pt/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:16
 msgid "Improvements:"
-msgstr ""
+msgstr "Melhoramentos:"
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
