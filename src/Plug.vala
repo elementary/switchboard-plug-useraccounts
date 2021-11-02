@@ -26,7 +26,6 @@ namespace SwitchboardPlugUserAccounts {
     public class UserAccountsPlug : Switchboard.Plug {
         private Gtk.Grid? main_grid;
         private Gtk.InfoBar infobar;
-        private Gtk.InfoBar infobar_error;
         private Gtk.InfoBar infobar_reboot;
         private Gtk.LockButton lock_button;
         private Widgets.MainView main_view;
@@ -55,25 +54,6 @@ namespace SwitchboardPlugUserAccounts {
                 return main_grid;
             }
 
-            infobar_error = new Gtk.InfoBar ();
-            infobar_error.message_type = Gtk.MessageType.ERROR;
-            infobar_error.revealed = false;
-
-            var error_label = new Gtk.Label ("");
-
-            var error_content = infobar_error.get_content_area ();
-            error_content.add (error_label);
-
-            InfobarNotifier.get_default ().notify["error-message"].connect (() => {
-                var error_message = InfobarNotifier.get_default ().error_message;
-                if (error_message != "") {
-                    error_label.label = "%s: %s".printf (_("Password change failed"), error_message);
-                    infobar_error.revealed = true;
-                } else {
-                    infobar_error.revealed = false;
-                }
-            });
-
             infobar_reboot = new Gtk.InfoBar ();
             infobar_reboot.message_type = Gtk.MessageType.WARNING;
             infobar_reboot.revealed = false;
@@ -99,7 +79,6 @@ namespace SwitchboardPlugUserAccounts {
             main_view = new Widgets.MainView ();
 
             main_grid = new Gtk.Grid ();
-            main_grid.attach (infobar_error, 0, 0, 1, 1);
             main_grid.attach (infobar_reboot, 0, 1, 1, 1);
             main_grid.attach (infobar, 0, 2, 1, 1);
             main_grid.attach (main_view, 0, 3, 1, 1);

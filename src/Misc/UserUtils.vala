@@ -78,40 +78,5 @@ namespace SwitchboardPlugUserAccounts {
                 }
             }
         }
-
-        public void change_password (Act.UserPasswordMode mode, string? new_password) {
-            if (get_permission ().allowed) {
-                switch (mode) {
-                    case Act.UserPasswordMode.REGULAR:
-                        if (new_password != null) {
-                            debug ("Setting new password for %s".printf (user.get_user_name ()));
-                            user.set_password (new_password, "");
-                        }
-                        break;
-                    case Act.UserPasswordMode.NONE:
-                        debug ("Setting no password for %s".printf (user.get_user_name ()));
-                        user.set_password_mode (Act.UserPasswordMode.NONE);
-                        break;
-                    case Act.UserPasswordMode.SET_AT_LOGIN:
-                        debug ("Setting password mode to SET_AT_LOGIN for %s".printf (user.get_user_name ()));
-                        user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
-                        break;
-                    default: break;
-                }
-            } else if (user == get_current_user ()) {
-                if (new_password != null) {
-                    // we are going to assume that if a normal user calls this method,
-                    // he is authenticated against the PasswdHandler
-                    Passwd.passwd_change_password (get_passwd_handler (), new_password, (h, e) => {
-                        if (e != null) {
-                            warning ("Password change for %s failed".printf (user.get_user_name ()));
-                            warning (e.message);
-                            InfobarNotifier.get_default ().error_message = e.message;
-                        } else
-                            debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
-                    });
-                }
-            }
-        }
     }
 }
