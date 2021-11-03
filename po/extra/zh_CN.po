@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-05 20:41+0000\n"
-"PO-Revision-Date: 2021-11-01 10:01+0000\n"
+"PO-Revision-Date: 2021-11-02 05:56+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/zh_Hans/>\n"
@@ -40,7 +40,7 @@ msgstr "管理账户权限、配置用户信息及头像"
 
 #: data/useraccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "修复:"
 
 #: data/useraccounts.appdata.xml.in:14
 msgid "Ensure user information in sidebar updates upon changes"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:18
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "支持带有 3 个字母代码的语言环境"
 
 #: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
 msgid "Performance improvements"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:20
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "更好地支持非基于 Ubuntu 的发行版"
 
 #: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
 #: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
