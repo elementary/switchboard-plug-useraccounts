@@ -79,7 +79,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             avatar_button.toggled.connect (() => {
                 if (avatar_button.active) {
-                    InfobarNotifier.get_default ().error_message = "";
                     AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
                     avatar_popover.show_all ();
                     avatar_popover.hide.connect (() => { avatar_button.active = false;});
@@ -91,7 +90,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             full_name_entry.activate.connect (() => {
-                InfobarNotifier.get_default ().error_message = "";
                 utils.change_full_name (full_name_entry.get_text ());
             });
 
@@ -103,7 +101,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
             user_type_box.changed.connect (() => {
-                InfobarNotifier.get_default ().error_message = "";
                 utils.change_user_type (user_type_box.active);
             });
 
@@ -138,8 +135,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 attach (region_revealer, 1, 3);
 
                 language_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().error_message = "";
-
                     Gtk.TreeIter? iter;
                     Value cell;
 
@@ -158,8 +153,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 });
 
                 region_box.changed.connect (() => {
-                    InfobarNotifier.get_default ().error_message = "";
-
                     string new_language;
                     Gtk.TreeIter? iter;
                     Value cell;
@@ -198,7 +191,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
-                InfobarNotifier.get_default ().error_message = "";
                 var permission = get_permission ();
                 if (user == get_current_user () && permission.allowed) {
                     try {
@@ -210,7 +202,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_toplevel (), user);
                 change_password_dialog.present ();
-                change_password_dialog.request_password_change.connect (utils.change_password);
+                change_password_dialog.request_password_change.connect (change_password);
             });
 
             enable_user_button = new Gtk.Button () {
@@ -508,6 +500,49 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             user.set_locked (!user_locked);
+        }
+
+        private void change_password (Act.UserPasswordMode mode, string? new_password) {
+            if (get_permission ().allowed) {
+                switch (mode) {
+                    case Act.UserPasswordMode.REGULAR:
+                        if (new_password != null) {
+                            debug ("Setting new password for %s".printf (user.get_user_name ()));
+                            user.set_password (new_password, "");
+                        }
+                        break;
+                    case Act.UserPasswordMode.NONE:
+                        debug ("Setting no password for %s".printf (user.get_user_name ()));
+                        user.set_password_mode (Act.UserPasswordMode.NONE);
+                        break;
+                    case Act.UserPasswordMode.SET_AT_LOGIN:
+                        debug ("Setting password mode to SET_AT_LOGIN for %s".printf (user.get_user_name ()));
+                        user.set_password_mode (Act.UserPasswordMode.SET_AT_LOGIN);
+                        break;
+                    default: break;
+                }
+            } else if (user == get_current_user ()) {
+                if (new_password != null) {
+                    // we are going to assume that if a normal user calls this method,
+                    // he is authenticated against the PasswdHandler
+                    Passwd.passwd_change_password (get_passwd_handler (), new_password, (h, e) => {
+                        if (e != null) {
+                            var dialog = new Granite.MessageDialog (
+                                _("Unable to change the password for %s").printf (user.get_real_name ()),
+                                e.message,
+                                new ThemedIcon ("dialog-password")
+                            ) {
+                                badge_icon = new ThemedIcon ("dialog-error"),
+                                transient_for = (Gtk.Window) get_toplevel ()
+                            };
+                            dialog.show_all ();
+                            dialog.response.connect (dialog.destroy);
+                        } else {
+                            debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));
+                        }
+                    });
+                }
+            }
         }
     }
 }
