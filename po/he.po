@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:21+0000\n"
-"PO-Revision-Date: 2021-06-04 13:21+0000\n"
+"PO-Revision-Date: 2021-11-05 01:02+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/he/>\n"
@@ -220,7 +220,7 @@ msgstr "השבתת חשבון משתמש"
 #: src/Views/UserSettingsView.vala:531
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "לא ניתן להחליף את הססמה של %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
