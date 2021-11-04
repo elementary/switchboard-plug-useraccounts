@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 20:41+0000\n"
+"POT-Creation-Date: 2021-11-04 18:21+0000\n"
 "PO-Revision-Date: 2021-06-04 13:21+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -16,61 +16,57 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:35
+#: src/Plug.vala:34
 msgid "Authentication is required to change user data"
 msgstr "Cal autenticació per canviar les dades de l'usuari."
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid "User Accounts"
 msgstr "Comptes d'usuari"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:45
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
 "contrasenyes i les fotografies."
 
-#: src/Plug.vala:70
-msgid "Password change failed"
-msgstr "Ha fallat el canvi de contrasenya."
-
-#: src/Plug.vala:82
+#: src/Plug.vala:62
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
 "sistema."
 
-#: src/Plug.vala:97
+#: src/Plug.vala:77
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:128
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:129
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:130
 msgid "Account type"
 msgstr "Tipus de compte"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:131
 msgid "Language"
 msgstr "Llengua"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:132
 msgid "Log in automatically"
 msgstr "Entra-hi automàticament"
 
-#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
-#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sessió de convidat"
@@ -112,7 +108,7 @@ msgstr "Tipus de compte"
 msgid "Standard User"
 msgstr "Usuari estàndard"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrador"
@@ -151,7 +147,7 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "En sortir d'aquesta sessió se'n suprimiran tots els paràmetres i les dades."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
 msgid "Log In automatically:"
 msgstr "Entra automàticament:"
 
@@ -201,33 +197,38 @@ msgstr "No podeu canviar aquesta opció per a l'usuari actiu"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "No podeu treure els permisos de l'últim compte administratiu"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:96
 msgid "Account type:"
 msgstr "Tipus de compte:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:101
 msgid "Standard"
 msgstr "Estàndard"
 
-#: src/Views/UserSettingsView.vala:110
+#: src/Views/UserSettingsView.vala:107
 msgid "Language:"
 msgstr "Llengua:"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:175
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Cliqueu per canviar als paràmetres de la llengua i la regió"
 
-#: src/Views/UserSettingsView.vala:199
+#: src/Views/UserSettingsView.vala:192
 msgid "Change Password…"
 msgstr "Canvia la contrasenya…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:354
 msgid "Enable User Account"
 msgstr "Habilita el compte d'usuari"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:358
 msgid "Disable User Account"
 msgstr "Inhabilita el compte d'usuari"
+
+#: src/Views/UserSettingsView.vala:531
+#, c-format
+msgid "Unable to change the password for %s"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -281,6 +282,9 @@ msgstr "Habilitat"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Inhabilitat"
+
+#~ msgid "Password change failed"
+#~ msgstr "Ha fallat el canvi de contrasenya."
 
 #~ msgid "Remove user account and its data"
 #~ msgstr "Suprimeix el compte d'usuari i les seves dades"

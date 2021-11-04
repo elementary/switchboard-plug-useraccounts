@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 20:41+0000\n"
+"POT-Creation-Date: 2021-11-04 18:21+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -16,58 +16,54 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:35
+#: src/Plug.vala:34
 msgid "Authentication is required to change user data"
 msgstr "वापरकर्ता डेटा बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid "User Accounts"
 msgstr "वापरकर्ता खाती"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:45
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "खाते परवानग्या व्यवस्थापित करा आणि वापरकर्ता नावे, पासवर्ड आणि फोटो कॉन्फिगर करा"
 
-#: src/Plug.vala:70
-msgid "Password change failed"
-msgstr "पासवर्ड बदल अयशस्वी"
-
-#: src/Plug.vala:82
+#: src/Plug.vala:62
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "आपण आपले सिस्टम रीस्टार्ट करेपर्यंत अतिथी सत्र बदल प्रभावी होणार नाहीत"
 
-#: src/Plug.vala:97
+#: src/Plug.vala:77
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:128
 msgid "Avatar"
 msgstr "अवतार"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:129
 msgid "Full name"
 msgstr "पूर्ण नाव"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:130
 msgid "Account type"
 msgstr "खाते प्रकार"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:131
 msgid "Language"
 msgstr "भाषा"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:132
 msgid "Log in automatically"
 msgstr "स्वयंचलितपणे लॉग इन करा"
 
-#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "पासवर्ड बदला"
 
-#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "अतिथी सत्र"
@@ -109,7 +105,7 @@ msgstr "खाते प्रकार"
 msgid "Standard User"
 msgstr "मानक वापरकर्ता"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "प्रशासक"
@@ -144,7 +140,7 @@ msgstr "अतिथी सत्र एखाद्यास पासवर्
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "एकदा ते लॉग आउट झाल्यानंतर त्यांची सर्व सेटिंग्ज आणि डेटा हटविला जाईल."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
 msgid "Log In automatically:"
 msgstr "स्वयंचलितपणे लॉग इन करा:"
 
@@ -197,33 +193,38 @@ msgstr "आपण सध्या सक्रिय वापरकर्त्
 msgid "You cannot remove the last administrator's privileges"
 msgstr "आपण अंतिम प्रशासकाच्या विशेषाधिकार काढू शकत नाही"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:96
 msgid "Account type:"
 msgstr "खाते प्रकार:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:101
 msgid "Standard"
 msgstr "मानक"
 
-#: src/Views/UserSettingsView.vala:110
+#: src/Views/UserSettingsView.vala:107
 msgid "Language:"
 msgstr "भाषा:"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:175
 msgid "Click to switch to Language & Locale Settings"
 msgstr "भाषा आणि लोकॅल सेटिंग्जवर स्विच करण्यासाठी क्लिक करा"
 
-#: src/Views/UserSettingsView.vala:199
+#: src/Views/UserSettingsView.vala:192
 msgid "Change Password…"
 msgstr "पासवर्ड बदला…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:354
 msgid "Enable User Account"
 msgstr "वापरकर्ता खाते सक्षम करा"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:358
 msgid "Disable User Account"
 msgstr "वापरकर्ता खाते अक्षम करा"
+
+#: src/Views/UserSettingsView.vala:531
+#, c-format
+msgid "Unable to change the password for %s"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -277,6 +278,9 @@ msgstr "सक्षम"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "अक्षम"
+
+#~ msgid "Password change failed"
+#~ msgstr "पासवर्ड बदल अयशस्वी"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "अंतिम वापरकर्ता खाते काढणे पूर्ववत करा"
