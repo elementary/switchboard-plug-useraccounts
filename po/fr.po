@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:21+0000\n"
-"PO-Revision-Date: 2021-08-12 17:07+0000\n"
+"PO-Revision-Date: 2021-11-05 09:17+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fr/>\n"
@@ -230,7 +230,7 @@ msgstr "Désactiver le compte utilisateur"
 #: src/Views/UserSettingsView.vala:531
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "Impossible de modifier le mot de passe pour %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
