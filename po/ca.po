@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:21+0000\n"
-"PO-Revision-Date: 2021-06-04 13:21+0000\n"
+"PO-Revision-Date: 2021-11-05 16:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -228,7 +228,7 @@ msgstr "Inhabilita el compte d'usuari"
 #: src/Views/UserSettingsView.vala:531
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "No es pot canviar la contrasenya per a %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
