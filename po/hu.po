@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:21+0000\n"
-"PO-Revision-Date: 2021-08-27 17:04+0000\n"
+"PO-Revision-Date: 2021-11-06 21:26+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -228,7 +228,7 @@ msgstr "Felhasználói fiók letiltása"
 #: src/Views/UserSettingsView.vala:531
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "Nem lehet megváltoztatni %s jelszavát"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
