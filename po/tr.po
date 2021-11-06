@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-04 18:21+0000\n"
-"PO-Revision-Date: 2021-06-04 13:21+0000\n"
+"PO-Revision-Date: 2021-11-06 04:01+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/tr/>\n"
@@ -227,7 +227,7 @@ msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
 #: src/Views/UserSettingsView.vala:531
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "%s için parola değiştirilemiyor"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
