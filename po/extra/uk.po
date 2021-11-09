@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-09 20:14+0000\n"
-"PO-Revision-Date: 2021-10-06 01:03+0000\n"
+"PO-Revision-Date: 2021-11-09 21:43+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/uk/>\n"
@@ -50,11 +50,8 @@ msgstr ""
 "внесення змін"
 
 #: data/useraccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr ""
-"Отримання дозволу на вимогу для ввімкнення або вимкнення облікових записів"
+msgstr "Оновлення дозволів під час увімкнення та вимкнення облікових записів"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Improvements:"
