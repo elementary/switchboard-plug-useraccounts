@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-09 20:14+0000\n"
-"PO-Revision-Date: 2021-10-08 12:19+0000\n"
+"PO-Revision-Date: 2021-11-10 01:54+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -46,12 +46,8 @@ msgid "Ensure user information in sidebar updates upon changes"
 msgstr "サイドバーに表示されるユーザー情報が変更時に更新されるように修正"
 
 #: data/useraccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr ""
-"アカウントの有効化時および無効化時に、必要に応じて管理者権限を取得するように"
-"変更"
+msgstr "アカウントの有効化時および無効化時に権限を更新するように変更"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Improvements:"
