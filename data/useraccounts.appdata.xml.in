@@ -12,6 +12,7 @@
         <p>Fixes:</p>
         <ul>
           <li>Ensure user information in sidebar updates upon changes</li>
+          <li>Update permissions when enabling and disabling accounts</li>
         </ul>
         <p>Improvements:</p>
         <ul>
