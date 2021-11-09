@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2021-10-06 01:03+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -49,65 +49,72 @@ msgstr ""
 "Забезпечено появу інформації користувача в оновленнях бічної панелі після "
 "внесення змін"
 
-#: data/useraccounts.appdata.xml.in:16
+#: data/useraccounts.appdata.xml.in:15
+#, fuzzy
+#| msgid "Get permission on demand for enabling or disabling accounts"
+msgid "Update permissions when enabling and disabling accounts"
+msgstr ""
+"Отримання дозволу на вимогу для ввімкнення або вимкнення облікових записів"
+
+#: data/useraccounts.appdata.xml.in:17
 msgid "Improvements:"
 msgstr "Удосконалення:"
 
-#: data/useraccounts.appdata.xml.in:18
+#: data/useraccounts.appdata.xml.in:19
 msgid "Support locales with 3-letter codes"
 msgstr "Підтримка мов із тризначними кодами"
 
-#: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
+#: data/useraccounts.appdata.xml.in:20 data/useraccounts.appdata.xml.in:31
 msgid "Performance improvements"
 msgstr "Поліпшено швидкодію"
 
-#: data/useraccounts.appdata.xml.in:20
+#: data/useraccounts.appdata.xml.in:21
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Краща підтримка дистрибутивів, що не базуються на Ubuntu"
 
-#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
-#: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
-#: data/useraccounts.appdata.xml.in:60
+#: data/useraccounts.appdata.xml.in:22 data/useraccounts.appdata.xml.in:34
+#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:51
+#: data/useraccounts.appdata.xml.in:61
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
-#: data/useraccounts.appdata.xml.in:27
+#: data/useraccounts.appdata.xml.in:28
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/useraccounts.appdata.xml.in:29
+#: data/useraccounts.appdata.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr "Новий барвистий аватар"
 
-#: data/useraccounts.appdata.xml.in:31
+#: data/useraccounts.appdata.xml.in:32
 msgid "Improved tooltips and labels"
 msgstr "Вдосконалено підказки та ярлики"
 
-#: data/useraccounts.appdata.xml.in:32
+#: data/useraccounts.appdata.xml.in:33
 msgid "Fix possible crash when deleting an account"
 msgstr "Виправлено можливі збої під час видалення облікового запису"
 
-#: data/useraccounts.appdata.xml.in:47
+#: data/useraccounts.appdata.xml.in:48
 msgid "Show more accurate reasons for locked settings"
 msgstr "Показ точніших причин блокування налаштувань"
 
-#: data/useraccounts.appdata.xml.in:48
+#: data/useraccounts.appdata.xml.in:49
 msgid "Improve reliability of account creation"
 msgstr "Підвищено ймовірність створення облікових записів"
 
-#: data/useraccounts.appdata.xml.in:49
+#: data/useraccounts.appdata.xml.in:50
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 "Отримання дозволу на вимогу для ввімкнення або вимкнення облікових записів"
 
-#: data/useraccounts.appdata.xml.in:57
+#: data/useraccounts.appdata.xml.in:58
 msgid "Show in sidebar if an account is disabled"
 msgstr "Показ на бічній панелі, якщо обліковий запис вимкнено"
 
-#: data/useraccounts.appdata.xml.in:58
+#: data/useraccounts.appdata.xml.in:59
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Запит дозволу під час додавання та вилучення облікових записів"
 
-#: data/useraccounts.appdata.xml.in:59
+#: data/useraccounts.appdata.xml.in:60
 msgid "Animate Infobars"
 msgstr "Анімовано панель подробиць"
