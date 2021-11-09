@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-09 20:14+0000\n"
-"PO-Revision-Date: 2021-10-15 08:53+0000\n"
+"PO-Revision-Date: 2021-11-10 01:54+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/he/>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,10 +45,8 @@ msgid "Ensure user information in sidebar updates upon changes"
 msgstr "אימות שפרטי המשתמש בסרגל הצד מתעדכנים כשיש שינויים"
 
 #: data/useraccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr "קבלת הרשאה לפי דרישה להפעלת או השבתת חשבונות"
+msgstr "עדכון הרשאות בעת הפעלת או השבתת חשבונות"
 
 #: data/useraccounts.appdata.xml.in:17
 msgid "Improvements:"
