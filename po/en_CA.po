@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2018-03-08 14:45+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -222,15 +222,15 @@ msgstr "Click to switch to Language & Locale Settings"
 msgid "Change Password…"
 msgstr "Change Password…"
 
-#: src/Views/UserSettingsView.vala:354
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Enable User Account"
 
-#: src/Views/UserSettingsView.vala:358
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Disable User Account"
 
-#: src/Views/UserSettingsView.vala:531
+#: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

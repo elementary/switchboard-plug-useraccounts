@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2021-11-08 11:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -218,15 +218,15 @@ msgstr "Napsauta vaihtaaksesi kieliasetuksia"
 msgid "Change Password…"
 msgstr "Vaihda salasana…"
 
-#: src/Views/UserSettingsView.vala:354
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Ota tili käyttöön"
 
-#: src/Views/UserSettingsView.vala:358
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Poista tili käytöstä"
 
-#: src/Views/UserSettingsView.vala:531
+#: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Käyttäjän %s salasanaa ei voitu vaihtaa"

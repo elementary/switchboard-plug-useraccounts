@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -220,15 +220,15 @@ msgstr "Ava keele ja piirkonna eelistused"
 msgid "Change Password…"
 msgstr "Muuda parooli"
 
-#: src/Views/UserSettingsView.vala:354
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Luba konto"
 
-#: src/Views/UserSettingsView.vala:358
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Keela konto"
 
-#: src/Views/UserSettingsView.vala:531
+#: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

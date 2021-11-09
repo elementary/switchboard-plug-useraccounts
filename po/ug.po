@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -221,15 +221,15 @@ msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش �
 msgid "Change Password…"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Views/UserSettingsView.vala:354
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "ئابونت ھىساۋاتىنى قوزغىتىش"
 
-#: src/Views/UserSettingsView.vala:358
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "ئابونت ھىساۋاتىنى چەكلەش"
 
-#: src/Views/UserSettingsView.vala:531
+#: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

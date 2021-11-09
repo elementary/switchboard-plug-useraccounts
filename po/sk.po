@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-04 18:21+0000\n"
+"POT-Creation-Date: 2021-11-09 20:14+0000\n"
 "PO-Revision-Date: 2021-08-28 17:06+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@tutanota.de>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -214,15 +214,15 @@ msgstr "Kliknite pre prepnutie do nastavení Jazyka a oblastí"
 msgid "Change Password…"
 msgstr "Zmeniť heslo…"
 
-#: src/Views/UserSettingsView.vala:354
+#: src/Views/UserSettingsView.vala:362
 msgid "Enable User Account"
 msgstr "Aktivovať používateľský účet"
 
-#: src/Views/UserSettingsView.vala:358
+#: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Deaktivovať používateľský účet"
 
-#: src/Views/UserSettingsView.vala:531
+#: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
