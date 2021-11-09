@@ -272,6 +272,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             get_permission ().notify["allowed"].connect (update_permission);
 
             user.changed.connect (update_ui);
+            user.changed.connect (update_permission);
         }
 
         private void update_permission () {
@@ -300,13 +301,20 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 if (!user_locked) {
                     password_button.sensitive = true;
                     password_lock.set_opacity (0);
+                } else {
+                    password_button.sensitive = false;
+                    password_lock.set_opacity (1);
                 }
 
                 if (allowed) {
                     if (!user_locked) {
                         autologin_switch.sensitive = true;
                         autologin_lock.set_opacity (0);
+                    } else {
+                        autologin_switch.sensitive = false;
+                        autologin_lock.set_opacity (1);
                     }
+
                     if (!last_admin && !current_user) {
                         user_type_box.sensitive = true;
                         user_type_lock.set_opacity (0);
