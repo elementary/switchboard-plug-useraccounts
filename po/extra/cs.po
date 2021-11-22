@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-09 20:14+0000\n"
+"POT-Creation-Date: 2021-11-18 19:40+0000\n"
 "PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/user-"
@@ -38,80 +38,80 @@ msgstr ""
 "Spravovat oprávnění uživatelů a nastavovat uživatelská jména, hesla a jejich "
 "fotky"
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:24
 msgid "Fixes:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:14
-msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:15
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
 #, fuzzy
 #| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
 msgstr ""
 "Získávání oprávnění pro povolování či zakazování účtů na základě potřeby"
 
-#: data/useraccounts.appdata.xml.in:17
+#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
 msgid "Improvements:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:19
-msgid "Support locales with 3-letter codes"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:20 data/useraccounts.appdata.xml.in:31
-msgid "Performance improvements"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:21
-msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:22 data/useraccounts.appdata.xml.in:34
-#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:51
-#: data/useraccounts.appdata.xml.in:61
+#: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:34
+#: data/useraccounts.appdata.xml.in:46 data/useraccounts.appdata.xml.in:53
+#: data/useraccounts.appdata.xml.in:63 data/useraccounts.appdata.xml.in:73
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/useraccounts.appdata.xml.in:28
-msgid "Minor updates:"
+#: data/useraccounts.appdata.xml.in:26
+msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:30
-msgid "New colorful avatar fallback"
+#: data/useraccounts.appdata.xml.in:31
+msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:32
-msgid "Improved tooltips and labels"
+#: data/useraccounts.appdata.xml.in:32 data/useraccounts.appdata.xml.in:43
+msgid "Performance improvements"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:33
+msgid "Better support for non-Ubuntu based distributions"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:40
+msgid "Minor updates:"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:42
+msgid "New colorful avatar fallback"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:44
+msgid "Improved tooltips and labels"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:45
 msgid "Fix possible crash when deleting an account"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:48
+#: data/useraccounts.appdata.xml.in:60
 msgid "Show more accurate reasons for locked settings"
 msgstr "Zobrazování přesnějších důvodů pro uzamčená nastavení"
 
-#: data/useraccounts.appdata.xml.in:49
+#: data/useraccounts.appdata.xml.in:61
 msgid "Improve reliability of account creation"
 msgstr "Zlepšení spolehlivosti vytváření účtů"
 
-#: data/useraccounts.appdata.xml.in:50
+#: data/useraccounts.appdata.xml.in:62
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 "Získávání oprávnění pro povolování či zakazování účtů na základě potřeby"
 
-#: data/useraccounts.appdata.xml.in:58
+#: data/useraccounts.appdata.xml.in:70
 msgid "Show in sidebar if an account is disabled"
 msgstr "V postranním panelu je zobrazeno zda je účet zakázán"
 
-#: data/useraccounts.appdata.xml.in:59
+#: data/useraccounts.appdata.xml.in:71
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Zeptat se na oprávnění při přidávání nebo odebírání účtů"
 
-#: data/useraccounts.appdata.xml.in:60
+#: data/useraccounts.appdata.xml.in:72
 msgid "Animate Infobars"
 msgstr "Animovat informační pruhy"

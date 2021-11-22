@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-09 20:14+0000\n"
+"POT-Creation-Date: 2021-11-18 19:40+0000\n"
 "PO-Revision-Date: 2021-11-10 14:38+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
-"user-accounts-plug-extra/fr/>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/user-"
+"accounts-plug-extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,82 +39,82 @@ msgstr ""
 "Gérer les permission des comptes, configurer les noms d'utilisateur, mots de "
 "passe et photos"
 
-#: data/useraccounts.appdata.xml.in:12
+#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:24
 msgid "Fixes:"
 msgstr "Corrections :"
 
-#: data/useraccounts.appdata.xml.in:14
-msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
-"Nous nous sommes assurés que les informations du compte utilisateur dans la "
-"barre latérale soient mises à jour en cas de changement"
-
-#: data/useraccounts.appdata.xml.in:15
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
 msgid "Update permissions when enabling and disabling accounts"
 msgstr ""
 "Mise à jour des autorisations lors de l'activation et de la désactivation "
 "des comptes"
 
-#: data/useraccounts.appdata.xml.in:17
+#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
 msgid "Improvements:"
 msgstr "Améliorations :"
 
-#: data/useraccounts.appdata.xml.in:19
-msgid "Support locales with 3-letter codes"
-msgstr "Prise en charge des langues avec un code à 3 lettres"
-
-#: data/useraccounts.appdata.xml.in:20 data/useraccounts.appdata.xml.in:31
-msgid "Performance improvements"
-msgstr "Amélioration des performances"
-
-#: data/useraccounts.appdata.xml.in:21
-msgid "Better support for non-Ubuntu based distributions"
-msgstr "Meilleure prise en charge pour les distributions non basées sur Ubuntu"
-
-#: data/useraccounts.appdata.xml.in:22 data/useraccounts.appdata.xml.in:34
-#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:51
-#: data/useraccounts.appdata.xml.in:61
+#: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:34
+#: data/useraccounts.appdata.xml.in:46 data/useraccounts.appdata.xml.in:53
+#: data/useraccounts.appdata.xml.in:63 data/useraccounts.appdata.xml.in:73
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
-#: data/useraccounts.appdata.xml.in:28
+#: data/useraccounts.appdata.xml.in:26
+msgid "Ensure user information in sidebar updates upon changes"
+msgstr ""
+"Nous nous sommes assurés que les informations du compte utilisateur dans la "
+"barre latérale soient mises à jour en cas de changement"
+
+#: data/useraccounts.appdata.xml.in:31
+msgid "Support locales with 3-letter codes"
+msgstr "Prise en charge des langues avec un code à 3 lettres"
+
+#: data/useraccounts.appdata.xml.in:32 data/useraccounts.appdata.xml.in:43
+msgid "Performance improvements"
+msgstr "Amélioration des performances"
+
+#: data/useraccounts.appdata.xml.in:33
+msgid "Better support for non-Ubuntu based distributions"
+msgstr "Meilleure prise en charge pour les distributions non basées sur Ubuntu"
+
+#: data/useraccounts.appdata.xml.in:40
 msgid "Minor updates:"
 msgstr "Mises à jour mineures :"
 
-#: data/useraccounts.appdata.xml.in:30
+#: data/useraccounts.appdata.xml.in:42
 msgid "New colorful avatar fallback"
 msgstr "Nouveaux avatars colorés par défaut"
 
-#: data/useraccounts.appdata.xml.in:32
+#: data/useraccounts.appdata.xml.in:44
 msgid "Improved tooltips and labels"
 msgstr "Amélioration des infobulles et des titres"
 
-#: data/useraccounts.appdata.xml.in:33
+#: data/useraccounts.appdata.xml.in:45
 msgid "Fix possible crash when deleting an account"
 msgstr "Correction d'un plantage éventuel lors de la suppression d'un compte"
 
-#: data/useraccounts.appdata.xml.in:48
+#: data/useraccounts.appdata.xml.in:60
 msgid "Show more accurate reasons for locked settings"
 msgstr "Explications plus précises pour les paramètres verrouillés"
 
-#: data/useraccounts.appdata.xml.in:49
+#: data/useraccounts.appdata.xml.in:61
 msgid "Improve reliability of account creation"
 msgstr "Amélioration de la fiabilité de la création de compte"
 
-#: data/useraccounts.appdata.xml.in:50
+#: data/useraccounts.appdata.xml.in:62
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 "Demande de l'autorisation sur le moment pour l'activation ou la "
 "désactivation de comptes"
 
-#: data/useraccounts.appdata.xml.in:58
+#: data/useraccounts.appdata.xml.in:70
 msgid "Show in sidebar if an account is disabled"
 msgstr "Affichage dans la barre latérale si un compte a été désactivé"
 
-#: data/useraccounts.appdata.xml.in:59
+#: data/useraccounts.appdata.xml.in:71
 msgid "Ask for permission when adding and removing accounts"
 msgstr "Demande de permission lors de l'ajout ou la suppression de comptes"
 
-#: data/useraccounts.appdata.xml.in:60
+#: data/useraccounts.appdata.xml.in:72
 msgid "Animate Infobars"
 msgstr "Animation des barres d'information"

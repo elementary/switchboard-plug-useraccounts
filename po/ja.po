@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-09 20:14+0000\n"
-"PO-Revision-Date: 2021-11-05 01:02+0000\n"
+"POT-Creation-Date: 2021-11-18 19:40+0000\n"
+"PO-Revision-Date: 2021-11-22 02:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -187,11 +187,11 @@ msgstr "これを変更する権限がありません"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
-msgstr "現在アクティブなユーザーのため変更することはできません"
+msgstr "現在アクティブなユーザーのため変更できません"
 
 #: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
-msgstr "最後の管理者の権限を削除することはできません"
+msgstr "管理者が唯一の場合、その権限は削除できません"
 
 #: src/Views/UserSettingsView.vala:96
 msgid "Account type:"
