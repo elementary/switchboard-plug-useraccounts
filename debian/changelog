@@ -1,3 +1,13 @@
+switchboard-plug-useraccounts (2.4.2) bionic; urgency=medium
+
+  * Release 2.4.2 (#182)
+  * Update translation files
+  * Update translation template
+  * Update permissions after account changes (#181)
+  * Replace InfobarError with MessageDialog (#180)
+
+ -- elementary LLC. <builds@elementary.io>  Tue, 23 Nov 2021 21:20:53 +0000
+
 switchboard-plug-useraccounts (2.4.1) bionic; urgency=medium
 
   * Release 2.4.1 (#179)
