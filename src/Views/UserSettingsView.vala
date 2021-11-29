@@ -417,11 +417,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 language_box.set_model (language_store);
 
                 foreach (string language in languages) {
-                    language_store.insert (out iter, 0);
+                    language_store.insert (out iter, 1);
                     language_store.set (iter, 0, language, 1, Gnome.Languages.get_language_from_code (language, null));
                     if (user_lang_code == language)
                         language_box.set_active_iter (iter);
                 }
+                language_store.set_sort_column_id (1, Gtk.SortType.ASCENDING);
 
             } else {
                 var language = Gnome.Languages.get_language_from_code (user_lang_code, null);
@@ -487,6 +488,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 region_box.set_active_iter (active_iter);
             }
+            region_store.set_sort_column_id (1, Gtk.SortType.ASCENDING);
         }
 
         private void change_lock () {
