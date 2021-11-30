@@ -461,7 +461,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             foreach (string region in regions) {
-                region_store.insert (out iter, 0);
+                region_store.insert (out iter, 1);
                 region_store.set (iter, 0, region, 1, Gnome.Languages.get_country_from_code (region, null));
                 if (user_region_code == region) {
                     region_box.set_active_iter (iter);
