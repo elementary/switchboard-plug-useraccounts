@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-08-26 08:14+0000\n"
+"PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/sk/>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,17 +39,15 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Opravy:"
 
 #: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr "Získavajte oprávnenia na požiadanie pre povolenie či zakázanie účtov"
+msgstr "Aktualizovať oprávnenia pri povolení či zakázaní účtov"
 
 #: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
 msgid "Improvements:"
-msgstr ""
+msgstr "Vylepšenia:"
 
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:34
 #: data/useraccounts.appdata.xml.in:46 data/useraccounts.appdata.xml.in:53
@@ -60,10 +58,11 @@ msgstr "Aktualizované preklady"
 #: data/useraccounts.appdata.xml.in:26
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
+"Zabezpečené, že sa informácie o používateľovi aktualizujú po aplikovaní zmien"
 
 #: data/useraccounts.appdata.xml.in:31
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Podpora miest s 3-písmenovými kódmi"
 
 #: data/useraccounts.appdata.xml.in:32 data/useraccounts.appdata.xml.in:43
 msgid "Performance improvements"
@@ -71,7 +70,7 @@ msgstr "Zlepšenia výkonu"
 
 #: data/useraccounts.appdata.xml.in:33
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Lepšia podpora pre distribúcie nezaložené na základe Ubuntu"
 
 #: data/useraccounts.appdata.xml.in:40
 msgid "Minor updates:"
