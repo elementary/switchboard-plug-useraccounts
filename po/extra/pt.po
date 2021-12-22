@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-11-23 23:34+0000\n"
+"PO-Revision-Date: 2021-12-22 19:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pt/>\n"
@@ -43,10 +43,8 @@ msgid "Fixes:"
 msgstr "Correções:"
 
 #: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr "Obter autorização a pedido para ativar ou desativar contas"
+msgstr "Atualiza as permissões ao ativar e desativar contas"
 
 #: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
 msgid "Improvements:"
@@ -61,10 +59,12 @@ msgstr "Traduções atualizadas"
 #: data/useraccounts.appdata.xml.in:26
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
+"Assegurar a informação do utilizador em atualizações da barra lateral sobre "
+"alterações"
 
 #: data/useraccounts.appdata.xml.in:31
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Suporta localizações com códigos de 3 letras"
 
 #: data/useraccounts.appdata.xml.in:32 data/useraccounts.appdata.xml.in:43
 msgid "Performance improvements"
@@ -72,7 +72,7 @@ msgstr "Melhorias de desempenho"
 
 #: data/useraccounts.appdata.xml.in:33
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Melhor suporte para distribuições não baseadas no Ubuntu"
 
 #: data/useraccounts.appdata.xml.in:40
 msgid "Minor updates:"
