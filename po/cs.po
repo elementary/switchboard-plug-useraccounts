@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2020-05-29 15:23+0000\n"
+"PO-Revision-Date: 2022-01-10 13:14+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/cs/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -148,10 +148,8 @@ msgid "Log In automatically:"
 msgstr "Přihlásit automaticky:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "Vytvořit uživatelský účet"
+msgstr "Vytvořit uživatelský účet…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
@@ -175,10 +173,9 @@ msgid "Removed “%s”"
 msgstr ""
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "Smazat uživatelský účet a jeho data"
+msgstr "Smazat „%s“ a jeho data"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
