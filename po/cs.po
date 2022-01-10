@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2022-01-10 13:14+0000\n"
+"PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/cs/>\n"
@@ -170,7 +170,7 @@ msgstr "Bez potřebných systémových oprávnění není možné smazat účet.
 #: src/Views/MainView.vala:138
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "Odebráno „%s“"
 
 #: src/Views/MainView.vala:203
 #, c-format
@@ -224,7 +224,7 @@ msgstr "Znepřístupnit uživatelský účet"
 #: src/Views/UserSettingsView.vala:539
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "Nedaří se změnit heslo pro %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
