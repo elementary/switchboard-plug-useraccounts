@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-12-30 18:09+0000\n"
+"PO-Revision-Date: 2022-04-09 01:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -73,7 +73,7 @@ msgstr "非 Ubuntu ベースのディストリビューションへの対応を�
 
 #: data/useraccounts.appdata.xml.in:40
 msgid "Minor updates:"
-msgstr "軽微なアップデート:"
+msgstr "そのほかのアップデート:"
 
 #: data/useraccounts.appdata.xml.in:42
 msgid "New colorful avatar fallback"
