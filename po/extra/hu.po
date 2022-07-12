@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-12-25 22:41+0000\n"
+"PO-Revision-Date: 2022-07-12 14:26+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/hu/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
 msgid "Improvements:"
-msgstr "Javítások:"
+msgstr "Újítások:"
 
 #: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:34
 #: data/useraccounts.appdata.xml.in:46 data/useraccounts.appdata.xml.in:53
