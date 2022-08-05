@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2019-05-28 21:03+0000\n"
+"PO-Revision-Date: 2022-08-05 16:24+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ko/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -147,10 +147,8 @@ msgid "Log In automatically:"
 msgstr "자동 로그인:"
 
 #: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create user account…"
-msgstr "사용자 계정 생성하기"
+msgstr "사용자 계정 만들기…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
@@ -174,10 +172,9 @@ msgid "Removed “%s”"
 msgstr ""
 
 #: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
+#, c-format
 msgid "Remove “%s” and their data"
-msgstr "사용자 계정과 데이터를 지우기"
+msgstr "“%s” 및 데이터 지우기"
 
 #: src/Views/MainView.vala:206
 msgid "You cannot remove your own user account"
