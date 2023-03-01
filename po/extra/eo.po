@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 20:41+0000\n"
+"POT-Creation-Date: 2022-10-20 18:50+0000\n"
 "PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -39,72 +39,78 @@ msgid ""
 msgstr ""
 "Mastrumi kontajn permesojn kaj agordi uzantajn nomojn, pasvortojn kaj bildojn"
 
-#: data/useraccounts.appdata.xml.in:12
-msgid "Fixes:"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:14
-msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:16
+#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:25
+#: data/useraccounts.appdata.xml.in:38
 msgid "Improvements:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:18
-msgid "Support locales with 3-letter codes"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:19 data/useraccounts.appdata.xml.in:30
-msgid "Performance improvements"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:20
-msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
-#: data/useraccounts.appdata.xml.in:40 data/useraccounts.appdata.xml.in:50
-#: data/useraccounts.appdata.xml.in:60
+#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
+#: data/useraccounts.appdata.xml.in:43 data/useraccounts.appdata.xml.in:55
+#: data/useraccounts.appdata.xml.in:62 data/useraccounts.appdata.xml.in:72
+#: data/useraccounts.appdata.xml.in:82
 msgid "Updated translations"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:27
-msgid "Minor updates:"
+#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
+msgid "Fixes:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:29
-msgid "New colorful avatar fallback"
+#: data/useraccounts.appdata.xml.in:23 data/useraccounts.appdata.xml.in:36
+msgid "Update permissions when enabling and disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:31
-msgid "Improved tooltips and labels"
+#: data/useraccounts.appdata.xml.in:35
+msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:32
-msgid "Fix possible crash when deleting an account"
+#: data/useraccounts.appdata.xml.in:40
+msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:47
-msgid "Show more accurate reasons for locked settings"
+#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:52
+msgid "Performance improvements"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:48
-msgid "Improve reliability of account creation"
+#: data/useraccounts.appdata.xml.in:42
+msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
 #: data/useraccounts.appdata.xml.in:49
+msgid "Minor updates:"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:51
+msgid "New colorful avatar fallback"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:53
+msgid "Improved tooltips and labels"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:54
+msgid "Fix possible crash when deleting an account"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:69
+msgid "Show more accurate reasons for locked settings"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:70
+msgid "Improve reliability of account creation"
+msgstr ""
+
+#: data/useraccounts.appdata.xml.in:71
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:57
+#: data/useraccounts.appdata.xml.in:79
 msgid "Show in sidebar if an account is disabled"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:58
+#: data/useraccounts.appdata.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:59
+#: data/useraccounts.appdata.xml.in:81
 msgid "Animate Infobars"
 msgstr ""

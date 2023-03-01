@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 20:41+0000\n"
+"POT-Creation-Date: 2022-10-20 18:50+0000\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -16,62 +16,58 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:35
+#: src/Plug.vala:34
 msgid "Authentication is required to change user data"
 msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid "User Accounts"
 msgstr "მომხმარებლის ანგარიშები"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:45
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: src/Plug.vala:70
-msgid "Password change failed"
-msgstr "პაროლის შეცვლა ჩაიშალა"
-
-#: src/Plug.vala:82
+#: src/Plug.vala:62
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "სტუმრის სესიის ცვლილებები სისტემის გადატვირთვამდე არ გააქტიურდება"
 
-#: src/Plug.vala:97
+#: src/Plug.vala:77
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:128
 #, fuzzy
 msgid "Avatar"
 msgstr "ავატარის შეცვლა"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:129
 #, fuzzy
 msgid "Full name"
 msgstr "სრული სახელი"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:130
 #, fuzzy
 msgid "Account type"
 msgstr "ანგარიშის ტიპი:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:131
 #, fuzzy
 msgid "Language"
 msgstr "ენა:"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:132
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ავტომატური შესვლა"
 
-#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
 
-#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
@@ -114,7 +110,7 @@ msgstr "ანგარიშის ტიპი:"
 msgid "Standard User"
 msgstr "სტანდარტული მომხმარებელი"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
@@ -152,7 +148,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "გამოვლენ თუ არა, მათი ყველა პარამეტრი და მონაცემები წაიშლება."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
 msgid "Log In automatically:"
 msgstr "ავტომატური შესვლა"
 
@@ -205,23 +201,23 @@ msgstr "ამის შეცვლა ამჟამად აქტიურ
 msgid "You cannot remove the last administrator's privileges"
 msgstr "თქვენ არ შეგიძლიათ ბოლო ადმინისტრატორის პრივილეგიების წაშლა"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:96
 msgid "Account type:"
 msgstr "ანგარიშის ტიპი:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:101
 msgid "Standard"
 msgstr "სტანდარტული"
 
-#: src/Views/UserSettingsView.vala:110
+#: src/Views/UserSettingsView.vala:107
 msgid "Language:"
 msgstr "ენა:"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:175
 msgid "Click to switch to Language & Locale Settings"
 msgstr "დააწკაპუნეთ ენის & ადგილის პარამეტრებზე გადასასვლელად"
 
-#: src/Views/UserSettingsView.vala:199
+#: src/Views/UserSettingsView.vala:192
 #, fuzzy
 msgid "Change Password…"
 msgstr "პაროლის შეცვლა"
@@ -233,6 +229,11 @@ msgstr "მომხმარებლის ანგარიშის ჩა�
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "მომხმარებლის ანგარიშის გამორთვა"
+
+#: src/Views/UserSettingsView.vala:539
+#, c-format
+msgid "Unable to change the password for %s"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -288,6 +289,9 @@ msgstr "ჩართულია"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "გამორთულია"
+
+#~ msgid "Password change failed"
+#~ msgstr "პაროლის შეცვლა ჩაიშალა"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "ბოლო მომხმარებლის ანგარიშის წაშლის აღდგენა"

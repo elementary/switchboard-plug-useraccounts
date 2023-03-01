@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 20:41+0000\n"
+"POT-Creation-Date: 2022-10-20 18:50+0000\n"
 "PO-Revision-Date: 2016-06-13 16:58+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,62 +14,58 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:35
+#: src/Plug.vala:34
 msgid "Authentication is required to change user data"
 msgstr "Kasutaja andmete muutmiseks on vajalik autentimine"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid "User Accounts"
 msgstr "Kontod"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:45
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Kontode õiguste, nimede, paroolide ja profiilipiltide haldamine."
 
-#: src/Plug.vala:70
-msgid "Password change failed"
-msgstr "Parooli muutmine ebaõnnestus"
-
-#: src/Plug.vala:82
+#: src/Plug.vala:62
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Külalisseanssi eelistused rakenduvad pärast süsteemi taaskäivitamist"
 
-#: src/Plug.vala:97
+#: src/Plug.vala:77
 msgid "Some settings require administrator rights to be changed"
 msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
-#: src/Plug.vala:149
+#: src/Plug.vala:128
 #, fuzzy
 msgid "Avatar"
 msgstr "Konto pildi muutmine"
 
-#: src/Plug.vala:150
+#: src/Plug.vala:129
 #, fuzzy
 msgid "Full name"
 msgstr "Täisnimi"
 
-#: src/Plug.vala:151
+#: src/Plug.vala:130
 #, fuzzy
 msgid "Account type"
 msgstr "Konto tüüp:"
 
-#: src/Plug.vala:152
+#: src/Plug.vala:131
 #, fuzzy
 msgid "Language"
 msgstr "Keel:"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:132
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Automaatne sisselogimine:"
 
-#: src/Plug.vala:154 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
 msgid "Change Password"
 msgstr "Muuda parooli"
 
-#: src/Plug.vala:155 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Külalisseanss"
@@ -112,7 +108,7 @@ msgstr "Konto tüüp:"
 msgid "Standard User"
 msgstr "Tavakasutaja"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administraator"
@@ -150,7 +146,7 @@ msgstr ""
 "Külalisseanssist väljalogides kustutatakse kõik külalise konto eelistused "
 "ning loodud andmed."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:188
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
 msgid "Log In automatically:"
 msgstr "Automaatne sisselogimine:"
 
@@ -203,23 +199,23 @@ msgstr "Seda ei saa sisselogitud konto puhul muuta"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Ainukese administraatori õiguseid pole võimalik eemaldada"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:96
 msgid "Account type:"
 msgstr "Konto tüüp:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:101
 msgid "Standard"
 msgstr "Tavaline"
 
-#: src/Views/UserSettingsView.vala:110
+#: src/Views/UserSettingsView.vala:107
 msgid "Language:"
 msgstr "Keel:"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:175
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Ava keele ja piirkonna eelistused"
 
-#: src/Views/UserSettingsView.vala:199
+#: src/Views/UserSettingsView.vala:192
 #, fuzzy
 msgid "Change Password…"
 msgstr "Muuda parooli"
@@ -231,6 +227,11 @@ msgstr "Luba konto"
 #: src/Views/UserSettingsView.vala:366
 msgid "Disable User Account"
 msgstr "Keela konto"
+
+#: src/Views/UserSettingsView.vala:539
+#, c-format
+msgid "Unable to change the password for %s"
+msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -286,6 +287,9 @@ msgstr "Lubatud"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Keelatud"
+
+#~ msgid "Password change failed"
+#~ msgstr "Parooli muutmine ebaõnnestus"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Taasta kustutatud konto"

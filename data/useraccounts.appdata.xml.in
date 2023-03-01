@@ -7,11 +7,33 @@
   <icon type="stock">system-users</icon>
   <translation type="gettext">useraccounts-plug</translation>
   <releases>
-    <release version="2.4.1" date="2021-10-03" urgency="medium">
+    <release version="2.4.3" date="2022-10-20" urgency="medium">
+      <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="2.4.2" date="2021-11-23" urgency="medium">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>Update permissions when enabling and disabling accounts</li>
+        </ul>
+        <p>Improvements:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.4.1" date="2021-10-26" urgency="medium">
       <description>
         <p>Fixes:</p>
         <ul>
           <li>Ensure user information in sidebar updates upon changes</li>
+          <li>Update permissions when enabling and disabling accounts</li>
         </ul>
         <p>Improvements:</p>
         <ul>

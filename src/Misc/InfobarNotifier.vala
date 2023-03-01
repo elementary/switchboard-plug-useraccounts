@@ -18,7 +18,6 @@
 */
 
 public class SwitchboardPlugUserAccounts.InfobarNotifier : Object {
-    public string error_message { get; set; default = ""; }
     public bool reboot_required { get; set; default = false; }
 
     private static GLib.Once<InfobarNotifier> instance;
