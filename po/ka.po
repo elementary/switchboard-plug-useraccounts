@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:50+0000\n"
-"PO-Revision-Date: 2023-03-12 03:33+0000\n"
+"PO-Revision-Date: 2023-03-13 04:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ka/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
 #: src/Plug.vala:34
 msgid "Authentication is required to change user data"
-msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა."
+msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა"
 
 #: src/Plug.vala:44
 msgid "User Accounts"
@@ -147,7 +147,7 @@ msgstr "გამოვლენ თუ არა, მათი ყველა 
 
 #: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
 msgid "Log In automatically:"
-msgstr "ავტომატური შესვლა"
+msgstr "ავტომატური შესვლა:"
 
 #: src/Views/MainView.vala:42
 msgid "Create user account…"
