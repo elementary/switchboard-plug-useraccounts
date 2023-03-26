@@ -90,7 +90,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             full_name_entry.activate.connect (() => {
-                utils.change_full_name (full_name_entry.get_text ());
+                utils.change_full_name (full_name_entry.get_text ().strip ());
             });
 
             var user_type_label = new Gtk.Label (_("Account type:")) {
