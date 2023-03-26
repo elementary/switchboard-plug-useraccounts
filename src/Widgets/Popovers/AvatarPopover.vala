@@ -68,7 +68,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             filter.add_mime_type ("image/jpg");
             filter.add_mime_type ("image/png");
 
-            var preview_area = new Granite.AsyncImage (false);
+            var preview_area = new Gtk.Image ();
             preview_area.pixel_size = 256;
             preview_area.margin_end = 12;
 
@@ -84,18 +84,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             file_dialog.update_preview.connect (() => {
                 string uri = file_dialog.get_preview_uri ();
                 if (uri != null && uri.has_prefix ("file://")) {
-                    preview_area.set_from_gicon_async.begin (
-                        new FileIcon (file_dialog.get_file ()),
-                        256,
-                        null,
-                        (obj, res) => {
-                            try {
-                                preview_area.set_from_gicon_async.end (res);
-                                preview_area.show ();
-                            } catch (Error e) {
-                                preview_area.hide ();
-                            }
-                        });
+                    try {
+                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (
+                            file_dialog.get_file ().get_path (),
+                            250,
+                            250,
+                            true
+                        ).apply_embedded_orientation ();
+                        preview_area.set_from_pixbuf (pixbuf);
+                    } catch (Error e) {
+                        preview_area.hide ();
+                    }
                 } else {
                     preview_area.hide ();
                 }
