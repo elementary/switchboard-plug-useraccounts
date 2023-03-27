@@ -85,7 +85,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 string uri = file_dialog.get_preview_uri ();
                 if (uri != null && uri.has_prefix ("file://")) {
                     try {
-                        Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (
+                        var pixbuf = new Gdk.Pixbuf.from_file_at_scale (
                             file_dialog.get_file ().get_path (),
                             preview_area.pixel_size,
                             preview_area.pixel_size,

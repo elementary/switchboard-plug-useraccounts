@@ -41,7 +41,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
         response.connect (on_response);
 
         try {
-            Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
+            var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
             cropview = new Widgets.CropView.from_pixbuf_with_size (pixbuf, 400, 400);
             cropview.quadratic_selection = true;
             cropview.handles_visible = false;
