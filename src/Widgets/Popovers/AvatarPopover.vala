@@ -87,8 +87,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     try {
                         Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file_at_scale (
                             file_dialog.get_file ().get_path (),
-                            250,
-                            250,
+                            preview_area.pixel_size,
+                            preview_area.pixel_size,
                             true
                         ).apply_embedded_orientation ();
                         preview_area.set_from_pixbuf (pixbuf);
