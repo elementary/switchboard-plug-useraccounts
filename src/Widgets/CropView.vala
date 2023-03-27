@@ -116,39 +116,25 @@ namespace SwitchboardPlugUserAccounts.Widgets {
          */
         const int RADIUS = 12;
 
-        public CropView.from_pixbuf (Gdk.Pixbuf pixbuf) {
+        public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y) {
             this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
             this.pixbuf = pixbuf;
 
-            if (pixbuf.get_width () > pixbuf.get_height ()) {
-                area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2};
-            } else if (pixbuf.get_width () < pixbuf.get_height ()) {
-                area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_width () / 2};
-            } else {
-                area = { 5, 5, pixbuf.get_width () / 2, pixbuf.get_height () / 2};
-            }
-        }
+            // Use a default selection of 75% in the center of the image
+            int area_dimension = int.min (pixbuf.get_width (), pixbuf.get_height ()) * 3 / 4;
+            int area_position_x = (pixbuf.get_width () - area_dimension) / 2;
+            int area_position_y = (pixbuf.get_height () - area_dimension) / 2;
 
-        public CropView.from_pixbuf_with_size (Gdk.Pixbuf pixbuf, int x, int y, bool quadratic_selection = false) {
-            this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
-            this.pixbuf = pixbuf;
-            this.quadratic_selection = quadratic_selection;
+            area = {
+                area_position_x,
+                area_position_y,
+                area_dimension,
+                area_dimension
+            };
 
-            if (pixbuf.get_width () > pixbuf.get_height ()) {
-                    area = { 5, 5, _pixbuf.get_height () / 2, _pixbuf.get_height () / 2 };
-
-                double temp_scale = (double) x / (double) pixbuf.get_width ();
-                if (pixbuf.get_height () * temp_scale < y)
-                    y = (int) (pixbuf.get_height () * temp_scale);
-            } else if (pixbuf.get_width () < pixbuf.get_height ()) {
-                    area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_width () / 2 };
-
-                double temp_scale = (double) y / (double) pixbuf.get_height ();
-                if (pixbuf.get_width () * temp_scale < x)
-                    x = (int) (pixbuf.get_width () * temp_scale);
-            } else
-                area = { 5, 5, _pixbuf.get_width () / 2, pixbuf.get_height () / 2 };
-
+            // Set the size to fit inside the requested size
+            x = int.min (x, x * pixbuf.get_width () / pixbuf.get_height ());
+            y = int.min (y, y * pixbuf.get_height () / pixbuf.get_width ());
             set_size_request (x, y);
         }
 
