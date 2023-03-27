@@ -45,7 +45,15 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
             cropview = new Widgets.CropView.from_pixbuf_with_size (pixbuf, 400, 400);
             cropview.quadratic_selection = true;
             cropview.handles_visible = false;
-            custom_bin.add (cropview);
+
+            var frame = new Gtk.Grid ();
+            frame.add (cropview);
+
+            var frame_context = frame.get_style_context ();
+            frame_context.add_class (Granite.STYLE_CLASS_CARD);
+            frame_context.add_class (Granite.STYLE_CLASS_CHECKERBOARD);
+
+            custom_bin.add (frame);
         } catch (Error e) {
             critical (e.message);
             button_change.set_sensitive (false);
