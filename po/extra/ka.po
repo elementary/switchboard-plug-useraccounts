@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:50+0000\n"
-"PO-Revision-Date: 2023-03-11 15:25+0000\n"
+"PO-Revision-Date: 2023-04-15 00:59+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ka/>\n"
@@ -17,24 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "მომხმარებლის ანაგარიშების მართვა"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "მომხმარებლის ანგარიშების სამართავად საჭიროა ავთენტიკაცია"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "მომხმარებლის ანგარიშების პარამეტრები"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"მართეთ ანგარიშს წვდომები და მოირგეთ მომხმარებლის სახელები, პაროლები და "
+"სურათები"
 
 #: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:25
 #: data/useraccounts.appdata.xml.in:38
@@ -54,19 +56,19 @@ msgstr "შეცდომების გასწორებები:"
 
 #: data/useraccounts.appdata.xml.in:23 data/useraccounts.appdata.xml.in:36
 msgid "Update permissions when enabling and disabling accounts"
-msgstr ""
+msgstr "წვდომების განახლება ანგარიშების ჩართვისა და გამორთვისას"
 
 #: data/useraccounts.appdata.xml.in:35
 msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
+msgstr "ცვლილებებისას გვერდით პანელზე ინფორმაციის განახლების უზრუნველყოფა"
 
 #: data/useraccounts.appdata.xml.in:40
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "3-სიმბოლოიანი ენის კოდების მხარდაჭერა"
 
 #: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:52
 msgid "Performance improvements"
-msgstr ""
+msgstr "წარმადობის გაუმჯობესებები"
 
 #: data/useraccounts.appdata.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
