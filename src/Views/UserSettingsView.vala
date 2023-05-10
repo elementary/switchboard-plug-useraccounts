@@ -215,6 +215,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
                 sensitive = false
             };
+            remove_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
