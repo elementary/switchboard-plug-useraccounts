@@ -48,6 +48,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private Gee.HashMap<string, string>? default_regions;
 
+        public signal void remove_user ();
+
         private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
         private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
         private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
@@ -210,6 +212,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             enable_user_button.clicked.connect (change_lock);
 
+            var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
+                sensitive = false
+            };
+            remove_user_button.clicked.connect (() => remove_user ());
+
             full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
                 tooltip_text = NO_PERMISSION_STRING
             };
@@ -239,6 +246,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
+            var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                tooltip_text = NO_PERMISSION_STRING
+            };
+            remove_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+
             attach (avatar_button, 0, 0);
             attach (full_name_entry, 1, 0);
             attach (user_type_label, 0, 1);
@@ -248,12 +260,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             attach (autologin_switch, 1, 4);
             attach (password_button, 1, 5);
             attach (enable_user_button, 1, 6);
+            attach (remove_user_button, 1, 7);
             attach (full_name_lock, 2, 0);
             attach (user_type_lock, 2, 1);
             attach (language_lock, 2, 2, 1, 2);
             attach (autologin_lock, 2, 4);
             attach (password_lock, 2, 5);
             attach (enable_lock, 2, 6);
+            attach (remove_lock, 2, 7);
 
             update_ui ();
             update_permission ();
@@ -261,12 +275,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (get_current_user () == user) {
                 enable_lock.tooltip_text = CURRENT_USER_STRING;
                 user_type_lock.tooltip_text = CURRENT_USER_STRING;
+                remove_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
                 enable_lock.tooltip_text = LAST_ADMIN_STRING;
                 user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+                remove_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
                 enable_lock.set_opacity (0);
+
+                remove_user_button.sensitive = true;
+                remove_lock.set_opacity (0);
             }
 
             get_permission ().notify["allowed"].connect (update_permission);

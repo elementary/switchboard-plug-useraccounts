@@ -21,7 +21,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
     public class MainView : Gtk.Paned {
         private UserListBox userlist;
         private Granite.Widgets.Toast toast;
-        private Gtk.Button button_remove;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
         private GuestSettingsView guest;
@@ -38,16 +37,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             scrolled_window.expand = true;
             scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
 
-            var button_add = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR) {
-                tooltip_text = _("Create user account…")
+            var button_add = new Gtk.Button.with_label ("Create user account…") {
+                always_show_image = true,
+                image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
+                margin_top = 3,
+                margin_bottom = 3
             };
-
-            button_remove = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
             var actionbar = new Gtk.ActionBar ();
             actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
             actionbar.add (button_add);
-            actionbar.add (button_remove);
 
             var sidebar = new Gtk.Grid ();
             sidebar.orientation = Gtk.Orientation.VERTICAL;
@@ -104,41 +104,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 new_user.present ();
             });
 
-            button_remove.clicked.connect (() => {
-                var permission = get_permission ();
-                if (!permission.allowed) {
-                    try {
-                        permission.acquire ();
-                    } catch (Error e) {
-                        if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
-                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                                _("Unable to acquire permission"),
-                                _("An account cannot be removed without the required system permission."),
-                                "dialog-password",
-                                Gtk.ButtonsType.CLOSE
-                            ) {
-                                badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
-                            };
-                            message_dialog.show_error_details (e.message);
-                            message_dialog.run ();
-                            message_dialog.destroy ();
-                        }
-
-                        return;
-                    }
-                }
-
-                var selected_user = ((UserItem) userlist.get_selected_row ()).user;
-                mark_removal (selected_user);
-
-                userlist.update_ui ();
-                userlist.select_row (userlist.get_row_at_index (0));
-
-                toast.title = _("Removed “%s”").printf (selected_user.get_user_name ());
-                toast.send_notification ();
-            });
-
             get_permission ().notify["allowed"].connect (() => {
                 if (!get_permission ().allowed) {
                     toast.reveal_child = false;
@@ -180,9 +145,46 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             show_all ();
         }
 
+        private void remove_user () {
+            var permission = get_permission ();
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    if (!e.matches (GLib.IOError.quark (), GLib.IOError.CANCELLED)) {
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                            _("Unable to acquire permission"),
+                            _("An account cannot be removed without the required system permission."),
+                            "dialog-password",
+                            Gtk.ButtonsType.CLOSE
+                        ) {
+                            badge_icon = new ThemedIcon ("dialog-error"),
+                            transient_for = (Gtk.Window) get_toplevel ()
+                        };
+                        message_dialog.show_error_details (e.message);
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }
+
+                    return;
+                }
+            }
+
+            var selected_user = ((UserItem) userlist.get_selected_row ()).user;
+            mark_removal (selected_user);
+
+            userlist.update_ui ();
+            userlist.select_row (userlist.get_row_at_index (0));
+
+            toast.title = _("Removed “%s”").printf (selected_user.get_user_name ());
+            toast.send_notification ();
+        }
+
         private void add_user_settings (Act.User user) {
             debug ("Adding UserSettingsView Widget for User '%s'".printf (user.get_user_name ()));
-            content.add_named (new UserSettingsView (user), user.get_user_name ());
+            var page = new UserSettingsView (user);
+            page.remove_user.connect (remove_user);
+            content.add_named (page, user.get_user_name ());
         }
 
         private void remove_user_settings (Act.User user) {
@@ -199,16 +201,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 content.set_visible_child_name (username);
 
                 if (user != get_current_user () && !is_last_admin (user) && !user.get_automatic_login ()) {
-                    button_remove.sensitive = true;
-                    button_remove.tooltip_text = _("Remove “%s” and their data").printf (username);
+                    //  button_remove.sensitive = true;
+                    //  button_remove.tooltip_text = _("Remove “%s” and their data").printf (username);
                 } else {
-                    button_remove.sensitive = false;
-                    button_remove.tooltip_text = _("You cannot remove your own user account");
+                    //  button_remove.sensitive = false;
+                    //  button_remove.tooltip_text = _("You cannot remove your own user account");
                 }
             } else if (user_item != null && user_item.name == "guest_session") {
                 content.set_visible_child_name ("guest_session");
-                button_remove.sensitive = false;
-                button_remove.tooltip_text = "";
+                //  button_remove.sensitive = false;
+                //  button_remove.tooltip_text = "";
             }
         }
     }
