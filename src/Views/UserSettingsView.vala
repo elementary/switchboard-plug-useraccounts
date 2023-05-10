@@ -381,10 +381,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
                 enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             } else {
                 enable_user_button.label = _("Disable User Account");
-                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             }
 

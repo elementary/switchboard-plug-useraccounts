@@ -162,7 +162,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                             transient_for = (Gtk.Window) get_toplevel ()
                         };
                         message_dialog.show_error_details (e.message);
-                        message_dialog.run ();
+                        message_dialog.present ();
                         message_dialog.destroy ();
                     }
 
