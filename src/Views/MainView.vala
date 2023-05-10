@@ -197,20 +197,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (user_item != null && user_item.name != "guest_session") {
                 user = ((UserItem)user_item).user;
                 var username = user.get_user_name ();
-
                 content.set_visible_child_name (username);
-
-                if (user != get_current_user () && !is_last_admin (user) && !user.get_automatic_login ()) {
-                    //  button_remove.sensitive = true;
-                    //  button_remove.tooltip_text = _("Remove “%s” and their data").printf (username);
-                } else {
-                    //  button_remove.sensitive = false;
-                    //  button_remove.tooltip_text = _("You cannot remove your own user account");
-                }
             } else if (user_item != null && user_item.name == "guest_session") {
                 content.set_visible_child_name ("guest_session");
-                //  button_remove.sensitive = false;
-                //  button_remove.tooltip_text = "";
             }
         }
     }
