@@ -163,7 +163,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                         };
                         message_dialog.show_error_details (e.message);
                         message_dialog.present ();
-                        message_dialog.destroy ();
+                        message_dialog.response.connect (() => {
+                            message_dialog.destroy ();
+                        });
                     }
 
                     return;
