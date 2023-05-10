@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-11-08 11:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -108,7 +108,7 @@ msgstr "Käyttäjätilin tyyppi"
 msgid "Standard User"
 msgstr "Peruskäyttäjä"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Ylläpitäjä"
@@ -147,19 +147,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Kirjautumisen yhteydessä kaikki tiedot poistetaan."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Kirjaudu automaattisesti:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Luo käyttäjätunnus…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Kumoa"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Käyttöoikeuden saaminen ei onnistu"
 
@@ -168,65 +164,62 @@ msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Uutta tiliä ei voi luoda ilman vaadittua järjestemätason käyttöoikeutta."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Tiliä ei voi poistaa ilman vaadittua järjestelmätason käyttöoikeutta."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "Poistettu “%s”"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "Poista “%s” ja liittyvät tiedot"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Et voi poistaa omaa käyttäjätunnustasi"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Oikeutesi eivät riitä tämän kohdan muuttamiseen"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Et voi vaihtaa tätä parhaillaan aktiivisena olevalle käyttäjälle"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Et voi poistaa viimeisiä ylläpitäjän oikeuksia"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Käyttäjätilin tyyppi:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Tavallinen"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Kieli:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Napsauta vaihtaaksesi kieliasetuksia"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Vaihda salasana…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Käyttäjätilit"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Ota tili käyttöön"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Poista tili käytöstä"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Käyttäjän %s salasanaa ei voitu vaihtaa"
@@ -283,6 +276,16 @@ msgstr "Käytössä"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Pois käytöstä"
+
+#~ msgid "Create user account…"
+#~ msgstr "Luo käyttäjätunnus…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Poista “%s” ja liittyvät tiedot"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Et voi poistaa omaa käyttäjätunnustasi"
 
 #~ msgid "Password change failed"
 #~ msgstr "Salasanan vaihtaminen epäonnistui"

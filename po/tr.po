@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-11-06 04:01+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -108,7 +108,7 @@ msgstr "Hesap Türü"
 msgid "Standard User"
 msgstr "Standart Kullanıcı"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Yönetici"
@@ -146,19 +146,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Oturum kapatıldıktan sonra, tüm ayarları ve verileri silinir."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Otomatik oturum aç:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Kullanıcı hesabı oluştur…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Geri Al"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "İzin alınamıyor"
 
@@ -166,65 +162,62 @@ msgstr "İzin alınamıyor"
 msgid "A new account cannot be created without the required system permission."
 msgstr "Gerekli sistem izni olmadan yeni bir hesap oluşturulamaz."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Gerekli sistem izni olmadan bir hesap kaldırılamaz."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” kullanıcısı kaldırıldı"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "“%s” kullanıcısını ve verilerini kaldır"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Kendi kullanıcı hesabınızı kaldıramazsınız"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Bunu değiştirmek için izniniz yok"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Bunu şu anda etkin olan kullanıcı için değiştiremezsiniz"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Son yöneticinin ayrıcalıklarını kaldıramazsınız"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Hesap türü:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standart"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Dil:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Dil ve Konum Ayarlarına geçiş yapmak için tıklayın"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Parolayı Değiştir…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Kullanıcı Hesapları"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Kullanıcı Hesabını Etkinleştir"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s için parola değiştirilemiyor"
@@ -281,6 +274,16 @@ msgstr "Etkin"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
+
+#~ msgid "Create user account…"
+#~ msgstr "Kullanıcı hesabı oluştur…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "“%s” kullanıcısını ve verilerini kaldır"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Kendi kullanıcı hesabınızı kaldıramazsınız"
 
 #~ msgid "Password change failed"
 #~ msgstr "Parola değiştirme başarısız oldu"

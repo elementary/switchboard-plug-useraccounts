@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -106,7 +106,7 @@ msgstr "Typ účtu"
 msgid "Standard User"
 msgstr "Bežný používateľ"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrátor"
@@ -143,19 +143,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Keď sa odhlásia, všetky ich nastavenia a dáta budú odstránené."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Prihlasovať automaticky:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Vytvoriť používateľský účet…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Späť"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Nedarí sa získať oprávnenie"
 
@@ -164,65 +160,62 @@ msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Bez požadovaných systémových oprávnení nie je možné vytvoriť nový účet."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Nie je možné odstrániť účet bez požadovaných systémových oprávnení."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "„%s“ bol odstránený"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "Odstrániť „%s“ a ich dáta"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Nemôžte odstrániť svoj vlastný používateľský účet"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Nemáte oprávnenie na túto zmenu"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Nie je možné vykonať túto zmenu pre práve aktívneho používateľa"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nemôžete odstrániť oprávnenia predchádzajúceho administrátora"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Typ účtu:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Bežný"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Jazyk:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kliknite pre prepnutie do nastavení Jazyka a oblastí"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Zmeniť heslo…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Používateľské účty"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Aktivovať používateľský účet"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Deaktivovať používateľský účet"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Nepodarilo sa zmeniť heslo pre %s"
@@ -279,6 +272,16 @@ msgstr "Zapnuté"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Vypnuté"
+
+#~ msgid "Create user account…"
+#~ msgstr "Vytvoriť používateľský účet…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Odstrániť „%s“ a ich dáta"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Nemôžte odstrániť svoj vlastný používateľský účet"
 
 #~ msgid "Password change failed"
 #~ msgstr "Zmena hesla zlyhala"

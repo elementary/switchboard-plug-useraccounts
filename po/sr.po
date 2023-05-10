@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-02-17 13:39+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -109,7 +109,7 @@ msgstr "Врста налога"
 msgid "Standard User"
 msgstr "Обичан корисник"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Администратор"
@@ -146,21 +146,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Када се одјаве, сва њихова подешавања и подаци биће обрисани."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Сам се пријави:"
-
-#: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
-msgid "Create user account…"
-msgstr "Направи кориснички налог"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Поништи"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Не могу да добијем овлашћења"
 
@@ -168,66 +162,62 @@ msgstr "Не могу да добијем овлашћења"
 msgid "A new account cannot be created without the required system permission."
 msgstr "Нови налог се не може направити без потребних системских овлашћења."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Налог се не може уклонити без потребних системских овлашћења."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
-msgid "Remove “%s” and their data"
-msgstr "Уклони кориснички налог и његове податке"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Не можете уклонити ваш лични кориснички налог"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Немате овлашћење да измените ово"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Ово не можете да измените за тренутно активног корисника"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Не можете уклонити последња овлашћења администратора"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Врста налога:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Обичан"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Језик:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Кликните да пређете на подешавања језика и локалитета"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Измени лозинку…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Кориснички налози"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Укључи налог корисника"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Искључи налог корисника"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -284,6 +274,19 @@ msgstr "Укључен"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Искључен"
+
+#, fuzzy
+#~| msgid "Create user account"
+#~ msgid "Create user account…"
+#~ msgstr "Направи кориснички налог"
+
+#, fuzzy, c-format
+#~| msgid "Remove user account and its data"
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Уклони кориснички налог и његове податке"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Не можете уклонити ваш лични кориснички налог"
 
 #~ msgid "Password change failed"
 #~ msgstr "Промена лозинке није успела"

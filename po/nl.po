@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2022-05-22 08:05+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -108,7 +108,7 @@ msgstr "Gebruikerstype"
 msgid "Standard User"
 msgstr "Standaard gebruiker"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Beheerder"
@@ -148,19 +148,15 @@ msgstr ""
 "Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
 "worden."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Automatisch inloggen:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Gebruikersaccount aanmaken…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Niet in staat om toestemming te krijgen"
 
@@ -170,68 +166,65 @@ msgstr ""
 "Een nieuwe gebruiker kan niet worden aangemaakt zonder de vereiste "
 "systeemrechten."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” is verwijderd"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "Verwijder “%s” en hun data"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "U heeft geen rechten om dit te veranderen"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "U kunt dit niet veranderen voor de huidige actieve gebruiker"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 "U kunt niet de beheerdersrechten verwijderen van het laatste account die "
 "deze privileges heeft"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Gebruikerstype:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standaard"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Taal:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Wachtwoord veranderen…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Gebruikersaccounts"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Gebruikersaccount activeren"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Gebruikersaccount uitschakelen"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Kon het wachtwoord van %s niet wijzigen"
@@ -288,6 +281,16 @@ msgstr "Ingeschakeld"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Uitgeschakeld"
+
+#~ msgid "Create user account…"
+#~ msgstr "Gebruikersaccount aanmaken…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Verwijder “%s” en hun data"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "U kunt niet uw eigen gebruikersaccount verwijderen"
 
 #~ msgid "Password change failed"
 #~ msgstr "Wachtwoordwijziging mislukt"

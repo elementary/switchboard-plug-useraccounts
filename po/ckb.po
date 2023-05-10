@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2022-10-04 17:36+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -109,7 +109,7 @@ msgstr "جۆری هەژمار"
 msgid "Standard User"
 msgstr "بەکارهێنەری ئاسایی"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "بەڕێوەبەر"
@@ -148,19 +148,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "کاتێک کە لە سیستەم دەچنەدەر، هەموو داتا و ڕێکخستنەکانیان سفر دەبێتەوە."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "خۆکارانە چوونەژور:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "زیادکردنی هەژماری بەکارهێنەر…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "نەتوانرا مۆڵەتەکان وەربگیرێن"
 
@@ -168,65 +164,62 @@ msgstr "نەتوانرا مۆڵەتەکان وەربگیرێن"
 msgid "A new account cannot be created without the required system permission."
 msgstr "هەژماری تازە بەبێ هەبوونی مۆڵەتی پێویست لە سیستەمەوە."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "هیچ هەژمارێک بەبێ مۆڵەتی پێویستی سیستەم ناسڕدرێتەوە."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "سڕایەوە \"%s\""
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "سڕینەوەی ”%s“ و داتاکانیان"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "ناتوانیت هەژماری خۆت بسڕیتەوە"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "مۆڵەتی گۆڕینی ئەمەت نییە"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "ناتوانیت ئەمە بۆ بەکارهێنەری چالاکی ئێستا بگۆڕیت"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "ناتوانیت کۆتا مۆڵەتی بەڕێوەبەر بسڕیتەوە"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "جۆری هەژمار:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "ئاسایی"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "زمان:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "کرتە بکە بۆ گۆڕینی زمان و ڕێکخستنەکانی ناوخۆیی"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "گۆڕینی تێپەڕەوشە…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "هەژماری بەکارهێنەران"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "کاراکردنی هەژماری بەکارهێنەر"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "وەستاندنی هەژماری بەکارهێنەر"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "نەتوانرا تێپەڕەوشەی \"%s\" بگۆڕدرێت"
@@ -283,3 +276,13 @@ msgstr "کاراکراو"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "وەستێنراو"
+
+#~ msgid "Create user account…"
+#~ msgstr "زیادکردنی هەژماری بەکارهێنەر…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "سڕینەوەی ”%s“ و داتاکانیان"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "ناتوانیت هەژماری خۆت بسڕیتەوە"

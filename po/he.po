@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-11-05 01:02+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -104,7 +104,7 @@ msgstr "סוג החשבון"
 msgid "Standard User"
 msgstr "משתמש רגיל"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "מנהל"
@@ -139,19 +139,15 @@ msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבו�
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "לאחר היציאה מההפעלה, כל ההגדרות והנתונים יימחקו."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "כניסה אוטומטית:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "יצירת חשבון משתמש…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "לא ניתן לקבל הרשאות"
 
@@ -159,65 +155,62 @@ msgstr "לא ניתן לקבל הרשאות"
 msgid "A new account cannot be created without the required system permission."
 msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "„%s” הוסר"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "להסיר את „%s” ואת הנתונים שלהם"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "סוג החשבון:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "רגיל"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "שפה:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "יש ללחוץ כדי לעבור להגדרות שפה ומיקום"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "החלפת הססמה…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "חשבונות משתמשים"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "הפעלת חשבון משתמש"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "השבתת חשבון משתמש"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "לא ניתן להחליף את הססמה של %s"
@@ -274,6 +267,16 @@ msgstr "פעיל"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "מושבתת"
+
+#~ msgid "Create user account…"
+#~ msgstr "יצירת חשבון משתמש…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "להסיר את „%s” ואת הנתונים שלהם"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "לא ניתן להסיר את חשבון המשתמש שלך"
 
 #~ msgid "Password change failed"
 #~ msgstr "החלפת הססמה נכשלה"

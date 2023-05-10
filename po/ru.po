@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2021-11-04 21:05+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -109,7 +109,7 @@ msgstr "Тип пользователя"
 msgid "Standard User"
 msgstr "Пользователь"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Администратор"
@@ -147,19 +147,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "После завершения работы все настройки и данные будут удалены."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Входить автоматически:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Создать учетную запись пользователя…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Не удалось получить разрешение"
 
@@ -169,66 +165,63 @@ msgstr ""
 "Новая учетная запись не может быть создана без требуемого системного "
 "разрешения."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Учетная запись не может быть удалена без требуемого системного разрешения."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "Удален «%s»"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "Удалить «%s» и их данные"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Вы не можете удалить собственную учётную запись"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "У вас недостаточно прав для изменения"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Это не может быть изменено для активного пользователя"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Вы не можете удалить последние привилегии администратора"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Тип пользователя:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Стандартный"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Язык:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Нажать, чтобы изменить язык и локальные настройки"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Изменить пароль…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Учётные записи"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Включить пользователя"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Отключить пользователя"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Не удалось изменить пароль для %s"
@@ -285,6 +278,16 @@ msgstr "Включено"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Отключено"
+
+#~ msgid "Create user account…"
+#~ msgstr "Создать учетную запись пользователя…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Удалить «%s» и их данные"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Вы не можете удалить собственную учётную запись"
 
 #~ msgid "Password change failed"
 #~ msgstr "Изменение пароля не удалось"

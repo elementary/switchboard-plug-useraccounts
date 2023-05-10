@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:50+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -109,7 +109,7 @@ msgstr "Paskyros tipas"
 msgid "Standard User"
 msgstr "Standartinis naudotojas"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administratorius"
@@ -148,21 +148,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Prisijungti automatiškai:"
-
-#: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
-msgid "Create user account…"
-msgstr "Sukurti naudotojo paskyrą"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -170,66 +164,62 @@ msgstr ""
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
-msgid "Remove “%s” and their data"
-msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Jūs neturite leidimų tai pakeisti"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Jūs negalite to keisti šiuo metu prisijungusiam aktyviam naudotojui"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Jūs negalite pašalinti paskutiniojo administratoriaus teisių"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Paskyros tipas:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standartinė"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Kalba:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Keisti slaptažodį…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Naudotojų paskyros"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Įjungti naudotojo paskyrą"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Išjungti naudotojo paskyrą"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -286,6 +276,19 @@ msgstr "Įjungta"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Išjungta"
+
+#, fuzzy
+#~| msgid "Create user account"
+#~ msgid "Create user account…"
+#~ msgstr "Sukurti naudotojo paskyrą"
+
+#, fuzzy, c-format
+#~| msgid "Remove user account and its data"
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Šalinti naudotojo paskyrą ir jo duomenis"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Jūs negalite pašalinti savo naudotojo paskyros"
 
 #~ msgid "Password change failed"
 #~ msgstr "Slaptažodžio pakeisti nepavyko"
