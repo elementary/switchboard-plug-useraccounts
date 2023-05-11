@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-10 16:27+0000\n"
-"PO-Revision-Date: 2021-11-05 21:42+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2023-05-12 17:06+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/en_GB/>\n"
 "Language: en_GB\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -203,10 +203,8 @@ msgid "Change Password…"
 msgstr "Change Password…"
 
 #: src/Views/UserSettingsView.vala:215
-#, fuzzy
-#| msgid "User Accounts"
 msgid "Remove User Account"
-msgstr "User Accounts"
+msgstr "Remove User Account"
 
 #: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
