@@ -37,7 +37,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             scrolled_window.expand = true;
             scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
 
-            var button_add = new Gtk.Button.with_label ("Create user account…") {
+            var button_add = new Gtk.Button.with_label ("Create User Account…") {
                 always_show_image = true,
                 image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
                 margin_top = 3,
