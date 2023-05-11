@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2018-03-21 19:53+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -111,7 +111,7 @@ msgstr "Vrsta računa:"
 msgid "Standard User"
 msgstr "Navaden uporabnik"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Skrbnik"
@@ -149,21 +149,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Po odjavi bodo vse nastavitve in podatki izbrisani."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Prijavi samodejno:"
-
-#: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
-msgid "Create user account…"
-msgstr "Ustvari uporabniški račun"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Razveljavi"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -171,66 +165,62 @@ msgstr ""
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
-msgid "Remove “%s” and their data"
-msgstr "Odstrani uporabniški račun in njegove podatke"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Lastnega uporabniškega računa ne morete odstraniti"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Nimate dovoljenja za spreminjanje teh nastavitev"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Tega za trenutno aktivnega uporabnika ne morete spremeniti"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Pravic zadnjega skrbnika ne morete odstraniti"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Vrsta računa:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Navaden"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Jezik:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kliknite za jezikovne in področne nastavitve"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Spremeni geslo…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Uporabniški računi"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Omogoči uporabniški račun"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Onemogoči uporabniški račun"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -287,6 +277,19 @@ msgstr "Omogočeno"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Onemogočeno"
+
+#, fuzzy
+#~| msgid "Create user account"
+#~ msgid "Create user account…"
+#~ msgstr "Ustvari uporabniški račun"
+
+#, fuzzy, c-format
+#~| msgid "Remove user account and its data"
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Odstrani uporabniški račun in njegove podatke"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Lastnega uporabniškega računa ne morete odstraniti"
 
 #~ msgid "Password change failed"
 #~ msgstr "Sprememba gesla je spodletela"

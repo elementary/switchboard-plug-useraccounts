@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,7 +108,7 @@ msgstr "Uri ng Account:"
 msgid "Standard User"
 msgstr "Standard na User"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Tagapangasiwa"
@@ -144,21 +144,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Awtomatikong mag-log in :"
-
-#: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
-msgid "Create user account…"
-msgstr "Gumawa ng user account"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -166,68 +160,64 @@ msgstr ""
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
-msgid "Remove “%s” and their data"
-msgstr "Tanggalin ang user account at ang mga datos nito"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Hindi mo pwedeng tanggalin ang iyong user account"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Wala kang permiso na baguhin ito"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr ""
 "Hindi mo to pwedeng baguhin para sa kasalukuyang aktibong user/gumagamit"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Uri ng Account:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Wika:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 #, fuzzy
 msgid "Change Password…"
 msgstr "Palitan ang Password"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Mga User Account"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Paganahin ang User Account"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Huwag paganahin ang  User account"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -286,6 +276,19 @@ msgstr "Pinagana"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Hindi pinagana"
+
+#, fuzzy
+#~| msgid "Create user account"
+#~ msgid "Create user account…"
+#~ msgstr "Gumawa ng user account"
+
+#, fuzzy, c-format
+#~| msgid "Remove user account and its data"
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Tanggalin ang user account at ang mga datos nito"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Hindi mo pwedeng tanggalin ang iyong user account"
 
 #~ msgid "Password change failed"
 #~ msgstr "Hindi maitalaga ang bagong password"

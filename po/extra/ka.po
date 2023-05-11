@@ -7,102 +7,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2018-06-11 09:15-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"PO-Revision-Date: 2023-04-15 00:59+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
-msgstr ""
+msgstr "მომხმარებლის ანაგარიშების მართვა"
 
 #: data/useraccounts.policy.in.in:11
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "მომხმარებლის ანგარიშების სამართავად საჭიროა ავთენტიკაცია"
 
 #: data/useraccounts.appdata.xml.in:5
 msgid "User Accounts Settings"
-msgstr ""
+msgstr "მომხმარებლის ანგარიშების პარამეტრები"
 
 #: data/useraccounts.appdata.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
+"მართეთ ანგარიშს წვდომები და მოირგეთ მომხმარებლის სახელები, პაროლები და "
+"სურათები"
 
-#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:24
-msgid "Fixes:"
-msgstr ""
+#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:25
+#: data/useraccounts.appdata.xml.in:38
+msgid "Improvements:"
+msgstr "გაუმჯობესებები:"
 
 #: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
-msgid "Update permissions when enabling and disabling accounts"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:16 data/useraccounts.appdata.xml.in:29
-msgid "Improvements:"
-msgstr ""
-
-#: data/useraccounts.appdata.xml.in:18 data/useraccounts.appdata.xml.in:34
-#: data/useraccounts.appdata.xml.in:46 data/useraccounts.appdata.xml.in:53
-#: data/useraccounts.appdata.xml.in:63 data/useraccounts.appdata.xml.in:73
+#: data/useraccounts.appdata.xml.in:43 data/useraccounts.appdata.xml.in:55
+#: data/useraccounts.appdata.xml.in:62 data/useraccounts.appdata.xml.in:72
+#: data/useraccounts.appdata.xml.in:82
 msgid "Updated translations"
-msgstr ""
+msgstr "განახლებული თარგმანები"
 
-#: data/useraccounts.appdata.xml.in:26
+#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
+msgid "Fixes:"
+msgstr "შეცდომების გასწორებები:"
+
+#: data/useraccounts.appdata.xml.in:23 data/useraccounts.appdata.xml.in:36
+msgid "Update permissions when enabling and disabling accounts"
+msgstr "წვდომების განახლება ანგარიშების ჩართვისა და გამორთვისას"
+
+#: data/useraccounts.appdata.xml.in:35
 msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
+msgstr "ცვლილებებისას გვერდით პანელზე ინფორმაციის განახლების უზრუნველყოფა"
 
-#: data/useraccounts.appdata.xml.in:31
+#: data/useraccounts.appdata.xml.in:40
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "3-სიმბოლოიანი ენის კოდების მხარდაჭერა"
 
-#: data/useraccounts.appdata.xml.in:32 data/useraccounts.appdata.xml.in:43
+#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:52
 msgid "Performance improvements"
-msgstr ""
+msgstr "წარმადობის გაუმჯობესებები"
 
-#: data/useraccounts.appdata.xml.in:33
+#: data/useraccounts.appdata.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:40
+#: data/useraccounts.appdata.xml.in:49
 msgid "Minor updates:"
-msgstr ""
+msgstr "უმნიშვნელო განახლებები:"
 
-#: data/useraccounts.appdata.xml.in:42
+#: data/useraccounts.appdata.xml.in:51
 msgid "New colorful avatar fallback"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:44
+#: data/useraccounts.appdata.xml.in:53
 msgid "Improved tooltips and labels"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:45
+#: data/useraccounts.appdata.xml.in:54
 msgid "Fix possible crash when deleting an account"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:60
+#: data/useraccounts.appdata.xml.in:69
 msgid "Show more accurate reasons for locked settings"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:61
+#: data/useraccounts.appdata.xml.in:70
 msgid "Improve reliability of account creation"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:62
+#: data/useraccounts.appdata.xml.in:71
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:70
+#: data/useraccounts.appdata.xml.in:79
 msgid "Show in sidebar if an account is disabled"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:71
+#: data/useraccounts.appdata.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:72
+#: data/useraccounts.appdata.xml.in:81
 msgid "Animate Infobars"
 msgstr ""

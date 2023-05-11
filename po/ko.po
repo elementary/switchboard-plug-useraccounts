@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2019-05-28 21:03+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"PO-Revision-Date: 2022-08-06 15:44+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ko/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -105,7 +105,7 @@ msgstr "계정 유형"
 msgid "Standard User"
 msgstr "일반 사용자"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "관리자"
@@ -142,91 +142,81 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "로그아웃하면, 모든 설정과 데이터는 지워집니다."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "자동 로그인:"
-
-#: src/Views/MainView.vala:42
-#, fuzzy
-#| msgid "Create user account"
-msgid "Create user account…"
-msgstr "사용자 계정 생성하기"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "되돌리기"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
-msgstr ""
+msgstr "권한을 얻을 수 없습니다"
 
 #: src/Views/MainView.vala:87
 msgid "A new account cannot be created without the required system permission."
-msgstr ""
+msgstr "필요한 시스템 권한이 없으면 새 계정을 만들 수 없습니다."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
-msgstr ""
+msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "“%s” 삭제함"
 
-#: src/Views/MainView.vala:203
-#, fuzzy, c-format
-#| msgid "Remove user account and its data"
-msgid "Remove “%s” and their data"
-msgstr "사용자 계정과 데이터를 지우기"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "당신의 사용자 계정을 삭제할 수 없습니다"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "이 설정을 바꿀 권한이 없습니다"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "현재 활동 중인 사용자의 설정은 변경할 수 없습니다"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "마지막 남은 관리자의 권한을 제거할 수 없습니다"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "계정 유형:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "표준"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "언어:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "언어 & 로케일 설정으로 전환하려면 클릭하세요"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "비밀번호 바꾸기…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "사용자 계정"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "사용자 계정 활성화"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "사용자 계정 비활성화"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "%s의 비밀번호를 바꿀 수 없습니다"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -280,6 +270,16 @@ msgstr "사용함"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "사용 안 함"
+
+#~ msgid "Create user account…"
+#~ msgstr "사용자 계정 만들기…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "“%s” 및 데이터 지우기"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "당신의 사용자 계정을 삭제할 수 없습니다"
 
 #~ msgid "Password change failed"
 #~ msgstr "비밀번호 변경 실패"

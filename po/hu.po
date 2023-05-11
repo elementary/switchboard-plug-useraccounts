@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-11-06 21:26+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"PO-Revision-Date: 2022-11-29 15:25+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -107,7 +107,7 @@ msgstr "Fiók típusa"
 msgid "Standard User"
 msgstr "Normál felhasználó"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Rendszergazda"
@@ -145,19 +145,15 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "A kijelentkezés után az összes beállítás és adat törlődik."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Automatikus bejelentkezés:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Felhasználói fiók létrehozása…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Visszavonás"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Nem sikerült engedélyt szerezni"
 
@@ -165,67 +161,64 @@ msgstr "Nem sikerült engedélyt szerezni"
 msgid "A new account cannot be created without the required system permission."
 msgstr "Nem hozható létre új fiók a kellő rendszerengedély nélkül."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Nem távolítható el fiók a kellő rendszerengedély nélkül."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "\"%s\" eltávolítva"
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "\"%s\" és adatainak eltávolítása"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Nem tudja eltávolítani a saját felhasználói fiókját"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Nincs jogosultsága megváltoztatni"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Nem módosítható a jelenleg aktív felhasználó számára"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 "Nem lehet eltávolítani az utolsó rendszergazdai jogosultságokkal rendelkező "
 "felhasználót"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Fiók típusa:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Normál"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Nyelv:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kattintson a Nyelv- és régióbeállítások módosításához"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Jelszó megváltoztatása…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Felhasználói fiókok"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Felhasználói fiók engedélyezése"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Felhasználói fiók letiltása"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Nem lehet megváltoztatni %s jelszavát"
@@ -281,7 +274,17 @@ msgstr "Engedélyezve"
 
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
-msgstr "Letiltva"
+msgstr "Kikapcsolva"
+
+#~ msgid "Create user account…"
+#~ msgstr "Felhasználói fiók létrehozása…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "\"%s\" és adatainak eltávolítása"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Nem tudja eltávolítani a saját felhasználói fiókját"
 
 #~ msgid "Password change failed"
 #~ msgstr "A jelszó megváltoztatása sikertelen"

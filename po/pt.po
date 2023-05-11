@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 19:40+0000\n"
-"PO-Revision-Date: 2021-06-05 23:30+0000\n"
+"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"PO-Revision-Date: 2021-12-22 19:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
@@ -108,7 +108,7 @@ msgstr "Tipo de conta"
 msgid "Standard User"
 msgstr "Utilizador Padrão"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:102
+#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrador"
@@ -148,19 +148,15 @@ msgstr ""
 "Quando for terminada a sessão, todas as definições e dados relativos a essa "
 "sessão serão eliminados."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:181
+#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
 msgid "Log In automatically:"
 msgstr "Iniciar sessão automaticamente:"
-
-#: src/Views/MainView.vala:42
-msgid "Create user account…"
-msgstr "Criar conta de utilizador…"
 
 #: src/Views/MainView.vala:63
 msgid "Undo"
 msgstr "Desfazer"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:115
+#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
 msgid "Unable to acquire permission"
 msgstr "Incapaz de adquirir permissão"
 
@@ -169,68 +165,65 @@ msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Uma nova conta não pode ser criada sem a permissão necessária do sistema."
 
-#: src/Views/MainView.vala:116
+#: src/Views/MainView.vala:157
 msgid "An account cannot be removed without the required system permission."
 msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
 
-#: src/Views/MainView.vala:138
+#: src/Views/MainView.vala:181
 #, c-format
 msgid "Removed “%s”"
 msgstr "Removido \"%s\""
 
-#: src/Views/MainView.vala:203
-#, c-format
-msgid "Remove “%s” and their data"
-msgstr "Remover “%s” e os seus dados"
-
-#: src/Views/MainView.vala:206
-msgid "You cannot remove your own user account"
-msgstr "Não pode remover a sua própria conta"
-
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:53
 msgid "You do not have permission to change this"
 msgstr "Não tem permissão para modificar isto"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot change this for the currently active user"
 msgstr "Não pode alterar isto para o utilizador ativo agora"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Não pode remover os privilégios do último administrador"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:98
 msgid "Account type:"
 msgstr "Tipo de conta:"
 
-#: src/Views/UserSettingsView.vala:101
+#: src/Views/UserSettingsView.vala:103
 msgid "Standard"
 msgstr "Padrão"
 
-#: src/Views/UserSettingsView.vala:107
+#: src/Views/UserSettingsView.vala:109
 msgid "Language:"
 msgstr "Idioma:"
 
-#: src/Views/UserSettingsView.vala:175
+#: src/Views/UserSettingsView.vala:177
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Clique para ir a Definições de Idioma e Região"
 
-#: src/Views/UserSettingsView.vala:192
+#: src/Views/UserSettingsView.vala:194
 msgid "Change Password…"
 msgstr "Alterar palavra-passe…"
 
-#: src/Views/UserSettingsView.vala:362
+#: src/Views/UserSettingsView.vala:215
+#, fuzzy
+#| msgid "User Accounts"
+msgid "Remove User Account"
+msgstr "Contas de Utilizador"
+
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Ativar Conta de Utilizador"
 
-#: src/Views/UserSettingsView.vala:366
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Desativar Conta de Utilizador"
 
-#: src/Views/UserSettingsView.vala:539
+#: src/Views/UserSettingsView.vala:557
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "Não foi possível alterar a palavra-passe para %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:36
 msgid "Remove"
@@ -284,6 +277,16 @@ msgstr "Ativo"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Desativado"
+
+#~ msgid "Create user account…"
+#~ msgstr "Criar conta de utilizador…"
+
+#, c-format
+#~ msgid "Remove “%s” and their data"
+#~ msgstr "Remover “%s” e os seus dados"
+
+#~ msgid "You cannot remove your own user account"
+#~ msgstr "Não pode remover a sua própria conta"
 
 #~ msgid "Password change failed"
 #~ msgstr "Falha ao alterar a palavra-passe"
