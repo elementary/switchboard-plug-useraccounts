@@ -34,7 +34,6 @@ private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Box {
 
     construct {
         label_widget = new Gtk.Label ("") {
-            halign = END,
             justify = RIGHT,
             max_width_chars = 55,
             use_markup = true,
@@ -44,10 +43,12 @@ private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Box {
 
         var revealer = new Gtk.Revealer () {
             child = label_widget,
-            transition_type = CROSSFADE
+            transition_type = CROSSFADE,
+            halign = END
         };
         bind_property ("reveal-child", revealer, "reveal-child", SYNC_CREATE);
 
+        orientation = VERTICAL;
         add (revealer);
     }
 }
