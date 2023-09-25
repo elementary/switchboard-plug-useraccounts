@@ -17,37 +17,38 @@
 * Boston, MA 02110-1301 USA
 */
 
-private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Revealer {
-    public Gtk.Label label_widget;
+private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Box {
+    public Gtk.Label label_widget { get; construct; }
 
-    private string _label;
     public string label {
-        get {
-            return _label;
-        }
-        construct set {
-            _label = value;
-
-            if (label_widget != null) {
-                label_widget.label = "<span font_size=\"small\">%s</span>".printf (value);
-            }
+        set {
+            label_widget.label = "<span font_size=\"small\">%s</span>".printf (value);
         }
     }
 
+    public bool reveal_child { get; set; default = false; }
+
     public ErrorRevealer (string label) {
-        Object (label: label);
+        this.label = label;
     }
 
     construct {
-        label_widget = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_label));
-        label_widget.halign = Gtk.Align.END;
-        label_widget.justify = Gtk.Justification.RIGHT;
-        label_widget.max_width_chars = 55;
-        label_widget.use_markup = true;
-        label_widget.wrap = true;
-        label_widget.xalign = 1;
+        label_widget = new Gtk.Label ("") {
+            justify = RIGHT,
+            max_width_chars = 55,
+            use_markup = true,
+            wrap = true,
+            xalign = 1
+        };
 
-        transition_type = Gtk.RevealerTransitionType.CROSSFADE;
-        add (label_widget);
+        var revealer = new Gtk.Revealer () {
+            child = label_widget,
+            transition_type = CROSSFADE,
+            halign = END
+        };
+        bind_property ("reveal-child", revealer, "reveal-child", SYNC_CREATE);
+
+        orientation = VERTICAL;
+        add (revealer);
     }
 }
