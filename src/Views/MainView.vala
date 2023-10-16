@@ -20,7 +20,7 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class MainView : Gtk.Paned {
         private UserListBox userlist;
-        private Granite.Widgets.Toast toast;
+        private Granite.Toast toast;
         private Gtk.Stack content;
         private Gtk.ScrolledWindow scrolled_window;
         private GuestSettingsView guest;
@@ -33,7 +33,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         construct {
-            scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window = new Gtk.ScrolledWindow ();
             scrolled_window.expand = true;
             scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
 
@@ -49,21 +49,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
             actionbar.add (button_add);
 
-            var sidebar = new Gtk.Grid ();
-            sidebar.orientation = Gtk.Orientation.VERTICAL;
-            sidebar.add (scrolled_window);
-            sidebar.add (actionbar);
+            var sidebar = new Gtk.Box (VERTICAL, 0);
+            sidebar.append (scrolled_window);
+            sidebar.append (actionbar);
 
             guest = new GuestSettingsView ();
 
             content = new Gtk.Stack ();
             content.add_named (guest, "guest_session");
 
-            toast = new Granite.Widgets.Toast ("");
+            toast = new Granite.Toast ("");
             toast.set_default_action (_("Undo"));
 
-            var overlay = new Gtk.Overlay ();
-            overlay.add (content);
+            var overlay = new Gtk.Overlay () {
+                child = toast
+            };
             overlay.add_overlay (toast);
 
             pack1 (sidebar, false, false);
@@ -89,7 +89,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                 Gtk.ButtonsType.CLOSE
                             ) {
                                 badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
+                                transient_for = (Gtk.Window) get_root ()
                             };
                             message_dialog.show_error_details (e.message);
                             message_dialog.run ();
@@ -100,13 +100,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     }
                 }
 
-                var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_toplevel ());
+                var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_root ());
                 new_user.present ();
             });
 
             get_permission ().notify["allowed"].connect (() => {
                 if (!get_permission ().allowed) {
-                    toast.reveal_child = false;
+                    // toast.reveal_child = false;
                 }
             });
 
@@ -123,7 +123,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 remove_user_settings (user);
 
                 if (get_removal_list ().last () == null) {
-                    toast.reveal_child = false;
+                    // toast.reveal_child = false;
                 }
             });
 
@@ -159,7 +159,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                             Gtk.ButtonsType.CLOSE
                         ) {
                             badge_icon = new ThemedIcon ("dialog-error"),
-                            transient_for = (Gtk.Window) get_toplevel ()
+                            transient_for = (Gtk.Window) get_root ()
                         };
                         message_dialog.show_error_details (e.message);
                         message_dialog.present ();

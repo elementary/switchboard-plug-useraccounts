@@ -45,34 +45,32 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         username_entry = new Granite.ValidatedEntry ();
 
         username_error_revealer = new ErrorRevealer (".");
-        username_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+        username_error_revealer.label_widget.get_style_context ().add_class (Granite.STYLE_CLASS_ERROR);
 
         pw_editor = new Widgets.PasswordEditor ();
 
-        var form_grid = new Gtk.Grid ();
-        form_grid.margin_start = form_grid.margin_end = 12;
-        form_grid.orientation = Gtk.Orientation.VERTICAL;
-        form_grid.row_spacing = 3;
-        form_grid.valign = Gtk.Align.CENTER;
-        form_grid.vexpand = true;
-        form_grid.add (accounttype_label);
-        form_grid.add (accounttype_combobox);
-        form_grid.add (new ErrorRevealer ("."));
-        form_grid.add (realname_label);
-        form_grid.add (realname_entry);
-        form_grid.add (new ErrorRevealer ("."));
-        form_grid.add (username_label);
-        form_grid.add (username_entry);
-        form_grid.add (username_error_revealer);
-        form_grid.add (pw_editor);
-        form_grid.show_all ();
+        var form_box = new Gtk.Box (VERTICAL, 3) {
+            margin_start = 12,
+            margin_end = 12,
+            valign = CENTER,
+            vexpand = true
+        };
+        form_box.append (accounttype_label);
+        form_box.append (accounttype_combobox);
+        form_box.append (new ErrorRevealer ("."));
+        form_box.append (realname_label);
+        form_box.append (realname_entry);
+        form_box.append (new ErrorRevealer ("."));
+        form_box.append (username_label);
+        form_box.append (username_entry);
+        form_box.append (username_error_revealer);
+        form_box.append (pw_editor);
 
         deletable = false;
         modal = true;
         resizable= false;
         width_request = 560;
-        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
-        get_content_area ().add (form_grid);
+        get_content_area ().add (form_box);
 
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
         cancel_button.margin_bottom = 6;
@@ -84,7 +82,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         create_button.margin_top = 14;
         create_button.can_default = true;
         create_button.sensitive = false;
-        create_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        create_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         realname_entry.changed.connect (() => {
             var username = gen_username (realname_entry.text);

@@ -96,7 +96,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
         button_change.margin_top = 14;
         button_change.margin_start = 0;
         button_change.sensitive = false;
-        button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        button_change.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         pw_editor.validation_changed.connect (() => {
             var permission = get_permission ();

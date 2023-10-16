@@ -20,7 +20,7 @@
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserItem : Gtk.ListBoxRow {
         private Gtk.Revealer description_revealer;
-        private Hdy.Avatar avatar;
+        private Adw.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
         private Gtk.Revealer lock_revealer;

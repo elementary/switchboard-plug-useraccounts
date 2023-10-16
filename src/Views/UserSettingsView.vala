@@ -27,7 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore language_store;
         private Gtk.ListStore region_store;
 
-        private Hdy.Avatar avatar;
+        private Adw.Avatar avatar;
         private Gtk.ToggleButton avatar_button;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
@@ -70,7 +70,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
-            avatar = new Hdy.Avatar (64, user.real_name, true);
+            avatar = new Adw.Avatar (64, user.real_name, true);
             avatar.set_image_load_func (avatar_image_load_func);
 
             avatar_button = new Gtk.ToggleButton () {
@@ -202,7 +202,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     }
                 }
 
-                var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_toplevel (), user);
+                var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_root (), user);
                 change_password_dialog.present ();
                 change_password_dialog.request_password_change.connect (change_password);
             });
@@ -380,10 +380,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var user_locked = user.get_locked ();
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
-                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             } else {
                 enable_user_button.label = _("Disable User Account");
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {
@@ -559,7 +559,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                 new ThemedIcon ("dialog-password")
                             ) {
                                 badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
+                                transient_for = (Gtk.Window) get_root ()
                             };
                             dialog.show_all ();
                             dialog.response.connect (dialog.destroy);

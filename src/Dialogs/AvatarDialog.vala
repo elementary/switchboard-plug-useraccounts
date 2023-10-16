@@ -22,7 +22,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     public string pixbuf_path { get; construct; }
 
-    private Widgets.CropView cropview;
+    // private Widgets.CropView cropview;
 
     public AvatarDialog (string pixbuf_path) {
         Object (
@@ -36,18 +36,18 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     construct {
         var button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
-        button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        button_change.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         response.connect (on_response);
 
         try {
             var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
-            cropview = new Widgets.CropView.from_pixbuf_with_size (pixbuf, 400, 400);
-            cropview.quadratic_selection = true;
-            cropview.handles_visible = false;
+            // cropview = new Widgets.CropView.from_pixbuf_with_size (pixbuf, 400, 400);
+            // cropview.quadratic_selection = true;
+            // cropview.handles_visible = false;
 
             var frame = new Gtk.Grid ();
-            frame.add (cropview);
+            // frame.add (cropview);
 
             var frame_context = frame.get_style_context ();
             frame_context.add_class (Granite.STYLE_CLASS_CARD);

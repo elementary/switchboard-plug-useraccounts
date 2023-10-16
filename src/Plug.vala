@@ -57,24 +57,19 @@ namespace SwitchboardPlugUserAccounts {
             infobar_reboot = new Gtk.InfoBar ();
             infobar_reboot.message_type = Gtk.MessageType.WARNING;
             infobar_reboot.revealed = false;
+            infobar_reboot.add_child (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
 
-            var reboot_content = infobar_reboot.get_content_area ();
-            reboot_content.add (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
 
             InfobarNotifier.get_default ().notify["reboot-required"].connect (() => {
                 infobar_reboot.revealed = InfobarNotifier.get_default ().reboot_required;
             });
 
-            infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.INFO;
-
             lock_button = new Gtk.LockButton (get_permission ());
 
-            var area = infobar.get_action_area () as Gtk.Container;
-            area.add (lock_button);
-
-            var content = infobar.get_content_area ();
-            content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+            infobar = new Gtk.InfoBar ();
+            infobar.message_type = Gtk.MessageType.INFO;
+            infobar.add_action_widget (lock_button, 0);
+            infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
 
             main_view = new Widgets.MainView ();
 
@@ -82,20 +77,16 @@ namespace SwitchboardPlugUserAccounts {
             main_grid.attach (infobar_reboot, 0, 1, 1, 1);
             main_grid.attach (infobar, 0, 2, 1, 1);
             main_grid.attach (main_view, 0, 3, 1, 1);
-            main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
-                infobar.visible = !get_permission ().allowed;
+                infobar.revealed = !get_permission ().allowed;
             });
 
             return main_grid;
         }
 
         public override void shown () {
-            if (!get_permission ().allowed) {
-                infobar.show_all ();
-                infobar.visible = true;
-            }
+            infobar.revealed = !get_permission ().allowed;
         }
 
         public override void hidden () {
