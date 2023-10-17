@@ -34,32 +34,36 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
     }
 
     construct {
-        var form_grid = new Gtk.Grid ();
-        form_grid.margin_start = form_grid.margin_end = 12;
-        form_grid.orientation = Gtk.Orientation.VERTICAL;
-        form_grid.row_spacing = 3;
+        var form_box = new Gtk.Box (VERTICAL, 3) {
+            margin_start = 12,
+            margin_end = 12,
+            valign = START,
+            vexpand = true
+        };
 
         is_authenticated = get_permission ().allowed;
 
         if (!is_authenticated) {
             var current_pw_label = new Granite.HeaderLabel (_("Current Password"));
 
-            current_pw_entry = new Gtk.Entry ();
-            current_pw_entry.visibility = false;
-            current_pw_entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Press to authenticate"));
+            current_pw_entry = new Gtk.Entry () {
+                input_purpose = PASSWORD,
+                secondary_icon_tooltip_text = _("Press to authenticate"),
+                visibility = false
+            };
 
             current_pw_error = new ErrorRevealer (_("Authentication failed"));
             current_pw_error.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
-            form_grid.add (current_pw_label);
-            form_grid.add (current_pw_entry);
-            form_grid.add (current_pw_error);
+            form_box.add (current_pw_label);
+            form_box.add (current_pw_entry);
+            form_box.add (current_pw_error);
 
             current_pw_entry.changed.connect (() => {
                 if (current_pw_entry.text.length > 0) {
-                    current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "go-jump-symbolic");
+                    current_pw_entry.secondary_icon_name = "go-jump-symbolic";
                 } else {
-                    current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+                    current_pw_entry.secondary_icon_name = null;
                 }
 
                 current_pw_error.reveal_child = false;
@@ -77,24 +81,16 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
 
         var pw_editor = new Widgets.PasswordEditor (current_pw_entry);
 
-        form_grid.add (pw_editor);
-        form_grid.show_all ();
+        form_box.add (pw_editor);
+        form_box.show_all ();
 
-        deletable = false;
         modal = true;
-        resizable= false;
-        width_request = 560;
-        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
-        get_content_area ().add (form_grid);
+        default_width = 350;
+        get_content_area ().add (form_box);
 
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
-        cancel_button.margin_bottom = 6;
-        cancel_button.margin_top = 14;
 
         var button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
-        button_change.margin = 6;
-        button_change.margin_top = 14;
-        button_change.margin_start = 0;
         button_change.sensitive = false;
         button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -122,7 +118,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
     }
 
     private void password_auth () {
-        current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-working-symbolic");
+        current_pw_entry.secondary_icon_name = "process-working-symbolic";
         current_pw_entry.get_style_context ().add_class ("spin");
 
         Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
@@ -130,13 +126,13 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
                 debug ("Authentication error: %s".printf (e.message));
                 current_pw_error.reveal_child = true;
                 is_authenticated = false;
-                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
+                    current_pw_entry.secondary_icon_name = "process-error-symbolic";
             } else {
                 debug ("User is authenticated for password change now");
                 is_authenticated = true;
 
                 current_pw_entry.sensitive = false;
-                current_pw_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-completed-symbolic");
+                current_pw_entry.secondary_icon_name = "process-completed-symbolic";
             }
             current_pw_entry.get_style_context ().remove_class ("spin");
         });
