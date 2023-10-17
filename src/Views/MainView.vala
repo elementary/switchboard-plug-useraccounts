@@ -36,7 +36,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
         button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         var actionbar = new Gtk.ActionBar ();
-        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         actionbar.add (button_add);
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
