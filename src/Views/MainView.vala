@@ -22,7 +22,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
 
         scrolled_window = new Gtk.ScrolledWindow (null, null) {
             child = userlist,
-            expand = true,
+            hexpand = true,
+            vexpand = true,
             hscrollbar_policy = NEVER
         };
 
