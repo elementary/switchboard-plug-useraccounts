@@ -112,7 +112,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
                 debug ("Authentication error: %s".printf (e.message));
                 current_pw_error.reveal_child = true;
                 is_authenticated = false;
-                    current_pw_entry.secondary_icon_name = "process-error-symbolic";
+                current_pw_entry.secondary_icon_name = "process-error-symbolic";
             } else {
                 debug ("User is authenticated for password change now");
                 is_authenticated = true;
