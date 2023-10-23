@@ -1,21 +1,7 @@
 /*
-* Copyright (c) 2014-2018 elementary LLC. (https://elementary.io)
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 3 of the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
-*/
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2014-2023 elementary, Inc. (https://elementary.io)
+ */
 
 public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     private ErrorRevealer username_error_revealer;
@@ -37,8 +23,10 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
 
         var realname_label = new Granite.HeaderLabel (_("Full Name"));
 
-        var realname_entry = new Gtk.Entry ();
-        realname_entry.hexpand = true;
+        var realname_entry = new Gtk.Entry () {
+            hexpand = true,
+            input_purpose = NAME
+        };
 
         var username_label = new Granite.HeaderLabel (_("Username"));
 
@@ -50,9 +38,9 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         pw_editor = new Widgets.PasswordEditor ();
 
         var form_box = new Gtk.Box (VERTICAL, 3) {
-            margin_start = 12,
             margin_end = 12,
-            valign = CENTER,
+            margin_start = 12,
+            valign = START,
             vexpand = true
         };
         form_box.append (accounttype_label);
@@ -66,20 +54,13 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         form_box.append (username_error_revealer);
         form_box.append (pw_editor);
 
-        deletable = false;
         modal = true;
-        resizable= false;
-        width_request = 560;
+        default_width = 350;
         get_content_area ().add (form_box);
 
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
-        cancel_button.margin_bottom = 6;
-        cancel_button.margin_top = 14;
 
         create_button = (Gtk.Button) add_button (_("Create User"), Gtk.ResponseType.OK);
-        create_button.margin = 6;
-        create_button.margin_start = 0;
-        create_button.margin_top = 14;
         create_button.can_default = true;
         create_button.sensitive = false;
         create_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
