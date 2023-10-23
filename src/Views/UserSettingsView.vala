@@ -76,7 +76,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar_button = new Gtk.ToggleButton () {
                 halign = Gtk.Align.END
             };
-            avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            avatar_button.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
             avatar_button.add (avatar);
 
             avatar_button.toggled.connect (() => {
@@ -128,10 +128,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box.add_attribute (renderer, "text", 1);
 
                 var region_revealer = new Gtk.Revealer () {
+                    child = region_box,
                     transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
                     reveal_child = true
                 };
-                region_revealer.add (region_box);
 
                 attach (language_box, 1, 2);
                 attach (region_revealer, 1, 3);
@@ -215,42 +215,42 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
                 sensitive = false
             };
-            remove_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            full_name_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            user_type_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            user_type_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            language_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            language_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 margin_top = 20,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            autologin_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            autologin_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            password_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic");
+            enable_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            remove_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             attach (avatar_button, 0, 0);
             attach (full_name_entry, 1, 0);
