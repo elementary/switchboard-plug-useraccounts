@@ -28,7 +28,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore region_store;
 
         private Hdy.Avatar avatar;
-        private Gtk.ToggleButton avatar_button;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
@@ -73,19 +72,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar = new Hdy.Avatar (64, user.real_name, true);
             avatar.set_image_load_func (avatar_image_load_func);
 
-            avatar_button = new Gtk.ToggleButton () {
-                halign = Gtk.Align.END
+            var avatar_popover = new AvatarPopover (user, utils);
+
+            var avatar_button = new Gtk.MenuButton () {
+                child = avatar,
+                halign = END,
+                popover = avatar_popover
             };
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            avatar_button.add (avatar);
-
-            avatar_button.toggled.connect (() => {
-                if (avatar_button.active) {
-                    AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
-                    avatar_popover.show_all ();
-                    avatar_popover.hide.connect (() => { avatar_button.active = false;});
-                }
-            });
 
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
