@@ -27,17 +27,24 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
             hscrollbar_policy = NEVER
         };
 
-        var button_add = new Gtk.Button.with_label ("Create User Account…") {
-            always_show_image = true,
-            image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
+        var add_button_label = new Gtk.Label (_("Create User Account…"));
+
+        var add_button_box = new Gtk.Box (HORIZONTAL, 0);
+        add_button_box.add (new Gtk.Image.from_icon_name ("list-add-symbolic", BUTTON));
+        add_button_box.add (add_button_label);
+
+        var button_add = new Gtk.Button () {
+            child = add_button_box,
             margin_top = 3,
             margin_bottom = 3
         };
         button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
+        add_button_label.mnemonic_widget = button_add;
+
         var actionbar = new Gtk.ActionBar ();
         actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        actionbar.add (button_add);
+        actionbar.pack_start (button_add);
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
         sidebar.add (scrolled_window);
@@ -79,11 +86,12 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
                             Gtk.ButtonsType.CLOSE
                         ) {
                             badge_icon = new ThemedIcon ("dialog-error"),
+                            modal = true,
                             transient_for = (Gtk.Window) get_toplevel ()
                         };
                         message_dialog.show_error_details (e.message);
-                        message_dialog.run ();
-                        message_dialog.destroy ();
+                        message_dialog.response.connect (message_dialog.destroy);
+                        message_dialog.present ();
                     }
 
                     return;
@@ -150,9 +158,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
                     };
                     message_dialog.show_error_details (e.message);
                     message_dialog.present ();
-                    message_dialog.response.connect (() => {
-                        message_dialog.destroy ();
-                    });
+                    message_dialog.response.connect (message_dialog.destroy);
                 }
 
                 return;
