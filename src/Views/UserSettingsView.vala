@@ -70,7 +70,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             default_regions = get_default_regions ();
 
             avatar = new Hdy.Avatar (64, user.real_name, true);
-            avatar.set_image_load_func (avatar_image_load_func);
 
             var avatar_popover = new AvatarPopover (user, utils);
 
@@ -356,7 +355,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             // Checking delta_user icon file doesn't seem to always update correctly
-            avatar.set_image_load_func (avatar_image_load_func);
+            var user_icon_file = File.new_for_path (user.get_icon_file ());
+            if (user_icon_file.query_exists ()) {
+                avatar.loadable_icon = new FileIcon (user_icon_file);
+            } else {
+                avatar.loadable_icon = null;
+            }
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
@@ -397,14 +401,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_active (1);
             else
                 user_type_box.set_active (0);
-        }
-
-        private Gdk.Pixbuf? avatar_image_load_func (int size) {
-            try {
-                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-            } catch (Error e) {
-                return null;
-            }
         }
 
         public void update_language () {
