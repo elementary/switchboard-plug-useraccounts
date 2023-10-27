@@ -30,8 +30,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
         var add_button_label = new Gtk.Label (_("Create User Account…"));
 
         var add_button_box = new Gtk.Box (HORIZONTAL, 0);
-        add_button_box.add (new Gtk.Image.from_icon_name ("list-add-symbolic", BUTTON));
-        add_button_box.add (add_button_label);
+        add_button_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+        add_button_box.append (add_button_label);
 
         var button_add = new Gtk.Button () {
             child = add_button_box,
@@ -63,8 +63,11 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
         };
         overlay.add_overlay (toast);
 
-        pack1 (sidebar, false, false);
-        pack2 (overlay, true, false);
+        start_child = sidebar;
+        end_child = overlay;
+
+        // pack1 (sidebar, false, false);
+        // pack2 (overlay, true, false);
 
         if (get_usermanager ().is_loaded) {
             update ();
@@ -137,7 +140,6 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
 
         //auto select current user row in userlist widget
         userlist.select_row (userlist.get_row_at_index (0));
-        show_all ();
     }
 
     private void remove_user () {
