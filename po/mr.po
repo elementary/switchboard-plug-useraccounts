@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"POT-Creation-Date: 2023-10-27 18:25+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -59,7 +59,7 @@ msgstr "भाषा"
 msgid "Log in automatically"
 msgstr "स्वयंचलितपणे लॉग इन करा"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "पासवर्ड बदला"
 
@@ -80,53 +80,53 @@ msgstr "अवतार म्हणून वापरण्यासाठी 
 msgid "Change Avatar"
 msgstr "अवतार बदला"
 
-#: src/Dialogs/ChangePasswordDialog.vala:45
+#: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
 msgstr "सध्याचा  पासवर्ड"
 
-#: src/Dialogs/ChangePasswordDialog.vala:49
+#: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
 msgstr "प्रमाणित करण्यासाठी दाबा"
 
-#: src/Dialogs/ChangePasswordDialog.vala:51
+#: src/Dialogs/ChangePasswordDialog.vala:41
 msgid "Authentication failed"
 msgstr "प्रमाणीकरण अयशस्वी"
 
-#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
 #: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:17
 msgid "Account Type"
 msgstr "खाते प्रकार"
 
-#: src/Dialogs/NewUserDialog.vala:34
+#: src/Dialogs/NewUserDialog.vala:20
 msgid "Standard User"
 msgstr "मानक वापरकर्ता"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "प्रशासक"
 
-#: src/Dialogs/NewUserDialog.vala:38
+#: src/Dialogs/NewUserDialog.vala:24
 msgid "Full Name"
 msgstr "पूर्ण नाव"
 
-#: src/Dialogs/NewUserDialog.vala:43
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Username"
 msgstr "वापरकर्तानाव"
 
-#: src/Dialogs/NewUserDialog.vala:81
+#: src/Dialogs/NewUserDialog.vala:64
 msgid "Create User"
 msgstr "वापरकर्ता तयार करा"
 
-#: src/Dialogs/NewUserDialog.vala:144
+#: src/Dialogs/NewUserDialog.vala:124
 msgid "Username is already taken"
 msgstr "वापरकर्तानाव आधीपासूनच घेतलेले आहे"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:126
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "वापरकर्तानावात केवळ रिकाम्या जागाशिवाय लोअरकेस अक्षरे आणि संख्या असू शकतात"
 
@@ -144,23 +144,29 @@ msgstr "एकदा ते लॉग आउट झाल्यानंतर �
 msgid "Log In automatically:"
 msgstr "स्वयंचलितपणे लॉग इन करा:"
 
-#: src/Views/MainView.vala:63
+#: src/Views/MainView.vala:30
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create User Account…"
+msgstr "वापरकर्ता खाते तयार करा"
+
+#: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "पूर्ववत करा"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
+#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
 msgid "Unable to acquire permission"
 msgstr "परवानगी मिळविण्यात अक्षम"
 
-#: src/Views/MainView.vala:87
+#: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
 msgstr "आवश्यक सिस्टम परवानगीशिवाय नवीन खाते तयार केले जाऊ शकत नाही."
 
-#: src/Views/MainView.vala:157
+#: src/Views/MainView.vala:152
 msgid "An account cannot be removed without the required system permission."
 msgstr "आवश्यक सिस्टम परवानगीशिवाय खाते हटविले जाऊ शकत नाही."
 
-#: src/Views/MainView.vala:181
+#: src/Views/MainView.vala:174
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -268,11 +274,6 @@ msgstr "सक्षम"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "अक्षम"
-
-#, fuzzy
-#~| msgid "Create user account"
-#~ msgid "Create user account…"
-#~ msgstr "वापरकर्ता खाते तयार करा"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"
