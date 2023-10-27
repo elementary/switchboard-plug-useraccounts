@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"POT-Creation-Date: 2023-10-27 18:25+0000\n"
 "PO-Revision-Date: 2021-05-19 03:38+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -62,7 +62,7 @@ msgstr "Idioma"
 msgid "Log in automatically"
 msgstr "Acceder automáticamente"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Cambiar contraseña"
 
@@ -83,53 +83,53 @@ msgstr "Elija la parte de la imagen que quiera usar como avatar."
 msgid "Change Avatar"
 msgstr "Cambiar avatar"
 
-#: src/Dialogs/ChangePasswordDialog.vala:45
+#: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
 msgstr "Contraseña actual"
 
-#: src/Dialogs/ChangePasswordDialog.vala:49
+#: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
 msgstr "Pulse para autenticar"
 
-#: src/Dialogs/ChangePasswordDialog.vala:51
+#: src/Dialogs/ChangePasswordDialog.vala:41
 msgid "Authentication failed"
 msgstr "Falló la autenticación"
 
-#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
 #: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:17
 msgid "Account Type"
 msgstr "Tipo de cuenta"
 
-#: src/Dialogs/NewUserDialog.vala:34
+#: src/Dialogs/NewUserDialog.vala:20
 msgid "Standard User"
 msgstr "Usuario estándar"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrativa"
 
-#: src/Dialogs/NewUserDialog.vala:38
+#: src/Dialogs/NewUserDialog.vala:24
 msgid "Full Name"
 msgstr "Nombre completo"
 
-#: src/Dialogs/NewUserDialog.vala:43
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Username"
 msgstr "Nombre de usuario"
 
-#: src/Dialogs/NewUserDialog.vala:81
+#: src/Dialogs/NewUserDialog.vala:64
 msgid "Create User"
 msgstr "Crear usuario"
 
-#: src/Dialogs/NewUserDialog.vala:144
+#: src/Dialogs/NewUserDialog.vala:124
 msgid "Username is already taken"
 msgstr "El nombre de usuario ya existe"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:126
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "El nombre de usuario solo puede contener letras minúsculas y números, sin "
@@ -150,23 +150,29 @@ msgstr ""
 msgid "Log In automatically:"
 msgstr "Acceder automáticamente:"
 
-#: src/Views/MainView.vala:63
+#: src/Views/MainView.vala:30
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create User Account…"
+msgstr "Crear cuenta de usuario"
+
+#: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Deshacer"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
+#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
 msgid "Unable to acquire permission"
 msgstr "No es posible obtener permiso"
 
-#: src/Views/MainView.vala:87
+#: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
 msgstr "No se puede crear una nueva cuenta sin los permisos necesarios."
 
-#: src/Views/MainView.vala:157
+#: src/Views/MainView.vala:152
 msgid "An account cannot be removed without the required system permission."
 msgstr "No se puede eliminar una cuenta sin los permisos necesarios."
 
-#: src/Views/MainView.vala:181
+#: src/Views/MainView.vala:174
 #, c-format
 msgid "Removed “%s”"
 msgstr "Se quitó «%s»"
@@ -274,11 +280,6 @@ msgstr "Activado"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Desactivado"
-
-#, fuzzy
-#~| msgid "Create user account"
-#~ msgid "Create user account…"
-#~ msgstr "Crear cuenta de usuario"
 
 #, fuzzy, c-format
 #~| msgid "Removed “%s”"
