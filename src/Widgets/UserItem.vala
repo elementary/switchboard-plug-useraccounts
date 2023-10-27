@@ -26,12 +26,6 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
 
     public weak Act.User user { get; construct; }
 
-    public int account_type {
-        set {
-            description_revealer.reveal_child = value == Act.UserAccountType.ADMINISTRATOR;
-        }
-    }
-
     public UserItem (Act.User user) {
         Object (user: user);
     }
@@ -49,16 +43,6 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
             ellipsize = END
         };
         username_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
-
-        var description_label = new Gtk.Label (_("Administrator")) {
-            halign = START,
-            valign = START
-        };
-        description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
-
-        description_revealer = new Gtk.Revealer () {
-            child = description_label
-        };
 
         avatar = new Hdy.Avatar (32, user.real_name, true) {
             margin_top = 6,
@@ -88,9 +72,8 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
             margin_start = 12
         };
         grid.attach (overlay, 0, 0, 1, 2);
-        grid.attach (full_name_label, 1, 0, 2);
+        grid.attach (full_name_label, 1, 0);
         grid.attach (username_label, 1, 1);
-        grid.attach (description_revealer, 2, 1);
 
         update ();
 
@@ -105,10 +88,13 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
     private void update () {
         avatar.set_loadable_icon (new FileIcon (File.new_for_path (user.get_icon_file ())));
 
-        account_type = user.account_type;
         full_name_label.label = user.real_name;
         avatar.text = user.real_name;
         lock_revealer.reveal_child = user.locked;
         username_label.label = user.user_name;
+
+        if (user.account_type == Act.UserAccountType.ADMINISTRATOR) {
+            username_label.label += " (%s)".printf (_("Administrator"));
+        }
     }
 }
