@@ -46,7 +46,7 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
 
         avatar = new Hdy.Avatar (32, user.real_name, true) {
             margin_top = 6,
-            margin_end = 9,
+            margin_end = 12,
             margin_bottom = 6
         };
 
@@ -67,7 +67,6 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
         overlay.add_overlay (lock_revealer);
 
         var grid = new Gtk.Grid () {
-            column_spacing = 3,
             margin_end = 12,
             margin_start = 12
         };
