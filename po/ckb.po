@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"POT-Creation-Date: 2023-10-27 18:25+0000\n"
 "PO-Revision-Date: 2022-10-04 17:36+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -63,7 +63,7 @@ msgstr "زمان"
 msgid "Log in automatically"
 msgstr "خۆکارانە چوونەژور"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "گۆڕینی تێپەڕەوشە"
 
@@ -84,53 +84,53 @@ msgstr "بەشێک یان تەواوی وێنەکە دیاریبکە وەکو و
 msgid "Change Avatar"
 msgstr "گۆڕینی وێنەی پرۆفایل"
 
-#: src/Dialogs/ChangePasswordDialog.vala:45
+#: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
 msgstr "تێپەڕەوشەی ئێستا"
 
-#: src/Dialogs/ChangePasswordDialog.vala:49
+#: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
 msgstr "پرێس بکە بۆ سەلماندن"
 
-#: src/Dialogs/ChangePasswordDialog.vala:51
+#: src/Dialogs/ChangePasswordDialog.vala:41
 msgid "Authentication failed"
 msgstr "سەلماندن سەرکەوتوو نەبوو"
 
-#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
 #: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:17
 msgid "Account Type"
 msgstr "جۆری هەژمار"
 
-#: src/Dialogs/NewUserDialog.vala:34
+#: src/Dialogs/NewUserDialog.vala:20
 msgid "Standard User"
 msgstr "بەکارهێنەری ئاسایی"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "بەڕێوەبەر"
 
-#: src/Dialogs/NewUserDialog.vala:38
+#: src/Dialogs/NewUserDialog.vala:24
 msgid "Full Name"
 msgstr "ناوی تەواو"
 
-#: src/Dialogs/NewUserDialog.vala:43
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Username"
 msgstr "ناوی بەکارهێنەر"
 
-#: src/Dialogs/NewUserDialog.vala:81
+#: src/Dialogs/NewUserDialog.vala:64
 msgid "Create User"
 msgstr "زیادکردنی بەکارهێنەر"
 
-#: src/Dialogs/NewUserDialog.vala:144
+#: src/Dialogs/NewUserDialog.vala:124
 msgid "Username is already taken"
 msgstr "ئەم ناوی بەکارهێنەرە پێشتر بەکارهاتووە"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:126
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "ناوی بەکارهێنەر تەنها دەتوانیت پیت بە بچووکی (سمۆڵ)، و ژمارە بەبێ بۆشایی "
@@ -152,23 +152,29 @@ msgstr "کاتێک کە لە سیستەم دەچنەدەر، هەموو داتا
 msgid "Log In automatically:"
 msgstr "خۆکارانە چوونەژور:"
 
-#: src/Views/MainView.vala:63
+#: src/Views/MainView.vala:30
+#, fuzzy
+#| msgid "Create user account…"
+msgid "Create User Account…"
+msgstr "زیادکردنی هەژماری بەکارهێنەر…"
+
+#: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
+#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
 msgid "Unable to acquire permission"
 msgstr "نەتوانرا مۆڵەتەکان وەربگیرێن"
 
-#: src/Views/MainView.vala:87
+#: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
 msgstr "هەژماری تازە بەبێ هەبوونی مۆڵەتی پێویست لە سیستەمەوە."
 
-#: src/Views/MainView.vala:157
+#: src/Views/MainView.vala:152
 msgid "An account cannot be removed without the required system permission."
 msgstr "هیچ هەژمارێک بەبێ مۆڵەتی پێویستی سیستەم ناسڕدرێتەوە."
 
-#: src/Views/MainView.vala:181
+#: src/Views/MainView.vala:174
 #, c-format
 msgid "Removed “%s”"
 msgstr "سڕایەوە \"%s\""
@@ -276,9 +282,6 @@ msgstr "کاراکراو"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "وەستێنراو"
-
-#~ msgid "Create user account…"
-#~ msgstr "زیادکردنی هەژماری بەکارهێنەر…"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

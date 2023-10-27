@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"POT-Creation-Date: 2023-10-27 18:25+0000\n"
 "PO-Revision-Date: 2020-06-15 15:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -62,7 +62,7 @@ msgstr "Sprog"
 msgid "Log in automatically"
 msgstr "Log ind automatisk"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Skift adgangskode"
 
@@ -83,53 +83,53 @@ msgstr "Brug den bedste del af billedet til brug som avatar."
 msgid "Change Avatar"
 msgstr "Skift billede"
 
-#: src/Dialogs/ChangePasswordDialog.vala:45
+#: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
 msgstr "Nuværende adgangskode"
 
-#: src/Dialogs/ChangePasswordDialog.vala:49
+#: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
 msgstr "Tryk for at godkende"
 
-#: src/Dialogs/ChangePasswordDialog.vala:51
+#: src/Dialogs/ChangePasswordDialog.vala:41
 msgid "Authentication failed"
 msgstr "Godkendelse mislykkedes"
 
-#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
 #: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "Annuller"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:17
 msgid "Account Type"
 msgstr "Kontotype"
 
-#: src/Dialogs/NewUserDialog.vala:34
+#: src/Dialogs/NewUserDialog.vala:20
 msgid "Standard User"
 msgstr "Standard bruger"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/Dialogs/NewUserDialog.vala:38
+#: src/Dialogs/NewUserDialog.vala:24
 msgid "Full Name"
 msgstr "Fuldt navn"
 
-#: src/Dialogs/NewUserDialog.vala:43
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Username"
 msgstr "Brugernavn"
 
-#: src/Dialogs/NewUserDialog.vala:81
+#: src/Dialogs/NewUserDialog.vala:64
 msgid "Create User"
 msgstr "Opret bruger"
 
-#: src/Dialogs/NewUserDialog.vala:144
+#: src/Dialogs/NewUserDialog.vala:124
 msgid "Username is already taken"
 msgstr "Brugernavnet er allerede taget"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:126
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Brugernavn kan kun indeholde små bogstaver og tal uden mellemrum"
 
@@ -150,23 +150,29 @@ msgstr ""
 msgid "Log In automatically:"
 msgstr "Log in automatisk:"
 
-#: src/Views/MainView.vala:63
+#: src/Views/MainView.vala:30
+#, fuzzy
+#| msgid "Create user account"
+msgid "Create User Account…"
+msgstr "Opret en brugerkonto"
+
+#: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Fortryd"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
+#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
 msgid "Unable to acquire permission"
 msgstr "Kan ikke få tilladelse"
 
-#: src/Views/MainView.vala:87
+#: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
 msgstr "En ny konto kan ikke oprettes uden den krævede systemtilladelse."
 
-#: src/Views/MainView.vala:157
+#: src/Views/MainView.vala:152
 msgid "An account cannot be removed without the required system permission."
 msgstr "En konto kan ikke fjernes uden den krævede systemtilladelse."
 
-#: src/Views/MainView.vala:181
+#: src/Views/MainView.vala:174
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -274,11 +280,6 @@ msgstr "Aktiveret"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "Deaktiveret"
-
-#, fuzzy
-#~| msgid "Create user account"
-#~ msgid "Create user account…"
-#~ msgstr "Opret en brugerkonto"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

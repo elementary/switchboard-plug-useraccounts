@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 16:27+0000\n"
+"POT-Creation-Date: 2023-10-27 18:25+0000\n"
 "PO-Revision-Date: 2023-05-20 04:06+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -60,7 +60,7 @@ msgstr "ენა"
 msgid "Log in automatically"
 msgstr "ავტომატური შესვლა"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:94
+#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
 
@@ -81,53 +81,53 @@ msgstr "აირჩიეთ სურათის ნაწილი, რო�
 msgid "Change Avatar"
 msgstr "ავატარის შეცვლა"
 
-#: src/Dialogs/ChangePasswordDialog.vala:45
+#: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
 msgstr "მიმდინარე პაროლი"
 
-#: src/Dialogs/ChangePasswordDialog.vala:49
+#: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
 msgstr "დააჭირეთ დასამოწმებლად"
 
-#: src/Dialogs/ChangePasswordDialog.vala:51
+#: src/Dialogs/ChangePasswordDialog.vala:41
 msgid "Authentication failed"
 msgstr "დამოწმება ვერ მოხერხდა"
 
-#: src/Dialogs/ChangePasswordDialog.vala:90 src/Dialogs/NewUserDialog.vala:77
+#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
 #: src/Widgets/Popovers/AvatarPopover.vala:80
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:17
 msgid "Account Type"
 msgstr "ანგარიშის ტიპი"
 
-#: src/Dialogs/NewUserDialog.vala:34
+#: src/Dialogs/NewUserDialog.vala:20
 msgid "Standard User"
 msgstr "სტანდარტული მომხმარებელი"
 
-#: src/Dialogs/NewUserDialog.vala:35 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
 
-#: src/Dialogs/NewUserDialog.vala:38
+#: src/Dialogs/NewUserDialog.vala:24
 msgid "Full Name"
 msgstr "სრული სახელი"
 
-#: src/Dialogs/NewUserDialog.vala:43
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Username"
 msgstr "მომხმარებლის სახელი"
 
-#: src/Dialogs/NewUserDialog.vala:81
+#: src/Dialogs/NewUserDialog.vala:64
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/Dialogs/NewUserDialog.vala:144
+#: src/Dialogs/NewUserDialog.vala:124
 msgid "Username is already taken"
 msgstr "მომხმარებლის სახელი უკვე დაკავებულია"
 
-#: src/Dialogs/NewUserDialog.vala:146
+#: src/Dialogs/NewUserDialog.vala:126
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "მომხმარებლის სახელი შეიძლება შეიცავდეს მხოლოდ პატარა ასოებს და რიცხვებს, "
@@ -149,23 +149,29 @@ msgstr "გამოვლენ თუ არა, მათი ყველა 
 msgid "Log In automatically:"
 msgstr "ავტომატური შესვლა:"
 
-#: src/Views/MainView.vala:63
+#: src/Views/MainView.vala:30
+#, fuzzy
+#| msgid "Create user account…"
+msgid "Create User Account…"
+msgstr "მომხმარებლის ანგარიშის შექმნა…"
+
+#: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "დაბრუნება"
 
-#: src/Views/MainView.vala:86 src/Views/MainView.vala:156
+#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
 msgid "Unable to acquire permission"
 msgstr "წვდომის მიღების შეცდომა"
 
-#: src/Views/MainView.vala:87
+#: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
 msgstr "ახალი ანგარიში საჭირო სისტემური წვდომების გარეშე ვერ შეიქმნება."
 
-#: src/Views/MainView.vala:157
+#: src/Views/MainView.vala:152
 msgid "An account cannot be removed without the required system permission."
 msgstr "ანგარიშის წაშლა სისტემური წვდომების გარეშე შეუძლებელია."
 
-#: src/Views/MainView.vala:181
+#: src/Views/MainView.vala:174
 #, c-format
 msgid "Removed “%s”"
 msgstr "\"%s\" წაიშალა"
@@ -271,9 +277,6 @@ msgstr "ჩართულია"
 #: src/Widgets/UserListBox.vala:124
 msgid "Disabled"
 msgstr "გამორთულია"
-
-#~ msgid "Create user account…"
-#~ msgstr "მომხმარებლის ანგარიშის შექმნა…"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"
