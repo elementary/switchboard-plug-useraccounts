@@ -10,7 +10,6 @@ plug_files = files(
     'Dialogs/ChangePasswordDialog.vala',
     'Dialogs/NewUserDialog.vala',
     'Misc/DeltaUser.vala',
-    'Misc/InfobarNotifier.vala',
     'Misc/UserUtils.vala',
     'Misc/Utils.vala',
     'Views/GuestSettingsView.vala',
