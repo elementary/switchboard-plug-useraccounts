@@ -28,7 +28,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore region_store;
 
         private Hdy.Avatar avatar;
-        private Gtk.ToggleButton avatar_button;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
@@ -71,21 +70,15 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             default_regions = get_default_regions ();
 
             avatar = new Hdy.Avatar (64, user.real_name, true);
-            avatar.set_image_load_func (avatar_image_load_func);
 
-            avatar_button = new Gtk.ToggleButton () {
-                halign = Gtk.Align.END
+            var avatar_popover = new AvatarPopover (user, utils);
+
+            var avatar_button = new Gtk.MenuButton () {
+                child = avatar,
+                halign = END,
+                popover = avatar_popover
             };
             avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            avatar_button.add (avatar);
-
-            avatar_button.toggled.connect (() => {
-                if (avatar_button.active) {
-                    AvatarPopover avatar_popover = new AvatarPopover (avatar_button, user, utils);
-                    avatar_popover.show_all ();
-                    avatar_popover.hide.connect (() => { avatar_button.active = false;});
-                }
-            });
 
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
@@ -362,7 +355,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             // Checking delta_user icon file doesn't seem to always update correctly
-            avatar.set_image_load_func (avatar_image_load_func);
+            var user_icon_file = File.new_for_path (user.get_icon_file ());
+            if (user_icon_file.query_exists ()) {
+                avatar.loadable_icon = new FileIcon (user_icon_file);
+            } else {
+                avatar.loadable_icon = null;
+            }
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
@@ -403,14 +401,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.set_active (1);
             else
                 user_type_box.set_active (0);
-        }
-
-        private Gdk.Pixbuf? avatar_image_load_func (int size) {
-            try {
-                return new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), size, size, true);
-            } catch (Error e) {
-                return null;
-            }
         }
 
         public void update_language () {

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 18:25+0000\n"
+"POT-Creation-Date: 2023-11-09 16:21+0000\n"
 "PO-Revision-Date: 2023-05-12 17:06+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -16,56 +16,49 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:34
+#: src/Plug.vala:33
 msgid "Authentication is required to change user data"
 msgstr "Authenticatie is vereist om gebruikersgegevens te wijzigen"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:43
 msgid "User Accounts"
 msgstr "Gebruikersaccounts"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Beheer accountrechten en configureer gebruikersnamen, wachtwoorden en foto's"
 
-#: src/Plug.vala:62
-msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr ""
-"Veranderingen aan de gastsessie zullen niet toegepast worden totdat u het "
-"systeem herstart"
-
-#: src/Plug.vala:77
+#: src/Plug.vala:65
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: src/Plug.vala:128
+#: src/Plug.vala:115
 msgid "Avatar"
 msgstr "Profielfoto"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:116
 msgid "Full name"
 msgstr "Volledige naam"
 
-#: src/Plug.vala:130
+#: src/Plug.vala:117
 msgid "Account type"
 msgstr "Gebruikerstype"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:118
 msgid "Language"
 msgstr "Taal"
 
-#: src/Plug.vala:132
+#: src/Plug.vala:119
 msgid "Log in automatically"
 msgstr "Automatisch inloggen"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Verander wachtwoord"
 
-#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Gastsessie"
@@ -96,7 +89,7 @@ msgid "Authentication failed"
 msgstr "Verificatie mislukt"
 
 #: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:80
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -108,7 +101,7 @@ msgstr "Gebruikerstype"
 msgid "Standard User"
 msgstr "Standaard gebruiker"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Beheerder"
@@ -134,7 +127,7 @@ msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Gebruikersnaam mag alleen kleine letters en cijfers bevatten, zonder spaties"
 
-#: src/Views/GuestSettingsView.vala:28
+#: src/Views/GuestSettingsView.vala:14
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -142,15 +135,35 @@ msgstr ""
 "De gastsessie biedt de mogelijkheid om iemand tijdelijk gebruik te laten "
 "maken van het systeem zonder wachtwoord."
 
-#: src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
 "worden."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
 msgid "Log In automatically:"
 msgstr "Automatisch inloggen:"
+
+#: src/Views/GuestSettingsView.vala:35
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Veranderingen aan de gastsessie zullen niet toegepast worden totdat u het "
+"systeem herstart"
+
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
+#: src/Views/MainView.vala:151
+msgid "Unable to acquire permission"
+msgstr "Niet in staat om toestemming te krijgen"
+
+#: src/Views/GuestSettingsView.vala:93
+#, fuzzy
+#| msgid "An account cannot be removed without the required system permission."
+msgid ""
+"The guest account cannot be modified without the required system permission."
+msgstr ""
+"Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
 #: src/Views/MainView.vala:30
 #, fuzzy
@@ -161,10 +174,6 @@ msgstr "Gebruikersaccount aanmaken…"
 #: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Ongedaan maken"
-
-#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
-msgid "Unable to acquire permission"
-msgstr "Niet in staat om toestemming te krijgen"
 
 #: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
@@ -182,74 +191,74 @@ msgstr ""
 msgid "Removed “%s”"
 msgstr "“%s” is verwijderd"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
 msgstr "U heeft geen rechten om dit te veranderen"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
 msgstr "U kunt dit niet veranderen voor de huidige actieve gebruiker"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 "U kunt niet de beheerdersrechten verwijderen van het laatste account die "
 "deze privileges heeft"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:91
 msgid "Account type:"
 msgstr "Gebruikerstype:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:96
 msgid "Standard"
 msgstr "Standaard"
 
-#: src/Views/UserSettingsView.vala:109
+#: src/Views/UserSettingsView.vala:102
 msgid "Language:"
 msgstr "Taal:"
 
-#: src/Views/UserSettingsView.vala:177
+#: src/Views/UserSettingsView.vala:170
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klik om over te schakelen naar de taal- & locatie-instellingen"
 
-#: src/Views/UserSettingsView.vala:194
+#: src/Views/UserSettingsView.vala:187
 msgid "Change Password…"
 msgstr "Wachtwoord veranderen…"
 
-#: src/Views/UserSettingsView.vala:215
+#: src/Views/UserSettingsView.vala:208
 msgid "Remove User Account"
 msgstr "Gebruikersaccount verwijderen"
 
-#: src/Views/UserSettingsView.vala:382
+#: src/Views/UserSettingsView.vala:380
 msgid "Enable User Account"
 msgstr "Gebruikersaccount activeren"
 
-#: src/Views/UserSettingsView.vala:385
+#: src/Views/UserSettingsView.vala:383
 msgid "Disable User Account"
 msgstr "Gebruikersaccount uitschakelen"
 
-#: src/Views/UserSettingsView.vala:557
+#: src/Views/UserSettingsView.vala:547
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Kon het wachtwoord van %s niet wijzigen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:36
+#: src/Widgets/Popovers/AvatarPopover.vala:33
 msgid "Remove"
 msgstr "Verwijder"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:41
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Instellen uit bestand…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:66
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Images"
 msgstr "Afbeeldingen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:76
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Select an image"
 msgstr "Kies een afbeelding"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Open"
 msgstr "Open"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 18:25+0000\n"
+"POT-Creation-Date: 2023-11-09 16:21+0000\n"
 "PO-Revision-Date: 2018-03-21 19:53+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -17,59 +17,53 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:34
+#: src/Plug.vala:33
 msgid "Authentication is required to change user data"
 msgstr "Za spremembo podatkov uporabnika je potrebna overitev"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:43
 msgid "User Accounts"
 msgstr "Uporabniški računi"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Nastavitve uporabniških računov, gesel in drugih dovoljenj"
 
-#: src/Plug.vala:62
-msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr ""
-"Spremembe seje za goste ne bodo veljavne, dokler sistema ponovno ne zaženete"
-
-#: src/Plug.vala:77
+#: src/Plug.vala:65
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: src/Plug.vala:128
+#: src/Plug.vala:115
 #, fuzzy
 msgid "Avatar"
 msgstr "Spremeni sliko"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:116
 #, fuzzy
 msgid "Full name"
 msgstr "Polno ime"
 
-#: src/Plug.vala:130
+#: src/Plug.vala:117
 #, fuzzy
 msgid "Account type"
 msgstr "Vrsta računa:"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:118
 #, fuzzy
 msgid "Language"
 msgstr "Jezik:"
 
-#: src/Plug.vala:132
+#: src/Plug.vala:119
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Prijavi samodejno:"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Spremeni geslo"
 
-#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Seja za goste"
@@ -99,7 +93,7 @@ msgid "Authentication failed"
 msgstr "Overitev je spodletela"
 
 #: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:80
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -111,7 +105,7 @@ msgstr "Vrsta računa:"
 msgid "Standard User"
 msgstr "Navaden uporabnik"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Skrbnik"
@@ -137,7 +131,7 @@ msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Uporabniško ime lahko vsebuje lahko le male črke in številke, brez presledkov"
 
-#: src/Views/GuestSettingsView.vala:28
+#: src/Views/GuestSettingsView.vala:14
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -145,13 +139,29 @@ msgstr ""
 "Seja za goste omogoča, da se uporabnik prijavi v začasni privzeti račun brez "
 "gesla."
 
-#: src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Po odjavi bodo vse nastavitve in podatki izbrisani."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
 msgid "Log In automatically:"
 msgstr "Prijavi samodejno:"
+
+#: src/Views/GuestSettingsView.vala:35
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Spremembe seje za goste ne bodo veljavne, dokler sistema ponovno ne zaženete"
+
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
+#: src/Views/MainView.vala:151
+msgid "Unable to acquire permission"
+msgstr ""
+
+#: src/Views/GuestSettingsView.vala:93
+msgid ""
+"The guest account cannot be modified without the required system permission."
+msgstr ""
 
 #: src/Views/MainView.vala:30
 #, fuzzy
@@ -162,10 +172,6 @@ msgstr "Ustvari uporabniški račun"
 #: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Razveljavi"
-
-#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
-msgid "Unable to acquire permission"
-msgstr ""
 
 #: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
@@ -180,74 +186,74 @@ msgstr ""
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
 msgstr "Nimate dovoljenja za spreminjanje teh nastavitev"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
 msgstr "Tega za trenutno aktivnega uporabnika ne morete spremeniti"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Pravic zadnjega skrbnika ne morete odstraniti"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:91
 msgid "Account type:"
 msgstr "Vrsta računa:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:96
 msgid "Standard"
 msgstr "Navaden"
 
-#: src/Views/UserSettingsView.vala:109
+#: src/Views/UserSettingsView.vala:102
 msgid "Language:"
 msgstr "Jezik:"
 
-#: src/Views/UserSettingsView.vala:177
+#: src/Views/UserSettingsView.vala:170
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Kliknite za jezikovne in področne nastavitve"
 
-#: src/Views/UserSettingsView.vala:194
+#: src/Views/UserSettingsView.vala:187
 msgid "Change Password…"
 msgstr "Spremeni geslo…"
 
-#: src/Views/UserSettingsView.vala:215
+#: src/Views/UserSettingsView.vala:208
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "Uporabniški računi"
 
-#: src/Views/UserSettingsView.vala:382
+#: src/Views/UserSettingsView.vala:380
 msgid "Enable User Account"
 msgstr "Omogoči uporabniški račun"
 
-#: src/Views/UserSettingsView.vala:385
+#: src/Views/UserSettingsView.vala:383
 msgid "Disable User Account"
 msgstr "Onemogoči uporabniški račun"
 
-#: src/Views/UserSettingsView.vala:557
+#: src/Views/UserSettingsView.vala:547
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:36
+#: src/Widgets/Popovers/AvatarPopover.vala:33
 msgid "Remove"
 msgstr "Odstrani"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:41
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Nastavi z datoteke…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:66
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Images"
 msgstr "Slike"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:76
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Select an image"
 msgstr "Izberite sliko"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Open"
 msgstr "Odpri"
 
