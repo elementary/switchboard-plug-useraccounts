@@ -39,11 +39,11 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
             };
 
             current_pw_error = new ErrorRevealer (_("Authentication failed"));
-            current_pw_error.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+            current_pw_error.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
-            form_box.add (current_pw_label);
-            form_box.add (current_pw_entry);
-            form_box.add (current_pw_error);
+            form_box.append (current_pw_label);
+            form_box.append (current_pw_entry);
+            form_box.append (current_pw_error);
 
             current_pw_entry.changed.connect (() => {
                 if (current_pw_entry.text.length > 0) {
@@ -55,8 +55,6 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
                 current_pw_error.reveal_child = false;
             });
 
-            this.set_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
-
             current_pw_entry.activate.connect (password_auth);
             current_pw_entry.icon_release.connect (password_auth);
 
@@ -67,12 +65,11 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
 
         var pw_editor = new Widgets.PasswordEditor (current_pw_entry);
 
-        form_box.add (pw_editor);
-        form_box.show_all ();
+        form_box.append (pw_editor);
 
         modal = true;
         default_width = 350;
-        get_content_area ().add (form_box);
+        get_content_area ().append (form_box);
 
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 

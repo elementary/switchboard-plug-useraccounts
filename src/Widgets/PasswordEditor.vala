@@ -18,7 +18,7 @@
 */
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class PasswordEditor : Gtk.Grid {
+    public class PasswordEditor : Gtk.Box {
         private ErrorRevealer confirm_entry_revealer;
         private ErrorRevealer pw_error_revealer;
         private Gtk.LevelBar pw_levelbar;
@@ -50,30 +50,32 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             pw_levelbar.add_offset_value ("full", 100.0);
 
             pw_error_revealer = new ErrorRevealer ("."); // Pango needs a non-null string to set markup
-            pw_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_WARNING);
+            pw_error_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_WARNING);
 
-            var confirm_label = new Granite.HeaderLabel (_("Confirm Password"));
+            confirm_entry = new Granite.ValidatedEntry () {
+                sensitive = false,
+                visibility = false
+            };
 
-            confirm_entry = new Granite.ValidatedEntry ();
-            confirm_entry.sensitive = false;
-            confirm_entry.visibility = false;
+            var confirm_label = new Granite.HeaderLabel (_("Confirm Password")) {
+                mnemonic_widget = confirm_entry
+            };
 
             confirm_entry_revealer = new ErrorRevealer (".");
-            confirm_entry_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+            confirm_entry_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
             var show_pw_check = new Gtk.CheckButton.with_label (_("Show passwords"));
 
             orientation = Gtk.Orientation.VERTICAL;
-            row_spacing = 3;
-            add (pw_label);
-            add (pw_entry);
-            add (pw_levelbar);
-            add (pw_error_revealer);
-            add (confirm_label);
-            add (confirm_entry);
-            add (confirm_entry_revealer);
-            add (show_pw_check);
-            show_all ();
+            spacing = 3;
+            append (pw_label);
+            append (pw_entry);
+            append (pw_levelbar);
+            append (pw_error_revealer);
+            append (confirm_label);
+            append (confirm_entry);
+            append (confirm_entry_revealer);
+            append (show_pw_check);
 
             show_pw_check.bind_property ("active", pw_entry, "visibility", GLib.BindingFlags.DEFAULT);
             show_pw_check.bind_property ("active", confirm_entry, "visibility", GLib.BindingFlags.DEFAULT);

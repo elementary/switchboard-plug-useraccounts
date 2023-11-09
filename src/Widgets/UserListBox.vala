@@ -19,8 +19,8 @@
 
 namespace SwitchboardPlugUserAccounts.Widgets {
     public class UserListBox : Gtk.ListBox {
-        private Gtk.Label my_account_label;
-        private Gtk.Label other_accounts_label;
+        private Granite.HeaderLabel my_account_label;
+        private Granite.HeaderLabel other_accounts_label;
         private Gtk.ListBoxRow guest_session_row;
         private Gtk.Label guest_description_label;
 
@@ -36,7 +36,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             //only build the guest session list entry / row when lightDM is the display manager
             if (get_display_manager () == "lightdm") {
-                var avatar = new Hdy.Avatar (32, null, false);
+                var avatar = new Adw.Avatar (32, null, false);
 
                 // We want to use the user's accent, not a random color
                 unowned Gtk.StyleContext avatar_context = avatar.get_style_context ();
@@ -55,26 +55,30 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 avatar_context.remove_class ("color13");
                 avatar_context.remove_class ("color14");
 
-                var full_name_label = new Gtk.Label (_("Guest Session"));
-                full_name_label.halign = Gtk.Align.START;
-                full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+                var full_name_label = new Gtk.Label (_("Guest Session")) {
+                    halign = START
+                };
+                full_name_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
-                guest_description_label = new Gtk.Label (null);
-                guest_description_label.halign = Gtk.Align.START;
-                guest_description_label.use_markup = true;
+                guest_description_label = new Gtk.Label (null) {
+                    halign = START,
+                    use_markup = true
+                };
 
                 var row_grid = new Gtk.Grid () {
                     column_spacing = 12,
-                    margin = 6,
-                    margin_start = 12
+                    margin_top = 6,
+                    margin_end = 6,
+                    margin_start = 12,
+                    margin_bottom = 6
                 };
                 row_grid.attach (avatar, 0, 0, 1, 2);
-                row_grid.attach (full_name_label, 1, 0, 1, 1);
-                row_grid.attach (guest_description_label, 1, 1, 1, 1);
+                row_grid.attach (full_name_label, 1, 0);
+                row_grid.attach (guest_description_label, 1, 1);
 
                 guest_session_row = new Gtk.ListBoxRow ();
                 guest_session_row.name = "guest_session";
-                guest_session_row.add (row_grid);
+                guest_session_row.child = row_grid;
 
                 update_guest ();
                 debug ("LightDM found as display manager. Loading guest session settings");
@@ -83,15 +87,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             update_ui ();
-
-            show_all ();
         }
 
         public void update_ui () {
-            List<weak Gtk.Widget> userlist_items = get_children ();
-
-            foreach (unowned Gtk.Widget useritem in userlist_items) {
-                remove (useritem);
+            while (get_row_at_index (0) != null) {
+                remove (get_row_at_index (0));
             }
 
             insert (new UserItem (get_current_user ()), 0);
@@ -104,8 +104,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             insert (guest_session_row, pos);
-
-            show_all ();
         }
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {

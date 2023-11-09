@@ -48,18 +48,14 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
             var frame = new Gtk.Grid ();
             // frame.add (cropview);
+            frame.add_css_class (Granite.STYLE_CLASS_CARD);
+            frame.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
 
-            var frame_context = frame.get_style_context ();
-            frame_context.add_class (Granite.STYLE_CLASS_CARD);
-            frame_context.add_class (Granite.STYLE_CLASS_CHECKERBOARD);
-
-            custom_bin.add (frame);
+            custom_bin.append (frame);
         } catch (Error e) {
             critical (e.message);
-            button_change.set_sensitive (false);
+            button_change.sensitive = false;
         }
-
-        show_all ();
     }
 
     private void on_response (Gtk.Dialog source, int response_id) {

@@ -67,7 +67,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
         create_button = (Gtk.Button) add_button (_("Create User"), Gtk.ResponseType.OK);
-        create_button.can_default = true;
+        create_button.receives_default = true;
         create_button.sensitive = false;
         create_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -140,7 +140,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     private void update_create_button () {
         if (username_entry.is_valid && pw_editor.is_valid) {
             create_button.sensitive = true;
-            create_button.has_default = true;
+            default_widget = create_button;
         } else {
             create_button.sensitive = false;
         }
