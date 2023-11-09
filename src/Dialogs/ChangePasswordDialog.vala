@@ -58,9 +58,9 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
             current_pw_entry.activate.connect (password_auth);
             current_pw_entry.icon_release.connect (password_auth);
 
-            current_pw_entry.focus_out_event.connect (() => {
-                password_auth ();
-            });
+            var focus_controller = new Gtk.EventControllerFocus ();
+            current_pw_entry.add_controller (focus_controller);
+            focus_controller.leave.connect (password_auth);
         }
 
         var pw_editor = new Widgets.PasswordEditor (current_pw_entry);

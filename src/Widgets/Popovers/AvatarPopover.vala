@@ -61,48 +61,27 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         filter.add_mime_type ("image/jpg");
         filter.add_mime_type ("image/png");
 
-        var preview_area = new Gtk.Image () {
-            pixel_size = 256,
-            margin_end = 12
-        };
-
         var file_dialog = new Gtk.FileChooserNative (
             _("Select an image"),
-            get_parent_window () as Gtk.Window?,
+            ((Gtk.Application) Application.get_default ()).active_window,
             Gtk.FileChooserAction.OPEN,
             _("Open"),
             _("Cancel")
         );
         file_dialog.filter = filter;
-        file_dialog.set_preview_widget (preview_area);
-        file_dialog.update_preview.connect (() => {
-            string uri = file_dialog.get_preview_uri ();
-            if (uri != null && uri.has_prefix ("file://")) {
-                try {
-                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (
-                        file_dialog.get_file ().get_path (),
-                        preview_area.pixel_size,
-                        preview_area.pixel_size,
-                        true
-                    ).apply_embedded_orientation ();
-                    preview_area.set_from_pixbuf (pixbuf);
-                } catch (Error e) {
-                    preview_area.hide ();
-                }
+
+        file_dialog.response.connect ((response) => {
+            if (response == Gtk.ResponseType.ACCEPT) {
+                var path = file_dialog.get_file ().get_path ();
+                file_dialog.hide ();
+                file_dialog.destroy ();
+                var avatar_dialog = new Dialogs.AvatarDialog (path);
+                avatar_dialog.request_avatar_change.connect (change_avatar);
             } else {
-                preview_area.hide ();
+                file_dialog.destroy ();
             }
         });
-
-        if (file_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            var path = file_dialog.get_file ().get_path ();
-            file_dialog.hide ();
-            file_dialog.destroy ();
-            var avatar_dialog = new Dialogs.AvatarDialog (path);
-            avatar_dialog.request_avatar_change.connect (change_avatar);
-        } else {
-            file_dialog.destroy ();
-        }
+        file_dialog.show ();
     }
 
     private void change_avatar (Gdk.Pixbuf? new_pixbuf) {

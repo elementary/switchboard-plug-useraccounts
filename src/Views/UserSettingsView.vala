@@ -355,12 +355,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             // Checking delta_user icon file doesn't seem to always update correctly
-            var user_icon_file = File.new_for_path (user.get_icon_file ());
-            if (user_icon_file.query_exists ()) {
-                avatar.loadable_icon = new FileIcon (user_icon_file);
-            } else {
-                avatar.loadable_icon = null;
-            }
+            avatar.custom_image = Gtk.MediaFile.for_filename (user.get_icon_file ());
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
