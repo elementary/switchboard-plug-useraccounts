@@ -96,7 +96,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         private void update () {
-            avatar.set_loadable_icon (new FileIcon (File.new_for_path (user.get_icon_file ())));
+            var user_icon_file = File.new_for_path (user.get_icon_file ());
+            if (user_icon_file.query_exists ()) {
+                avatar.loadable_icon = new FileIcon (user_icon_file);
+            } else {
+                avatar.loadable_icon = null;
+            }
 
             account_type = user.account_type;
             full_name_label.label = user.real_name;
