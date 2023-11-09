@@ -2,7 +2,6 @@ src/Plug.vala
 src/Dialogs/AvatarDialog.vala
 src/Dialogs/ChangePasswordDialog.vala
 src/Dialogs/NewUserDialog.vala
-src/Misc/InfobarNotifier.vala
 src/Misc/UserUtils.vala
 src/Misc/Utils.vala
 src/Views/GuestSettingsView.vala

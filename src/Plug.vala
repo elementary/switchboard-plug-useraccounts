@@ -26,7 +26,6 @@ namespace SwitchboardPlugUserAccounts {
     public class UserAccountsPlug : Switchboard.Plug {
         private Gtk.Grid? main_grid;
         private Gtk.InfoBar infobar;
-        private Gtk.InfoBar infobar_reboot;
         private Gtk.LockButton lock_button;
         private Widgets.MainView main_view;
 
@@ -54,27 +53,17 @@ namespace SwitchboardPlugUserAccounts {
                 return main_grid;
             }
 
-            infobar_reboot = new Gtk.InfoBar ();
-            infobar_reboot.message_type = Gtk.MessageType.WARNING;
-            infobar_reboot.revealed = false;
-            infobar_reboot.add_child (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
-
-
-            InfobarNotifier.get_default ().notify["reboot-required"].connect (() => {
-                infobar_reboot.revealed = InfobarNotifier.get_default ().reboot_required;
-            });
-
             lock_button = new Gtk.LockButton (get_permission ());
 
-            infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.INFO;
+            infobar = new Gtk.InfoBar () {
+                message_type = INFO
+            };
             infobar.add_action_widget (lock_button, 0);
             infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
 
             main_view = new Widgets.MainView ();
 
             main_grid = new Gtk.Grid ();
-            main_grid.attach (infobar_reboot, 0, 1, 1, 1);
             main_grid.attach (infobar, 0, 2, 1, 1);
             main_grid.attach (main_view, 0, 3, 1, 1);
 

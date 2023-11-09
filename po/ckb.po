@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 18:25+0000\n"
+"POT-Creation-Date: 2023-11-09 16:21+0000\n"
 "PO-Revision-Date: 2022-10-04 17:36+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -16,58 +16,52 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:34
+#: src/Plug.vala:33
 msgid "Authentication is required to change user data"
 msgstr ""
 "پێویستە بیسەلمێنیت کە بەڕێوەبەریت بۆ دەستکاریکردنی زانیارییەکانی بەکارهێنەر، "
 "تکایە تێپەڕەوشە بنووسە"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:43
 msgid "User Accounts"
 msgstr "هەژماری بەکارهێنەران"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "بەڕێوەبردنی مۆڵەتەکانی هەژمار، وێنە، ناو و، ناوی بەکارهێنەر"
 
-#: src/Plug.vala:62
-msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr ""
-"گۆڕانکارییەکانی ماوەی میوان کاریگەرییان نابێت تاوەکو سیستەمەکەت پێنەکەیتەوە"
-
-#: src/Plug.vala:77
+#: src/Plug.vala:65
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "بەشێک لە ڕێکخستنەکان پێویستیان بە دەسەڵاتی بەڕێوەبەرە بۆ ئەوەی گۆڕانکاریان "
 "بەسەردا بێت"
 
-#: src/Plug.vala:128
+#: src/Plug.vala:115
 msgid "Avatar"
 msgstr "وێنەی پرۆفایل"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:116
 msgid "Full name"
 msgstr "ناوی تەواو"
 
-#: src/Plug.vala:130
+#: src/Plug.vala:117
 msgid "Account type"
 msgstr "جۆری هەژمار"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:118
 msgid "Language"
 msgstr "زمان"
 
-#: src/Plug.vala:132
+#: src/Plug.vala:119
 msgid "Log in automatically"
 msgstr "خۆکارانە چوونەژور"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "گۆڕینی تێپەڕەوشە"
 
-#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "ماوەی میوان"
@@ -97,7 +91,7 @@ msgid "Authentication failed"
 msgstr "سەلماندن سەرکەوتوو نەبوو"
 
 #: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:80
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
 
@@ -109,7 +103,7 @@ msgstr "جۆری هەژمار"
 msgid "Standard User"
 msgstr "بەکارهێنەری ئاسایی"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "بەڕێوەبەر"
@@ -136,7 +130,7 @@ msgstr ""
 "ناوی بەکارهێنەر تەنها دەتوانیت پیت بە بچووکی (سمۆڵ)، و ژمارە بەبێ بۆشایی "
 "لەنێوانیاندا لەخۆ بگرێت"
 
-#: src/Views/GuestSettingsView.vala:28
+#: src/Views/GuestSettingsView.vala:14
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -144,13 +138,31 @@ msgstr ""
 "ماوەی میوان ڕێگە دەدات کەسێک بۆ ماوەیەکی کاتی کۆمپیتەرەکەت بەبێ تێپەڕەوشە "
 "بەکاربهێنێت."
 
-#: src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "کاتێک کە لە سیستەم دەچنەدەر، هەموو داتا و ڕێکخستنەکانیان سفر دەبێتەوە."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
 msgid "Log In automatically:"
 msgstr "خۆکارانە چوونەژور:"
+
+#: src/Views/GuestSettingsView.vala:35
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"گۆڕانکارییەکانی ماوەی میوان کاریگەرییان نابێت تاوەکو سیستەمەکەت پێنەکەیتەوە"
+
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
+#: src/Views/MainView.vala:151
+msgid "Unable to acquire permission"
+msgstr "نەتوانرا مۆڵەتەکان وەربگیرێن"
+
+#: src/Views/GuestSettingsView.vala:93
+#, fuzzy
+#| msgid "An account cannot be removed without the required system permission."
+msgid ""
+"The guest account cannot be modified without the required system permission."
+msgstr "هیچ هەژمارێک بەبێ مۆڵەتی پێویستی سیستەم ناسڕدرێتەوە."
 
 #: src/Views/MainView.vala:30
 #, fuzzy
@@ -161,10 +173,6 @@ msgstr "زیادکردنی هەژماری بەکارهێنەر…"
 #: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "هەڵوەشاندنەوە"
-
-#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
-msgid "Unable to acquire permission"
-msgstr "نەتوانرا مۆڵەتەکان وەربگیرێن"
 
 #: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
@@ -179,74 +187,74 @@ msgstr "هیچ هەژمارێک بەبێ مۆڵەتی پێویستی سیستە�
 msgid "Removed “%s”"
 msgstr "سڕایەوە \"%s\""
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
 msgstr "مۆڵەتی گۆڕینی ئەمەت نییە"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
 msgstr "ناتوانیت ئەمە بۆ بەکارهێنەری چالاکی ئێستا بگۆڕیت"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr "ناتوانیت کۆتا مۆڵەتی بەڕێوەبەر بسڕیتەوە"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:91
 msgid "Account type:"
 msgstr "جۆری هەژمار:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:96
 msgid "Standard"
 msgstr "ئاسایی"
 
-#: src/Views/UserSettingsView.vala:109
+#: src/Views/UserSettingsView.vala:102
 msgid "Language:"
 msgstr "زمان:"
 
-#: src/Views/UserSettingsView.vala:177
+#: src/Views/UserSettingsView.vala:170
 msgid "Click to switch to Language & Locale Settings"
 msgstr "کرتە بکە بۆ گۆڕینی زمان و ڕێکخستنەکانی ناوخۆیی"
 
-#: src/Views/UserSettingsView.vala:194
+#: src/Views/UserSettingsView.vala:187
 msgid "Change Password…"
 msgstr "گۆڕینی تێپەڕەوشە…"
 
-#: src/Views/UserSettingsView.vala:215
+#: src/Views/UserSettingsView.vala:208
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "هەژماری بەکارهێنەران"
 
-#: src/Views/UserSettingsView.vala:382
+#: src/Views/UserSettingsView.vala:380
 msgid "Enable User Account"
 msgstr "کاراکردنی هەژماری بەکارهێنەر"
 
-#: src/Views/UserSettingsView.vala:385
+#: src/Views/UserSettingsView.vala:383
 msgid "Disable User Account"
 msgstr "وەستاندنی هەژماری بەکارهێنەر"
 
-#: src/Views/UserSettingsView.vala:557
+#: src/Views/UserSettingsView.vala:547
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "نەتوانرا تێپەڕەوشەی \"%s\" بگۆڕدرێت"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:36
+#: src/Widgets/Popovers/AvatarPopover.vala:33
 msgid "Remove"
 msgstr "سڕینەوە"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:41
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "هەڵبژاردنی وێنە…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:66
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Images"
 msgstr "وێنەکان"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:76
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Select an image"
 msgstr "وێنەیەک دیاریبکە"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Open"
 msgstr "کردنەوە"
 

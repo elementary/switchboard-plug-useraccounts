@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 18:25+0000\n"
+"POT-Creation-Date: 2023-11-09 16:21+0000\n"
 "PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -16,55 +16,50 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:34
+#: src/Plug.vala:33
 msgid "Authentication is required to change user data"
 msgstr "Ke změně uživatelských dat je požadováno ověření"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:43
 msgid "User Accounts"
 msgstr "Uživatelské účty"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Spravovat oprávnění uživatelů a nastavovat uživatelská jména, hesla a jejich "
 "fotky"
 
-#: src/Plug.vala:62
-msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr "Změny v nastavení sezení hosta se projeví až po restartování počítače"
-
-#: src/Plug.vala:77
+#: src/Plug.vala:65
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
-#: src/Plug.vala:128
+#: src/Plug.vala:115
 msgid "Avatar"
 msgstr "Ikona uživatele"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:116
 msgid "Full name"
 msgstr "Celé jméno"
 
-#: src/Plug.vala:130
+#: src/Plug.vala:117
 msgid "Account type"
 msgstr "Typ účtu"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:118
 msgid "Language"
 msgstr "Jazyk"
 
-#: src/Plug.vala:132
+#: src/Plug.vala:119
 msgid "Log in automatically"
 msgstr "Přihlašovat automaticky"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Změna hesla"
 
-#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Sezení hosta"
@@ -94,7 +89,7 @@ msgid "Authentication failed"
 msgstr "Ověření se nezdařilo"
 
 #: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:80
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Cancel"
 msgstr "Storno"
 
@@ -106,7 +101,7 @@ msgstr "Typ účtu"
 msgid "Standard User"
 msgstr "Normální uživatel"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Správce"
@@ -132,20 +127,37 @@ msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Uživatelské jméno může obsahovat pouze malá písmena a číslice bez mezer"
 
-#: src/Views/GuestSettingsView.vala:28
+#: src/Views/GuestSettingsView.vala:14
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
 msgstr ""
 "Sezení hosta umožňuje uživatelům použít dočasný výchozí účet bez hesla."
 
-#: src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Jakmile se odhlásí, budou odstraněna všechna jejich nastavení a data."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
 msgid "Log In automatically:"
 msgstr "Přihlásit automaticky:"
+
+#: src/Views/GuestSettingsView.vala:35
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr "Změny v nastavení sezení hosta se projeví až po restartování počítače"
+
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
+#: src/Views/MainView.vala:151
+msgid "Unable to acquire permission"
+msgstr "Nedaří se získat oprávnění"
+
+#: src/Views/GuestSettingsView.vala:93
+#, fuzzy
+#| msgid "An account cannot be removed without the required system permission."
+msgid ""
+"The guest account cannot be modified without the required system permission."
+msgstr "Bez potřebných systémových oprávnění není možné smazat účet."
 
 #: src/Views/MainView.vala:30
 #, fuzzy
@@ -156,10 +168,6 @@ msgstr "Vytvořit uživatelský účet…"
 #: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Zpět"
-
-#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
-msgid "Unable to acquire permission"
-msgstr "Nedaří se získat oprávnění"
 
 #: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
@@ -174,74 +182,74 @@ msgstr "Bez potřebných systémových oprávnění není možné smazat účet.
 msgid "Removed “%s”"
 msgstr "Odebráno „%s“"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
 msgstr "Nemáte oprávnění k této změně"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
 msgstr "Pro aktuálně aktivního uživatele toto nelze změnit"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nemůžete odstranit oprávnění posledního administrátora"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:91
 msgid "Account type:"
 msgstr "Typ účtu:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:96
 msgid "Standard"
 msgstr "Standardní"
 
-#: src/Views/UserSettingsView.vala:109
+#: src/Views/UserSettingsView.vala:102
 msgid "Language:"
 msgstr "Jazyk:"
 
-#: src/Views/UserSettingsView.vala:177
+#: src/Views/UserSettingsView.vala:170
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klikněte pro přepnutí do nastavení Jazyka a Národního prostředí"
 
-#: src/Views/UserSettingsView.vala:194
+#: src/Views/UserSettingsView.vala:187
 msgid "Change Password…"
 msgstr "Změnit heslo…"
 
-#: src/Views/UserSettingsView.vala:215
+#: src/Views/UserSettingsView.vala:208
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "Uživatelské účty"
 
-#: src/Views/UserSettingsView.vala:382
+#: src/Views/UserSettingsView.vala:380
 msgid "Enable User Account"
 msgstr "Povolit uživatelský účet"
 
-#: src/Views/UserSettingsView.vala:385
+#: src/Views/UserSettingsView.vala:383
 msgid "Disable User Account"
 msgstr "Znepřístupnit uživatelský účet"
 
-#: src/Views/UserSettingsView.vala:557
+#: src/Views/UserSettingsView.vala:547
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Nedaří se změnit heslo pro %s"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:36
+#: src/Widgets/Popovers/AvatarPopover.vala:33
 msgid "Remove"
 msgstr "Odebrat"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:41
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Nastavit ze souboru…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:66
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Images"
 msgstr "Obrázky"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:76
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Select an image"
 msgstr "Zvolit obrázek"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Open"
 msgstr "Otevřít"
 

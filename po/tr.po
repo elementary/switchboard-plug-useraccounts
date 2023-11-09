@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 18:25+0000\n"
+"POT-Creation-Date: 2023-11-09 16:21+0000\n"
 "PO-Revision-Date: 2023-05-18 21:06+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -16,57 +16,50 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:34
+#: src/Plug.vala:33
 msgid "Authentication is required to change user data"
 msgstr "Kullanıcı verisini değiştirmek için kimlik doğrulama gerekiyor"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:43
 msgid "User Accounts"
 msgstr "Kullanıcı Hesapları"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:44
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Hesap izinlerini, kullanıcı adlarını, parolaları ve fotoğrafları yönetin"
 
-#: src/Plug.vala:62
-msgid ""
-"Guest session changes will not take effect until you restart your system"
-msgstr ""
-"Konuk oturumu değişiklikleri, sistem yeniden başlatılıncaya kadar etkili "
-"olamayacaktır"
-
-#: src/Plug.vala:77
+#: src/Plug.vala:65
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
-#: src/Plug.vala:128
+#: src/Plug.vala:115
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:129
+#: src/Plug.vala:116
 msgid "Full name"
 msgstr "Tam ad"
 
-#: src/Plug.vala:130
+#: src/Plug.vala:117
 msgid "Account type"
 msgstr "Hesap türü"
 
-#: src/Plug.vala:131
+#: src/Plug.vala:118
 msgid "Language"
 msgstr "Dil"
 
-#: src/Plug.vala:132
+#: src/Plug.vala:119
 msgid "Log in automatically"
 msgstr "Otomatik oturum aç"
 
-#: src/Plug.vala:133 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
 msgid "Change Password"
 msgstr "Parolayı Değiştir"
 
-#: src/Plug.vala:134 src/Views/GuestSettingsView.vala:31
+#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
 #: src/Widgets/UserListBox.vala:58
 msgid "Guest Session"
 msgstr "Konuk Oturumu"
@@ -96,7 +89,7 @@ msgid "Authentication failed"
 msgstr "Kimlik doğrulanamadı"
 
 #: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:80
+#: src/Widgets/Popovers/AvatarPopover.vala:79
 msgid "Cancel"
 msgstr "İptal"
 
@@ -108,7 +101,7 @@ msgstr "Hesap Türü"
 msgid "Standard User"
 msgstr "Standart Kullanıcı"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:104
+#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
 #: src/Widgets/UserItem.vala:54
 msgid "Administrator"
 msgstr "Yönetici"
@@ -134,7 +127,7 @@ msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Kullanıcı adı yalnızca küçük harf ve rakam içerebilir, boşluk içermemelidir"
 
-#: src/Views/GuestSettingsView.vala:28
+#: src/Views/GuestSettingsView.vala:14
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
@@ -142,13 +135,32 @@ msgstr ""
 "Konuk Oturumu, birinin şifre olmadan geçici bir varsayılan hesap "
 "kullanmasına izin verir."
 
-#: src/Views/GuestSettingsView.vala:29
+#: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Oturum kapatıldıktan sonra, tüm ayarları ve verileri silinir."
 
-#: src/Views/GuestSettingsView.vala:39 src/Views/UserSettingsView.vala:183
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
 msgid "Log In automatically:"
 msgstr "Otomatik oturum aç:"
+
+#: src/Views/GuestSettingsView.vala:35
+msgid ""
+"Guest session changes will not take effect until you restart your system"
+msgstr ""
+"Konuk oturumu değişiklikleri, sistem yeniden başlatılıncaya kadar etkili "
+"olamayacaktır"
+
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
+#: src/Views/MainView.vala:151
+msgid "Unable to acquire permission"
+msgstr "İzin alınamıyor"
+
+#: src/Views/GuestSettingsView.vala:93
+#, fuzzy
+#| msgid "An account cannot be removed without the required system permission."
+msgid ""
+"The guest account cannot be modified without the required system permission."
+msgstr "Gerekli sistem izni olmadan bir hesap kaldırılamaz."
 
 #: src/Views/MainView.vala:30
 #, fuzzy
@@ -159,10 +171,6 @@ msgstr "Kullanıcı hesabı oluştur…"
 #: src/Views/MainView.vala:59
 msgid "Undo"
 msgstr "Geri Al"
-
-#: src/Views/MainView.vala:83 src/Views/MainView.vala:151
-msgid "Unable to acquire permission"
-msgstr "İzin alınamıyor"
 
 #: src/Views/MainView.vala:84
 msgid "A new account cannot be created without the required system permission."
@@ -177,72 +185,72 @@ msgstr "Gerekli sistem izni olmadan bir hesap kaldırılamaz."
 msgid "Removed “%s”"
 msgstr "“%s” kullanıcısı kaldırıldı"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
 msgstr "Bunu değiştirmek için izniniz yok"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot change this for the currently active user"
 msgstr "Bunu şu anda etkin olan kullanıcı için değiştiremezsiniz"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:54
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Son yöneticinin ayrıcalıklarını kaldıramazsınız"
 
-#: src/Views/UserSettingsView.vala:98
+#: src/Views/UserSettingsView.vala:91
 msgid "Account type:"
 msgstr "Hesap türü:"
 
-#: src/Views/UserSettingsView.vala:103
+#: src/Views/UserSettingsView.vala:96
 msgid "Standard"
 msgstr "Standart"
 
-#: src/Views/UserSettingsView.vala:109
+#: src/Views/UserSettingsView.vala:102
 msgid "Language:"
 msgstr "Dil:"
 
-#: src/Views/UserSettingsView.vala:177
+#: src/Views/UserSettingsView.vala:170
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Dil ve Konum Ayarlarına geçiş yapmak için tıklayın"
 
-#: src/Views/UserSettingsView.vala:194
+#: src/Views/UserSettingsView.vala:187
 msgid "Change Password…"
 msgstr "Parolayı Değiştir…"
 
-#: src/Views/UserSettingsView.vala:215
+#: src/Views/UserSettingsView.vala:208
 msgid "Remove User Account"
 msgstr "Kullanıcı Hesabını Kaldır"
 
-#: src/Views/UserSettingsView.vala:382
+#: src/Views/UserSettingsView.vala:380
 msgid "Enable User Account"
 msgstr "Kullanıcı Hesabını Etkinleştir"
 
-#: src/Views/UserSettingsView.vala:385
+#: src/Views/UserSettingsView.vala:383
 msgid "Disable User Account"
 msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
 
-#: src/Views/UserSettingsView.vala:557
+#: src/Views/UserSettingsView.vala:547
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s için parola değiştirilemiyor"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:36
+#: src/Widgets/Popovers/AvatarPopover.vala:33
 msgid "Remove"
 msgstr "Kaldır"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:41
+#: src/Widgets/Popovers/AvatarPopover.vala:38
 msgid "Set from File…"
 msgstr "Dosyadan Ayarla…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:66
+#: src/Widgets/Popovers/AvatarPopover.vala:64
 msgid "Images"
 msgstr "Resimler"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:76
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Select an image"
 msgstr "Bir resim seçin"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Widgets/Popovers/AvatarPopover.vala:78
 msgid "Open"
 msgstr "Aç"
 
