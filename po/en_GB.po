@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-09 16:21+0000\n"
-"PO-Revision-Date: 2023-10-29 00:13+0000\n"
+"PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/en_GB/>\n"
@@ -154,11 +154,10 @@ msgid "Unable to acquire permission"
 msgstr "Unable to acquire permission"
 
 #: src/Views/GuestSettingsView.vala:93
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "An account cannot be removed without the required system permission."
+msgstr ""
+"The guest account cannot be modified without the required system permission."
 
 #: src/Views/MainView.vala:30
 msgid "Create User Account…"
