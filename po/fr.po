@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-09 16:21+0000\n"
-"PO-Revision-Date: 2023-10-31 16:10+0000\n"
+"PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fr/>\n"
@@ -159,11 +159,10 @@ msgid "Unable to acquire permission"
 msgstr "Impossible de récupérer les permissions"
 
 #: src/Views/GuestSettingsView.vala:93
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "Impossible de supprimer un compte sans les permissions requises."
+msgstr ""
+"Le compte invité ne peut pas être modifié sans les permissions requises."
 
 #: src/Views/MainView.vala:30
 msgid "Create User Account…"
