@@ -3,19 +3,12 @@
  * SPDX-FileCopyrightText: 2014-2023 elementary, Inc. (https://elementary.io)
  */
 
-public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
+public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private UserListBox userlist;
     private Granite.Widgets.Toast toast;
     private Gtk.Stack content;
     private Gtk.ScrolledWindow scrolled_window;
     private GuestSettingsView guest;
-
-    public MainView () {
-        Object (
-            orientation: Gtk.Orientation.HORIZONTAL,
-            position: 240
-        );
-    }
 
     construct {
         userlist = new UserListBox ();
@@ -63,8 +56,13 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
         };
         overlay.add_overlay (toast);
 
-        pack1 (sidebar, false, false);
-        pack2 (overlay, true, false);
+        var paned = new Gtk.Paned (HORIZONTAL) {
+            position = 240
+        };
+        paned.pack1 (sidebar, false, false);
+        paned.pack2 (overlay, true, false);
+
+        add (paned);
 
         if (get_usermanager ().is_loaded) {
             update ();
