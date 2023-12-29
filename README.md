@@ -10,7 +10,7 @@ You'll need the following dependencies:
 * libaccountsservice-dev
 * libgirepository1.0-dev 
 * libgnome-desktop-3-dev
-* libgranite-dev
+* libgranite-7-dev >= 7.4.0
 * libhandy-1-dev >= 0.90.0
 * libpolkit-gobject-1-dev
 * libpwquality-dev

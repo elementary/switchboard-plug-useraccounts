@@ -40,7 +40,7 @@ shared_module(
         dependency('glib-2.0'),
         dependency('gnome-desktop-4'),
         dependency('gobject-2.0'),
-        dependency('granite-7'),
+        dependency('granite-7', version: '>=7.4.0'),
         dependency('gtk4'),
         dependency('libadwaita-1'),
         dependency('pwquality'),
