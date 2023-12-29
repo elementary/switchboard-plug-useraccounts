@@ -60,12 +60,12 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     private void on_response (Gtk.Dialog source, int response_id) {
         if (response_id == Gtk.ResponseType.OK) {
-            var pixbuf = cropview.get_selection ();
-            if (pixbuf.get_width () > 200) {
-                request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
-            } else {
-                request_avatar_change (pixbuf);
-            }
+            // var pixbuf = cropview.get_selection ();
+            // if (pixbuf.get_width () > 200) {
+            //     request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
+            // } else {
+            //     request_avatar_change (pixbuf);
+            // }
         }
         destroy ();
     }

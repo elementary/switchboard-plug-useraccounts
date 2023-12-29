@@ -54,13 +54,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
-            Object (
-                column_spacing: 12,
-                halign: Gtk.Align.CENTER,
-                margin: 24,
-                row_spacing: 6,
-                user: user
-            );
+            Object (user: user);
         }
 
         construct {
@@ -245,6 +239,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+
+            column_spacing = 12;
+            row_spacing = 6;
+            halign = CENTER;
+            margin_top = 24;
+            margin_end = 24;
+            margin_bottom = 24;
+            margin_start = 24;
             attach (avatar_button, 0, 0);
             attach (full_name_entry, 1, 0);
             attach (user_type_label, 0, 1);

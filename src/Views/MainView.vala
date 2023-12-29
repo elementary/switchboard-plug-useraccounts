@@ -107,7 +107,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
 
         get_permission ().notify["allowed"].connect (() => {
             if (!get_permission ().allowed) {
-                toast.reveal_child = false;
+                toast.withdraw ();
             }
         });
 
@@ -126,7 +126,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Paned {
             remove_user_settings (user);
 
             if (get_removal_list ().last () == null) {
-                toast.reveal_child = false;
+                toast.withdraw ();
             }
         });
 
