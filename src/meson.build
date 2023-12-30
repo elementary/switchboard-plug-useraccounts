@@ -19,8 +19,7 @@ plug_files = files(
     'Widgets/CropView.vala',
     'Widgets/ErrorRevealer.vala',
     'Widgets/PasswordEditor.vala',
-    'Widgets/UserItem.vala',
-    'Widgets/UserListBox.vala'
+    'Widgets/UserItem.vala'
 )
 
 run_passwd_files = files(
