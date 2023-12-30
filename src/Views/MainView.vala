@@ -8,8 +8,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private Granite.Widgets.Toast toast;
     private Gtk.Stack content;
     private GuestSettingsView guest;
-    private Gtk.Label my_account_label;
-    private Gtk.Label other_accounts_label;
+    private Granite.HeaderLabel my_account_label;
+    private Granite.HeaderLabel other_accounts_label;
     private Gtk.ListBoxRow guest_session_row;
     private Gtk.Label guest_description_label;
 
