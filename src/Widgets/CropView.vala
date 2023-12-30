@@ -5,7 +5,7 @@
  *              Marvin Beckers <beckersmarvin@gmail.com>
  */
 
-public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
+public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
     public Gdk.Pixbuf pixbuf { get; construct; }
     public int pixel_size { get; construct; }
 
@@ -86,8 +86,6 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
     }
 
     construct {
-        add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
-
         // Use a default selection of 75% in the center of the image
         int area_dimension = int.min (pixbuf.get_width (), pixbuf.get_height ()) * 3 / 4;
         int area_position_x = (pixbuf.get_width () - area_dimension) / 2;
@@ -103,6 +101,8 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         // Set the size to fit inside the requested size
         width_request = int.min (pixel_size, pixel_size * pixbuf.get_width () / pixbuf.get_height ());
         height_request = int.min (pixel_size, pixel_size * pixbuf.get_height () / pixbuf.get_width ());
+
+        add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
 
         click_gesture = new Gtk.GestureMultiPress (this);
         click_gesture.pressed.connect (gesture_press_event);
