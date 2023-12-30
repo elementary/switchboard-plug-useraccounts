@@ -12,4 +12,3 @@ src/Widgets/CropView.vala
 src/Widgets/ErrorRevealer.vala
 src/Widgets/PasswordEditor.vala
 src/Widgets/UserItem.vala
-src/Widgets/UserListBox.vala
