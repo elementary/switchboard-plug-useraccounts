@@ -245,8 +245,6 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private void remove_user_settings (Act.User user) {
         debug ("Removing UserSettingsView Widget for User '%s'".printf (user.get_user_name ()));
         content.remove (content.get_child_by_name (user.get_user_name ()));
-
-        update_listbox ();
     }
 
     private void listbox_selected (Gtk.ListBoxRow? user_item) {
