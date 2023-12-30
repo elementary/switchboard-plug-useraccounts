@@ -1,24 +1,9 @@
 /*
-* Copyright (c) 2014-2017 elementary LLC. (https://elementary.io)
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 3 of the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
-*
-* Authored by: Tom Beckmann
-*              Marvin Beckers <beckersmarvin@gmail.com>
-*/
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2014-2023 elementary, Inc. (https://elementary.io)
+ * Authored by: Tom Beckmann
+ *              Marvin Beckers <beckersmarvin@gmail.com>
+ */
 
 public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
     public Gdk.Pixbuf pixbuf { get; construct; }
@@ -90,6 +75,8 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
      */
     private const int RADIUS = 12;
 
+    private Gtk.EventControllerMotion motion_event_controller;
+
     public CropView (Gdk.Pixbuf pixbuf, int pixel_size) {
         Object (
             pixbuf: pixbuf,
@@ -115,6 +102,9 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         // Set the size to fit inside the requested size
         width_request = int.min (pixel_size, pixel_size * pixbuf.get_width () / pixbuf.get_height ());
         height_request = int.min (pixel_size, pixel_size * pixbuf.get_height () / pixbuf.get_width ());
+
+        motion_event_controller = new Gtk.EventControllerMotion (this);
+        motion_event_controller.motion.connect (motion_event);
     }
 
     /**
@@ -132,7 +122,9 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         return true;
     }
 
-    public override bool motion_notify_event (Gdk.EventMotion event) {
+    private void motion_event (double event_x, double event_y) {
+        critical ("we got motion");
+
         if (!mouse_button_down) {
             bool determined_cursortype = false;
 
@@ -148,7 +140,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
             };
 
             for (var i = 0; i < 8; i++) {
-                if (in_quad (pos[i, 0] - RADIUS, pos[i, 1] - RADIUS, RADIUS * 2, RADIUS * 2, (int) event.x, (int) event.y)) {
+                if (in_quad (pos[i, 0] - RADIUS, pos[i, 1] - RADIUS, RADIUS * 2, RADIUS * 2, (int) event_x, (int) event_y)) {
                     current_operation = CURSOR[i];
                     determined_cursortype = true;
                     break;
@@ -160,20 +152,19 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                              (int) Math.floor (area.y * current_scale),
                              (int) Math.floor (area.width * current_scale),
                              (int) Math.floor (area.height * current_scale),
-                             (int) (event.x - offset_x), (int) (event.y - offset_y)))
+                             (int) (event_x - offset_x), (int) (event_y - offset_y)))
                     current_operation = Gdk.CursorType.FLEUR;
                 else
                     current_operation = Gdk.CursorType.ARROW;
             }
 
             apply_cursor ();
-            return true;
-
+            return;
         } else {
             switch (current_operation) {
                 case Gdk.CursorType.FLEUR:
-                    int motion_x = (int) (area.x + ((int) event.x - temp_x) / current_scale);
-                    int motion_y = (int) (area.y + ((int) event.y - temp_y) / current_scale);
+                    int motion_x = (int) (area.x + ((int) event_x - temp_x) / current_scale);
+                    int motion_y = (int) (area.y + ((int) event_y - temp_y) / current_scale);
 
                     switch (x_in_pixbuf (motion_x)) {
                         case 0: area.x = motion_x; area_changed (); break;
@@ -194,12 +185,12 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                     int motion_width = 0;
                     int motion_height = 0;
                     if (current_operation == Gdk.CursorType.TOP_RIGHT_CORNER) {
-                        motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
-                        motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+                        motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
+                        motion_height = (int) (area.height - ((int) event_y - temp_y) / current_scale);
                     }
                     else {
-                        motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
-                        motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+                        motion_width = (int) (area.width - ((int) event_x - temp_x) / current_scale);
+                        motion_height = (int) (area.height - ((int) event_y - temp_y) / current_scale);
                     }
 
                     if (motion_width >= motion_height)
@@ -246,12 +237,12 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                     int motion_width = 0;
                     int motion_height = 0;
                     if (current_operation == Gdk.CursorType.BOTTOM_RIGHT_CORNER) {
-                        motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
-                        motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
+                        motion_height = (int) (area.height + ((int) event_y - temp_y) / current_scale);
                     }
                     else {
-                        motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
-                        motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        motion_width = (int) (area.width - ((int) event_x - temp_x) / current_scale);
+                        motion_height = (int) (area.height + ((int) event_y - temp_y) / current_scale);
                     }
 
                     if (motion_width >= motion_height)
@@ -297,9 +288,9 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                 case Gdk.CursorType.BOTTOM_SIDE:
                     int motion_height = 0;
                     if (current_operation == Gdk.CursorType.BOTTOM_SIDE)
-                        motion_height = (int) (area.height + ((int) event.y - temp_y) / current_scale);
+                        motion_height = (int) (area.height + ((int) event_y - temp_y) / current_scale);
                     else
-                        motion_height = (int) (area.height - ((int) event.y - temp_y) / current_scale);
+                        motion_height = (int) (area.height - ((int) event_y - temp_y) / current_scale);
 
 
                     switch (height_in_pixbuf (motion_height, area.y)) {
@@ -324,9 +315,9 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                 case Gdk.CursorType.LEFT_SIDE:
                     int motion_width = 0;
                     if (current_operation == Gdk.CursorType.RIGHT_SIDE)
-                        motion_width = (int) (area.width + ((int) event.x - temp_x) / current_scale);
+                        motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
                     else
-                        motion_width = (int) (area.width - ((int) event.x - temp_x) / current_scale);
+                        motion_width = (int) (area.width - ((int) event_x - temp_x) / current_scale);
 
                     switch (width_in_pixbuf (motion_width, area.x)) {
                         case 0:
@@ -355,13 +346,11 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
                 area.height = smallest;
             }
 
-            temp_x = (int) event.x;
-            temp_y = (int) event.y;
+            temp_x = (int) event_x;
+            temp_y = (int) event_y;
 
             queue_draw ();
         }
-
-        return true;
     }
 
     public override bool button_release_event (Gdk.EventButton event) {
