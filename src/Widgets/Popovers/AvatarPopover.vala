@@ -80,13 +80,15 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         file_dialog.response.connect ((response) => {
             if (response == Gtk.ResponseType.ACCEPT) {
                 var path = file_dialog.get_file ().get_path ();
-                file_dialog.hide ();
-                file_dialog.destroy ();
+
                 var avatar_dialog = new Dialogs.AvatarDialog (path);
                 avatar_dialog.request_avatar_change.connect (change_avatar);
-            } else {
-                file_dialog.destroy ();
+                avatar_dialog.present ();
+
+                file_dialog.hide ();
             }
+
+            file_dialog.destroy ();
         });
         file_dialog.show ();
     }

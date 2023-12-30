@@ -22,7 +22,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     public string pixbuf_path { get; construct; }
 
-    // private Widgets.CropView cropview;
+    private Widgets.CropView cropview;
 
     public AvatarDialog (string pixbuf_path) {
         Object (
@@ -42,12 +42,11 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
         try {
             var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
-            // cropview = new Widgets.CropView.from_pixbuf_with_size (pixbuf, 400, 400);
-            // cropview.quadratic_selection = true;
-            // cropview.handles_visible = false;
 
-            var frame = new Gtk.Grid ();
-            // frame.add (cropview);
+            cropview = new Widgets.CropView (pixbuf, 400);
+
+            var frame = new Gtk.Box (VERTICAL, 0);
+            frame.append (cropview);
             frame.add_css_class (Granite.STYLE_CLASS_CARD);
             frame.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
 
@@ -60,12 +59,12 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     private void on_response (Gtk.Dialog source, int response_id) {
         if (response_id == Gtk.ResponseType.OK) {
-            // var pixbuf = cropview.get_selection ();
-            // if (pixbuf.get_width () > 200) {
-            //     request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
-            // } else {
-            //     request_avatar_change (pixbuf);
-            // }
+            var pixbuf = cropview.get_selection ();
+            if (pixbuf.get_width () > 200) {
+                request_avatar_change (pixbuf.scale_simple (200, 200, Gdk.InterpType.BILINEAR));
+            } else {
+                request_avatar_change (pixbuf);
+            }
         }
         destroy ();
     }
