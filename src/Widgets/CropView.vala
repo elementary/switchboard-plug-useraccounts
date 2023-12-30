@@ -22,6 +22,7 @@
 
 public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
     public Gdk.Pixbuf pixbuf { get; construct; }
+    public int pixel_size { get; construct; }
 
     /**
      * selected area in absolute coordinates of the image
@@ -89,13 +90,11 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
      */
     private const int RADIUS = 12;
 
-    /**
-     * Requested pixel size of the widget
-     */
-    private const int SIZE = 400;
-
-    public CropView (Gdk.Pixbuf pixbuf) {
-        Object (pixbuf: pixbuf);
+    public CropView (Gdk.Pixbuf pixbuf, int pixel_size) {
+        Object (
+            pixbuf: pixbuf,
+            pixel_size: pixel_size
+        );
     }
 
     construct {
@@ -114,8 +113,8 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         };
 
         // Set the size to fit inside the requested size
-        width_request = int.min (SIZE, SIZE * pixbuf.get_width () / pixbuf.get_height ());
-        height_request = int.min (SIZE, SIZE * pixbuf.get_height () / pixbuf.get_width ());
+        width_request = int.min (pixel_size, pixel_size * pixbuf.get_width () / pixbuf.get_height ());
+        height_request = int.min (pixel_size, pixel_size * pixbuf.get_height () / pixbuf.get_width ());
     }
 
     /**
