@@ -44,8 +44,6 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
         pw_editor = new Widgets.PasswordEditor ();
 
         var form_box = new Gtk.Box (VERTICAL, 3) {
-            margin_end = 12,
-            margin_start = 12,
             valign = START,
             vexpand = true
         };

@@ -29,16 +29,23 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
     }
 
     construct {
-        var remove_button = new Gtk.Button.with_label (_("Remove"));
+        var remove_button = new Gtk.Button () {
+            child = new Gtk.Label (_("Remove")) {
+                xalign = 0
+            }
+        };
         remove_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        remove_button.add_css_class (Granite.STYLE_CLASS_MENUITEM);
 
-        var select_button = new Gtk.Button.with_label (_("Set from File…"));
+        var select_button = new Gtk.Button () {
+            child = new Gtk.Label (_("Set from File…")) {
+                xalign = 0
+            }
+        };
+        select_button.add_css_class (Granite.STYLE_CLASS_MENUITEM);
         select_button.grab_focus ();
 
-        var button_box = new Gtk.Box (VERTICAL, 0) {
-            margin_bottom = 3,
-            margin_top = 3
-        };
+        var button_box = new Gtk.Box (VERTICAL, 0);
         button_box.append (remove_button);
         button_box.append (select_button);
 

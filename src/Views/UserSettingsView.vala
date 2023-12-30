@@ -66,13 +66,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar = new Adw.Avatar (64, user.real_name, true);
 
             var avatar_popover = new AvatarPopover (user, utils);
+            avatar_popover.add_css_class (Granite.STYLE_CLASS_MENU);
 
             var avatar_button = new Gtk.MenuButton () {
                 child = avatar,
                 halign = END,
+                has_frame = false,
                 popover = avatar_popover
             };
-            avatar_button.add_css_class (Granite.STYLE_CLASS_FLAT);
 
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
@@ -357,7 +358,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             // Checking delta_user icon file doesn't seem to always update correctly
-            avatar.custom_image = Gtk.MediaFile.for_filename (user.get_icon_file ());
+            try {
+                avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
+            } catch (Error e) {
+                critical ("couldn't load avatar");
+            }
 
             if (delta_user.account_type != user.get_account_type ()) {
                 update_account_type ();
