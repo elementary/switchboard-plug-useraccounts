@@ -21,28 +21,12 @@
 */
 
 public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
-    /**
-     * The current pixbuf
-     */
-    public Gdk.Pixbuf pixbuf {
-        get {
-            return _pixbuf;
-        }
-        set {
-            _pixbuf = value;
-            queue_draw ();
-        }
-    }
+    public Gdk.Pixbuf pixbuf { get; construct; }
 
     /**
      * selected area in absolute coordinates of the image
      */
     private Gdk.Rectangle area;
-
-    /**
-     * The current pixbuf
-     */
-    private Gdk.Pixbuf _pixbuf;
 
     /**
      * holds the current scale
@@ -105,9 +89,17 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
      */
     private const int RADIUS = 12;
 
-    public CropView (Gdk.Pixbuf pixbuf, int x, int y) {
-        this.add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
-        this.pixbuf = pixbuf;
+    /**
+     * Requested pixel size of the widget
+     */
+    private const int SIZE = 400;
+
+    public CropView (Gdk.Pixbuf pixbuf) {
+        Object (pixbuf: pixbuf);
+    }
+
+    construct {
+        add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
 
         // Use a default selection of 75% in the center of the image
         int area_dimension = int.min (pixbuf.get_width (), pixbuf.get_height ()) * 3 / 4;
@@ -122,9 +114,8 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         };
 
         // Set the size to fit inside the requested size
-        x = int.min (x, x * pixbuf.get_width () / pixbuf.get_height ());
-        y = int.min (y, y * pixbuf.get_height () / pixbuf.get_width ());
-        set_size_request (x, y);
+        width_request = int.min (SIZE, SIZE * pixbuf.get_width () / pixbuf.get_height ());
+        height_request = int.min (SIZE, SIZE * pixbuf.get_height () / pixbuf.get_width ());
     }
 
     /**
