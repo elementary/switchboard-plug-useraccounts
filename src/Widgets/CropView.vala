@@ -76,6 +76,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
     private const int RADIUS = 12;
 
     private Gtk.EventControllerMotion motion_event_controller;
+    private Gtk.GestureMultiPress click_gesture;
 
     public CropView (Gdk.Pixbuf pixbuf, int pixel_size) {
         Object (
@@ -103,6 +104,10 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         width_request = int.min (pixel_size, pixel_size * pixbuf.get_width () / pixbuf.get_height ());
         height_request = int.min (pixel_size, pixel_size * pixbuf.get_height () / pixbuf.get_width ());
 
+        click_gesture = new Gtk.GestureMultiPress (this);
+        click_gesture.pressed.connect (gesture_press_event);
+        click_gesture.released.connect (gesture_release_event);
+
         motion_event_controller = new Gtk.EventControllerMotion (this);
         motion_event_controller.motion.connect (motion_event);
     }
@@ -114,12 +119,16 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
         return new Gdk.Pixbuf.subpixbuf (_pixbuf, area.x, area.y, area.width, area.height);
     }
 
-    public override bool button_press_event (Gdk.EventButton event) {
+    private void gesture_press_event (int n_press, double x, double y) {
         mouse_button_down = true;
-        temp_x = (int) event.x;
-        temp_y = (int) event.y;
+        temp_x = (int) x;
+        temp_y = (int) y;
+    }
 
-        return true;
+    private void gesture_release_event (int n_press, double x, double y) {
+        current_operation = Gdk.CursorType.ARROW;
+        mouse_button_down = false;
+        apply_cursor ();
     }
 
     private void motion_event (double event_x, double event_y) {
@@ -351,14 +360,6 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.EventBox {
 
             queue_draw ();
         }
-    }
-
-    public override bool button_release_event (Gdk.EventButton event) {
-        current_operation = Gdk.CursorType.ARROW;
-        mouse_button_down = false;
-        apply_cursor ();
-
-        return true;
     }
 
     public override bool draw (Cairo.Context cr) {
