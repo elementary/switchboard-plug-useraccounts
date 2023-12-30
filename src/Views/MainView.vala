@@ -226,7 +226,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         var selected_user = ((UserItem) listbox.get_selected_row ()).user;
         mark_removal (selected_user);
 
-        update_listbox ();
+        listbox.remove (listbox.get_selected_row ());
         listbox.select_row (listbox.get_row_at_index (0));
 
         toast.title = _("Removed “%s”").printf (selected_user.get_user_name ());
