@@ -191,7 +191,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             add_user_settings (user);
         }
 
-        guest.guest_switch_changed.connect (update_guest);
+        if (get_display_manager () == "lightdm") {
+            guest.guest_switch_changed.connect (update_guest);
+        }
 
         //auto select current user row in listbox widget
         listbox.select_row (listbox.get_row_at_index (0));
@@ -272,7 +274,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             }
         }
 
-        listbox.insert (guest_session_row, pos);
+        if (get_display_manager () == "lightdm") {
+            listbox.insert (guest_session_row, pos);
+        }
 
         show_all ();
     }
