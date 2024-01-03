@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2017-09-08 17:22+0000\n"
 "Last-Translator: M Aiman <m.aimanismail@gmail.com>\n"
 "Language-Team: Malay <https://weblate.elementary.io/projects/switchboard/"
@@ -58,7 +58,7 @@ msgid "Change Password"
 msgstr ""
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgid "Standard User"
 msgstr ""
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr ""
 
@@ -143,8 +143,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -153,26 +153,42 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr ""
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr ""
+
+#: src/Views/MainView.vala:33
 msgid "Create User Account…"
 msgstr ""
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr ""
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Dimatikan"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -259,19 +275,3 @@ msgstr ""
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr ""
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr ""
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr ""
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr ""
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Dimatikan"

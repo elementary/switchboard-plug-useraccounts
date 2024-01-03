@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2019-01-06 22:27+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -58,7 +58,7 @@ msgid "Change Password"
 msgstr "Endre passord"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Gjesteøkt"
 
@@ -100,7 +100,7 @@ msgid "Standard User"
 msgstr "Standardbrukar"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -147,8 +147,8 @@ msgid ""
 msgstr ""
 "Endringar for gjesteøkter trer ikkje i kraft før du startar systemet på nytt"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -157,28 +157,44 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Min konto"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Andre kontoar"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Lag brukarkonto"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Angre"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Påslått"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Avslått"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -267,22 +283,6 @@ msgstr "Vis passord"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Passorda samsvarar ikkje"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Min konto"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Andre kontoar"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Påslått"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Avslått"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

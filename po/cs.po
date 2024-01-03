@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2022-01-10 21:59+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -60,7 +60,7 @@ msgid "Change Password"
 msgstr "Změna hesla"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Sezení hosta"
 
@@ -102,7 +102,7 @@ msgid "Standard User"
 msgstr "Normální uživatel"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Správce"
 
@@ -147,8 +147,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Změny v nastavení sezení hosta se projeví až po restartování počítače"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "Nedaří se získat oprávnění"
 
@@ -159,28 +159,44 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "Bez potřebných systémových oprávnění není možné smazat účet."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Můj účet"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Ostatní účty"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "Vytvořit uživatelský účet…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Zpět"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "Bez potřebných systémových oprávnění není možné vytvořit nový účet."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "Bez potřebných systémových oprávnění není možné smazat účet."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "Odebráno „%s“"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Zapnuto"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Vypnuto"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -269,22 +285,6 @@ msgstr "Zobrazit hesla"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Zadání hesla se neshodují"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Můj účet"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Ostatní účty"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Zapnuto"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Vypnuto"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

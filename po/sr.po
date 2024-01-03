@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2021-02-17 13:39+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -61,7 +61,7 @@ msgid "Change Password"
 msgstr "Измените лозинку"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Сесија госта"
 
@@ -103,7 +103,7 @@ msgid "Standard User"
 msgstr "Обичан корисник"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Администратор"
 
@@ -150,8 +150,8 @@ msgstr ""
 "Промене сесије госта неће ступити у дејство све док поново не покренете "
 "систем"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "Не могу да добијем овлашћења"
 
@@ -162,28 +162,44 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "Налог се не може уклонити без потребних системских овлашћења."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Мој налог"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Остали налози"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Направи кориснички налог"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Поништи"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "Нови налог се не може направити без потребних системских овлашћења."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "Налог се не може уклонити без потребних системских овлашћења."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Укључен"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Искључен"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -272,22 +288,6 @@ msgstr "Прикажи лозинке"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Лозинке нису исте"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Мој налог"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Остали налози"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Укључен"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Искључен"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

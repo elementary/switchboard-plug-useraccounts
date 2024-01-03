@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -59,7 +59,7 @@ msgid "Change Password"
 msgstr "パスワードを変更"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "ゲストセッション"
 
@@ -101,7 +101,7 @@ msgid "Standard User"
 msgstr "標準ユーザー"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "管理者"
 
@@ -147,8 +147,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "ゲストセッションの変更は、再起動後に反映されます"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "権限を取得できません"
 
@@ -157,26 +157,42 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "必要なシステム権限がないと、ゲストアカウントを編集できません。"
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "自分のアカウント"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "ほかのアカウント"
+
+#: src/Views/MainView.vala:33
 msgid "Create User Account…"
 msgstr "ユーザーアカウントを作成…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "元に戻す"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "必要なシステム権限がないと、新しいアカウントを作成できません。"
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "必要なシステム権限がないと、アカウントを削除できません。"
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” を削除しました"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "有効"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "無効"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -263,22 +279,6 @@ msgstr "パスワードを表示"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "パスワードが一致しません"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "自分のアカウント"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "ほかのアカウント"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "有効"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "無効"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"
