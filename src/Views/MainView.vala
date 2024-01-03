@@ -69,11 +69,11 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
             end_child = overlay,
-            position = 240
+            position = 240,
+            resize_start_child = false,
+            shrink_start_child = false,
+            shrink_end_child = false
         };
-
-        // pack1 (sidebar, false, false);
-        // pack2 (overlay, true, false);
 
         append (paned);
 
