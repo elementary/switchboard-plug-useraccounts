@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2019-11-22 17:24+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -61,7 +61,7 @@ msgid "Change Password"
 msgstr "Alterar senha"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Sessão de convidado"
 
@@ -103,7 +103,7 @@ msgid "Standard User"
 msgstr "Usuário padrão"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -153,8 +153,8 @@ msgstr ""
 "As mudanças na sessão de convidado terão efeito apenas após você reiniciar "
 "seu sistema"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "Não foi possível adquirir a permissão"
 
@@ -165,29 +165,45 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Minha conta"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Outras contas"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Criar conta de usuário"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Desfazer"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Uma nova conta não pode ser criada sem a permissão necessária do sistema."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Habilitado"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Desabilitado"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -276,22 +292,6 @@ msgstr "Mostrar senhas"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "As senhas não conferem"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Minha conta"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Outras contas"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Habilitado"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Desabilitado"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -60,7 +60,7 @@ msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Sessió de convidat"
 
@@ -102,7 +102,7 @@ msgid "Standard User"
 msgstr "Usuari estàndard"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrador"
 
@@ -151,8 +151,8 @@ msgstr ""
 "Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
 "sistema."
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "No es pot adquirir el permís."
 
@@ -163,26 +163,42 @@ msgstr ""
 "El compte de convidat no es pot modificar sense el permís necessari del "
 "sistema."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "El meu compte"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Altres comptes"
+
+#: src/Views/MainView.vala:33
 msgid "Create User Account…"
 msgstr "Crea un compte d'usuari…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Desfés-ho"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "No es pot crear un compte nou sense el permís del sistema necessari."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "No es pot suprimir cap compte sense el permís del sistema necessari."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "Suprimit: %s"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Habilitat"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Inhabilitat"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -269,22 +285,6 @@ msgstr "Mostra les contrasenyes"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Les contrasenyes no coincideixen"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "El meu compte"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Altres comptes"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Habilitat"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Inhabilitat"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

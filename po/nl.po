@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2023-05-12 17:06+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -59,7 +59,7 @@ msgid "Change Password"
 msgstr "Verander wachtwoord"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Gastsessie"
 
@@ -102,7 +102,7 @@ msgid "Standard User"
 msgstr "Standaard gebruiker"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Beheerder"
 
@@ -152,8 +152,8 @@ msgstr ""
 "Veranderingen aan de gastsessie zullen niet toegepast worden totdat u het "
 "systeem herstart"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "Niet in staat om toestemming te krijgen"
 
@@ -165,31 +165,47 @@ msgid ""
 msgstr ""
 "Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Mijn account"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Andere accounts"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "Gebruikersaccount aanmaken…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Een nieuwe gebruiker kan niet worden aangemaakt zonder de vereiste "
 "systeemrechten."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” is verwijderd"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Uitgeschakeld"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -278,22 +294,6 @@ msgstr "Laat wachtwoord zien"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Wachtwoorden komen niet overeen"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Mijn account"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Andere accounts"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Ingeschakeld"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Uitgeschakeld"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

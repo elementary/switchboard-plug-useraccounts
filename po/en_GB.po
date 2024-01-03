@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -59,7 +59,7 @@ msgid "Change Password"
 msgstr "Change Password"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Guest Session"
 
@@ -101,7 +101,7 @@ msgid "Standard User"
 msgstr "Standard User"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -148,8 +148,8 @@ msgid ""
 msgstr ""
 "Guest session changes will not take effect until you restart your system"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "Unable to acquire permission"
 
@@ -159,27 +159,43 @@ msgid ""
 msgstr ""
 "The guest account cannot be modified without the required system permission."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "My Account"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Other Accounts"
+
+#: src/Views/MainView.vala:33
 msgid "Create User Account…"
 msgstr "Create User Account…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Undo"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "A new account cannot be created without the required system permission."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "An account cannot be removed without the required system permission."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "Removed “%s”"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Enabled"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Disabled"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -266,22 +282,6 @@ msgstr "Show passwords"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Passwords do not match"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "My Account"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Other Accounts"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Enabled"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Disabled"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

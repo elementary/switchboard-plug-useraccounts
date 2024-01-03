@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2022-08-06 15:44+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -59,7 +59,7 @@ msgid "Change Password"
 msgstr "비밀번호 바꾸기"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "게스트 세션"
 
@@ -101,7 +101,7 @@ msgid "Standard User"
 msgstr "일반 사용자"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "관리자"
 
@@ -146,8 +146,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "게스트 세션의 변경은 재부팅 후에 적용됩니다"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "권한을 얻을 수 없습니다"
 
@@ -158,28 +158,44 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "내 계정"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "기타 계정"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "사용자 계정 만들기…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "되돌리기"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 새 계정을 만들 수 없습니다."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” 삭제함"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "사용함"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "사용 안 함"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -268,22 +284,6 @@ msgstr "비밀번호 보이기"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "비밀번호가 다릅니다"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "내 계정"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "기타 계정"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "사용함"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "사용 안 함"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

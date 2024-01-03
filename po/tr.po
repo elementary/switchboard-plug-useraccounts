@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 16:21+0000\n"
+"POT-Creation-Date: 2024-01-03 17:45+0000\n"
 "PO-Revision-Date: 2023-05-18 21:06+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -60,7 +60,7 @@ msgid "Change Password"
 msgstr "Parolayı Değiştir"
 
 #: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Widgets/UserListBox.vala:58
+#: src/Views/MainView.vala:98
 msgid "Guest Session"
 msgstr "Konuk Oturumu"
 
@@ -102,7 +102,7 @@ msgid "Standard User"
 msgstr "Standart Kullanıcı"
 
 #: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
-#: src/Widgets/UserItem.vala:54
+#: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Yönetici"
 
@@ -150,8 +150,8 @@ msgstr ""
 "Konuk oturumu değişiklikleri, sistem yeniden başlatılıncaya kadar etkili "
 "olamayacaktır"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:83
-#: src/Views/MainView.vala:151
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
+#: src/Views/MainView.vala:211
 msgid "Unable to acquire permission"
 msgstr "İzin alınamıyor"
 
@@ -162,28 +162,44 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "Gerekli sistem izni olmadan bir hesap kaldırılamaz."
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:22
+msgid "My Account"
+msgstr "Hesabım"
+
+#: src/Views/MainView.vala:24
+msgid "Other Accounts"
+msgstr "Diğer Hesaplar"
+
+#: src/Views/MainView.vala:33
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "Kullanıcı hesabı oluştur…"
 
-#: src/Views/MainView.vala:59
+#: src/Views/MainView.vala:62
 msgid "Undo"
 msgstr "Geri Al"
 
-#: src/Views/MainView.vala:84
+#: src/Views/MainView.vala:144
 msgid "A new account cannot be created without the required system permission."
 msgstr "Gerekli sistem izni olmadan yeni bir hesap oluşturulamaz."
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:212
 msgid "An account cannot be removed without the required system permission."
 msgstr "Gerekli sistem izni olmadan bir hesap kaldırılamaz."
 
-#: src/Views/MainView.vala:174
+#: src/Views/MainView.vala:234
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” kullanıcısı kaldırıldı"
+
+#: src/Views/MainView.vala:294
+msgid "Enabled"
+msgstr "Etkin"
+
+#: src/Views/MainView.vala:296
+msgid "Disabled"
+msgstr "Devre dışı bırakıldı"
 
 #: src/Views/UserSettingsView.vala:52
 msgid "You do not have permission to change this"
@@ -270,22 +286,6 @@ msgstr "Parolayı Göster"
 #: src/Widgets/PasswordEditor.vala:144
 msgid "Passwords do not match"
 msgstr "Parolalar eşleşmiyor"
-
-#: src/Widgets/UserListBox.vala:33
-msgid "My Account"
-msgstr "Hesabım"
-
-#: src/Widgets/UserListBox.vala:35
-msgid "Other Accounts"
-msgstr "Diğer Hesaplar"
-
-#: src/Widgets/UserListBox.vala:120
-msgid "Enabled"
-msgstr "Etkin"
-
-#: src/Widgets/UserListBox.vala:124
-msgid "Disabled"
-msgstr "Devre dışı bırakıldı"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"

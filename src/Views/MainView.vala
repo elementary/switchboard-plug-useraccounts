@@ -129,6 +129,58 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             debug ("Unsupported display manager found. Guest session settings will be hidden");
         }
 
+        //only build the guest session list entry / row when lightDM is the display manager
+        if (get_display_manager () == "lightdm") {
+            var avatar = new Adw.Avatar (32, null, false);
+
+            // We want to use the user's accent, not a random color
+            unowned var avatar_context = avatar.get_style_context ();
+            avatar_context.remove_class ("color1");
+            avatar_context.remove_class ("color2");
+            avatar_context.remove_class ("color3");
+            avatar_context.remove_class ("color4");
+            avatar_context.remove_class ("color5");
+            avatar_context.remove_class ("color6");
+            avatar_context.remove_class ("color7");
+            avatar_context.remove_class ("color8");
+            avatar_context.remove_class ("color9");
+            avatar_context.remove_class ("color10");
+            avatar_context.remove_class ("color11");
+            avatar_context.remove_class ("color12");
+            avatar_context.remove_class ("color13");
+            avatar_context.remove_class ("color14");
+
+            var full_name_label = new Gtk.Label (_("Guest Session")) {
+                halign = START
+            };
+            full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+            guest_description_label = new Gtk.Label (null) {
+                halign = START
+            };
+            guest_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+            var row_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 12
+            };
+            row_grid.attach (avatar, 0, 0, 1, 2);
+            row_grid.attach (full_name_label, 1, 0);
+            row_grid.attach (guest_description_label, 1, 1);
+
+            guest_session_row = new Gtk.ListBoxRow () {
+                child = row_grid,
+                name = "guest_session"
+            };
+
+            update_guest ();
+        } else {
+            debug ("Unsupported display manager found. Guest session settings will be hidden");
+        }
+
         if (get_usermanager ().is_loaded) {
             update ();
         } else {
@@ -194,7 +246,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             add_user_settings (user);
         }
 
-        guest.guest_switch_changed.connect (update_guest);
+        if (get_display_manager () == "lightdm") {
+            guest.guest_switch_changed.connect (update_guest);
+        }
 
         //auto select current user row in listbox widget
         listbox.select_row (listbox.get_row_at_index (0));
@@ -274,7 +328,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             }
         }
 
-        listbox.insert (guest_session_row, pos);
+        if (get_display_manager () == "lightdm") {
+            listbox.insert (guest_session_row, pos);
+        }
     }
 
     private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {

@@ -130,8 +130,6 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
     }
 
     private void motion_event (double event_x, double event_y) {
-        critical ("we got motion");
-
         if (!mouse_button_down) {
             bool determined_cursortype = false;
 
