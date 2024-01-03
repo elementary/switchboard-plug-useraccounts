@@ -1,4 +1,4 @@
-# Switchboard User Accounts Plug
+# User Accounts Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-useraccounts/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -8,13 +8,14 @@
 You'll need the following dependencies:
 
 * libaccountsservice-dev
+* libadwaita-1-dev
 * libgirepository1.0-dev 
-* libgnome-desktop-3-dev
+* libgnome-desktop-4-dev
 * libgranite-7-dev >= 7.4.0
-* libhandy-1-dev >= 0.90.0
+* libgtk4-dev
 * libpolkit-gobject-1-dev
 * libpwquality-dev
-* libswitchboard-2.0-dev
+* libswitchboard-3-dev
 * meson >= 0.46.1
 * policykit-1
 * valac
@@ -27,4 +28,4 @@ Run `meson build` to configure the build environment and then change to the buil
 
 To install, use `ninja install`
 
-    sudo ninja install
+    ninja install
