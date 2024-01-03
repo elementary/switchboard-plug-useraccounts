@@ -29,12 +29,16 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
     }
 
     construct {
-        var remove_button = new Gtk.Button () {
-            child = new Gtk.Label (_("Remove")) {
-                xalign = 0
-            }
+        var remove_button_label = new Gtk.Label (_("Remove")) {
+            xalign = 0
         };
-        remove_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        // FIXME: https://github.com/elementary/stylesheet/issues/1275
+        remove_button_label.add_css_class (Granite.STYLE_CLASS_ACCENT);
+        remove_button_label.add_css_class ("red");
+
+        var remove_button = new Gtk.Button () {
+            child = remove_button_label
+        };
         remove_button.add_css_class (Granite.STYLE_CLASS_MENUITEM);
 
         var select_button = new Gtk.Button () {
@@ -49,6 +53,7 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         button_box.append (remove_button);
         button_box.append (select_button);
 
+        autohide = true;
         child = button_box;
 
         if (user.get_icon_file ().contains (".face")) {
@@ -57,11 +62,17 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
             remove_button.sensitive = true;
         }
 
-        remove_button.clicked.connect (() => change_avatar (null));
+        remove_button.clicked.connect (() => {
+            popdown ();
+            change_avatar (null);
+        });
+
         select_button.clicked.connect (select_from_file);
     }
 
     private void select_from_file () {
+        popdown ();
+
         var filter = new Gtk.FileFilter ();
         filter.set_filter_name (_("Images"));
         filter.add_mime_type ("image/jpeg");
