@@ -42,6 +42,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
         try {
             var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
+
             cropview = new Widgets.CropView (pixbuf, 400);
             cropview.add_css_class (Granite.STYLE_CLASS_CARD);
             cropview.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
