@@ -4,17 +4,27 @@
  */
 
 public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
-    private UserListBox userlist;
+    private Gtk.ListBox listbox;
     private Granite.Widgets.Toast toast;
     private Gtk.Stack content;
-    private Gtk.ScrolledWindow scrolled_window;
     private GuestSettingsView guest;
+    private Granite.HeaderLabel my_account_label;
+    private Granite.HeaderLabel other_accounts_label;
+    private Gtk.ListBoxRow guest_session_row;
+    private Gtk.Label guest_description_label;
 
     construct {
-        userlist = new UserListBox ();
+        listbox = new Gtk.ListBox () {
+            selection_mode = SINGLE
+        };
+        listbox.set_header_func (update_headers);
 
-        scrolled_window = new Gtk.ScrolledWindow (null, null) {
-            child = userlist,
+        my_account_label = new Granite.HeaderLabel (_("My Account"));
+
+        other_accounts_label = new Granite.HeaderLabel (_("Other Accounts"));
+
+        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+            child = listbox,
             hexpand = true,
             vexpand = true,
             hscrollbar_policy = NEVER
@@ -64,6 +74,58 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         add (paned);
 
+        //only build the guest session list entry / row when lightDM is the display manager
+        if (get_display_manager () == "lightdm") {
+            var avatar = new Hdy.Avatar (32, null, false);
+
+            // We want to use the user's accent, not a random color
+            unowned var avatar_context = avatar.get_style_context ();
+            avatar_context.remove_class ("color1");
+            avatar_context.remove_class ("color2");
+            avatar_context.remove_class ("color3");
+            avatar_context.remove_class ("color4");
+            avatar_context.remove_class ("color5");
+            avatar_context.remove_class ("color6");
+            avatar_context.remove_class ("color7");
+            avatar_context.remove_class ("color8");
+            avatar_context.remove_class ("color9");
+            avatar_context.remove_class ("color10");
+            avatar_context.remove_class ("color11");
+            avatar_context.remove_class ("color12");
+            avatar_context.remove_class ("color13");
+            avatar_context.remove_class ("color14");
+
+            var full_name_label = new Gtk.Label (_("Guest Session")) {
+                halign = START
+            };
+            full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+            guest_description_label = new Gtk.Label (null) {
+                halign = START
+            };
+            guest_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+            var row_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6,
+                margin_start = 12
+            };
+            row_grid.attach (avatar, 0, 0, 1, 2);
+            row_grid.attach (full_name_label, 1, 0);
+            row_grid.attach (guest_description_label, 1, 1);
+
+            guest_session_row = new Gtk.ListBoxRow () {
+                child = row_grid,
+                name = "guest_session"
+            };
+
+            update_guest ();
+        } else {
+            debug ("Unsupported display manager found. Guest session settings will be hidden");
+        }
+
         if (get_usermanager ().is_loaded) {
             update ();
         } else {
@@ -108,10 +170,10 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         toast.default_action.connect (() => {
             undo_removal ();
-            userlist.update_ui ();
+            update_listbox ();
         });
 
-        userlist.row_selected.connect (userlist_selected);
+        listbox.row_selected.connect (listbox_selected);
     }
 
     private void update () {
@@ -129,12 +191,12 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             add_user_settings (user);
         }
 
-        guest.guest_switch_changed.connect (() => {
-            userlist.update_guest ();
-        });
+        if (get_display_manager () == "lightdm") {
+            guest.guest_switch_changed.connect (update_guest);
+        }
 
-        //auto select current user row in userlist widget
-        userlist.select_row (userlist.get_row_at_index (0));
+        //auto select current user row in listbox widget
+        listbox.select_row (listbox.get_row_at_index (0));
         show_all ();
     }
 
@@ -163,11 +225,11 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             }
         }
 
-        var selected_user = ((UserItem) userlist.get_selected_row ()).user;
+        var selected_user = ((UserItem) listbox.get_selected_row ()).user;
         mark_removal (selected_user);
 
-        userlist.update_ui ();
-        userlist.select_row (userlist.get_row_at_index (0));
+        listbox.remove (listbox.get_selected_row ());
+        listbox.select_row (listbox.get_row_at_index (0));
 
         toast.title = _("Removed “%s”").printf (selected_user.get_user_name ());
         toast.send_notification ();
@@ -178,6 +240,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         var page = new UserSettingsView (user);
         page.remove_user.connect (remove_user);
         content.add_named (page, user.get_user_name ());
+
+        update_listbox ();
     }
 
     private void remove_user_settings (Act.User user) {
@@ -185,7 +249,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         content.remove (content.get_child_by_name (user.get_user_name ()));
     }
 
-    private void userlist_selected (Gtk.ListBoxRow? user_item) {
+    private void listbox_selected (Gtk.ListBoxRow? user_item) {
         Act.User? user = null;
         if (user_item != null && user_item.name != "guest_session") {
             user = ((UserItem)user_item).user;
@@ -193,6 +257,43 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             content.set_visible_child_name (username);
         } else if (user_item != null && user_item.name == "guest_session") {
             content.set_visible_child_name ("guest_session");
+        }
+    }
+
+    private void update_listbox () {
+        foreach (unowned var useritem in listbox.get_children ()) {
+            listbox.remove (useritem);
+        }
+
+        listbox.insert (new UserItem (get_current_user ()), 0);
+        int pos = 1;
+        foreach (unowned Act.User temp_user in get_usermanager ().list_users ()) {
+            if (get_current_user () != temp_user && !check_removal (temp_user)) {
+                listbox.insert (new UserItem (temp_user), pos);
+                pos++;
+            }
+        }
+
+        if (get_display_manager () == "lightdm") {
+            listbox.insert (guest_session_row, pos);
+        }
+
+        show_all ();
+    }
+
+    private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+        if (row == listbox.get_row_at_index (0)) {
+            row.set_header (my_account_label);
+        } else if (row == listbox.get_row_at_index (1)) {
+            row.set_header (other_accounts_label);
+        }
+    }
+
+    private void update_guest () {
+        if (get_guest_session_state ("show")) {
+            guest_description_label.label = _("Enabled");
+        } else {
+            guest_description_label.label = _("Disabled");
         }
     }
 }
