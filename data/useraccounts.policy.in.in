@@ -6,7 +6,7 @@
   <vendor>elementary</vendor>
   <vendor_url>https://elementary.io/</vendor_url>
 
-  <action id="io.elementary.switchboard.useraccounts.administration">
+  <action id="io.elementary.settings.useraccounts.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage user accounts</description>
     <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change user data</message>
     <icon_name>system-users</icon_name>

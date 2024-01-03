@@ -39,7 +39,7 @@ namespace SwitchboardPlugUserAccounts {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts", null);
             Object (category: Category.SYSTEM,
-                code_name: "io.elementary.switchboard.useraccounts",
+                code_name: "io.elementary.settings.useraccounts",
                 display_name: _("User Accounts"),
                 description: _("Manage account permissions and configure user names, passwords, and photos"),
                 icon: "system-users",
