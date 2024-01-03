@@ -8,7 +8,7 @@ project(
 gnome = import('gnome')
 i18n = import('i18n')
 
-gettext_name = 'io.elementary.settings' + meson.project_name()
+gettext_name = 'io.elementary.settings.' + meson.project_name()
 
 prefix = get_option('prefix')
 datadir = join_paths(prefix, get_option('datadir'))
