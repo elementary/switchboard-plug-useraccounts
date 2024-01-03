@@ -82,73 +82,21 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             var avatar = new Adw.Avatar (32, null, false);
 
             // We want to use the user's accent, not a random color
-            unowned var avatar_context = avatar.get_style_context ();
-            avatar_context.remove_class ("color1");
-            avatar_context.remove_class ("color2");
-            avatar_context.remove_class ("color3");
-            avatar_context.remove_class ("color4");
-            avatar_context.remove_class ("color5");
-            avatar_context.remove_class ("color6");
-            avatar_context.remove_class ("color7");
-            avatar_context.remove_class ("color8");
-            avatar_context.remove_class ("color9");
-            avatar_context.remove_class ("color10");
-            avatar_context.remove_class ("color11");
-            avatar_context.remove_class ("color12");
-            avatar_context.remove_class ("color13");
-            avatar_context.remove_class ("color14");
-
-            var full_name_label = new Gtk.Label (_("Guest Session")) {
-                halign = START
-            };
-            full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-
-            guest_description_label = new Gtk.Label (null) {
-                halign = START
-            };
-            guest_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
-
-            var row_grid = new Gtk.Grid () {
-                column_spacing = 12,
-                margin_top = 6,
-                margin_end = 6,
-                margin_bottom = 6,
-                margin_start = 12
-            };
-            row_grid.attach (avatar, 0, 0, 1, 2);
-            row_grid.attach (full_name_label, 1, 0);
-            row_grid.attach (guest_description_label, 1, 1);
-
-            guest_session_row = new Gtk.ListBoxRow () {
-                child = row_grid,
-                name = "guest_session"
-            };
-
-            update_guest ();
-        } else {
-            debug ("Unsupported display manager found. Guest session settings will be hidden");
-        }
-
-        //only build the guest session list entry / row when lightDM is the display manager
-        if (get_display_manager () == "lightdm") {
-            var avatar = new Adw.Avatar (32, null, false);
-
-            // We want to use the user's accent, not a random color
-            unowned var avatar_context = avatar.get_style_context ();
-            avatar_context.remove_class ("color1");
-            avatar_context.remove_class ("color2");
-            avatar_context.remove_class ("color3");
-            avatar_context.remove_class ("color4");
-            avatar_context.remove_class ("color5");
-            avatar_context.remove_class ("color6");
-            avatar_context.remove_class ("color7");
-            avatar_context.remove_class ("color8");
-            avatar_context.remove_class ("color9");
-            avatar_context.remove_class ("color10");
-            avatar_context.remove_class ("color11");
-            avatar_context.remove_class ("color12");
-            avatar_context.remove_class ("color13");
-            avatar_context.remove_class ("color14");
+            unowned var avatar_context = avatar.get_first_child ();
+            avatar_context.remove_css_class ("color1");
+            avatar_context.remove_css_class ("color2");
+            avatar_context.remove_css_class ("color3");
+            avatar_context.remove_css_class ("color4");
+            avatar_context.remove_css_class ("color5");
+            avatar_context.remove_css_class ("color6");
+            avatar_context.remove_css_class ("color7");
+            avatar_context.remove_css_class ("color8");
+            avatar_context.remove_css_class ("color9");
+            avatar_context.remove_css_class ("color10");
+            avatar_context.remove_css_class ("color11");
+            avatar_context.remove_css_class ("color12");
+            avatar_context.remove_css_class ("color13");
+            avatar_context.remove_css_class ("color14");
 
             var full_name_label = new Gtk.Label (_("Guest Session")) {
                 halign = START
