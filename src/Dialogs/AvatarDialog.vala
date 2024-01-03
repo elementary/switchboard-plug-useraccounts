@@ -43,13 +43,10 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
         try {
             var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
             cropview = new Widgets.CropView (pixbuf, 400);
+            cropview.add_css_class (Granite.STYLE_CLASS_CARD);
+            cropview.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
 
-            var frame = new Gtk.Box (VERTICAL, 0);
-            frame.append (cropview);
-            frame.add_css_class (Granite.STYLE_CLASS_CARD);
-            frame.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
-
-            custom_bin.append (frame);
+            custom_bin.append (cropview);
         } catch (Error e) {
             critical (e.message);
             button_change.sensitive = false;
