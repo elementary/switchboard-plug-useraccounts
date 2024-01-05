@@ -18,7 +18,7 @@
 */
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class UserSettingsView : Gtk.Grid {
+    public class UserSettingsView : Gtk.Box {
         public weak Act.User user { get; construct; }
 
         private UserUtils utils;
@@ -38,12 +38,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Switch autologin_switch;
 
         //lock widgets
-        private Gtk.Image full_name_lock;
         private Gtk.Image user_type_lock;
         private Gtk.Image language_lock;
         private Gtk.Image autologin_lock;
         private Gtk.Image password_lock;
-        private Gtk.Image enable_lock;
 
         private Gee.HashMap<string, string>? default_regions;
 
@@ -57,45 +55,65 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             Object (user: user);
         }
 
+        class construct {
+            set_css_name ("simplesettingspage");
+        }
+
         construct {
             utils = new UserUtils (user, this);
             delta_user = new DeltaUser (user);
 
             default_regions = get_default_regions ();
 
-            avatar = new Adw.Avatar (64, user.real_name, true);
+            avatar = new Adw.Avatar (48, user.real_name, true) {
+                margin_top = 6,
+                margin_end = 6,
+                margin_bottom = 6
+            };
 
             var avatar_popover = new AvatarPopover (user, utils);
             avatar_popover.add_css_class (Granite.STYLE_CLASS_MENU);
 
             var avatar_button = new Gtk.MenuButton () {
-                child = avatar,
                 halign = END,
-                has_frame = false,
+                valign = END,
+                icon_name = "edit-symbolic",
                 popover = avatar_popover
             };
+            avatar_button.get_first_child ().add_css_class (Granite.STYLE_CLASS_CIRCULAR);
+
+            var avatar_overlay = new Gtk.Overlay () {
+                child = avatar
+            };
+            avatar_overlay.add_overlay (avatar_button);
 
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
             };
-            full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            full_name_entry.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
             full_name_entry.activate.connect (() => {
                 utils.change_full_name (full_name_entry.get_text ().strip ());
             });
 
-            var user_type_label = new Gtk.Label (_("Account type:")) {
-                halign = Gtk.Align.END
+            user_type_box = new Gtk.ComboBoxText () {
+                hexpand = true
             };
-
-            user_type_box = new Gtk.ComboBoxText ();
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
             user_type_box.changed.connect (() => {
                 utils.change_user_type (user_type_box.active);
             });
 
-            var lang_label = new Gtk.Label (_("Language:")) {
-                halign = Gtk.Align.END
+            var user_type_label = new Granite.HeaderLabel (_("Account Type")) {
+                mnemonic_widget = user_type_box
+            };
+
+            var lang_label = new Granite.HeaderLabel (_("Language"));
+
+            var grid = new Gtk.Grid () {
+                column_spacing = 6,
+                row_spacing = 6,
+                vexpand = true
             };
 
             if (user != get_current_user ()) {
@@ -121,8 +139,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     reveal_child = true
                 };
 
-                attach (language_box, 1, 2);
-                attach (region_revealer, 1, 3);
+                grid.attach (language_box, 0, 3, 2);
+                grid.attach (region_revealer, 0, 4, 2);
 
                 language_box.changed.connect (() => {
                     Gtk.TreeIter? iter;
@@ -165,7 +183,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     tooltip_text = _("Click to switch to Language & Locale Settings")
                 };
 
-                attach (language_button, 1, 2);
+                grid.attach (language_button, 0, 3, 2);
             }
 
             var login_label = new Gtk.Label (_("Log In automatically:")) {
@@ -179,7 +197,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.active));
 
-            password_button = new Gtk.Button.with_label (_("Change Password…"));
+            password_button = new Gtk.Button.with_label (_("Change Password…")) {
+                halign = END
+            };
             password_button.clicked.connect (() => {
                 var permission = get_permission ();
                 if (user == get_current_user () && permission.allowed) {
@@ -203,86 +223,89 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
                 sensitive = false
             };
-            remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            remove_user_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
-
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            user_type_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            user_type_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            language_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            language_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 margin_top = 20,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            autologin_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            autologin_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
+                margin_end = 6,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            password_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic");
-            enable_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            password_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
+                margin_start = 6,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            remove_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+            var header_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                halign = START
+            };
+            header_grid.add_css_class ("header-area");
+            header_grid.attach (avatar_overlay, 0, 0);
+            header_grid.attach (full_name_entry, 1, 0);
 
-            column_spacing = 12;
-            row_spacing = 6;
-            halign = CENTER;
-            margin_top = 24;
-            margin_end = 24;
-            margin_bottom = 24;
-            margin_start = 24;
-            attach (avatar_button, 0, 0);
-            attach (full_name_entry, 1, 0);
-            attach (user_type_label, 0, 1);
-            attach (user_type_box, 1, 1);
-            attach (lang_label, 0, 2);
-            attach (login_label, 0, 4);
-            attach (autologin_switch, 1, 4);
-            attach (password_button, 1, 5);
-            attach (enable_user_button, 1, 6);
-            attach (remove_user_button, 1, 7);
-            attach (full_name_lock, 2, 0);
-            attach (user_type_lock, 2, 1);
-            attach (language_lock, 2, 2, 1, 2);
-            attach (autologin_lock, 2, 4);
-            attach (password_lock, 2, 5);
-            attach (enable_lock, 2, 6);
-            attach (remove_lock, 2, 7);
+            var autologin_box = new Gtk.Box (HORIZONTAL, 6);
+            autologin_box.append (login_label);
+            autologin_box.append (autologin_switch);
+            autologin_box.append (autologin_lock);
+
+            grid.attach (user_type_label, 0, 0);
+            grid.attach (user_type_lock, 1, 0);
+            grid.attach (user_type_box, 0, 1, 2);
+            grid.attach (lang_label, 0, 2);
+            grid.attach (language_lock, 1, 2);
+            grid.attach (autologin_box, 0, 5, 2);
+            grid.add_css_class ("content-area");
+
+            var action_area = new Gtk.Box (HORIZONTAL, 0);
+            action_area.append (remove_user_button);
+            action_area.append (enable_user_button);
+            action_area.append (remove_lock);
+            action_area.append (new Gtk.Grid () { hexpand = true });
+            action_area.append (password_lock);
+            action_area.append (password_button);
+            action_area.add_css_class ("buttonbox");
+
+            margin_top = 6;
+            margin_end = 12;
+            margin_bottom = 12;
+            margin_start = 12;
+            orientation = VERTICAL;
+            append (header_grid);
+            append (grid);
+            append (action_area);
 
             update_ui ();
             update_permission ();
 
             if (get_current_user () == user) {
-                enable_lock.tooltip_text = CURRENT_USER_STRING;
                 user_type_lock.tooltip_text = CURRENT_USER_STRING;
                 remove_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
-                enable_lock.tooltip_text = LAST_ADMIN_STRING;
                 user_type_lock.tooltip_text = LAST_ADMIN_STRING;
                 remove_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
-                enable_lock.set_opacity (0);
-
                 remove_user_button.sensitive = true;
-                remove_lock.set_opacity (0);
+                action_area.remove (remove_lock);
             }
 
             get_permission ().notify["allowed"].connect (update_permission);
@@ -311,7 +334,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             if (current_user || allowed) {
                 full_name_entry.sensitive = true;
-                full_name_lock.set_opacity (0);
+                full_name_entry.secondary_icon_name = "";
                 language_lock.set_opacity (0);
 
                 if (!user_locked) {
@@ -343,6 +366,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             } else {
                 full_name_entry.sensitive = false;
+                full_name_entry.secondary_icon_name = "changes-prevent-symbolic";
+                full_name_entry.secondary_icon_tooltip_text = NO_PERMISSION_STRING;
 
                 if (!current_user) {
                     language_box.sensitive = false;
@@ -380,7 +405,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var user_locked = user.get_locked ();
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
-                enable_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             } else {
                 enable_user_button.label = _("Disable User Account");
                 enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
