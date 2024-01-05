@@ -5,7 +5,7 @@
 
 public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private Gtk.ListBox listbox;
-    private Granite.Widgets.Toast toast;
+    private Granite.Toast toast;
     private Gtk.Stack content;
     private GuestSettingsView guest;
     private Granite.HeaderLabel my_account_label;
@@ -23,7 +23,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         other_accounts_label = new Granite.HeaderLabel (_("Other Accounts"));
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        var scrolled_window = new Gtk.ScrolledWindow () {
             child = listbox,
             hexpand = true,
             vexpand = true,
@@ -33,32 +33,32 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         var add_button_label = new Gtk.Label (_("Create User Account…"));
 
         var add_button_box = new Gtk.Box (HORIZONTAL, 0);
-        add_button_box.add (new Gtk.Image.from_icon_name ("list-add-symbolic", BUTTON));
-        add_button_box.add (add_button_label);
+        add_button_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+        add_button_box.append (add_button_label);
 
         var button_add = new Gtk.Button () {
             child = add_button_box,
+            has_frame = false,
             margin_top = 3,
             margin_bottom = 3
         };
-        button_add.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         add_button_label.mnemonic_widget = button_add;
 
         var actionbar = new Gtk.ActionBar ();
-        actionbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        actionbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         actionbar.pack_start (button_add);
 
         var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.add (scrolled_window);
-        sidebar.add (actionbar);
+        sidebar.append (scrolled_window);
+        sidebar.append (actionbar);
 
         guest = new GuestSettingsView ();
 
         content = new Gtk.Stack ();
         content.add_named (guest, "guest_session");
 
-        toast = new Granite.Widgets.Toast ("");
+        toast = new Granite.Toast ("");
         toast.set_default_action (_("Undo"));
 
         var overlay = new Gtk.Overlay () {
@@ -67,33 +67,36 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         overlay.add_overlay (toast);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
-            position = 240
+            start_child = sidebar,
+            end_child = overlay,
+            position = 240,
+            resize_start_child = false,
+            shrink_start_child = false,
+            shrink_end_child = false
         };
-        paned.pack1 (sidebar, false, false);
-        paned.pack2 (overlay, true, false);
 
-        add (paned);
+        append (paned);
 
         //only build the guest session list entry / row when lightDM is the display manager
         if (get_display_manager () == "lightdm") {
-            var avatar = new Hdy.Avatar (32, null, false);
+            var avatar = new Adw.Avatar (32, null, false);
 
             // We want to use the user's accent, not a random color
-            unowned var avatar_context = avatar.get_style_context ();
-            avatar_context.remove_class ("color1");
-            avatar_context.remove_class ("color2");
-            avatar_context.remove_class ("color3");
-            avatar_context.remove_class ("color4");
-            avatar_context.remove_class ("color5");
-            avatar_context.remove_class ("color6");
-            avatar_context.remove_class ("color7");
-            avatar_context.remove_class ("color8");
-            avatar_context.remove_class ("color9");
-            avatar_context.remove_class ("color10");
-            avatar_context.remove_class ("color11");
-            avatar_context.remove_class ("color12");
-            avatar_context.remove_class ("color13");
-            avatar_context.remove_class ("color14");
+            unowned var avatar_context = avatar.get_first_child ();
+            avatar_context.remove_css_class ("color1");
+            avatar_context.remove_css_class ("color2");
+            avatar_context.remove_css_class ("color3");
+            avatar_context.remove_css_class ("color4");
+            avatar_context.remove_css_class ("color5");
+            avatar_context.remove_css_class ("color6");
+            avatar_context.remove_css_class ("color7");
+            avatar_context.remove_css_class ("color8");
+            avatar_context.remove_css_class ("color9");
+            avatar_context.remove_css_class ("color10");
+            avatar_context.remove_css_class ("color11");
+            avatar_context.remove_css_class ("color12");
+            avatar_context.remove_css_class ("color13");
+            avatar_context.remove_css_class ("color14");
 
             var full_name_label = new Gtk.Label (_("Guest Session")) {
                 halign = START
@@ -147,7 +150,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
                         ) {
                             badge_icon = new ThemedIcon ("dialog-error"),
                             modal = true,
-                            transient_for = (Gtk.Window) get_toplevel ()
+                            transient_for = (Gtk.Window) get_root ()
                         };
                         message_dialog.show_error_details (e.message);
                         message_dialog.response.connect (message_dialog.destroy);
@@ -158,13 +161,13 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
                 }
             }
 
-            var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_toplevel ());
+            var new_user = new SwitchboardPlugUserAccounts.NewUserDialog ((Gtk.Window) this.get_root ());
             new_user.present ();
         });
 
         get_permission ().notify["allowed"].connect (() => {
             if (!get_permission ().allowed) {
-                toast.reveal_child = false;
+                toast.withdraw ();
             }
         });
 
@@ -183,7 +186,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             remove_user_settings (user);
 
             if (get_removal_list ().last () == null) {
-                toast.reveal_child = false;
+                toast.withdraw ();
             }
         });
 
@@ -197,7 +200,6 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         //auto select current user row in listbox widget
         listbox.select_row (listbox.get_row_at_index (0));
-        show_all ();
     }
 
     private void remove_user () {
@@ -214,7 +216,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
                         Gtk.ButtonsType.CLOSE
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     message_dialog.show_error_details (e.message);
                     message_dialog.response.connect (message_dialog.destroy);
@@ -261,8 +263,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     }
 
     private void update_listbox () {
-        foreach (unowned var useritem in listbox.get_children ()) {
-            listbox.remove (useritem);
+        while (listbox.get_row_at_index (0) != null) {
+            listbox.remove (listbox.get_row_at_index (0));
         }
 
         listbox.insert (new UserItem (get_current_user ()), 0);
@@ -277,8 +279,6 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         if (get_display_manager () == "lightdm") {
             listbox.insert (guest_session_row, pos);
         }
-
-        show_all ();
     }
 
     private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {

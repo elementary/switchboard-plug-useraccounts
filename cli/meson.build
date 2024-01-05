@@ -7,5 +7,5 @@ executable(
         posix_dep
     ],
     install : true,
-    install_dir : join_paths(switchboard_plugsdir, 'system', 'pantheon-useraccounts')
+    install_dir : switchboard_plugsdir / 'system' / 'useraccounts'
 )

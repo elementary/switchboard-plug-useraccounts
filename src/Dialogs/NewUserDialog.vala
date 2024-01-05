@@ -14,57 +14,60 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     }
 
     construct {
-        var accounttype_label = new Granite.HeaderLabel (_("Account Type"));
-
         var accounttype_combobox = new Gtk.ComboBoxText ();
         accounttype_combobox.append_text (_("Standard User"));
         accounttype_combobox.append_text (_("Administrator"));
         accounttype_combobox.set_active (0);
 
-        var realname_label = new Granite.HeaderLabel (_("Full Name"));
+        var accounttype_label = new Granite.HeaderLabel (_("Account Type")) {
+            mnemonic_widget = accounttype_combobox
+        };
 
         var realname_entry = new Gtk.Entry () {
             hexpand = true,
             input_purpose = NAME
         };
 
-        var username_label = new Granite.HeaderLabel (_("Username"));
+        var realname_label = new Granite.HeaderLabel (_("Full Name")) {
+            mnemonic_widget = realname_entry
+        };
 
         username_entry = new Granite.ValidatedEntry ();
 
+        var username_label = new Granite.HeaderLabel (_("Username")) {
+            mnemonic_widget = username_entry
+        };
+
         username_error_revealer = new ErrorRevealer (".");
-        username_error_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+        username_error_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
         pw_editor = new Widgets.PasswordEditor ();
 
         var form_box = new Gtk.Box (VERTICAL, 3) {
-            margin_end = 12,
-            margin_start = 12,
             valign = START,
             vexpand = true
         };
-        form_box.add (accounttype_label);
-        form_box.add (accounttype_combobox);
-        form_box.add (new ErrorRevealer ("."));
-        form_box.add (realname_label);
-        form_box.add (realname_entry);
-        form_box.add (new ErrorRevealer ("."));
-        form_box.add (username_label);
-        form_box.add (username_entry);
-        form_box.add (username_error_revealer);
-        form_box.add (pw_editor);
-        form_box.show_all ();
+        form_box.append (accounttype_label);
+        form_box.append (accounttype_combobox);
+        form_box.append (new ErrorRevealer ("."));
+        form_box.append (realname_label);
+        form_box.append (realname_entry);
+        form_box.append (new ErrorRevealer ("."));
+        form_box.append (username_label);
+        form_box.append (username_entry);
+        form_box.append (username_error_revealer);
+        form_box.append (pw_editor);
 
         modal = true;
         default_width = 350;
-        get_content_area ().add (form_box);
+        get_content_area ().append (form_box);
 
         var cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
         create_button = (Gtk.Button) add_button (_("Create User"), Gtk.ResponseType.OK);
-        create_button.can_default = true;
+        create_button.receives_default = true;
         create_button.sensitive = false;
-        create_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        create_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         realname_entry.changed.connect (() => {
             var username = gen_username (realname_entry.text);
@@ -135,7 +138,7 @@ public class SwitchboardPlugUserAccounts.NewUserDialog : Granite.Dialog {
     private void update_create_button () {
         if (username_entry.is_valid && pw_editor.is_valid) {
             create_button.sensitive = true;
-            create_button.has_default = true;
+            default_widget = create_button;
         } else {
             create_button.sensitive = false;
         }

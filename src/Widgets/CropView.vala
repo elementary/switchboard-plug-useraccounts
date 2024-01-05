@@ -33,12 +33,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
         { 0, 0 }    // left midpoint;
     };
 
-    /**
-     * current drag operation, identified by the GdkCursorType.
-     * ARROW is the default which means no operation. FLEUR
-     * corresponds to a move operation.
-     */
-    private Gdk.CursorType current_operation = Gdk.CursorType.ARROW;
+    private string cursor_name = "auto";
 
     /**
      * holds a temporary value for resizing and moving the selected area (x coordinate)
@@ -75,8 +70,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
      */
     private const int RADIUS = 12;
 
-    private Gtk.EventControllerMotion motion_event_controller;
-    private Gtk.GestureMultiPress click_gesture;
+    private Gtk.GestureClick click_gesture;
 
     public CropView (Gdk.Pixbuf pixbuf, int pixel_size) {
         Object (
@@ -102,14 +96,17 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
         width_request = int.min (pixel_size, pixel_size * pixbuf.get_width () / pixbuf.get_height ());
         height_request = int.min (pixel_size, pixel_size * pixbuf.get_height () / pixbuf.get_width ());
 
-        add_events (Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_MOTION_MASK);
-
-        click_gesture = new Gtk.GestureMultiPress (this);
+        click_gesture = new Gtk.GestureClick ();
         click_gesture.pressed.connect (gesture_press_event);
         click_gesture.released.connect (gesture_release_event);
 
-        motion_event_controller = new Gtk.EventControllerMotion (this);
+        var motion_event_controller = new Gtk.EventControllerMotion ();
         motion_event_controller.motion.connect (motion_event);
+
+        add_controller (click_gesture);
+        add_controller (motion_event_controller);
+
+        set_draw_func (draw_func);
     }
 
     /**
@@ -120,13 +117,14 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
     }
 
     private void gesture_press_event (int n_press, double x, double y) {
+        click_gesture.set_state (CLAIMED);
         mouse_button_down = true;
         temp_x = (int) x;
         temp_y = (int) y;
     }
 
     private void gesture_release_event (int n_press, double x, double y) {
-        current_operation = Gdk.CursorType.ARROW;
+        cursor_name = "auto";
         mouse_button_down = false;
         apply_cursor ();
     }
@@ -135,20 +133,20 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
         if (!mouse_button_down) {
             bool determined_cursortype = false;
 
-            const Gdk.CursorType[] CURSOR = {
-                Gdk.CursorType.TOP_LEFT_CORNER,
-                Gdk.CursorType.TOP_SIDE,
-                Gdk.CursorType.TOP_RIGHT_CORNER,
-                Gdk.CursorType.RIGHT_SIDE,
-                Gdk.CursorType.BOTTOM_RIGHT_CORNER,
-                Gdk.CursorType.BOTTOM_SIDE,
-                Gdk.CursorType.BOTTOM_LEFT_CORNER,
-                Gdk.CursorType.LEFT_SIDE
+            const string[] CURSOR = {
+                "nw-resize",
+                "n-resize",
+                "ne-resize",
+                "e-resize",
+                "se-resize",
+                "s-resize",
+                "sw-resize",
+                "w-resize"
             };
 
             for (var i = 0; i < 8; i++) {
                 if (in_quad (pos[i, 0] - RADIUS, pos[i, 1] - RADIUS, RADIUS * 2, RADIUS * 2, (int) event_x, (int) event_y)) {
-                    current_operation = CURSOR[i];
+                    cursor_name = CURSOR[i];
                     determined_cursortype = true;
                     break;
                 }
@@ -160,16 +158,16 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
                              (int) Math.floor (area.width * current_scale),
                              (int) Math.floor (area.height * current_scale),
                              (int) (event_x - offset_x), (int) (event_y - offset_y)))
-                    current_operation = Gdk.CursorType.FLEUR;
+                    cursor_name = "grab";
                 else
-                    current_operation = Gdk.CursorType.ARROW;
+                    cursor_name = "auto";
             }
 
             apply_cursor ();
             return;
         } else {
-            switch (current_operation) {
-                case Gdk.CursorType.FLEUR:
+            switch (cursor_name) {
+                case "grab":
                     int motion_x = (int) (area.x + ((int) event_x - temp_x) / current_scale);
                     int motion_y = (int) (area.y + ((int) event_y - temp_y) / current_scale);
 
@@ -187,11 +185,11 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
 
                     break;
 
-                case Gdk.CursorType.TOP_RIGHT_CORNER:
-                case Gdk.CursorType.TOP_LEFT_CORNER:
+                case "ne-resize":
+                case "nw-resize":
                     int motion_width = 0;
                     int motion_height = 0;
-                    if (current_operation == Gdk.CursorType.TOP_RIGHT_CORNER) {
+                    if (cursor_name == "ne-resize") {
                         motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
                         motion_height = (int) (area.height - ((int) event_y - temp_y) / current_scale);
                     }
@@ -239,11 +237,11 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
 
                     break;
 
-                case Gdk.CursorType.BOTTOM_RIGHT_CORNER:
-                case Gdk.CursorType.BOTTOM_LEFT_CORNER:
+                case "se-resize":
+                case "sw-resize":
                     int motion_width = 0;
                     int motion_height = 0;
-                    if (current_operation == Gdk.CursorType.BOTTOM_RIGHT_CORNER) {
+                    if (cursor_name == "se-resize") {
                         motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
                         motion_height = (int) (area.height + ((int) event_y - temp_y) / current_scale);
                     }
@@ -291,10 +289,10 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
 
                     break;
 
-                case Gdk.CursorType.TOP_SIDE:
-                case Gdk.CursorType.BOTTOM_SIDE:
+                case "n-resize":
+                case "s-resize":
                     int motion_height = 0;
-                    if (current_operation == Gdk.CursorType.BOTTOM_SIDE)
+                    if (cursor_name == "s-resize")
                         motion_height = (int) (area.height + ((int) event_y - temp_y) / current_scale);
                     else
                         motion_height = (int) (area.height - ((int) event_y - temp_y) / current_scale);
@@ -318,10 +316,10 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
 
                     break;
 
-                case Gdk.CursorType.RIGHT_SIDE:
-                case Gdk.CursorType.LEFT_SIDE:
+                case "e-resize":
+                case "w-resize":
                     int motion_width = 0;
-                    if (current_operation == Gdk.CursorType.RIGHT_SIDE)
+                    if (cursor_name == "e-resize")
                         motion_width = (int) (area.width + ((int) event_x - temp_x) / current_scale);
                     else
                         motion_width = (int) (area.width - ((int) event_x - temp_x) / current_scale);
@@ -360,7 +358,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
         }
     }
 
-    public override bool draw (Cairo.Context cr) {
+    private void draw_func (Gtk.DrawingArea drawing_area, Cairo.Context cr, int width, int height) {
         Gtk.Allocation alloc;
 
         get_allocation (out alloc);
@@ -417,8 +415,6 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
         cr.stroke ();
 
         current_scale = scale;
-
-        return true;
     }
 
     private bool in_quad (int qx, int qy, int qw, int qh, int x, int y) {
@@ -426,7 +422,7 @@ public class SwitchboardPlugUserAccounts.Widgets.CropView : Gtk.DrawingArea {
     }
 
     private void apply_cursor () {
-        get_window ().cursor = new Gdk.Cursor.for_display (Gdk.Display.get_default (), current_operation);
+        get_root ().get_surface ().cursor = new Gdk.Cursor.from_name (cursor_name, null);
     }
 
     private int x_in_pixbuf (int ax) {

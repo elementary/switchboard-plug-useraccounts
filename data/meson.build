@@ -6,17 +6,17 @@ gettext_declaration = configure_file(
 
 i18n.merge_file(
     input: gettext_declaration,
-    output: 'io.elementary.switchboard.useraccounts.policy',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    output: gettext_name + '.policy',
+    po_dir: meson.source_root() / 'po' / 'extra',
     install: true,
     install_dir: polkit_actiondir
 )
 
 i18n.merge_file(
-    input: 'useraccounts.appdata.xml.in',
-    output: 'io.elementary.switchboard.useraccounts.appdata.xml',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    input: 'useraccounts.metainfo.xml.in',
+    output: gettext_name + '.metainfo.xml',
+    po_dir: meson.source_root() / 'po' / 'extra',
     type: 'xml',
     install: true,
-    install_dir: join_paths(datadir, 'metainfo'),
+    install_dir: datadir / 'metainfo',
 )

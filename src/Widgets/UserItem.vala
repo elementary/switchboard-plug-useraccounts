@@ -19,7 +19,7 @@
 
 public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
     private Gtk.Revealer description_revealer;
-    private Hdy.Avatar avatar;
+    private Adw.Avatar avatar;
     private Gtk.Label full_name_label;
     private Gtk.Label username_label;
     private Gtk.Revealer lock_revealer;
@@ -35,22 +35,22 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
             halign = START,
             valign = END
         };
-        full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        full_name_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
         username_label = new Gtk.Label ("") {
             halign = START,
             valign = START,
             ellipsize = END
         };
-        username_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        username_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        avatar = new Hdy.Avatar (32, user.real_name, true) {
+        avatar = new Adw.Avatar (32, user.real_name, true) {
             margin_top = 6,
             margin_end = 12,
             margin_bottom = 6
         };
 
-        var lock_image = new Gtk.Image.from_icon_name ("locked", Gtk.IconSize.LARGE_TOOLBAR) {
+        var lock_image = new Gtk.Image.from_icon_name ("locked") {
             halign = END,
             valign = END,
             pixel_size = 24
@@ -86,10 +86,10 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
 
     private void update () {
         var user_icon_file = File.new_for_path (user.get_icon_file ());
-        if (user_icon_file.query_exists ()) {
-            avatar.loadable_icon = new FileIcon (user_icon_file);
-        } else {
-            avatar.loadable_icon = null;
+        try {
+            avatar.custom_image = Gdk.Texture.from_file (user_icon_file );
+        } catch (Error e) {
+            avatar.custom_image = null;
         }
 
         full_name_label.label = user.real_name;

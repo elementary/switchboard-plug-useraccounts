@@ -32,10 +32,10 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.Sim
             message_type = WARNING,
             revealed = false
         };
-        infobar_reboot.get_content_area ().add (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
-        infobar_reboot.get_style_context ().add_class (Gtk.STYLE_CLASS_FRAME);
+        infobar_reboot.add_child (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
+        infobar_reboot.add_css_class (Granite.STYLE_CLASS_FRAME);
 
-        action_area.add (infobar_reboot);
+        action_area.append (infobar_reboot);
 
         status_switch.active = get_guest_session_state ("show");
 
@@ -96,7 +96,7 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.Sim
                     ) {
                         badge_icon = new ThemedIcon ("dialog-error"),
                         modal = true,
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
                     message_dialog.show_error_details (e.message);
                     message_dialog.response.connect (message_dialog.destroy);

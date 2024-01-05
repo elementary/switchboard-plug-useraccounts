@@ -49,6 +49,6 @@ private class SwitchboardPlugUserAccounts.ErrorRevealer : Gtk.Box {
         bind_property ("reveal-child", revealer, "reveal-child", SYNC_CREATE);
 
         orientation = VERTICAL;
-        add (revealer);
+        append (revealer);
     }
 }

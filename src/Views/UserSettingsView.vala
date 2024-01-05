@@ -27,7 +27,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore language_store;
         private Gtk.ListStore region_store;
 
-        private Hdy.Avatar avatar;
+        private Adw.Avatar avatar;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
@@ -54,13 +54,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
-            Object (
-                column_spacing: 12,
-                halign: Gtk.Align.CENTER,
-                margin: 24,
-                row_spacing: 6,
-                user: user
-            );
+            Object (user: user);
         }
 
         construct {
@@ -69,16 +63,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
-            avatar = new Hdy.Avatar (64, user.real_name, true);
+            avatar = new Adw.Avatar (64, user.real_name, true);
 
             var avatar_popover = new AvatarPopover (user, utils);
+            avatar_popover.add_css_class (Granite.STYLE_CLASS_MENU);
 
             var avatar_button = new Gtk.MenuButton () {
                 child = avatar,
                 halign = END,
+                has_frame = false,
                 popover = avatar_popover
             };
-            avatar_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
@@ -121,10 +116,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 region_box.add_attribute (renderer, "text", 1);
 
                 var region_revealer = new Gtk.Revealer () {
+                    child = region_box,
                     transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
                     reveal_child = true
                 };
-                region_revealer.add (region_box);
 
                 attach (language_box, 1, 2);
                 attach (region_revealer, 1, 3);
@@ -195,7 +190,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     }
                 }
 
-                var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_toplevel (), user);
+                var change_password_dialog = new ChangePasswordDialog ((Gtk.Window) this.get_root (), user);
                 change_password_dialog.present ();
                 change_password_dialog.request_password_change.connect (change_password);
             });
@@ -208,43 +203,51 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
                 sensitive = false
             };
-            remove_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            full_name_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            user_type_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            user_type_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            language_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            language_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 margin_top = 20,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            autologin_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            autologin_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            password_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            password_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            enable_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic");
+            enable_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
-            remove_lock.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+
+            column_spacing = 12;
+            row_spacing = 6;
+            halign = CENTER;
+            margin_top = 24;
+            margin_end = 24;
+            margin_bottom = 24;
+            margin_start = 24;
             attach (avatar_button, 0, 0);
             attach (full_name_entry, 1, 0);
             attach (user_type_label, 0, 1);
@@ -355,11 +358,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             // Checking delta_user icon file doesn't seem to always update correctly
-            var user_icon_file = File.new_for_path (user.get_icon_file ());
-            if (user_icon_file.query_exists ()) {
-                avatar.loadable_icon = new FileIcon (user_icon_file);
-            } else {
-                avatar.loadable_icon = null;
+            try {
+                avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
+            } catch (Error e) {
+                critical ("couldn't load avatar");
             }
 
             if (delta_user.account_type != user.get_account_type ()) {
@@ -378,10 +380,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var user_locked = user.get_locked ();
             if (user_locked) {
                 enable_user_button.label = _("Enable User Account");
-                enable_user_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             } else {
                 enable_user_button.label = _("Disable User Account");
-                enable_user_button.get_style_context ().remove_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {
@@ -389,7 +391,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             }
 
             delta_user.update ();
-            show_all ();
         }
 
         public void update_real_name () {
@@ -549,9 +550,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                                 new ThemedIcon ("dialog-password")
                             ) {
                                 badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
+                                transient_for = (Gtk.Window) get_root ()
                             };
-                            dialog.show_all ();
+                            dialog.present ();
                             dialog.response.connect (dialog.destroy);
                         } else {
                             debug ("Setting new password for %s (user context)".printf (user.get_user_name ()));

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.useraccounts</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.useraccounts</id>
+  <extends>io.elementary.settings</extends>
   <name>User Accounts Settings</name>
   <summary>Manage account permissions and configure user names, passwords, and photos</summary>
   <icon type="stock">system-users</icon>
-  <translation type="gettext">useraccounts-plug</translation>
+  <translation type="gettext">io.elementary.settings.useraccounts</translation>
   <releases>
     <release version="2.4.3" date="2022-10-20" urgency="medium">
       <description>
@@ -86,7 +86,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-useraccounts/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-useraccounts/2.4.3/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>

@@ -39,7 +39,7 @@ namespace SwitchboardPlugUserAccounts {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts", null);
             Object (category: Category.SYSTEM,
-                code_name: "io.elementary.switchboard.useraccounts",
+                code_name: "io.elementary.settings.useraccounts",
                 display_name: _("User Accounts"),
                 description: _("Manage account permissions and configure user names, passwords, and photos"),
                 icon: "system-users",
@@ -53,36 +53,29 @@ namespace SwitchboardPlugUserAccounts {
                 return main_grid;
             }
 
-            infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.INFO;
-
             lock_button = new Gtk.LockButton (get_permission ());
 
-            var area = infobar.get_action_area () as Gtk.Container;
-            area.add (lock_button);
-
-            var content = infobar.get_content_area ();
-            content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+            infobar = new Gtk.InfoBar () {
+                message_type = INFO
+            };
+            infobar.add_action_widget (lock_button, 0);
+            infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
 
             main_view = new Widgets.MainView ();
 
             main_grid = new Gtk.Grid ();
             main_grid.attach (infobar, 0, 2, 1, 1);
             main_grid.attach (main_view, 0, 3, 1, 1);
-            main_grid.show_all ();
 
             get_permission ().notify["allowed"].connect (() => {
-                infobar.visible = !get_permission ().allowed;
+                infobar.revealed = !get_permission ().allowed;
             });
 
             return main_grid;
         }
 
         public override void shown () {
-            if (!get_permission ().allowed) {
-                infobar.show_all ();
-                infobar.visible = true;
-            }
+            infobar.revealed = !get_permission ().allowed;
         }
 
         public override void hidden () {

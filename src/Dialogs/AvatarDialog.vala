@@ -36,7 +36,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     construct {
         var button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
-        button_change.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        button_change.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         response.connect (on_response);
 
@@ -44,21 +44,14 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
             var pixbuf = new Gdk.Pixbuf.from_file (pixbuf_path).apply_embedded_orientation ();
 
             cropview = new Widgets.CropView (pixbuf, 400);
+            cropview.add_css_class (Granite.STYLE_CLASS_CARD);
+            cropview.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
 
-            var frame = new Gtk.Grid ();
-            frame.add (cropview);
-
-            var frame_context = frame.get_style_context ();
-            frame_context.add_class (Granite.STYLE_CLASS_CARD);
-            frame_context.add_class (Granite.STYLE_CLASS_CHECKERBOARD);
-
-            custom_bin.add (frame);
+            custom_bin.append (cropview);
         } catch (Error e) {
             critical (e.message);
-            button_change.set_sensitive (false);
+            button_change.sensitive = false;
         }
-
-        show_all ();
     }
 
     private void on_response (Gtk.Dialog source, int response_id) {
