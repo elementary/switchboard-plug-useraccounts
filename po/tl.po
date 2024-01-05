@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,41 +27,41 @@ msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/Plug.vala:115
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Avatar"
 msgstr "Baguhin ang Avatar"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Full name"
 msgstr "Buong Pangalan"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:110
 #, fuzzy
 msgid "Account type"
 msgstr "Uri ng Account:"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:111
 #, fuzzy
 msgid "Language"
 msgstr "Wika:"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Awtomatikong mag-log in :"
 
-#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Palitan ang Password"
 
-#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:98
+#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr ""
 
@@ -89,42 +89,42 @@ msgstr "Pindutin para ma-authenticate"
 msgid "Authentication failed"
 msgstr "Hindi mai-authenticate"
 
-#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:87
 msgid "Cancel"
 msgstr "Ikansela"
 
-#: src/Dialogs/NewUserDialog.vala:17
-#, fuzzy
-msgid "Account Type"
-msgstr "Uri ng Account:"
-
-#: src/Dialogs/NewUserDialog.vala:20
+#: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
 msgstr "Standard na User"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Tagapangasiwa"
 
-#: src/Dialogs/NewUserDialog.vala:24
+#: src/Dialogs/NewUserDialog.vala:22
+#, fuzzy
+msgid "Account Type"
+msgstr "Uri ng Account:"
+
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Full Name"
 msgstr "Buong Pangalan"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:37
 msgid "Username"
 msgstr "Username"
 
-#: src/Dialogs/NewUserDialog.vala:64
+#: src/Dialogs/NewUserDialog.vala:67
 msgid "Create User"
 msgstr "Gumawa ng User"
 
-#: src/Dialogs/NewUserDialog.vala:124
+#: src/Dialogs/NewUserDialog.vala:127
 msgid "Username is already taken"
 msgstr "May gumagamit na ng username na 'to"
 
-#: src/Dialogs/NewUserDialog.vala:126
+#: src/Dialogs/NewUserDialog.vala:129
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Mga lower case letters, mga numero at walang spaces ang pupwede"
@@ -139,7 +139,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
 msgid "Log In automatically:"
 msgstr "Awtomatikong mag-log in :"
 
@@ -148,8 +148,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
-#: src/Views/MainView.vala:211
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
+#: src/Views/MainView.vala:213
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -176,15 +176,15 @@ msgstr "Gumawa ng user account"
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:144
+#: src/Views/MainView.vala:147
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:212
+#: src/Views/MainView.vala:214
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:234
+#: src/Views/MainView.vala:236
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -210,63 +210,63 @@ msgstr ""
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:86
 msgid "Account type:"
 msgstr "Uri ng Account:"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:91
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:102
+#: src/Views/UserSettingsView.vala:97
 msgid "Language:"
 msgstr "Wika:"
 
-#: src/Views/UserSettingsView.vala:170
+#: src/Views/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 
-#: src/Views/UserSettingsView.vala:187
+#: src/Views/UserSettingsView.vala:182
 #, fuzzy
 msgid "Change Password…"
 msgstr "Palitan ang Password"
 
-#: src/Views/UserSettingsView.vala:208
+#: src/Views/UserSettingsView.vala:203
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "Mga User Account"
 
-#: src/Views/UserSettingsView.vala:380
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Paganahin ang User Account"
 
-#: src/Views/UserSettingsView.vala:383
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Huwag paganahin ang  User account"
 
-#: src/Views/UserSettingsView.vala:547
+#: src/Views/UserSettingsView.vala:548
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:33
+#: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
 msgstr "Alisin"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:45
 msgid "Set from File…"
 msgstr "Magtalaga mula sa File..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Images"
 msgstr "Mga Larawan"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:83
 msgid "Select an image"
 msgstr "Pumili ng larawan"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:86
 msgid "Open"
 msgstr "Magbukas"
 
@@ -275,17 +275,16 @@ msgstr "Magbukas"
 msgid "Choose a Password"
 msgstr "Palitan ang Password"
 
-#. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:55
+#: src/Widgets/PasswordEditor.vala:60
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Tiyakin ang Bagong Password"
 
-#: src/Widgets/PasswordEditor.vala:64
+#: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
 msgstr "Ipakita ang mga password"
 
-#: src/Widgets/PasswordEditor.vala:144
+#: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Hindi nagtugma ang mga password"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2018-05-28 09:13+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -29,41 +29,41 @@ msgstr ""
 "Gestionați permisiunile contului și configurați numele de utilizator, "
 "parolele și fotografiile"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatarul"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Full name"
 msgstr "Numele complet"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:110
 #, fuzzy
 msgid "Account type"
 msgstr "Tipul de cont:"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:111
 #, fuzzy
 msgid "Language"
 msgstr "Limba:"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentifică-te automat:"
 
-#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Schimbă Parola"
 
-#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:98
+#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Sesiune de invitat"
 
@@ -91,41 +91,41 @@ msgstr "Apăsați pentru autentificare"
 msgid "Authentication failed"
 msgstr "Autentificare eșuată"
 
-#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:87
 msgid "Cancel"
 msgstr "Anulare"
 
-#: src/Dialogs/NewUserDialog.vala:17
-msgid "Account Type"
-msgstr "Tipul de cont"
-
-#: src/Dialogs/NewUserDialog.vala:20
+#: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
 msgstr "Utilizator standard"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/Dialogs/NewUserDialog.vala:24
+#: src/Dialogs/NewUserDialog.vala:22
+msgid "Account Type"
+msgstr "Tipul de cont"
+
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Full Name"
 msgstr "Numele complet"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:37
 msgid "Username"
 msgstr "Nume de utilizator"
 
-#: src/Dialogs/NewUserDialog.vala:64
+#: src/Dialogs/NewUserDialog.vala:67
 msgid "Create User"
 msgstr "Crează utilizator"
 
-#: src/Dialogs/NewUserDialog.vala:124
+#: src/Dialogs/NewUserDialog.vala:127
 msgid "Username is already taken"
 msgstr "Numele este deja folosit"
 
-#: src/Dialogs/NewUserDialog.vala:126
+#: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Numele de utilizator poate conține numai litere mici și numere, fără spații"
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "După ce se deconectează, toate setările și datele vor fi șterse."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
 msgid "Log In automatically:"
 msgstr "Autentifică-te automat:"
 
@@ -153,8 +153,8 @@ msgstr ""
 "Modificările sesiuni de invitați nu vor avea efect până când nu reporniți "
 "sistemul"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
-#: src/Views/MainView.vala:211
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
+#: src/Views/MainView.vala:213
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -181,15 +181,15 @@ msgstr "Creați un cont de utilizator"
 msgid "Undo"
 msgstr "Anula"
 
-#: src/Views/MainView.vala:144
+#: src/Views/MainView.vala:147
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:212
+#: src/Views/MainView.vala:214
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:234
+#: src/Views/MainView.vala:236
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -215,62 +215,62 @@ msgstr ""
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nu puteți elimina privilegiile ultimului administrator"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:86
 msgid "Account type:"
 msgstr "Tipul de cont:"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:91
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:102
+#: src/Views/UserSettingsView.vala:97
 msgid "Language:"
 msgstr "Limba:"
 
-#: src/Views/UserSettingsView.vala:170
+#: src/Views/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Faceți clic pentru a comuta la Setări de limbă și de localizare"
 
-#: src/Views/UserSettingsView.vala:187
+#: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
 msgstr "Schimbați Parola…"
 
-#: src/Views/UserSettingsView.vala:208
+#: src/Views/UserSettingsView.vala:203
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "Conturi de utilizator"
 
-#: src/Views/UserSettingsView.vala:380
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Activați Contul de utilizator"
 
-#: src/Views/UserSettingsView.vala:383
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Dezactivați contul de utilizator"
 
-#: src/Views/UserSettingsView.vala:547
+#: src/Views/UserSettingsView.vala:548
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:33
+#: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
 msgstr "Șterge"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:45
 msgid "Set from File…"
 msgstr "Setați din Fișier …"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Images"
 msgstr "Imagini"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:83
 msgid "Select an image"
 msgstr "Selectați o imagine"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:86
 msgid "Open"
 msgstr "Deschide"
 
@@ -278,16 +278,15 @@ msgstr "Deschide"
 msgid "Choose a Password"
 msgstr "Alege o parolă"
 
-#. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:55
+#: src/Widgets/PasswordEditor.vala:60
 msgid "Confirm Password"
 msgstr "Confirmă parola"
 
-#: src/Widgets/PasswordEditor.vala:64
+#: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
 msgstr "Afișați parole"
 
-#: src/Widgets/PasswordEditor.vala:144
+#: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Parolele nu se potrivesc"
 

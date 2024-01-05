@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,36 +32,36 @@ msgstr ""
 "Керування дозволами облікового запису та налаштування імен користувачів, "
 "паролів та світлин"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:108
 msgid "Avatar"
 msgstr "Аватар"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:109
 msgid "Full name"
 msgstr "Повне ім'я"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:110
 msgid "Account type"
 msgstr "Тип облікового запису"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:111
 msgid "Language"
 msgstr "Мова"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:112
 msgid "Log in automatically"
 msgstr "Входити автоматично"
 
-#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Змінити пароль"
 
-#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:98
+#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Гостьовий сеанс"
 
@@ -89,41 +89,41 @@ msgstr "Натисніть для автентифікації"
 msgid "Authentication failed"
 msgstr "Не вдалося автентифікувати"
 
-#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:87
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Dialogs/NewUserDialog.vala:17
-msgid "Account Type"
-msgstr "Тип облікового запису"
-
-#: src/Dialogs/NewUserDialog.vala:20
+#: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
 msgstr "Звичайний користувач"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Адміністратор"
 
-#: src/Dialogs/NewUserDialog.vala:24
+#: src/Dialogs/NewUserDialog.vala:22
+msgid "Account Type"
+msgstr "Тип облікового запису"
+
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Full Name"
 msgstr "Повне ім'я"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:37
 msgid "Username"
 msgstr "Ім'я користувача"
 
-#: src/Dialogs/NewUserDialog.vala:64
+#: src/Dialogs/NewUserDialog.vala:67
 msgid "Create User"
 msgstr "Створити користувача"
 
-#: src/Dialogs/NewUserDialog.vala:124
+#: src/Dialogs/NewUserDialog.vala:127
 msgid "Username is already taken"
 msgstr "Ім’я користувача вже зайнято"
 
-#: src/Dialogs/NewUserDialog.vala:126
+#: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Ім'я користувача може містити лише малі літери та цифри, без пробілів"
 
@@ -140,7 +140,7 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Як тільки сеанс буде завершено всі дані та налаштування будуть вилучені."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
 msgid "Log In automatically:"
 msgstr "Входити автоматично:"
 
@@ -151,8 +151,8 @@ msgstr ""
 "Зміни налаштувань гостьового сеансу набудуть чинності після перезапуску "
 "системи"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
-#: src/Views/MainView.vala:211
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
+#: src/Views/MainView.vala:213
 msgid "Unable to acquire permission"
 msgstr "Не вдалося отримати дозвіл"
 
@@ -179,15 +179,15 @@ msgstr "Створити обліковий запис користувача…
 msgid "Undo"
 msgstr "Скасувати"
 
-#: src/Views/MainView.vala:144
+#: src/Views/MainView.vala:147
 msgid "A new account cannot be created without the required system permission."
 msgstr "Неможливо створити новий обліковий запис без системного дозволу."
 
-#: src/Views/MainView.vala:212
+#: src/Views/MainView.vala:214
 msgid "An account cannot be removed without the required system permission."
 msgstr "Обліковий запис не можна вилучити без обов'язкового дозволу системи."
 
-#: src/Views/MainView.vala:234
+#: src/Views/MainView.vala:236
 #, c-format
 msgid "Removed “%s”"
 msgstr "Вилучено «%s»"
@@ -212,60 +212,60 @@ msgstr "Ви не можете змінити це для активного к�
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Ви не можете вилучити останнього адміністратора"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:86
 msgid "Account type:"
 msgstr "Тип облікового запису:"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:91
 msgid "Standard"
 msgstr "Стандартний"
 
-#: src/Views/UserSettingsView.vala:102
+#: src/Views/UserSettingsView.vala:97
 msgid "Language:"
 msgstr "Мова:"
 
-#: src/Views/UserSettingsView.vala:170
+#: src/Views/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Натисніть для переходу до налаштувань мови та регіону"
 
-#: src/Views/UserSettingsView.vala:187
+#: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
 msgstr "Змінити пароль…"
 
-#: src/Views/UserSettingsView.vala:208
+#: src/Views/UserSettingsView.vala:203
 msgid "Remove User Account"
 msgstr "Вилучити обліковий запис користувача"
 
-#: src/Views/UserSettingsView.vala:380
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Увімкнути обліковий запис"
 
-#: src/Views/UserSettingsView.vala:383
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Вимкнути обліковий запис"
 
-#: src/Views/UserSettingsView.vala:547
+#: src/Views/UserSettingsView.vala:548
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Не вдалося змінити пароль для %s"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:33
+#: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
 msgstr "Вилучити"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:45
 msgid "Set from File…"
 msgstr "Вибрати з файлу…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Images"
 msgstr "Зображення"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:83
 msgid "Select an image"
 msgstr "Виберіть зображення"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:86
 msgid "Open"
 msgstr "Відкрити"
 
@@ -273,16 +273,15 @@ msgstr "Відкрити"
 msgid "Choose a Password"
 msgstr "Вибрати пароль"
 
-#. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:55
+#: src/Widgets/PasswordEditor.vala:60
 msgid "Confirm Password"
 msgstr "Підтвердити пароль"
 
-#: src/Widgets/PasswordEditor.vala:64
+#: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
 msgstr "Показати паролі"
 
-#: src/Widgets/PasswordEditor.vala:144
+#: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Паролі не збігаються"
 

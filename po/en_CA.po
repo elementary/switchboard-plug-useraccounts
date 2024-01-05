@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2018-03-08 14:45+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -30,41 +30,41 @@ msgid ""
 msgstr ""
 "Manage account permissions and configure user names, passwords, and photos"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Some settings require administrator rights to be changed"
 msgstr "Some settings require administrator rights to be changed"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Avatar"
 msgstr "Change Avatar"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Full name"
 msgstr "Full Name"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:110
 #, fuzzy
 msgid "Account type"
 msgstr "Account type:"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:111
 #, fuzzy
 msgid "Language"
 msgstr "Language:"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Log In automatically:"
 
-#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Change Password"
 
-#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:98
+#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Guest Session"
 
@@ -92,41 +92,41 @@ msgstr "Press to authenticate"
 msgid "Authentication failed"
 msgstr "Authentication failed"
 
-#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:87
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/Dialogs/NewUserDialog.vala:17
-msgid "Account Type"
-msgstr "Account Type"
-
-#: src/Dialogs/NewUserDialog.vala:20
+#: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
 msgstr "Standard User"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/Dialogs/NewUserDialog.vala:24
+#: src/Dialogs/NewUserDialog.vala:22
+msgid "Account Type"
+msgstr "Account Type"
+
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Full Name"
 msgstr "Full Name"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:37
 msgid "Username"
 msgstr "Username"
 
-#: src/Dialogs/NewUserDialog.vala:64
+#: src/Dialogs/NewUserDialog.vala:67
 msgid "Create User"
 msgstr "Create User"
 
-#: src/Dialogs/NewUserDialog.vala:124
+#: src/Dialogs/NewUserDialog.vala:127
 msgid "Username is already taken"
 msgstr "Username is already taken"
 
-#: src/Dialogs/NewUserDialog.vala:126
+#: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Username can only contain lowercase letters and numbers, without spaces"
@@ -143,7 +143,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Once they log out, all of their settings and data will be deleted."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
 msgid "Log In automatically:"
 msgstr "Log In automatically:"
 
@@ -153,8 +153,8 @@ msgid ""
 msgstr ""
 "Guest session changes will not take effect until you restart your system"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
-#: src/Views/MainView.vala:211
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
+#: src/Views/MainView.vala:213
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -181,15 +181,15 @@ msgstr "Create user account"
 msgid "Undo"
 msgstr "Undo"
 
-#: src/Views/MainView.vala:144
+#: src/Views/MainView.vala:147
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:212
+#: src/Views/MainView.vala:214
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:234
+#: src/Views/MainView.vala:236
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -214,62 +214,62 @@ msgstr "You cannot change this for the currently active user"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "You cannot remove the last administrator's privileges"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:86
 msgid "Account type:"
 msgstr "Account type:"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:91
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:102
+#: src/Views/UserSettingsView.vala:97
 msgid "Language:"
 msgstr "Language:"
 
-#: src/Views/UserSettingsView.vala:170
+#: src/Views/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Click to switch to Language & Locale Settings"
 
-#: src/Views/UserSettingsView.vala:187
+#: src/Views/UserSettingsView.vala:182
 msgid "Change Password…"
 msgstr "Change Password…"
 
-#: src/Views/UserSettingsView.vala:208
+#: src/Views/UserSettingsView.vala:203
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "User Accounts"
 
-#: src/Views/UserSettingsView.vala:380
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Enable User Account"
 
-#: src/Views/UserSettingsView.vala:383
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Disable User Account"
 
-#: src/Views/UserSettingsView.vala:547
+#: src/Views/UserSettingsView.vala:548
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:33
+#: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
 msgstr "Remove"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:45
 msgid "Set from File…"
 msgstr "Set from File…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Images"
 msgstr "Images"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:83
 msgid "Select an image"
 msgstr "Select an image"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:86
 msgid "Open"
 msgstr "Open"
 
@@ -277,16 +277,15 @@ msgstr "Open"
 msgid "Choose a Password"
 msgstr "Choose a Password"
 
-#. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:55
+#: src/Widgets/PasswordEditor.vala:60
 msgid "Confirm Password"
 msgstr "Confirm Password"
 
-#: src/Widgets/PasswordEditor.vala:64
+#: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
 msgstr "Show passwords"
 
-#: src/Widgets/PasswordEditor.vala:144
+#: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Passwords do not match"
 

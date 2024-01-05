@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,41 +29,41 @@ msgstr ""
 "Διαχειριστείτε δικαιώματα λογαριασμών και ρυθμίστε ονόματα χρηστών, "
 "συνθηματικά και φωτογραφίες"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Avatar"
 msgstr "Αλλαγή εικόνας"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Full name"
 msgstr "Ονοματεπώνυμο"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:110
 #, fuzzy
 msgid "Account type"
 msgstr "Τύπος λογαριασμού:"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:111
 #, fuzzy
 msgid "Language"
 msgstr "Γλώσσα:"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:112
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Συνδεθείτε αυτόματα:"
 
-#: src/Plug.vala:120 src/Dialogs/ChangePasswordDialog.vala:79
+#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Plug.vala:121 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:98
+#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Συνεδρία επισκέπτη"
 
@@ -91,42 +91,42 @@ msgstr "Πιέστε για επαλήθευση"
 msgid "Authentication failed"
 msgstr "Αποτυχία επαλήθευσης"
 
-#: src/Dialogs/ChangePasswordDialog.vala:77 src/Dialogs/NewUserDialog.vala:62
-#: src/Widgets/Popovers/AvatarPopover.vala:79
+#: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:87
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/Dialogs/NewUserDialog.vala:17
-#, fuzzy
-msgid "Account Type"
-msgstr "Τύπος λογαριασμού:"
-
-#: src/Dialogs/NewUserDialog.vala:20
+#: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
 msgstr "Τυπικός χρήστης"
 
-#: src/Dialogs/NewUserDialog.vala:21 src/Views/UserSettingsView.vala:97
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Διαχειριστής"
 
-#: src/Dialogs/NewUserDialog.vala:24
+#: src/Dialogs/NewUserDialog.vala:22
+#, fuzzy
+msgid "Account Type"
+msgstr "Τύπος λογαριασμού:"
+
+#: src/Dialogs/NewUserDialog.vala:31
 msgid "Full Name"
 msgstr "Ονοματεπώνυμο"
 
-#: src/Dialogs/NewUserDialog.vala:31
+#: src/Dialogs/NewUserDialog.vala:37
 msgid "Username"
 msgstr "Όνομα χρήστη"
 
-#: src/Dialogs/NewUserDialog.vala:64
+#: src/Dialogs/NewUserDialog.vala:67
 msgid "Create User"
 msgstr "Δημιουργία χρήστη"
 
-#: src/Dialogs/NewUserDialog.vala:124
+#: src/Dialogs/NewUserDialog.vala:127
 msgid "Username is already taken"
 msgstr "Το όνομα χρήστη χρησιμοποιείται ήδη"
 
-#: src/Dialogs/NewUserDialog.vala:126
+#: src/Dialogs/NewUserDialog.vala:129
 #, fuzzy
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Μπορεί μόνο να περιέχει πεζά γράμματα, νούμερα και όχι κενά"
@@ -144,7 +144,7 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Μόλις αποσυνδεθούν, όλες οι ρυθμίσεις και τα δεδομένα τους θα διαγραφούν."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:176
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
 msgid "Log In automatically:"
 msgstr "Συνδεθείτε αυτόματα:"
 
@@ -155,8 +155,8 @@ msgstr ""
 "Οι αλλαγές στη συνεδρία επισκέπτη δε θα τεθούν σε ισχύ μέχρι να "
 "επανεκκινήσετε το σύστημα σας"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:143
-#: src/Views/MainView.vala:211
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
+#: src/Views/MainView.vala:213
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -183,15 +183,15 @@ msgstr "Δημιουργία λογαριασμού χρήστη"
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:144
+#: src/Views/MainView.vala:147
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:212
+#: src/Views/MainView.vala:214
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:234
+#: src/Views/MainView.vala:236
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
@@ -218,63 +218,63 @@ msgstr ""
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Δεν μπορείτε να αφαιρέσετε τα δικαιώματα του τελευταίου διαχειρηστή"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:86
 msgid "Account type:"
 msgstr "Τύπος λογαριασμού:"
 
-#: src/Views/UserSettingsView.vala:96
+#: src/Views/UserSettingsView.vala:91
 msgid "Standard"
 msgstr "Τυπικός"
 
-#: src/Views/UserSettingsView.vala:102
+#: src/Views/UserSettingsView.vala:97
 msgid "Language:"
 msgstr "Γλώσσα:"
 
-#: src/Views/UserSettingsView.vala:170
+#: src/Views/UserSettingsView.vala:165
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Πατήστε για αλλαγή σε ρυθμίσεις γλώσσας και περιοχής"
 
-#: src/Views/UserSettingsView.vala:187
+#: src/Views/UserSettingsView.vala:182
 #, fuzzy
 msgid "Change Password…"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Views/UserSettingsView.vala:208
+#: src/Views/UserSettingsView.vala:203
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove User Account"
 msgstr "Λογαριασμοί χρηστών"
 
-#: src/Views/UserSettingsView.vala:380
+#: src/Views/UserSettingsView.vala:382
 msgid "Enable User Account"
 msgstr "Ενεργοποίηση λογαριασμού χρήστη"
 
-#: src/Views/UserSettingsView.vala:383
+#: src/Views/UserSettingsView.vala:385
 msgid "Disable User Account"
 msgstr "Απενεργοποίηση λογαριασμού χρήστη"
 
-#: src/Views/UserSettingsView.vala:547
+#: src/Views/UserSettingsView.vala:548
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
 
-#: src/Widgets/Popovers/AvatarPopover.vala:33
+#: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:38
+#: src/Widgets/Popovers/AvatarPopover.vala:45
 msgid "Set from File…"
 msgstr "Ορισμός από φάκελο..."
 
-#: src/Widgets/Popovers/AvatarPopover.vala:64
+#: src/Widgets/Popovers/AvatarPopover.vala:77
 msgid "Images"
 msgstr "Εικόνες"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:75
+#: src/Widgets/Popovers/AvatarPopover.vala:83
 msgid "Select an image"
 msgstr "Επιλέξτε μια εικόνα"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:78
+#: src/Widgets/Popovers/AvatarPopover.vala:86
 msgid "Open"
 msgstr "Άνοιγμα"
 
@@ -283,17 +283,16 @@ msgstr "Άνοιγμα"
 msgid "Choose a Password"
 msgstr "Αλλαγή συνθηματικού"
 
-#. Pango needs a non-null string to set markup
-#: src/Widgets/PasswordEditor.vala:55
+#: src/Widgets/PasswordEditor.vala:60
 #, fuzzy
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση νέου συνθηματικού"
 
-#: src/Widgets/PasswordEditor.vala:64
+#: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
 msgstr "Εμφάνιση συνθηματικών"
 
-#: src/Widgets/PasswordEditor.vala:144
+#: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Τα συνθηματικά δε συμπίπτουν"
 
