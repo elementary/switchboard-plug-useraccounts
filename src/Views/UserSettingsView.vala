@@ -88,7 +88,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             avatar_overlay.add_overlay (avatar_button);
 
             full_name_entry = new Gtk.Entry () {
-                valign = Gtk.Align.CENTER
+                hexpand = true,
+                valign = CENTER
             };
             full_name_entry.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
             full_name_entry.activate.connect (() => {
@@ -255,8 +256,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             remove_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             var header_grid = new Gtk.Grid () {
-                column_spacing = 12,
-                halign = START
+                column_spacing = 12
             };
             header_grid.add_css_class ("header-area");
             header_grid.attach (avatar_overlay, 0, 0);
