@@ -41,8 +41,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public signal void remove_user ();
 
-        private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
-        private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
+        private const string CURRENT_USER_STRING = _("This can't be changed for the currently active account");
+        private const string LAST_ADMIN_STRING = _("You can't remove the last administrator's privileges");
 
         public UserSettingsView (Act.User user) {
             Object (user: user);
