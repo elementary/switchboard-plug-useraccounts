@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 17:45+0000\n"
+"POT-Creation-Date: 2024-01-05 17:14+0000\n"
 "PO-Revision-Date: 2019-07-18 18:24+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,91 +29,91 @@ msgstr "Tvarkyti naudotojų paskyras"
 msgid "Authentication is required to change user data"
 msgstr "Norint keisti naudotojų duomenis, reikalingas tapatybės nustatymas"
 
-#: data/useraccounts.appdata.xml.in:5
+#: data/useraccounts.metainfo.xml.in:5
 #, fuzzy
 #| msgid "User Accounts"
 msgid "User Accounts Settings"
 msgstr "Naudotojų paskyros"
 
-#: data/useraccounts.appdata.xml.in:6
+#: data/useraccounts.metainfo.xml.in:6
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Tvarkyti paskyros leidimus ir konfigūruoti naudotojų vardus, slaptažodžius "
 "ir nuotraukas"
 
-#: data/useraccounts.appdata.xml.in:12 data/useraccounts.appdata.xml.in:25
-#: data/useraccounts.appdata.xml.in:38
+#: data/useraccounts.metainfo.xml.in:12 data/useraccounts.metainfo.xml.in:25
+#: data/useraccounts.metainfo.xml.in:38
 msgid "Improvements:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:14 data/useraccounts.appdata.xml.in:27
-#: data/useraccounts.appdata.xml.in:43 data/useraccounts.appdata.xml.in:55
-#: data/useraccounts.appdata.xml.in:62 data/useraccounts.appdata.xml.in:72
-#: data/useraccounts.appdata.xml.in:82
+#: data/useraccounts.metainfo.xml.in:14 data/useraccounts.metainfo.xml.in:27
+#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:55
+#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:72
+#: data/useraccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:21 data/useraccounts.appdata.xml.in:33
+#: data/useraccounts.metainfo.xml.in:21 data/useraccounts.metainfo.xml.in:33
 msgid "Fixes:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:23 data/useraccounts.appdata.xml.in:36
+#: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
 msgid "Update permissions when enabling and disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:35
+#: data/useraccounts.metainfo.xml.in:35
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:40
+#: data/useraccounts.metainfo.xml.in:40
 msgid "Support locales with 3-letter codes"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:41 data/useraccounts.appdata.xml.in:52
+#: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
 msgid "Performance improvements"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:42
+#: data/useraccounts.metainfo.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:49
+#: data/useraccounts.metainfo.xml.in:49
 msgid "Minor updates:"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:51
+#: data/useraccounts.metainfo.xml.in:51
 msgid "New colorful avatar fallback"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:53
+#: data/useraccounts.metainfo.xml.in:53
 msgid "Improved tooltips and labels"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:54
+#: data/useraccounts.metainfo.xml.in:54
 msgid "Fix possible crash when deleting an account"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:69
+#: data/useraccounts.metainfo.xml.in:69
 msgid "Show more accurate reasons for locked settings"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:70
+#: data/useraccounts.metainfo.xml.in:70
 msgid "Improve reliability of account creation"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:71
+#: data/useraccounts.metainfo.xml.in:71
 msgid "Get permission on demand for enabling or disabling accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:79
+#: data/useraccounts.metainfo.xml.in:79
 msgid "Show in sidebar if an account is disabled"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:80
+#: data/useraccounts.metainfo.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
 msgstr ""
 
-#: data/useraccounts.appdata.xml.in:81
+#: data/useraccounts.metainfo.xml.in:81
 msgid "Animate Infobars"
 msgstr ""
