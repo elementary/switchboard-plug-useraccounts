@@ -25,8 +25,6 @@ namespace SwitchboardPlugUserAccounts {
 
     public class UserAccountsPlug : Switchboard.Plug {
         private Gtk.Grid? main_grid;
-        private Gtk.InfoBar infobar;
-        private Gtk.LockButton lock_button;
         private Widgets.MainView main_view;
 
         //translatable string for io.elementary.switchboard.useraccounts.administration policy
@@ -53,30 +51,15 @@ namespace SwitchboardPlugUserAccounts {
                 return main_grid;
             }
 
-            lock_button = new Gtk.LockButton (get_permission ());
-
-            infobar = new Gtk.InfoBar () {
-                message_type = INFO
-            };
-            infobar.add_action_widget (lock_button, 0);
-            infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-
             main_view = new Widgets.MainView ();
 
             main_grid = new Gtk.Grid ();
-            main_grid.attach (infobar, 0, 2, 1, 1);
-            main_grid.attach (main_view, 0, 3, 1, 1);
-
-            get_permission ().notify["allowed"].connect (() => {
-                infobar.revealed = !get_permission ().allowed;
-            });
+            main_grid.attach (main_view, 0, 0);
 
             return main_grid;
         }
 
-        public override void shown () {
-            infobar.revealed = !get_permission ().allowed;
-        }
+        public override void shown () { }
 
         public override void hidden () {
             try {
