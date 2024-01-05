@@ -221,7 +221,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             enable_user_button.clicked.connect (change_lock);
 
-            var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
+            var remove_user_button = new Gtk.Button.with_label (_("Remove Account")) {
                 sensitive = false
             };
             remove_user_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -404,11 +404,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var user_locked = user.get_locked ();
             if (user_locked) {
-                enable_user_button.label = _("Enable User Account");
-                enable_user_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.label = _("Enable Account");
             } else {
-                enable_user_button.label = _("Disable User Account");
-                enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.label = _("Disable Account");
             }
 
             if (delta_user.language != user.get_language ()) {
