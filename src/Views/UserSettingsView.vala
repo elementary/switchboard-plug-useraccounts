@@ -37,17 +37,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Button language_button;
         private Gtk.Switch autologin_switch;
 
-        //lock widgets
-        private Gtk.Image user_type_lock;
-        private Gtk.Image language_lock;
-        private Gtk.Image autologin_lock;
-        private Gtk.Image password_lock;
-
         private Gee.HashMap<string, string>? default_regions;
 
         public signal void remove_user ();
 
-        private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
         private const string CURRENT_USER_STRING = _("You cannot change this for the currently active user");
         private const string LAST_ADMIN_STRING = _("You cannot remove the last administrator's privileges");
 
@@ -140,8 +133,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     reveal_child = true
                 };
 
-                grid.attach (language_box, 0, 3, 2);
-                grid.attach (region_revealer, 0, 4, 2);
+                grid.attach (language_box, 0, 3);
+                grid.attach (region_revealer, 0, 4);
 
                 language_box.changed.connect (() => {
                     Gtk.TreeIter? iter;
@@ -184,7 +177,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     tooltip_text = _("Click to switch to Language & Locale Settings")
                 };
 
-                grid.attach (language_button, 0, 3, 2);
+                grid.attach (language_button, 0, 3);
             }
 
             var login_label = new Gtk.Label (_("Log In automatically:")) {
@@ -227,31 +220,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             remove_user_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            user_type_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            language_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                margin_top = 20,
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            autologin_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                margin_end = 6,
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            password_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-
             var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                margin_start = 6,
-                tooltip_text = NO_PERMISSION_STRING
+                margin_start = 6
             };
             remove_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
@@ -265,14 +235,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var autologin_box = new Gtk.Box (HORIZONTAL, 6);
             autologin_box.append (login_label);
             autologin_box.append (autologin_switch);
-            autologin_box.append (autologin_lock);
 
             grid.attach (user_type_label, 0, 0);
-            grid.attach (user_type_lock, 1, 0);
-            grid.attach (user_type_box, 0, 1, 2);
+            grid.attach (user_type_box, 0, 1);
             grid.attach (lang_label, 0, 2);
-            grid.attach (language_lock, 1, 2);
-            grid.attach (autologin_box, 0, 5, 2);
+            grid.attach (autologin_box, 0, 5);
             grid.add_css_class ("content-area");
 
             var action_area = new Gtk.Box (HORIZONTAL, 0);
@@ -280,7 +247,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             action_area.append (enable_user_button);
             action_area.append (remove_lock);
             action_area.append (new Gtk.Grid () { hexpand = true });
-            action_area.append (password_lock);
             action_area.append (password_button);
             action_area.add_css_class ("buttonbox");
 
@@ -297,10 +263,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             update_permission ();
 
             if (get_current_user () == user) {
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+                user_type_label.secondary_text = CURRENT_USER_STRING;
                 remove_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+                user_type_label.secondary_text = LAST_ADMIN_STRING;
                 remove_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
@@ -324,39 +290,26 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_box.sensitive = false;
                 password_button.sensitive = false;
                 autologin_switch.sensitive = false;
-
-                user_type_lock.set_opacity (1);
-                autologin_lock.set_opacity (1);
-                password_lock.set_opacity (1);
-
-                user_type_lock.tooltip_text = NO_PERMISSION_STRING;
             }
 
             if (current_user || allowed) {
                 full_name_entry.sensitive = true;
-                full_name_entry.secondary_icon_name = "";
-                language_lock.set_opacity (0);
 
                 if (!user_locked) {
                     password_button.sensitive = true;
-                    password_lock.set_opacity (0);
                 } else {
                     password_button.sensitive = false;
-                    password_lock.set_opacity (1);
                 }
 
                 if (allowed) {
                     if (!user_locked) {
                         autologin_switch.sensitive = true;
-                        autologin_lock.set_opacity (0);
                     } else {
                         autologin_switch.sensitive = false;
-                        autologin_lock.set_opacity (1);
                     }
 
                     if (!last_admin && !current_user) {
                         user_type_box.sensitive = true;
-                        user_type_lock.set_opacity (0);
                     }
                 }
 
@@ -366,8 +319,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 }
             } else {
                 full_name_entry.sensitive = false;
-                full_name_entry.secondary_icon_name = "changes-prevent-symbolic";
-                full_name_entry.secondary_icon_tooltip_text = NO_PERMISSION_STRING;
 
                 if (!current_user) {
                     language_box.sensitive = false;
