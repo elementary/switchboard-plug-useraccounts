@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-13 17:28+0000\n"
-"PO-Revision-Date: 2023-05-20 04:06+0000\n"
+"PO-Revision-Date: 2024-01-14 19:11+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ka/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:40
@@ -150,11 +150,9 @@ msgid "Unable to acquire permission"
 msgstr "წვდომის მიღების შეცდომა"
 
 #: src/Views/GuestSettingsView.vala:93
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "ანგარიშის წაშლა სისტემური წვდომების გარეშე შეუძლებელია."
+msgstr "სტუმრის ანგარიშის შეცვლა სისტემური წვდომების გარეშე შეუძლებელია."
 
 #: src/Views/MainView.vala:22
 msgid "My Account"
@@ -165,8 +163,6 @@ msgid "Other Accounts"
 msgstr "სხვა ანგარიშები"
 
 #: src/Views/MainView.vala:33
-#, fuzzy
-#| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "მომხმარებლის ანგარიშის შექმნა…"
 
