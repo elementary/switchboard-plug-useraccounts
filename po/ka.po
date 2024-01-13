@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 17:14+0000\n"
+"POT-Creation-Date: 2024-01-13 17:28+0000\n"
 "PO-Revision-Date: 2023-05-20 04:06+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -15,51 +15,46 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:33
-msgid "Authentication is required to change user data"
-msgstr "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა"
-
-#: src/Plug.vala:43
+#: src/Plug.vala:40
 msgid "User Accounts"
 msgstr "მომხმარებლის ანგარიშები"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:41
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "მართეთ ანგარიშის წვდომები და მოირგეთ მომხმარებლის სახელები, პაროლები და "
 "სურათები"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:105
 msgid "Avatar"
 msgstr "ავატარი"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:106
 msgid "Full name"
 msgstr "სრული სახელი"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:107
 msgid "Account type"
 msgstr "ანგარიშის ტიპი"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:108
 msgid "Language"
 msgstr "ენა"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:109
 msgid "Log in automatically"
 msgstr "ავტომატური შესვლა"
 
-#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
 
-#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "სტუმრის სესია"
@@ -284,6 +279,10 @@ msgstr "პაროლების ჩვენება"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "პაროლები არ ემთხვევა"
+
+#~ msgid "Authentication is required to change user data"
+#~ msgstr ""
+#~ "მოხმარებლის მონაცემების შესაცვლელად აუცილებელია ავთენტიფიკაციის გავლა"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"
