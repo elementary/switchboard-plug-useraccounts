@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2017-08-16 11:48+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -16,52 +16,48 @@ msgstr ""
 "X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Korisnički računi"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Upravljajte dozvolama računa, prilagodite korisnička imena, lozinke i "
 "fotografije"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Neke postavke zahtijevaju administratorske ovlasti"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 #, fuzzy
 msgid "Avatar"
 msgstr "Promijeni sliku"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 #, fuzzy
 msgid "Full name"
 msgstr "Puno ime"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 #, fuzzy
 msgid "Account type"
 msgstr "Vrsta računa:"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 #, fuzzy
 msgid "Language"
 msgstr "Jezik:"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Automatska prijava:"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Promijeni lozinku"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "Prijava gosta"
 
@@ -152,8 +148,8 @@ msgstr ""
 "Promjene prijave gosta neće biti primijenjene sve dok ponovno ne pokrenete "
 "računalo"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -176,28 +172,32 @@ msgstr "Ostali računi"
 msgid "Create User Account…"
 msgstr "Stvori korisnički račun"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr "Neke postavke zahtijevaju administratorske ovlasti"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Omogućeno"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Onemogućeno"
 

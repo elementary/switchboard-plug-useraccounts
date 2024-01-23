@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,50 +13,46 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Mga User Account"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 #, fuzzy
 msgid "Avatar"
 msgstr "Baguhin ang Avatar"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 #, fuzzy
 msgid "Full name"
 msgstr "Buong Pangalan"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 #, fuzzy
 msgid "Account type"
 msgstr "Uri ng Account:"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 #, fuzzy
 msgid "Language"
 msgstr "Wika:"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Awtomatikong mag-log in :"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Palitan ang Password"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr ""
 
@@ -143,8 +139,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -167,28 +163,32 @@ msgstr "Iba pang mga Account"
 msgid "Create User Account…"
 msgstr "Gumawa ng user account"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Pinagana"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Hindi pinagana"
 

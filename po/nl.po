@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2023-05-12 17:06+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -15,46 +15,42 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Gebruikersaccounts"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Beheer accountrechten en configureer gebruikersnamen, wachtwoorden en foto's"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "Profielfoto"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "Volledige naam"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 msgid "Account type"
 msgstr "Gebruikerstype"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 msgid "Language"
 msgstr "Taal"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "Automatisch inloggen"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Verander wachtwoord"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "Gastsessie"
 
@@ -147,8 +143,8 @@ msgstr ""
 "Veranderingen aan de gastsessie zullen niet toegepast worden totdat u het "
 "systeem herstart"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr "Niet in staat om toestemming te krijgen"
 
@@ -174,31 +170,35 @@ msgstr "Andere accounts"
 msgid "Create User Account…"
 msgstr "Gebruikersaccount aanmaken…"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Een nieuwe gebruiker kan niet worden aangemaakt zonder de vereiste "
 "systeemrechten."
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Een gebruiker kan niet worden verwijderd zonder de vereiste systeemrechten."
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” is verwijderd"
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 

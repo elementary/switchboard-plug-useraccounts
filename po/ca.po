@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -15,47 +15,43 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Comptes d'usuari"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestioneu permisos dels comptes i configureu-ne els noms d'usuari, les "
 "contrasenyes i les fotografies."
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 msgid "Account type"
 msgstr "Tipus de compte"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 msgid "Language"
 msgstr "Llengua"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "Entra-hi automàticament"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Canvia la contrasenya"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "Sessió de convidat"
 
@@ -146,8 +142,8 @@ msgstr ""
 "Els canvis de la sessió de convidat no tindran efecte fins que reinicieu el "
 "sistema."
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr "No es pot adquirir el permís."
 
@@ -170,28 +166,32 @@ msgstr "Altres comptes"
 msgid "Create User Account…"
 msgstr "Crea un compte d'usuari…"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr "Desfés-ho"
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr "No es pot crear un compte nou sense el permís del sistema necessari."
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr "No es pot suprimir cap compte sense el permís del sistema necessari."
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr "Suprimit: %s"
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Inhabilitat"
 

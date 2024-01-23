@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2018-05-28 09:13+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -13,52 +13,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Conturi de utilizator"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestionați permisiunile contului și configurați numele de utilizator, "
 "parolele și fotografiile"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Unele setări necesită modificarea drepturilor de administrator"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatarul"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 #, fuzzy
 msgid "Full name"
 msgstr "Numele complet"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 #, fuzzy
 msgid "Account type"
 msgstr "Tipul de cont:"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 #, fuzzy
 msgid "Language"
 msgstr "Limba:"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentifică-te automat:"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Schimbă Parola"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "Sesiune de invitat"
 
@@ -148,8 +144,8 @@ msgstr ""
 "Modificările sesiuni de invitați nu vor avea efect până când nu reporniți "
 "sistemul"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -172,28 +168,32 @@ msgstr "Alte conturi"
 msgid "Create User Account…"
 msgstr "Creați un cont de utilizator"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr "Unele setări necesită modificarea drepturilor de administrator"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr "Anula"
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Activat"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Dezactivat"
 
