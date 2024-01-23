@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -15,45 +15,41 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "חשבונות משתמשים"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, ססמאות ותמונות"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "תמונת משתמש"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "שם מלא"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 msgid "Account type"
 msgstr "סוג חשבון"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 msgid "Language"
 msgstr "שפה"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "כניסה אוטומטית"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "החלפת הססמה"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "הפעלת אורח"
 
@@ -138,8 +134,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "השינויים שנערכים בהפעלת המשתמש לא יחולו עד להפעלת המערכת שלך מחדש"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr "לא ניתן לקבל הרשאות"
 
@@ -160,28 +156,32 @@ msgstr "חשבונות אחרים"
 msgid "Create User Account…"
 msgstr "יצירת חשבון משתמש…"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr "לא ניתן ליצור חשבון חדש מבלי הרשאות המערכת הנדרשות."
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr "לא ניתן להסיר חשבון מבלי הרשאות המערכת הנדרשות."
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr "„%s” הוסר"
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "פעיל"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "מושבתת"
 

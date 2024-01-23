@@ -24,8 +24,7 @@ namespace SwitchboardPlugUserAccounts {
     public static UserAccountsPlug plug;
 
     public class UserAccountsPlug : Switchboard.Plug {
-        private Gtk.Grid? main_grid;
-        private Widgets.MainView main_view;
+        private Widgets.MainView? main_view;
 
         public UserAccountsPlug () {
             GLib.Intl.bindtextdomain (Build.GETTEXT_PACKAGE, Build.LOCALEDIR);
@@ -44,16 +43,11 @@ namespace SwitchboardPlugUserAccounts {
         }
 
         public override Gtk.Widget get_widget () {
-            if (main_grid != null) {
-                return main_grid;
+            if (main_view == null) {
+                main_view = new Widgets.MainView ();
             }
 
-            main_view = new Widgets.MainView ();
-
-            main_grid = new Gtk.Grid ();
-            main_grid.attach (main_view, 0, 0);
-
-            return main_grid;
+            return main_view;
         }
 
         public override void shown () { }

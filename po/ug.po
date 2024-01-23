@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -13,52 +13,47 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "ئابونت ھىساۋاتلىرى"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "ھىساۋات ھوقۇقىنى باشقۇرۇش ۋە ئابونتنىڭ ئىسمى، پارولى ۋە سۈرەتلىرىنى تەڭشەش"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"بەزى تەڭشەكلەرنى باشقۇرغۇچىلىق سالاھىيىتى بولغاندىلا ئۆزگەرتكىلى بولىدۇ"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 #, fuzzy
 msgid "Avatar"
 msgstr "باش سۈرەتنى ئۆزگەرتىش"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 #, fuzzy
 msgid "Full name"
 msgstr "تولۇق ئىسمى"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 #, fuzzy
 msgid "Account type"
 msgstr "ھېسابات تىپى:"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 #, fuzzy
 msgid "Language"
 msgstr "تىل:"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 #, fuzzy
 msgid "Log in automatically"
 msgstr "ئاپتوماتىك كىرىش:"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "مېھمان"
 
@@ -146,8 +141,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "مىھمان تەڭشەكلىرى سىستېمىنى قايتا قوزغاتقاندىن كىيىن كۈچكە ئىگە بولىدۇ"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -170,28 +165,33 @@ msgstr "باشقا ھىساۋاتلار"
 msgid "Create User Account…"
 msgstr "ئابونت ھىساۋاتى قۇرۇش"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"بەزى تەڭشەكلەرنى باشقۇرغۇچىلىق سالاھىيىتى بولغاندىلا ئۆزگەرتكىلى بولىدۇ"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "قوزغىتىلغان"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "چەكلەنگەن"
 

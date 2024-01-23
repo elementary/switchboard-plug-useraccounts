@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 17:28+0000\n"
+"POT-Creation-Date: 2024-01-23 16:32+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -15,49 +15,43 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:37
 msgid "User Accounts"
 msgstr "Account utente"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestisci le autorizzazioni degli account e configura nomi utente, password e "
 "avatar"
 
-#: src/Plug.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Alcune impostazioni richiedono i permessi di amministratore per essere "
-"modificate"
-
-#: src/Plug.vala:105
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:106
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "Nome completo"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:84
 msgid "Account type"
 msgstr "Tipo di account"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:85
 msgid "Language"
 msgstr "Lingua"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "Accedi automaticamente"
 
-#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Cambia password"
 
-#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:101
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Views/MainView.vala:118
 msgid "Guest Session"
 msgstr "Sessione ospite"
 
@@ -148,8 +142,8 @@ msgstr ""
 "Le modifiche alla sessione ospite non avranno effetto fino al riavvio del "
 "sistema"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:146
-#: src/Views/MainView.vala:213
+#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
+#: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
 msgstr "Impossibile acquisire l'autorizzazione"
 
@@ -176,32 +170,38 @@ msgstr "Altri account"
 msgid "Create User Account…"
 msgstr "Crea account utente"
 
-#: src/Views/MainView.vala:62
+#: src/Views/MainView.vala:65
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Alcune impostazioni richiedono i permessi di amministratore per essere "
+"modificate"
+
+#: src/Views/MainView.vala:79
 msgid "Undo"
 msgstr "Annulla"
 
-#: src/Views/MainView.vala:147
+#: src/Views/MainView.vala:164
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Non è possibile creare un nuovo account senza l'autorizzazione di sistema "
 "richiesta."
 
-#: src/Views/MainView.vala:214
+#: src/Views/MainView.vala:231
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 "Non è possibile rimuovere un account senza l'autorizzazione di sistema "
 "richiesta."
 
-#: src/Views/MainView.vala:236
+#: src/Views/MainView.vala:253
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:294
+#: src/Views/MainView.vala:311
 msgid "Enabled"
 msgstr "Abilitato"
 
-#: src/Views/MainView.vala:296
+#: src/Views/MainView.vala:313
 msgid "Disabled"
 msgstr "Disabilitato"
 
