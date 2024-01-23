@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 17:14+0000\n"
+"POT-Creation-Date: 2024-01-13 17:28+0000\n"
 "PO-Revision-Date: 2018-05-28 09:13+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -13,56 +13,51 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:33
-msgid "Authentication is required to change user data"
-msgstr "Este necesară autentificarea pentru a schimba datele utilizatorului"
-
-#: src/Plug.vala:43
+#: src/Plug.vala:40
 msgid "User Accounts"
 msgstr "Conturi de utilizator"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:41
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestionați permisiunile contului și configurați numele de utilizator, "
 "parolele și fotografiile"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:105
 #, fuzzy
 msgid "Avatar"
 msgstr "Schimbă avatarul"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:106
 #, fuzzy
 msgid "Full name"
 msgstr "Numele complet"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:107
 #, fuzzy
 msgid "Account type"
 msgstr "Tipul de cont:"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Language"
 msgstr "Limba:"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Autentifică-te automat:"
 
-#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Schimbă Parola"
 
-#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Sesiune de invitat"
@@ -289,6 +284,9 @@ msgstr "Afișați parole"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Parolele nu se potrivesc"
+
+#~ msgid "Authentication is required to change user data"
+#~ msgstr "Este necesară autentificarea pentru a schimba datele utilizatorului"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

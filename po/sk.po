@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 17:14+0000\n"
+"POT-Creation-Date: 2024-01-13 17:28+0000\n"
 "PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -15,50 +15,45 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:33
-msgid "Authentication is required to change user data"
-msgstr "Pre zmenu používateľských údajov sa vyžaduje overenie"
-
-#: src/Plug.vala:43
+#: src/Plug.vala:40
 msgid "User Accounts"
 msgstr "Používateľské účty"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:41
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Spravujte oprávnenia účtov a nastavujte používateľské mená, heslá a ich fotky"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:105
 msgid "Avatar"
 msgstr "Ikonka používateľa"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:106
 msgid "Full name"
 msgstr "Celé meno"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:107
 msgid "Account type"
 msgstr "Typ účtu"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:108
 msgid "Language"
 msgstr "Jazyk"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:109
 msgid "Log in automatically"
 msgstr "Prihlasovať automaticky"
 
-#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Zmena hesla"
 
-#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Relácia pre hosťa"
@@ -285,6 +280,9 @@ msgstr "Zobraziť heslá"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Heslá sa nezhodujú"
+
+#~ msgid "Authentication is required to change user data"
+#~ msgstr "Pre zmenu používateľských údajov sa vyžaduje overenie"
 
 #, c-format
 #~ msgid "Remove “%s” and their data"
