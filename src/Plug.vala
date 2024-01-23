@@ -27,9 +27,6 @@ namespace SwitchboardPlugUserAccounts {
         private Gtk.Grid? main_grid;
         private Widgets.MainView main_view;
 
-        //translatable string for io.elementary.switchboard.useraccounts.administration policy
-        public const string policy_message = _("Authentication is required to change user data"); // vala-lint=naming-convention
-
         public UserAccountsPlug () {
             GLib.Intl.bindtextdomain (Build.GETTEXT_PACKAGE, Build.LOCALEDIR);
             GLib.Intl.bind_textdomain_codeset (Build.GETTEXT_PACKAGE, "UTF-8");

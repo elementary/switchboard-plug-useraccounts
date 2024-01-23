@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 17:14+0000\n"
+"POT-Creation-Date: 2024-01-13 17:28+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -15,53 +15,48 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
-#. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:33
-msgid "Authentication is required to change user data"
-msgstr "È necessario autenticarsi per cambiare i dati utente"
-
-#: src/Plug.vala:43
+#: src/Plug.vala:40
 msgid "User Accounts"
 msgstr "Account utente"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:41
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Gestisci le autorizzazioni degli account e configura nomi utente, password e "
 "avatar"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alcune impostazioni richiedono i permessi di amministratore per essere "
 "modificate"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:105
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:106
 msgid "Full name"
 msgstr "Nome completo"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:107
 msgid "Account type"
 msgstr "Tipo di account"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:108
 msgid "Language"
 msgstr "Lingua"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:109
 msgid "Log in automatically"
 msgstr "Accedi automaticamente"
 
-#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Cambia password"
 
-#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Sessione ospite"
@@ -296,6 +291,9 @@ msgstr "Mostra le password"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Le password non coincidono"
+
+#~ msgid "Authentication is required to change user data"
+#~ msgstr "È necessario autenticarsi per cambiare i dati utente"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"

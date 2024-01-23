@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 17:14+0000\n"
+"POT-Creation-Date: 2024-01-13 17:28+0000\n"
 "PO-Revision-Date: 2017-02-13 13:45+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,56 +13,51 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-14 06:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#. translatable string for io.elementary.switchboard.useraccounts.administration policy
-#: src/Plug.vala:33
-msgid "Authentication is required to change user data"
-msgstr "Απαιτείται επαλήθευση για την αλλαγή δεδομένων του χρήστη"
-
-#: src/Plug.vala:43
+#: src/Plug.vala:40
 msgid "User Accounts"
 msgstr "Λογαριασμοί χρηστών"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:41
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Διαχειριστείτε δικαιώματα λογαριασμών και ρυθμίστε ονόματα χρηστών, "
 "συνθηματικά και φωτογραφίες"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:105
 #, fuzzy
 msgid "Avatar"
 msgstr "Αλλαγή εικόνας"
 
-#: src/Plug.vala:109
+#: src/Plug.vala:106
 #, fuzzy
 msgid "Full name"
 msgstr "Ονοματεπώνυμο"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:107
 #, fuzzy
 msgid "Account type"
 msgstr "Τύπος λογαριασμού:"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:108
 #, fuzzy
 msgid "Language"
 msgstr "Γλώσσα:"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:109
 #, fuzzy
 msgid "Log in automatically"
 msgstr "Συνδεθείτε αυτόματα:"
 
-#: src/Plug.vala:113 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:110 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Αλλαγή συνθηματικού"
 
-#: src/Plug.vala:114 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:111 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:101
 msgid "Guest Session"
 msgstr "Συνεδρία επισκέπτη"
@@ -295,6 +290,9 @@ msgstr "Εμφάνιση συνθηματικών"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Τα συνθηματικά δε συμπίπτουν"
+
+#~ msgid "Authentication is required to change user data"
+#~ msgstr "Απαιτείται επαλήθευση για την αλλαγή δεδομένων του χρήστη"
 
 #, fuzzy, c-format
 #~| msgid "Remove user account and its data"
