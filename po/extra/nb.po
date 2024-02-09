@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 16:32+0000\n"
-"PO-Revision-Date: 2023-11-14 10:10+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/nb/>\n"
@@ -32,9 +32,10 @@ msgid "User Accounts Settings"
 msgstr "Brukerkontoinnstillinger"
 
 #: data/useraccounts.metainfo.xml.in:6
+#, fuzzy
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr ""
+msgstr "Håndter kontotilganger og sett opp brukernavn, passord, og bilder."
 
 #: data/useraccounts.metainfo.xml.in:12 data/useraccounts.metainfo.xml.in:25
 #: data/useraccounts.metainfo.xml.in:38
@@ -53,12 +54,13 @@ msgid "Fixes:"
 msgstr "Fikser:"
 
 #: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
+#, fuzzy
 msgid "Update permissions when enabling and disabling accounts"
-msgstr ""
+msgstr "Oppdater tilganger ved aktivering og deaktivering av kontoer"
 
 #: data/useraccounts.metainfo.xml.in:35
 msgid "Ensure user information in sidebar updates upon changes"
-msgstr ""
+msgstr "Forsikre deg om at infoen i sidefeltet oppdateres seg ved endringer"
 
 #: data/useraccounts.metainfo.xml.in:40
 msgid "Support locales with 3-letter codes"
@@ -66,11 +68,11 @@ msgstr "Støtte for lokaliteter med 3-bokstavskoder"
 
 #: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
 msgid "Performance improvements"
-msgstr ""
+msgstr "Ytelsesforbedringer"
 
 #: data/useraccounts.metainfo.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
-msgstr ""
+msgstr "Bedre støtte for distribusjoner som ikke er basert på Ubuntu"
 
 #: data/useraccounts.metainfo.xml.in:49
 msgid "Minor updates:"
@@ -78,11 +80,11 @@ msgstr "Småoppdateringer:"
 
 #: data/useraccounts.metainfo.xml.in:51
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Nytt fargerik avatar-tilbakefall"
 
 #: data/useraccounts.metainfo.xml.in:53
 msgid "Improved tooltips and labels"
-msgstr ""
+msgstr "Forbedret verktøyrips og etiketter"
 
 #: data/useraccounts.metainfo.xml.in:54
 msgid "Fix possible crash when deleting an account"
