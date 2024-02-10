@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 16:32+0000\n"
-"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"PO-Revision-Date: 2024-02-10 18:59+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/user-accounts-plug-extra/nb/>\n"
@@ -88,28 +88,28 @@ msgstr "Forbedret verktøyrips og etiketter"
 
 #: data/useraccounts.metainfo.xml.in:54
 msgid "Fix possible crash when deleting an account"
-msgstr ""
+msgstr "Fikset mulig krasj ved sletting av konto"
 
 #: data/useraccounts.metainfo.xml.in:69
 msgid "Show more accurate reasons for locked settings"
-msgstr ""
+msgstr "Vis mer nøyaktig grunn for låste innstillinger"
 
 #: data/useraccounts.metainfo.xml.in:70
 msgid "Improve reliability of account creation"
-msgstr ""
+msgstr "Forbedret lesbarhet ved kontoopprettelse"
 
 #: data/useraccounts.metainfo.xml.in:71
 msgid "Get permission on demand for enabling or disabling accounts"
-msgstr ""
+msgstr "Hent tilgang ved behov for aktivering og deaktivering av kontoer"
 
 #: data/useraccounts.metainfo.xml.in:79
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
+msgstr "Vis at konto er deaktivert i sidefelt"
 
 #: data/useraccounts.metainfo.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
-msgstr ""
+msgstr "Forespør tilgang ved tillegg og fjerning av kontoer"
 
 #: data/useraccounts.metainfo.xml.in:81
 msgid "Animate Infobars"
-msgstr ""
+msgstr "Animerte infofelt"
