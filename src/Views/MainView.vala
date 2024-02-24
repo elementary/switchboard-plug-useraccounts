@@ -30,7 +30,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             hscrollbar_policy = NEVER
         };
 
-        var add_button_label = new Gtk.Label (_("Create User Account…"));
+        var add_button_label = new Gtk.Label (_("Create Account…"));
 
         var add_button_box = new Gtk.Box (HORIZONTAL, 0);
         add_button_box.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
@@ -86,7 +86,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
             end_child = overlay,
-            position = 240,
+            position = 200,
             resize_start_child = false,
             shrink_start_child = false,
             shrink_end_child = false
