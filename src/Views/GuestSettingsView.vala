@@ -4,7 +4,7 @@
  *
  */
 
-public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.SimpleSettingsPage {
+public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Switchboard.SettingsPage {
     public signal void guest_switch_changed ();
 
     public GuestSettingsView () {
@@ -13,7 +13,7 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.Sim
             description: "%s %s".printf (
                 _("The Guest Session allows someone to use a temporary default account without a password."),
                 _("Once they log out, all of their settings and data will be deleted.")),
-            icon_name: "avatar-default",
+            icon: new ThemedIcon ("avatar-default"),
             title: _("Guest Session")
         );
     }
@@ -25,8 +25,9 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.Sim
 
         var guest_autologin_label = new Gtk.Label (_("Log In automatically:"));
 
-        content_area.attach (guest_autologin_label, 0, 0);
-        content_area.attach (guest_autologin_switch, 1, 0);
+        var autologin_box = new Gtk.Box (HORIZONTAL, 12);
+        autologin_box.append (guest_autologin_label);
+        autologin_box.append (guest_autologin_switch);
 
         var infobar_reboot = new Gtk.InfoBar () {
             message_type = WARNING,
@@ -35,13 +36,17 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Granite.Sim
         infobar_reboot.add_child (new Gtk.Label (_("Guest session changes will not take effect until you restart your system")));
         infobar_reboot.add_css_class (Granite.STYLE_CLASS_FRAME);
 
-        action_area.append (infobar_reboot);
+        var box = new Gtk.Box (VERTICAL, 24);
+        box.append (autologin_box);
+        box.append (infobar_reboot);
+
+        child = box;
 
         status_switch.active = get_guest_session_state ("show");
 
         guest_autologin_switch.active = get_guest_session_state ("show-autologin");
 
-        status_switch.bind_property ("active", content_area, "sensitive", BindingFlags.DEFAULT);
+        status_switch.bind_property ("active", autologin_box, "sensitive", BindingFlags.DEFAULT);
 
         status_switch.notify["active"].connect (() => {
             if (get_guest_session_state ("show") != status_switch.active) {
