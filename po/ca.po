@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 16:32+0000\n"
-"PO-Revision-Date: 2023-11-14 10:10+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -145,7 +145,7 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
 #: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
-msgstr "No es pot adquirir el permís."
+msgstr "No se'n pot obtenir el permís."
 
 #: src/Views/GuestSettingsView.vala:93
 msgid ""

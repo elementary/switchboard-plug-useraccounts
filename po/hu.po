@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-23 16:32+0000\n"
-"PO-Revision-Date: 2023-12-16 04:07+0000\n"
+"PO-Revision-Date: 2024-02-15 02:35+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -142,7 +142,7 @@ msgstr ""
 #: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
 #: src/Views/MainView.vala:230
 msgid "Unable to acquire permission"
-msgstr "Nem sikerült engedélyt szerezni"
+msgstr "Az engedély megszerzése sikertelen"
 
 #: src/Views/GuestSettingsView.vala:93
 msgid ""
