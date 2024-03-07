@@ -18,7 +18,7 @@
 */
 
 namespace SwitchboardPlugUserAccounts.Widgets {
-    public class UserSettingsView : Gtk.Grid {
+    public class UserSettingsView : Gtk.Box {
         public weak Act.User user { get; construct; }
 
         private UserUtils utils;
@@ -42,8 +42,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.Image user_type_lock;
         private Gtk.Image language_lock;
         private Gtk.Image autologin_lock;
-        private Gtk.Image password_lock;
-        private Gtk.Image enable_lock;
 
         private Gee.HashMap<string, string>? default_regions;
 
@@ -55,6 +53,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public UserSettingsView (Act.User user) {
             Object (user: user);
+        }
+
+        class construct {
+            set_css_name ("simplesettingspage");
         }
 
         construct {
@@ -98,6 +100,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 halign = Gtk.Align.END
             };
 
+            var content_area = new Gtk.Grid () {
+                column_spacing = 6,
+                row_spacing = 6,
+                vexpand = true
+            };
+            content_area.add_css_class ("content-area");
+
             if (user != get_current_user ()) {
                 var renderer = new Gtk.CellRendererText ();
 
@@ -121,8 +130,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     reveal_child = true
                 };
 
-                attach (language_box, 1, 2);
-                attach (region_revealer, 1, 3);
+                content_area.attach (language_box, 1, 2);
+                content_area.attach (region_revealer, 1, 3);
 
                 language_box.changed.connect (() => {
                     Gtk.TreeIter? iter;
@@ -165,7 +174,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     tooltip_text = _("Click to switch to Language & Locale Settings")
                 };
 
-                attach (language_button, 1, 2);
+                content_area.attach (language_button, 1, 2);
             }
 
             var login_label = new Gtk.Label (_("Log In automatically:")) {
@@ -200,7 +209,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             enable_user_button.clicked.connect (change_lock);
 
-            var remove_user_button = new Gtk.Button.with_label (_("Remove User Account")) {
+            var remove_user_button = new Gtk.Button.with_label (_("Remove Account")) {
                 sensitive = false
             };
             remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -227,62 +236,53 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             autologin_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            password_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            password_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            enable_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic");
-            enable_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
             var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
+                margin_start = 6
             };
             remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+            content_area.attach (avatar_button, 0, 0);
+            content_area.attach (full_name_entry, 1, 0);
+            content_area.attach (user_type_label, 0, 1);
+            content_area.attach (user_type_box, 1, 1);
+            content_area.attach (lang_label, 0, 2);
+            content_area.attach (login_label, 0, 4);
+            content_area.attach (autologin_switch, 1, 4);
+            content_area.attach (full_name_lock, 2, 0);
+            content_area.attach (user_type_lock, 2, 1);
+            content_area.attach (language_lock, 2, 2, 1, 2);
+            content_area.attach (autologin_lock, 2, 4);
 
-            column_spacing = 12;
-            row_spacing = 6;
-            halign = CENTER;
-            margin_top = 24;
-            margin_end = 24;
-            margin_bottom = 24;
-            margin_start = 24;
-            attach (avatar_button, 0, 0);
-            attach (full_name_entry, 1, 0);
-            attach (user_type_label, 0, 1);
-            attach (user_type_box, 1, 1);
-            attach (lang_label, 0, 2);
-            attach (login_label, 0, 4);
-            attach (autologin_switch, 1, 4);
-            attach (password_button, 1, 5);
-            attach (enable_user_button, 1, 6);
-            attach (remove_user_button, 1, 7);
-            attach (full_name_lock, 2, 0);
-            attach (user_type_lock, 2, 1);
-            attach (language_lock, 2, 2, 1, 2);
-            attach (autologin_lock, 2, 4);
-            attach (password_lock, 2, 5);
-            attach (enable_lock, 2, 6);
-            attach (remove_lock, 2, 7);
+            var action_area = new Gtk.Box (HORIZONTAL, 0);
+            action_area.append (remove_user_button);
+            action_area.append (enable_user_button);
+            action_area.append (remove_lock);
+            action_area.append (new Gtk.Grid () { hexpand = true });
+            action_area.append (password_button);
+            action_area.add_css_class ("buttonbox");
+
+            margin_top = 12;
+            margin_end = 12;
+            margin_bottom = 12;
+            margin_start = 12;
+            orientation = VERTICAL;
+            append (content_area);
+            append (action_area);
 
             update_ui ();
             update_permission ();
 
             if (get_current_user () == user) {
-                enable_lock.tooltip_text = CURRENT_USER_STRING;
                 user_type_lock.tooltip_text = CURRENT_USER_STRING;
                 remove_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
-                enable_lock.tooltip_text = LAST_ADMIN_STRING;
                 user_type_lock.tooltip_text = LAST_ADMIN_STRING;
                 remove_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
-                enable_lock.set_opacity (0);
 
                 remove_user_button.sensitive = true;
-                remove_lock.set_opacity (0);
+                action_area.remove (remove_lock);
             }
 
             get_permission ().notify["allowed"].connect (update_permission);
@@ -304,7 +304,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 user_type_lock.set_opacity (1);
                 autologin_lock.set_opacity (1);
-                password_lock.set_opacity (1);
 
                 user_type_lock.tooltip_text = NO_PERMISSION_STRING;
             }
@@ -314,13 +313,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 full_name_lock.set_opacity (0);
                 language_lock.set_opacity (0);
 
-                if (!user_locked) {
-                    password_button.sensitive = true;
-                    password_lock.set_opacity (0);
-                } else {
-                    password_button.sensitive = false;
-                    password_lock.set_opacity (1);
-                }
+                password_button.sensitive = !user_locked;
 
                 if (allowed) {
                     if (!user_locked) {
@@ -379,10 +372,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var user_locked = user.get_locked ();
             if (user_locked) {
-                enable_user_button.label = _("Enable User Account");
+                enable_user_button.label = _("Enable Account");
                 enable_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             } else {
-                enable_user_button.label = _("Disable User Account");
+                enable_user_button.label = _("Disable Account");
                 enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
