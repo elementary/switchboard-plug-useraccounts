@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:32+0000\n"
+"POT-Creation-Date: 2024-03-07 15:55+0000\n"
 "PO-Revision-Date: 2021-11-26 02:25+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -86,7 +86,7 @@ msgstr "取消"
 msgid "Standard User"
 msgstr "标准用户"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "管理员"
@@ -125,7 +125,7 @@ msgstr "访客账户允许他人使用一个无密码的临时账户。"
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "注销后，其设置和用户数据将会被删除。"
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
 msgid "Log In automatically:"
 msgstr "自动登录："
 
@@ -189,53 +189,57 @@ msgstr "已启用"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:50
 msgid "You do not have permission to change this"
 msgstr "您没有权限更改此项内容"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:51
 msgid "You cannot change this for the currently active user"
 msgstr "正在使用中的账户无法更改此项"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot remove the last administrator's privileges"
 msgstr "您不能移除上一个管理员的权限"
 
-#: src/Views/UserSettingsView.vala:86
+#: src/Views/UserSettingsView.vala:88
 msgid "Account type:"
 msgstr "账户类型："
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:93
 msgid "Standard"
 msgstr "标准账户"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:99
 msgid "Language:"
 msgstr "账户语言："
 
-#: src/Views/UserSettingsView.vala:165
+#: src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
 msgstr "点击跳转语言和区域设置"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:191
 msgid "Change Password…"
 msgstr "更改密码…"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
 #| msgid "User Accounts"
-msgid "Remove User Account"
+msgid "Remove Account"
 msgstr "用户帐户"
 
-#: src/Views/UserSettingsView.vala:382
-msgid "Enable User Account"
+#: src/Views/UserSettingsView.vala:375
+#, fuzzy
+#| msgid "Enable User Account"
+msgid "Enable Account"
 msgstr "启用账户"
 
-#: src/Views/UserSettingsView.vala:385
-msgid "Disable User Account"
+#: src/Views/UserSettingsView.vala:378
+#, fuzzy
+#| msgid "Disable User Account"
+msgid "Disable Account"
 msgstr "禁用账户"
 
-#: src/Views/UserSettingsView.vala:548
+#: src/Views/UserSettingsView.vala:541
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "无法更改 %s 的密码"

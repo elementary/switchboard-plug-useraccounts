@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:32+0000\n"
+"POT-Creation-Date: 2024-03-07 15:55+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,7 +89,7 @@ msgstr "Ikansela"
 msgid "Standard User"
 msgstr "Standard na User"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Tagapangasiwa"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
 msgid "Log In automatically:"
 msgstr "Awtomatikong mag-log in :"
 
@@ -192,55 +192,59 @@ msgstr "Pinagana"
 msgid "Disabled"
 msgstr "Hindi pinagana"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:50
 msgid "You do not have permission to change this"
 msgstr "Wala kang permiso na baguhin ito"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:51
 msgid "You cannot change this for the currently active user"
 msgstr ""
 "Hindi mo to pwedeng baguhin para sa kasalukuyang aktibong user/gumagamit"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:86
+#: src/Views/UserSettingsView.vala:88
 msgid "Account type:"
 msgstr "Uri ng Account:"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:93
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:99
 msgid "Language:"
 msgstr "Wika:"
 
-#: src/Views/UserSettingsView.vala:165
+#: src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
 msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:191
 #, fuzzy
 msgid "Change Password…"
 msgstr "Palitan ang Password"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
 #| msgid "User Accounts"
-msgid "Remove User Account"
+msgid "Remove Account"
 msgstr "Mga User Account"
 
-#: src/Views/UserSettingsView.vala:382
-msgid "Enable User Account"
+#: src/Views/UserSettingsView.vala:375
+#, fuzzy
+#| msgid "Enable User Account"
+msgid "Enable Account"
 msgstr "Paganahin ang User Account"
 
-#: src/Views/UserSettingsView.vala:385
-msgid "Disable User Account"
+#: src/Views/UserSettingsView.vala:378
+#, fuzzy
+#| msgid "Disable User Account"
+msgid "Disable Account"
 msgstr "Huwag paganahin ang  User account"
 
-#: src/Views/UserSettingsView.vala:548
+#: src/Views/UserSettingsView.vala:541
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

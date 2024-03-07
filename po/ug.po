@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:32+0000\n"
+"POT-Creation-Date: 2024-03-07 15:55+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -90,7 +90,7 @@ msgstr "ئەمەلدىن قالدۇرۇش"
 msgid "Standard User"
 msgstr "ئۆلچەملىك ئابونت"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "باشقۇرغۇچى"
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "چىكىنگەن چاغدا، ئۇلارنىڭ بارلىق تەڭشەكلىرى ۋە ئۇچۇرلىرى ئۆچۈرىلىدۇ."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
 msgid "Log In automatically:"
 msgstr "ئاپتوماتىك كىرىش:"
 
@@ -195,54 +195,58 @@ msgstr "قوزغىتىلغان"
 msgid "Disabled"
 msgstr "چەكلەنگەن"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:50
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:51
 msgid "You cannot change this for the currently active user"
 msgstr "ھازىر ئىشلىتىۋاتقان ئابونت بۇ تۈرنى ئۆزگەرتەلمەيدۇ"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot remove the last administrator's privileges"
 msgstr "سىز ئالدىنقى باشقۇرغۇچىنىڭ ھوقۇقىنى ئۆچۈرەلمەيسىز"
 
-#: src/Views/UserSettingsView.vala:86
+#: src/Views/UserSettingsView.vala:88
 msgid "Account type:"
 msgstr "ھېسابات تىپى:"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:93
 msgid "Standard"
 msgstr "ئۆلچەملىك"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:99
 msgid "Language:"
 msgstr "تىل:"
 
-#: src/Views/UserSettingsView.vala:165
+#: src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
 msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش ئۈچۈن بىسىڭ"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:191
 #, fuzzy
 msgid "Change Password…"
 msgstr "پارولنى ئۆزگەرتىش"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
 #| msgid "User Accounts"
-msgid "Remove User Account"
+msgid "Remove Account"
 msgstr "ئابونت ھىساۋاتلىرى"
 
-#: src/Views/UserSettingsView.vala:382
-msgid "Enable User Account"
+#: src/Views/UserSettingsView.vala:375
+#, fuzzy
+#| msgid "Enable User Account"
+msgid "Enable Account"
 msgstr "ئابونت ھىساۋاتىنى قوزغىتىش"
 
-#: src/Views/UserSettingsView.vala:385
-msgid "Disable User Account"
+#: src/Views/UserSettingsView.vala:378
+#, fuzzy
+#| msgid "Disable User Account"
+msgid "Disable Account"
 msgstr "ئابونت ھىساۋاتىنى چەكلەش"
 
-#: src/Views/UserSettingsView.vala:548
+#: src/Views/UserSettingsView.vala:541
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

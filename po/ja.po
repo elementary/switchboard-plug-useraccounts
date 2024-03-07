@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:32+0000\n"
+"POT-Creation-Date: 2024-03-07 15:55+0000\n"
 "PO-Revision-Date: 2023-11-14 10:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -87,7 +87,7 @@ msgstr "キャンセル"
 msgid "Standard User"
 msgstr "標準ユーザー"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "管理者"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "ログアウトすると、設定やデータは削除されます。"
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
 msgid "Log In automatically:"
 msgstr "自動的にログイン:"
 
@@ -189,51 +189,57 @@ msgstr "有効"
 msgid "Disabled"
 msgstr "無効"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:50
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:51
 msgid "You cannot change this for the currently active user"
 msgstr "現在アクティブなユーザーのため変更できません"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot remove the last administrator's privileges"
 msgstr "管理者が唯一の場合、その権限は削除できません"
 
-#: src/Views/UserSettingsView.vala:86
+#: src/Views/UserSettingsView.vala:88
 msgid "Account type:"
 msgstr "アカウントの種類:"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:93
 msgid "Standard"
 msgstr "標準"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:99
 msgid "Language:"
 msgstr "言語:"
 
-#: src/Views/UserSettingsView.vala:165
+#: src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
 msgstr "“言語と地域の設定”に切り替えるにはクリックしてください"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:191
 msgid "Change Password…"
 msgstr "パスワードを変更…"
 
-#: src/Views/UserSettingsView.vala:203
-msgid "Remove User Account"
+#: src/Views/UserSettingsView.vala:212
+#, fuzzy
+#| msgid "Remove User Account"
+msgid "Remove Account"
 msgstr "ユーザーアカウントを削除"
 
-#: src/Views/UserSettingsView.vala:382
-msgid "Enable User Account"
+#: src/Views/UserSettingsView.vala:375
+#, fuzzy
+#| msgid "Enable User Account"
+msgid "Enable Account"
 msgstr "アカウントを有効にする"
 
-#: src/Views/UserSettingsView.vala:385
-msgid "Disable User Account"
+#: src/Views/UserSettingsView.vala:378
+#, fuzzy
+#| msgid "Disable User Account"
+msgid "Disable Account"
 msgstr "アカウントを無効にする"
 
-#: src/Views/UserSettingsView.vala:548
+#: src/Views/UserSettingsView.vala:541
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s のパスワードを変更できません"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:32+0000\n"
+"POT-Creation-Date: 2024-03-07 15:55+0000\n"
 "PO-Revision-Date: 2023-05-18 21:06+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -87,7 +87,7 @@ msgstr "İptal"
 msgid "Standard User"
 msgstr "Standart Kullanıcı"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:92
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
 #: src/Widgets/UserItem.vala:101
 msgid "Administrator"
 msgstr "Yönetici"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Oturum kapatıldıktan sonra, tüm ayarları ve verileri silinir."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:171
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
 msgid "Log In automatically:"
 msgstr "Otomatik oturum aç:"
 
@@ -196,51 +196,57 @@ msgstr "Etkin"
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:50
 msgid "You do not have permission to change this"
 msgstr "Bunu değiştirmek için izniniz yok"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:51
 msgid "You cannot change this for the currently active user"
 msgstr "Bunu şu anda etkin olan kullanıcı için değiştiremezsiniz"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Son yöneticinin ayrıcalıklarını kaldıramazsınız"
 
-#: src/Views/UserSettingsView.vala:86
+#: src/Views/UserSettingsView.vala:88
 msgid "Account type:"
 msgstr "Hesap türü:"
 
-#: src/Views/UserSettingsView.vala:91
+#: src/Views/UserSettingsView.vala:93
 msgid "Standard"
 msgstr "Standart"
 
-#: src/Views/UserSettingsView.vala:97
+#: src/Views/UserSettingsView.vala:99
 msgid "Language:"
 msgstr "Dil:"
 
-#: src/Views/UserSettingsView.vala:165
+#: src/Views/UserSettingsView.vala:174
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Dil ve Konum Ayarlarına geçiş yapmak için tıklayın"
 
-#: src/Views/UserSettingsView.vala:182
+#: src/Views/UserSettingsView.vala:191
 msgid "Change Password…"
 msgstr "Parolayı Değiştir…"
 
-#: src/Views/UserSettingsView.vala:203
-msgid "Remove User Account"
+#: src/Views/UserSettingsView.vala:212
+#, fuzzy
+#| msgid "Remove User Account"
+msgid "Remove Account"
 msgstr "Kullanıcı Hesabını Kaldır"
 
-#: src/Views/UserSettingsView.vala:382
-msgid "Enable User Account"
+#: src/Views/UserSettingsView.vala:375
+#, fuzzy
+#| msgid "Enable User Account"
+msgid "Enable Account"
 msgstr "Kullanıcı Hesabını Etkinleştir"
 
-#: src/Views/UserSettingsView.vala:385
-msgid "Disable User Account"
+#: src/Views/UserSettingsView.vala:378
+#, fuzzy
+#| msgid "Disable User Account"
+msgid "Disable Account"
 msgstr "Kullanıcı Hesabını Devre Dışı Bırak"
 
-#: src/Views/UserSettingsView.vala:548
+#: src/Views/UserSettingsView.vala:541
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s için parola değiştirilemiyor"
