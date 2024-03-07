@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-07 15:55+0000\n"
-"PO-Revision-Date: 2024-02-08 22:11+0000\n"
+"PO-Revision-Date: 2024-03-09 22:12+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/he/>\n"
@@ -218,22 +218,16 @@ msgid "Change Password…"
 msgstr "החלפת הססמה…"
 
 #: src/Views/UserSettingsView.vala:212
-#, fuzzy
-#| msgid "Remove User Account"
 msgid "Remove Account"
-msgstr "הסרת חשבון משתמש"
+msgstr "הסרת חשבון"
 
 #: src/Views/UserSettingsView.vala:375
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "הפעלת חשבון משתמש"
+msgstr "הפעלת חשבון"
 
 #: src/Views/UserSettingsView.vala:378
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "השבתת חשבון משתמש"
+msgstr "השבתת חשבון"
 
 #: src/Views/UserSettingsView.vala:541
 #, c-format
