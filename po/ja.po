@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-07 15:55+0000\n"
-"PO-Revision-Date: 2023-11-14 10:10+0000\n"
+"PO-Revision-Date: 2024-03-16 23:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -222,20 +222,14 @@ msgid "Change Password…"
 msgstr "パスワードを変更…"
 
 #: src/Views/UserSettingsView.vala:212
-#, fuzzy
-#| msgid "Remove User Account"
 msgid "Remove Account"
-msgstr "ユーザーアカウントを削除"
+msgstr "アカウントを削除"
 
 #: src/Views/UserSettingsView.vala:375
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "アカウントを有効にする"
 
 #: src/Views/UserSettingsView.vala:378
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "アカウントを無効にする"
 
