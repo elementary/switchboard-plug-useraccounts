@@ -32,14 +32,12 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         var remove_button_label = new Gtk.Label (_("Remove")) {
             xalign = 0
         };
-        // FIXME: https://github.com/elementary/stylesheet/issues/1275
-        remove_button_label.add_css_class (Granite.STYLE_CLASS_ACCENT);
-        remove_button_label.add_css_class ("red");
 
         var remove_button = new Gtk.Button () {
             child = remove_button_label
         };
         remove_button.add_css_class (Granite.STYLE_CLASS_MENUITEM);
+        remove_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         var select_button = new Gtk.Button () {
             child = new Gtk.Label (_("Set from File…")) {
