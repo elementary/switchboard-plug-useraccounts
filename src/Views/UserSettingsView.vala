@@ -36,6 +36,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ComboBox region_box;
         private Gtk.Button language_button;
         private Gtk.Switch autologin_switch;
+        private Gtk.InfoBar infobar;
 
         //lock widgets
         private Gtk.Image full_name_lock;
@@ -241,6 +242,19 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+            var lock_button = new Gtk.LockButton (get_permission ());
+
+            var infobar_label = new Gtk.Label (_("Some settings require administrator rights to be changed")) {
+                wrap = true
+            };
+
+            infobar = new Gtk.InfoBar () {
+                message_type = INFO
+            };
+            infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+            infobar.add_action_widget (lock_button, 0);
+            infobar.add_child (infobar_label);
+
             content_area.attach (avatar_button, 0, 0);
             content_area.attach (full_name_entry, 1, 0);
             content_area.attach (user_type_label, 0, 1);
@@ -267,6 +281,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             margin_start = 12;
             orientation = VERTICAL;
             append (content_area);
+            append (infobar);
             append (action_area);
 
             update_ui ();
@@ -296,6 +311,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var current_user = get_current_user () == user;
             var user_locked = user.get_locked ();
             var last_admin = is_last_admin (user);
+
+            infobar.revealed = !allowed;
 
             if (!allowed) {
                 user_type_box.sensitive = false;
