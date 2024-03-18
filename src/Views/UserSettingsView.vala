@@ -56,7 +56,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         }
 
         class construct {
-            set_css_name ("simplesettingspage");
+            set_css_name ("settingspage");
         }
 
         construct {
@@ -85,11 +85,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 utils.change_full_name (full_name_entry.get_text ().strip ());
             });
 
+
+            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
+                margin_start = 6,
+                tooltip_text = NO_PERMISSION_STRING
+            };
+            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+            var header_area = new Gtk.Grid () {
+                halign = CENTER
+            };
+            header_area.attach (avatar_button, 0, 0);
+            header_area.attach (full_name_entry, 1, 0);
+            header_area.attach (full_name_lock, 2, 0);
+            header_area.add_css_class ("header-area");
+
+            var headerbar = new Gtk.CenterBox () {
+                center_widget = header_area
+            };
+
+            var window_handle = new Gtk.WindowHandle () {
+                child = headerbar
+            };
+
             var user_type_label = new Gtk.Label (_("Account type:")) {
                 halign = Gtk.Align.END
             };
 
-            user_type_box = new Gtk.ComboBoxText ();
+            user_type_box = new Gtk.ComboBoxText () {
+                hexpand = true
+            };
             user_type_box.append_text (_("Standard"));
             user_type_box.append_text (_("Administrator"));
             user_type_box.changed.connect (() => {
@@ -100,12 +125,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 halign = Gtk.Align.END
             };
 
-            var content_area = new Gtk.Grid () {
+            var content_grid = new Gtk.Grid () {
                 column_spacing = 6,
-                row_spacing = 6,
-                vexpand = true
+                row_spacing = 6
             };
-            content_area.add_css_class ("content-area");
 
             if (user != get_current_user ()) {
                 var renderer = new Gtk.CellRendererText ();
@@ -130,8 +153,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     reveal_child = true
                 };
 
-                content_area.attach (language_box, 1, 2);
-                content_area.attach (region_revealer, 1, 3);
+                content_grid.attach (language_box, 1, 2);
+                content_grid.attach (region_revealer, 1, 3);
 
                 language_box.changed.connect (() => {
                     Gtk.TreeIter? iter;
@@ -174,7 +197,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     tooltip_text = _("Click to switch to Language & Locale Settings")
                 };
 
-                content_area.attach (language_button, 1, 2);
+                content_grid.attach (language_button, 1, 2);
             }
 
             var login_label = new Gtk.Label (_("Log In automatically:")) {
@@ -215,11 +238,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
-            full_name_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
             user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 tooltip_text = NO_PERMISSION_STRING
             };
@@ -241,19 +259,29 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            content_area.attach (avatar_button, 0, 0);
-            content_area.attach (full_name_entry, 1, 0);
-            content_area.attach (user_type_label, 0, 1);
-            content_area.attach (user_type_box, 1, 1);
-            content_area.attach (lang_label, 0, 2);
-            content_area.attach (login_label, 0, 4);
-            content_area.attach (autologin_switch, 1, 4);
-            content_area.attach (full_name_lock, 2, 0);
-            content_area.attach (user_type_lock, 2, 1);
-            content_area.attach (language_lock, 2, 2, 1, 2);
-            content_area.attach (autologin_lock, 2, 4);
+            content_grid.attach (user_type_label, 0, 1);
+            content_grid.attach (user_type_box, 1, 1);
+            content_grid.attach (lang_label, 0, 2);
+            content_grid.attach (login_label, 0, 4);
+            content_grid.attach (autologin_switch, 1, 4);
+            content_grid.attach (user_type_lock, 2, 1);
+            content_grid.attach (language_lock, 2, 2, 1, 2);
+            content_grid.attach (autologin_lock, 2, 4);
 
-            var action_area = new Gtk.Box (HORIZONTAL, 0);
+            var content_area = new Adw.Clamp () {
+                child = content_grid,
+                maximum_size = 600,
+                tightening_threshold = 600,
+                vexpand = true
+            };
+            content_area.add_css_class ("content-area");
+
+            var action_area = new Gtk.Box (HORIZONTAL, 0) {
+                margin_top = 12,
+                margin_end = 12,
+                margin_bottom = 12,
+                margin_start = 12
+            };
             action_area.append (remove_user_button);
             action_area.append (enable_user_button);
             action_area.append (remove_lock);
@@ -261,13 +289,21 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             action_area.append (password_button);
             action_area.add_css_class ("buttonbox");
 
-            margin_top = 12;
-            margin_end = 12;
-            margin_bottom = 12;
-            margin_start = 12;
-            orientation = VERTICAL;
-            append (content_area);
-            append (action_area);
+            var size_group = new Gtk.SizeGroup (HORIZONTAL);
+            size_group.add_widget (header_area);
+            size_group.add_widget (content_area);
+
+            var scrolled = new Gtk.ScrolledWindow () {
+                child = content_area,
+                hscrollbar_policy = NEVER
+            };
+
+            var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            box.append (window_handle);
+            box.append (scrolled);
+            box.append (action_area);
+
+            append (box);
 
             update_ui ();
             update_permission ();
