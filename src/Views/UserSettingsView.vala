@@ -65,7 +65,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             default_regions = get_default_regions ();
 
-            avatar = new Adw.Avatar (64, user.real_name, true);
+            avatar = new Adw.Avatar (48, user.real_name, true);
 
             var avatar_popover = new AvatarPopover (user, utils);
             avatar_popover.add_css_class (Granite.STYLE_CLASS_MENU);
