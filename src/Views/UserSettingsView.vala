@@ -100,8 +100,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             header_area.attach (full_name_lock, 2, 0);
             header_area.add_css_class ("header-area");
 
+            var end_widget = new Gtk.WindowControls (END) {
+                valign = START
+            };
+
             var headerbar = new Gtk.CenterBox () {
-                center_widget = header_area
+                center_widget = header_area,
+                end_widget = end_widget
             };
 
             var window_handle = new Gtk.WindowHandle () {
