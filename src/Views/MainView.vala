@@ -14,6 +14,11 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private Gtk.Label guest_description_label;
 
     construct {
+        var headerbar = new Adw.HeaderBar () {
+            show_end_title_buttons = false,
+            show_title = false
+        };
+
         listbox = new Gtk.ListBox () {
             selection_mode = SINGLE,
             vexpand = true
@@ -50,6 +55,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             top_bar_style = FLAT,
             bottom_bar_style = RAISED
         };
+        toolbarview.add_top_bar (headerbar);
         toolbarview.add_bottom_bar (actionbar);
 
         var sidebar = new Sidebar ();
