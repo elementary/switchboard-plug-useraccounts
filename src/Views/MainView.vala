@@ -14,8 +14,14 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
     private Gtk.Label guest_description_label;
 
     construct {
+        var headerbar = new Adw.HeaderBar () {
+            show_end_title_buttons = false,
+            show_title = false
+        };
+
         listbox = new Gtk.ListBox () {
-            selection_mode = SINGLE
+            selection_mode = SINGLE,
+            vexpand = true
         };
         listbox.set_header_func (update_headers);
 
@@ -25,8 +31,6 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         var scrolled_window = new Gtk.ScrolledWindow () {
             child = listbox,
-            hexpand = true,
-            vexpand = true,
             hscrollbar_policy = NEVER
         };
 
@@ -38,55 +42,41 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         var button_add = new Gtk.Button () {
             child = add_button_box,
-            has_frame = false,
-            margin_top = 3,
-            margin_bottom = 3
+            has_frame = false
         };
 
         add_button_label.mnemonic_widget = button_add;
 
         var actionbar = new Gtk.ActionBar ();
-        actionbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         actionbar.pack_start (button_add);
 
-        var sidebar = new Gtk.Box (VERTICAL, 0);
-        sidebar.append (scrolled_window);
-        sidebar.append (actionbar);
+        var toolbarview = new Adw.ToolbarView () {
+            content = scrolled_window,
+            top_bar_style = FLAT,
+            bottom_bar_style = RAISED
+        };
+        toolbarview.add_top_bar (headerbar);
+        toolbarview.add_bottom_bar (actionbar);
+
+        var sidebar = new Sidebar ();
+        sidebar.append (toolbarview);
 
         guest = new GuestSettingsView ();
 
-        var lock_button = new Gtk.LockButton (get_permission ());
-
-        var infobar = new Gtk.InfoBar () {
-            message_type = INFO,
-            revealed = !get_permission ().allowed
-        };
-        infobar.add_action_widget (lock_button, 0);
-        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-
-        get_permission ().notify["allowed"].connect (() => {
-            infobar.revealed = !get_permission ().allowed;
-        });
-
         content = new Gtk.Stack ();
         content.add_named (guest, "guest_session");
-
-        var box = new Gtk.Box (VERTICAL, 0);
-        box.append (infobar);
-        box.append (content);
 
         toast = new Granite.Toast ("");
         toast.set_default_action (_("Undo"));
 
         var overlay = new Gtk.Overlay () {
-            child = box
+            child = content
         };
         overlay.add_overlay (toast);
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
             end_child = overlay,
-            position = 240,
             resize_start_child = false,
             shrink_start_child = false,
             shrink_end_child = false
@@ -96,7 +86,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         //only build the guest session list entry / row when lightDM is the display manager
         if (get_display_manager () == "lightdm") {
-            var avatar = new Adw.Avatar (32, null, false);
+            var avatar = new Adw.Avatar (32, null, false) {
+                margin_start = 3
+            };
 
             // We want to use the user's accent, not a random color
             unowned var avatar_context = avatar.get_first_child ();
@@ -126,11 +118,7 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             guest_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
             var row_grid = new Gtk.Grid () {
-                column_spacing = 12,
-                margin_top = 6,
-                margin_end = 6,
-                margin_bottom = 6,
-                margin_start = 12
+                column_spacing = 9
             };
             row_grid.attach (avatar, 0, 0, 1, 2);
             row_grid.attach (full_name_label, 1, 0);
@@ -311,6 +299,17 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             guest_description_label.label = _("Enabled");
         } else {
             guest_description_label.label = _("Disabled");
+        }
+    }
+
+    // Workaround to set styles
+    private class Sidebar : Gtk.Box {
+        class construct {
+            set_css_name ("settingssidebar");
+        }
+
+        construct {
+            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }

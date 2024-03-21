@@ -41,6 +41,7 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Switchboard
         box.append (infobar_reboot);
 
         child = box;
+        show_end_title_buttons = true;
 
         status_switch.active = get_guest_session_state ("show");
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-07 15:55+0000\n"
-"PO-Revision-Date: 2024-02-15 02:35+0000\n"
+"PO-Revision-Date: 2024-03-18 23:13+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/hu/>\n"
@@ -226,22 +226,16 @@ msgid "Change Password…"
 msgstr "Jelszó megváltoztatása…"
 
 #: src/Views/UserSettingsView.vala:212
-#, fuzzy
-#| msgid "Remove User Account"
 msgid "Remove Account"
-msgstr "Felhasználói fiók eltávolítása"
+msgstr "Fiók eltávolítása"
 
 #: src/Views/UserSettingsView.vala:375
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "Felhasználói fiók engedélyezése"
+msgstr "Fiók engedélyezése"
 
 #: src/Views/UserSettingsView.vala:378
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "Felhasználói fiók letiltása"
+msgstr "Fiók letiltása"
 
 #: src/Views/UserSettingsView.vala:541
 #, c-format
