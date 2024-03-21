@@ -44,11 +44,7 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
         };
         username_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        avatar = new Adw.Avatar (32, user.real_name, true) {
-            margin_top = 6,
-            margin_end = 12,
-            margin_bottom = 6
-        };
+        avatar = new Adw.Avatar (32, user.real_name, true);
 
         var lock_image = new Gtk.Image.from_icon_name ("locked") {
             halign = END,
@@ -66,10 +62,7 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
         };
         overlay.add_overlay (lock_revealer);
 
-        var grid = new Gtk.Grid () {
-            margin_end = 12,
-            margin_start = 12
-        };
+        var grid = new Gtk.Grid ();
         grid.attach (overlay, 0, 0, 1, 2);
         grid.attach (full_name_label, 1, 0);
         grid.attach (username_label, 1, 1);
