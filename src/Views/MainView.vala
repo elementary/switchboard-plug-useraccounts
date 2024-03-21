@@ -63,31 +63,14 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         guest = new GuestSettingsView ();
 
-        var lock_button = new Gtk.LockButton (get_permission ());
-
-        var infobar = new Gtk.InfoBar () {
-            message_type = INFO,
-            revealed = !get_permission ().allowed
-        };
-        infobar.add_action_widget (lock_button, 0);
-        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-
-        get_permission ().notify["allowed"].connect (() => {
-            infobar.revealed = !get_permission ().allowed;
-        });
-
         content = new Gtk.Stack ();
         content.add_named (guest, "guest_session");
-
-        var box = new Gtk.Box (VERTICAL, 0);
-        box.append (infobar);
-        box.append (content);
 
         toast = new Granite.Toast ("");
         toast.set_default_action (_("Undo"));
 
         var overlay = new Gtk.Overlay () {
-            child = box
+            child = content
         };
         overlay.add_overlay (toast);
 
