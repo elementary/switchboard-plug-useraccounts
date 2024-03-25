@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-07 15:55+0000\n"
-"PO-Revision-Date: 2024-02-08 22:11+0000\n"
+"PO-Revision-Date: 2024-03-26 22:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/pt/>\n"
@@ -230,22 +230,16 @@ msgid "Change Password…"
 msgstr "Alterar palavra-passe…"
 
 #: src/Views/UserSettingsView.vala:212
-#, fuzzy
-#| msgid "Remove User Account"
 msgid "Remove Account"
-msgstr "Remover conta de utilizador"
+msgstr "Remover conta"
 
 #: src/Views/UserSettingsView.vala:375
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "Ativar Conta de Utilizador"
+msgstr "Ativar conta"
 
 #: src/Views/UserSettingsView.vala:378
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "Desativar Conta de Utilizador"
+msgstr "Desativar conta"
 
 #: src/Views/UserSettingsView.vala:541
 #, c-format
