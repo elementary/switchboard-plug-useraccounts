@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-07 15:55+0000\n"
-"PO-Revision-Date: 2024-01-14 19:11+0000\n"
+"PO-Revision-Date: 2024-03-29 05:13+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ka/>\n"
@@ -224,22 +224,16 @@ msgid "Change Password…"
 msgstr "პაროლის შეცვლა…"
 
 #: src/Views/UserSettingsView.vala:212
-#, fuzzy
-#| msgid "Remove User Account"
 msgid "Remove Account"
-msgstr "მომხმარებლის ანგარიშის წაშლა"
+msgstr "ანგარიშის წაშლა"
 
 #: src/Views/UserSettingsView.vala:375
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "მომხმარებლის ანგარიშის ჩართვა"
+msgstr "ანგარიშის ჩართვა"
 
 #: src/Views/UserSettingsView.vala:378
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "მომხმარებლის ანგარიშის გამორთვა"
+msgstr "ანგარიშის გამორთვა"
 
 #: src/Views/UserSettingsView.vala:541
 #, c-format
