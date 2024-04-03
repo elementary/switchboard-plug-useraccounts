@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 15:55+0000\n"
+"POT-Creation-Date: 2024-04-03 17:12+0000\n"
 "PO-Revision-Date: 2019-05-14 20:41+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -52,7 +52,7 @@ msgid "Change Password"
 msgstr "Keisti slaptažodį"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:118
+#: src/Views/MainView.vala:110
 msgid "Guest Session"
 msgstr "Svečio seansas"
 
@@ -81,7 +81,7 @@ msgid "Authentication failed"
 msgstr "Tapatybės nustatymas nepavyko"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:87
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -89,8 +89,8 @@ msgstr "Atsisakyti"
 msgid "Standard User"
 msgstr "Standartinis naudotojas"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
-#: src/Widgets/UserItem.vala:101
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administratorius"
 
@@ -132,121 +132,121 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Asmeniui atsijungus, visi jo nustatymai ir duomenys bus ištrinti."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
 msgid "Log In automatically:"
 msgstr "Prisijungti automatiškai:"
 
-#: src/Views/GuestSettingsView.vala:35
+#: src/Views/GuestSettingsView.vala:36
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Svečio seanso pakeitimai neįsigalios tol, kol iš naujo nepaleisite savo "
 "sistemos"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
-#: src/Views/MainView.vala:230
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
+#: src/Views/MainView.vala:218
 msgid "Unable to acquire permission"
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:93
+#: src/Views/GuestSettingsView.vala:99
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:22
+#: src/Views/MainView.vala:28
 msgid "My Account"
 msgstr "Mano paskyra"
 
-#: src/Views/MainView.vala:24
+#: src/Views/MainView.vala:30
 msgid "Other Accounts"
 msgstr "Kitos paskyros"
 
-#: src/Views/MainView.vala:33
+#: src/Views/MainView.vala:37
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Sukurti naudotojo paskyrą"
 
-#: src/Views/MainView.vala:65
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
-
-#: src/Views/MainView.vala:79
+#: src/Views/MainView.vala:70
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/Views/MainView.vala:164
+#: src/Views/MainView.vala:152
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:231
+#: src/Views/MainView.vala:219
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:253
+#: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:311
+#: src/Views/MainView.vala:299
 msgid "Enabled"
 msgstr "Įjungta"
 
-#: src/Views/MainView.vala:313
+#: src/Views/MainView.vala:301
 msgid "Disabled"
 msgstr "Išjungta"
 
-#: src/Views/UserSettingsView.vala:50
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Jūs neturite leidimų tai pakeisti"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Jūs negalite to keisti šiuo metu prisijungusiam aktyviam naudotojui"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Jūs negalite pašalinti paskutiniojo administratoriaus teisių"
 
-#: src/Views/UserSettingsView.vala:88
+#: src/Views/UserSettingsView.vala:117
 msgid "Account type:"
 msgstr "Paskyros tipas:"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:124
 msgid "Standard"
 msgstr "Standartinė"
 
-#: src/Views/UserSettingsView.vala:99
+#: src/Views/UserSettingsView.vala:130
 msgid "Language:"
 msgstr "Kalba:"
 
-#: src/Views/UserSettingsView.vala:174
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Spustelėkite, kad pereitumėte į kalbos ir lokalės nustatymus"
 
-#: src/Views/UserSettingsView.vala:191
+#: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "Keisti slaptažodį…"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:241
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Naudotojų paskyros"
 
-#: src/Views/UserSettingsView.vala:375
+#: src/Views/UserSettingsView.vala:287
+msgid "Some settings require administrator rights to be changed"
+msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
+
+#: src/Views/UserSettingsView.vala:435
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Įjungti naudotojo paskyrą"
 
-#: src/Views/UserSettingsView.vala:378
+#: src/Views/UserSettingsView.vala:438
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Išjungti naudotojo paskyrą"
 
-#: src/Views/UserSettingsView.vala:541
+#: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -255,19 +255,19 @@ msgstr ""
 msgid "Remove"
 msgstr "Šalinti"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:45
+#: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
 msgstr "Nustatyti iš failo…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Images"
 msgstr "Paveikslai"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:83
+#: src/Widgets/Popovers/AvatarPopover.vala:81
 msgid "Select an image"
 msgstr "Pasirinkite paveikslą"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:86
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "Atverti"
 

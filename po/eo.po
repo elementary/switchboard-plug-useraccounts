@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 15:55+0000\n"
+"POT-Creation-Date: 2024-04-03 17:12+0000\n"
 "PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -50,7 +50,7 @@ msgid "Change Password"
 msgstr "Modifi pasvorton"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:118
+#: src/Views/MainView.vala:110
 msgid "Guest Session"
 msgstr "Gasta seanco"
 
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "Aŭtentigo fiaskis"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:87
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "Rezigni"
 
@@ -87,8 +87,8 @@ msgstr "Rezigni"
 msgid "Standard User"
 msgstr "Normala uzanto"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
-#: src/Widgets/UserItem.vala:101
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administranto"
 
@@ -127,119 +127,119 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Post elsaluto, ĉiuj gastaj agordoj kaj datumoj forviŝiĝos."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
 msgid "Log In automatically:"
 msgstr "Aŭtomate ensaluti:"
 
-#: src/Views/GuestSettingsView.vala:35
+#: src/Views/GuestSettingsView.vala:36
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Gastaj seancaj ŝanĝoj efektiviĝos post restarto de la sistemo"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
-#: src/Views/MainView.vala:230
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
+#: src/Views/MainView.vala:218
 msgid "Unable to acquire permission"
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:93
+#: src/Views/GuestSettingsView.vala:99
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:22
+#: src/Views/MainView.vala:28
 msgid "My Account"
 msgstr "Mia konto"
 
-#: src/Views/MainView.vala:24
+#: src/Views/MainView.vala:30
 msgid "Other Accounts"
 msgstr "Aliaj kontoj"
 
-#: src/Views/MainView.vala:33
+#: src/Views/MainView.vala:37
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Krei uzanto-konton"
 
-#: src/Views/MainView.vala:65
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
-
-#: src/Views/MainView.vala:79
+#: src/Views/MainView.vala:70
 msgid "Undo"
 msgstr "Malfari"
 
-#: src/Views/MainView.vala:164
+#: src/Views/MainView.vala:152
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:231
+#: src/Views/MainView.vala:219
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:253
+#: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:311
+#: src/Views/MainView.vala:299
 msgid "Enabled"
 msgstr "Ebligita"
 
-#: src/Views/MainView.vala:313
+#: src/Views/MainView.vala:301
 msgid "Disabled"
 msgstr "Malaktivigita"
 
-#: src/Views/UserSettingsView.vala:50
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Vi ne havas la permeson ŝanĝi tion"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Neeblas ŝanĝi tion por la nun aktiva uzanto"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Neeblas forigi la permesojn de la lasta administranto"
 
-#: src/Views/UserSettingsView.vala:88
+#: src/Views/UserSettingsView.vala:117
 msgid "Account type:"
 msgstr "Konta tipo:"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:124
 msgid "Standard"
 msgstr "Normala"
 
-#: src/Views/UserSettingsView.vala:99
+#: src/Views/UserSettingsView.vala:130
 msgid "Language:"
 msgstr "Lingvo:"
 
-#: src/Views/UserSettingsView.vala:174
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klaku por baskuli la lingvon kaj regionajn agordojn"
 
-#: src/Views/UserSettingsView.vala:191
+#: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "Ŝanĝi pasvorton…"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:241
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Uzantokontoj"
 
-#: src/Views/UserSettingsView.vala:375
+#: src/Views/UserSettingsView.vala:287
+msgid "Some settings require administrator rights to be changed"
+msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
+
+#: src/Views/UserSettingsView.vala:435
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Ebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:378
+#: src/Views/UserSettingsView.vala:438
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Malebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:541
+#: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -248,19 +248,19 @@ msgstr ""
 msgid "Remove"
 msgstr "Forigi"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:45
+#: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
 msgstr "Starigi per dosiero…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Images"
 msgstr "Bildoj"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:83
+#: src/Widgets/Popovers/AvatarPopover.vala:81
 msgid "Select an image"
 msgstr "Elekti bildon"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:86
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "Malfermi"
 

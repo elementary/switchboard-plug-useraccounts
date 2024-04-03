@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 15:55+0000\n"
+"POT-Creation-Date: 2024-04-03 17:12+0000\n"
 "PO-Revision-Date: 2024-03-16 23:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -50,7 +50,7 @@ msgid "Change Password"
 msgstr "パスワードを変更"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:118
+#: src/Views/MainView.vala:110
 msgid "Guest Session"
 msgstr "ゲストセッション"
 
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:87
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -87,8 +87,8 @@ msgstr "キャンセル"
 msgid "Standard User"
 msgstr "標準ユーザー"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
-#: src/Widgets/UserItem.vala:101
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "管理者"
 
@@ -129,111 +129,111 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "ログアウトすると、設定やデータは削除されます。"
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
 msgid "Log In automatically:"
 msgstr "自動的にログイン:"
 
-#: src/Views/GuestSettingsView.vala:35
+#: src/Views/GuestSettingsView.vala:36
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "ゲストセッションの変更は、再起動後に反映されます"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
-#: src/Views/MainView.vala:230
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
+#: src/Views/MainView.vala:218
 msgid "Unable to acquire permission"
 msgstr "権限を取得できません"
 
-#: src/Views/GuestSettingsView.vala:93
+#: src/Views/GuestSettingsView.vala:99
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "必要なシステム権限がないと、ゲストアカウントを編集できません。"
 
-#: src/Views/MainView.vala:22
+#: src/Views/MainView.vala:28
 msgid "My Account"
 msgstr "自分のアカウント"
 
-#: src/Views/MainView.vala:24
+#: src/Views/MainView.vala:30
 msgid "Other Accounts"
 msgstr "ほかのアカウント"
 
-#: src/Views/MainView.vala:33
+#: src/Views/MainView.vala:37
 msgid "Create User Account…"
 msgstr "ユーザーアカウントを作成…"
 
-#: src/Views/MainView.vala:65
-msgid "Some settings require administrator rights to be changed"
-msgstr "一部の設定変更には管理者権限が必要です"
-
-#: src/Views/MainView.vala:79
+#: src/Views/MainView.vala:70
 msgid "Undo"
 msgstr "元に戻す"
 
-#: src/Views/MainView.vala:164
+#: src/Views/MainView.vala:152
 msgid "A new account cannot be created without the required system permission."
 msgstr "必要なシステム権限がないと、新しいアカウントを作成できません。"
 
-#: src/Views/MainView.vala:231
+#: src/Views/MainView.vala:219
 msgid "An account cannot be removed without the required system permission."
 msgstr "必要なシステム権限がないと、アカウントを削除できません。"
 
-#: src/Views/MainView.vala:253
+#: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” を削除しました"
 
-#: src/Views/MainView.vala:311
+#: src/Views/MainView.vala:299
 msgid "Enabled"
 msgstr "有効"
 
-#: src/Views/MainView.vala:313
+#: src/Views/MainView.vala:301
 msgid "Disabled"
 msgstr "無効"
 
-#: src/Views/UserSettingsView.vala:50
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "現在アクティブなユーザーのため変更できません"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "管理者が唯一の場合、その権限は削除できません"
 
-#: src/Views/UserSettingsView.vala:88
+#: src/Views/UserSettingsView.vala:117
 msgid "Account type:"
 msgstr "アカウントの種類:"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:124
 msgid "Standard"
 msgstr "標準"
 
-#: src/Views/UserSettingsView.vala:99
+#: src/Views/UserSettingsView.vala:130
 msgid "Language:"
 msgstr "言語:"
 
-#: src/Views/UserSettingsView.vala:174
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Locale Settings"
 msgstr "“言語と地域の設定”に切り替えるにはクリックしてください"
 
-#: src/Views/UserSettingsView.vala:191
+#: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "パスワードを変更…"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:241
 msgid "Remove Account"
 msgstr "アカウントを削除"
 
-#: src/Views/UserSettingsView.vala:375
+#: src/Views/UserSettingsView.vala:287
+msgid "Some settings require administrator rights to be changed"
+msgstr "一部の設定変更には管理者権限が必要です"
+
+#: src/Views/UserSettingsView.vala:435
 msgid "Enable Account"
 msgstr "アカウントを有効にする"
 
-#: src/Views/UserSettingsView.vala:378
+#: src/Views/UserSettingsView.vala:438
 msgid "Disable Account"
 msgstr "アカウントを無効にする"
 
-#: src/Views/UserSettingsView.vala:541
+#: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s のパスワードを変更できません"
@@ -242,19 +242,19 @@ msgstr "%s のパスワードを変更できません"
 msgid "Remove"
 msgstr "削除"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:45
+#: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
 msgstr "ファイルから設定…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Images"
 msgstr "画像"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:83
+#: src/Widgets/Popovers/AvatarPopover.vala:81
 msgid "Select an image"
 msgstr "画像を選択"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:86
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "開く"
 

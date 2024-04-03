@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 15:55+0000\n"
+"POT-Creation-Date: 2024-04-03 17:12+0000\n"
 "PO-Revision-Date: 2023-12-05 02:10+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -51,7 +51,7 @@ msgid "Change Password"
 msgstr "Passwort ändern"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:118
+#: src/Views/MainView.vala:110
 msgid "Guest Session"
 msgstr "Gastsitzung"
 
@@ -80,7 +80,7 @@ msgid "Authentication failed"
 msgstr "Legitimierung fehlgeschlagen"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:87
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -88,8 +88,8 @@ msgstr "Abbrechen"
 msgid "Standard User"
 msgstr "Standardbenutzer"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
-#: src/Widgets/UserItem.vala:101
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Systemverwalter"
 
@@ -133,119 +133,119 @@ msgstr ""
 "Nach dem Beenden der Gastsitzung werden alle Einstellungen und Daten "
 "gelöscht."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
 msgid "Log In automatically:"
 msgstr "Automatische Anmeldung:"
 
-#: src/Views/GuestSettingsView.vala:35
+#: src/Views/GuestSettingsView.vala:36
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "Änderungen an der Gastsitzung werden erst nach einem Neustart wirksam"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
-#: src/Views/MainView.vala:230
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
+#: src/Views/MainView.vala:218
 msgid "Unable to acquire permission"
 msgstr "Zugriffsrecht nicht erhalten"
 
-#: src/Views/GuestSettingsView.vala:93
+#: src/Views/GuestSettingsView.vala:99
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "Das Gastkonto kann nur mit Systemzugriffsrechten geändert werden."
 
-#: src/Views/MainView.vala:22
+#: src/Views/MainView.vala:28
 msgid "My Account"
 msgstr "Mein Konto"
 
-#: src/Views/MainView.vala:24
+#: src/Views/MainView.vala:30
 msgid "Other Accounts"
 msgstr "Weitere Konten"
 
-#: src/Views/MainView.vala:33
+#: src/Views/MainView.vala:37
 msgid "Create User Account…"
 msgstr "Benutzerkonto erstellen …"
 
-#: src/Views/MainView.vala:65
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Bei einigen Einstellungen werden Systemverwalterberechtigungen benötigt, um "
-"sie ändern zu können"
-
-#: src/Views/MainView.vala:79
+#: src/Views/MainView.vala:70
 msgid "Undo"
 msgstr "Rückgängig"
 
-#: src/Views/MainView.vala:164
+#: src/Views/MainView.vala:152
 msgid "A new account cannot be created without the required system permission."
 msgstr "Neue Konten können nur mit Systemzugriffsrechten angelegt werden."
 
-#: src/Views/MainView.vala:231
+#: src/Views/MainView.vala:219
 msgid "An account cannot be removed without the required system permission."
 msgstr "Konten können nur mit Systemzugriffsrechten gelöscht werden."
 
-#: src/Views/MainView.vala:253
+#: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
 msgstr "»%s« entfernt"
 
-#: src/Views/MainView.vala:311
+#: src/Views/MainView.vala:299
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: src/Views/MainView.vala:313
+#: src/Views/MainView.vala:301
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: src/Views/UserSettingsView.vala:50
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Sie können dies nicht für den aktuell angemeldeten Benutzer ändern"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Sie können dem einzigen Systemverwalter nicht die Rechte entziehen"
 
-#: src/Views/UserSettingsView.vala:88
+#: src/Views/UserSettingsView.vala:117
 msgid "Account type:"
 msgstr "Kontotyp:"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:124
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:99
+#: src/Views/UserSettingsView.vala:130
 msgid "Language:"
 msgstr "Sprache:"
 
-#: src/Views/UserSettingsView.vala:174
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Mit einem Klick zur Systemeinstellung »Sprache & Region« wechseln"
 
-#: src/Views/UserSettingsView.vala:191
+#: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "Passwort ändern …"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:241
 #, fuzzy
 #| msgid "Remove User Account"
 msgid "Remove Account"
 msgstr "Benutzerkonto entfernen"
 
-#: src/Views/UserSettingsView.vala:375
+#: src/Views/UserSettingsView.vala:287
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Bei einigen Einstellungen werden Systemverwalterberechtigungen benötigt, um "
+"sie ändern zu können"
+
+#: src/Views/UserSettingsView.vala:435
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Benutzerkonto aktivieren"
 
-#: src/Views/UserSettingsView.vala:378
+#: src/Views/UserSettingsView.vala:438
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Benutzerkonto deaktvieren"
 
-#: src/Views/UserSettingsView.vala:541
+#: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Änderung des Passworts für %s nicht möglich"
@@ -254,19 +254,19 @@ msgstr "Änderung des Passworts für %s nicht möglich"
 msgid "Remove"
 msgstr "Entfernen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:45
+#: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
 msgstr "Bild auswählen …"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Images"
 msgstr "Bilder"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:83
+#: src/Widgets/Popovers/AvatarPopover.vala:81
 msgid "Select an image"
 msgstr "Bild auswählen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:86
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "Öffnen"
 

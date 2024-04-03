@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 15:55+0000\n"
+"POT-Creation-Date: 2024-04-03 17:12+0000\n"
 "PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -52,7 +52,7 @@ msgid "Change Password"
 msgstr "Endre passord"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:118
+#: src/Views/MainView.vala:110
 msgid "Guest Session"
 msgstr "Gjesteøkt"
 
@@ -81,7 +81,7 @@ msgid "Authentication failed"
 msgstr "Autentisering mislyktes"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:87
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -89,8 +89,8 @@ msgstr "Avbryt"
 msgid "Standard User"
 msgstr "Standard bruker"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:94
-#: src/Widgets/UserItem.vala:101
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -129,122 +129,122 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Når de logger ut, vil alle deres innstillinger og data bli slettet."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:180
+#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
 msgid "Log In automatically:"
 msgstr "Logg på automatisk:"
 
-#: src/Views/GuestSettingsView.vala:35
+#: src/Views/GuestSettingsView.vala:36
 msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr ""
 "Endringer for gjesteøkt vil ikke tre i kraft før du starter systemet på nytt"
 
-#: src/Views/GuestSettingsView.vala:92 src/Views/MainView.vala:163
-#: src/Views/MainView.vala:230
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
+#: src/Views/MainView.vala:218
 #, fuzzy
 msgid "Unable to acquire permission"
 msgstr "Fikk ikke tilgang"
 
-#: src/Views/GuestSettingsView.vala:93
+#: src/Views/GuestSettingsView.vala:99
 #, fuzzy
 #| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
 
-#: src/Views/MainView.vala:22
+#: src/Views/MainView.vala:28
 msgid "My Account"
 msgstr "Min konto"
 
-#: src/Views/MainView.vala:24
+#: src/Views/MainView.vala:30
 msgid "Other Accounts"
 msgstr "Andre kontoer"
 
-#: src/Views/MainView.vala:33
+#: src/Views/MainView.vala:37
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "Lag brukerkonto …"
 
-#: src/Views/MainView.vala:65
-msgid "Some settings require administrator rights to be changed"
-msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
-
-#: src/Views/MainView.vala:79
+#: src/Views/MainView.vala:70
 msgid "Undo"
 msgstr "Angre"
 
-#: src/Views/MainView.vala:164
+#: src/Views/MainView.vala:152
 msgid "A new account cannot be created without the required system permission."
 msgstr "En ny konto kan ikke opprettes uten påkrevd systemtilgang."
 
-#: src/Views/MainView.vala:231
+#: src/Views/MainView.vala:219
 msgid "An account cannot be removed without the required system permission."
 msgstr "En konto kan ikke fjernes uten påkrevd systemtilgang."
 
-#: src/Views/MainView.vala:253
+#: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
 msgstr "Fjernet «%s»"
 
-#: src/Views/MainView.vala:311
+#: src/Views/MainView.vala:299
 msgid "Enabled"
 msgstr "Påslått"
 
-#: src/Views/MainView.vala:313
+#: src/Views/MainView.vala:301
 msgid "Disabled"
 msgstr "Slått av"
 
-#: src/Views/UserSettingsView.vala:50
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Du har ikke rettigheter til å endre dette"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Du kan ikke endre dette for den aktive bruker"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Du kan ikke fjerne den siste administrators rettigheter"
 
-#: src/Views/UserSettingsView.vala:88
+#: src/Views/UserSettingsView.vala:117
 msgid "Account type:"
 msgstr "Kontotype:"
 
-#: src/Views/UserSettingsView.vala:93
+#: src/Views/UserSettingsView.vala:124
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:99
+#: src/Views/UserSettingsView.vala:130
 msgid "Language:"
 msgstr "Språk:"
 
-#: src/Views/UserSettingsView.vala:174
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Locale Settings"
 msgstr "Klikk for å endre språk og innstillinger for region"
 
-#: src/Views/UserSettingsView.vala:191
+#: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "Endre passord…"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:241
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Brukerkontoer"
 
-#: src/Views/UserSettingsView.vala:375
+#: src/Views/UserSettingsView.vala:287
+msgid "Some settings require administrator rights to be changed"
+msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
+
+#: src/Views/UserSettingsView.vala:435
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Skru på brukerkonto"
 
-#: src/Views/UserSettingsView.vala:378
+#: src/Views/UserSettingsView.vala:438
 #, fuzzy
 msgid "Disable Account"
 msgstr "Steng brukerkonto"
 
-#: src/Views/UserSettingsView.vala:541
+#: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Kunne ikke endre passordet for %s"
@@ -253,19 +253,19 @@ msgstr "Kunne ikke endre passordet for %s"
 msgid "Remove"
 msgstr "Fjern"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:45
+#: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
 msgstr "Sett fra fil…"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:77
+#: src/Widgets/Popovers/AvatarPopover.vala:75
 msgid "Images"
 msgstr "Bilder"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:83
+#: src/Widgets/Popovers/AvatarPopover.vala:81
 msgid "Select an image"
 msgstr "Velg et bilde"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:86
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "Åpne"
 
