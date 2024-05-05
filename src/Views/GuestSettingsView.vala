@@ -47,7 +47,7 @@ public class SwitchboardPlugUserAccounts.Widgets.GuestSettingsView : Switchboard
 
         guest_autologin_switch.active = get_guest_session_state ("show-autologin");
 
-        status_switch.bind_property ("active", autologin_box, "sensitive", BindingFlags.DEFAULT);
+        status_switch.bind_property ("active", autologin_box, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
 
         status_switch.notify["active"].connect (() => {
             if (get_guest_session_state ("show") != status_switch.active) {
