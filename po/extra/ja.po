@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:12+0000\n"
-"PO-Revision-Date: 2022-04-09 01:40+0000\n"
+"PO-Revision-Date: 2024-05-27 14:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -71,7 +71,7 @@ msgstr "パフォーマンスの改善"
 
 #: data/useraccounts.metainfo.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
-msgstr "非 Ubuntu ベースのディストリビューションへの対応を強化"
+msgstr "非 Ubuntu ベースのディストリビューションへの対応を改善"
 
 #: data/useraccounts.metainfo.xml.in:49
 msgid "Minor updates:"
