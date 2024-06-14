@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:12+0000\n"
-"PO-Revision-Date: 2021-07-15 13:41+0000\n"
-"Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
-"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/es/>\n"
+"PO-Revision-Date: 2024-06-14 03:33+0000\n"
+"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -52,7 +52,7 @@ msgstr "Traducciones actualizadas"
 
 #: data/useraccounts.metainfo.xml.in:21 data/useraccounts.metainfo.xml.in:33
 msgid "Fixes:"
-msgstr ""
+msgstr "Correcciones:"
 
 #: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
 #, fuzzy
