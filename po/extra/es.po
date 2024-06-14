@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:12+0000\n"
-"PO-Revision-Date: 2024-06-14 03:33+0000\n"
+"PO-Revision-Date: 2024-06-15 19:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/es/>\n"
@@ -29,7 +29,7 @@ msgstr "Necesita autenticarse para cambiar los datos de usuario"
 
 #: data/useraccounts.metainfo.xml.in:5
 msgid "User Accounts Settings"
-msgstr "Configuración de cuentas de usuario"
+msgstr "Configuración de Cuentas de usuario"
 
 #: data/useraccounts.metainfo.xml.in:6
 msgid ""
@@ -41,7 +41,7 @@ msgstr ""
 #: data/useraccounts.metainfo.xml.in:12 data/useraccounts.metainfo.xml.in:25
 #: data/useraccounts.metainfo.xml.in:38
 msgid "Improvements:"
-msgstr ""
+msgstr "Mejoras:"
 
 #: data/useraccounts.metainfo.xml.in:14 data/useraccounts.metainfo.xml.in:27
 #: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:55
@@ -55,26 +55,28 @@ msgid "Fixes:"
 msgstr "Correcciones:"
 
 #: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
-#, fuzzy
-#| msgid "Get permission on demand for enabling or disabling accounts"
 msgid "Update permissions when enabling and disabling accounts"
-msgstr "Se obtiene permiso bajo petición para activar o desactivar cuentas"
+msgstr "Se actualizaron los permisos al activar o desactivar cuentas"
 
 #: data/useraccounts.metainfo.xml.in:35
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
+"Se garantiza mostrar información de usuario actualizada en la barra lateral "
+"cuando ocurren cambios"
 
 #: data/useraccounts.metainfo.xml.in:40
 msgid "Support locales with 3-letter codes"
-msgstr ""
+msgstr "Se agregó soporte de regiones usando códigos de tres letras"
 
 #: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
 msgid "Performance improvements"
-msgstr ""
+msgstr "Mejoras de rendimiento"
 
 #: data/useraccounts.metainfo.xml.in:42
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
+"Se mejoró la compatibilidad con distribuciones de Linux que no sean de tipo "
+"Ubuntu"
 
 #: data/useraccounts.metainfo.xml.in:49
 msgid "Minor updates:"
@@ -82,15 +84,15 @@ msgstr "Actualizaciones menores:"
 
 #: data/useraccounts.metainfo.xml.in:51
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Nuevo y colorido avatar predeterminado"
 
 #: data/useraccounts.metainfo.xml.in:53
 msgid "Improved tooltips and labels"
-msgstr ""
+msgstr "Se mejoraron los mensajes emergentes y etiquetas"
 
 #: data/useraccounts.metainfo.xml.in:54
 msgid "Fix possible crash when deleting an account"
-msgstr ""
+msgstr "Se corrigió una posible falla grave al eliminar una cuenta"
 
 #: data/useraccounts.metainfo.xml.in:69
 msgid "Show more accurate reasons for locked settings"
@@ -107,11 +109,11 @@ msgstr "Se obtiene permiso bajo petición para activar o desactivar cuentas"
 
 #: data/useraccounts.metainfo.xml.in:79
 msgid "Show in sidebar if an account is disabled"
-msgstr "Mostrar en la barra lateral si una cuenta está desactivada"
+msgstr "Se muestra en la barra lateral si una cuenta está desactivada"
 
 #: data/useraccounts.metainfo.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
-msgstr "Solicitar permiso al añadir y eliminar cuentas"
+msgstr "Se solicitan permisos al añadir y eliminar cuentas"
 
 #: data/useraccounts.metainfo.xml.in:81
 msgid "Animate Infobars"
