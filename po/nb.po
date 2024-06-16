@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:12+0000\n"
-"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"PO-Revision-Date: 2024-06-17 00:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/nb/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:43+0000\n"
 
 #: src/Plug.vala:37
@@ -224,10 +224,8 @@ msgid "Change Password…"
 msgstr "Endre passord…"
 
 #: src/Views/UserSettingsView.vala:241
-#, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
-msgstr "Brukerkontoer"
+msgstr "Fjern konto"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Some settings require administrator rights to be changed"
