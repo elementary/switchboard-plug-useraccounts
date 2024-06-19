@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:12+0000\n"
-"PO-Revision-Date: 2024-05-27 14:13+0000\n"
+"PO-Revision-Date: 2024-06-19 21:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -63,7 +63,7 @@ msgstr "サイドバーに表示されるユーザー情報が変更時に更新
 
 #: data/useraccounts.metainfo.xml.in:40
 msgid "Support locales with 3-letter codes"
-msgstr "言語コードが3文字のロケールに対応"
+msgstr "言語コードが 3 文字のロケールに対応"
 
 #: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
 msgid "Performance improvements"
@@ -105,8 +105,7 @@ msgstr ""
 
 #: data/useraccounts.metainfo.xml.in:79
 msgid "Show in sidebar if an account is disabled"
-msgstr ""
-"アカウントが無効になっている場合は、サイドバーに ”無効” と表示するように修正"
+msgstr "アカウントが無効になっている場合は、サイドバーに”無効”と表示するように修正"
 
 #: data/useraccounts.metainfo.xml.in:80
 msgid "Ask for permission when adding and removing accounts"
