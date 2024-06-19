@@ -200,7 +200,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             } else {
                 language_button = new Gtk.LinkButton.with_label ("settings://language", "Language") {
                     halign = Gtk.Align.START,
-                    tooltip_text = _("Click to switch to Language & Locale Settings")
+                    tooltip_text = _("Click to switch to Language & Region Settings")
                 };
 
                 content_grid.attach (language_button, 1, 2);
