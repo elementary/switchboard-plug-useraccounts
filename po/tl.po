@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:12+0000\n"
+"POT-Creation-Date: 2024-06-19 21:02+0000\n"
 "PO-Revision-Date: 2016-07-11 20:15+0000\n"
 "Last-Translator: yavinfour <anjelo.passionist@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -214,7 +214,9 @@ msgid "Language:"
 msgstr "Wika:"
 
 #: src/Views/UserSettingsView.vala:203
-msgid "Click to switch to Language & Locale Settings"
+#, fuzzy
+#| msgid "Click to switch to Language & Locale Settings"
+msgid "Click to switch to Language & Region Settings"
 msgstr "I-click para lumipat sa Settings ng Wika at Lokal"
 
 #: src/Views/UserSettingsView.vala:220

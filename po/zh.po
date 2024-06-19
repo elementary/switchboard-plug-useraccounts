@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:12+0000\n"
+"POT-Creation-Date: 2024-06-19 21:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -196,7 +196,7 @@ msgid "Language:"
 msgstr ""
 
 #: src/Views/UserSettingsView.vala:203
-msgid "Click to switch to Language & Locale Settings"
+msgid "Click to switch to Language & Region Settings"
 msgstr ""
 
 #: src/Views/UserSettingsView.vala:220

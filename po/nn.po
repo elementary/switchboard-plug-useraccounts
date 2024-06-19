@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:12+0000\n"
+"POT-Creation-Date: 2024-06-19 21:02+0000\n"
 "PO-Revision-Date: 2019-01-06 22:27+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -212,7 +212,9 @@ msgid "Language:"
 msgstr "Språk:"
 
 #: src/Views/UserSettingsView.vala:203
-msgid "Click to switch to Language & Locale Settings"
+#, fuzzy
+#| msgid "Click to switch to Language & Locale Settings"
+msgid "Click to switch to Language & Region Settings"
 msgstr "Klikk for å endre språk og innstillingar for region"
 
 #: src/Views/UserSettingsView.vala:220

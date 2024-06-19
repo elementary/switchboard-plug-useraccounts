@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:12+0000\n"
+"POT-Creation-Date: 2024-06-19 21:02+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -211,7 +211,9 @@ msgid "Language:"
 msgstr "भाषा:"
 
 #: src/Views/UserSettingsView.vala:203
-msgid "Click to switch to Language & Locale Settings"
+#, fuzzy
+#| msgid "Click to switch to Language & Locale Settings"
+msgid "Click to switch to Language & Region Settings"
 msgstr "भाषा आणि लोकॅल सेटिंग्जवर स्विच करण्यासाठी क्लिक करा"
 
 #: src/Views/UserSettingsView.vala:220

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:12+0000\n"
+"POT-Creation-Date: 2024-06-19 21:02+0000\n"
 "PO-Revision-Date: 2016-12-24 14:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: \n"
@@ -215,7 +215,9 @@ msgid "Language:"
 msgstr "تىل:"
 
 #: src/Views/UserSettingsView.vala:203
-msgid "Click to switch to Language & Locale Settings"
+#, fuzzy
+#| msgid "Click to switch to Language & Locale Settings"
+msgid "Click to switch to Language & Region Settings"
 msgstr "تىل ۋە يەرلىك تەڭشەكلەرنى ئالماشتۇرۇش ئۈچۈن بىسىڭ"
 
 #: src/Views/UserSettingsView.vala:220
