@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 21:02+0000\n"
-"PO-Revision-Date: 2024-06-19 21:02+0000\n"
+"PO-Revision-Date: 2024-06-20 22:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ja/>\n"
@@ -210,8 +210,6 @@ msgid "Language:"
 msgstr "言語:"
 
 #: src/Views/UserSettingsView.vala:203
-#, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "“言語と地域の設定”に切り替えるにはクリックしてください"
 
