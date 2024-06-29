@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 21:02+0000\n"
-"PO-Revision-Date: 2024-06-24 14:16+0000\n"
+"PO-Revision-Date: 2024-06-30 14:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/es/>\n"
@@ -89,7 +89,7 @@ msgstr "Nuevo y colorido avatar predeterminado"
 
 #: data/useraccounts.metainfo.xml.in:53
 msgid "Improved tooltips and labels"
-msgstr "Se mejoraron los mensajes emergentes y etiquetas"
+msgstr "Se mejoraron las descripciones emergentes y etiquetas"
 
 #: data/useraccounts.metainfo.xml.in:54
 msgid "Fix possible crash when deleting an account"
