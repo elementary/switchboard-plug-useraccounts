@@ -29,6 +29,21 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.0" date="2024-07-09" urgency="medium">
+      <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Improved screen reader accessibility</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-useraccounts/issues/114">Avatar dialog: doesn't read rotation data </issue>
+        <issue url="https://github.com/elementary/switchboard-plug-useraccounts/issues/144">Strip leading and trailing spaces from Real Name</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-useraccounts/issues/225">Auto login switch of guest session is sensitive on load even if guest session is disabled</issue>
+      </issues>
+    </release>
+
     <release version="2.4.3" date="2022-10-20" urgency="medium">
       <description>
         <p>Improvements:</p>
@@ -81,14 +96,7 @@
       </description>
     </release>
 
-    <release version="2.3.2" date="2020-09-02" urgency="medium">
-      <description>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-
+    <release version="2.3.2" date="2020-09-02" urgency="medium" />
     <release version="2.3.1" date="2020-04-08" urgency="medium" />
     <release version="2.3.0" date="2019-11-15" urgency="medium" />
   </releases>
