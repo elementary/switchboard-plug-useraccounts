@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 18:49+0000\n"
-"PO-Revision-Date: 2024-06-19 21:02+0000\n"
+"PO-Revision-Date: 2024-07-10 20:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: data/useraccounts.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:49
 #: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:76
@@ -48,7 +48,7 @@ msgstr "改善点:"
 
 #: data/useraccounts.metainfo.xml.in:36
 msgid "Improved screen reader accessibility"
-msgstr ""
+msgstr "スクリーンリーダーのアクセシビリティを改善"
 
 #: data/useraccounts.metainfo.xml.in:37 data/useraccounts.metainfo.xml.in:51
 #: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:81
