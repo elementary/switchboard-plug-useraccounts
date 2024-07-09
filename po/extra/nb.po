@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 21:02+0000\n"
+"POT-Creation-Date: 2024-07-09 18:33+0000\n"
 "PO-Revision-Date: 2024-02-10 18:59+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -27,89 +27,86 @@ msgstr "Håndter brukerkontoer"
 msgid "Authentication is required to change user data"
 msgstr "Identitetsbekreftelse kreves for å endre brukerdata"
 
-#: data/useraccounts.metainfo.xml.in:5
+#: data/useraccounts.metainfo.xml.in:10
 msgid "User Accounts Settings"
 msgstr "Brukerkontoinnstillinger"
 
-#: data/useraccounts.metainfo.xml.in:6
+#: data/useraccounts.metainfo.xml.in:11
 #, fuzzy
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "Håndter kontotilganger og sett opp brukernavn, passord, og bilder."
 
-#: data/useraccounts.metainfo.xml.in:12 data/useraccounts.metainfo.xml.in:25
-#: data/useraccounts.metainfo.xml.in:38
+#: data/useraccounts.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:47
+#: data/useraccounts.metainfo.xml.in:61
 msgid "Improvements:"
 msgstr "Forbedringer:"
 
-#: data/useraccounts.metainfo.xml.in:14 data/useraccounts.metainfo.xml.in:27
-#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:55
-#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:72
-#: data/useraccounts.metainfo.xml.in:82
+#: data/useraccounts.metainfo.xml.in:36 data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:66 data/useraccounts.metainfo.xml.in:79
+#: data/useraccounts.metainfo.xml.in:87
 msgid "Updated translations"
 msgstr "Oppdaterte oversettelser"
 
-#: data/useraccounts.metainfo.xml.in:21 data/useraccounts.metainfo.xml.in:33
+#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:56
 msgid "Fixes:"
 msgstr "Fikser:"
 
-#: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
+#: data/useraccounts.metainfo.xml.in:45 data/useraccounts.metainfo.xml.in:59
 #, fuzzy
 msgid "Update permissions when enabling and disabling accounts"
 msgstr "Oppdater tilganger ved aktivering og deaktivering av kontoer"
 
-#: data/useraccounts.metainfo.xml.in:35
+#: data/useraccounts.metainfo.xml.in:58
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr "Forsikre deg om at infoen i sidefeltet oppdateres seg ved endringer"
 
-#: data/useraccounts.metainfo.xml.in:40
+#: data/useraccounts.metainfo.xml.in:63
 msgid "Support locales with 3-letter codes"
 msgstr "Støtte for lokaliteter med 3-bokstavskoder"
 
-#: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
+#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:76
 msgid "Performance improvements"
 msgstr "Ytelsesforbedringer"
 
-#: data/useraccounts.metainfo.xml.in:42
+#: data/useraccounts.metainfo.xml.in:65
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Bedre støtte for distribusjoner som ikke er basert på Ubuntu"
 
-#: data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:73
 msgid "Minor updates:"
 msgstr "Småoppdateringer:"
 
-#: data/useraccounts.metainfo.xml.in:51
+#: data/useraccounts.metainfo.xml.in:75
 msgid "New colorful avatar fallback"
 msgstr "Nytt fargerik avatar-tilbakefall"
 
-#: data/useraccounts.metainfo.xml.in:53
+#: data/useraccounts.metainfo.xml.in:77
 msgid "Improved tooltips and labels"
 msgstr "Forbedret verktøyrips og etiketter"
 
-#: data/useraccounts.metainfo.xml.in:54
+#: data/useraccounts.metainfo.xml.in:78
 msgid "Fix possible crash when deleting an account"
 msgstr "Fikset mulig krasj ved sletting av konto"
 
-#: data/useraccounts.metainfo.xml.in:69
-msgid "Show more accurate reasons for locked settings"
-msgstr "Vis mer nøyaktig grunn for låste innstillinger"
+#~ msgid "Show more accurate reasons for locked settings"
+#~ msgstr "Vis mer nøyaktig grunn for låste innstillinger"
 
-#: data/useraccounts.metainfo.xml.in:70
-msgid "Improve reliability of account creation"
-msgstr "Forbedret lesbarhet ved kontoopprettelse"
+#~ msgid "Improve reliability of account creation"
+#~ msgstr "Forbedret lesbarhet ved kontoopprettelse"
 
-#: data/useraccounts.metainfo.xml.in:71
-msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Hent tilgang ved behov for aktivering og deaktivering av kontoer"
+#~ msgid "Get permission on demand for enabling or disabling accounts"
+#~ msgstr "Hent tilgang ved behov for aktivering og deaktivering av kontoer"
 
-#: data/useraccounts.metainfo.xml.in:79
-msgid "Show in sidebar if an account is disabled"
-msgstr "Vis at konto er deaktivert i sidefelt"
+#~ msgid "Show in sidebar if an account is disabled"
+#~ msgstr "Vis at konto er deaktivert i sidefelt"
 
-#: data/useraccounts.metainfo.xml.in:80
-msgid "Ask for permission when adding and removing accounts"
-msgstr "Forespør tilgang ved tillegg og fjerning av kontoer"
+#~ msgid "Ask for permission when adding and removing accounts"
+#~ msgstr "Forespør tilgang ved tillegg og fjerning av kontoer"
 
-#: data/useraccounts.metainfo.xml.in:81
-msgid "Animate Infobars"
-msgstr "Animerte infofelt"
+#~ msgid "Animate Infobars"
+#~ msgstr "Animerte infofelt"

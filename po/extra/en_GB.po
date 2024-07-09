@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 21:02+0000\n"
+"POT-Creation-Date: 2024-07-09 18:33+0000\n"
 "PO-Revision-Date: 2021-11-16 14:59+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -27,88 +27,85 @@ msgstr "Manage user accounts"
 msgid "Authentication is required to change user data"
 msgstr "Authentication is required to change user data"
 
-#: data/useraccounts.metainfo.xml.in:5
+#: data/useraccounts.metainfo.xml.in:10
 msgid "User Accounts Settings"
 msgstr "User Accounts Settings"
 
-#: data/useraccounts.metainfo.xml.in:6
+#: data/useraccounts.metainfo.xml.in:11
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr ""
 "Manage account permissions and configure user names, passwords, and photos"
 
-#: data/useraccounts.metainfo.xml.in:12 data/useraccounts.metainfo.xml.in:25
-#: data/useraccounts.metainfo.xml.in:38
+#: data/useraccounts.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:47
+#: data/useraccounts.metainfo.xml.in:61
 msgid "Improvements:"
 msgstr "Improvements:"
 
-#: data/useraccounts.metainfo.xml.in:14 data/useraccounts.metainfo.xml.in:27
-#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:55
-#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:72
-#: data/useraccounts.metainfo.xml.in:82
+#: data/useraccounts.metainfo.xml.in:36 data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:66 data/useraccounts.metainfo.xml.in:79
+#: data/useraccounts.metainfo.xml.in:87
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/useraccounts.metainfo.xml.in:21 data/useraccounts.metainfo.xml.in:33
+#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:56
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/useraccounts.metainfo.xml.in:23 data/useraccounts.metainfo.xml.in:36
+#: data/useraccounts.metainfo.xml.in:45 data/useraccounts.metainfo.xml.in:59
 msgid "Update permissions when enabling and disabling accounts"
 msgstr "Update permissions when enabling and disabling accounts"
 
-#: data/useraccounts.metainfo.xml.in:35
+#: data/useraccounts.metainfo.xml.in:58
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr "Ensure user information in sidebar updates upon changes"
 
-#: data/useraccounts.metainfo.xml.in:40
+#: data/useraccounts.metainfo.xml.in:63
 msgid "Support locales with 3-letter codes"
 msgstr "Support locales with 3-letter codes"
 
-#: data/useraccounts.metainfo.xml.in:41 data/useraccounts.metainfo.xml.in:52
+#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:76
 msgid "Performance improvements"
 msgstr "Performance improvements"
 
-#: data/useraccounts.metainfo.xml.in:42
+#: data/useraccounts.metainfo.xml.in:65
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Better support for non-Ubuntu based distributions"
 
-#: data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:73
 msgid "Minor updates:"
 msgstr "Minor updates:"
 
-#: data/useraccounts.metainfo.xml.in:51
+#: data/useraccounts.metainfo.xml.in:75
 msgid "New colorful avatar fallback"
 msgstr "New colourful avatar fallback"
 
-#: data/useraccounts.metainfo.xml.in:53
+#: data/useraccounts.metainfo.xml.in:77
 msgid "Improved tooltips and labels"
 msgstr "Improved tooltips and labels"
 
-#: data/useraccounts.metainfo.xml.in:54
+#: data/useraccounts.metainfo.xml.in:78
 msgid "Fix possible crash when deleting an account"
 msgstr "Fix possible crash when deleting an account"
 
-#: data/useraccounts.metainfo.xml.in:69
-msgid "Show more accurate reasons for locked settings"
-msgstr "Show more accurate reasons for locked settings"
+#~ msgid "Show more accurate reasons for locked settings"
+#~ msgstr "Show more accurate reasons for locked settings"
 
-#: data/useraccounts.metainfo.xml.in:70
-msgid "Improve reliability of account creation"
-msgstr "Improve reliability of account creation"
+#~ msgid "Improve reliability of account creation"
+#~ msgstr "Improve reliability of account creation"
 
-#: data/useraccounts.metainfo.xml.in:71
-msgid "Get permission on demand for enabling or disabling accounts"
-msgstr "Get permission on demand for enabling or disabling accounts"
+#~ msgid "Get permission on demand for enabling or disabling accounts"
+#~ msgstr "Get permission on demand for enabling or disabling accounts"
 
-#: data/useraccounts.metainfo.xml.in:79
-msgid "Show in sidebar if an account is disabled"
-msgstr "Show in sidebar if an account is disabled"
+#~ msgid "Show in sidebar if an account is disabled"
+#~ msgstr "Show in sidebar if an account is disabled"
 
-#: data/useraccounts.metainfo.xml.in:80
-msgid "Ask for permission when adding and removing accounts"
-msgstr "Ask for permission when adding and removing accounts"
+#~ msgid "Ask for permission when adding and removing accounts"
+#~ msgstr "Ask for permission when adding and removing accounts"
 
-#: data/useraccounts.metainfo.xml.in:81
-msgid "Animate Infobars"
-msgstr "Animate Infobars"
+#~ msgid "Animate Infobars"
+#~ msgstr "Animate Infobars"
