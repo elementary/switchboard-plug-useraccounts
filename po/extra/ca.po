@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:33+0000\n"
+"POT-Creation-Date: 2024-07-09 18:49+0000\n"
 "PO-Revision-Date: 2021-11-10 18:29+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/user-"
@@ -42,56 +42,60 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:47
-#: data/useraccounts.metainfo.xml.in:61
+#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:76
 msgid "Improvements:"
 msgstr "Millores:"
 
-#: data/useraccounts.metainfo.xml.in:36 data/useraccounts.metainfo.xml.in:49
-#: data/useraccounts.metainfo.xml.in:66 data/useraccounts.metainfo.xml.in:79
-#: data/useraccounts.metainfo.xml.in:87
+#: data/useraccounts.metainfo.xml.in:36
+msgid "Improved screen reader accessibility"
+msgstr ""
+
+#: data/useraccounts.metainfo.xml.in:37 data/useraccounts.metainfo.xml.in:51
+#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:81
+#: data/useraccounts.metainfo.xml.in:94
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:56
+#: data/useraccounts.metainfo.xml.in:58 data/useraccounts.metainfo.xml.in:71
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/useraccounts.metainfo.xml.in:45 data/useraccounts.metainfo.xml.in:59
+#: data/useraccounts.metainfo.xml.in:60 data/useraccounts.metainfo.xml.in:74
 msgid "Update permissions when enabling and disabling accounts"
 msgstr "S'actualitzen els permisos en habilitar o inhabilitar comptes."
 
-#: data/useraccounts.metainfo.xml.in:58
+#: data/useraccounts.metainfo.xml.in:73
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 "Assegura la informació de l’usuari a les actualitzacions de la barra lateral "
 "en fer canvis"
 
-#: data/useraccounts.metainfo.xml.in:63
+#: data/useraccounts.metainfo.xml.in:78
 msgid "Support locales with 3-letter codes"
 msgstr "S'admeten codis de llengua de tres lletres."
 
-#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:76
+#: data/useraccounts.metainfo.xml.in:79 data/useraccounts.metainfo.xml.in:91
 msgid "Performance improvements"
 msgstr "Millores de rendiment"
 
-#: data/useraccounts.metainfo.xml.in:65
+#: data/useraccounts.metainfo.xml.in:80
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "Millor suport per a distribucions no basades en l'Ubuntu"
 
-#: data/useraccounts.metainfo.xml.in:73
+#: data/useraccounts.metainfo.xml.in:88
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
-#: data/useraccounts.metainfo.xml.in:75
+#: data/useraccounts.metainfo.xml.in:90
 msgid "New colorful avatar fallback"
 msgstr "Avatar acolorit alternatiu nou"
 
-#: data/useraccounts.metainfo.xml.in:77
+#: data/useraccounts.metainfo.xml.in:92
 msgid "Improved tooltips and labels"
 msgstr "Descripcions emergents i etiquetes millorades"
 
-#: data/useraccounts.metainfo.xml.in:78
+#: data/useraccounts.metainfo.xml.in:93
 msgid "Fix possible crash when deleting an account"
 msgstr "Correcció d'un possible bloqueig en suprimir un compte"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:33+0000\n"
+"POT-Creation-Date: 2024-07-09 18:49+0000\n"
 "PO-Revision-Date: 2024-06-19 21:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -41,54 +41,58 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:47
-#: data/useraccounts.metainfo.xml.in:61
+#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:49
+#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:76
 msgid "Improvements:"
 msgstr "改善点:"
 
-#: data/useraccounts.metainfo.xml.in:36 data/useraccounts.metainfo.xml.in:49
-#: data/useraccounts.metainfo.xml.in:66 data/useraccounts.metainfo.xml.in:79
-#: data/useraccounts.metainfo.xml.in:87
+#: data/useraccounts.metainfo.xml.in:36
+msgid "Improved screen reader accessibility"
+msgstr ""
+
+#: data/useraccounts.metainfo.xml.in:37 data/useraccounts.metainfo.xml.in:51
+#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:81
+#: data/useraccounts.metainfo.xml.in:94
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/useraccounts.metainfo.xml.in:43 data/useraccounts.metainfo.xml.in:56
+#: data/useraccounts.metainfo.xml.in:58 data/useraccounts.metainfo.xml.in:71
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/useraccounts.metainfo.xml.in:45 data/useraccounts.metainfo.xml.in:59
+#: data/useraccounts.metainfo.xml.in:60 data/useraccounts.metainfo.xml.in:74
 msgid "Update permissions when enabling and disabling accounts"
 msgstr "アカウントの有効化時および無効化時に権限を更新するように変更"
 
-#: data/useraccounts.metainfo.xml.in:58
+#: data/useraccounts.metainfo.xml.in:73
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr "サイドバーに表示されるユーザー情報が変更時に更新されるように修正"
 
-#: data/useraccounts.metainfo.xml.in:63
+#: data/useraccounts.metainfo.xml.in:78
 msgid "Support locales with 3-letter codes"
 msgstr "言語コードが 3 文字のロケールに対応"
 
-#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:76
+#: data/useraccounts.metainfo.xml.in:79 data/useraccounts.metainfo.xml.in:91
 msgid "Performance improvements"
 msgstr "パフォーマンスの改善"
 
-#: data/useraccounts.metainfo.xml.in:65
+#: data/useraccounts.metainfo.xml.in:80
 msgid "Better support for non-Ubuntu based distributions"
 msgstr "非 Ubuntu ベースのディストリビューションへの対応を改善"
 
-#: data/useraccounts.metainfo.xml.in:73
+#: data/useraccounts.metainfo.xml.in:88
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/useraccounts.metainfo.xml.in:75
+#: data/useraccounts.metainfo.xml.in:90
 msgid "New colorful avatar fallback"
 msgstr "アバター画像未設定時に背景を色付きで表示するように変更"
 
-#: data/useraccounts.metainfo.xml.in:77
+#: data/useraccounts.metainfo.xml.in:92
 msgid "Improved tooltips and labels"
 msgstr "ツールチップとラベルのテキストを改善"
 
-#: data/useraccounts.metainfo.xml.in:78
+#: data/useraccounts.metainfo.xml.in:93
 msgid "Fix possible crash when deleting an account"
 msgstr "アカウント削除時にクラッシュすることがある不具合を修正"
 
