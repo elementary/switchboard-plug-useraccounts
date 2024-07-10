@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 18:49+0000\n"
-"PO-Revision-Date: 2021-11-30 18:29+0000\n"
+"PO-Revision-Date: 2024-07-10 20:16+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/sk/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:37
@@ -144,11 +144,10 @@ msgid "Unable to acquire permission"
 msgstr "Nedarí sa získať oprávnenie"
 
 #: src/Views/GuestSettingsView.vala:99
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "Nie je možné odstrániť účet bez požadovaných systémových oprávnení."
+msgstr ""
+"Nie je možné upraviť účet hosťa bez požadovaného systémového oprávnenia."
 
 #: src/Views/MainView.vala:28
 msgid "My Account"
@@ -159,8 +158,6 @@ msgid "Other Accounts"
 msgstr "Ostatné účty"
 
 #: src/Views/MainView.vala:37
-#, fuzzy
-#| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "Vytvoriť používateľský účet…"
 
@@ -215,8 +212,6 @@ msgid "Language:"
 msgstr "Jazyk:"
 
 #: src/Views/UserSettingsView.vala:203
-#, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Kliknite pre prepnutie do nastavení Jazyka a oblastí"
 
@@ -225,26 +220,20 @@ msgid "Change Password…"
 msgstr "Zmeniť heslo…"
 
 #: src/Views/UserSettingsView.vala:241
-#, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
-msgstr "Používateľské účty"
+msgstr "Odstrániť účet"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
 #: src/Views/UserSettingsView.vala:435
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "Aktivovať používateľský účet"
+msgstr "Aktivovať účet"
 
 #: src/Views/UserSettingsView.vala:438
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "Deaktivovať používateľský účet"
+msgstr "Deaktivovať účet"
 
 #: src/Views/UserSettingsView.vala:601
 #, c-format
