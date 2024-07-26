@@ -1,3 +1,9 @@
+io.elementary.settings.useraccounts (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:39:38 -0700
+
 io.elementary.settings.useraccounts (2.4.3) bionic; urgency=medium
 
   * Release 2.4.3 (#188)
