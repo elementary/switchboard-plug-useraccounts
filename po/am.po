@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 18:49+0000\n"
-"PO-Revision-Date: 2019-10-17 17:24+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Amharic <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/am/>\n"
 "Language: am\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: src/Plug.vala:37
@@ -80,7 +80,7 @@ msgstr ""
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
 #: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
-msgstr ""
+msgstr "መሰረዣ"
 
 #: src/Dialogs/NewUserDialog.vala:18
 msgid "Standard User"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
-msgstr ""
+msgstr "ማስወገጃ"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:43
 msgid "Set from File…"
