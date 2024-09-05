@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 18:49+0000\n"
-"PO-Revision-Date: 2020-03-01 14:09+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:37
@@ -140,11 +140,9 @@ msgid "Unable to acquire permission"
 msgstr "無法取得許可"
 
 #: src/Views/GuestSettingsView.vala:99
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "無法在未獲得系統許可的情況下移除帳號。"
+msgstr "無法在未獲得系統許可的情況下變更訪客帳號。"
 
 #: src/Views/MainView.vala:28
 msgid "My Account"
@@ -155,10 +153,8 @@ msgid "Other Accounts"
 msgstr "其他帳號"
 
 #: src/Views/MainView.vala:37
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create User Account…"
-msgstr "建立使用者帳號"
+msgstr "建立使用者帳號…"
 
 #: src/Views/MainView.vala:70
 msgid "Undo"
@@ -175,7 +171,7 @@ msgstr "無法在未獲得系統許可的情況下移除帳號。"
 #: src/Views/MainView.vala:241
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "已移除「%s」"
 
 #: src/Views/MainView.vala:299
 msgid "Enabled"
@@ -210,41 +206,33 @@ msgid "Language:"
 msgstr "語言："
 
 #: src/Views/UserSettingsView.vala:203
-#, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
-msgstr "點按以切換到「語言和區域」設定值"
+msgstr "點擊以切換到「語言和地區」設定值"
 
 #: src/Views/UserSettingsView.vala:220
 msgid "Change Password…"
 msgstr "變更密碼…"
 
 #: src/Views/UserSettingsView.vala:241
-#, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
-msgstr "使用者帳號"
+msgstr "移除帳號"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
 #: src/Views/UserSettingsView.vala:435
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "啟用使用者帳號"
+msgstr "啟用帳號"
 
 #: src/Views/UserSettingsView.vala:438
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "停用使用者帳號"
+msgstr "停用帳號"
 
 #: src/Views/UserSettingsView.vala:601
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "無法變更 %s 的密碼"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
