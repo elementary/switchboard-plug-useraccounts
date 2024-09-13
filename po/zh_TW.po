@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 18:49+0000\n"
-"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hant/>\n"
@@ -137,7 +137,7 @@ msgstr "訪客作業階段直到您重新啟動系統後才會生效"
 #: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
 #: src/Views/MainView.vala:218
 msgid "Unable to acquire permission"
-msgstr "無法取得許可"
+msgstr "無法取得權限"
 
 #: src/Views/GuestSettingsView.vala:99
 msgid ""
