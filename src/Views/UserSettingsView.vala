@@ -133,7 +133,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var content_grid = new Gtk.Grid () {
                 column_spacing = 6,
-                row_spacing = 6
+                row_spacing = 6,
+                vexpand = true,
+                hexpand = true
             };
 
             if (user != get_current_user ()) {
@@ -274,14 +276,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             content_grid.attach (language_lock, 2, 2, 1, 2);
             content_grid.attach (autologin_lock, 2, 4);
 
-            var content_area = new Adw.Clamp () {
-                child = content_grid,
-                maximum_size = 600,
-                tightening_threshold = 600,
-                vexpand = true
-            };
-            content_area.add_css_class ("content-area");
-
             var lock_button = new Gtk.LockButton (get_permission ());
 
             var infobar_label = new Gtk.Label (_("Some settings require administrator rights to be changed")) {
@@ -289,8 +283,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
 
             infobar = new Gtk.InfoBar () {
-                margin_start = 9,
-                margin_end = 9,
                 message_type = INFO
             };
             infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
@@ -312,17 +304,31 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var size_group = new Gtk.SizeGroup (HORIZONTAL);
             size_group.add_widget (header_area);
-            size_group.add_widget (content_area);
+            size_group.add_widget (content_grid);
 
             var scrolled = new Gtk.ScrolledWindow () {
-                child = content_area,
+                child = content_grid,
                 hscrollbar_policy = NEVER
             };
 
+            var info_scroll_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
+                vexpand = true,
+                hexpand = true
+            };
+            info_scroll_box.append (infobar);
+            info_scroll_box.append (scrolled);
+
+            var content_area = new Adw.Clamp () {
+                child = info_scroll_box,
+                maximum_size = 600,
+                tightening_threshold = 600,
+                vexpand = true
+            };
+            content_area.add_css_class ("content-area");
+
             var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             box.append (window_handle);
-            box.append (infobar);
-            box.append (scrolled);
+            box.append (content_area);
             box.append (action_area);
 
             append (box);
