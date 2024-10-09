@@ -306,17 +306,12 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             size_group.add_widget (header_area);
             size_group.add_widget (content_grid);
 
-            var scrolled = new Gtk.ScrolledWindow () {
-                child = content_grid,
-                hscrollbar_policy = NEVER
-            };
-
             var info_scroll_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
                 vexpand = true,
                 hexpand = true
             };
             info_scroll_box.append (infobar);
-            info_scroll_box.append (scrolled);
+            info_scroll_box.append (content_grid);
 
             var content_area = new Adw.Clamp () {
                 child = info_scroll_box,
@@ -326,9 +321,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
             content_area.add_css_class ("content-area");
 
+            var scrolled = new Gtk.ScrolledWindow () {
+                child = content_area,
+                hscrollbar_policy = NEVER
+            };
+
             var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             box.append (window_handle);
-            box.append (content_area);
+            box.append (scrolled);
             box.append (action_area);
 
             append (box);
