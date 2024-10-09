@@ -43,7 +43,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         //lock widgets
         private Gtk.Image full_name_lock;
-        private Gtk.Image autologin_lock;
 
         private Gee.HashMap<string, string>? default_regions;
 
@@ -207,16 +206,17 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 language_box.append (language_button);
             }
 
-            autologin_label = new Granite.HeaderLabel (_("Log In automatically")) {
-                valign = CENTER
-            };
-
             autologin_switch = new Gtk.Switch () {
                 halign = END,
                 hexpand = true,
                 valign = CENTER
             };
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.active));
+
+            autologin_label = new Granite.HeaderLabel (_("Log In automatically")) {
+                mnemonic_widget = autologin_switch,
+                valign = CENTER
+            };
 
             var autologin_box = new Gtk.Box (HORIZONTAL, 12);
             autologin_box.append (autologin_label);
