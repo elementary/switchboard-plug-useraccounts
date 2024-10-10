@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-06-26 10:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -34,11 +34,11 @@ msgstr "Image de l'utilisateur"
 msgid "Full name"
 msgstr "Nom complet"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Type de compte"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Langue"
 
@@ -88,7 +88,7 @@ msgstr "Annuler"
 msgid "Standard User"
 msgstr "Utilisateur standard"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrateur"
@@ -131,7 +131,7 @@ msgstr ""
 "Dès que l'utilisateur se déconnecte, toutes les données de la session invité "
 "sont supprimés."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Connexion automatique :"
 
@@ -202,44 +202,42 @@ msgstr "Impossible de changer ceci pour l'utilisateur actuel"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Impossible de supprimer le dernier administrateur"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Type de compte :"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Normal"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Langue :"
 
 #: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Region Settings"
 msgstr "Cliquez pour passer aux paramètres de langue et de région"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Connexion automatique :"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Modifier le mot de passe…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "Supprimer le compte"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 msgid "Enable Account"
 msgstr "Activer le compte"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 msgid "Disable Account"
 msgstr "Désactiver le compte"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Impossible de modifier le mot de passe pour %s"
@@ -279,6 +277,12 @@ msgstr "Afficher les mots de passe"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Les mots de passe ne correspondent pas"
+
+#~ msgid "Account type:"
+#~ msgstr "Type de compte :"
+
+#~ msgid "Language:"
+#~ msgstr "Langue :"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr ""

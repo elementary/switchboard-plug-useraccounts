@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -36,11 +36,11 @@ msgstr "Schimbă avatar"
 msgid "Full name"
 msgstr ""
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgstr "Anulează"
 msgid "Standard User"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr ""
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Odata deconectaţi, toate setările lor vor fi şterse."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Autentificare automată:"
 
@@ -205,16 +205,8 @@ msgstr "Nu se poate schimba asta pentru utilizatorul activ curent"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nu se pot şterge privilegiile ultimului administrator"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
 msgstr ""
 
 #: src/Views/UserSettingsView.vala:203
@@ -223,33 +215,40 @@ msgstr ""
 msgid "Click to switch to Language & Region Settings"
 msgstr "Apasă pentru a schimba limba şi setările locale"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Autentificare automată:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Remove Account"
 msgstr "Permite cont utilizator"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
-msgstr "Anumite setări necesită drepturi de administrator pentru a fi schimbate"
+msgstr ""
+"Anumite setări necesită drepturi de administrator pentru a fi schimbate"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Permite cont utilizator"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Dezactivează cont utilizator"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2020-06-15 15:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -33,11 +33,11 @@ msgstr "Avatar"
 msgid "Full name"
 msgstr "Fulde navn"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Kontotype"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Sprog"
 
@@ -87,7 +87,7 @@ msgstr "Annuller"
 msgid "Standard User"
 msgstr "Standard bruger"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
@@ -129,7 +129,7 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Når de logger ud igen, vil alle deres indstillinger og data blive slettet."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Log in automatisk:"
 
@@ -203,17 +203,9 @@ msgstr "Du kan ikke ændre dette for den nuværende aktive bruger"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Du kan ikke fjerne den sidste administrators privilegier"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Kontotype:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Standard"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Sprog:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -221,34 +213,40 @@ msgstr "Sprog:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Klik for at skifte til Sprog og lokalitet-indstillinger"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Log in automatisk:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Skift Adgangskode…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Brugerkonto"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Aktivér brugerkonto"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Deaktivér brugerkonto"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -288,6 +286,12 @@ msgstr "Vis adgangskoder"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Adgangskoderne stemmer ikke overens"
+
+#~ msgid "Account type:"
+#~ msgstr "Kontotype:"
+
+#~ msgid "Language:"
+#~ msgstr "Sprog:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Godkendelse er påkrævet for at kunne ændre brugerdata"

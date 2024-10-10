@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2018-02-11 00:07+0000\n"
 "Last-Translator: Rokar <mail@rokar.de>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -34,12 +34,12 @@ msgstr "Cihwêne Biguherîne"
 msgid "Full name"
 msgstr "Nav û paşnav"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 #, fuzzy
 msgid "Account type"
 msgstr "Cureyê hesabê:"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 #, fuzzy
 msgid "Language"
 msgstr "Ziman:"
@@ -90,7 +90,7 @@ msgstr "Betal bike"
 msgid "Standard User"
 msgstr ""
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Rêveber"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr ""
 
@@ -200,50 +200,46 @@ msgstr ""
 msgid "You cannot remove the last administrator's privileges"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Cureyê hesabê:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Standart"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Ziman:"
 
 #: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Region Settings"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+msgid "Log In automatically"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
 msgid "Change Password…"
 msgstr "Şîfreyê Biguherîne"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Hesabên bikarhêner"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Enable Account"
 msgstr "Hesabên bikarhêner"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Disable Account"
 msgstr "Hesabên bikarhêner"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -285,6 +281,12 @@ msgstr "Şîfreyan nîşan bide"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Şîfre ne weke hev in"
+
+#~ msgid "Account type:"
+#~ msgstr "Cureyê hesabê:"
+
+#~ msgid "Language:"
+#~ msgstr "Ziman:"
 
 #~ msgid "Password:"
 #~ msgstr "Şîfre:"

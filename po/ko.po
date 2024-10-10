@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -33,11 +33,11 @@ msgstr "아바타"
 msgid "Full name"
 msgstr "전체 이름"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "계정 유형"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "언어"
 
@@ -87,7 +87,7 @@ msgstr "취소"
 msgid "Standard User"
 msgstr "일반 사용자"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "관리자"
@@ -128,7 +128,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "로그아웃하면, 모든 설정과 데이터는 지워집니다."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "자동 로그인:"
 
@@ -200,17 +200,9 @@ msgstr "현재 활동 중인 사용자의 설정은 변경할 수 없습니다"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "마지막 남은 관리자의 권한을 제거할 수 없습니다"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "계정 유형:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "표준"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "언어:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -218,31 +210,37 @@ msgstr "언어:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "언어 & 로케일 설정으로 전환하려면 클릭하세요"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "자동 로그인:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "비밀번호 바꾸기…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "계정 삭제"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "사용자 계정 활성화"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "사용자 계정 비활성화"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s의 비밀번호를 바꿀 수 없습니다"
@@ -282,6 +280,12 @@ msgstr "비밀번호 보이기"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "비밀번호가 다릅니다"
+
+#~ msgid "Account type:"
+#~ msgstr "계정 유형:"
+
+#~ msgid "Language:"
+#~ msgstr "언어:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "사용자 데이터를 바꾸려면 인증이 필요합니다"

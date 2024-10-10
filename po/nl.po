@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-09-22 14:53+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -33,11 +33,11 @@ msgstr "Profielfoto"
 msgid "Full name"
 msgstr "Volledige naam"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Gebruikerstype"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Taal"
 
@@ -88,7 +88,7 @@ msgstr "Annuleren"
 msgid "Standard User"
 msgstr "Standaard gebruiker"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Beheerder"
@@ -132,7 +132,7 @@ msgstr ""
 "Eenmaal ze uitloggen, zullen al hun instellingen en gegevens verwijderd "
 "worden."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Automatisch inloggen:"
 
@@ -208,43 +208,41 @@ msgstr ""
 "U kunt niet de beheerdersrechten verwijderen van het laatste account die "
 "deze privileges heeft"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Gebruikerstype:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Standaard"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Taal:"
 
 #: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Region Settings"
 msgstr "Klik om te gaan naar taal en regio-instellingen"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Automatisch inloggen:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Wachtwoord veranderen…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "Account verwijderen"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 msgid "Enable Account"
 msgstr "Account activeren"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 msgid "Disable Account"
 msgstr "Account uitschakelen"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Kon het wachtwoord van %s niet wijzigen"
@@ -284,6 +282,12 @@ msgstr "Laat wachtwoord zien"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Wachtwoorden komen niet overeen"
+
+#~ msgid "Account type:"
+#~ msgstr "Gebruikerstype:"
+
+#~ msgid "Language:"
+#~ msgstr "Taal:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Authenticatie is vereist om gebruikersgegevens te wijzigen"

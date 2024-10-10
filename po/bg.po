@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2016-08-07 12:43+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,12 +33,12 @@ msgstr "Смяна на аватар"
 msgid "Full name"
 msgstr "Пълно име"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 #, fuzzy
 msgid "Account type"
 msgstr "Вид профил:"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 #, fuzzy
 msgid "Language"
 msgstr "Език:"
@@ -90,7 +90,7 @@ msgstr "Отказ"
 msgid "Standard User"
 msgstr "Стандартен потребител"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Администратор"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "След излизане всички потребителски настройки и данни ще бъдат изтрити."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Автоматично влизане:"
 
@@ -205,17 +205,9 @@ msgstr "Не можете да промените това за текущо а�
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Не можете да премахнете правомощията на последния администратор"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Вид профил:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Стандартен"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Език:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -223,35 +215,41 @@ msgstr "Език:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Щракнете за отиване към настройките на езика"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Автоматично влизане:"
+
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
 msgid "Change Password…"
 msgstr "Смяна на паролата"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Потребителски профили"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Някои настройки изискват правомощия на администратор, за да бъдат променени"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Активиране на потребителския профил"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Деактивиране на потребителския профил"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -293,6 +291,12 @@ msgstr "Показване на паролите"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Паролите не съвпадат"
+
+#~ msgid "Account type:"
+#~ msgstr "Вид профил:"
+
+#~ msgid "Language:"
+#~ msgstr "Език:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Изисква се удостоверяване за промяна на потребителските данни"

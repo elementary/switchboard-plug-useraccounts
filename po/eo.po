@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -33,11 +33,11 @@ msgstr "Profilbildo"
 msgid "Full name"
 msgstr "Plena nomo"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Tipo de konto"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Lingvo"
 
@@ -87,7 +87,7 @@ msgstr "Rezigni"
 msgid "Standard User"
 msgstr "Normala uzanto"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administranto"
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "Post elsaluto, ĉiuj gastaj agordoj kaj datumoj forviŝiĝos."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Aŭtomate ensaluti:"
 
@@ -197,17 +197,9 @@ msgstr "Neeblas ŝanĝi tion por la nun aktiva uzanto"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Neeblas forigi la permesojn de la lasta administranto"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Konta tipo:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Normala"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Lingvo:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -215,33 +207,39 @@ msgstr "Lingvo:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Klaku por baskuli la lingvon kaj regionajn agordojn"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Aŭtomate ensaluti:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Ŝanĝi pasvorton…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Uzantokontoj"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Ebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Malebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -281,6 +279,12 @@ msgstr "Montri pasvortojn"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Pasvortoj ne kongruas"
+
+#~ msgid "Account type:"
+#~ msgstr "Konta tipo:"
+
+#~ msgid "Language:"
+#~ msgstr "Lingvo:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Aŭtentigo necesas por ŝanĝi uzantajn datumojn"

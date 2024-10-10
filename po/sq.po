@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Albanian <https://l10n.elementary.io/projects/switchboard/"
@@ -34,12 +34,12 @@ msgstr "Ndrysho foton personale"
 msgid "Full name"
 msgstr "Emri i plotë"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 #, fuzzy
 msgid "Account type"
 msgstr "Tipi i llogarisë:"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 #, fuzzy
 msgid "Language"
 msgstr "Gjuha:"
@@ -90,7 +90,7 @@ msgstr "Anulo"
 msgid "Standard User"
 msgstr "Prëdorues standard"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr ""
 
@@ -205,17 +205,9 @@ msgstr "Nuk mund ta ndryshoni këtë për përdoruesin aktualisht aktiv"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nuk mund të hiqni të drejtat e administratorit e fundit"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Tipi i llogarisë:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Standard"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Gjuha:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -223,35 +215,39 @@ msgstr "Gjuha:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Kliko për të kaluar në rregullimet e Gjuha dhe Rajoni"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+msgid "Log In automatically"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
 msgid "Change Password…"
 msgstr "Ndrysho fjalëkalimin"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Llogaritë e përdoruesit"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Disa parametra kanë nevojë për të drejtat e administratorit për tu ndryshuar"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Aktivo llogarinë e përdoruesin"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Çaktivizo llogarinë e përdoruesit"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -293,6 +289,12 @@ msgstr "Shfaq fjalëkalimet"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Fjalëkalimet nuk përputhen"
+
+#~ msgid "Account type:"
+#~ msgstr "Tipi i llogarisë:"
+
+#~ msgid "Language:"
+#~ msgstr "Gjuha:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Kërkohet identifikimi për të ndryshuar të dhënat e përdoruesit"

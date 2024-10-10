@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -34,11 +34,11 @@ msgstr "Avatar"
 msgid "Full name"
 msgstr "Nome completo"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Tipo di account"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Lingua"
 
@@ -88,7 +88,7 @@ msgstr "Annulla"
 msgid "Standard User"
 msgstr "Utente standard"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Amministratore"
@@ -131,7 +131,7 @@ msgid "Once they log out, all of their settings and data will be deleted."
 msgstr ""
 "Una volta disconnesso, tutte le impostazioni e i dati verranno eliminati."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Accesso automatico:"
 
@@ -211,17 +211,9 @@ msgstr "Non è possibile modificare questo parametro per l'utente attivo"
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Non è possibile rimuovere i privilegi dell'ultimo amministratore"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Tipo di account:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Normale"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Lingua:"
 
 #: src/Views/UserSettingsView.vala:203
 #, fuzzy
@@ -229,35 +221,41 @@ msgstr "Lingua:"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Clicca per passare alle impostazioni di lingua e regione"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Accesso automatico:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Cambia password…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Account utente"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alcune impostazioni richiedono i permessi di amministratore per essere "
 "modificate"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Abilita account utente"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Disattiva account utente"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -297,6 +295,12 @@ msgstr "Mostra le password"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Le password non coincidono"
+
+#~ msgid "Account type:"
+#~ msgstr "Tipo di account:"
+
+#~ msgid "Language:"
+#~ msgstr "Lingua:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "È necessario autenticarsi per cambiare i dati utente"

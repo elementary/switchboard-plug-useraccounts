@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:49+0000\n"
+"POT-Creation-Date: 2024-10-10 01:27+0000\n"
 "PO-Revision-Date: 2024-06-22 14:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -35,11 +35,11 @@ msgstr "Аватар"
 msgid "Full name"
 msgstr "Полное имя"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Тип пользователя"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Язык"
 
@@ -89,7 +89,7 @@ msgstr "Отменить"
 msgid "Standard User"
 msgstr "Пользователь"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:125
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Администратор"
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Once they log out, all of their settings and data will be deleted."
 msgstr "После завершения работы все настройки и данные будут удалены."
 
-#: src/Views/GuestSettingsView.vala:26 src/Views/UserSettingsView.vala:209
+#: src/Views/GuestSettingsView.vala:26
 msgid "Log In automatically:"
 msgstr "Входить автоматически:"
 
@@ -205,43 +205,41 @@ msgstr "Это не может быть изменено для активног
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Вы не можете удалить последние привилегии администратора"
 
-#: src/Views/UserSettingsView.vala:117
-msgid "Account type:"
-msgstr "Тип пользователя:"
-
-#: src/Views/UserSettingsView.vala:124
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Стандартный"
-
-#: src/Views/UserSettingsView.vala:130
-msgid "Language:"
-msgstr "Язык:"
 
 #: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Region Settings"
 msgstr "Нажать, чтобы изменить параметры языка и региона"
 
-#: src/Views/UserSettingsView.vala:220
+#: src/Views/UserSettingsView.vala:216
+#, fuzzy
+#| msgid "Log In automatically:"
+msgid "Log In automatically"
+msgstr "Входить автоматически:"
+
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Изменить пароль…"
 
-#: src/Views/UserSettingsView.vala:241
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "Удалить учётную запись"
 
-#: src/Views/UserSettingsView.vala:287
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/Views/UserSettingsView.vala:435
+#: src/Views/UserSettingsView.vala:418
 msgid "Enable Account"
 msgstr "Включить учётную запись"
 
-#: src/Views/UserSettingsView.vala:438
+#: src/Views/UserSettingsView.vala:421
 msgid "Disable Account"
 msgstr "Отключить учётную запись"
 
-#: src/Views/UserSettingsView.vala:601
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Не удалось изменить пароль для %s"
@@ -281,6 +279,12 @@ msgstr "Показать пароли"
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
 msgstr "Пароли не совпадают"
+
+#~ msgid "Account type:"
+#~ msgstr "Тип пользователя:"
+
+#~ msgid "Language:"
+#~ msgstr "Язык:"
 
 #~ msgid "Authentication is required to change user data"
 #~ msgstr "Необходима аутентификация, чтобы изменить данные пользователя"
