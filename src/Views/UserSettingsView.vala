@@ -28,11 +28,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Gtk.ListStore region_store;
 
         private Adw.Avatar avatar;
+        private Granite.HeaderLabel autologin_label;
+        private Granite.HeaderLabel lang_label;
+        private Granite.HeaderLabel user_type_label;
         private Gtk.Entry full_name_entry;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
-        private Gtk.ComboBoxText user_type_box;
-        private Gtk.ComboBox language_box;
+        private Gtk.ComboBoxText user_type_dropdown;
+        private Gtk.ComboBox language_dropdown;
         private Gtk.ComboBox region_box;
         private Gtk.Button language_button;
         private Gtk.Switch autologin_switch;
@@ -40,9 +43,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         //lock widgets
         private Gtk.Image full_name_lock;
-        private Gtk.Image user_type_lock;
-        private Gtk.Image language_lock;
-        private Gtk.Image autologin_lock;
 
         private Gee.HashMap<string, string>? default_regions;
 
@@ -114,36 +114,36 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 child = headerbar
             };
 
-            var user_type_label = new Gtk.Label (_("Account type:")) {
-                halign = Gtk.Align.END
-            };
-
-            user_type_box = new Gtk.ComboBoxText () {
+            user_type_dropdown = new Gtk.ComboBoxText () {
                 hexpand = true
             };
-            user_type_box.append_text (_("Standard"));
-            user_type_box.append_text (_("Administrator"));
-            user_type_box.changed.connect (() => {
-                utils.change_user_type (user_type_box.active);
+            user_type_dropdown.append_text (_("Standard"));
+            user_type_dropdown.append_text (_("Administrator"));
+            user_type_dropdown.changed.connect (() => {
+                utils.change_user_type (user_type_dropdown.active);
             });
 
-            var lang_label = new Gtk.Label (_("Language:")) {
-                halign = Gtk.Align.END
+            user_type_label = new Granite.HeaderLabel (_("Account type")) {
+                mnemonic_widget = user_type_dropdown
             };
 
-            var content_grid = new Gtk.Grid () {
-                column_spacing = 6,
-                row_spacing = 6
-            };
+            var user_type_box = new Gtk.Box (VERTICAL, 6);
+            user_type_box.append (user_type_label);
+            user_type_box.append (user_type_dropdown);
+
+            lang_label = new Granite.HeaderLabel (_("Language"));
+
+            var language_box = new Gtk.Box (VERTICAL, 6);
+            language_box.append (lang_label);
 
             if (user != get_current_user ()) {
                 var renderer = new Gtk.CellRendererText ();
 
-                language_box = new Gtk.ComboBox () {
+                language_dropdown = new Gtk.ComboBox () {
                     sensitive = false
                 };
-                language_box.pack_start (renderer, true);
-                language_box.add_attribute (renderer, "text", 1);
+                language_dropdown.pack_start (renderer, true);
+                language_dropdown.add_attribute (renderer, "text", 1);
 
                 renderer = new Gtk.CellRendererText ();
 
@@ -159,14 +159,14 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     reveal_child = true
                 };
 
-                content_grid.attach (language_box, 1, 2);
-                content_grid.attach (region_revealer, 1, 3);
+                language_box.append (language_dropdown);
+                language_box.append (region_revealer);
 
-                language_box.changed.connect (() => {
+                language_dropdown.changed.connect (() => {
                     Gtk.TreeIter? iter;
                     Value cell;
 
-                    language_box.get_active_iter (out iter);
+                    language_dropdown.get_active_iter (out iter);
                     language_store.get_value (iter, 0, out cell);
 
                     if (get_regions ((string)cell).size == 0) {
@@ -185,7 +185,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     Gtk.TreeIter? iter;
                     Value cell;
 
-                    language_box.get_active_iter (out iter);
+                    language_dropdown.get_active_iter (out iter);
                     language_store.get_value (iter, 0, out cell);
                     new_language = (string)cell;
 
@@ -203,19 +203,24 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                     tooltip_text = _("Click to switch to Language & Region Settings")
                 };
 
-                content_grid.attach (language_button, 1, 2);
+                language_box.append (language_button);
             }
 
-            var login_label = new Gtk.Label (_("Log In automatically:")) {
-                halign = Gtk.Align.END,
-                margin_top = 20
-            };
-
             autologin_switch = new Gtk.Switch () {
-                halign = Gtk.Align.START,
-                margin_top = 24
+                halign = END,
+                hexpand = true,
+                valign = CENTER
             };
             autologin_switch.notify["active"].connect (() => utils.change_autologin (autologin_switch.active));
+
+            autologin_label = new Granite.HeaderLabel (_("Log In automatically")) {
+                mnemonic_widget = autologin_switch,
+                valign = CENTER
+            };
+
+            var autologin_box = new Gtk.Box (HORIZONTAL, 12);
+            autologin_box.append (autologin_label);
+            autologin_box.append (autologin_switch);
 
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
@@ -244,43 +249,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
-            user_type_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            user_type_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            language_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            language_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            autologin_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                margin_top = 20,
-                tooltip_text = NO_PERMISSION_STRING
-            };
-            autologin_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
             var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 margin_start = 6
             };
             remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-            content_grid.attach (user_type_label, 0, 1);
-            content_grid.attach (user_type_box, 1, 1);
-            content_grid.attach (lang_label, 0, 2);
-            content_grid.attach (login_label, 0, 4);
-            content_grid.attach (autologin_switch, 1, 4);
-            content_grid.attach (user_type_lock, 2, 1);
-            content_grid.attach (language_lock, 2, 2, 1, 2);
-            content_grid.attach (autologin_lock, 2, 4);
-
-            var content_area = new Adw.Clamp () {
-                child = content_grid,
-                maximum_size = 600,
-                tightening_threshold = 600,
-                vexpand = true
-            };
-            content_area.add_css_class ("content-area");
 
             var lock_button = new Gtk.LockButton (get_permission ());
 
@@ -289,13 +261,25 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             };
 
             infobar = new Gtk.InfoBar () {
-                margin_start = 9,
-                margin_end = 9,
                 message_type = INFO
             };
             infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
             infobar.add_action_widget (lock_button, 0);
             infobar.add_child (infobar_label);
+
+            var content_box = new Gtk.Box (VERTICAL, 24);
+            content_box.append (infobar);
+            content_box.append (user_type_box);
+            content_box.append (language_box);
+            content_box.append (autologin_box);
+
+            var content_area = new Adw.Clamp () {
+                child = content_box,
+                maximum_size = 600,
+                tightening_threshold = 600,
+                vexpand = true
+            };
+            content_area.add_css_class ("content-area");
 
             var action_area = new Gtk.Box (HORIZONTAL, 0) {
                 margin_top = 12,
@@ -321,7 +305,6 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             box.append (window_handle);
-            box.append (infobar);
             box.append (scrolled);
             box.append (action_area);
 
@@ -331,10 +314,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             update_permission ();
 
             if (get_current_user () == user) {
-                user_type_lock.tooltip_text = CURRENT_USER_STRING;
+                user_type_label.secondary_text = CURRENT_USER_STRING;
                 remove_lock.tooltip_text = CURRENT_USER_STRING;
             } else if (is_last_admin (user)) {
-                user_type_lock.tooltip_text = LAST_ADMIN_STRING;
+                user_type_label.secondary_text = LAST_ADMIN_STRING;
                 remove_lock.tooltip_text = LAST_ADMIN_STRING;
             } else {
                 enable_user_button.sensitive = true;
@@ -358,47 +341,47 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             infobar.revealed = !allowed;
 
             if (!allowed) {
-                user_type_box.sensitive = false;
+                user_type_dropdown.sensitive = false;
                 password_button.sensitive = false;
                 autologin_switch.sensitive = false;
 
-                user_type_lock.set_opacity (1);
-                autologin_lock.set_opacity (1);
-
-                user_type_lock.tooltip_text = NO_PERMISSION_STRING;
+                autologin_label.secondary_text = NO_PERMISSION_STRING;
+                user_type_label.secondary_text = NO_PERMISSION_STRING;
             }
+
+            lang_label.secondary_text = null;
 
             if (current_user || allowed) {
                 full_name_entry.sensitive = true;
                 full_name_lock.set_opacity (0);
-                language_lock.set_opacity (0);
 
                 password_button.sensitive = !user_locked;
 
                 if (allowed) {
                     if (!user_locked) {
                         autologin_switch.sensitive = true;
-                        autologin_lock.set_opacity (0);
+                        autologin_label.secondary_text = null;
                     } else {
                         autologin_switch.sensitive = false;
-                        autologin_lock.set_opacity (1);
+                        autologin_label.secondary_text = NO_PERMISSION_STRING;
                     }
 
                     if (!last_admin && !current_user) {
-                        user_type_box.sensitive = true;
-                        user_type_lock.set_opacity (0);
+                        user_type_dropdown.sensitive = true;
+                        user_type_label.secondary_text = null;
                     }
                 }
 
                 if (!current_user) {
-                    language_box.sensitive = true;
+                    language_dropdown.sensitive = true;
                     region_box.sensitive = true;
                 }
             } else {
                 full_name_entry.sensitive = false;
 
                 if (!current_user) {
-                    language_box.sensitive = false;
+                    lang_label.secondary_text = NO_PERMISSION_STRING;
+                    language_dropdown.sensitive = false;
                     region_box.sensitive = false;
                 }
             }
@@ -452,9 +435,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         public void update_account_type () {
             if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR)
-                user_type_box.set_active (1);
+                user_type_dropdown.set_active (1);
             else
-                user_type_box.set_active (0);
+                user_type_dropdown.set_active (0);
         }
 
         public void update_language () {
@@ -476,13 +459,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 language_store = new Gtk.ListStore (2, typeof (string), typeof (string));
                 Gtk.TreeIter iter;
 
-                language_box.set_model (language_store);
+                language_dropdown.set_model (language_store);
 
                 foreach (string language in languages) {
                     language_store.insert (out iter, 0);
                     language_store.set (iter, 0, language, 1, Gnome.Languages.get_language_from_code (language, null));
                     if (user_lang_code == language)
-                        language_box.set_active_iter (iter);
+                        language_dropdown.set_active_iter (iter);
                 }
 
             } else {
@@ -497,7 +480,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             if (language == null) {
                 Value cell;
 
-                language_box.get_active_iter (out iter);
+                language_dropdown.get_active_iter (out iter);
                 language_store.get_value (iter, 0, out cell);
                 language = (string)cell;
             }
