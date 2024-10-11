@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-10 01:27+0000\n"
-"PO-Revision-Date: 2024-07-09 18:33+0000\n"
+"PO-Revision-Date: 2024-10-12 05:16+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/de/>\n"
@@ -210,10 +210,8 @@ msgid "Click to switch to Language & Region Settings"
 msgstr "Mit einem Klick zur Systemeinstellung »Sprache & Region« wechseln"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "Automatische Anmeldung:"
+msgstr "Automatisch anmelden"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
