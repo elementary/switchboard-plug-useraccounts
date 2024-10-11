@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-10 01:27+0000\n"
-"PO-Revision-Date: 2024-06-20 22:16+0000\n"
+"PO-Revision-Date: 2024-10-12 05:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ca/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: src/Plug.vala:37
@@ -212,10 +212,8 @@ msgid "Click to switch to Language & Region Settings"
 msgstr "Cliqueu per canviar als paràmetres de la llengua i la regió"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "Entra automàticament:"
+msgstr "Entra automàticament"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
