@@ -21,7 +21,8 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         listbox = new Gtk.ListBox () {
             selection_mode = SINGLE,
-            vexpand = true
+            vexpand = true,
+            hexpand = true
         };
         listbox.set_header_func (update_headers);
 
@@ -83,6 +84,9 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
         };
 
         append (paned);
+
+        var settings = new Settings ("io.elementary.settings");
+        settings.bind ("sidebar-position", paned, "position", DEFAULT);
 
         //only build the guest session list entry / row when lightDM is the display manager
         if (get_display_manager () == "lightdm") {
