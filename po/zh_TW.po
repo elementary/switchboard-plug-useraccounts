@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-10 01:27+0000\n"
-"PO-Revision-Date: 2024-09-14 02:16+0000\n"
+"PO-Revision-Date: 2024-10-14 07:58+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-useraccounts/zh_Hant/>\n"
@@ -202,10 +202,8 @@ msgid "Click to switch to Language & Region Settings"
 msgstr "點擊以切換到「語言和地區」設定值"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "自動登入："
+msgstr "自動登入"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
