@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-10 01:27+0000\n"
-"PO-Revision-Date: 2024-07-05 21:16+0000\n"
+"PO-Revision-Date: 2024-10-16 04:37+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/ka/>\n"
@@ -208,10 +208,8 @@ msgid "Click to switch to Language & Region Settings"
 msgstr "დააწკაპუნეთ ენის & რეგიონის პარამეტრებზე გადასასვლელად"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "ავტომატური შესვლა:"
+msgstr "ავტომატური შესვლა"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
