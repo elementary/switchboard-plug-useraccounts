@@ -85,8 +85,11 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
 
         append (paned);
 
-        var settings = new Settings ("io.elementary.settings");
-        settings.bind ("sidebar-position", paned, "position", DEFAULT);
+        var sss = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings", true);
+        if (sss != null && sss.has_key ("sidebar-position")) {
+            var settings = new Settings ("io.elementary.settings");
+            settings.bind ("sidebar-position", paned, "position", DEFAULT);
+        }
 
         //only build the guest session list entry / row when lightDM is the display manager
         if (get_display_manager () == "lightdm") {
