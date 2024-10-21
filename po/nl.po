@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-10 01:27+0000\n"
-"PO-Revision-Date: 2024-09-22 14:53+0000\n"
+"PO-Revision-Date: 2024-10-22 06:26+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/nl/>\n"
@@ -217,10 +217,8 @@ msgid "Click to switch to Language & Region Settings"
 msgstr "Klik om te gaan naar taal en regio-instellingen"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "Automatisch inloggen:"
+msgstr "Automatisch inloggen"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
@@ -240,7 +238,7 @@ msgstr "Account activeren"
 
 #: src/Views/UserSettingsView.vala:421
 msgid "Disable Account"
-msgstr "Account uitschakelen"
+msgstr "Account deactiveren"
 
 #: src/Views/UserSettingsView.vala:584
 #, c-format
