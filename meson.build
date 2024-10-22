@@ -24,8 +24,13 @@ polkit_actiondir = polkit_dep.get_pkgconfig_variable('actiondir', define_variabl
 
 posix_dep = meson.get_compiler('vala').find_library('posix')
 
-add_project_arguments('-DGETTEXT_PACKAGE="@0@"'.format(gettext_name), language:'c')
-add_project_arguments('-DGNOME_DESKTOP_USE_UNSTABLE_API', language: 'c')
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    '-DG_LOG_DOMAIN="@0@"'.format(meson.project_name()),
+    '-DGNOME_DESKTOP_USE_UNSTABLE_API',
+    language:'c'
+)
+
 add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
 
 configuration_data = configuration_data()
