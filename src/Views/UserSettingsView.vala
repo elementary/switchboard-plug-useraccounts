@@ -81,7 +81,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             full_name_entry = new Gtk.Entry () {
                 valign = Gtk.Align.CENTER
             };
-            full_name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            full_name_entry.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
             full_name_entry.activate.connect (() => {
                 utils.change_full_name (full_name_entry.get_text ().strip ());
             });
@@ -91,7 +91,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 margin_start = 6,
                 tooltip_text = NO_PERMISSION_STRING
             };
-            full_name_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            full_name_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             var header_area = new Gtk.Grid () {
                 halign = CENTER
@@ -246,13 +246,13 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var remove_user_button = new Gtk.Button.with_label (_("Remove Account")) {
                 sensitive = false
             };
-            remove_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            remove_user_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
             remove_user_button.clicked.connect (() => remove_user ());
 
             var remove_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 margin_start = 6
             };
-            remove_lock.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            remove_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             var lock_button = new Gtk.LockButton (get_permission ());
 
@@ -416,10 +416,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             var user_locked = user.get_locked ();
             if (user_locked) {
                 enable_user_button.label = _("Enable Account");
-                enable_user_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             } else {
                 enable_user_button.label = _("Disable Account");
-                enable_user_button.get_style_context ().remove_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                enable_user_button.remove_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             }
 
             if (delta_user.language != user.get_language ()) {

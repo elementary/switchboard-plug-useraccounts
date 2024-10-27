@@ -117,12 +117,12 @@ public class SwitchboardPlugUserAccounts.Widgets.MainView : Gtk.Box {
             var full_name_label = new Gtk.Label (_("Guest Session")) {
                 halign = START
             };
-            full_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            full_name_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
             guest_description_label = new Gtk.Label (null) {
                 halign = START
             };
-            guest_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+            guest_description_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
             var row_grid = new Gtk.Grid () {
                 column_spacing = 9

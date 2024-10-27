@@ -36,7 +36,7 @@ public class SwitchboardPlugUserAccounts.Dialogs.AvatarDialog : Granite.MessageD
 
     construct {
         var button_change = add_button (_("Change Avatar"), Gtk.ResponseType.OK);
-        button_change.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        button_change.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         response.connect (on_response);
 
