@@ -75,7 +75,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
 
         var button_change = add_button (_("Change Password"), Gtk.ResponseType.OK);
         button_change.sensitive = false;
-        button_change.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        button_change.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         pw_editor.validation_changed.connect (() => {
             var permission = get_permission ();
@@ -102,7 +102,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
 
     private void password_auth () {
         current_pw_entry.secondary_icon_name = "process-working-symbolic";
-        current_pw_entry.get_style_context ().add_class ("spin");
+        current_pw_entry.add_css_class ("spin");
 
         Passwd.passwd_authenticate (get_passwd_handler (true), current_pw_entry.text, (h, e) => {
             if (e != null) {
@@ -117,7 +117,7 @@ public class SwitchboardPlugUserAccounts.ChangePasswordDialog : Granite.Dialog {
                 current_pw_entry.sensitive = false;
                 current_pw_entry.secondary_icon_name = "process-completed-symbolic";
             }
-            current_pw_entry.get_style_context ().remove_class ("spin");
+            current_pw_entry.remove_css_class ("spin");
         });
     }
 }
