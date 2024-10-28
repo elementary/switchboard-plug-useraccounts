@@ -1,7 +1,7 @@
 project(
     'useraccounts',
     'vala', 'c',
-    meson_version: '>= 0.46.1',
+    meson_version: '>= 0.58.0',
     version: '8.0.0'
 )
 
@@ -16,11 +16,11 @@ libdir = join_paths(prefix, get_option('libdir'))
 localedir = join_paths(prefix, get_option('localedir'))
 
 switchboard_dep = dependency('switchboard-3')
-switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
+switchboard_plugsdir = switchboard_dep.get_variable('plugsdir', pkgconfig_define: ['libdir', libdir])
 pkgdatadir = switchboard_plugsdir / 'system' / 'useraccounts'
 
 polkit_dep = dependency('polkit-gobject-1')
-polkit_actiondir = polkit_dep.get_pkgconfig_variable('actiondir', define_variable: ['prefix', prefix])
+polkit_actiondir = polkit_dep.get_variable('actiondir', pkgconfig_define: ['prefix', prefix])
 
 posix_dep = meson.get_compiler('vala').find_library('posix')
 
