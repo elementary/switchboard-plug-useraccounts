@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-07-11 23:16+0000\n"
-"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
-"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/ru/>\n"
+"PO-Revision-Date: 2024-11-16 02:31+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: data/useraccounts.metainfo.xml.in:37
 msgid "Restore sidebar position"
-msgstr ""
+msgstr "Восстановление положения боковой панели"
 
 #: data/useraccounts.metainfo.xml.in:38 data/useraccounts.metainfo.xml.in:48
 #: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:75
