@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:27+0000\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-10-11 02:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -51,7 +51,7 @@ msgid "Change Password"
 msgstr "Cambiar contraseña"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:110
+#: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Sesión de invitado"
 
@@ -140,8 +140,8 @@ msgstr ""
 "Los cambios en la sesión de invitado no surtirán efecto hasta que reinicie "
 "el sistema"
 
-#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
-#: src/Views/MainView.vala:218
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:158
+#: src/Views/MainView.vala:225
 msgid "Unable to acquire permission"
 msgstr "No se pudo obtener permiso"
 
@@ -151,40 +151,40 @@ msgid ""
 msgstr ""
 "La cuenta de invitado no se puede modificar sin los permisos necesarios."
 
-#: src/Views/MainView.vala:28
+#: src/Views/MainView.vala:29
 msgid "My Account"
 msgstr "Mi cuenta"
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:31
 msgid "Other Accounts"
 msgstr "Otras cuentas"
 
-#: src/Views/MainView.vala:37
+#: src/Views/MainView.vala:38
 msgid "Create User Account…"
 msgstr "Crear cuenta de usuario…"
 
-#: src/Views/MainView.vala:70
+#: src/Views/MainView.vala:71
 msgid "Undo"
 msgstr "Deshacer"
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:159
 msgid "A new account cannot be created without the required system permission."
 msgstr "No se puede crear una nueva cuenta sin los permisos necesarios."
 
-#: src/Views/MainView.vala:219
+#: src/Views/MainView.vala:226
 msgid "An account cannot be removed without the required system permission."
 msgstr "No se puede eliminar una cuenta sin los permisos necesarios."
 
-#: src/Views/MainView.vala:241
+#: src/Views/MainView.vala:248
 #, c-format
 msgid "Removed “%s”"
 msgstr "Se eliminó «%s»"
 
-#: src/Views/MainView.vala:299
+#: src/Views/MainView.vala:306
 msgid "Enabled"
 msgstr "Activado"
 
-#: src/Views/MainView.vala:301
+#: src/Views/MainView.vala:308
 msgid "Disabled"
 msgstr "Desactivado"
 
