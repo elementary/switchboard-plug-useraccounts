@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:27+0000\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-07-10 20:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/user-"
@@ -42,65 +42,70 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:49
-#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:76
+#: data/useraccounts.metainfo.xml.in:34 data/useraccounts.metainfo.xml.in:45
+#: data/useraccounts.metainfo.xml.in:60 data/useraccounts.metainfo.xml.in:73
+#: data/useraccounts.metainfo.xml.in:87
 msgid "Improvements:"
 msgstr "Mejoras:"
 
 #: data/useraccounts.metainfo.xml.in:36
-msgid "Improved screen reader accessibility"
-msgstr "Se mejoró la accesibilidad para los lectores de pantalla"
+msgid "Redesign to make hint text more obvious"
+msgstr ""
 
-#: data/useraccounts.metainfo.xml.in:37 data/useraccounts.metainfo.xml.in:51
-#: data/useraccounts.metainfo.xml.in:64 data/useraccounts.metainfo.xml.in:81
-#: data/useraccounts.metainfo.xml.in:94
+#: data/useraccounts.metainfo.xml.in:37
+msgid "Restore sidebar position"
+msgstr ""
+
+#: data/useraccounts.metainfo.xml.in:38 data/useraccounts.metainfo.xml.in:48
+#: data/useraccounts.metainfo.xml.in:62 data/useraccounts.metainfo.xml.in:75
+#: data/useraccounts.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/useraccounts.metainfo.xml.in:58 data/useraccounts.metainfo.xml.in:71
+#: data/useraccounts.metainfo.xml.in:47
+msgid "Improved screen reader accessibility"
+msgstr "Se mejoró la accesibilidad para los lectores de pantalla"
+
+#: data/useraccounts.metainfo.xml.in:69 data/useraccounts.metainfo.xml.in:82
 msgid "Fixes:"
 msgstr "Correcciones:"
 
-#: data/useraccounts.metainfo.xml.in:60 data/useraccounts.metainfo.xml.in:74
+#: data/useraccounts.metainfo.xml.in:71 data/useraccounts.metainfo.xml.in:85
 msgid "Update permissions when enabling and disabling accounts"
 msgstr "Se actualizaron los permisos al activar o desactivar cuentas"
 
-#: data/useraccounts.metainfo.xml.in:73
+#: data/useraccounts.metainfo.xml.in:84
 msgid "Ensure user information in sidebar updates upon changes"
 msgstr ""
 "Se garantiza mostrar información de usuario actualizada en la barra lateral "
 "cuando ocurren cambios"
 
-#: data/useraccounts.metainfo.xml.in:78
+#: data/useraccounts.metainfo.xml.in:89
 msgid "Support locales with 3-letter codes"
 msgstr ""
 "Se agregó soporte de configuración regional usando códigos de tres letras"
 
-#: data/useraccounts.metainfo.xml.in:79 data/useraccounts.metainfo.xml.in:91
+#: data/useraccounts.metainfo.xml.in:90
 msgid "Performance improvements"
 msgstr "Mejoras de rendimiento"
 
-#: data/useraccounts.metainfo.xml.in:80
+#: data/useraccounts.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
 msgstr ""
 "Se mejoró la compatibilidad con distribuciones de Linux que no sean de tipo "
 "Ubuntu"
 
-#: data/useraccounts.metainfo.xml.in:88
-msgid "Minor updates:"
-msgstr "Actualizaciones menores:"
+#~ msgid "Minor updates:"
+#~ msgstr "Actualizaciones menores:"
 
-#: data/useraccounts.metainfo.xml.in:90
-msgid "New colorful avatar fallback"
-msgstr "Nuevo y colorido avatar predeterminado"
+#~ msgid "New colorful avatar fallback"
+#~ msgstr "Nuevo y colorido avatar predeterminado"
 
-#: data/useraccounts.metainfo.xml.in:92
-msgid "Improved tooltips and labels"
-msgstr "Se mejoraron las descripciones emergentes y etiquetas"
+#~ msgid "Improved tooltips and labels"
+#~ msgstr "Se mejoraron las descripciones emergentes y etiquetas"
 
-#: data/useraccounts.metainfo.xml.in:93
-msgid "Fix possible crash when deleting an account"
-msgstr "Se corrigió una posible falla grave al eliminar una cuenta"
+#~ msgid "Fix possible crash when deleting an account"
+#~ msgstr "Se corrigió una posible falla grave al eliminar una cuenta"
 
 #~ msgid "Show more accurate reasons for locked settings"
 #~ msgstr ""
