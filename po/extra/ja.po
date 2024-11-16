@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-11-16 02:31+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/ja/>\n"
 "Language: ja\n"
@@ -49,7 +49,7 @@ msgstr "改善点:"
 
 #: data/useraccounts.metainfo.xml.in:36
 msgid "Redesign to make hint text more obvious"
-msgstr ""
+msgstr "各設定項目に関する説明文が自然と目に入るようなデザインに変更"
 
 #: data/useraccounts.metainfo.xml.in:37
 msgid "Restore sidebar position"
