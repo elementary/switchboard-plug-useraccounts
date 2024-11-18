@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:27+0000\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -50,7 +50,7 @@ msgid "Change Password"
 msgstr "비밀번호 바꾸기"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:110
+#: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "게스트 세션"
 
@@ -137,8 +137,8 @@ msgid ""
 "Guest session changes will not take effect until you restart your system"
 msgstr "게스트 세션의 변경은 재부팅 후에 적용됩니다"
 
-#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
-#: src/Views/MainView.vala:218
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:158
+#: src/Views/MainView.vala:225
 msgid "Unable to acquire permission"
 msgstr "권한을 얻을 수 없습니다"
 
@@ -149,42 +149,42 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
 
-#: src/Views/MainView.vala:28
+#: src/Views/MainView.vala:29
 msgid "My Account"
 msgstr "내 계정"
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:31
 msgid "Other Accounts"
 msgstr "기타 계정"
 
-#: src/Views/MainView.vala:37
+#: src/Views/MainView.vala:38
 #, fuzzy
 #| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "사용자 계정 만들기…"
 
-#: src/Views/MainView.vala:70
+#: src/Views/MainView.vala:71
 msgid "Undo"
 msgstr "되돌리기"
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:159
 msgid "A new account cannot be created without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 새 계정을 만들 수 없습니다."
 
-#: src/Views/MainView.vala:219
+#: src/Views/MainView.vala:226
 msgid "An account cannot be removed without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
 
-#: src/Views/MainView.vala:241
+#: src/Views/MainView.vala:248
 #, c-format
 msgid "Removed “%s”"
 msgstr "“%s” 삭제함"
 
-#: src/Views/MainView.vala:299
+#: src/Views/MainView.vala:306
 msgid "Enabled"
 msgstr "사용함"
 
-#: src/Views/MainView.vala:301
+#: src/Views/MainView.vala:308
 msgid "Disabled"
 msgstr "사용 안 함"
 

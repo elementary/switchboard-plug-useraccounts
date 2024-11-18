@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:27+0000\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2016-08-07 12:43+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgid "Change Password"
 msgstr "Смяна на паролата"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:110
+#: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Сесия за гости"
 
@@ -144,8 +144,8 @@ msgstr ""
 "Промените по сесията за гости няма да бъдат приложени, докато системата не "
 "бъде повторно пусната"
 
-#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
-#: src/Views/MainView.vala:218
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:158
+#: src/Views/MainView.vala:225
 msgid "Unable to acquire permission"
 msgstr ""
 
@@ -154,42 +154,42 @@ msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:28
+#: src/Views/MainView.vala:29
 msgid "My Account"
 msgstr "Моят профил"
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:31
 msgid "Other Accounts"
 msgstr "Други профили"
 
-#: src/Views/MainView.vala:37
+#: src/Views/MainView.vala:38
 #, fuzzy
 #| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Създаване на профил"
 
-#: src/Views/MainView.vala:70
+#: src/Views/MainView.vala:71
 msgid "Undo"
 msgstr ""
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:159
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:219
+#: src/Views/MainView.vala:226
 msgid "An account cannot be removed without the required system permission."
 msgstr ""
 
-#: src/Views/MainView.vala:241
+#: src/Views/MainView.vala:248
 #, c-format
 msgid "Removed “%s”"
 msgstr ""
 
-#: src/Views/MainView.vala:299
+#: src/Views/MainView.vala:306
 msgid "Enabled"
 msgstr "Включено"
 
-#: src/Views/MainView.vala:301
+#: src/Views/MainView.vala:308
 msgid "Disabled"
 msgstr "Изключено"
 

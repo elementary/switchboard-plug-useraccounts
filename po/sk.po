@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:27+0000\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-07-10 20:16+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -50,7 +50,7 @@ msgid "Change Password"
 msgstr "Zmena hesla"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
-#: src/Views/MainView.vala:110
+#: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Relácia pre hosťa"
 
@@ -138,8 +138,8 @@ msgid ""
 msgstr ""
 "Zmeny nastavení relácie pre hosťa sa prejavia až po reštarte zariadenia"
 
-#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:151
-#: src/Views/MainView.vala:218
+#: src/Views/GuestSettingsView.vala:98 src/Views/MainView.vala:158
+#: src/Views/MainView.vala:225
 msgid "Unable to acquire permission"
 msgstr "Nedarí sa získať oprávnenie"
 
@@ -149,41 +149,41 @@ msgid ""
 msgstr ""
 "Nie je možné upraviť účet hosťa bez požadovaného systémového oprávnenia."
 
-#: src/Views/MainView.vala:28
+#: src/Views/MainView.vala:29
 msgid "My Account"
 msgstr "Môj účet"
 
-#: src/Views/MainView.vala:30
+#: src/Views/MainView.vala:31
 msgid "Other Accounts"
 msgstr "Ostatné účty"
 
-#: src/Views/MainView.vala:37
+#: src/Views/MainView.vala:38
 msgid "Create User Account…"
 msgstr "Vytvoriť používateľský účet…"
 
-#: src/Views/MainView.vala:70
+#: src/Views/MainView.vala:71
 msgid "Undo"
 msgstr "Späť"
 
-#: src/Views/MainView.vala:152
+#: src/Views/MainView.vala:159
 msgid "A new account cannot be created without the required system permission."
 msgstr ""
 "Bez požadovaných systémových oprávnení nie je možné vytvoriť nový účet."
 
-#: src/Views/MainView.vala:219
+#: src/Views/MainView.vala:226
 msgid "An account cannot be removed without the required system permission."
 msgstr "Nie je možné odstrániť účet bez požadovaných systémových oprávnení."
 
-#: src/Views/MainView.vala:241
+#: src/Views/MainView.vala:248
 #, c-format
 msgid "Removed “%s”"
 msgstr "„%s“ bol odstránený"
 
-#: src/Views/MainView.vala:299
+#: src/Views/MainView.vala:306
 msgid "Enabled"
 msgstr "Zapnuté"
 
-#: src/Views/MainView.vala:301
+#: src/Views/MainView.vala:308
 msgid "Disabled"
 msgstr "Vypnuté"
 
