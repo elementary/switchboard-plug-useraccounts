@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-11-17 16:16+0000\n"
+"PO-Revision-Date: 2024-11-24 07:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/he/>\n"
@@ -34,7 +34,7 @@ msgstr "הגדרות חשבונות משתמשים"
 #: data/useraccounts.metainfo.xml.in:11
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, ססמאות ותמונות"
+msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, סיסמאות ותמונות"
 
 #: data/useraccounts.metainfo.xml.in:26
 msgid "elementary, Inc."
