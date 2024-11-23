@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-10-12 05:16+0000\n"
+"PO-Revision-Date: 2024-11-24 07:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/he/>\n"
@@ -22,7 +22,7 @@ msgstr "חשבונות משתמשים"
 #: src/Plug.vala:38
 msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
-msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, ססמאות ותמונות"
+msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, סיסמאות ותמונות"
 
 #: src/Plug.vala:82
 msgid "Avatar"
@@ -46,7 +46,7 @@ msgstr "כניסה אוטומטית"
 
 #: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
-msgstr "החלפת הססמה"
+msgstr "החלפת הסיסמה"
 
 #: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
@@ -67,7 +67,7 @@ msgstr "החלפת תמונת המשתמש"
 
 #: src/Dialogs/ChangePasswordDialog.vala:33
 msgid "Current Password"
-msgstr "הססמה הנוכחית"
+msgstr "הסיסמה הנוכחית"
 
 #: src/Dialogs/ChangePasswordDialog.vala:37
 msgid "Press to authenticate"
@@ -119,7 +119,7 @@ msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנו
 msgid ""
 "The Guest Session allows someone to use a temporary default account without "
 "a password."
-msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבון בררת מחדל זמני ללא ססמה."
+msgstr "הפעלת האורח מאפשרת למישהו להשתמש בחשבון ברירת מחדל זמני ללא סיסמה."
 
 #: src/Views/GuestSettingsView.vala:15
 msgid "Once they log out, all of their settings and data will be deleted."
@@ -228,7 +228,7 @@ msgstr "השבתת חשבון"
 #: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr "לא ניתן להחליף את הססמה של %s"
+msgstr "לא ניתן להחליף את הסיסמה של %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
@@ -252,19 +252,19 @@ msgstr "פתיחה"
 
 #: src/Widgets/PasswordEditor.vala:39
 msgid "Choose a Password"
-msgstr "נא לבחור ססמה"
+msgstr "נא לבחור סיסמה"
 
 #: src/Widgets/PasswordEditor.vala:60
 msgid "Confirm Password"
-msgstr "אימות הססמה"
+msgstr "אימות הסיסמה"
 
 #: src/Widgets/PasswordEditor.vala:67
 msgid "Show passwords"
-msgstr "הצגת הססמאות"
+msgstr "הצגת הסיסמאות"
 
 #: src/Widgets/PasswordEditor.vala:146
 msgid "Passwords do not match"
-msgstr "הססמאות אינן תואמות"
+msgstr "הסיסמאות אינן תואמות"
 
 #~ msgid "Account type:"
 #~ msgstr "סוג החשבון:"
