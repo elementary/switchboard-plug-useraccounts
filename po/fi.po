@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-02 13:16+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/fi/>\n"
 "Language: fi\n"
@@ -148,11 +148,10 @@ msgid "Unable to acquire permission"
 msgstr "Käyttöoikeuden saaminen ei onnistu"
 
 #: src/Views/GuestSettingsView.vala:99
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "Tiliä ei voi poistaa ilman vaadittua järjestelmätason käyttöoikeutta."
+msgstr ""
+"Vierastiliä ei voi muokata ilman vaadittua järjestelmätason käyttöoikeutta."
 
 #: src/Views/MainView.vala:29
 msgid "My Account"
@@ -209,16 +208,12 @@ msgid "Standard"
 msgstr "Tavallinen"
 
 #: src/Views/UserSettingsView.vala:203
-#, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
-msgstr "Napsauta vaihtaaksesi kieliasetuksia"
+msgstr "Napsauta vaihtaaksesi kieliasetuksiin"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "Kirjaudu automaattisesti:"
+msgstr "Kirjaudu automaattisesti"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
@@ -233,14 +228,10 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
 #: src/Views/UserSettingsView.vala:418
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Ota tili käyttöön"
 
 #: src/Views/UserSettingsView.vala:421
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Poista tili käytöstä"
 
