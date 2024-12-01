@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/user-"
-"accounts-plug-extra/fi/>\n"
+"PO-Revision-Date: 2024-12-02 13:16+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
+"user-accounts-plug-extra/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,7 +84,7 @@ msgstr ""
 
 #: data/useraccounts.metainfo.xml.in:90
 msgid "Performance improvements"
-msgstr ""
+msgstr "Suorituskykyparannuksia"
 
 #: data/useraccounts.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
