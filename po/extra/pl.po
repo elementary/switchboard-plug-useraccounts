@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-11-16 02:31+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-03 18:16+0000\n"
+"Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "user-accounts-plug-extra/pl/>\n"
 "Language: pl\n"
@@ -51,7 +51,7 @@ msgstr "Ulepszenia:"
 
 #: data/useraccounts.metainfo.xml.in:36
 msgid "Redesign to make hint text more obvious"
-msgstr ""
+msgstr "Przeprojektowanie by tekst podpowiedzi był bardziej oczywisty"
 
 #: data/useraccounts.metainfo.xml.in:37
 msgid "Restore sidebar position"
