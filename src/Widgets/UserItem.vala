@@ -49,7 +49,7 @@ public class SwitchboardPlugUserAccounts.Widgets.UserItem : Gtk.ListBoxRow {
         var lock_image = new Gtk.Image.from_icon_name ("locked") {
             halign = END,
             valign = END,
-            pixel_size = 24
+            pixel_size = 16
         };
 
         lock_revealer = new Gtk.Revealer () {
