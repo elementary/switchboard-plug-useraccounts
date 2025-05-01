@@ -155,6 +155,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
                 var region_revealer = new Gtk.Revealer () {
                     child = region_box,
+                    overflow = VISIBLE,
                     transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
                     reveal_child = true
                 };
