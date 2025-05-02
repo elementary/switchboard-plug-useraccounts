@@ -80,7 +80,7 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         var file_dialog = new Gtk.FileDialog () {
             title = _("Select an image"),
             accept_label = _("Open")
-        );
+        };
         file_dialog.default_filter = filter;
 
         try {
