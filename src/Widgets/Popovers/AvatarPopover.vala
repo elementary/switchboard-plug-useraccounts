@@ -68,7 +68,7 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         select_button.clicked.connect (select_from_file);
     }
 
-    private void select_from_file () {
+    private async void select_from_file () {
         popdown ();
 
         var filter = new Gtk.FileFilter ();
@@ -77,29 +77,22 @@ public class SwitchboardPlugUserAccounts.Widgets.AvatarPopover : Gtk.Popover {
         filter.add_mime_type ("image/jpg");
         filter.add_mime_type ("image/png");
 
-        var file_dialog = new Gtk.FileChooserNative (
-            _("Select an image"),
-            ((Gtk.Application) Application.get_default ()).active_window,
-            Gtk.FileChooserAction.OPEN,
-            _("Open"),
-            _("Cancel")
+        var file_dialog = new Gtk.FileDialog () {
+            title = _("Select an image"),
+            accept_label = _("Open")
         );
-        file_dialog.filter = filter;
+        file_dialog.default_filter = filter;
 
-        file_dialog.response.connect ((response) => {
-            if (response == Gtk.ResponseType.ACCEPT) {
-                var path = file_dialog.get_file ().get_path ();
+        try {
+            File file = yield file_dialog.open (((Gtk.Application) Application.get_default ()).active_window, null);
+            var path = file.get_path ();
 
-                var avatar_dialog = new Dialogs.AvatarDialog (path);
-                avatar_dialog.request_avatar_change.connect (change_avatar);
-                avatar_dialog.present ();
-
-                file_dialog.hide ();
-            }
-
-            file_dialog.destroy ();
-        });
-        file_dialog.show ();
+            var avatar_dialog = new Dialogs.AvatarDialog (path);
+            avatar_dialog.request_avatar_change.connect (change_avatar);
+            avatar_dialog.present ();
+        } catch (Error err) {
+            warning ("Failed to select image: %s", err.message);
+        }
     }
 
     private void change_avatar (Gdk.Pixbuf? new_pixbuf) {
