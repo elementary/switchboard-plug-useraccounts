@@ -40,7 +40,7 @@ shared_module(
         dependency('gnome-desktop-4'),
         dependency('gobject-2.0'),
         dependency('granite-7', version: '>=7.4.0'),
-        dependency('gtk4'),
+        dependency('gtk4', version: '>=4.10'),
         dependency('libadwaita-1'),
         dependency('pwquality'),
         meson.get_compiler('vala').find_library('run-passwd', dirs: join_paths(meson.current_source_dir())),
