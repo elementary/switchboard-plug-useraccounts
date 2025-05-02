@@ -12,7 +12,7 @@ You'll need the following dependencies:
 * libgirepository1.0-dev 
 * libgnome-desktop-4-dev
 * libgranite-7-dev >= 7.4.0
-* libgtk4-dev
+* libgtk4-dev >= 4.10
 * libpolkit-gobject-1-dev
 * libpwquality-dev
 * libswitchboard-3-dev
