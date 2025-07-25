@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2024-11-06 01:04+0000\n"
+"PO-Revision-Date: 2025-07-26 16:55+0000\n"
 "Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
-"switchboard/user-accounts-plug-extra/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
+"settings/user-accounts-plug-extra/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/useraccounts.policy.in.in:10
 msgid "Manage user accounts"
@@ -67,7 +67,7 @@ msgstr "Acessibilidade aprimorada do leitor de tela"
 
 #: data/useraccounts.metainfo.xml.in:69 data/useraccounts.metainfo.xml.in:82
 msgid "Fixes:"
-msgstr ""
+msgstr "Correções:"
 
 #: data/useraccounts.metainfo.xml.in:71 data/useraccounts.metainfo.xml.in:85
 #, fuzzy
@@ -85,7 +85,7 @@ msgstr ""
 
 #: data/useraccounts.metainfo.xml.in:90
 msgid "Performance improvements"
-msgstr ""
+msgstr "Melhorias de desempenho"
 
 #: data/useraccounts.metainfo.xml.in:91
 msgid "Better support for non-Ubuntu based distributions"
