@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2019-11-22 17:24+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-useraccounts/pt_BR/>\n"
+"PO-Revision-Date: 2025-07-28 04:55+0000\n"
+"Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
+"settings/switchboard-plug-useraccounts/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:37
@@ -148,11 +148,11 @@ msgid "Unable to acquire permission"
 msgstr "Não foi possível adquirir a permissão"
 
 #: src/Views/GuestSettingsView.vala:99
-#, fuzzy
-#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
-msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema."
+msgstr ""
+"A conta de convidado não pode ser modificada sem a permissão necessária do "
+"sistema."
 
 #: src/Views/MainView.vala:29
 msgid "My Account"
@@ -163,10 +163,8 @@ msgid "Other Accounts"
 msgstr "Outras contas"
 
 #: src/Views/MainView.vala:38
-#, fuzzy
-#| msgid "Create user account"
 msgid "Create User Account…"
-msgstr "Criar conta de usuário"
+msgstr "Criar Conta de Usuário…"
 
 #: src/Views/MainView.vala:71
 msgid "Undo"
@@ -184,7 +182,7 @@ msgstr "Uma conta não pode ser removida sem a permissão necessária do sistema
 #: src/Views/MainView.vala:248
 #, c-format
 msgid "Removed “%s”"
-msgstr ""
+msgstr "Removido “%s”"
 
 #: src/Views/MainView.vala:306
 msgid "Enabled"
@@ -211,26 +209,20 @@ msgid "Standard"
 msgstr "Padrão"
 
 #: src/Views/UserSettingsView.vala:203
-#, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
-msgstr "Clique para mudar as configurações regionais e de idioma"
+msgstr "Clique para mudar para as Configurações Regionais e de Idioma"
 
 #: src/Views/UserSettingsView.vala:216
-#, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
-msgstr "Entrar automaticamente:"
+msgstr "Entrar automaticamente"
 
 #: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Alterar Senha…"
 
 #: src/Views/UserSettingsView.vala:246
-#, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
-msgstr "Contas de usuário"
+msgstr "Remover Conta"
 
 #: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
@@ -239,21 +231,17 @@ msgstr ""
 "modificadas"
 
 #: src/Views/UserSettingsView.vala:418
-#, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
-msgstr "Ativar conta de usuário"
+msgstr "Ativar Conta"
 
 #: src/Views/UserSettingsView.vala:421
-#, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
-msgstr "Desativar Conta de Usuário"
+msgstr "Desativar Conta"
 
 #: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
-msgstr ""
+msgstr "Não foi possível alterar a senha de %s"
 
 #: src/Widgets/Popovers/AvatarPopover.vala:32
 msgid "Remove"
