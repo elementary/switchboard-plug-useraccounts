@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-15 18:15+0000\n"
-"PO-Revision-Date: 2025-07-26 16:55+0000\n"
+"PO-Revision-Date: 2025-07-28 04:55+0000\n"
 "Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "settings/user-accounts-plug-extra/pt_BR/>\n"
@@ -45,7 +45,7 @@ msgstr "elementary, Inc."
 #: data/useraccounts.metainfo.xml.in:60 data/useraccounts.metainfo.xml.in:73
 #: data/useraccounts.metainfo.xml.in:87
 msgid "Improvements:"
-msgstr ""
+msgstr "Melhorias:"
 
 #: data/useraccounts.metainfo.xml.in:36
 msgid "Redesign to make hint text more obvious"
