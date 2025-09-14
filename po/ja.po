@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-14 17:54+0530\n"
 "PO-Revision-Date: 2025-08-30 22:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementaryos.org/projects/settings/"
@@ -25,31 +25,31 @@ msgid ""
 msgstr ""
 "アカウントの権限を管理し、ユーザー名・パスワード・アカウント画像を設定します"
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 msgid "Avatar"
 msgstr "アバター"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:84
 msgid "Full name"
 msgstr "フルネーム"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "アカウントの種類"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "言語"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:87
 msgid "Log in automatically"
 msgstr "自動的にログイン"
 
-#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "ゲストセッション"
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -87,7 +87,7 @@ msgstr "キャンセル"
 msgid "Standard User"
 msgstr "標準ユーザー"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "管理者"
@@ -116,6 +116,78 @@ msgstr "ユーザー名はすでに使われています"
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "ユーザー名は小文字と数字のみを含むことができます。空白は使用しないでください"
+
+#: src/Dialogs/FingerprintDialog.vala:49
+msgid "Enrolling Fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:53
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:70
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:75
+msgid "Fingerprint device not available"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:115
+msgid "You are all set!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrollment Complete!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:128
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:131
+msgid "Enrolling failed. Please try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Stage Passed! Carry on!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:139
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:141
+msgid "The swipe was too short"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:145
+msgid "Please center your finger on the sensor"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:147
+msgid "Please remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:150
+msgid "Enrollment data is full"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "This fingerprint is already enrolled"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:155
+msgid "The fingerprint sensor was disconnected"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "An unknown error occurred"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -185,51 +257,59 @@ msgstr "有効"
 msgid "Disabled"
 msgstr "無効"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "現在アクティブなユーザーのため変更できません"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "管理者が唯一の場合、その権限は削除できません"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "標準"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 msgid "Click to switch to Language & Region Settings"
 msgstr "“言語と地域設定”に切り替えるにはクリックしてください"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 msgid "Log In automatically"
 msgstr "自動的にログイン"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:241
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:245
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:285
 msgid "Change Password…"
 msgstr "パスワードを変更…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:306
 msgid "Remove Account"
 msgstr "アカウントを削除"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:319
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:490
 msgid "Enable Account"
 msgstr "アカウントを有効にする"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:493
 msgid "Disable Account"
 msgstr "アカウントを無効にする"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:656
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s のパスワードを変更できません"
@@ -250,7 +330,7 @@ msgstr "画像"
 msgid "Select an image"
 msgstr "画像を選択"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "開く"
 

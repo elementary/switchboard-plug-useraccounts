@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-14 17:54+0530\n"
 "PO-Revision-Date: 2024-11-24 07:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -24,31 +24,31 @@ msgid ""
 "Manage account permissions and configure user names, passwords, and photos"
 msgstr "ניהול הרשאות לחשבונות והגדרת שמות משתמשים, סיסמאות ותמונות"
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 msgid "Avatar"
 msgstr "תמונת משתמש"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:84
 msgid "Full name"
 msgstr "שם מלא"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "סוג חשבון"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "שפה"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:87
 msgid "Log in automatically"
 msgstr "כניסה אוטומטית"
 
-#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "החלפת הסיסמה"
 
-#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "הפעלת אורח"
@@ -78,7 +78,7 @@ msgid "Authentication failed"
 msgstr "האימות נכשל"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -86,7 +86,7 @@ msgstr "ביטול"
 msgid "Standard User"
 msgstr "משתמש רגיל"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "מנהל"
@@ -114,6 +114,78 @@ msgstr "שם המשתמש כבר תפוס"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "שם משתמש יכול להכיל אותיות לטיניות קטנות, מספרים וללא רווחים"
+
+#: src/Dialogs/FingerprintDialog.vala:49
+msgid "Enrolling Fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:53
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:70
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:75
+msgid "Fingerprint device not available"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:115
+msgid "You are all set!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrollment Complete!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:128
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:131
+msgid "Enrolling failed. Please try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Stage Passed! Carry on!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:139
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:141
+msgid "The swipe was too short"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:145
+msgid "Please center your finger on the sensor"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:147
+msgid "Please remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:150
+msgid "Enrollment data is full"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "This fingerprint is already enrolled"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:155
+msgid "The fingerprint sensor was disconnected"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "An unknown error occurred"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -181,51 +253,59 @@ msgstr "פעיל"
 msgid "Disabled"
 msgstr "מושבתת"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "לא ניתן לשנות זאת עבור המשתמש הנוכחי הפעיל"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "לא ניתן להסיר את הרשאות הניהול האחרונות"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "רגיל"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 msgid "Click to switch to Language & Region Settings"
 msgstr "יש ללחוץ כדי לעבור להגדרות שפה ואזור"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 msgid "Log In automatically"
 msgstr "כניסה אוטומטית"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:241
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:245
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:285
 msgid "Change Password…"
 msgstr "החלפת הסיסמה…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:306
 msgid "Remove Account"
 msgstr "הסרת חשבון"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:319
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:490
 msgid "Enable Account"
 msgstr "הפעלת חשבון"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:493
 msgid "Disable Account"
 msgstr "השבתת חשבון"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:656
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "לא ניתן להחליף את הסיסמה של %s"
@@ -246,7 +326,7 @@ msgstr "תמונות"
 msgid "Select an image"
 msgstr "בחירת תמונה"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "פתיחה"
 

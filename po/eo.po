@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-14 17:54+0530\n"
 "PO-Revision-Date: 2019-08-27 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -25,31 +25,31 @@ msgid ""
 msgstr ""
 "Mastrumi kontajn permesojn kaj agordi uzantajn nomojn, pasvortojn kaj bildojn"
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 msgid "Avatar"
 msgstr "Profilbildo"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:84
 msgid "Full name"
 msgstr "Plena nomo"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "Tipo de konto"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "Lingvo"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:87
 msgid "Log in automatically"
 msgstr "Aŭtomate ensaluti"
 
-#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Modifi pasvorton"
 
-#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Gasta seanco"
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "Aŭtentigo fiaskis"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "Rezigni"
 
@@ -87,7 +87,7 @@ msgstr "Rezigni"
 msgid "Standard User"
 msgstr "Normala uzanto"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administranto"
@@ -115,6 +115,78 @@ msgstr "Uzantonomo jam prenita"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Uzantonomo konsistu nur el minuskloj kaj ciferoj, sen spaco"
+
+#: src/Dialogs/FingerprintDialog.vala:49
+msgid "Enrolling Fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:53
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:70
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:75
+msgid "Fingerprint device not available"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:115
+msgid "You are all set!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrollment Complete!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:128
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:131
+msgid "Enrolling failed. Please try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Stage Passed! Carry on!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:139
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:141
+msgid "The swipe was too short"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:145
+msgid "Please center your finger on the sensor"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:147
+msgid "Please remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:150
+msgid "Enrollment data is full"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "This fingerprint is already enrolled"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:155
+msgid "The fingerprint sensor was disconnected"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "An unknown error occurred"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -156,7 +228,6 @@ msgstr "Aliaj kontoj"
 
 #: src/Views/MainView.vala:38
 #, fuzzy
-#| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Krei uzanto-konton"
 
@@ -185,61 +256,64 @@ msgstr "Ebligita"
 msgid "Disabled"
 msgstr "Malaktivigita"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "Vi ne havas la permeson ŝanĝi tion"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "Neeblas ŝanĝi tion por la nun aktiva uzanto"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Neeblas forigi la permesojn de la lasta administranto"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "Normala"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Klaku por baskuli la lingvon kaj regionajn agordojn"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
 msgstr "Aŭtomate ensaluti:"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:241
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:245
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:285
 msgid "Change Password…"
 msgstr "Ŝanĝi pasvorton…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:306
 #, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Uzantokontoj"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:319
 msgid "Some settings require administrator rights to be changed"
 msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:490
 #, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Ebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:493
 #, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Malebligi uzantokonton"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:656
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -260,7 +334,7 @@ msgstr "Bildoj"
 msgid "Select an image"
 msgstr "Elekti bildon"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "Malfermi"
 

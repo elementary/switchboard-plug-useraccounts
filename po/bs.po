@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-14 17:54+0530\n"
 "PO-Revision-Date: 2018-11-06 06:46+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -27,31 +27,31 @@ msgstr ""
 "Upravljajte dozvolama računa i podesite korisnička imena, lozinke i "
 "fotografije"
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 msgid "Avatar"
 msgstr "Avatar"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:84
 msgid "Full name"
 msgstr "Ime i prezime"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "Vrsta računa"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "Jezik"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:87
 msgid "Log in automatically"
 msgstr "Automatska prijava"
 
-#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Promijeni lozinku"
 
-#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Sesija za goste"
@@ -81,7 +81,7 @@ msgid "Authentication failed"
 msgstr "Autentifikacija neuspješna"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "Otkaži"
 
@@ -89,7 +89,7 @@ msgstr "Otkaži"
 msgid "Standard User"
 msgstr "Standardni korisnik"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
@@ -117,6 +117,78 @@ msgstr "Korisničko ime je već zauzeto"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Korisničko ime može sadržavati samo mala slova i brojeve, bez razmaka"
+
+#: src/Dialogs/FingerprintDialog.vala:49
+msgid "Enrolling Fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:53
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:70
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:75
+msgid "Fingerprint device not available"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:115
+msgid "You are all set!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrollment Complete!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:128
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:131
+msgid "Enrolling failed. Please try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Stage Passed! Carry on!"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:139
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:141
+msgid "The swipe was too short"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:145
+msgid "Please center your finger on the sensor"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:147
+msgid "Please remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:150
+msgid "Enrollment data is full"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "This fingerprint is already enrolled"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:155
+msgid "The fingerprint sensor was disconnected"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "An unknown error occurred"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -159,7 +231,6 @@ msgstr "Drugi računi"
 
 #: src/Views/MainView.vala:38
 #, fuzzy
-#| msgid "Create user account"
 msgid "Create User Account…"
 msgstr "Kreiraj korisnički račun"
 
@@ -188,61 +259,64 @@ msgstr "Aktivirano"
 msgid "Disabled"
 msgstr "Deaktivirano"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "Nemate dozvolu da ovo izmijenite"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "Ne možete ovo izmijeniti za trenutno aktivnog korisnika"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Ne možete ukloniti ovlasti zadnjem preostalom administratoru"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "Standardni"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
-#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Kliknite za prijelaz na podešavanja jezika i regije"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
-#| msgid "Log In automatically:"
 msgid "Log In automatically"
 msgstr "Automatska prijava:"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:241
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:245
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:285
 msgid "Change Password…"
 msgstr "Promijeni lozinku…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:306
 #, fuzzy
-#| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Korisnički računi"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:319
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:490
 #, fuzzy
-#| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Aktiviraj korisnički račun"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:493
 #, fuzzy
-#| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Deaktiviraj korisnički račun"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:656
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -263,7 +337,7 @@ msgstr "Slike"
 msgid "Select an image"
 msgstr "Izaberi sliku"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "Otvori"
 
