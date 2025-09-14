@@ -427,7 +427,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 full_name_entry.sensitive = true;
                 full_name_lock.set_opacity (0);
 
-                password_button.sensitive = allowed;
+                password_button.sensitive = !user_locked;
 
                 if (allowed) {
                     if (!user_locked) {
