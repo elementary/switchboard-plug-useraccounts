@@ -38,6 +38,12 @@ configuration_data.set('GETTEXT_PACKAGE', gettext_name)
 configuration_data.set('LOCALEDIR', localedir)
 configuration_data.set('PKGDATADIR', pkgdatadir)
 
+plug_resources = gnome.compile_resources (
+    'plug_resources',
+    'data/icons.gresource.xml',
+    source_dir: 'data'
+)
+
 subdir('cli')
 subdir('data')
 subdir('src')

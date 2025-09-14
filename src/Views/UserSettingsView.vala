@@ -23,6 +23,7 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
         private UserUtils utils;
         private DeltaUser delta_user;
+        private FPUtils fp_utils;
 
         private Gtk.ListStore language_store;
         private Gtk.ListStore region_store;
@@ -32,6 +33,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         private Granite.HeaderLabel lang_label;
         private Granite.HeaderLabel user_type_label;
         private Gtk.Entry full_name_entry;
+        private Gtk.Button fingerprint_button;
+        private Gtk.Button remove_fp_button;
         private Gtk.Button password_button;
         private Gtk.Button enable_user_button;
         private Gtk.ComboBoxText user_type_dropdown;
@@ -63,6 +66,11 @@ namespace SwitchboardPlugUserAccounts.Widgets {
         construct {
             utils = new UserUtils (user, this);
             delta_user = new DeltaUser (user);
+            try {
+                fp_utils = new FPUtils ();
+            } catch (Error e) {
+                warning ("Fingerprint reader not available: %s", e.message);
+            }
 
             default_regions = get_default_regions ();
 
@@ -223,6 +231,57 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             autologin_box.append (autologin_label);
             autologin_box.append (autologin_switch);
 
+            Gtk.Box fp_box;
+            if (fp_utils != null) {
+                fp_box = new Gtk.Box (HORIZONTAL, 0) {
+                    halign = END,
+                    margin_end = 6
+                };
+                fp_box.add_css_class (Granite.STYLE_CLASS_LINKED);
+                fingerprint_button = new Gtk.Button.with_label (_("Set Up Fingerprint…")) {
+                    sensitive = false
+                };
+                remove_fp_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
+                    tooltip_text = _("Remove Fingerprint"),
+                    sensitive = false
+                };
+                remove_fp_button.remove_css_class ("image-button");
+
+                fp_box.append (fingerprint_button);
+                fp_box.append (remove_fp_button);
+                fingerprint_button.clicked.connect (() => {
+                    var permission = get_permission ();
+                    if (user == get_current_user () && permission.allowed) {
+                        try {
+                            permission.release ();
+                        } catch (Error e) {
+                            critical ("Error releasing privileges: %s", e.message);
+                        }
+                    }
+
+                    var fingerprint_dialog = new FingerprintDialog ((Gtk.Window) this.get_root (), user);
+                    fingerprint_dialog.present ();
+                });
+
+                remove_fp_button.clicked.connect (() => {
+                    var permission = get_permission ();
+                    if (user == get_current_user () && permission.allowed) {
+                        try {
+                            permission.release ();
+                        } catch (Error e) {
+                            critical ("Error releasing privileges: %s", e.message);
+                        }
+                    }
+
+                    if (fp_utils.claim ()) {
+                        fp_utils.delete_enrollments_async.begin (() => {
+                            remove_fp_button.sensitive = false;
+                            fp_utils.release ();
+                        });
+                    }
+                });
+            }
+
             password_button = new Gtk.Button.with_label (_("Change Password…"));
             password_button.clicked.connect (() => {
                 var permission = get_permission ();
@@ -292,6 +351,9 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             action_area.append (enable_user_button);
             action_area.append (remove_lock);
             action_area.append (new Gtk.Grid () { hexpand = true });
+            if (fp_box != null) {
+                action_area.append (fp_box);
+            }
             action_area.append (password_button);
             action_area.add_css_class ("buttonbox");
 
@@ -345,6 +407,10 @@ namespace SwitchboardPlugUserAccounts.Widgets {
                 user_type_dropdown.sensitive = false;
                 password_button.sensitive = false;
                 autologin_switch.sensitive = false;
+                if (fp_utils != null) {
+                    remove_fp_button.sensitive = false;
+                    fingerprint_button.sensitive = false;
+                }
 
                 autologin_label.secondary_text = NO_PERMISSION_STRING;
                 user_type_label.secondary_text = NO_PERMISSION_STRING;
@@ -352,11 +418,16 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             lang_label.secondary_text = null;
 
+            if (fp_utils != null) {
+                remove_fp_button.sensitive = current_user && allowed && fp_utils.is_enrolled ();
+                fingerprint_button.sensitive = current_user && allowed;
+            }
+
             if (current_user || allowed) {
                 full_name_entry.sensitive = true;
                 full_name_lock.set_opacity (0);
 
-                password_button.sensitive = !user_locked;
+                password_button.sensitive = allowed;
 
                 if (allowed) {
                     if (!user_locked) {

@@ -35,6 +35,35 @@ namespace SwitchboardPlugUserAccounts {
         public abstract string[] locale { owned get; }
     }
 
+    [DBus (name = "net.reactivated.Fprint.Device")]
+    public interface FPrintDevice : GLib.Object {
+        [DBus (name = "name")]
+        public abstract string name { owned get; }
+        [DBus (name = "scan-type")]
+        public abstract string scan_type { owned get; }
+        [DBus (name = "num-enroll-stages")]
+        public abstract int num_enroll_stages { owned get; }
+        [DBus (name = "finger-needed")]
+        public abstract bool finger_needed { owned get; }
+        [DBus (name = "finger-present")]
+        public abstract bool finger_present { owned get; }
+        public abstract string[] list_enrolled_fingers (string username) throws GLib.Error;
+        public abstract void delete_enrolled_fingers2 () throws GLib.Error;
+        public abstract void claim (string username) throws GLib.Error;
+        public abstract void release () throws GLib.Error;
+        public abstract void enroll_start (string finger_name) throws GLib.Error;
+        public abstract void enroll_stop () throws GLib.Error;
+        public signal void verify_status (string result, bool done);
+        public signal void enroll_status (string result, bool done);
+    }
+
+
+
+    [DBus (name = "net.reactivated.Fprint.Manager")]
+    public interface FPrintManager : GLib.Object {
+        public abstract ObjectPath get_default_device () throws GLib.Error;
+    }
+
     private static string[]? installed_languages = null;
     private static string? display_manager = null;
 
