@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-14 17:54+0530\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -25,31 +25,31 @@ msgid ""
 msgstr ""
 "사용자 권한 설정과 사용자 이름, 비밀번호, 그리고 프로필 사진 등을 관리합니다"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "아바타"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "전체 이름"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "계정 유형"
 
-#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "언어"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "자동 로그인"
 
-#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "비밀번호 바꾸기"
 
-#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "게스트 세션"
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "인증에 실패했습니다"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Dialogs/FingerprintDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "취소"
 
@@ -87,7 +87,7 @@ msgstr "취소"
 msgid "Standard User"
 msgstr "일반 사용자"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "관리자"
@@ -115,78 +115,6 @@ msgstr "사용자 이름이 이미 사용 중입니다"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "사용자 계정은 빈칸 없이 소문자 및 숫자만을 포함할 수 있습니다"
-
-#: src/Dialogs/FingerprintDialog.vala:49
-msgid "Enrolling Fingerprint"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:53
-msgid "Touch the fingerprint sensor to begin."
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:70
-msgid "Finish"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:75
-msgid "Fingerprint device not available"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:115
-msgid "You are all set!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:127
-msgid "Enrollment Complete!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:128
-msgid "Enrollment complete"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:131
-msgid "Enrolling failed. Please try again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:137
-msgid "Stage Passed! Carry on!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:139
-msgid "Trying to scan again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:141
-msgid "The swipe was too short"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:143
-msgid "The touch was too fast"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:145
-msgid "Please center your finger on the sensor"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:147
-msgid "Please remove your finger and try again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:150
-msgid "Enrollment data is full"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:153
-msgid "This fingerprint is already enrolled"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:155
-msgid "The fingerprint sensor was disconnected"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:158
-msgid "An unknown error occurred"
-msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -216,6 +144,7 @@ msgstr "권한을 얻을 수 없습니다"
 
 #: src/Views/GuestSettingsView.vala:99
 #, fuzzy
+#| msgid "An account cannot be removed without the required system permission."
 msgid ""
 "The guest account cannot be modified without the required system permission."
 msgstr "필요한 시스템 권한이 없으면 계정을 없앨 수 없습니다."
@@ -230,6 +159,7 @@ msgstr "기타 계정"
 
 #: src/Views/MainView.vala:38
 #, fuzzy
+#| msgid "Create user account…"
 msgid "Create User Account…"
 msgstr "사용자 계정 만들기…"
 
@@ -258,63 +188,59 @@ msgstr "사용함"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "이 설정을 바꿀 권한이 없습니다"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "현재 활동 중인 사용자의 설정은 변경할 수 없습니다"
 
-#: src/Views/UserSettingsView.vala:56
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "마지막 남은 관리자의 권한을 제거할 수 없습니다"
 
-#: src/Views/UserSettingsView.vala:128
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "표준"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:203
 #, fuzzy
+#| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "언어 & 로케일 설정으로 전환하려면 클릭하세요"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:216
 #, fuzzy
+#| msgid "Log In automatically:"
 msgid "Log In automatically"
 msgstr "자동 로그인:"
 
-#: src/Views/UserSettingsView.vala:241
-msgid "Set Up Fingerprint…"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:245
-msgid "Remove Fingerprint"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:285
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "비밀번호 바꾸기…"
 
-#: src/Views/UserSettingsView.vala:306
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "계정 삭제"
 
-#: src/Views/UserSettingsView.vala:319
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
-#: src/Views/UserSettingsView.vala:490
+#: src/Views/UserSettingsView.vala:418
 #, fuzzy
+#| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "사용자 계정 활성화"
 
-#: src/Views/UserSettingsView.vala:493
+#: src/Views/UserSettingsView.vala:421
 #, fuzzy
+#| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "사용자 계정 비활성화"
 
-#: src/Views/UserSettingsView.vala:656
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "%s의 비밀번호를 바꿀 수 없습니다"
@@ -335,7 +261,7 @@ msgstr "이미지"
 msgid "Select an image"
 msgstr "이미지를 선택하세요"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:82
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "열기"
 

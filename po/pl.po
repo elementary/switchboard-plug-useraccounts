@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-14 17:54+0530\n"
+"POT-Creation-Date: 2024-11-15 18:15+0000\n"
 "PO-Revision-Date: 2024-10-20 02:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -27,31 +27,31 @@ msgstr ""
 "Zarządzaj uprawnieniami konta i konfiguruj nazwy użytkowników, hasła oraz "
 "zdjęcia"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:82
 msgid "Avatar"
 msgstr "Awatar"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:83
 msgid "Full name"
 msgstr "Imię i nazwisko"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
 msgid "Account type"
 msgstr "Rodzaj konta"
 
-#: src/Plug.vala:86 src/Views/UserSettingsView.vala:142
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
 msgid "Language"
 msgstr "Język"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:86
 msgid "Log in automatically"
 msgstr "Zaloguj automatycznie"
 
-#: src/Plug.vala:88 src/Dialogs/ChangePasswordDialog.vala:76
+#: src/Plug.vala:87 src/Dialogs/ChangePasswordDialog.vala:76
 msgid "Change Password"
 msgstr "Zmień hasło"
 
-#: src/Plug.vala:89 src/Views/GuestSettingsView.vala:17
+#: src/Plug.vala:88 src/Views/GuestSettingsView.vala:17
 #: src/Views/MainView.vala:117
 msgid "Guest Session"
 msgstr "Sesja gościa"
@@ -81,7 +81,7 @@ msgid "Authentication failed"
 msgstr "Błąd uwierzytelnienia"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Dialogs/FingerprintDialog.vala:65
+#: src/Widgets/Popovers/AvatarPopover.vala:85
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -89,7 +89,7 @@ msgstr "Anuluj"
 msgid "Standard User"
 msgstr "Zwykły użytkownik"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
@@ -117,78 +117,6 @@ msgstr "Nazwa użytkownika jest już zajęta"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Nazwa użytkownika może zawierać tylko małe litery, cyfry, bez spacji"
-
-#: src/Dialogs/FingerprintDialog.vala:49
-msgid "Enrolling Fingerprint"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:53
-msgid "Touch the fingerprint sensor to begin."
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:70
-msgid "Finish"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:75
-msgid "Fingerprint device not available"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:115
-msgid "You are all set!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:127
-msgid "Enrollment Complete!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:128
-msgid "Enrollment complete"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:131
-msgid "Enrolling failed. Please try again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:137
-msgid "Stage Passed! Carry on!"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:139
-msgid "Trying to scan again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:141
-msgid "The swipe was too short"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:143
-msgid "The touch was too fast"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:145
-msgid "Please center your finger on the sensor"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:147
-msgid "Please remove your finger and try again"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:150
-msgid "Enrollment data is full"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:153
-msgid "This fingerprint is already enrolled"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:155
-msgid "The fingerprint sensor was disconnected"
-msgstr ""
-
-#: src/Dialogs/FingerprintDialog.vala:158
-msgid "An unknown error occurred"
-msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -261,59 +189,51 @@ msgstr "Włączone"
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: src/Views/UserSettingsView.vala:54
+#: src/Views/UserSettingsView.vala:51
 msgid "You do not have permission to change this"
 msgstr "Nie masz uprawnień, aby to zmienić"
 
-#: src/Views/UserSettingsView.vala:55
+#: src/Views/UserSettingsView.vala:52
 msgid "You cannot change this for the currently active user"
 msgstr "Nie możesz tego zmienić dla aktywnego użytkownika"
 
-#: src/Views/UserSettingsView.vala:56
+#: src/Views/UserSettingsView.vala:53
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Nie możesz usunąć ostatnich przywilejów administratora"
 
-#: src/Views/UserSettingsView.vala:128
+#: src/Views/UserSettingsView.vala:120
 msgid "Standard"
 msgstr "Standardowe"
 
-#: src/Views/UserSettingsView.vala:212
+#: src/Views/UserSettingsView.vala:203
 msgid "Click to switch to Language & Region Settings"
 msgstr "Kliknij, aby zmienić język i ustawienia regionalne"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:216
 msgid "Log In automatically"
 msgstr "Zaloguj automatycznie"
 
-#: src/Views/UserSettingsView.vala:241
-msgid "Set Up Fingerprint…"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:245
-msgid "Remove Fingerprint"
-msgstr ""
-
-#: src/Views/UserSettingsView.vala:285
+#: src/Views/UserSettingsView.vala:225
 msgid "Change Password…"
 msgstr "Zmień hasło…"
 
-#: src/Views/UserSettingsView.vala:306
+#: src/Views/UserSettingsView.vala:246
 msgid "Remove Account"
 msgstr "Usuń konto"
 
-#: src/Views/UserSettingsView.vala:319
+#: src/Views/UserSettingsView.vala:259
 msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
-#: src/Views/UserSettingsView.vala:490
+#: src/Views/UserSettingsView.vala:418
 msgid "Enable Account"
 msgstr "Aktywuj konto"
 
-#: src/Views/UserSettingsView.vala:493
+#: src/Views/UserSettingsView.vala:421
 msgid "Disable Account"
 msgstr "Wyłącz konto"
 
-#: src/Views/UserSettingsView.vala:656
+#: src/Views/UserSettingsView.vala:584
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Nie udało się zmienić hasła dla %s"
@@ -334,7 +254,7 @@ msgstr "Obrazy"
 msgid "Select an image"
 msgstr "Wybierz obraz"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:82
+#: src/Widgets/Popovers/AvatarPopover.vala:84
 msgid "Open"
 msgstr "Otwórz"
 
