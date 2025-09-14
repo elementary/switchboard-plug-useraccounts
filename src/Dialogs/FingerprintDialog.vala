@@ -46,7 +46,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             halign = Gtk.Align.CENTER
         };
         form_box.append (fingerprint_image);
-        title_label = new Gtk.Label ("Enrolling Fingerprint");
+        title_label = new Gtk.Label (_("Enrolling Fingerprint"));
         title_label.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
         form_box.append (title_label);
 
