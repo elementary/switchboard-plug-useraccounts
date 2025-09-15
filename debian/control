@@ -20,7 +20,11 @@ Homepage: https://github.com/elementary/switchboard-plug-useraccounts
 
 Package: io.elementary.settings.useraccounts
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+    fprintd,
+    libpam-fprintd,
+    ${shlibs:Depends},
+    ${misc:Depends}
 Enhances: io.elementary.settings
 Description: Manage local user accounts
  elementary Settings plugin for managing local user accounts
