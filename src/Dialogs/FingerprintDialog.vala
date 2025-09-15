@@ -58,9 +58,9 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
         };
 
         progress_revealer = new Gtk.Revealer () {
-            transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
+            child = progress_bar,
+            transition_type = SLIDE_DOWN
         };
-        progress_revealer.child = progress_bar;
 
         cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
