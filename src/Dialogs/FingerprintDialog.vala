@@ -38,7 +38,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             margin_bottom = 12,
             halign = Gtk.Align.CENTER
         };
-        title_label = new Gtk.Label (_("Enrolling Fingerprint")) {
+        title_label = new Gtk.Label (_("Enrolling fingerprint")) {
             mnemonic_widget = this
         };
         title_label.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
