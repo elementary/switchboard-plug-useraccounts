@@ -38,6 +38,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             margin_bottom = 12,
             halign = Gtk.Align.CENTER
         };
+
         title_label = new Gtk.Label (_("Enrolling fingerprint")) {
             mnemonic_widget = this
         };
@@ -85,7 +86,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             set_default_widget (finish_button);
         } catch (Error e) {
             warning ("Failed to initialize fingerprint device: %s".printf (e.message));
-            status_label.label = _("Fingerprint device not available");
+            status_label.label = _("Fingerprint device not available.");
             cancel_button.sensitive = true;
             return;
         }
@@ -120,45 +121,45 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
                 progress_bar.value = progress_bar.max_value;
                 fingerprint_image.icon_name = "fingerprint-12-symbolic";
                 title_label.label = _("Enrollment complete");
-                status_label.label = _("This fingerprint can now be used for authentication");
+                status_label.label = _("This fingerprint can now be used for authentication.");
                 break;
             case "enroll-failed":
                 fp_utils.enroll_stop ();
-                status_label.label = _("Enrolling failed. Please try again");
+                status_label.label = _("Enrolling failed. Cancel and try again.");
                 break;
             case "enroll-stage-passed":
                 progress_revealer.reveal_child = true;
                 progress_bar.value = ++current_stage_count;
                 var progress = (progress_bar.value / progress_bar.max_value) * 12;
                 fingerprint_image.icon_name = "fingerprint-%d-symbolic".printf ((int) progress);
-                status_label.label = _("Stage Passed! Lift your finger and touch the sensor again");
+                status_label.label = _("Stage passed. Lift your finger and touch the sensor again.");
                 break;
             case "enroll-retry-scan":
                 status_label.label = _("Trying to scan again");
                 break;
             case "enroll-swipe-too-short":
-                status_label.label = _("The swipe was too short");
+                status_label.label = _("The swipe was too short. Lift your finger and swipe the sensor again.");
                 break;
             case "enroll-too-fast":
-                status_label.label = _("The touch was too fast");
+                status_label.label = _("The touch was too fast. Lift your finger and touch the sensor again.");
                 break;
             case "enroll-finger-not-centered":
-                status_label.label = _("Center your finger on the sensor");
+                status_label.label = _("The fingerprint was not centered on the censor. Lift your finger and touch the sensor again.");
                 break;
             case "enroll-remove-and-retry":
                 status_label.label = _("Remove your finger and try again");
                 break;
             case "enroll-data-full":
                 fp_utils.enroll_stop ();
-                title_label.label = _("Fingerprint Data Full!");
-                status_label.label = _("Delete some fingerprints and try again");
+                title_label.label = _("Can't remember additional fingerprints");
+                status_label.label = _("Forget a saved fingerprint and try again.");
                 break;
             case "enroll-duplicate":
                 fp_utils.enroll_stop ();
-                status_label.label = _("This fingerprint is already enrolled");
+                status_label.label = _("This fingerprint is already enrolled.");
                 break;
             case "enroll-disconnected":
-                status_label.label = _("The fingerprint sensor was disconnected");
+                status_label.label = _("The fingerprint sensor was disconnected.");
                 break;
             case "enroll-unknown-error":
                 fp_utils.enroll_stop ();
