@@ -119,7 +119,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             case "enroll-completed":
                 progress_bar.value = progress_bar.max_value;
                 fingerprint_image.icon_name = "fingerprint-12-symbolic";
-                title_label.label = _("Enrollment Complete!");
+                title_label.label = _("Enrollment complete");
                 status_label.label = _("This fingerprint can now be used for authentication");
                 break;
             case "enroll-failed":
