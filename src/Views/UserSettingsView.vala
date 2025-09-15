@@ -233,22 +233,24 @@ namespace SwitchboardPlugUserAccounts.Widgets {
 
             Gtk.Box fp_box;
             if (fp_utils != null) {
-                fp_box = new Gtk.Box (HORIZONTAL, 0) {
-                    halign = END,
-                    margin_end = 6
-                };
-                fp_box.add_css_class (Granite.STYLE_CLASS_LINKED);
                 fingerprint_button = new Gtk.Button.with_label (_("Set Up Fingerprint…")) {
                     sensitive = false
                 };
+
                 remove_fp_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
                     tooltip_text = _("Remove Fingerprint"),
                     sensitive = false
                 };
                 remove_fp_button.remove_css_class ("image-button");
 
+                fp_box = new Gtk.Box (HORIZONTAL, 0) {
+                    halign = END,
+                    margin_end = 6
+                };
+                fp_box.add_css_class (Granite.STYLE_CLASS_LINKED);
                 fp_box.append (fingerprint_button);
                 fp_box.append (remove_fp_button);
+
                 fingerprint_button.clicked.connect (() => {
                     var permission = get_permission ();
                     if (user == get_current_user () && permission.allowed) {
@@ -419,8 +421,8 @@ namespace SwitchboardPlugUserAccounts.Widgets {
             lang_label.secondary_text = null;
 
             if (fp_utils != null) {
-                remove_fp_button.sensitive = current_user && allowed && fp_utils.is_enrolled ();
-                fingerprint_button.sensitive = current_user && allowed;
+                remove_fp_button.sensitive = current_user && fp_utils.is_enrolled ();
+                fingerprint_button.sensitive = current_user;
             }
 
             if (current_user || allowed) {

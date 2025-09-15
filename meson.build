@@ -40,7 +40,7 @@ configuration_data.set('PKGDATADIR', pkgdatadir)
 
 plug_resources = gnome.compile_resources (
     'plug_resources',
-    'data/icons.gresource.xml',
+    'data' / 'icons.gresource.xml',
     source_dir: 'data'
 )
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/elementary/settings/useraccounts">
+  <gresource prefix="/io/elementary/settings/icons">
     <file alias="scalable/status/fingerprint-1-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-1.svg</file>
     <file alias="scalable/status/fingerprint-2-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-2.svg</file>
     <file alias="scalable/status/fingerprint-3-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-3.svg</file>

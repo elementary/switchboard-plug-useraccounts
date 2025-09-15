@@ -44,7 +44,6 @@ namespace SwitchboardPlugUserAccounts {
 
         public override Gtk.Widget get_widget () {
             if (main_view == null) {
-                Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/useraccounts");
                 main_view = new Widgets.MainView ();
             }
 

@@ -28,16 +28,9 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
         default_width = 500;
         default_height = 100;
         modal = true;
-
-        var form_box = new Gtk.Box (VERTICAL, 3) {
-            margin_top = 12,
-            margin_start = 12,
-            margin_end = 12,
-            vexpand = true
-        };
-        get_content_area ().append (form_box);
-
         is_authenticated = get_permission ().allowed;
+
+
         fingerprint_image = new Gtk.Image.from_icon_name ("fingerprint-1-symbolic") {
             pixel_size = 64,
             margin_start = 12,
@@ -45,38 +38,57 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             margin_bottom = 12,
             halign = Gtk.Align.CENTER
         };
-        form_box.append (fingerprint_image);
-        title_label = new Gtk.Label (_("Enrolling Fingerprint"));
+        title_label = new Gtk.Label (_("Enrolling Fingerprint")) {
+            mnemonic_widget = this
+        };
         title_label.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
-        form_box.append (title_label);
 
         status_label = new Gtk.Label (_("Touch the fingerprint sensor to begin.")) {
             wrap = true,
             justify = Gtk.Justification.CENTER
         };
         status_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
-        form_box.append (status_label);
+
+        progress_bar = new Gtk.LevelBar () {
+            min_value = 1,
+            max_value = 1,
+            value = 1,
+            margin_top = 12,
+            mode = DISCRETE
+        };
 
         progress_revealer = new Gtk.Revealer () {
             transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN
         };
-        form_box.append (progress_revealer);
+        progress_revealer.child = progress_bar;
 
         cancel_button = add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
-        cancel_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        var form_box = new Gtk.Box (VERTICAL, 3) {
+            margin_top = 12,
+            margin_start = 12,
+            margin_end = 12,
+            vexpand = true
+        };
+        form_box.append (fingerprint_image);
+        form_box.append (title_label);
+        form_box.append (status_label);
+        form_box.append (progress_revealer);
+
+        get_content_area ().append (form_box);
 
         try {
             fp_utils = new SwitchboardPlugUserAccounts.FPUtils ();
             finish_button = add_button (_("Finish"), Gtk.ResponseType.OK);
             finish_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             finish_button.sensitive = false;
+            set_default_widget (finish_button);
         } catch (Error e) {
             warning ("Failed to initialize fingerprint device: %s".printf (e.message));
             status_label.label = _("Fingerprint device not available");
             cancel_button.sensitive = true;
             return;
         }
-
 
         response.connect ((response_id) => {
             destroy ();
@@ -94,14 +106,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
             fp_utils.enroll_start_async.begin ((obj, res) => {
                 bool success = fp_utils.enroll_start_async.end (res);
                 if (success) {
-                    progress_bar = new Gtk.LevelBar () {
-                        min_value = 1,
-                        max_value = FPUtils.device.num_enroll_stages + 1,
-                        value = 1,
-                        margin_top = 12,
-                        mode = DISCRETE
-                    };
-                    progress_revealer.child = progress_bar;
+                    progress_bar.max_value = FPUtils.device.num_enroll_stages + 1;
                 } else {
                     destroy ();
                 }
@@ -110,54 +115,63 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
     }
 
     private void set_progress (string message, bool done) {
-        status_label.label = get_friendly_status (message);
-        if (done) {
-            status_label.label = _("You are all set!");
-            cancel_button.sensitive = false;
-            finish_button.sensitive = true;
-            finish_button.grab_focus ();
-        }
-    }
-
-    private string get_friendly_status (string status) {
-        switch (status) {
+        switch (message) {
             case "enroll-completed":
                 progress_bar.value = progress_bar.max_value;
                 fingerprint_image.icon_name = "fingerprint-12-symbolic";
                 title_label.label = _("Enrollment Complete!");
-                return _("Enrollment complete");
+                status_label.label = _("This fingerprint can now be used for authentication");
+                break;
             case "enroll-failed":
                 fp_utils.enroll_stop ();
-                return _("Enrolling failed. Please try again");
+                status_label.label = _("Enrolling failed. Please try again");
+                break;
             case "enroll-stage-passed":
                 progress_revealer.reveal_child = true;
                 progress_bar.value = ++current_stage_count;
                 var progress = (progress_bar.value / progress_bar.max_value) * 12;
                 fingerprint_image.icon_name = "fingerprint-%d-symbolic".printf ((int) progress);
-                return _("Stage Passed! Carry on!");
+                status_label.label = _("Stage Passed! Lift your finger and touch the sensor again");
+                break;
             case "enroll-retry-scan":
-                return _("Trying to scan again");
+                status_label.label = _("Trying to scan again");
+                break;
             case "enroll-swipe-too-short":
-                return _("The swipe was too short");
+                status_label.label = _("The swipe was too short");
+                break;
             case "enroll-too-fast":
-                return _("The touch was too fast");
+                status_label.label = _("The touch was too fast");
+                break;
             case "enroll-finger-not-centered":
-                return _("Please center your finger on the sensor");
+                status_label.label = _("Center your finger on the sensor");
+                break;
             case "enroll-remove-and-retry":
-                return _("Please remove your finger and try again");
+                status_label.label = _("Remove your finger and try again");
+                break;
             case "enroll-data-full":
                 fp_utils.enroll_stop ();
-                return _("Enrollment data is full");
+                title_label.label = _("Fingerprint Data Full!");
+                status_label.label = _("Delete some fingerprints and try again");
+                break;
             case "enroll-duplicate":
                 fp_utils.enroll_stop ();
-                return _("This fingerprint is already enrolled");
+                status_label.label = _("This fingerprint is already enrolled");
+                break;
             case "enroll-disconnected":
-                return _("The fingerprint sensor was disconnected");
+                status_label.label = _("The fingerprint sensor was disconnected");
+                break;
             case "enroll-unknown-error":
                 fp_utils.enroll_stop ();
-                return _("An unknown error occurred");
-            default:
-                return status;
+                title_label.label = _("Unknown Error!");
+                status_label.label = _("Cancel and try again");
+                break;
+        }
+
+        update_property (Gtk.AccessibleProperty.DESCRIPTION, status_label.label, -1);
+
+        if (done) {
+            cancel_button.sensitive = false;
+            finish_button.sensitive = true;
         }
     }
 }

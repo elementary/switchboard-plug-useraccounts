@@ -57,8 +57,6 @@ namespace SwitchboardPlugUserAccounts {
         public signal void enroll_status (string result, bool done);
     }
 
-
-
     [DBus (name = "net.reactivated.Fprint.Manager")]
     public interface FPrintManager : GLib.Object {
         public abstract ObjectPath get_default_device () throws GLib.Error;
