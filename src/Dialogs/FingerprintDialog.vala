@@ -162,7 +162,7 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
                 break;
             case "enroll-unknown-error":
                 fp_utils.enroll_stop ();
-                title_label.label = _("Unknown Error!");
+                title_label.label = _("Something went wrong");
                 status_label.label = _("Cancel and try again");
                 break;
         }
