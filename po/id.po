@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-15 19:30+0000\n"
 "PO-Revision-Date: 2023-05-23 19:06+0000\n"
-"Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
-"io>\n"
+"Last-Translator: Faisal Rachmadin "
+"<frachmadin@users.noreply.l10n.elementary.io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-useraccounts/id/>\n"
 "Language: id\n"
@@ -34,11 +34,11 @@ msgstr "Gambar Profil"
 msgid "Full name"
 msgstr "Nama lengkap"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "Tipe akun"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "Bahasa"
 
@@ -80,7 +80,7 @@ msgid "Authentication failed"
 msgstr "Otentikasi gagal"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "Batal"
 
@@ -88,7 +88,7 @@ msgstr "Batal"
 msgid "Standard User"
 msgstr "Pengguna Standar"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Administrator"
@@ -116,6 +116,84 @@ msgstr "Nama pengguna sudah diambil"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "Nama pengguna hanya boleh berisi huruf kecil dan angka, tanpa spasi"
+
+#: src/Dialogs/FingerprintDialog.vala:41
+msgid "Enrolling fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:46
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:82
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:88
+msgid "Fingerprint device not available."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:122
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:123
+msgid "This fingerprint can now be used for authentication."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrolling failed. Cancel and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:134
+msgid "Stage passed. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:140
+msgid "The swipe was too short. Lift your finger and swipe the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:146
+msgid ""
+"The fingerprint was not centered on the censor. Lift your finger and touch "
+"the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:149
+msgid "Remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "Can't remember additional fingerprints"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:154
+msgid "Forget a saved fingerprint and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "This fingerprint is already enrolled."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:161
+msgid "The fingerprint sensor was disconnected."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:165
+msgid "Something went wrong"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:166
+msgid "Cancel and try again"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -189,61 +267,69 @@ msgstr "Diaktifkan"
 msgid "Disabled"
 msgstr "Nonaktifkan"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "Anda tidak memiliki izin untuk mengubah ini"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "Anda tidak dapat mengubah ini untuk pengguna yang sedang aktif"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Anda tidak dapat menghapus hak istimewa administrator terakhir"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "Standar"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 #, fuzzy
 #| msgid "Click to switch to Language & Locale Settings"
 msgid "Click to switch to Language & Region Settings"
 msgstr "Klik untuk beralih ke Pengaturan Bahasa & Lokalisasi"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 #, fuzzy
 #| msgid "Log In automatically:"
 msgid "Log In automatically"
 msgstr "Masuk otomtis:"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:236
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:241
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
 msgstr "Ganti Kata Sandi…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:308
 #, fuzzy
 #| msgid "User Accounts"
 msgid "Remove Account"
 msgstr "Akun Pengguna"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:321
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:492
 #, fuzzy
 #| msgid "Enable User Account"
 msgid "Enable Account"
 msgstr "Aktifkan Akun Pengguna"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:495
 #, fuzzy
 #| msgid "Disable User Account"
 msgid "Disable Account"
 msgstr "Nonaktifkan Akun Pengguna"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:658
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr ""
@@ -264,7 +350,7 @@ msgstr "Gambar"
 msgid "Select an image"
 msgstr "Pilih gambar"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "Buka"
 

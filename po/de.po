@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-15 19:30+0000\n"
 "PO-Revision-Date: 2024-10-12 05:16+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -34,11 +34,11 @@ msgstr "Avatar"
 msgid "Full name"
 msgstr "Vollständiger Name"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "Kontotyp"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "Sprache"
 
@@ -80,7 +80,7 @@ msgid "Authentication failed"
 msgstr "Legitimierung fehlgeschlagen"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -88,7 +88,7 @@ msgstr "Abbrechen"
 msgid "Standard User"
 msgstr "Standardbenutzer"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "Systemverwalter"
@@ -118,6 +118,86 @@ msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr ""
 "Der Nutzername darf nur Kleinbuchstaben und Ziffern enthalten, aber keine "
 "Leerzeichen"
+
+#: src/Dialogs/FingerprintDialog.vala:41
+msgid "Enrolling fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:46
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:82
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:88
+msgid "Fingerprint device not available."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:122
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:123
+msgid "This fingerprint can now be used for authentication."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrolling failed. Cancel and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:134
+msgid "Stage passed. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:140
+msgid "The swipe was too short. Lift your finger and swipe the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:146
+msgid ""
+"The fingerprint was not centered on the censor. Lift your finger and touch "
+"the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:149
+#, fuzzy
+#| msgid "Remove user account and its data"
+msgid "Remove your finger and try again"
+msgstr "Benutzerkonto und damit verbundene Daten entfernen"
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "Can't remember additional fingerprints"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:154
+msgid "Forget a saved fingerprint and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "This fingerprint is already enrolled."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:161
+msgid "The fingerprint sensor was disconnected."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:165
+msgid "Something went wrong"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:166
+msgid "Cancel and try again"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -189,53 +269,61 @@ msgstr "Aktiviert"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "Sie können dies nicht für den aktuell angemeldeten Benutzer ändern"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "Sie können dem einzigen Systemverwalter nicht die Rechte entziehen"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "Standard"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 msgid "Click to switch to Language & Region Settings"
 msgstr "Mit einem Klick zur Systemeinstellung »Sprache & Region« wechseln"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 msgid "Log In automatically"
 msgstr "Automatisch anmelden"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:236
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:241
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
 msgstr "Passwort ändern …"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:308
 msgid "Remove Account"
 msgstr "Konto entfernen"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:321
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bei einigen Einstellungen werden Systemverwalterberechtigungen benötigt, um "
 "sie ändern zu können"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:492
 msgid "Enable Account"
 msgstr "Konto aktivieren"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:495
 msgid "Disable Account"
 msgstr "Konto deaktivieren"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:658
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "Änderung des Passworts für %s nicht möglich"
@@ -256,7 +344,7 @@ msgstr "Bilder"
 msgid "Select an image"
 msgstr "Bild auswählen"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "Öffnen"
 
@@ -294,9 +382,6 @@ msgstr "Passwörter stimmen nicht überein"
 
 #~ msgid "Password change failed"
 #~ msgstr "Passwortänderung fehlgeschlagen"
-
-#~ msgid "Remove user account and its data"
-#~ msgstr "Benutzerkonto und damit verbundene Daten entfernen"
 
 #~ msgid "Undo last user account removal"
 #~ msgstr "Zuletzt gelöschtes Benutzerkonto wiederherstellen"

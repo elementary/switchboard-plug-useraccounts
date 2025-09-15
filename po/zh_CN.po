@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 18:15+0000\n"
+"POT-Creation-Date: 2025-09-15 19:30+0000\n"
 "PO-Revision-Date: 2025-08-03 04:55+0000\n"
 "Last-Translator: JieXu <xujie0739@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
@@ -33,11 +33,11 @@ msgstr "更改头像"
 msgid "Full name"
 msgstr "全名"
 
-#: src/Plug.vala:84 src/Views/UserSettingsView.vala:126
+#: src/Plug.vala:84 src/Views/UserSettingsView.vala:134
 msgid "Account type"
 msgstr "账户类型"
 
-#: src/Plug.vala:85 src/Views/UserSettingsView.vala:134
+#: src/Plug.vala:85 src/Views/UserSettingsView.vala:142
 msgid "Language"
 msgstr "账户语言"
 
@@ -79,7 +79,7 @@ msgid "Authentication failed"
 msgstr "认证失败"
 
 #: src/Dialogs/ChangePasswordDialog.vala:74 src/Dialogs/NewUserDialog.vala:65
-#: src/Widgets/Popovers/AvatarPopover.vala:85
+#: src/Dialogs/FingerprintDialog.vala:65
 msgid "Cancel"
 msgstr "取消"
 
@@ -87,7 +87,7 @@ msgstr "取消"
 msgid "Standard User"
 msgstr "标准用户"
 
-#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:121
+#: src/Dialogs/NewUserDialog.vala:19 src/Views/UserSettingsView.vala:129
 #: src/Widgets/UserItem.vala:94
 msgid "Administrator"
 msgstr "管理员"
@@ -115,6 +115,84 @@ msgstr "用户名已存在"
 #: src/Dialogs/NewUserDialog.vala:129
 msgid "Username can only contain lowercase letters and numbers, without spaces"
 msgstr "用户名只能包含无空格的小写字母和数字"
+
+#: src/Dialogs/FingerprintDialog.vala:41
+msgid "Enrolling fingerprint"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:46
+msgid "Touch the fingerprint sensor to begin."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:82
+msgid "Finish"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:88
+msgid "Fingerprint device not available."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:122
+msgid "Enrollment complete"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:123
+msgid "This fingerprint can now be used for authentication."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:127
+msgid "Enrolling failed. Cancel and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:134
+msgid "Stage passed. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:137
+msgid "Trying to scan again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:140
+msgid "The swipe was too short. Lift your finger and swipe the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:143
+msgid "The touch was too fast. Lift your finger and touch the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:146
+msgid ""
+"The fingerprint was not centered on the censor. Lift your finger and touch "
+"the sensor again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:149
+msgid "Remove your finger and try again"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:153
+msgid "Can't remember additional fingerprints"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:154
+msgid "Forget a saved fingerprint and try again."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:158
+msgid "This fingerprint is already enrolled."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:161
+msgid "The fingerprint sensor was disconnected."
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:165
+msgid "Something went wrong"
+msgstr ""
+
+#: src/Dialogs/FingerprintDialog.vala:166
+msgid "Cancel and try again"
+msgstr ""
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -182,51 +260,59 @@ msgstr "已启用"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: src/Views/UserSettingsView.vala:51
+#: src/Views/UserSettingsView.vala:54
 msgid "You do not have permission to change this"
 msgstr "您没有权限更改此项内容"
 
-#: src/Views/UserSettingsView.vala:52
+#: src/Views/UserSettingsView.vala:55
 msgid "You cannot change this for the currently active user"
 msgstr "正在使用中的账户无法更改此项"
 
-#: src/Views/UserSettingsView.vala:53
+#: src/Views/UserSettingsView.vala:56
 msgid "You cannot remove the last administrator's privileges"
 msgstr "您不能移除上一个管理员的权限"
 
-#: src/Views/UserSettingsView.vala:120
+#: src/Views/UserSettingsView.vala:128
 msgid "Standard"
 msgstr "标准账户"
 
-#: src/Views/UserSettingsView.vala:203
+#: src/Views/UserSettingsView.vala:212
 msgid "Click to switch to Language & Region Settings"
 msgstr "点击切换到语言和区域设置"
 
-#: src/Views/UserSettingsView.vala:216
+#: src/Views/UserSettingsView.vala:225
 msgid "Log In automatically"
 msgstr "自动登录"
 
-#: src/Views/UserSettingsView.vala:225
+#: src/Views/UserSettingsView.vala:236
+msgid "Set Up Fingerprint…"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:241
+msgid "Remove Fingerprint"
+msgstr ""
+
+#: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
 msgstr "更改密码…"
 
-#: src/Views/UserSettingsView.vala:246
+#: src/Views/UserSettingsView.vala:308
 msgid "Remove Account"
 msgstr "移除帐户"
 
-#: src/Views/UserSettingsView.vala:259
+#: src/Views/UserSettingsView.vala:321
 msgid "Some settings require administrator rights to be changed"
 msgstr "某些设置需要管理员权限才能更改"
 
-#: src/Views/UserSettingsView.vala:418
+#: src/Views/UserSettingsView.vala:492
 msgid "Enable Account"
 msgstr "启用账户"
 
-#: src/Views/UserSettingsView.vala:421
+#: src/Views/UserSettingsView.vala:495
 msgid "Disable Account"
 msgstr "禁用账户"
 
-#: src/Views/UserSettingsView.vala:584
+#: src/Views/UserSettingsView.vala:658
 #, c-format
 msgid "Unable to change the password for %s"
 msgstr "无法更改 %s 的密码"
@@ -247,7 +333,7 @@ msgstr "图片"
 msgid "Select an image"
 msgstr "选择图片"
 
-#: src/Widgets/Popovers/AvatarPopover.vala:84
+#: src/Widgets/Popovers/AvatarPopover.vala:82
 msgid "Open"
 msgstr "打开"
 
