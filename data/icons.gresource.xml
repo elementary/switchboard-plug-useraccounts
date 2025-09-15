@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/elementary/settings/icons">
+    <file alias="scalable/status/fingerprint-1-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-1.svg</file>
+    <file alias="scalable/status/fingerprint-2-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-2.svg</file>
+    <file alias="scalable/status/fingerprint-3-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-3.svg</file>
+    <file alias="scalable/status/fingerprint-4-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-4.svg</file>
+    <file alias="scalable/status/fingerprint-5-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-5.svg</file>
+    <file alias="scalable/status/fingerprint-6-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-6.svg</file>
+    <file alias="scalable/status/fingerprint-7-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-7.svg</file>
+    <file alias="scalable/status/fingerprint-8-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-8.svg</file>
+    <file alias="scalable/status/fingerprint-9-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-9.svg</file>
+    <file alias="scalable/status/fingerprint-10-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-10.svg</file>
+    <file alias="scalable/status/fingerprint-11-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-11.svg</file>
+    <file alias="scalable/status/fingerprint-12-symbolic.svg" compressed="true" preprocess="xml-stripblanks">icons/fingerprint-12.svg</file>
+  </gresource>
+</gresources>

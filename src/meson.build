@@ -8,9 +8,11 @@ plug_files = files(
     'Plug.vala',
     'Dialogs/AvatarDialog.vala',
     'Dialogs/ChangePasswordDialog.vala',
+    'Dialogs/FingerprintDialog.vala',
     'Dialogs/NewUserDialog.vala',
     'Misc/DeltaUser.vala',
     'Misc/UserUtils.vala',
+    'Misc/FPUtils.vala',
     'Misc/Utils.vala',
     'Views/GuestSettingsView.vala',
     'Views/MainView.vala',
@@ -30,6 +32,7 @@ run_passwd_files = files(
 shared_module(
     meson.project_name(),
     pkgdatadir_declaration,
+    plug_resources,
     plug_files,
     run_passwd_files,
     dependencies: [
