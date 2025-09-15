@@ -30,7 +30,6 @@ public class SwitchboardPlugUserAccounts.FingerprintDialog : Granite.Dialog {
         modal = true;
         is_authenticated = get_permission ().allowed;
 
-
         fingerprint_image = new Gtk.Image.from_icon_name ("fingerprint-1-symbolic") {
             pixel_size = 64,
             margin_start = 12,
