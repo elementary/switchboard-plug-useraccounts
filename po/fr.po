@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 19:30+0000\n"
-"PO-Revision-Date: 2025-02-07 15:16+0000\n"
+"PO-Revision-Date: 2025-09-18 05:55+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/fr/>\n"
+"Language-Team: French <https://l10n.elementaryos.org/projects/settings/"
+"useraccounts/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:37
@@ -123,49 +123,55 @@ msgstr ""
 
 #: src/Dialogs/FingerprintDialog.vala:46
 msgid "Touch the fingerprint sensor to begin."
-msgstr ""
+msgstr "Touchez le capteur d'empreinte pour commencer."
 
 #: src/Dialogs/FingerprintDialog.vala:82
 msgid "Finish"
-msgstr ""
+msgstr "Terminer"
 
 #: src/Dialogs/FingerprintDialog.vala:88
 msgid "Fingerprint device not available."
-msgstr ""
+msgstr "Capteur d'empreinte non disponible."
 
 #: src/Dialogs/FingerprintDialog.vala:122
 msgid "Enrollment complete"
-msgstr ""
+msgstr "Enregistrement terminé"
 
 #: src/Dialogs/FingerprintDialog.vala:123
 msgid "This fingerprint can now be used for authentication."
-msgstr ""
+msgstr "Cette empreinte peut désormais être utilisée pour l'authentification."
 
 #: src/Dialogs/FingerprintDialog.vala:127
 msgid "Enrolling failed. Cancel and try again."
-msgstr ""
+msgstr "Échec de l'enregistrement. Veuillez annuler et réessayer."
 
 #: src/Dialogs/FingerprintDialog.vala:134
 msgid "Stage passed. Lift your finger and touch the sensor again."
-msgstr ""
+msgstr "Étape terminée. Relevez votre doigt et touchez le capteur de nouveau."
 
 #: src/Dialogs/FingerprintDialog.vala:137
 msgid "Trying to scan again"
-msgstr ""
+msgstr "Nouvelle tentative d'analyse"
 
 #: src/Dialogs/FingerprintDialog.vala:140
 msgid "The swipe was too short. Lift your finger and swipe the sensor again."
 msgstr ""
+"Le contact n'était pas suffisant. Relevez votre doigt et touchez le capteur "
+"de nouveau."
 
 #: src/Dialogs/FingerprintDialog.vala:143
 msgid "The touch was too fast. Lift your finger and touch the sensor again."
 msgstr ""
+"Vous avez été trop rapide. Relevez votre doigt et touchez le capteur de "
+"nouveau."
 
 #: src/Dialogs/FingerprintDialog.vala:146
 msgid ""
 "The fingerprint was not centered on the censor. Lift your finger and touch "
 "the sensor again."
 msgstr ""
+"L'empreinte n'est pas centrée sur le capteur. Relevez votre doigt et touchez "
+"le capteur de nouveau."
 
 #: src/Dialogs/FingerprintDialog.vala:149
 #, fuzzy
@@ -175,27 +181,27 @@ msgstr "Supprimer le compte utilisateur et ses données"
 
 #: src/Dialogs/FingerprintDialog.vala:153
 msgid "Can't remember additional fingerprints"
-msgstr ""
+msgstr "Impossible d'enregistrer d'autres empreintes"
 
 #: src/Dialogs/FingerprintDialog.vala:154
 msgid "Forget a saved fingerprint and try again."
-msgstr ""
+msgstr "Veuillez supprimer une empreinte enregistrée et recommencer."
 
 #: src/Dialogs/FingerprintDialog.vala:158
 msgid "This fingerprint is already enrolled."
-msgstr ""
+msgstr "Cette empreinte est déjà enregistrée."
 
 #: src/Dialogs/FingerprintDialog.vala:161
 msgid "The fingerprint sensor was disconnected."
-msgstr ""
+msgstr "Le capteur d'empreinte à été déconnecté."
 
 #: src/Dialogs/FingerprintDialog.vala:165
 msgid "Something went wrong"
-msgstr ""
+msgstr "Une erreur s'est produite"
 
 #: src/Dialogs/FingerprintDialog.vala:166
 msgid "Cancel and try again"
-msgstr ""
+msgstr "Annuler et réessayer"
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -296,11 +302,11 @@ msgstr "Se connecter automatiquement"
 
 #: src/Views/UserSettingsView.vala:236
 msgid "Set Up Fingerprint…"
-msgstr ""
+msgstr "Configurer l'empreinte…"
 
 #: src/Views/UserSettingsView.vala:241
 msgid "Remove Fingerprint"
-msgstr ""
+msgstr "Supprimer l'empreinte"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
