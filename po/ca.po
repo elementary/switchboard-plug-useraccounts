@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 19:30+0000\n"
-"PO-Revision-Date: 2024-10-12 05:16+0000\n"
+"PO-Revision-Date: 2025-09-18 05:55+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementaryos.org/projects/settings/"
+"useraccounts/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-09 05:59+0000\n"
 
 #: src/Plug.vala:37
@@ -121,83 +121,87 @@ msgstr ""
 
 #: src/Dialogs/FingerprintDialog.vala:41
 msgid "Enrolling fingerprint"
-msgstr ""
+msgstr "Registre de l'empremta digital"
 
 #: src/Dialogs/FingerprintDialog.vala:46
 msgid "Touch the fingerprint sensor to begin."
-msgstr ""
+msgstr "Per començar, toqueu el sensor d'empremtes."
 
 #: src/Dialogs/FingerprintDialog.vala:82
 msgid "Finish"
-msgstr ""
+msgstr "Acaba"
 
 #: src/Dialogs/FingerprintDialog.vala:88
 msgid "Fingerprint device not available."
-msgstr ""
+msgstr "Dispositiu d'empremta digital no disponible."
 
 #: src/Dialogs/FingerprintDialog.vala:122
 msgid "Enrollment complete"
-msgstr ""
+msgstr "Inscripció completa"
 
 #: src/Dialogs/FingerprintDialog.vala:123
 msgid "This fingerprint can now be used for authentication."
-msgstr ""
+msgstr "Aquesta empremta ara es pot usar per a l'autenticació."
 
 #: src/Dialogs/FingerprintDialog.vala:127
 msgid "Enrolling failed. Cancel and try again."
-msgstr ""
+msgstr "La inscripció ha fallat. Cancel·leu-ho i torneu-ho a provar."
 
 #: src/Dialogs/FingerprintDialog.vala:134
 msgid "Stage passed. Lift your finger and touch the sensor again."
-msgstr ""
+msgstr "Fase superada. Alceu el dit i torneu a tocar el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:137
 msgid "Trying to scan again"
-msgstr ""
+msgstr "S'intenta tornar a escanejar"
 
 #: src/Dialogs/FingerprintDialog.vala:140
 msgid "The swipe was too short. Lift your finger and swipe the sensor again."
 msgstr ""
+"El lliscament ha estat massa curt. Alceu el dit i torneu-lo a fer lliscar "
+"sobre el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:143
 msgid "The touch was too fast. Lift your finger and touch the sensor again."
 msgstr ""
+"El lliscament ha estat massa ràpid. Alceu el dit i torneu-lo a fer lliscar "
+"sobre el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:146
 msgid ""
 "The fingerprint was not centered on the censor. Lift your finger and touch "
 "the sensor again."
 msgstr ""
+"L'empremta no estava centrada al censor. Alceu el dit i torneu a tocar el "
+"sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:149
-#, fuzzy
-#| msgid "Remove user account and its data"
 msgid "Remove your finger and try again"
-msgstr "Suprimeix el compte d'usuari i les seves dades"
+msgstr "Alceu el dit i torneu a provar-ho"
 
 #: src/Dialogs/FingerprintDialog.vala:153
 msgid "Can't remember additional fingerprints"
-msgstr ""
+msgstr "No es recorden altres empremtes addicionals."
 
 #: src/Dialogs/FingerprintDialog.vala:154
 msgid "Forget a saved fingerprint and try again."
-msgstr ""
+msgstr "Oblida una empremta desada i torna-ho a provar."
 
 #: src/Dialogs/FingerprintDialog.vala:158
 msgid "This fingerprint is already enrolled."
-msgstr ""
+msgstr "Aquesta empremta ja està registrada."
 
 #: src/Dialogs/FingerprintDialog.vala:161
 msgid "The fingerprint sensor was disconnected."
-msgstr ""
+msgstr "El sensor d'empremtes s'ha desconnectat."
 
 #: src/Dialogs/FingerprintDialog.vala:165
 msgid "Something went wrong"
-msgstr ""
+msgstr "Alguna cosa no ha anat bé"
 
 #: src/Dialogs/FingerprintDialog.vala:166
 msgid "Cancel and try again"
-msgstr ""
+msgstr "Cancel·leu-ho i torneu-ho a provar"
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -297,11 +301,11 @@ msgstr "Entra automàticament"
 
 #: src/Views/UserSettingsView.vala:236
 msgid "Set Up Fingerprint…"
-msgstr ""
+msgstr "Configureu una empremta…"
 
 #: src/Views/UserSettingsView.vala:241
 msgid "Remove Fingerprint"
-msgstr ""
+msgstr "Suprimeix l'empremta"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
