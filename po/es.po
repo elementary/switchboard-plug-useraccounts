@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 19:30+0000\n"
-"PO-Revision-Date: 2024-10-11 02:16+0000\n"
-"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
-"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-useraccounts/es/>\n"
+"PO-Revision-Date: 2025-09-20 00:55+0000\n"
+"Last-Translator: Italo Felipe Capasso Ballesteros <italo@gp-mail.com>\n"
+"Language-Team: Spanish <https://l10n.elementaryos.org/projects/settings/"
+"useraccounts/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-09 06:00+0000\n"
 
 #: src/Plug.vala:37
@@ -121,83 +121,86 @@ msgstr ""
 
 #: src/Dialogs/FingerprintDialog.vala:41
 msgid "Enrolling fingerprint"
-msgstr ""
+msgstr "Inscribiendo huella digital"
 
 #: src/Dialogs/FingerprintDialog.vala:46
 msgid "Touch the fingerprint sensor to begin."
-msgstr ""
+msgstr "Toque el sensor de huellas digitales para comenzar."
 
 #: src/Dialogs/FingerprintDialog.vala:82
 msgid "Finish"
-msgstr ""
+msgstr "Finalizar"
 
 #: src/Dialogs/FingerprintDialog.vala:88
 msgid "Fingerprint device not available."
-msgstr ""
+msgstr "No se encontró un dispositivo de huellas dactilares disponible."
 
 #: src/Dialogs/FingerprintDialog.vala:122
 msgid "Enrollment complete"
-msgstr ""
+msgstr "Suscripción completa"
 
 #: src/Dialogs/FingerprintDialog.vala:123
 msgid "This fingerprint can now be used for authentication."
-msgstr ""
+msgstr "Ya se puede identificar con esta huella digital."
 
 #: src/Dialogs/FingerprintDialog.vala:127
 msgid "Enrolling failed. Cancel and try again."
-msgstr ""
+msgstr "No se pudo realizar la suscripción. Cancele e intente de nuevo."
 
 #: src/Dialogs/FingerprintDialog.vala:134
 msgid "Stage passed. Lift your finger and touch the sensor again."
-msgstr ""
+msgstr "Etapa finalizada. Levante su dedo y vuelva a tocar el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:137
 msgid "Trying to scan again"
-msgstr ""
+msgstr "Intentando escanear de nuevo"
 
 #: src/Dialogs/FingerprintDialog.vala:140
 msgid "The swipe was too short. Lift your finger and swipe the sensor again."
 msgstr ""
+"El deslizamiento fue muy corto. Levante su dedo y vuélvalo a deslizar sobre "
+"el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:143
 msgid "The touch was too fast. Lift your finger and touch the sensor again."
 msgstr ""
+"El toque fue demasiado rápido. Levante su dedo y vuelva a tocar el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:146
 msgid ""
 "The fingerprint was not centered on the censor. Lift your finger and touch "
 "the sensor again."
 msgstr ""
+"La huella digital no estaba centrada en el sensor. Levante su dedo y vuelva "
+"a tocar el sensor."
 
 #: src/Dialogs/FingerprintDialog.vala:149
-#, fuzzy
-#| msgid "Remove user account and its data"
 msgid "Remove your finger and try again"
-msgstr "Eliminar la cuenta y los datos asociados"
+msgstr "Retire su dedo y vuelva a intentarlo"
 
 #: src/Dialogs/FingerprintDialog.vala:153
 msgid "Can't remember additional fingerprints"
-msgstr ""
+msgstr "No es posible recordar huellas digitales adicionales"
 
 #: src/Dialogs/FingerprintDialog.vala:154
 msgid "Forget a saved fingerprint and try again."
-msgstr ""
+msgstr "Elimine una huella digital suscrita e intente de nuevo."
 
 #: src/Dialogs/FingerprintDialog.vala:158
 msgid "This fingerprint is already enrolled."
-msgstr ""
+msgstr "Esta huella digital ya ha sido suscrita."
 
 #: src/Dialogs/FingerprintDialog.vala:161
 msgid "The fingerprint sensor was disconnected."
-msgstr ""
+msgstr "El sensor de huellas digitales fue desconectado."
 
 #: src/Dialogs/FingerprintDialog.vala:165
 msgid "Something went wrong"
-msgstr ""
+msgstr "Algo salió mal"
 
 #: src/Dialogs/FingerprintDialog.vala:166
 msgid "Cancel and try again"
-msgstr ""
+msgstr "Cancele e intente de nuevo"
 
 #: src/Views/GuestSettingsView.vala:14
 msgid ""
@@ -294,11 +297,11 @@ msgstr "Iniciar sesión automáticamente"
 
 #: src/Views/UserSettingsView.vala:236
 msgid "Set Up Fingerprint…"
-msgstr ""
+msgstr "Configurando huella digital…"
 
 #: src/Views/UserSettingsView.vala:241
 msgid "Remove Fingerprint"
-msgstr ""
+msgstr "Eliminar huella digital"
 
 #: src/Views/UserSettingsView.vala:287
 msgid "Change Password…"
