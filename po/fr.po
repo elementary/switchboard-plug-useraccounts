@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 19:30+0000\n"
-"PO-Revision-Date: 2025-09-18 05:55+0000\n"
+"PO-Revision-Date: 2025-09-20 00:55+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementaryos.org/projects/settings/"
 "useraccounts/fr/>\n"
@@ -119,7 +119,7 @@ msgstr "Ne peut contenir que des minuscules et des nombres mais pas d'espaces"
 
 #: src/Dialogs/FingerprintDialog.vala:41
 msgid "Enrolling fingerprint"
-msgstr ""
+msgstr "Enregistrement de l'empreinte digitale"
 
 #: src/Dialogs/FingerprintDialog.vala:46
 msgid "Touch the fingerprint sensor to begin."
@@ -174,10 +174,8 @@ msgstr ""
 "le capteur de nouveau."
 
 #: src/Dialogs/FingerprintDialog.vala:149
-#, fuzzy
-#| msgid "Remove user account and its data"
 msgid "Remove your finger and try again"
-msgstr "Supprimer le compte utilisateur et ses données"
+msgstr "Retirez votre doigt et réessayez"
 
 #: src/Dialogs/FingerprintDialog.vala:153
 msgid "Can't remember additional fingerprints"
